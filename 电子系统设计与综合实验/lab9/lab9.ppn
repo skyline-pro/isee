@@ -1,0 +1,58 @@
+//
+// Software Version :  ispLEVER Classic 2.1.00.02.49.20  
+// Project Name	    :  lab9
+// Targeted Device  :  LC4256V-75T100I
+// Date             :  Sun May 08 09:53:02 2016
+//
+                      GND          SYS           1
+                   GNDIO0          SYS           7
+                 keyIn_0_          IN            8
+                 keyIn_1_          IN            9
+                 keyIn_2_          IN            10
+                 keyIn_3_          IN            11
+                   VCCIO0          SYS           13
+                   GNDIO0          SYS           18
+                keyOut_0_          OUT           21
+                keyOut_1_          OUT           22
+                      VCC          SYS           25
+                      GND          SYS           26
+                keyOut_2_          OUT           28
+                keyOut_3_          OUT           29
+                   GNDIO0          SYS           32
+                   VCCIO0          SYS           33
+                   led_0_          OUT           35
+                   led_1_          OUT           36
+                   led_2_          OUT           37
+                     clkl          IN            39
+                      VCC          SYS           40
+                   led_3_          OUT           41
+                   led_4_          OUT           42
+                   VCCIO1          SYS           45
+                   GNDIO1          SYS           46
+                    reset          IN            48
+                     send          IN            49
+                      GND          SYS           51
+                LEDVCC_0_          OUT           54
+                LEDVCC_1_          OUT           55
+                  show_5_          OUT           56
+                   GNDIO1          SYS           57
+                  show_0_          OUT           58
+                  show_1_          OUT           60
+                  show_6_          OUT           61
+                   VCCIO1          SYS           63
+                  show_3_          OUT           64
+                  show_2_          OUT           65
+                  show_4_          OUT           66
+                   GNDIO1          SYS           68
+                LEDVCC_3_          OUT           72
+                      VCC          SYS           75
+                      GND          SYS           76
+                LEDVCC_2_          OUT           78
+                   GNDIO1          SYS           82
+                   VCCIO1          SYS           83
+                     clkh          IN            88
+                      VCC          SYS           90
+                   VCCIO0          SYS           95
+                   GNDIO0          SYS           96
+                       Tx          OUT           97
+                       Rx          IN            98

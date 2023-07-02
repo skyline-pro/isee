@@ -1,0 +1,8 @@
+@N|Running in 64-bit mode
+@N: CG364 :"E:\grade-3_2\isp_project\lab12\counter_n.v":15:7:15:15|Synthesizing module counter_n
+@N: CG364 :"E:\grade-3_2\isp_project\lab12\dffre.v":14:7:14:11|Synthesizing module dffre
+@N: CG179 :"E:\grade-3_2\isp_project\lab12\dffre.v":25:13:25:13|Removing redundant assignment
+@N: CG364 :"E:\grade-3_2\isp_project\lab12\button.v":1:7:1:12|Synthesizing module button
+@N: CG364 :"E:\grade-3_2\isp_project\lab12\ledDotMatrix.v":1:7:1:18|Synthesizing module ledDotMatrix
+@N: CG364 :"E:\grade-3_2\isp_project\lab12\lab12.v":1:7:1:11|Synthesizing module lab12
+

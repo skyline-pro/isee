@@ -1,0 +1,2 @@
+@E: CG410 :"E:\Grade-3_2\ISP_Project\testVerilog\random.v":8:84:8:88|Only one assignment is legal on rand1
+

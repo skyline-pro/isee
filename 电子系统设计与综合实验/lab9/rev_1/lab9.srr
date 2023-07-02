@@ -1,0 +1,186 @@
+#Build: Synplify Pro I-2014.03LC , Build 063R, May 27 2014
+#install: D:\ispLEVER_Classic2_1\synpbase
+#OS: Windows 7 6.2
+#Hostname: SKYLINE
+
+#Implementation: rev_1
+
+$ Start of Compile
+#Sat May 07 18:50:53 2016
+
+Synopsys Verilog Compiler, version comp201403rcp1, Build 060R, built May 27 2014
+@N|Running in 64-bit mode
+Copyright (C) 1994-2014 Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+
+@N:: Running Verilog Compiler in System Verilog mode
+@N:: Running Verilog Compiler in Multiple File Compilation Unit mode
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\umr_capim.v"
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\scemi_objects.v"
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\scemi_pipes.svh"
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\hypermods.v"
+@I::"E:\Grade-3_2\ISP_Project\lab9\button.v"
+@I::"E:\Grade-3_2\ISP_Project\lab9\counter_n.v"
+@I::"E:\Grade-3_2\ISP_Project\lab9\decoder2to4.v"
+@I::"E:\Grade-3_2\ISP_Project\lab9\decoderHex2Dec.v"
+@I::"E:\Grade-3_2\ISP_Project\lab9\dffre.v"
+@I::"E:\Grade-3_2\ISP_Project\lab9\dynamicShow.v"
+@I::"E:\Grade-3_2\ISP_Project\lab9\keyboard.v"
+@I::"E:\Grade-3_2\ISP_Project\lab9\lab9.v"
+@I::"E:\Grade-3_2\ISP_Project\lab9\mux16to4.v"
+@I::"E:\Grade-3_2\ISP_Project\lab9\serial.v"
+Verilog syntax check successful!
+Selecting top level module lab9
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab9\dffre.v":14:7:14:11|Synthesizing module dffre
+
+@N: CG179 :"E:\Grade-3_2\ISP_Project\lab9\dffre.v":25:13:25:13|Removing redundant assignment
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab9\button.v":1:7:1:12|Synthesizing module button
+
+@W: CG360 :"E:\Grade-3_2\ISP_Project\lab9\button.v":4:11:4:16|No assignment to wire keyout
+
+@W: CL168 :"E:\Grade-3_2\ISP_Project\lab9\button.v":11:10:11:11|Pruning instance d3 -- not in use ...
+
+@W: CL168 :"E:\Grade-3_2\ISP_Project\lab9\button.v":10:10:10:11|Pruning instance d2 -- not in use ...
+
+@W: CL168 :"E:\Grade-3_2\ISP_Project\lab9\button.v":9:10:9:11|Pruning instance d1 -- not in use ...
+
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":1:7:1:14|Synthesizing module keyboard
+
+@W: CG296 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":200:13:200:27|Incomplete sensitivity list - assuming completeness
+@W: CG290 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":207:19:207:26|Referenced variable int_Data is not in sensitivity list
+@W: CL169 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":75:4:75:9|Pruning register flag_Over 
+
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":58:4:58:9|Feedback mux created for signal time1Oms -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":16:4:16:9|Feedback mux created for signal key_out[3:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab9\serial.v":1:7:1:12|Synthesizing module serial
+
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab9\serial.v":66:4:66:9|Feedback mux created for signal Rx_Data[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@W: CL208 :"E:\Grade-3_2\ISP_Project\lab9\serial.v":42:4:42:9|All reachable assignments to bit 0 of Send_data[9:0] assign 0, register removed by optimization.
+@W: CL208 :"E:\Grade-3_2\ISP_Project\lab9\serial.v":42:4:42:9|All reachable assignments to bit 9 of Send_data[9:0] assign 1, register removed by optimization.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab9\serial.v":18:4:18:9|Feedback mux created for signal ClockCount_Rx[6:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab9\serial.v":18:4:18:9|Feedback mux created for signal ClockCount[10:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab9\serial.v":18:4:18:9|Feedback mux created for signal Clock9600 -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab9\serial.v":18:4:18:9|Feedback mux created for signal Clock16 -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab9\counter_n.v":15:7:15:15|Synthesizing module counter_n
+
+	n=32'b00000000000000000000000000000100
+	counter_bits=32'b00000000000000000000000000000010
+   Generated name = counter_n_4s_2s
+
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab9\mux16to4.v":1:7:1:14|Synthesizing module mux16to4
+
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab9\decoderHex2Dec.v":1:7:1:20|Synthesizing module decoderHex2Dec
+
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab9\decoder2to4.v":1:7:1:17|Synthesizing module decoder2to4
+
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab9\dynamicShow.v":1:7:1:17|Synthesizing module dynamicshow
+
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab9\lab9.v":1:7:1:10|Synthesizing module lab9
+
+@W: CL156 :"E:\Grade-3_2\ISP_Project\lab9\dynamicShow.v":8:66:8:70|*Input reset to expression [instance] has undriven bits that are tied to 0 -- simulation mismatch possible.
+@W: CL190 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":75:4:75:9|Optimizing register bit temp[0] to a constant 0
+@W: CL190 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":75:4:75:9|Optimizing register bit temp[5] to a constant 0
+@W: CL190 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":75:4:75:9|Optimizing register bit temp[6] to a constant 0
+@W: CL190 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":75:4:75:9|Optimizing register bit temp[7] to a constant 0
+@W: CL190 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":75:4:75:9|Optimizing register bit temp[8] to a constant 0
+@W: CL190 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":75:4:75:9|Optimizing register bit temp[9] to a constant 0
+@W: CL279 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":75:4:75:9|Pruning register bits 9 to 5 of temp[9:0] 
+
+@W: CL260 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":75:4:75:9|Pruning register bit 0 of temp[9:0] 
+
+@W: CL190 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":75:4:75:9|Optimizing register bit int_Data[6] to a constant 0
+@W: CL190 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":75:4:75:9|Optimizing register bit int_Data[7] to a constant 0
+@W: CL190 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":75:4:75:9|Optimizing register bit int_Data[8] to a constant 0
+@W: CL190 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":75:4:75:9|Optimizing register bit int_Data[9] to a constant 0
+@W: CL279 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":75:4:75:9|Pruning register bits 9 to 6 of int_Data[9:0] 
+
+@N: CL201 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":75:4:75:9|Trying to extract state machine for register flag_Data
+Extracted state machine for register flag_Data
+State machine has 4 reachable states with original encodings of:
+   00
+   01
+   10
+   11
+@N: CL201 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":16:4:16:9|Trying to extract state machine for register scanvalue
+Extracted state machine for register scanvalue
+State machine has 4 reachable states with original encodings of:
+   0001
+   0010
+   0100
+   1000
+@W: CL157 :"E:\Grade-3_2\ISP_Project\lab9\button.v":4:11:4:16|*Output keyout has undriven bits -- simulation mismatch possible.
+@W: CL159 :"E:\Grade-3_2\ISP_Project\lab9\button.v":2:10:2:14|Input keyin is unused
+@W: CL159 :"E:\Grade-3_2\ISP_Project\lab9\button.v":3:10:3:12|Input clk is unused
+@END
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 70MB peak: 72MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat May 07 18:50:53 2016
+
+###########################################################]
+Synopsys Netlist Linker, version comp201403rcp1, Build 060R, built May 27 2014
+@N|Running in 64-bit mode
+@N: NF107 :"E:\Grade-3_2\ISP_Project\lab9\lab9.v":1:7:1:10|Selected library: work cell: lab9 view verilog as top level
+@N: NF107 :"E:\Grade-3_2\ISP_Project\lab9\lab9.v":1:7:1:10|Selected library: work cell: lab9 view verilog as top level
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 68MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat May 07 18:50:55 2016
+
+###########################################################]
+Map & Optimize Report
+
+Synopsys CPLD Technology Mapper, Version maplat, Build 923R, Built May  6 2014
+Copyright (C) 1994-2013, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use or distribution of the software is strictly prohibited.
+Product Version I-2014.03LC 
+@N: MF248 |Running in 64-bit mode.
+@W: MO111 :"e:\grade-3_2\isp_project\lab9\button.v":4:11:4:16|Tristate driver keyout on net keyout has its enable tied to GND (module button) 
+Encoding state machine flag_Data[3:0] (view:work.keyboard(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+   11 -> 11
+@N: MO225 :"e:\grade-3_2\isp_project\lab9\keyboard.v":75:4:75:9|No possible illegal states for state machine flag_Data[3:0],safe FSM implementation is disabled
+Encoding state machine scanvalue[3:0] (view:work.keyboard(verilog))
+original code -> new code
+   0001 -> 00
+   0010 -> 01
+   0100 -> 10
+   1000 -> 11
+@N: MO225 :"e:\grade-3_2\isp_project\lab9\keyboard.v":16:4:16:9|No possible illegal states for state machine scanvalue[3:0],safe FSM implementation is disabled
+@N: MO106 :"e:\grade-3_2\isp_project\lab9\decoderhex2dec.v":6:8:6:11|Found ROM, 'decoder1.out_1[6:0]', 11 words by 7 bits 
+@W: FC103 :|Internal tri state resetButton converted to mux. Simulation mismatch can happen 
+@W: FC103 :|Internal tri state keyInButton[0] converted to mux. Simulation mismatch can happen 
+@W: FC103 :|Internal tri state keyInButton[1] converted to mux. Simulation mismatch can happen 
+@W: FC103 :|Internal tri state keyInButton[2] converted to mux. Simulation mismatch can happen 
+@W: FC103 :|Internal tri state keyInButton[3] converted to mux. Simulation mismatch can happen 
+@W: FC103 :|Internal tri state sendButton converted to mux. Simulation mismatch can happen 
+---------------------------------------
+Resource Usage Report
+
+Simple gate primitives:
+DFFRH           52 uses
+DFFC            32 uses
+DFFSH           8 uses
+DFF             3 uses
+DFFCRH          1 use
+IBUF            9 uses
+OBUF            21 uses
+AND2            275 uses
+INV             163 uses
+OR2             8 uses
+XOR2            39 uses
+
+
+@N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.
+I-2014.03LC 
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 40MB peak: 108MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat May 07 18:50:55 2016
+
+###########################################################]

@@ -1,0 +1,52 @@
+//
+// Software Version :  ispLEVER Classic 2.1.00.02.49.20  
+// Project Name	    :  lab12
+// Targeted Device  :  LC4256V-75T144I
+// Date             :  Fri May 13 08:27:45 2022
+//
+                      GND          SYS           1
+                   VCCIO0          SYS           3
+                   GNDIO0          SYS           10
+                   VCCIO0          SYS           19
+                   GNDIO0          SYS           27
+                   VCCIO0          SYS           34
+                      VCC          SYS           36
+                      GND          SYS           37
+                   col_0_          OUT           43
+                   col_1_          OUT           44
+                   GNDIO0          SYS           46
+                   VCCIO0          SYS           47
+                   col_2_          OUT           48
+                   col_3_          OUT           49
+                   col_4_          OUT           50
+                   col_5_          OUT           51
+                   col_6_          OUT           52
+                   col_7_          OUT           53
+                   GNDIO1          SYS           55
+                      VCC          SYS           57
+                   row_7_          OUT           58
+                   row_6_          OUT           59
+                   row_5_          OUT           60
+                   row_4_          OUT           61
+                   row_3_          OUT           62
+                   row_2_          OUT           63
+                   VCCIO1          SYS           64
+                   GNDIO1          SYS           65
+                   row_1_          OUT           66
+                   row_0_          OUT           67
+                    reset          IN            68
+                      GND          SYS           73
+                   VCCIO1          SYS           75
+                   GNDIO1          SYS           82
+                   VCCIO1          SYS           91
+                   GNDIO1          SYS           99
+                   VCCIO1          SYS           106
+                      VCC          SYS           108
+                      GND          SYS           109
+                   GNDIO1          SYS           118
+                   VCCIO1          SYS           119
+                   GNDIO0          SYS           127
+                     clkh          IN            128
+                      VCC          SYS           129
+                   VCCIO0          SYS           136
+                   GNDIO0          SYS           137

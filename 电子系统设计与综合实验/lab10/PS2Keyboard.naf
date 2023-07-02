@@ -1,0 +1,8 @@
+clk  i
+reset  i
+psData[3]  o
+psData[2]  o
+psData[1]  o
+psData[0]  o
+keyClock  b
+keyData  b

@@ -1,0 +1,453 @@
+|--------------------------------------------------- ----------|
+|- ispLEVER Classic 2.1.00.02.49.20 Equations File            -|
+|- Copyright(C), 1992-2012, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+Equations:
+
+LEDVCC_0_ = !dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q ; (1 pterm, 2 signals)
+
+LEDVCC_1_ = dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q ; (1 pterm, 2 signals)
+
+LEDVCC_2_ = !dynamicshow_counter4_q_1_.Q & dynamicshow_counter4_q_2_.Q ; (1 pterm, 2 signals)
+
+LEDVCC_3_ = dynamicshow_counter4_q_1_.Q & dynamicshow_counter4_q_2_.Q ; (1 pterm, 2 signals)
+
+button0_d1_q_0_.D = reset ; (1 pterm, 1 signal)
+button0_d1_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button0_d2_q_0_.D = button0_d1_q_0_.Q ; (1 pterm, 1 signal)
+button0_d2_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button0_d3_q_0_.D = button0_d2_q_0_.Q ; (1 pterm, 1 signal)
+button0_d3_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+dynamicshow_counter4_q_1_.D = !dynamicshow_counter4_q_1_.Q ; (1 pterm, 1 signal)
+dynamicshow_counter4_q_1_.C = clkl ; (1 pterm, 1 signal)
+
+dynamicshow_counter4_q_2_.D = dynamicshow_counter4_q_1_.Q
+       & !dynamicshow_counter4_q_2_.Q
+    # !dynamicshow_counter4_q_1_.Q & dynamicshow_counter4_q_2_.Q ; (2 pterms, 2 signals)
+dynamicshow_counter4_q_2_.C = clkl ; (1 pterm, 1 signal)
+
+ps_RxData_1_.D.X1 = !keyData & ps_counter_0_.Q & !ps_counter_1_.Q
+       & !ps_counter_2_.Q & !ps_counter_3_.Q & ps_RxData_1_.Q
+    # keyData & ps_counter_0_.Q & !ps_counter_1_.Q & !ps_counter_2_.Q
+       & !ps_counter_3_.Q & !ps_RxData_1_.Q ; (2 pterms, 6 signals)
+ps_RxData_1_.D.X2 = ps_RxData_1_.Q ; (1 pterm, 1 signal)
+ps_RxData_1_.C = clkh ; (1 pterm, 1 signal)
+ps_RxData_1_.CE = ps_RxData_1__0 ; (1 pterm, 1 signal)
+
+ps_RxData_1__0 = button0_d1_q_0_.Q & !ps_keyClock_r1.Q & ps_keyClock_r2.Q
+    # button0_d2_q_0_.Q & !ps_keyClock_r1.Q & ps_keyClock_r2.Q
+    # button0_d3_q_0_.Q & !ps_keyClock_r1.Q & ps_keyClock_r2.Q ; (3 pterms, 5 signals)
+
+ps_RxData_2_.D.X1 = !keyData & !ps_counter_0_.Q & ps_counter_1_.Q
+       & !ps_counter_2_.Q & !ps_counter_3_.Q & ps_RxData_2_.Q
+    # keyData & !ps_counter_0_.Q & ps_counter_1_.Q & !ps_counter_2_.Q
+       & !ps_counter_3_.Q & !ps_RxData_2_.Q ; (2 pterms, 6 signals)
+ps_RxData_2_.D.X2 = ps_RxData_2_.Q ; (1 pterm, 1 signal)
+ps_RxData_2_.C = clkh ; (1 pterm, 1 signal)
+ps_RxData_2_.CE = ps_RxData_1__0 ; (1 pterm, 1 signal)
+
+ps_RxData_3_.D.X1 = !keyData & ps_counter_0_.Q & ps_counter_1_.Q
+       & !ps_counter_2_.Q & !ps_counter_3_.Q & ps_RxData_3_.Q
+    # keyData & ps_counter_0_.Q & ps_counter_1_.Q & !ps_counter_2_.Q
+       & !ps_counter_3_.Q & !ps_RxData_3_.Q ; (2 pterms, 6 signals)
+ps_RxData_3_.D.X2 = ps_RxData_3_.Q ; (1 pterm, 1 signal)
+ps_RxData_3_.C = clkh ; (1 pterm, 1 signal)
+ps_RxData_3_.CE = ps_RxData_1__0 ; (1 pterm, 1 signal)
+
+ps_RxData_4_.D.X1 = !keyData & !ps_counter_0_.Q & !ps_counter_1_.Q
+       & ps_counter_2_.Q & !ps_counter_3_.Q & ps_RxData_4_.Q
+    # keyData & !ps_counter_0_.Q & !ps_counter_1_.Q & ps_counter_2_.Q
+       & !ps_counter_3_.Q & !ps_RxData_4_.Q ; (2 pterms, 6 signals)
+ps_RxData_4_.D.X2 = ps_RxData_4_.Q ; (1 pterm, 1 signal)
+ps_RxData_4_.C = clkh ; (1 pterm, 1 signal)
+ps_RxData_4_.CE = ps_RxData_1__0 ; (1 pterm, 1 signal)
+
+ps_RxData_5_.D.X1 = !keyData & ps_counter_0_.Q & !ps_counter_1_.Q
+       & ps_counter_2_.Q & !ps_counter_3_.Q & ps_RxData_5_.Q
+    # keyData & ps_counter_0_.Q & !ps_counter_1_.Q & ps_counter_2_.Q
+       & !ps_counter_3_.Q & !ps_RxData_5_.Q ; (2 pterms, 6 signals)
+ps_RxData_5_.D.X2 = ps_RxData_5_.Q ; (1 pterm, 1 signal)
+ps_RxData_5_.C = clkh ; (1 pterm, 1 signal)
+ps_RxData_5_.CE = ps_RxData_1__0 ; (1 pterm, 1 signal)
+
+ps_RxData_6_.D.X1 = !keyData & !ps_counter_0_.Q & ps_counter_1_.Q
+       & ps_counter_2_.Q & !ps_counter_3_.Q & ps_RxData_6_.Q
+    # keyData & !ps_counter_0_.Q & ps_counter_1_.Q & ps_counter_2_.Q
+       & !ps_counter_3_.Q & !ps_RxData_6_.Q ; (2 pterms, 6 signals)
+ps_RxData_6_.D.X2 = ps_RxData_6_.Q ; (1 pterm, 1 signal)
+ps_RxData_6_.C = clkh ; (1 pterm, 1 signal)
+ps_RxData_6_.CE = ps_RxData_1__0 ; (1 pterm, 1 signal)
+
+ps_RxData_7_.D.X1 = !keyData & ps_counter_0_.Q & ps_counter_1_.Q
+       & ps_counter_2_.Q & !ps_counter_3_.Q & ps_RxData_7_.Q
+    # keyData & ps_counter_0_.Q & ps_counter_1_.Q & ps_counter_2_.Q
+       & !ps_counter_3_.Q & !ps_RxData_7_.Q ; (2 pterms, 6 signals)
+ps_RxData_7_.D.X2 = ps_RxData_7_.Q ; (1 pterm, 1 signal)
+ps_RxData_7_.C = clkh ; (1 pterm, 1 signal)
+ps_RxData_7_.CE = ps_RxData_1__0 ; (1 pterm, 1 signal)
+
+ps_RxData_8_.D.X1 = !keyData & !ps_counter_0_.Q & !ps_counter_1_.Q
+       & !ps_counter_2_.Q & ps_counter_3_.Q & ps_RxData_8_.Q
+    # keyData & !ps_counter_0_.Q & !ps_counter_1_.Q & !ps_counter_2_.Q
+       & ps_counter_3_.Q & !ps_RxData_8_.Q ; (2 pterms, 6 signals)
+ps_RxData_8_.D.X2 = ps_RxData_8_.Q ; (1 pterm, 1 signal)
+ps_RxData_8_.C = clkh ; (1 pterm, 1 signal)
+ps_RxData_8_.CE = ps_RxData_1__0 ; (1 pterm, 1 signal)
+
+ps_RxEn.D = !ps_counter_1_.Q & !ps_counter_2_.Q
+    # !ps_counter_3_.Q ; (2 pterms, 3 signals)
+ps_RxEn.C = clkh ; (1 pterm, 1 signal)
+ps_RxEn.CE = !ps_keyClock_r1.Q & ps_keyClock_r2.Q ; (1 pterm, 2 signals)
+ps_RxEn.AP = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+ps_counter_0_.D = !ps_counter_0_.Q & !ps_counter_1_.Q & !ps_counter_2_.Q
+    # !ps_counter_0_.Q & !ps_counter_3_.Q ; (2 pterms, 4 signals)
+ps_counter_0_.C = clkh ; (1 pterm, 1 signal)
+ps_counter_0_.CE = !ps_keyClock_r1.Q & ps_keyClock_r2.Q ; (1 pterm, 2 signals)
+ps_counter_0_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+ps_counter_1_.D = ps_counter_0_.Q & !ps_counter_1_.Q & !ps_counter_2_.Q
+    # !ps_counter_0_.Q & ps_counter_1_.Q & !ps_counter_3_.Q
+    # ps_counter_0_.Q & !ps_counter_1_.Q & !ps_counter_3_.Q ; (3 pterms, 4 signals)
+ps_counter_1_.C = clkh ; (1 pterm, 1 signal)
+ps_counter_1_.CE = !ps_keyClock_r1.Q & ps_keyClock_r2.Q ; (1 pterm, 2 signals)
+ps_counter_1_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+ps_counter_2_.D = ps_counter_0_.Q & ps_counter_1_.Q & !ps_counter_2_.Q
+       & !ps_counter_3_.Q
+    # !ps_counter_1_.Q & ps_counter_2_.Q & !ps_counter_3_.Q
+    # !ps_counter_0_.Q & ps_counter_2_.Q & !ps_counter_3_.Q ; (3 pterms, 4 signals)
+ps_counter_2_.C = clkh ; (1 pterm, 1 signal)
+ps_counter_2_.CE = !ps_keyClock_r1.Q & ps_keyClock_r2.Q ; (1 pterm, 2 signals)
+ps_counter_2_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+ps_counter_3_.D = ps_counter_0_.Q & ps_counter_1_.Q & ps_counter_2_.Q
+       & !ps_counter_3_.Q
+    # !ps_counter_1_.Q & !ps_counter_2_.Q & ps_counter_3_.Q ; (2 pterms, 4 signals)
+ps_counter_3_.C = clkh ; (1 pterm, 1 signal)
+ps_counter_3_.CE = !ps_keyClock_r1.Q & ps_keyClock_r2.Q ; (1 pterm, 2 signals)
+ps_counter_3_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+ps_keyClock_r0.D = keyClock ; (1 pterm, 1 signal)
+ps_keyClock_r0.C = clkh ; (1 pterm, 1 signal)
+ps_keyClock_r0.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+ps_keyClock_r1.D = ps_keyClock_r0.Q ; (1 pterm, 1 signal)
+ps_keyClock_r1.C = clkh ; (1 pterm, 1 signal)
+ps_keyClock_r1.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+ps_keyClock_r2.D = ps_keyClock_r1.Q ; (1 pterm, 1 signal)
+ps_keyClock_r2.C = clkh ; (1 pterm, 1 signal)
+ps_keyClock_r2.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+ps_lastRxData_0_.D = ps_RxData_1_.Q ; (1 pterm, 1 signal)
+ps_lastRxData_0_.C = !ps_RxEn.Q ; (1 pterm, 1 signal)
+ps_lastRxData_0_.AP = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+ps_lastRxData_1_.D = ps_RxData_2_.Q ; (1 pterm, 1 signal)
+ps_lastRxData_1_.C = !ps_RxEn.Q ; (1 pterm, 1 signal)
+ps_lastRxData_1_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+ps_lastRxData_2_.D = ps_RxData_3_.Q ; (1 pterm, 1 signal)
+ps_lastRxData_2_.C = !ps_RxEn.Q ; (1 pterm, 1 signal)
+ps_lastRxData_2_.AP = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+ps_lastRxData_3_.D = ps_RxData_4_.Q ; (1 pterm, 1 signal)
+ps_lastRxData_3_.C = !ps_RxEn.Q ; (1 pterm, 1 signal)
+ps_lastRxData_3_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+ps_lastRxData_4_.D = ps_RxData_5_.Q ; (1 pterm, 1 signal)
+ps_lastRxData_4_.C = !ps_RxEn.Q ; (1 pterm, 1 signal)
+ps_lastRxData_4_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+ps_lastRxData_5_.D = ps_RxData_6_.Q ; (1 pterm, 1 signal)
+ps_lastRxData_5_.C = !ps_RxEn.Q ; (1 pterm, 1 signal)
+ps_lastRxData_5_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+ps_lastRxData_6_.D = ps_RxData_7_.Q ; (1 pterm, 1 signal)
+ps_lastRxData_6_.C = !ps_RxEn.Q ; (1 pterm, 1 signal)
+ps_lastRxData_6_.AP = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+ps_lastRxData_7_.D = ps_RxData_8_.Q ; (1 pterm, 1 signal)
+ps_lastRxData_7_.C = !ps_RxEn.Q ; (1 pterm, 1 signal)
+ps_lastRxData_7_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+ps_ledEn.D = !ps_lastRxData_0_.Q & !ps_lastRxData_1_.Q & !ps_lastRxData_2_.Q
+       & !ps_lastRxData_3_.Q & ps_lastRxData_4_.Q & ps_lastRxData_5_.Q
+       & ps_lastRxData_6_.Q & ps_lastRxData_7_.Q ; (1 pterm, 8 signals)
+ps_ledEn.C = !ps_RxEn.Q ; (1 pterm, 1 signal)
+ps_ledEn.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+ps_psData_0_.D = !ps_lastRxData_0_.Q & !ps_lastRxData_1_.Q & ps_save_0_.Q
+    # ps_lastRxData_1_.Q & !ps_lastRxData_4_.Q & ps_save_0_.Q
+    # !ps_lastRxData_0_.Q & ps_lastRxData_6_.Q & ps_save_0_.Q
+    # !ps_lastRxData_1_.Q & !ps_lastRxData_5_.Q & !ps_lastRxData_6_.Q
+       & ps_save_0_.Q
+    # ps_lastRxData_0_.Q & ps_lastRxData_4_.Q & ps_save_0_.Q
+    # ps_lastRxData_3_.Q & !ps_lastRxData_4_.Q & ps_save_0_.Q
+    # ps_lastRxData_0_.Q & !ps_lastRxData_1_.Q & ps_lastRxData_2_.Q
+       & ps_lastRxData_3_.Q & ps_lastRxData_4_.Q & ps_lastRxData_5_.Q
+       & !ps_lastRxData_6_.Q & !ps_lastRxData_7_.Q
+    # !ps_lastRxData_0_.Q & ps_lastRxData_1_.Q & ps_lastRxData_2_.Q
+       & !ps_lastRxData_3_.Q & !ps_lastRxData_4_.Q & !ps_lastRxData_5_.Q
+       & ps_lastRxData_6_.Q & !ps_lastRxData_7_.Q
+    # !ps_lastRxData_0_.Q & ps_lastRxData_1_.Q & ps_lastRxData_2_.Q
+       & !ps_lastRxData_3_.Q & ps_lastRxData_4_.Q & !ps_lastRxData_5_.Q
+       & !ps_lastRxData_6_.Q & !ps_lastRxData_7_.Q
+    # !ps_lastRxData_0_.Q & ps_lastRxData_1_.Q & ps_lastRxData_2_.Q
+       & !ps_lastRxData_4_.Q & ps_lastRxData_5_.Q & !ps_lastRxData_6_.Q
+       & !ps_lastRxData_7_.Q
+    # ps_lastRxData_5_.Q & ps_lastRxData_6_.Q & ps_save_0_.Q
+    # !ps_lastRxData_2_.Q & ps_save_0_.Q
+    # ps_lastRxData_7_.Q & ps_save_0_.Q ; (13 pterms, 9 signals)
+ps_psData_0_.LH = !ps_ledEn.Q ; (1 pterm, 1 signal)
+ps_psData_0_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+ps_psData_1_.D = !ps_lastRxData_1_.Q & ps_lastRxData_3_.Q & ps_save_1_.Q
+    # !ps_lastRxData_1_.Q & ps_lastRxData_4_.Q & ps_save_1_.Q
+    # !ps_lastRxData_4_.Q & !ps_lastRxData_5_.Q & !ps_lastRxData_6_.Q
+       & ps_save_1_.Q
+    # ps_lastRxData_3_.Q & !ps_lastRxData_5_.Q & ps_save_1_.Q
+    # !ps_lastRxData_0_.Q & ps_lastRxData_1_.Q & ps_lastRxData_2_.Q
+       & ps_lastRxData_3_.Q & ps_lastRxData_4_.Q & !ps_lastRxData_5_.Q
+       & !ps_lastRxData_6_.Q & !ps_lastRxData_7_.Q
+    # ps_lastRxData_0_.Q & !ps_lastRxData_1_.Q & ps_lastRxData_2_.Q
+       & ps_lastRxData_3_.Q & ps_lastRxData_4_.Q & ps_lastRxData_5_.Q
+       & !ps_lastRxData_6_.Q & !ps_lastRxData_7_.Q
+    # !ps_lastRxData_0_.Q & ps_lastRxData_1_.Q & ps_lastRxData_2_.Q
+       & !ps_lastRxData_3_.Q & ps_lastRxData_5_.Q & !ps_lastRxData_6_.Q
+       & !ps_lastRxData_7_.Q
+    # ps_lastRxData_5_.Q & ps_lastRxData_6_.Q & ps_save_1_.Q
+    # ps_lastRxData_4_.Q & ps_lastRxData_6_.Q & ps_save_1_.Q
+    # !ps_lastRxData_0_.Q & !ps_lastRxData_1_.Q & ps_save_1_.Q
+    # ps_lastRxData_0_.Q & ps_lastRxData_1_.Q & ps_save_1_.Q
+    # ps_lastRxData_7_.Q & ps_save_1_.Q
+    # !ps_lastRxData_2_.Q & ps_save_1_.Q ; (13 pterms, 9 signals)
+ps_psData_1_.LH = !ps_ledEn.Q ; (1 pterm, 1 signal)
+ps_psData_1_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+ps_psData_2_.D = !ps_lastRxData_1_.Q & !ps_lastRxData_6_.Q & ps_save_2_.Q
+    # ps_lastRxData_3_.Q & !ps_lastRxData_4_.Q & ps_save_2_.Q
+    # !ps_lastRxData_0_.Q & ps_lastRxData_1_.Q & ps_lastRxData_2_.Q
+       & ps_lastRxData_3_.Q & !ps_lastRxData_4_.Q & ps_lastRxData_5_.Q
+       & !ps_lastRxData_6_.Q & !ps_lastRxData_7_.Q
+    # !ps_lastRxData_0_.Q & ps_lastRxData_1_.Q & ps_lastRxData_2_.Q
+       & !ps_lastRxData_3_.Q & ps_lastRxData_4_.Q & ps_lastRxData_5_.Q
+       & !ps_lastRxData_6_.Q & !ps_lastRxData_7_.Q
+    # ps_lastRxData_0_.Q & !ps_lastRxData_1_.Q & ps_lastRxData_2_.Q
+       & !ps_lastRxData_3_.Q & !ps_lastRxData_4_.Q & ps_lastRxData_5_.Q
+       & !ps_lastRxData_6_.Q & !ps_lastRxData_7_.Q
+    # ps_lastRxData_0_.Q & !ps_lastRxData_1_.Q & ps_lastRxData_2_.Q
+       & ps_lastRxData_3_.Q & ps_lastRxData_4_.Q & ps_lastRxData_5_.Q
+       & !ps_lastRxData_6_.Q & !ps_lastRxData_7_.Q
+    # !ps_lastRxData_4_.Q & !ps_lastRxData_5_.Q & !ps_lastRxData_6_.Q
+       & ps_save_2_.Q
+    # !ps_lastRxData_0_.Q & !ps_lastRxData_1_.Q & ps_save_2_.Q
+    # ps_lastRxData_4_.Q & ps_lastRxData_6_.Q & ps_save_2_.Q
+    # ps_lastRxData_5_.Q & ps_lastRxData_6_.Q & ps_save_2_.Q
+    # ps_lastRxData_0_.Q & ps_lastRxData_1_.Q & ps_save_2_.Q
+    # !ps_lastRxData_2_.Q & ps_save_2_.Q
+    # ps_lastRxData_7_.Q & ps_save_2_.Q ; (13 pterms, 9 signals)
+ps_psData_2_.LH = !ps_ledEn.Q ; (1 pterm, 1 signal)
+ps_psData_2_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+ps_psData_3_.D = !ps_lastRxData_1_.Q & !ps_lastRxData_3_.Q
+       & ps_lastRxData_4_.Q & ps_save_3_.Q
+    # !ps_lastRxData_0_.Q & !ps_lastRxData_4_.Q & !ps_lastRxData_5_.Q
+       & ps_save_3_.Q
+    # !ps_lastRxData_1_.Q & ps_lastRxData_3_.Q & !ps_lastRxData_4_.Q
+       & ps_save_3_.Q
+    # !ps_lastRxData_1_.Q & !ps_lastRxData_5_.Q & !ps_lastRxData_6_.Q
+       & ps_save_3_.Q
+    # ps_lastRxData_4_.Q & ps_lastRxData_6_.Q & ps_save_3_.Q
+    # !ps_lastRxData_0_.Q & ps_lastRxData_1_.Q & ps_lastRxData_2_.Q
+       & ps_lastRxData_3_.Q & ps_lastRxData_4_.Q & ps_lastRxData_5_.Q
+       & !ps_lastRxData_6_.Q & !ps_lastRxData_7_.Q
+    # !ps_lastRxData_0_.Q & ps_lastRxData_1_.Q & ps_lastRxData_2_.Q
+       & !ps_lastRxData_3_.Q & !ps_lastRxData_4_.Q & !ps_lastRxData_5_.Q
+       & ps_lastRxData_6_.Q & !ps_lastRxData_7_.Q
+    # ps_lastRxData_5_.Q & ps_lastRxData_6_.Q & ps_save_3_.Q
+    # !ps_lastRxData_0_.Q & !ps_lastRxData_1_.Q & ps_save_3_.Q
+    # ps_lastRxData_0_.Q & ps_lastRxData_1_.Q & ps_save_3_.Q
+    # ps_lastRxData_7_.Q & ps_save_3_.Q
+    # !ps_lastRxData_2_.Q & ps_save_3_.Q ; (12 pterms, 9 signals)
+ps_psData_3_.LH = !ps_ledEn.Q ; (1 pterm, 1 signal)
+ps_psData_3_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+ps_save_0_.D = !ps_lastRxData_0_.Q & !ps_lastRxData_1_.Q & ps_save_0_.Q
+    # !ps_lastRxData_1_.Q & ps_lastRxData_3_.Q & ps_save_0_.Q
+    # !ps_lastRxData_0_.Q & ps_lastRxData_6_.Q & ps_save_0_.Q
+    # !ps_lastRxData_1_.Q & !ps_lastRxData_5_.Q & !ps_lastRxData_6_.Q
+       & ps_save_0_.Q
+    # ps_lastRxData_1_.Q & !ps_lastRxData_4_.Q & ps_save_0_.Q
+    # ps_lastRxData_0_.Q & ps_lastRxData_4_.Q & ps_save_0_.Q
+    # ps_lastRxData_0_.Q & !ps_lastRxData_1_.Q & ps_lastRxData_2_.Q
+       & ps_lastRxData_3_.Q & ps_lastRxData_4_.Q & ps_lastRxData_5_.Q
+       & !ps_lastRxData_6_.Q & !ps_lastRxData_7_.Q
+    # !ps_lastRxData_0_.Q & ps_lastRxData_1_.Q & ps_lastRxData_2_.Q
+       & !ps_lastRxData_3_.Q & !ps_lastRxData_4_.Q & !ps_lastRxData_5_.Q
+       & ps_lastRxData_6_.Q & !ps_lastRxData_7_.Q
+    # !ps_lastRxData_0_.Q & ps_lastRxData_1_.Q & ps_lastRxData_2_.Q
+       & !ps_lastRxData_3_.Q & ps_lastRxData_4_.Q & !ps_lastRxData_5_.Q
+       & !ps_lastRxData_6_.Q & !ps_lastRxData_7_.Q
+    # !ps_lastRxData_0_.Q & ps_lastRxData_1_.Q & ps_lastRxData_2_.Q
+       & !ps_lastRxData_4_.Q & ps_lastRxData_5_.Q & !ps_lastRxData_6_.Q
+       & !ps_lastRxData_7_.Q
+    # ps_lastRxData_5_.Q & ps_lastRxData_6_.Q & ps_save_0_.Q
+    # !ps_lastRxData_2_.Q & ps_save_0_.Q
+    # ps_lastRxData_7_.Q & ps_save_0_.Q ; (13 pterms, 9 signals)
+ps_save_0_.LH = !( ps_save_0__0 ) ; (1 pterm, 1 signal)
+
+ps_save_0__0 = ps_ledEn.Q
+    # !button0_d1_q_0_.Q & !button0_d2_q_0_.Q & !button0_d3_q_0_.Q ; (2 pterms, 4 signals)
+
+ps_save_1_.D = !ps_lastRxData_1_.Q & ps_lastRxData_3_.Q & ps_save_1_.Q
+    # !ps_lastRxData_1_.Q & ps_lastRxData_4_.Q & ps_save_1_.Q
+    # ps_lastRxData_3_.Q & ps_lastRxData_6_.Q & ps_save_1_.Q
+    # !ps_lastRxData_4_.Q & !ps_lastRxData_5_.Q & !ps_lastRxData_6_.Q
+       & ps_save_1_.Q
+    # !ps_lastRxData_0_.Q & ps_lastRxData_1_.Q & ps_lastRxData_2_.Q
+       & ps_lastRxData_3_.Q & ps_lastRxData_4_.Q & !ps_lastRxData_5_.Q
+       & !ps_lastRxData_6_.Q & !ps_lastRxData_7_.Q
+    # ps_lastRxData_0_.Q & !ps_lastRxData_1_.Q & ps_lastRxData_2_.Q
+       & ps_lastRxData_3_.Q & ps_lastRxData_4_.Q & ps_lastRxData_5_.Q
+       & !ps_lastRxData_6_.Q & !ps_lastRxData_7_.Q
+    # !ps_lastRxData_0_.Q & ps_lastRxData_1_.Q & ps_lastRxData_2_.Q
+       & !ps_lastRxData_3_.Q & ps_lastRxData_5_.Q & !ps_lastRxData_6_.Q
+       & !ps_lastRxData_7_.Q
+    # ps_lastRxData_5_.Q & ps_lastRxData_6_.Q & ps_save_1_.Q
+    # ps_lastRxData_4_.Q & ps_lastRxData_6_.Q & ps_save_1_.Q
+    # !ps_lastRxData_0_.Q & !ps_lastRxData_1_.Q & ps_save_1_.Q
+    # ps_lastRxData_0_.Q & ps_lastRxData_1_.Q & ps_save_1_.Q
+    # ps_lastRxData_7_.Q & ps_save_1_.Q
+    # !ps_lastRxData_2_.Q & ps_save_1_.Q ; (13 pterms, 9 signals)
+ps_save_1_.LH = !( ps_save_0__0 ) ; (1 pterm, 1 signal)
+
+ps_save_2_.D = !ps_lastRxData_1_.Q & !ps_lastRxData_6_.Q & ps_save_2_.Q
+    # ps_lastRxData_3_.Q & !ps_lastRxData_4_.Q & ps_save_2_.Q
+    # !ps_lastRxData_0_.Q & ps_lastRxData_1_.Q & ps_lastRxData_2_.Q
+       & ps_lastRxData_3_.Q & !ps_lastRxData_4_.Q & ps_lastRxData_5_.Q
+       & !ps_lastRxData_6_.Q & !ps_lastRxData_7_.Q
+    # !ps_lastRxData_0_.Q & ps_lastRxData_1_.Q & ps_lastRxData_2_.Q
+       & !ps_lastRxData_3_.Q & ps_lastRxData_4_.Q & ps_lastRxData_5_.Q
+       & !ps_lastRxData_6_.Q & !ps_lastRxData_7_.Q
+    # ps_lastRxData_0_.Q & !ps_lastRxData_1_.Q & ps_lastRxData_2_.Q
+       & !ps_lastRxData_3_.Q & !ps_lastRxData_4_.Q & ps_lastRxData_5_.Q
+       & !ps_lastRxData_6_.Q & !ps_lastRxData_7_.Q
+    # ps_lastRxData_0_.Q & !ps_lastRxData_1_.Q & ps_lastRxData_2_.Q
+       & ps_lastRxData_3_.Q & ps_lastRxData_4_.Q & ps_lastRxData_5_.Q
+       & !ps_lastRxData_6_.Q & !ps_lastRxData_7_.Q
+    # !ps_lastRxData_4_.Q & !ps_lastRxData_5_.Q & !ps_lastRxData_6_.Q
+       & ps_save_2_.Q
+    # !ps_lastRxData_0_.Q & !ps_lastRxData_1_.Q & ps_save_2_.Q
+    # ps_lastRxData_4_.Q & ps_lastRxData_6_.Q & ps_save_2_.Q
+    # ps_lastRxData_5_.Q & ps_lastRxData_6_.Q & ps_save_2_.Q
+    # ps_lastRxData_0_.Q & ps_lastRxData_1_.Q & ps_save_2_.Q
+    # !ps_lastRxData_2_.Q & ps_save_2_.Q
+    # ps_lastRxData_7_.Q & ps_save_2_.Q ; (13 pterms, 9 signals)
+ps_save_2_.LH = !( ps_save_0__0 ) ; (1 pterm, 1 signal)
+
+ps_save_3_.D = !ps_lastRxData_1_.Q & !ps_lastRxData_3_.Q & ps_lastRxData_4_.Q
+       & ps_save_3_.Q
+    # !ps_lastRxData_0_.Q & !ps_lastRxData_4_.Q & !ps_lastRxData_5_.Q
+       & ps_save_3_.Q
+    # !ps_lastRxData_1_.Q & ps_lastRxData_3_.Q & !ps_lastRxData_4_.Q
+       & ps_save_3_.Q
+    # !ps_lastRxData_1_.Q & !ps_lastRxData_5_.Q & !ps_lastRxData_6_.Q
+       & ps_save_3_.Q
+    # ps_lastRxData_4_.Q & ps_lastRxData_6_.Q & ps_save_3_.Q
+    # !ps_lastRxData_0_.Q & ps_lastRxData_1_.Q & ps_lastRxData_2_.Q
+       & ps_lastRxData_3_.Q & ps_lastRxData_4_.Q & ps_lastRxData_5_.Q
+       & !ps_lastRxData_6_.Q & !ps_lastRxData_7_.Q
+    # !ps_lastRxData_0_.Q & ps_lastRxData_1_.Q & ps_lastRxData_2_.Q
+       & !ps_lastRxData_3_.Q & !ps_lastRxData_4_.Q & !ps_lastRxData_5_.Q
+       & ps_lastRxData_6_.Q & !ps_lastRxData_7_.Q
+    # ps_lastRxData_5_.Q & ps_lastRxData_6_.Q & ps_save_3_.Q
+    # !ps_lastRxData_0_.Q & !ps_lastRxData_1_.Q & ps_save_3_.Q
+    # ps_lastRxData_0_.Q & ps_lastRxData_1_.Q & ps_save_3_.Q
+    # ps_lastRxData_7_.Q & ps_save_3_.Q
+    # !ps_lastRxData_2_.Q & ps_save_3_.Q ; (12 pterms, 9 signals)
+ps_save_3_.LH = !( ps_save_0__0 ) ; (1 pterm, 1 signal)
+
+show_0_ = !( !ps_psData_0_.Q & ps_psData_2_.Q & !ps_psData_3_.Q
+       & !dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q
+    # !ps_psData_0_.Q & ps_psData_1_.Q & !ps_psData_2_.Q
+       & !dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q
+    # !ps_psData_1_.Q & ps_psData_2_.Q & !ps_psData_3_.Q
+       & !dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q
+    # !ps_psData_1_.Q & !ps_psData_2_.Q & ps_psData_3_.Q
+       & !dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q
+    # ps_psData_1_.Q & !ps_psData_2_.Q & !ps_psData_3_.Q
+       & !dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q ) ; (5 pterms, 6 signals)
+
+show_1_ = !( !ps_psData_0_.Q & !ps_psData_1_.Q & !ps_psData_2_.Q
+       & !dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q
+    # !ps_psData_0_.Q & ps_psData_2_.Q & !ps_psData_3_.Q
+       & !dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q
+    # !ps_psData_1_.Q & !ps_psData_2_.Q & ps_psData_3_.Q
+       & !dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q
+    # !ps_psData_1_.Q & ps_psData_2_.Q & !ps_psData_3_.Q
+       & !dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q ) ; (4 pterms, 6 signals)
+
+show_2_ = !( !ps_psData_0_.Q & ps_psData_1_.Q & !ps_psData_3_.Q
+       & !dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q
+    # !ps_psData_0_.Q & !ps_psData_1_.Q & !ps_psData_2_.Q
+       & !dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q ) ; (2 pterms, 6 signals)
+
+show_3_ = !( !ps_psData_0_.Q & !ps_psData_2_.Q & !ps_psData_3_.Q
+       & !dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q
+    # ps_psData_0_.Q & !ps_psData_1_.Q & ps_psData_2_.Q & !ps_psData_3_.Q
+       & !dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q
+    # !ps_psData_0_.Q & ps_psData_1_.Q & !ps_psData_3_.Q
+       & !dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q
+    # !ps_psData_1_.Q & !ps_psData_2_.Q & ps_psData_3_.Q
+       & !dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q
+    # ps_psData_1_.Q & !ps_psData_2_.Q & !ps_psData_3_.Q
+       & !dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q ) ; (5 pterms, 6 signals)
+
+show_4_ = !( !ps_psData_1_.Q & !ps_psData_2_.Q & !dynamicshow_counter4_q_1_.Q
+       & !dynamicshow_counter4_q_2_.Q
+    # ps_psData_2_.Q & !ps_psData_3_.Q & !dynamicshow_counter4_q_1_.Q
+       & !dynamicshow_counter4_q_2_.Q
+    # ps_psData_0_.Q & !ps_psData_3_.Q & !dynamicshow_counter4_q_1_.Q
+       & !dynamicshow_counter4_q_2_.Q ) ; (3 pterms, 6 signals)
+
+show_5_ = !( ps_psData_0_.Q & ps_psData_1_.Q & !ps_psData_3_.Q
+       & !dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q
+    # !ps_psData_0_.Q & !ps_psData_1_.Q & !ps_psData_3_.Q
+       & !dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q
+    # !ps_psData_1_.Q & !ps_psData_2_.Q & !dynamicshow_counter4_q_1_.Q
+       & !dynamicshow_counter4_q_2_.Q
+    # !ps_psData_2_.Q & !ps_psData_3_.Q & !dynamicshow_counter4_q_1_.Q
+       & !dynamicshow_counter4_q_2_.Q ) ; (4 pterms, 6 signals)
+
+show_6_ = !( !ps_psData_0_.Q & !ps_psData_2_.Q & !ps_psData_3_.Q
+       & !dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q
+    # ps_psData_0_.Q & ps_psData_2_.Q & !ps_psData_3_.Q
+       & !dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q
+    # !ps_psData_1_.Q & !ps_psData_2_.Q & ps_psData_3_.Q
+       & !dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q
+    # ps_psData_1_.Q & !ps_psData_3_.Q & !dynamicshow_counter4_q_1_.Q
+       & !dynamicshow_counter4_q_2_.Q ) ; (4 pterms, 6 signals)
+

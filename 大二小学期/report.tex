@@ -1,0 +1,317 @@
+\documentclass{../source/zjureport}
+
+\major{信息工程}
+ \name{箫宇 etc}
+\title{波导实验}
+\college{信息与电子工程学院}
+\date{\today}
+\lab{东4-227}
+\stuid{ }
+\course{电子电路设计实验}
+\instructor{王子立、金向东、龚淑君}
+\grades{}
+\expname{数控恒流源设计}
+\exptype{设计实验}
+\partner{}
+
+\begin{document}
+    \makecover
+    \makeheader
+
+    \section{系统方案}
+        \subsection{系统总体框图}
+
+        \begin{figure}[thp]
+            \centering
+            \includegraphics[width = 0.9\textwidth]{figure/系统框图.png}
+            \caption{系统总体框图}
+        \end{figure}
+
+        \subsection{方案比较与选择}
+            \subsubsection{采用开关电源的恒流源}
+
+            采用开关电源的恒流源电路如图1所示。当电源电压降低或负载电阻R1降低时，采样电阻RS上的电压也将减少，则SG3524的12、13管脚输出方 波的占空比增大，从而BG1导通时间变长，使电压U0回升到原来的稳定值。BG1关断后，储能元件L1、E2、E3、E4保证负载上的电压不变。当输入电源电压增大或负载电阻值增大引起U0增大时，原理与前类似，电路通过反馈系统使U0下降到原来的稳定值，从而达到稳定负载电流I1的目的。
+
+            优点：开关电源的功率器件工作在开关状态，功率损耗小，效率高。与之相配套的散热器体积大大减小，同时脉冲变压器体积比工频变压器小了很多。因此采用开关电源的恒流源具有效率高、体积小、重量轻等优点。
+
+            缺点：开关电源的控制电路结构复杂，输出纹波较大，在有限的时间内实现比较困难。
+            \newpage
+
+            \begin{figure}[thp]
+                \centering
+                \includegraphics[width = 0.8\textwidth]{figure/采用开关电路的恒流源.jpg}
+                \caption{采用开关电源的恒流源}
+            \end{figure}
+
+            \subsubsection{采用集成稳压器构成的开关恒流源}
+            系统电路构成如图2所示。MC7805为三端固定式集成稳压器，调节RW，可以改变电流的大小，其输出电流为：IL=(UOUT/RW)+I4，式中I4为MC7805的静态电流，小于10mA。当RW较小即输出电流较大时，可以忽略 ，当负载电阻RL变化时，MC7805改变自身压差来维持通过负载的电流不变。
+
+            优点：该方案结构简单，可靠性高
+　　
+            缺点：无法实现数控。
+
+            \begin{figure}[thp]
+                \centering
+                \includegraphics[width = 0.5\textwidth]{figure/采用集成稳压器的开关恒流源.jpg}
+                \caption{采用集成稳压器构成的开关恒流源}
+            \end{figure}
+
+            \subsection{采用单片机控制的恒流源}
+            该方案恒流源电路由N沟道的MOSFET、高精度运算放大器、采样电阻等组成，其电路原理图如图3所示。利用功率MOSFET的恒流特性，再加上电流反馈电路，使得该电路的精度很高。
+
+    
+            该电流源电路可以结合单片机构成数控电流源。通过键盘预置电流值，单片机输出相应的数字信号给D/A转换器，D/A转换器输出的模拟信号送到运 算放大器，控制主电路电流大小。实际输出的电流再通过采样电阻采样变成电压信号，A/D转换后将信号反馈到单片机中。单片机将反馈信号与预置值比较，根据 两者间的差值调整输出信号大小。这样就形成了反馈调节，提高输出电流的精度。本方案可实现题目要求，当负载在一定范围内变化时具有良好的稳定性，而且精度较高。
+            \begin{figure}[thp]
+                \centering
+                \includegraphics[width = 0.5\textwidth]{figure/采用单片机控制的恒流源.png}
+                \caption{采用单片机控制的恒流源}
+            \end{figure}
+
+        \subsection{方案描述}
+
+        该数控恒流源电路主要包括按键输入、LCD显示屏输出、单片机、RC滤波电路、压控恒流源电路、电压采样电路几个模块。
+
+        系统工作原理为：通过按键对电流值S_CURRENT进行预置，并显示在LCD显示屏上，单片机根据预置的电流值输出一定占空比的PWM波，通过RC滤波电路后输出直流信号。直流信号输送至压控恒流源模块，通过电阻分压后输送至大功率场效应管IRF640，产生相应的电流值。场效应管的漏极电流即为恒流源的实际输出电流。场效应管的漏极电流近似于源极电流，在电压采样模块，场效应管的源极电流经过采样电阻后转化为电压信号，经过差分放大电路后输送至单片机，单片机采集此信号，作出相应的调整处理后输出显示在LCD显示屏上，作为电流源的自测表的输出值N_CURRENT，实际的输出电流通过电流表测量得到。
+
+    \section{理论分析与计算}
+        \subsection{理论分析}
+        我们组的电路主要分为3个部分，恒流控制电路，采样放大电路，单片机电路，这里主要对恒流控制电路和采样放大电路进行介绍分析。
+
+        恒流控制电路主要用于控制一个恒定的电流进行输出，首先根据你设定的值控制单片机输出一个占空比确定的pwm波，pwm波经过RC滤波变为一个恒定的电压，也就是经过pwm输出电路，此时这个确定的电压值在经过分压进入恒流控制电路，这里进行分压的原因主要由于我们所取的采样电阻比较小，因此必须控制输入的电压值，经过确定分压比之后的电压再进入运算放大器，根据理想运放的特性我们可以指导，2、3两脚的电压值近似相等，而2脚又与采样电阻相连，因此此时完整的电压进入采样电阻，采样电阻另一端又接地，因此此时采样电阻上的电流即为分压后的电压除以采样电阻的阻值，而根据mos管的特性，运算放大器和mosfet相连出来的电流可以近似忽略，因此采样电阻上的电流值与我们的输出接口JP JP2上的电流值相等，而据此可知，我们可以控制pwm波的占空比来线性地控制电流。
+
+        而电压采样电路主要起到一个放大反馈的作用，采样电阻上的电压进入我们的电压采样电路，而根据电压采样电路上的电阻阻值，我们可以确定一个恒定的放大比，在这个电路中，我们把R7、R8的值设定为相等，R9、R10的值也设定为相等，最后得到的放大比例即为两者之比，放大后的电压后输出到AD输入电路，此时对放大后的电压进行RC滤波，之后将这个滤波后的电压输入到单片机的Adin,单片机根据输入进来的Adin可以进行数模转化，而数模转化比较后则可以对单片机的pwm占空比进行一个调节，以此来达到一个反馈调节的功能。
+
+        至于电源模块，LCD电路我们则是根据老师所给的单片机学习板而设计，两者相吻合以此来保证正确性，我们也适当删减了一些单片机学习板上一些没有必要的电路。
+
+        恒流控制电路和电压采样电路我们主要参考了老师放在群里的资料。
+
+        \subsubsection{理论计算}
+        电路中主要需要计算的是恒流控制电路和电压采样电路的一些电阻值。
+   
+        这里我先对恒流控制电路上的分压比进行计算，一开始在不知道采样电阻只能是0.1欧姆之前，我们是按照0.15欧姆来进行计算的，不过此处我就根据0.15欧姆的思路给出0.1欧姆的计算思路，首先是分压比调控，因为pwm波的占空比只能在256个值之内进行调节，因此我们取了一个比较好的占空比也即为200，因此我们设定它的满量程也即是实验要求20mA到1000mA，满量程对应此，1000mA在采样电阻对应0.15V，而pwm最大的电压量为5V，因此5V*k*200/256=0.15，据此我们可以得到k=0.0384,而根据标称电阻值，我们得到了两个电阻值是比较符合的，3K欧姆和75K欧姆，3/75+3我们可以得到也为0.384，因此这就是我们在横流控制电路上的计算。
+  
+        然后我们对于电压采样电路上的电阻值进行计算，此处我们采用了相同的电阻值进行控制，也就是R7=R8=3K,而R9=R10=75K，而根据运放的特性我们可以得到放大的比例为R9/R7=25，因此我们对于采样电阻上的电压放大了25倍。之后的一些电容值我们根据老师所给的资料以及老师之后的建议我们进行了调节，最后所得到的电容值如之前的电路图所示。
+  
+        此时我们已经可以完整的量程范围(20, 1000)mA,而采样电阻上的电压值的范围为(3,150)mV,再到分压前的电压为(78,3900)mV,最后根据此得到占空比(,0.0156,0.78),对应有占空比的分子(4，200)。
+  
+        而在最后电路板的焊接过程中，我们又进行了调节，采样电阻改为了0.1欧姆，而在实验室的柜子中75K欧姆的电阻是不存在的，因此我们采取了100K欧姆的电阻进行了代替，当然根据我们电路板的测试中，在Adin电路和pwm输入电路中，本身就存在一定的压降，因此我们最后还是根据实际测出来pwm值，AD值，以及实际电流值，来对我们程序内部的参数来进行设计。
+        \newpage
+
+    \section{电路与程序设计}
+        \subsection{硬件电路设计}
+            \subsubsection{各模块电路}
+            \begin{enumerate}
+                \item 总体电路
+                \begin{figure}[thp]
+                    \centering
+                    \includegraphics[width = 0.8\textwidth]{figure/总体电路.png}
+                    \caption{总体电路}
+                \end{figure}
+                \item 压控恒流源模块
+                
+                压控恒流源是该系统的主要部分，通过电压来控制输出电流的变化。该压控恒流源电路由分压电阻R1、R2，运算放大器IC1，大功率场效应管Q1，采样电阻R4，电流输出模块JP2等组成。
+
+                压控恒流源电路的工作原理为：输入RC滤波电路得到的直流信号，经过分压后得到U3输入运算放大器，控制输出对应的电流Io。运放采用OP-07作为电压跟随器，由于U2=U3，场效应管Id=Is，可以得到Io=Is=U2/R53= U3/R53。从Io=U3/R53可以看出，电路输入电压U3控制输出电流Io，即Io不随RL的变化而变化，从而实现压控恒流。
+                \newpage
+                \begin{figure}[thp]
+                    \centering
+                    \includegraphics[width = 0.5\textwidth]{figure/压控恒流源模块.png}
+                    \caption{压控恒流源模块}
+                \end{figure}
+                \item 电压采样模块
+                
+                电压采样模块是反馈部分。该电压采样模块采用差分放大电路，由运算放大器IC2、若干电阻电容组成。电路原理图如图7所示。
+
+                其工作原理为：对采样电阻R4上的电压进行采样，经放大后输入单片机，由单片机内部的ADC模块转换为数字信号作为反馈，PID调整输出的PWM波，实现负反馈。
+                \begin{figure}[thp]
+                    \centering
+                    \includegraphics[width = 0.5\textwidth]{figure/电压采样模块.png}
+                    \caption{电压采样模块}
+                \end{figure}
+                \item 按键输入模块
+                
+                该模块采用三个按键输入，按键1控制改变数字的位，按键2控制数字+1，按键3为确认输入，将设定的数字输入单片机。按键采用防抖动设计。
+                \item 单片机以及A/D转换模块
+                
+                单片机为本系统的主控制器，本次设计采用型号为STC1C5410AD的单片机，指令周期短，工作速率快，功耗低，具有丰富的片上资源，可以在线下载，易于调试。
+
+                单片机自带的A/D转换模块为10位，取高八位为有效位，转换模块将输入的采样电压转换成数字信号反馈给单片机，单片机将此反馈信号与预置值比较，根据两者间的差值调整输出信号大小。这样就形成了反馈调节，提高输出电流的精度。同时，将采样回来的电压经过单片机处理传送到LCD，可以显示当前的实际电流值。
+
+                \begin{figure}[thp]
+                    \centering
+                    \includegraphics[width = 0.7\textwidth]{figure/单片机电路.png}
+                    \caption{单片机电路}
+                \end{figure}
+                \item LCD显示模块
+                
+                LCD显示屏型号为LCD1602，第一行显示设定电流值S_CURRENT，第二行显示单片机测量值N_CURRENT。
+
+                \begin{figure}[thp]
+                    \centering
+                    \includegraphics[width = 0.5\textwidth]{figure/LCD电路.png}
+                    \caption{LCD电路}
+                \end{figure}
+                \item 电源模块
+                
+                电源模块由学生电源提供12V直流，由ICL7660S生成-5V的电压。
+                \newpage
+                \begin{figure}[thp]
+                    \centering
+                    \includegraphics[width = 0.5\textwidth]{figure/电源模块.png}
+                    \caption{电源模块}
+                \end{figure}
+            \end{enumerate}
+            \subsubsection{PCB设计}
+            \begin{figure}[thp]
+                \centering
+                \includegraphics[width = 0.8\textwidth]{figure/PCB.jpg}
+                \caption{PCB设计}
+            \end{figure}
+            \newpage
+        \subsection{软件设计}
+            \subsubsection{流程图}
+
+            \begin{figure}[thp]
+                \centering
+                \includegraphics[width = 0.8\textwidth]{figure/软件框图.png}
+                \caption{流程图}
+            \end{figure}
+            \subsubsection{模块核心代码}
+            \begin{lstlisting}[
+                caption=ADC输入及转换为实际电流,
+                language = C
+                ]
+            void ADC_Scan(){
+            //开启ADC，通道六扫描
+            ADC_CONTR = ADC_POWER | ADC_SPEEDLL | 6 | ADC_START;
+            _nop_();                        //Must wait before inquiry
+            _nop_();
+            _nop_();
+            _nop_();
+            while (!(ADC_CONTR & ADC_FLAG));//Wait complete flag
+            ADC_CONTR &= ~ADC_FLAG;         //Close ADC
+            //将10位转换结果存入Adc_resuit变量
+            Now_Current = ADC_DATA*4+(ADC_LOW2 && 0x03);
+                
+            //将电流转换为实际电流值
+            Now_Current = Now_Current/0.65;
+                    
+                }
+            \end{lstlisting}
+            \newpage
+            \begin{lstlisting}[
+                caption = 按键操作及PWM控制,
+                language = C
+            ]
+            void	Key_treat()
+            {
+                if (Key3_press_flag)
+                {
+                    //将预设值传入PWM
+                    result = Set[3]*1000 + Set[2]*100 + Set[1]*10 + Set[0];
+                    //将按键输入结果转化为PWM控制值
+                    result = 255 - result/gain;
+                    Key3_press_flag = 0;
+                }
+            
+                if (Key2_press_flag)
+                {
+                    switch (target)
+                    {	
+                    case 0: Set[3-target] = (Set[3-target] + 1)%2;
+                        break;
+                    
+                    default: Set[3-target] = (Set[3-target] + 1)%10;
+                        break;
+                    }
+                    Key2_press_flag = 0;
+                }
+            
+                if (Key1_press_flag)
+                {
+                    target = (target+1)%4;
+                    Key1_press_flag = 0;
+                }
+            
+            }
+            \end{lstlisting}
+            \newpage
+    \section{测试方案与测试结果}
+        \subsection{测试步骤}
+        \begin{enumerate}
+            \item 单片机PWM波输出占空比设置为50\%，改变负载，测试恒流控制模块是否能达到恒流控制效果
+            \item  断开PWM波反馈回路，测量单片机ADC输入，得到输出电流与ADC转换结果之间的关系，校准参数
+            \item 连接PWM反馈回路，设定不同的电流值，计算得到PWM占空比与电流之间的关系，调整代码
+        \end{enumerate}
+        
+        \subsection{测试结果}
+            \subsubsection{电流范围与步进调节}
+            \begin{table}[thp]
+                \centering
+                \begin{tabular}{|c|c|c|c|c|c|c|}
+                \hline
+                设定值(mA) & 20   & 30   & 40   & 50   & 500   & 1000   \\ \hline
+                测定值(mA) & 19.7 & 29.4 & 39.1 & 48.4 & 498.5 & 1003.1 \\ \hline
+                显示值(mA) & 20   & 26   & 38   & 44   & 493   & 998    \\ \hline
+                \end{tabular}
+                \end{table}
+            \subsubsection{负载电阻改变电流变化测量}
+            \begin{table}[thp]
+                \centering
+                \begin{tabular}{|c|c|c|}
+                \hline
+                \multicolumn{3}{|c|}{设定500mA} \\ \hline
+                接入电阻    & 第一次测量    & 第二次测量    \\ \hline
+                0欧姆     & 498.5mA  & 500.1mA  \\ \hline
+                7.5欧姆   & 493.1mA  & 495.5mA  \\ \hline
+                \end{tabular}
+                \end{table}
+
+            \subsubsection{纹波电流测量}
+            接入7.5Ω电阻，将示波器接在电阻两端，得到文波电流为2mA
+        \subsection{数据处理}
+        \begin{table}[htp]
+            \centering
+            \begin{tabular}{|c|c|c|c|c|c|c|}
+            \hline
+            设定值(mA) & 20   & 30   & 40   & 50   & 500   & 1000   \\ \hline
+            测定值(mA) & 19.7 & 29.4 & 39.1 & 48.4 & 498.5 & 1003.1 \\ \hline
+            显示值(mA) & 20   & 26   & 38   & 44   & 493   & 998    \\ \hline
+            设定与测量差值 & 0.3  & 0.6  & 0.9  & 1.6  & 1.5   & -3.1   \\ \hline
+            测量与显示差值 & -0.3 & 3.4  & 1.1  & 4.4  & 5.5   & 5.1    \\ \hline
+            \end{tabular}
+            \end{table}
+
+            \begin{table}[htp]
+                \centering
+                \begin{tabular}{|c|c|c|}
+                \hline
+                \multicolumn{3}{|c|}{设定500mA} \\ \hline
+                接入电阻     & 第一次测量    & 第二次测量   \\ \hline
+                0欧姆      & 498.5    & 500.1   \\ \hline
+                7.5欧姆    & 493.1    & 495.5   \\ \hline
+                变化值      & 5.4      & 4.6     \\ \hline
+                \end{tabular}
+                \end{table}
+                \newpage
+        \subsection{数据分析}
+            \subsubsection{电流范围与步进}
+            由上述表格可知，我们能够通过设定不同的值使输出电流在20mA~1000mA的范围内变化，步进至少能达到10mA的精度，达到了基础部分对步进的要求，同时电流可调范围达到了提升要求部分。
+            \subsubsection{输出电流与给定值偏差}
+            由上述表格可知，设定不同的输出电流时，测量电流与设定值之间的最大差值出现在设定1000mA时，为3.1mA，远远小于要求中的设定值的1\%+10mA
+            \subsubsection{显示输出与电流差值}
+            由上述表格可知，显示值与测量差值之间的误差最大发生在设定电流为500mA时，差值为5.5mA，要求允许的最大差值为$(1000\times 1\%+3)mA = 13mA$,满足要求
+            \subsubsection{改变负载电阻}
+            我们将电流输出设定为500mA，由表三可知，空载时输出电流与接入负载后输出电流变化值在2mA左右，而要求中的变化值为3mA，符合系统设计要求
+            \subsubsection{文波系统}
+            测量出的文波电流为2mA，达到了基础要求中的5mA，但是没有达到提升部分中的1mA要求
+
+            \newpage
+        
+        \newpage
+        \section{完整代码}
+        最后附上完整代码
+    \lstinputlisting[caption = 完整代码]{code/main.c}
+    \newpage
+
+\end{document}

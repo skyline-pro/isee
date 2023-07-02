@@ -1,0 +1,2 @@
+@E: CG906 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":55:16:55:20|Reference to unknown variable lcd_D.
+

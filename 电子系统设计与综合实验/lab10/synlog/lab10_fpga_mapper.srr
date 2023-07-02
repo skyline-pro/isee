@@ -1,0 +1,38 @@
+Synopsys CPLD Technology Mapper, Version maplat, Build 923R, Built May  6 2014
+Copyright (C) 1994-2013, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use or distribution of the software is strictly prohibited.
+Product Version I-2014.03LC 
+@N: MF248 |Running in 64-bit mode.
+@N:"e:\grade-3_2\isp_project\lab10\ps2keyboard.v":32:4:32:9|Found counter in view:work.PS2Keyboard(verilog) inst counter[3:0]
+@N: MO106 :"e:\grade-3_2\isp_project\lab10\decoderhex2dec.v":6:8:6:11|Found ROM, 'decoder1.out_1[6:0]', 11 words by 7 bits 
+@W: MT462 :"e:\grade-3_2\isp_project\lab10\ps2keyboard.v":13:12:67:22|Net ps.psData38 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"e:\grade-3_2\isp_project\lab10\ps2keyboard.v":49:4:49:9|Net ps.ledEn appears to be an unidentified clock source. Assuming default frequency. 
+---------------------------------------
+Resource Usage Report
+
+Simple gate primitives:
+DFFC            8 uses
+DFFRH           9 uses
+DFFSH           3 uses
+DFFCRH          4 uses
+DFFCSH          1 use
+DFF             5 uses
+IBUF            5 uses
+OBUF            11 uses
+AND2            169 uses
+INV             90 uses
+OR2             12 uses
+XOR2            4 uses
+DLAT            4 uses
+DLATRH          4 uses
+
+
+@N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.
+I-2014.03LC 
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 39MB peak: 104MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sun May 08 13:33:01 2016
+
+###########################################################]

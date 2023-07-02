@@ -1,0 +1,3446 @@
+// Node Statistic Information File
+// Tool:  ispLEVER Classic 2.1.00.02.49.20
+// Design 'lab12' created   Thu May 12 22:12:59 2022
+
+// Fmax Logic Level: 2.
+
+// Path: led1_cntNext_9_.Q
+//    -> led1_scandatae_17_n
+//    -> led1_scanData_3_.CE
+
+// Signal Name: col_7_
+// Type: Output
+BEGIN col_7_
+Fanin Number		0
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+END
+
+// Signal Name: col_6_
+// Type: Output
+BEGIN col_6_
+Fanin Number		0
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+END
+
+// Signal Name: col_5_
+// Type: Output
+BEGIN col_5_
+Fanin Number		4
+Pterm Number		2
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	led1_scanData_1_.Q  	2
+Fanin Node      	led1_scanData_2_.Q  	3
+Fanin Node      	led1_scanData_3_.Q  	4
+Fanin Node      	led1_n_278_i_n.BLIF 	7
+END
+
+// Signal Name: col_4_
+// Type: Output
+BEGIN col_4_
+Fanin Number		12
+Pterm Number		5
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Output    	row_0_.Q            	1
+Fanin Output    	row_1_.Q            	1
+Fanin Output    	row_2_.Q            	1
+Fanin Output    	row_3_.Q            	1
+Fanin Output    	row_4_.Q            	1
+Fanin Output    	row_5_.Q            	1
+Fanin Output    	row_6_.Q            	1
+Fanin Output    	row_7_.Q            	1
+Fanin Node      	led1_scanData_0_.Q  	1
+Fanin Node      	led1_scanData_1_.Q  	2
+Fanin Node      	led1_scanData_2_.Q  	3
+Fanin Node      	led1_scanData_3_.Q  	4
+END
+
+// Signal Name: col_3_
+// Type: Output
+BEGIN col_3_
+Fanin Number		12
+Pterm Number		14
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Output    	row_0_.Q            	1
+Fanin Output    	row_1_.Q            	1
+Fanin Output    	row_2_.Q            	1
+Fanin Output    	row_3_.Q            	1
+Fanin Output    	row_4_.Q            	1
+Fanin Output    	row_5_.Q            	1
+Fanin Output    	row_6_.Q            	1
+Fanin Node      	led1_scanData_0_.Q  	1
+Fanin Node      	led1_scanData_1_.Q  	2
+Fanin Node      	led1_scanData_2_.Q  	3
+Fanin Node      	led1_scanData_3_.Q  	4
+Fanin Node      	led1_n_278_i_n.BLIF 	7
+END
+
+// Signal Name: col_2_
+// Type: Output
+BEGIN col_2_
+Fanin Number		13
+Pterm Number		15
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Output    	row_0_.Q            	1
+Fanin Output    	row_1_.Q            	1
+Fanin Output    	row_2_.Q            	1
+Fanin Output    	row_3_.Q            	1
+Fanin Output    	row_4_.Q            	1
+Fanin Output    	row_5_.Q            	1
+Fanin Output    	row_6_.Q            	1
+Fanin Output    	row_7_.Q            	1
+Fanin Node      	led1_scanData_0_.Q  	1
+Fanin Node      	led1_scanData_1_.Q  	2
+Fanin Node      	led1_scanData_2_.Q  	3
+Fanin Node      	led1_scanData_3_.Q  	4
+Fanin Node      	led1_n_278_i_n.BLIF 	7
+END
+
+// Signal Name: col_1_
+// Type: Output
+BEGIN col_1_
+Fanin Number		12
+Pterm Number		16
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Output    	row_0_.Q            	1
+Fanin Output    	row_1_.Q            	1
+Fanin Output    	row_2_.Q            	1
+Fanin Output    	row_3_.Q            	1
+Fanin Output    	row_4_.Q            	1
+Fanin Output    	row_5_.Q            	1
+Fanin Output    	row_6_.Q            	1
+Fanin Output    	row_7_.Q            	1
+Fanin Node      	led1_scanData_0_.Q  	1
+Fanin Node      	led1_scanData_1_.Q  	2
+Fanin Node      	led1_scanData_2_.Q  	3
+Fanin Node      	led1_scanData_3_.Q  	4
+END
+
+// Signal Name: col_0_
+// Type: Output
+BEGIN col_0_
+Fanin Number		11
+Pterm Number		10
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Output    	row_0_.Q            	1
+Fanin Output    	row_1_.Q            	1
+Fanin Output    	row_2_.Q            	1
+Fanin Output    	row_4_.Q            	1
+Fanin Output    	row_5_.Q            	1
+Fanin Output    	row_6_.Q            	1
+Fanin Node      	led1_scanData_0_.Q  	1
+Fanin Node      	led1_scanData_1_.Q  	2
+Fanin Node      	led1_scanData_2_.Q  	3
+Fanin Node      	led1_scanData_3_.Q  	4
+Fanin Node      	led1_n_278_i_n.BLIF 	7
+END
+
+// Signal Name: row_7_.D
+// Type: Output_reg
+BEGIN row_7_.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Output    	row_6_.Q            	1
+END
+
+// Signal Name: row_7_.C
+// Type: Output_reg
+BEGIN row_7_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: row_7_.CE
+// Type: Output_reg
+BEGIN row_7_.CE
+Fanin Number		16
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntScan_0_.Q   	1
+Fanin Node      	led1_cntScan_1_.Q   	2
+Fanin Node      	led1_cntScan_2_.Q   	3
+Fanin Node      	led1_cntScan_3_.Q   	4
+Fanin Node      	led1_cntScan_4_.Q   	1
+Fanin Node      	led1_cntScan_5_.Q   	1
+Fanin Node      	led1_cntScan_6_.Q   	1
+Fanin Node      	led1_cntScan_7_.Q   	1
+Fanin Node      	led1_cntScan_8_.Q   	1
+Fanin Node      	led1_cntScan_9_.Q   	1
+Fanin Node      	led1_cntScan_10_.Q  	1
+Fanin Node      	led1_cntScan_11_.Q  	1
+Fanin Node      	led1_cntScan_12_.Q  	1
+Fanin Node      	led1_cntScan_13_.Q  	1
+Fanin Node      	led1_cntScan_14_.Q  	1
+Fanin Node      	led1_cntScan_15_.Q  	1
+END
+
+// Signal Name: row_7_.AP
+// Type: Output_reg
+BEGIN row_7_.AP
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: row_6_.D
+// Type: Output_reg
+BEGIN row_6_.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Output    	row_5_.Q            	1
+END
+
+// Signal Name: row_6_.C
+// Type: Output_reg
+BEGIN row_6_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: row_6_.CE
+// Type: Output_reg
+BEGIN row_6_.CE
+Fanin Number		16
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntScan_0_.Q   	1
+Fanin Node      	led1_cntScan_1_.Q   	2
+Fanin Node      	led1_cntScan_2_.Q   	3
+Fanin Node      	led1_cntScan_3_.Q   	4
+Fanin Node      	led1_cntScan_4_.Q   	1
+Fanin Node      	led1_cntScan_5_.Q   	1
+Fanin Node      	led1_cntScan_6_.Q   	1
+Fanin Node      	led1_cntScan_7_.Q   	1
+Fanin Node      	led1_cntScan_8_.Q   	1
+Fanin Node      	led1_cntScan_9_.Q   	1
+Fanin Node      	led1_cntScan_10_.Q  	1
+Fanin Node      	led1_cntScan_11_.Q  	1
+Fanin Node      	led1_cntScan_12_.Q  	1
+Fanin Node      	led1_cntScan_13_.Q  	1
+Fanin Node      	led1_cntScan_14_.Q  	1
+Fanin Node      	led1_cntScan_15_.Q  	1
+END
+
+// Signal Name: row_6_.AR
+// Type: Output_reg
+BEGIN row_6_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: row_5_.D
+// Type: Output_reg
+BEGIN row_5_.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Output    	row_4_.Q            	1
+END
+
+// Signal Name: row_5_.C
+// Type: Output_reg
+BEGIN row_5_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: row_5_.CE
+// Type: Output_reg
+BEGIN row_5_.CE
+Fanin Number		16
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntScan_0_.Q   	1
+Fanin Node      	led1_cntScan_1_.Q   	2
+Fanin Node      	led1_cntScan_2_.Q   	3
+Fanin Node      	led1_cntScan_3_.Q   	4
+Fanin Node      	led1_cntScan_4_.Q   	1
+Fanin Node      	led1_cntScan_5_.Q   	1
+Fanin Node      	led1_cntScan_6_.Q   	1
+Fanin Node      	led1_cntScan_7_.Q   	1
+Fanin Node      	led1_cntScan_8_.Q   	1
+Fanin Node      	led1_cntScan_9_.Q   	1
+Fanin Node      	led1_cntScan_10_.Q  	1
+Fanin Node      	led1_cntScan_11_.Q  	1
+Fanin Node      	led1_cntScan_12_.Q  	1
+Fanin Node      	led1_cntScan_13_.Q  	1
+Fanin Node      	led1_cntScan_14_.Q  	1
+Fanin Node      	led1_cntScan_15_.Q  	1
+END
+
+// Signal Name: row_5_.AR
+// Type: Output_reg
+BEGIN row_5_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: row_4_.D
+// Type: Output_reg
+BEGIN row_4_.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Output    	row_3_.Q            	1
+END
+
+// Signal Name: row_4_.C
+// Type: Output_reg
+BEGIN row_4_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: row_4_.CE
+// Type: Output_reg
+BEGIN row_4_.CE
+Fanin Number		16
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntScan_0_.Q   	1
+Fanin Node      	led1_cntScan_1_.Q   	2
+Fanin Node      	led1_cntScan_2_.Q   	3
+Fanin Node      	led1_cntScan_3_.Q   	4
+Fanin Node      	led1_cntScan_4_.Q   	1
+Fanin Node      	led1_cntScan_5_.Q   	1
+Fanin Node      	led1_cntScan_6_.Q   	1
+Fanin Node      	led1_cntScan_7_.Q   	1
+Fanin Node      	led1_cntScan_8_.Q   	1
+Fanin Node      	led1_cntScan_9_.Q   	1
+Fanin Node      	led1_cntScan_10_.Q  	1
+Fanin Node      	led1_cntScan_11_.Q  	1
+Fanin Node      	led1_cntScan_12_.Q  	1
+Fanin Node      	led1_cntScan_13_.Q  	1
+Fanin Node      	led1_cntScan_14_.Q  	1
+Fanin Node      	led1_cntScan_15_.Q  	1
+END
+
+// Signal Name: row_4_.AR
+// Type: Output_reg
+BEGIN row_4_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: row_3_.D
+// Type: Output_reg
+BEGIN row_3_.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Output    	row_2_.Q            	1
+END
+
+// Signal Name: row_3_.C
+// Type: Output_reg
+BEGIN row_3_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: row_3_.CE
+// Type: Output_reg
+BEGIN row_3_.CE
+Fanin Number		16
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntScan_0_.Q   	1
+Fanin Node      	led1_cntScan_1_.Q   	2
+Fanin Node      	led1_cntScan_2_.Q   	3
+Fanin Node      	led1_cntScan_3_.Q   	4
+Fanin Node      	led1_cntScan_4_.Q   	1
+Fanin Node      	led1_cntScan_5_.Q   	1
+Fanin Node      	led1_cntScan_6_.Q   	1
+Fanin Node      	led1_cntScan_7_.Q   	1
+Fanin Node      	led1_cntScan_8_.Q   	1
+Fanin Node      	led1_cntScan_9_.Q   	1
+Fanin Node      	led1_cntScan_10_.Q  	1
+Fanin Node      	led1_cntScan_11_.Q  	1
+Fanin Node      	led1_cntScan_12_.Q  	1
+Fanin Node      	led1_cntScan_13_.Q  	1
+Fanin Node      	led1_cntScan_14_.Q  	1
+Fanin Node      	led1_cntScan_15_.Q  	1
+END
+
+// Signal Name: row_3_.AR
+// Type: Output_reg
+BEGIN row_3_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: row_2_.D
+// Type: Output_reg
+BEGIN row_2_.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Output    	row_1_.Q            	1
+END
+
+// Signal Name: row_2_.C
+// Type: Output_reg
+BEGIN row_2_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: row_2_.CE
+// Type: Output_reg
+BEGIN row_2_.CE
+Fanin Number		16
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntScan_0_.Q   	1
+Fanin Node      	led1_cntScan_1_.Q   	2
+Fanin Node      	led1_cntScan_2_.Q   	3
+Fanin Node      	led1_cntScan_3_.Q   	4
+Fanin Node      	led1_cntScan_4_.Q   	1
+Fanin Node      	led1_cntScan_5_.Q   	1
+Fanin Node      	led1_cntScan_6_.Q   	1
+Fanin Node      	led1_cntScan_7_.Q   	1
+Fanin Node      	led1_cntScan_8_.Q   	1
+Fanin Node      	led1_cntScan_9_.Q   	1
+Fanin Node      	led1_cntScan_10_.Q  	1
+Fanin Node      	led1_cntScan_11_.Q  	1
+Fanin Node      	led1_cntScan_12_.Q  	1
+Fanin Node      	led1_cntScan_13_.Q  	1
+Fanin Node      	led1_cntScan_14_.Q  	1
+Fanin Node      	led1_cntScan_15_.Q  	1
+END
+
+// Signal Name: row_2_.AR
+// Type: Output_reg
+BEGIN row_2_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: row_1_.D
+// Type: Output_reg
+BEGIN row_1_.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Output    	row_0_.Q            	1
+END
+
+// Signal Name: row_1_.C
+// Type: Output_reg
+BEGIN row_1_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: row_1_.CE
+// Type: Output_reg
+BEGIN row_1_.CE
+Fanin Number		16
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntScan_0_.Q   	1
+Fanin Node      	led1_cntScan_1_.Q   	2
+Fanin Node      	led1_cntScan_2_.Q   	3
+Fanin Node      	led1_cntScan_3_.Q   	4
+Fanin Node      	led1_cntScan_4_.Q   	1
+Fanin Node      	led1_cntScan_5_.Q   	1
+Fanin Node      	led1_cntScan_6_.Q   	1
+Fanin Node      	led1_cntScan_7_.Q   	1
+Fanin Node      	led1_cntScan_8_.Q   	1
+Fanin Node      	led1_cntScan_9_.Q   	1
+Fanin Node      	led1_cntScan_10_.Q  	1
+Fanin Node      	led1_cntScan_11_.Q  	1
+Fanin Node      	led1_cntScan_12_.Q  	1
+Fanin Node      	led1_cntScan_13_.Q  	1
+Fanin Node      	led1_cntScan_14_.Q  	1
+Fanin Node      	led1_cntScan_15_.Q  	1
+END
+
+// Signal Name: row_1_.AR
+// Type: Output_reg
+BEGIN row_1_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: row_0_.D
+// Type: Output_reg
+BEGIN row_0_.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Output    	row_7_.Q            	1
+END
+
+// Signal Name: row_0_.C
+// Type: Output_reg
+BEGIN row_0_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: row_0_.CE
+// Type: Output_reg
+BEGIN row_0_.CE
+Fanin Number		16
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntScan_0_.Q   	1
+Fanin Node      	led1_cntScan_1_.Q   	2
+Fanin Node      	led1_cntScan_2_.Q   	3
+Fanin Node      	led1_cntScan_3_.Q   	4
+Fanin Node      	led1_cntScan_4_.Q   	1
+Fanin Node      	led1_cntScan_5_.Q   	1
+Fanin Node      	led1_cntScan_6_.Q   	1
+Fanin Node      	led1_cntScan_7_.Q   	1
+Fanin Node      	led1_cntScan_8_.Q   	1
+Fanin Node      	led1_cntScan_9_.Q   	1
+Fanin Node      	led1_cntScan_10_.Q  	1
+Fanin Node      	led1_cntScan_11_.Q  	1
+Fanin Node      	led1_cntScan_12_.Q  	1
+Fanin Node      	led1_cntScan_13_.Q  	1
+Fanin Node      	led1_cntScan_14_.Q  	1
+Fanin Node      	led1_cntScan_15_.Q  	1
+END
+
+// Signal Name: row_0_.AR
+// Type: Output_reg
+BEGIN row_0_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: inst_clkl.D
+// Type: Node_reg
+BEGIN inst_clkl.D
+Fanin Number		16
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	cnt_0_.Q            	2
+Fanin Node      	cnt_1_.Q            	3
+Fanin Node      	cnt_2_.Q            	4
+Fanin Node      	cnt_3_.Q            	1
+Fanin Node      	cnt_4_.Q            	1
+Fanin Node      	cnt_5_.Q            	1
+Fanin Node      	cnt_6_.Q            	1
+Fanin Node      	cnt_7_.Q            	1
+Fanin Node      	cnt_8_.Q            	1
+Fanin Node      	cnt_9_.Q            	1
+Fanin Node      	cnt_10_.Q           	1
+Fanin Node      	cnt_11_.Q           	1
+Fanin Node      	cnt_12_.Q           	1
+Fanin Node      	cnt_13_.Q           	1
+Fanin Node      	cnt_14_.Q           	1
+Fanin Node      	cnt_15_.Q           	1
+END
+
+// Signal Name: inst_clkl.C
+// Type: Node_reg
+BEGIN inst_clkl.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: inst_clkl.CE
+// Type: Node_reg
+BEGIN inst_clkl.CE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset.BLIF          	0
+END
+
+// Signal Name: cnt_0_.D
+// Type: Node_reg
+BEGIN cnt_0_.D
+Fanin Number		2
+Pterm Number		2
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Input     	reset.BLIF          	0
+Fanin Node      	cnt_0_.Q            	2
+END
+
+// Signal Name: cnt_0_.C
+// Type: Node_reg
+BEGIN cnt_0_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: cnt_1_.D
+// Type: Node_reg
+BEGIN cnt_1_.D
+Fanin Number		3
+Pterm Number		3
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Input     	reset.BLIF          	0
+Fanin Node      	cnt_0_.Q            	2
+Fanin Node      	cnt_1_.Q            	3
+END
+
+// Signal Name: cnt_1_.C
+// Type: Node_reg
+BEGIN cnt_1_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: cnt_2_.D
+// Type: Node_reg
+BEGIN cnt_2_.D
+Fanin Number		4
+Pterm Number		4
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Input     	reset.BLIF          	0
+Fanin Node      	cnt_0_.Q            	2
+Fanin Node      	cnt_1_.Q            	3
+Fanin Node      	cnt_2_.Q            	4
+END
+
+// Signal Name: cnt_2_.C
+// Type: Node_reg
+BEGIN cnt_2_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: cnt_3_.D.X1
+// Type: Node_reg
+BEGIN cnt_3_.D.X1
+Fanin Number		5
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Input     	reset.BLIF          	0
+Fanin Node      	cnt_0_.Q            	2
+Fanin Node      	cnt_1_.Q            	3
+Fanin Node      	cnt_2_.Q            	4
+Fanin Node      	cnt_3_.Q            	1
+END
+
+// Signal Name: cnt_3_.D.X2
+// Type: Node_reg
+BEGIN cnt_3_.D.X2
+Fanin Number		5
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Input     	reset.BLIF          	0
+Fanin Node      	cnt_0_.Q            	2
+Fanin Node      	cnt_1_.Q            	3
+Fanin Node      	cnt_2_.Q            	4
+Fanin Node      	cnt_3_.Q            	1
+END
+
+// Signal Name: cnt_3_.C
+// Type: Node_reg
+BEGIN cnt_3_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: cnt_4_.T
+// Type: Node_reg
+BEGIN cnt_4_.T
+Fanin Number		5
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Input     	reset.BLIF          	0
+Fanin Node      	cnt_0_.Q            	2
+Fanin Node      	cnt_1_.Q            	3
+Fanin Node      	cnt_2_.Q            	4
+Fanin Node      	cnt_3_.Q            	1
+END
+
+// Signal Name: cnt_4_.C
+// Type: Node_reg
+BEGIN cnt_4_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: cnt_5_.T
+// Type: Node_reg
+BEGIN cnt_5_.T
+Fanin Number		6
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Input     	reset.BLIF          	0
+Fanin Node      	cnt_0_.Q            	2
+Fanin Node      	cnt_1_.Q            	3
+Fanin Node      	cnt_2_.Q            	4
+Fanin Node      	cnt_3_.Q            	1
+Fanin Node      	cnt_4_.Q            	1
+END
+
+// Signal Name: cnt_5_.C
+// Type: Node_reg
+BEGIN cnt_5_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: cnt_6_.T
+// Type: Node_reg
+BEGIN cnt_6_.T
+Fanin Number		7
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Input     	reset.BLIF          	0
+Fanin Node      	cnt_0_.Q            	2
+Fanin Node      	cnt_1_.Q            	3
+Fanin Node      	cnt_2_.Q            	4
+Fanin Node      	cnt_3_.Q            	1
+Fanin Node      	cnt_4_.Q            	1
+Fanin Node      	cnt_5_.Q            	1
+END
+
+// Signal Name: cnt_6_.C
+// Type: Node_reg
+BEGIN cnt_6_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: cnt_7_.T
+// Type: Node_reg
+BEGIN cnt_7_.T
+Fanin Number		8
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Input     	reset.BLIF          	0
+Fanin Node      	cnt_0_.Q            	2
+Fanin Node      	cnt_1_.Q            	3
+Fanin Node      	cnt_2_.Q            	4
+Fanin Node      	cnt_3_.Q            	1
+Fanin Node      	cnt_4_.Q            	1
+Fanin Node      	cnt_5_.Q            	1
+Fanin Node      	cnt_6_.Q            	1
+END
+
+// Signal Name: cnt_7_.C
+// Type: Node_reg
+BEGIN cnt_7_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: cnt_8_.T
+// Type: Node_reg
+BEGIN cnt_8_.T
+Fanin Number		9
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Input     	reset.BLIF          	0
+Fanin Node      	cnt_0_.Q            	2
+Fanin Node      	cnt_1_.Q            	3
+Fanin Node      	cnt_2_.Q            	4
+Fanin Node      	cnt_3_.Q            	1
+Fanin Node      	cnt_4_.Q            	1
+Fanin Node      	cnt_5_.Q            	1
+Fanin Node      	cnt_6_.Q            	1
+Fanin Node      	cnt_7_.Q            	1
+END
+
+// Signal Name: cnt_8_.C
+// Type: Node_reg
+BEGIN cnt_8_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: cnt_9_.T
+// Type: Node_reg
+BEGIN cnt_9_.T
+Fanin Number		10
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Input     	reset.BLIF          	0
+Fanin Node      	cnt_0_.Q            	2
+Fanin Node      	cnt_1_.Q            	3
+Fanin Node      	cnt_2_.Q            	4
+Fanin Node      	cnt_3_.Q            	1
+Fanin Node      	cnt_4_.Q            	1
+Fanin Node      	cnt_5_.Q            	1
+Fanin Node      	cnt_6_.Q            	1
+Fanin Node      	cnt_7_.Q            	1
+Fanin Node      	cnt_8_.Q            	1
+END
+
+// Signal Name: cnt_9_.C
+// Type: Node_reg
+BEGIN cnt_9_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: cnt_10_.T
+// Type: Node_reg
+BEGIN cnt_10_.T
+Fanin Number		11
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Input     	reset.BLIF          	0
+Fanin Node      	cnt_0_.Q            	2
+Fanin Node      	cnt_1_.Q            	3
+Fanin Node      	cnt_2_.Q            	4
+Fanin Node      	cnt_3_.Q            	1
+Fanin Node      	cnt_4_.Q            	1
+Fanin Node      	cnt_5_.Q            	1
+Fanin Node      	cnt_6_.Q            	1
+Fanin Node      	cnt_7_.Q            	1
+Fanin Node      	cnt_8_.Q            	1
+Fanin Node      	cnt_9_.Q            	1
+END
+
+// Signal Name: cnt_10_.C
+// Type: Node_reg
+BEGIN cnt_10_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: cnt_11_.T
+// Type: Node_reg
+BEGIN cnt_11_.T
+Fanin Number		12
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Input     	reset.BLIF          	0
+Fanin Node      	cnt_0_.Q            	2
+Fanin Node      	cnt_1_.Q            	3
+Fanin Node      	cnt_2_.Q            	4
+Fanin Node      	cnt_3_.Q            	1
+Fanin Node      	cnt_4_.Q            	1
+Fanin Node      	cnt_5_.Q            	1
+Fanin Node      	cnt_6_.Q            	1
+Fanin Node      	cnt_7_.Q            	1
+Fanin Node      	cnt_8_.Q            	1
+Fanin Node      	cnt_9_.Q            	1
+Fanin Node      	cnt_10_.Q           	1
+END
+
+// Signal Name: cnt_11_.C
+// Type: Node_reg
+BEGIN cnt_11_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: cnt_12_.T
+// Type: Node_reg
+BEGIN cnt_12_.T
+Fanin Number		13
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Input     	reset.BLIF          	0
+Fanin Node      	cnt_0_.Q            	2
+Fanin Node      	cnt_1_.Q            	3
+Fanin Node      	cnt_2_.Q            	4
+Fanin Node      	cnt_3_.Q            	1
+Fanin Node      	cnt_4_.Q            	1
+Fanin Node      	cnt_5_.Q            	1
+Fanin Node      	cnt_6_.Q            	1
+Fanin Node      	cnt_7_.Q            	1
+Fanin Node      	cnt_8_.Q            	1
+Fanin Node      	cnt_9_.Q            	1
+Fanin Node      	cnt_10_.Q           	1
+Fanin Node      	cnt_11_.Q           	1
+END
+
+// Signal Name: cnt_12_.C
+// Type: Node_reg
+BEGIN cnt_12_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: cnt_13_.T
+// Type: Node_reg
+BEGIN cnt_13_.T
+Fanin Number		14
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Input     	reset.BLIF          	0
+Fanin Node      	cnt_0_.Q            	2
+Fanin Node      	cnt_1_.Q            	3
+Fanin Node      	cnt_2_.Q            	4
+Fanin Node      	cnt_3_.Q            	1
+Fanin Node      	cnt_4_.Q            	1
+Fanin Node      	cnt_5_.Q            	1
+Fanin Node      	cnt_6_.Q            	1
+Fanin Node      	cnt_7_.Q            	1
+Fanin Node      	cnt_8_.Q            	1
+Fanin Node      	cnt_9_.Q            	1
+Fanin Node      	cnt_10_.Q           	1
+Fanin Node      	cnt_11_.Q           	1
+Fanin Node      	cnt_12_.Q           	1
+END
+
+// Signal Name: cnt_13_.C
+// Type: Node_reg
+BEGIN cnt_13_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: cnt_14_.T
+// Type: Node_reg
+BEGIN cnt_14_.T
+Fanin Number		15
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Input     	reset.BLIF          	0
+Fanin Node      	cnt_0_.Q            	2
+Fanin Node      	cnt_1_.Q            	3
+Fanin Node      	cnt_2_.Q            	4
+Fanin Node      	cnt_3_.Q            	1
+Fanin Node      	cnt_4_.Q            	1
+Fanin Node      	cnt_5_.Q            	1
+Fanin Node      	cnt_6_.Q            	1
+Fanin Node      	cnt_7_.Q            	1
+Fanin Node      	cnt_8_.Q            	1
+Fanin Node      	cnt_9_.Q            	1
+Fanin Node      	cnt_10_.Q           	1
+Fanin Node      	cnt_11_.Q           	1
+Fanin Node      	cnt_12_.Q           	1
+Fanin Node      	cnt_13_.Q           	1
+END
+
+// Signal Name: cnt_14_.C
+// Type: Node_reg
+BEGIN cnt_14_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: cnt_15_.T
+// Type: Node_reg
+BEGIN cnt_15_.T
+Fanin Number		16
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Input     	reset.BLIF          	0
+Fanin Node      	cnt_0_.Q            	2
+Fanin Node      	cnt_1_.Q            	3
+Fanin Node      	cnt_2_.Q            	4
+Fanin Node      	cnt_3_.Q            	1
+Fanin Node      	cnt_4_.Q            	1
+Fanin Node      	cnt_5_.Q            	1
+Fanin Node      	cnt_6_.Q            	1
+Fanin Node      	cnt_7_.Q            	1
+Fanin Node      	cnt_8_.Q            	1
+Fanin Node      	cnt_9_.Q            	1
+Fanin Node      	cnt_10_.Q           	1
+Fanin Node      	cnt_11_.Q           	1
+Fanin Node      	cnt_12_.Q           	1
+Fanin Node      	cnt_13_.Q           	1
+Fanin Node      	cnt_14_.Q           	1
+END
+
+// Signal Name: cnt_15_.C
+// Type: Node_reg
+BEGIN cnt_15_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: button1_d1_q_0_.D
+// Type: Node_reg
+BEGIN button1_d1_q_0_.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset.BLIF          	0
+END
+
+// Signal Name: button1_d1_q_0_.C
+// Type: Node_reg
+BEGIN button1_d1_q_0_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	inst_clkl.Q         	1
+END
+
+// Signal Name: button1_d2_q_0_.D
+// Type: Node_reg
+BEGIN button1_d2_q_0_.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	button1_d1_q_0_.Q   	1
+END
+
+// Signal Name: button1_d2_q_0_.C
+// Type: Node_reg
+BEGIN button1_d2_q_0_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	inst_clkl.Q         	1
+END
+
+// Signal Name: button1_d3_q_0_.D
+// Type: Node_reg
+BEGIN button1_d3_q_0_.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	button1_d2_q_0_.Q   	1
+END
+
+// Signal Name: button1_d3_q_0_.C
+// Type: Node_reg
+BEGIN button1_d3_q_0_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	inst_clkl.Q         	1
+END
+
+// Signal Name: led1_cntNext_9_.T
+// Type: Node_reg
+BEGIN led1_cntNext_9_.T
+Fanin Number		14
+Pterm Number		5
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		2
+Fanin Node      	led1_cntNext_9_.Q   	5
+Fanin Node      	led1_cntNext_20_.Q  	1
+Fanin Node      	led1_cntNext_18_.Q  	1
+Fanin Node      	led1_cntNext_19_.Q  	1
+Fanin Node      	led1_cntNext_0_.Q   	1
+Fanin Node      	led1_cntNext_1_.Q   	2
+Fanin Node      	led1_cntNext_2_.Q   	3
+Fanin Node      	led1_cntNext_3_.Q   	4
+Fanin Node      	led1_cntNext_4_.Q   	1
+Fanin Node      	led1_cntNext_5_.Q   	1
+Fanin Node      	led1_cntNext_6_.Q   	1
+Fanin Node      	led1_cntNext_7_.Q   	1
+Fanin Node      	led1_cntNext_8_.Q   	1
+Fanin Node      	led1_scandatae_17_n.BLIF	1
+END
+
+// Signal Name: led1_cntNext_9_.C
+// Type: Node_reg
+BEGIN led1_cntNext_9_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntNext_9_.AR
+// Type: Node_reg
+BEGIN led1_cntNext_9_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntNext_20_.T
+// Type: Node_reg
+BEGIN led1_cntNext_20_.T
+Fanin Number		20
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntNext_9_.Q   	5
+Fanin Node      	led1_cntNext_18_.Q  	1
+Fanin Node      	led1_cntNext_16_.Q  	1
+Fanin Node      	led1_cntNext_10_.Q  	1
+Fanin Node      	led1_cntNext_13_.Q  	1
+Fanin Node      	led1_cntNext_15_.Q  	1
+Fanin Node      	led1_cntNext_19_.Q  	1
+Fanin Node      	led1_cntNext_0_.Q   	1
+Fanin Node      	led1_cntNext_1_.Q   	2
+Fanin Node      	led1_cntNext_2_.Q   	3
+Fanin Node      	led1_cntNext_3_.Q   	4
+Fanin Node      	led1_cntNext_4_.Q   	1
+Fanin Node      	led1_cntNext_5_.Q   	1
+Fanin Node      	led1_cntNext_6_.Q   	1
+Fanin Node      	led1_cntNext_7_.Q   	1
+Fanin Node      	led1_cntNext_8_.Q   	1
+Fanin Node      	led1_cntNext_11_.Q  	3
+Fanin Node      	led1_cntNext_12_.Q  	4
+Fanin Node      	led1_cntNext_14_.Q  	3
+Fanin Node      	led1_cntNext_17_.Q  	3
+END
+
+// Signal Name: led1_cntNext_20_.C
+// Type: Node_reg
+BEGIN led1_cntNext_20_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntNext_20_.AR
+// Type: Node_reg
+BEGIN led1_cntNext_20_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntNext_18_.T
+// Type: Node_reg
+BEGIN led1_cntNext_18_.T
+Fanin Number		18
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntNext_9_.Q   	5
+Fanin Node      	led1_cntNext_16_.Q  	1
+Fanin Node      	led1_cntNext_10_.Q  	1
+Fanin Node      	led1_cntNext_13_.Q  	1
+Fanin Node      	led1_cntNext_15_.Q  	1
+Fanin Node      	led1_cntNext_0_.Q   	1
+Fanin Node      	led1_cntNext_1_.Q   	2
+Fanin Node      	led1_cntNext_2_.Q   	3
+Fanin Node      	led1_cntNext_3_.Q   	4
+Fanin Node      	led1_cntNext_4_.Q   	1
+Fanin Node      	led1_cntNext_5_.Q   	1
+Fanin Node      	led1_cntNext_6_.Q   	1
+Fanin Node      	led1_cntNext_7_.Q   	1
+Fanin Node      	led1_cntNext_8_.Q   	1
+Fanin Node      	led1_cntNext_11_.Q  	3
+Fanin Node      	led1_cntNext_12_.Q  	4
+Fanin Node      	led1_cntNext_14_.Q  	3
+Fanin Node      	led1_cntNext_17_.Q  	3
+END
+
+// Signal Name: led1_cntNext_18_.C
+// Type: Node_reg
+BEGIN led1_cntNext_18_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntNext_18_.AR
+// Type: Node_reg
+BEGIN led1_cntNext_18_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntNext_24_.D.X1
+// Type: Node_reg
+BEGIN led1_cntNext_24_.D.X1
+Fanin Number		5
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		2
+Fanin Node      	led1_cntNext_24_.Q  	1
+Fanin Node      	led1_cntNext_23_.Q  	1
+Fanin Node      	led1_cntNext_21_.Q  	3
+Fanin Node      	led1_cntNext_22_.Q  	4
+Fanin Node      	led1_n_227_n.BLIF   	1
+END
+
+// Signal Name: led1_cntNext_24_.D.X2
+// Type: Node_reg
+BEGIN led1_cntNext_24_.D.X2
+Fanin Number		5
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		2
+Fanin Node      	led1_cntNext_24_.Q  	1
+Fanin Node      	led1_cntNext_23_.Q  	1
+Fanin Node      	led1_cntNext_21_.Q  	3
+Fanin Node      	led1_cntNext_22_.Q  	4
+Fanin Node      	led1_n_227_n.BLIF   	1
+END
+
+// Signal Name: led1_cntNext_24_.C
+// Type: Node_reg
+BEGIN led1_cntNext_24_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntNext_24_.AR
+// Type: Node_reg
+BEGIN led1_cntNext_24_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntNext_16_.T
+// Type: Node_reg
+BEGIN led1_cntNext_16_.T
+Fanin Number		16
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntNext_9_.Q   	5
+Fanin Node      	led1_cntNext_10_.Q  	1
+Fanin Node      	led1_cntNext_13_.Q  	1
+Fanin Node      	led1_cntNext_15_.Q  	1
+Fanin Node      	led1_cntNext_0_.Q   	1
+Fanin Node      	led1_cntNext_1_.Q   	2
+Fanin Node      	led1_cntNext_2_.Q   	3
+Fanin Node      	led1_cntNext_3_.Q   	4
+Fanin Node      	led1_cntNext_4_.Q   	1
+Fanin Node      	led1_cntNext_5_.Q   	1
+Fanin Node      	led1_cntNext_6_.Q   	1
+Fanin Node      	led1_cntNext_7_.Q   	1
+Fanin Node      	led1_cntNext_8_.Q   	1
+Fanin Node      	led1_cntNext_11_.Q  	3
+Fanin Node      	led1_cntNext_12_.Q  	4
+Fanin Node      	led1_cntNext_14_.Q  	3
+END
+
+// Signal Name: led1_cntNext_16_.C
+// Type: Node_reg
+BEGIN led1_cntNext_16_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntNext_16_.AR
+// Type: Node_reg
+BEGIN led1_cntNext_16_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntNext_23_.T
+// Type: Node_reg
+BEGIN led1_cntNext_23_.T
+Fanin Number		23
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntNext_9_.Q   	5
+Fanin Node      	led1_cntNext_20_.Q  	1
+Fanin Node      	led1_cntNext_18_.Q  	1
+Fanin Node      	led1_cntNext_16_.Q  	1
+Fanin Node      	led1_cntNext_10_.Q  	1
+Fanin Node      	led1_cntNext_13_.Q  	1
+Fanin Node      	led1_cntNext_15_.Q  	1
+Fanin Node      	led1_cntNext_19_.Q  	1
+Fanin Node      	led1_cntNext_0_.Q   	1
+Fanin Node      	led1_cntNext_1_.Q   	2
+Fanin Node      	led1_cntNext_2_.Q   	3
+Fanin Node      	led1_cntNext_3_.Q   	4
+Fanin Node      	led1_cntNext_4_.Q   	1
+Fanin Node      	led1_cntNext_5_.Q   	1
+Fanin Node      	led1_cntNext_6_.Q   	1
+Fanin Node      	led1_cntNext_7_.Q   	1
+Fanin Node      	led1_cntNext_8_.Q   	1
+Fanin Node      	led1_cntNext_11_.Q  	3
+Fanin Node      	led1_cntNext_12_.Q  	4
+Fanin Node      	led1_cntNext_14_.Q  	3
+Fanin Node      	led1_cntNext_17_.Q  	3
+Fanin Node      	led1_cntNext_21_.Q  	3
+Fanin Node      	led1_cntNext_22_.Q  	4
+END
+
+// Signal Name: led1_cntNext_23_.C
+// Type: Node_reg
+BEGIN led1_cntNext_23_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntNext_23_.AR
+// Type: Node_reg
+BEGIN led1_cntNext_23_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntNext_10_.T
+// Type: Node_reg
+BEGIN led1_cntNext_10_.T
+Fanin Number		10
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntNext_9_.Q   	5
+Fanin Node      	led1_cntNext_0_.Q   	1
+Fanin Node      	led1_cntNext_1_.Q   	2
+Fanin Node      	led1_cntNext_2_.Q   	3
+Fanin Node      	led1_cntNext_3_.Q   	4
+Fanin Node      	led1_cntNext_4_.Q   	1
+Fanin Node      	led1_cntNext_5_.Q   	1
+Fanin Node      	led1_cntNext_6_.Q   	1
+Fanin Node      	led1_cntNext_7_.Q   	1
+Fanin Node      	led1_cntNext_8_.Q   	1
+END
+
+// Signal Name: led1_cntNext_10_.C
+// Type: Node_reg
+BEGIN led1_cntNext_10_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntNext_10_.AR
+// Type: Node_reg
+BEGIN led1_cntNext_10_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntNext_13_.T
+// Type: Node_reg
+BEGIN led1_cntNext_13_.T
+Fanin Number		13
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntNext_9_.Q   	5
+Fanin Node      	led1_cntNext_10_.Q  	1
+Fanin Node      	led1_cntNext_0_.Q   	1
+Fanin Node      	led1_cntNext_1_.Q   	2
+Fanin Node      	led1_cntNext_2_.Q   	3
+Fanin Node      	led1_cntNext_3_.Q   	4
+Fanin Node      	led1_cntNext_4_.Q   	1
+Fanin Node      	led1_cntNext_5_.Q   	1
+Fanin Node      	led1_cntNext_6_.Q   	1
+Fanin Node      	led1_cntNext_7_.Q   	1
+Fanin Node      	led1_cntNext_8_.Q   	1
+Fanin Node      	led1_cntNext_11_.Q  	3
+Fanin Node      	led1_cntNext_12_.Q  	4
+END
+
+// Signal Name: led1_cntNext_13_.C
+// Type: Node_reg
+BEGIN led1_cntNext_13_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntNext_13_.AR
+// Type: Node_reg
+BEGIN led1_cntNext_13_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntNext_15_.T
+// Type: Node_reg
+BEGIN led1_cntNext_15_.T
+Fanin Number		15
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntNext_9_.Q   	5
+Fanin Node      	led1_cntNext_10_.Q  	1
+Fanin Node      	led1_cntNext_13_.Q  	1
+Fanin Node      	led1_cntNext_0_.Q   	1
+Fanin Node      	led1_cntNext_1_.Q   	2
+Fanin Node      	led1_cntNext_2_.Q   	3
+Fanin Node      	led1_cntNext_3_.Q   	4
+Fanin Node      	led1_cntNext_4_.Q   	1
+Fanin Node      	led1_cntNext_5_.Q   	1
+Fanin Node      	led1_cntNext_6_.Q   	1
+Fanin Node      	led1_cntNext_7_.Q   	1
+Fanin Node      	led1_cntNext_8_.Q   	1
+Fanin Node      	led1_cntNext_11_.Q  	3
+Fanin Node      	led1_cntNext_12_.Q  	4
+Fanin Node      	led1_cntNext_14_.Q  	3
+END
+
+// Signal Name: led1_cntNext_15_.C
+// Type: Node_reg
+BEGIN led1_cntNext_15_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntNext_15_.AR
+// Type: Node_reg
+BEGIN led1_cntNext_15_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntNext_19_.T
+// Type: Node_reg
+BEGIN led1_cntNext_19_.T
+Fanin Number		19
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntNext_9_.Q   	5
+Fanin Node      	led1_cntNext_18_.Q  	1
+Fanin Node      	led1_cntNext_16_.Q  	1
+Fanin Node      	led1_cntNext_10_.Q  	1
+Fanin Node      	led1_cntNext_13_.Q  	1
+Fanin Node      	led1_cntNext_15_.Q  	1
+Fanin Node      	led1_cntNext_0_.Q   	1
+Fanin Node      	led1_cntNext_1_.Q   	2
+Fanin Node      	led1_cntNext_2_.Q   	3
+Fanin Node      	led1_cntNext_3_.Q   	4
+Fanin Node      	led1_cntNext_4_.Q   	1
+Fanin Node      	led1_cntNext_5_.Q   	1
+Fanin Node      	led1_cntNext_6_.Q   	1
+Fanin Node      	led1_cntNext_7_.Q   	1
+Fanin Node      	led1_cntNext_8_.Q   	1
+Fanin Node      	led1_cntNext_11_.Q  	3
+Fanin Node      	led1_cntNext_12_.Q  	4
+Fanin Node      	led1_cntNext_14_.Q  	3
+Fanin Node      	led1_cntNext_17_.Q  	3
+END
+
+// Signal Name: led1_cntNext_19_.C
+// Type: Node_reg
+BEGIN led1_cntNext_19_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntNext_19_.AR
+// Type: Node_reg
+BEGIN led1_cntNext_19_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_scanData_0_.D
+// Type: Node_reg
+BEGIN led1_scanData_0_.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_scanData_0_.Q  	1
+END
+
+// Signal Name: led1_scanData_0_.C
+// Type: Node_reg
+BEGIN led1_scanData_0_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_scanData_0_.CE
+// Type: Node_reg
+BEGIN led1_scanData_0_.CE
+Fanin Number		4
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		2
+Fanin Node      	led1_cntNext_20_.Q  	1
+Fanin Node      	led1_cntNext_18_.Q  	1
+Fanin Node      	led1_cntNext_19_.Q  	1
+Fanin Node      	led1_scandatae_17_n.BLIF	1
+END
+
+// Signal Name: led1_scanData_0_.AR
+// Type: Node_reg
+BEGIN led1_scanData_0_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_scanData_1_.D
+// Type: Node_reg
+BEGIN led1_scanData_1_.D
+Fanin Number		2
+Pterm Number		2
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_scanData_0_.Q  	1
+Fanin Node      	led1_scanData_1_.Q  	2
+END
+
+// Signal Name: led1_scanData_1_.C
+// Type: Node_reg
+BEGIN led1_scanData_1_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_scanData_1_.CE
+// Type: Node_reg
+BEGIN led1_scanData_1_.CE
+Fanin Number		4
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		2
+Fanin Node      	led1_cntNext_20_.Q  	1
+Fanin Node      	led1_cntNext_18_.Q  	1
+Fanin Node      	led1_cntNext_19_.Q  	1
+Fanin Node      	led1_scandatae_17_n.BLIF	1
+END
+
+// Signal Name: led1_scanData_1_.AR
+// Type: Node_reg
+BEGIN led1_scanData_1_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_scanData_2_.D
+// Type: Node_reg
+BEGIN led1_scanData_2_.D
+Fanin Number		3
+Pterm Number		3
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_scanData_0_.Q  	1
+Fanin Node      	led1_scanData_1_.Q  	2
+Fanin Node      	led1_scanData_2_.Q  	3
+END
+
+// Signal Name: led1_scanData_2_.C
+// Type: Node_reg
+BEGIN led1_scanData_2_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_scanData_2_.CE
+// Type: Node_reg
+BEGIN led1_scanData_2_.CE
+Fanin Number		4
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		2
+Fanin Node      	led1_cntNext_20_.Q  	1
+Fanin Node      	led1_cntNext_18_.Q  	1
+Fanin Node      	led1_cntNext_19_.Q  	1
+Fanin Node      	led1_scandatae_17_n.BLIF	1
+END
+
+// Signal Name: led1_scanData_2_.AR
+// Type: Node_reg
+BEGIN led1_scanData_2_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_scanData_3_.D
+// Type: Node_reg
+BEGIN led1_scanData_3_.D
+Fanin Number		4
+Pterm Number		4
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_scanData_0_.Q  	1
+Fanin Node      	led1_scanData_1_.Q  	2
+Fanin Node      	led1_scanData_2_.Q  	3
+Fanin Node      	led1_scanData_3_.Q  	4
+END
+
+// Signal Name: led1_scanData_3_.C
+// Type: Node_reg
+BEGIN led1_scanData_3_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_scanData_3_.CE
+// Type: Node_reg
+BEGIN led1_scanData_3_.CE
+Fanin Number		4
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		2
+Fanin Node      	led1_cntNext_20_.Q  	1
+Fanin Node      	led1_cntNext_18_.Q  	1
+Fanin Node      	led1_cntNext_19_.Q  	1
+Fanin Node      	led1_scandatae_17_n.BLIF	1
+END
+
+// Signal Name: led1_scanData_3_.AR
+// Type: Node_reg
+BEGIN led1_scanData_3_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntScan_0_.D
+// Type: Node_reg
+BEGIN led1_cntScan_0_.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntScan_0_.Q   	1
+END
+
+// Signal Name: led1_cntScan_0_.C
+// Type: Node_reg
+BEGIN led1_cntScan_0_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntScan_0_.AR
+// Type: Node_reg
+BEGIN led1_cntScan_0_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntScan_1_.D
+// Type: Node_reg
+BEGIN led1_cntScan_1_.D
+Fanin Number		2
+Pterm Number		2
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntScan_0_.Q   	1
+Fanin Node      	led1_cntScan_1_.Q   	2
+END
+
+// Signal Name: led1_cntScan_1_.C
+// Type: Node_reg
+BEGIN led1_cntScan_1_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntScan_1_.AR
+// Type: Node_reg
+BEGIN led1_cntScan_1_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntScan_2_.D
+// Type: Node_reg
+BEGIN led1_cntScan_2_.D
+Fanin Number		3
+Pterm Number		3
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntScan_0_.Q   	1
+Fanin Node      	led1_cntScan_1_.Q   	2
+Fanin Node      	led1_cntScan_2_.Q   	3
+END
+
+// Signal Name: led1_cntScan_2_.C
+// Type: Node_reg
+BEGIN led1_cntScan_2_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntScan_2_.AR
+// Type: Node_reg
+BEGIN led1_cntScan_2_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntScan_3_.D
+// Type: Node_reg
+BEGIN led1_cntScan_3_.D
+Fanin Number		4
+Pterm Number		4
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntScan_0_.Q   	1
+Fanin Node      	led1_cntScan_1_.Q   	2
+Fanin Node      	led1_cntScan_2_.Q   	3
+Fanin Node      	led1_cntScan_3_.Q   	4
+END
+
+// Signal Name: led1_cntScan_3_.C
+// Type: Node_reg
+BEGIN led1_cntScan_3_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntScan_3_.AR
+// Type: Node_reg
+BEGIN led1_cntScan_3_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntScan_4_.D.X1
+// Type: Node_reg
+BEGIN led1_cntScan_4_.D.X1
+Fanin Number		5
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntScan_0_.Q   	1
+Fanin Node      	led1_cntScan_1_.Q   	2
+Fanin Node      	led1_cntScan_2_.Q   	3
+Fanin Node      	led1_cntScan_3_.Q   	4
+Fanin Node      	led1_cntScan_4_.Q   	1
+END
+
+// Signal Name: led1_cntScan_4_.D.X2
+// Type: Node_reg
+BEGIN led1_cntScan_4_.D.X2
+Fanin Number		5
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntScan_0_.Q   	1
+Fanin Node      	led1_cntScan_1_.Q   	2
+Fanin Node      	led1_cntScan_2_.Q   	3
+Fanin Node      	led1_cntScan_3_.Q   	4
+Fanin Node      	led1_cntScan_4_.Q   	1
+END
+
+// Signal Name: led1_cntScan_4_.C
+// Type: Node_reg
+BEGIN led1_cntScan_4_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntScan_4_.AR
+// Type: Node_reg
+BEGIN led1_cntScan_4_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntScan_5_.T
+// Type: Node_reg
+BEGIN led1_cntScan_5_.T
+Fanin Number		5
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntScan_0_.Q   	1
+Fanin Node      	led1_cntScan_1_.Q   	2
+Fanin Node      	led1_cntScan_2_.Q   	3
+Fanin Node      	led1_cntScan_3_.Q   	4
+Fanin Node      	led1_cntScan_4_.Q   	1
+END
+
+// Signal Name: led1_cntScan_5_.C
+// Type: Node_reg
+BEGIN led1_cntScan_5_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntScan_5_.AR
+// Type: Node_reg
+BEGIN led1_cntScan_5_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntScan_6_.T
+// Type: Node_reg
+BEGIN led1_cntScan_6_.T
+Fanin Number		6
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntScan_0_.Q   	1
+Fanin Node      	led1_cntScan_1_.Q   	2
+Fanin Node      	led1_cntScan_2_.Q   	3
+Fanin Node      	led1_cntScan_3_.Q   	4
+Fanin Node      	led1_cntScan_4_.Q   	1
+Fanin Node      	led1_cntScan_5_.Q   	1
+END
+
+// Signal Name: led1_cntScan_6_.C
+// Type: Node_reg
+BEGIN led1_cntScan_6_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntScan_6_.AR
+// Type: Node_reg
+BEGIN led1_cntScan_6_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntScan_7_.T
+// Type: Node_reg
+BEGIN led1_cntScan_7_.T
+Fanin Number		7
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntScan_0_.Q   	1
+Fanin Node      	led1_cntScan_1_.Q   	2
+Fanin Node      	led1_cntScan_2_.Q   	3
+Fanin Node      	led1_cntScan_3_.Q   	4
+Fanin Node      	led1_cntScan_4_.Q   	1
+Fanin Node      	led1_cntScan_5_.Q   	1
+Fanin Node      	led1_cntScan_6_.Q   	1
+END
+
+// Signal Name: led1_cntScan_7_.C
+// Type: Node_reg
+BEGIN led1_cntScan_7_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntScan_7_.AR
+// Type: Node_reg
+BEGIN led1_cntScan_7_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntScan_8_.T
+// Type: Node_reg
+BEGIN led1_cntScan_8_.T
+Fanin Number		8
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntScan_0_.Q   	1
+Fanin Node      	led1_cntScan_1_.Q   	2
+Fanin Node      	led1_cntScan_2_.Q   	3
+Fanin Node      	led1_cntScan_3_.Q   	4
+Fanin Node      	led1_cntScan_4_.Q   	1
+Fanin Node      	led1_cntScan_5_.Q   	1
+Fanin Node      	led1_cntScan_6_.Q   	1
+Fanin Node      	led1_cntScan_7_.Q   	1
+END
+
+// Signal Name: led1_cntScan_8_.C
+// Type: Node_reg
+BEGIN led1_cntScan_8_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntScan_8_.AR
+// Type: Node_reg
+BEGIN led1_cntScan_8_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntScan_9_.T
+// Type: Node_reg
+BEGIN led1_cntScan_9_.T
+Fanin Number		9
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntScan_0_.Q   	1
+Fanin Node      	led1_cntScan_1_.Q   	2
+Fanin Node      	led1_cntScan_2_.Q   	3
+Fanin Node      	led1_cntScan_3_.Q   	4
+Fanin Node      	led1_cntScan_4_.Q   	1
+Fanin Node      	led1_cntScan_5_.Q   	1
+Fanin Node      	led1_cntScan_6_.Q   	1
+Fanin Node      	led1_cntScan_7_.Q   	1
+Fanin Node      	led1_cntScan_8_.Q   	1
+END
+
+// Signal Name: led1_cntScan_9_.C
+// Type: Node_reg
+BEGIN led1_cntScan_9_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntScan_9_.AR
+// Type: Node_reg
+BEGIN led1_cntScan_9_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntScan_10_.T
+// Type: Node_reg
+BEGIN led1_cntScan_10_.T
+Fanin Number		10
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntScan_0_.Q   	1
+Fanin Node      	led1_cntScan_1_.Q   	2
+Fanin Node      	led1_cntScan_2_.Q   	3
+Fanin Node      	led1_cntScan_3_.Q   	4
+Fanin Node      	led1_cntScan_4_.Q   	1
+Fanin Node      	led1_cntScan_5_.Q   	1
+Fanin Node      	led1_cntScan_6_.Q   	1
+Fanin Node      	led1_cntScan_7_.Q   	1
+Fanin Node      	led1_cntScan_8_.Q   	1
+Fanin Node      	led1_cntScan_9_.Q   	1
+END
+
+// Signal Name: led1_cntScan_10_.C
+// Type: Node_reg
+BEGIN led1_cntScan_10_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntScan_10_.AR
+// Type: Node_reg
+BEGIN led1_cntScan_10_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntScan_11_.T
+// Type: Node_reg
+BEGIN led1_cntScan_11_.T
+Fanin Number		11
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntScan_0_.Q   	1
+Fanin Node      	led1_cntScan_1_.Q   	2
+Fanin Node      	led1_cntScan_2_.Q   	3
+Fanin Node      	led1_cntScan_3_.Q   	4
+Fanin Node      	led1_cntScan_4_.Q   	1
+Fanin Node      	led1_cntScan_5_.Q   	1
+Fanin Node      	led1_cntScan_6_.Q   	1
+Fanin Node      	led1_cntScan_7_.Q   	1
+Fanin Node      	led1_cntScan_8_.Q   	1
+Fanin Node      	led1_cntScan_9_.Q   	1
+Fanin Node      	led1_cntScan_10_.Q  	1
+END
+
+// Signal Name: led1_cntScan_11_.C
+// Type: Node_reg
+BEGIN led1_cntScan_11_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntScan_11_.AR
+// Type: Node_reg
+BEGIN led1_cntScan_11_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntScan_12_.T
+// Type: Node_reg
+BEGIN led1_cntScan_12_.T
+Fanin Number		12
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntScan_0_.Q   	1
+Fanin Node      	led1_cntScan_1_.Q   	2
+Fanin Node      	led1_cntScan_2_.Q   	3
+Fanin Node      	led1_cntScan_3_.Q   	4
+Fanin Node      	led1_cntScan_4_.Q   	1
+Fanin Node      	led1_cntScan_5_.Q   	1
+Fanin Node      	led1_cntScan_6_.Q   	1
+Fanin Node      	led1_cntScan_7_.Q   	1
+Fanin Node      	led1_cntScan_8_.Q   	1
+Fanin Node      	led1_cntScan_9_.Q   	1
+Fanin Node      	led1_cntScan_10_.Q  	1
+Fanin Node      	led1_cntScan_11_.Q  	1
+END
+
+// Signal Name: led1_cntScan_12_.C
+// Type: Node_reg
+BEGIN led1_cntScan_12_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntScan_12_.AR
+// Type: Node_reg
+BEGIN led1_cntScan_12_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntScan_13_.T
+// Type: Node_reg
+BEGIN led1_cntScan_13_.T
+Fanin Number		13
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntScan_0_.Q   	1
+Fanin Node      	led1_cntScan_1_.Q   	2
+Fanin Node      	led1_cntScan_2_.Q   	3
+Fanin Node      	led1_cntScan_3_.Q   	4
+Fanin Node      	led1_cntScan_4_.Q   	1
+Fanin Node      	led1_cntScan_5_.Q   	1
+Fanin Node      	led1_cntScan_6_.Q   	1
+Fanin Node      	led1_cntScan_7_.Q   	1
+Fanin Node      	led1_cntScan_8_.Q   	1
+Fanin Node      	led1_cntScan_9_.Q   	1
+Fanin Node      	led1_cntScan_10_.Q  	1
+Fanin Node      	led1_cntScan_11_.Q  	1
+Fanin Node      	led1_cntScan_12_.Q  	1
+END
+
+// Signal Name: led1_cntScan_13_.C
+// Type: Node_reg
+BEGIN led1_cntScan_13_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntScan_13_.AR
+// Type: Node_reg
+BEGIN led1_cntScan_13_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntScan_14_.T
+// Type: Node_reg
+BEGIN led1_cntScan_14_.T
+Fanin Number		14
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntScan_0_.Q   	1
+Fanin Node      	led1_cntScan_1_.Q   	2
+Fanin Node      	led1_cntScan_2_.Q   	3
+Fanin Node      	led1_cntScan_3_.Q   	4
+Fanin Node      	led1_cntScan_4_.Q   	1
+Fanin Node      	led1_cntScan_5_.Q   	1
+Fanin Node      	led1_cntScan_6_.Q   	1
+Fanin Node      	led1_cntScan_7_.Q   	1
+Fanin Node      	led1_cntScan_8_.Q   	1
+Fanin Node      	led1_cntScan_9_.Q   	1
+Fanin Node      	led1_cntScan_10_.Q  	1
+Fanin Node      	led1_cntScan_11_.Q  	1
+Fanin Node      	led1_cntScan_12_.Q  	1
+Fanin Node      	led1_cntScan_13_.Q  	1
+END
+
+// Signal Name: led1_cntScan_14_.C
+// Type: Node_reg
+BEGIN led1_cntScan_14_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntScan_14_.AR
+// Type: Node_reg
+BEGIN led1_cntScan_14_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntScan_15_.T
+// Type: Node_reg
+BEGIN led1_cntScan_15_.T
+Fanin Number		15
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntScan_0_.Q   	1
+Fanin Node      	led1_cntScan_1_.Q   	2
+Fanin Node      	led1_cntScan_2_.Q   	3
+Fanin Node      	led1_cntScan_3_.Q   	4
+Fanin Node      	led1_cntScan_4_.Q   	1
+Fanin Node      	led1_cntScan_5_.Q   	1
+Fanin Node      	led1_cntScan_6_.Q   	1
+Fanin Node      	led1_cntScan_7_.Q   	1
+Fanin Node      	led1_cntScan_8_.Q   	1
+Fanin Node      	led1_cntScan_9_.Q   	1
+Fanin Node      	led1_cntScan_10_.Q  	1
+Fanin Node      	led1_cntScan_11_.Q  	1
+Fanin Node      	led1_cntScan_12_.Q  	1
+Fanin Node      	led1_cntScan_13_.Q  	1
+Fanin Node      	led1_cntScan_14_.Q  	1
+END
+
+// Signal Name: led1_cntScan_15_.C
+// Type: Node_reg
+BEGIN led1_cntScan_15_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntScan_15_.AR
+// Type: Node_reg
+BEGIN led1_cntScan_15_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntNext_0_.D
+// Type: Node_reg
+BEGIN led1_cntNext_0_.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntNext_0_.Q   	1
+END
+
+// Signal Name: led1_cntNext_0_.C
+// Type: Node_reg
+BEGIN led1_cntNext_0_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntNext_0_.AR
+// Type: Node_reg
+BEGIN led1_cntNext_0_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntNext_1_.D
+// Type: Node_reg
+BEGIN led1_cntNext_1_.D
+Fanin Number		2
+Pterm Number		2
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntNext_0_.Q   	1
+Fanin Node      	led1_cntNext_1_.Q   	2
+END
+
+// Signal Name: led1_cntNext_1_.C
+// Type: Node_reg
+BEGIN led1_cntNext_1_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntNext_1_.AR
+// Type: Node_reg
+BEGIN led1_cntNext_1_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntNext_2_.D
+// Type: Node_reg
+BEGIN led1_cntNext_2_.D
+Fanin Number		3
+Pterm Number		3
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntNext_0_.Q   	1
+Fanin Node      	led1_cntNext_1_.Q   	2
+Fanin Node      	led1_cntNext_2_.Q   	3
+END
+
+// Signal Name: led1_cntNext_2_.C
+// Type: Node_reg
+BEGIN led1_cntNext_2_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntNext_2_.AR
+// Type: Node_reg
+BEGIN led1_cntNext_2_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntNext_3_.D
+// Type: Node_reg
+BEGIN led1_cntNext_3_.D
+Fanin Number		4
+Pterm Number		4
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntNext_0_.Q   	1
+Fanin Node      	led1_cntNext_1_.Q   	2
+Fanin Node      	led1_cntNext_2_.Q   	3
+Fanin Node      	led1_cntNext_3_.Q   	4
+END
+
+// Signal Name: led1_cntNext_3_.C
+// Type: Node_reg
+BEGIN led1_cntNext_3_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntNext_3_.AR
+// Type: Node_reg
+BEGIN led1_cntNext_3_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntNext_4_.D.X1
+// Type: Node_reg
+BEGIN led1_cntNext_4_.D.X1
+Fanin Number		5
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntNext_0_.Q   	1
+Fanin Node      	led1_cntNext_1_.Q   	2
+Fanin Node      	led1_cntNext_2_.Q   	3
+Fanin Node      	led1_cntNext_3_.Q   	4
+Fanin Node      	led1_cntNext_4_.Q   	1
+END
+
+// Signal Name: led1_cntNext_4_.D.X2
+// Type: Node_reg
+BEGIN led1_cntNext_4_.D.X2
+Fanin Number		5
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntNext_0_.Q   	1
+Fanin Node      	led1_cntNext_1_.Q   	2
+Fanin Node      	led1_cntNext_2_.Q   	3
+Fanin Node      	led1_cntNext_3_.Q   	4
+Fanin Node      	led1_cntNext_4_.Q   	1
+END
+
+// Signal Name: led1_cntNext_4_.C
+// Type: Node_reg
+BEGIN led1_cntNext_4_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntNext_4_.AR
+// Type: Node_reg
+BEGIN led1_cntNext_4_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntNext_5_.T
+// Type: Node_reg
+BEGIN led1_cntNext_5_.T
+Fanin Number		5
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntNext_0_.Q   	1
+Fanin Node      	led1_cntNext_1_.Q   	2
+Fanin Node      	led1_cntNext_2_.Q   	3
+Fanin Node      	led1_cntNext_3_.Q   	4
+Fanin Node      	led1_cntNext_4_.Q   	1
+END
+
+// Signal Name: led1_cntNext_5_.C
+// Type: Node_reg
+BEGIN led1_cntNext_5_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntNext_5_.AR
+// Type: Node_reg
+BEGIN led1_cntNext_5_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntNext_6_.T
+// Type: Node_reg
+BEGIN led1_cntNext_6_.T
+Fanin Number		6
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntNext_0_.Q   	1
+Fanin Node      	led1_cntNext_1_.Q   	2
+Fanin Node      	led1_cntNext_2_.Q   	3
+Fanin Node      	led1_cntNext_3_.Q   	4
+Fanin Node      	led1_cntNext_4_.Q   	1
+Fanin Node      	led1_cntNext_5_.Q   	1
+END
+
+// Signal Name: led1_cntNext_6_.C
+// Type: Node_reg
+BEGIN led1_cntNext_6_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntNext_6_.AR
+// Type: Node_reg
+BEGIN led1_cntNext_6_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntNext_7_.T
+// Type: Node_reg
+BEGIN led1_cntNext_7_.T
+Fanin Number		7
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntNext_0_.Q   	1
+Fanin Node      	led1_cntNext_1_.Q   	2
+Fanin Node      	led1_cntNext_2_.Q   	3
+Fanin Node      	led1_cntNext_3_.Q   	4
+Fanin Node      	led1_cntNext_4_.Q   	1
+Fanin Node      	led1_cntNext_5_.Q   	1
+Fanin Node      	led1_cntNext_6_.Q   	1
+END
+
+// Signal Name: led1_cntNext_7_.C
+// Type: Node_reg
+BEGIN led1_cntNext_7_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntNext_7_.AR
+// Type: Node_reg
+BEGIN led1_cntNext_7_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntNext_8_.T
+// Type: Node_reg
+BEGIN led1_cntNext_8_.T
+Fanin Number		8
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	led1_cntNext_0_.Q   	1
+Fanin Node      	led1_cntNext_1_.Q   	2
+Fanin Node      	led1_cntNext_2_.Q   	3
+Fanin Node      	led1_cntNext_3_.Q   	4
+Fanin Node      	led1_cntNext_4_.Q   	1
+Fanin Node      	led1_cntNext_5_.Q   	1
+Fanin Node      	led1_cntNext_6_.Q   	1
+Fanin Node      	led1_cntNext_7_.Q   	1
+END
+
+// Signal Name: led1_cntNext_8_.C
+// Type: Node_reg
+BEGIN led1_cntNext_8_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntNext_8_.AR
+// Type: Node_reg
+BEGIN led1_cntNext_8_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntNext_11_.D
+// Type: Node_reg
+BEGIN led1_cntNext_11_.D
+Fanin Number		6
+Pterm Number		3
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		2
+Fanin Node      	led1_cntNext_20_.Q  	1
+Fanin Node      	led1_cntNext_18_.Q  	1
+Fanin Node      	led1_cntNext_19_.Q  	1
+Fanin Node      	led1_cntNext_11_.Q  	3
+Fanin Node      	led1_scandatae_17_n.BLIF	1
+Fanin Node      	led1_n_207_n.BLIF   	1
+END
+
+// Signal Name: led1_cntNext_11_.C
+// Type: Node_reg
+BEGIN led1_cntNext_11_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntNext_11_.AR
+// Type: Node_reg
+BEGIN led1_cntNext_11_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntNext_12_.D
+// Type: Node_reg
+BEGIN led1_cntNext_12_.D
+Fanin Number		7
+Pterm Number		4
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		2
+Fanin Node      	led1_cntNext_20_.Q  	1
+Fanin Node      	led1_cntNext_18_.Q  	1
+Fanin Node      	led1_cntNext_19_.Q  	1
+Fanin Node      	led1_cntNext_11_.Q  	3
+Fanin Node      	led1_cntNext_12_.Q  	4
+Fanin Node      	led1_scandatae_17_n.BLIF	1
+Fanin Node      	led1_n_207_n.BLIF   	1
+END
+
+// Signal Name: led1_cntNext_12_.C
+// Type: Node_reg
+BEGIN led1_cntNext_12_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntNext_12_.AR
+// Type: Node_reg
+BEGIN led1_cntNext_12_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntNext_14_.D
+// Type: Node_reg
+BEGIN led1_cntNext_14_.D
+Fanin Number		6
+Pterm Number		3
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		2
+Fanin Node      	led1_cntNext_20_.Q  	1
+Fanin Node      	led1_cntNext_18_.Q  	1
+Fanin Node      	led1_cntNext_19_.Q  	1
+Fanin Node      	led1_cntNext_14_.Q  	3
+Fanin Node      	led1_scandatae_17_n.BLIF	1
+Fanin Node      	led1_n_213_n.BLIF   	1
+END
+
+// Signal Name: led1_cntNext_14_.C
+// Type: Node_reg
+BEGIN led1_cntNext_14_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntNext_14_.AR
+// Type: Node_reg
+BEGIN led1_cntNext_14_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntNext_17_.D
+// Type: Node_reg
+BEGIN led1_cntNext_17_.D
+Fanin Number		6
+Pterm Number		3
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		2
+Fanin Node      	led1_cntNext_20_.Q  	1
+Fanin Node      	led1_cntNext_18_.Q  	1
+Fanin Node      	led1_cntNext_19_.Q  	1
+Fanin Node      	led1_cntNext_17_.Q  	3
+Fanin Node      	led1_scandatae_17_n.BLIF	1
+Fanin Node      	led1_n_219_n.BLIF   	1
+END
+
+// Signal Name: led1_cntNext_17_.C
+// Type: Node_reg
+BEGIN led1_cntNext_17_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntNext_17_.AR
+// Type: Node_reg
+BEGIN led1_cntNext_17_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntNext_21_.D
+// Type: Node_reg
+BEGIN led1_cntNext_21_.D
+Fanin Number		6
+Pterm Number		3
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		2
+Fanin Node      	led1_cntNext_20_.Q  	1
+Fanin Node      	led1_cntNext_18_.Q  	1
+Fanin Node      	led1_cntNext_19_.Q  	1
+Fanin Node      	led1_cntNext_21_.Q  	3
+Fanin Node      	led1_scandatae_17_n.BLIF	1
+Fanin Node      	led1_n_227_n.BLIF   	1
+END
+
+// Signal Name: led1_cntNext_21_.C
+// Type: Node_reg
+BEGIN led1_cntNext_21_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntNext_21_.AR
+// Type: Node_reg
+BEGIN led1_cntNext_21_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntNext_22_.D
+// Type: Node_reg
+BEGIN led1_cntNext_22_.D
+Fanin Number		7
+Pterm Number		4
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		2
+Fanin Node      	led1_cntNext_20_.Q  	1
+Fanin Node      	led1_cntNext_18_.Q  	1
+Fanin Node      	led1_cntNext_19_.Q  	1
+Fanin Node      	led1_cntNext_21_.Q  	3
+Fanin Node      	led1_cntNext_22_.Q  	4
+Fanin Node      	led1_scandatae_17_n.BLIF	1
+Fanin Node      	led1_n_227_n.BLIF   	1
+END
+
+// Signal Name: led1_cntNext_22_.C
+// Type: Node_reg
+BEGIN led1_cntNext_22_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntNext_22_.AR
+// Type: Node_reg
+BEGIN led1_cntNext_22_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_cntNext_25_.T
+// Type: Node_reg
+BEGIN led1_cntNext_25_.T
+Fanin Number		10
+Pterm Number		5
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		2
+Fanin Node      	led1_cntNext_20_.Q  	1
+Fanin Node      	led1_cntNext_18_.Q  	1
+Fanin Node      	led1_cntNext_24_.Q  	1
+Fanin Node      	led1_cntNext_23_.Q  	1
+Fanin Node      	led1_cntNext_19_.Q  	1
+Fanin Node      	led1_cntNext_21_.Q  	3
+Fanin Node      	led1_cntNext_22_.Q  	4
+Fanin Node      	led1_cntNext_25_.Q  	5
+Fanin Node      	led1_scandatae_17_n.BLIF	1
+Fanin Node      	led1_n_227_n.BLIF   	1
+END
+
+// Signal Name: led1_cntNext_25_.C
+// Type: Node_reg
+BEGIN led1_cntNext_25_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clkh.BLIF           	0
+END
+
+// Signal Name: led1_cntNext_25_.AR
+// Type: Node_reg
+BEGIN led1_cntNext_25_.AR
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	button1_d1_q_0_.Q   	1
+Fanin Node      	button1_d2_q_0_.Q   	1
+Fanin Node      	button1_d3_q_0_.Q   	1
+END
+
+// Signal Name: led1_n_278_i_n
+// Type: Node
+BEGIN led1_n_278_i_n
+Fanin Number		8
+Pterm Number		7
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Output    	row_0_.Q            	1
+Fanin Output    	row_1_.Q            	1
+Fanin Output    	row_2_.Q            	1
+Fanin Output    	row_3_.Q            	1
+Fanin Output    	row_4_.Q            	1
+Fanin Output    	row_5_.Q            	1
+Fanin Output    	row_6_.Q            	1
+Fanin Output    	row_7_.Q            	1
+END
+
+// Signal Name: led1_scandatae_17_n
+// Type: Node
+BEGIN led1_scandatae_17_n
+Fanin Number		23
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	led1_cntNext_9_.Q   	5
+Fanin Node      	led1_cntNext_24_.Q  	1
+Fanin Node      	led1_cntNext_16_.Q  	1
+Fanin Node      	led1_cntNext_23_.Q  	1
+Fanin Node      	led1_cntNext_10_.Q  	1
+Fanin Node      	led1_cntNext_13_.Q  	1
+Fanin Node      	led1_cntNext_15_.Q  	1
+Fanin Node      	led1_cntNext_0_.Q   	1
+Fanin Node      	led1_cntNext_1_.Q   	2
+Fanin Node      	led1_cntNext_2_.Q   	3
+Fanin Node      	led1_cntNext_3_.Q   	4
+Fanin Node      	led1_cntNext_4_.Q   	1
+Fanin Node      	led1_cntNext_5_.Q   	1
+Fanin Node      	led1_cntNext_6_.Q   	1
+Fanin Node      	led1_cntNext_7_.Q   	1
+Fanin Node      	led1_cntNext_8_.Q   	1
+Fanin Node      	led1_cntNext_11_.Q  	3
+Fanin Node      	led1_cntNext_12_.Q  	4
+Fanin Node      	led1_cntNext_14_.Q  	3
+Fanin Node      	led1_cntNext_17_.Q  	3
+Fanin Node      	led1_cntNext_21_.Q  	3
+Fanin Node      	led1_cntNext_22_.Q  	4
+Fanin Node      	led1_cntNext_25_.Q  	5
+END
+
+// Signal Name: led1_n_207_n
+// Type: Node
+BEGIN led1_n_207_n
+Fanin Number		11
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	led1_cntNext_9_.Q   	5
+Fanin Node      	led1_cntNext_10_.Q  	1
+Fanin Node      	led1_cntNext_0_.Q   	1
+Fanin Node      	led1_cntNext_1_.Q   	2
+Fanin Node      	led1_cntNext_2_.Q   	3
+Fanin Node      	led1_cntNext_3_.Q   	4
+Fanin Node      	led1_cntNext_4_.Q   	1
+Fanin Node      	led1_cntNext_5_.Q   	1
+Fanin Node      	led1_cntNext_6_.Q   	1
+Fanin Node      	led1_cntNext_7_.Q   	1
+Fanin Node      	led1_cntNext_8_.Q   	1
+END
+
+// Signal Name: led1_n_213_n
+// Type: Node
+BEGIN led1_n_213_n
+Fanin Number		14
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	led1_cntNext_9_.Q   	5
+Fanin Node      	led1_cntNext_10_.Q  	1
+Fanin Node      	led1_cntNext_13_.Q  	1
+Fanin Node      	led1_cntNext_0_.Q   	1
+Fanin Node      	led1_cntNext_1_.Q   	2
+Fanin Node      	led1_cntNext_2_.Q   	3
+Fanin Node      	led1_cntNext_3_.Q   	4
+Fanin Node      	led1_cntNext_4_.Q   	1
+Fanin Node      	led1_cntNext_5_.Q   	1
+Fanin Node      	led1_cntNext_6_.Q   	1
+Fanin Node      	led1_cntNext_7_.Q   	1
+Fanin Node      	led1_cntNext_8_.Q   	1
+Fanin Node      	led1_cntNext_11_.Q  	3
+Fanin Node      	led1_cntNext_12_.Q  	4
+END
+
+// Signal Name: led1_n_219_n
+// Type: Node
+BEGIN led1_n_219_n
+Fanin Number		17
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	led1_cntNext_9_.Q   	5
+Fanin Node      	led1_cntNext_16_.Q  	1
+Fanin Node      	led1_cntNext_10_.Q  	1
+Fanin Node      	led1_cntNext_13_.Q  	1
+Fanin Node      	led1_cntNext_15_.Q  	1
+Fanin Node      	led1_cntNext_0_.Q   	1
+Fanin Node      	led1_cntNext_1_.Q   	2
+Fanin Node      	led1_cntNext_2_.Q   	3
+Fanin Node      	led1_cntNext_3_.Q   	4
+Fanin Node      	led1_cntNext_4_.Q   	1
+Fanin Node      	led1_cntNext_5_.Q   	1
+Fanin Node      	led1_cntNext_6_.Q   	1
+Fanin Node      	led1_cntNext_7_.Q   	1
+Fanin Node      	led1_cntNext_8_.Q   	1
+Fanin Node      	led1_cntNext_11_.Q  	3
+Fanin Node      	led1_cntNext_12_.Q  	4
+Fanin Node      	led1_cntNext_14_.Q  	3
+END
+
+// Signal Name: led1_n_227_n
+// Type: Node
+BEGIN led1_n_227_n
+Fanin Number		21
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	led1_cntNext_9_.Q   	5
+Fanin Node      	led1_cntNext_20_.Q  	1
+Fanin Node      	led1_cntNext_18_.Q  	1
+Fanin Node      	led1_cntNext_16_.Q  	1
+Fanin Node      	led1_cntNext_10_.Q  	1
+Fanin Node      	led1_cntNext_13_.Q  	1
+Fanin Node      	led1_cntNext_15_.Q  	1
+Fanin Node      	led1_cntNext_19_.Q  	1
+Fanin Node      	led1_cntNext_0_.Q   	1
+Fanin Node      	led1_cntNext_1_.Q   	2
+Fanin Node      	led1_cntNext_2_.Q   	3
+Fanin Node      	led1_cntNext_3_.Q   	4
+Fanin Node      	led1_cntNext_4_.Q   	1
+Fanin Node      	led1_cntNext_5_.Q   	1
+Fanin Node      	led1_cntNext_6_.Q   	1
+Fanin Node      	led1_cntNext_7_.Q   	1
+Fanin Node      	led1_cntNext_8_.Q   	1
+Fanin Node      	led1_cntNext_11_.Q  	3
+Fanin Node      	led1_cntNext_12_.Q  	4
+Fanin Node      	led1_cntNext_14_.Q  	3
+Fanin Node      	led1_cntNext_17_.Q  	3
+END
+
+// Design 'lab12' used clock signal list:
+CLOCK	clkh
+

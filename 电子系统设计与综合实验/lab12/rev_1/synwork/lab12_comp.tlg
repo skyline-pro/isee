@@ -1,0 +1,19 @@
+Selecting top level module lab12
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab12\dffre.v":14:7:14:11|Synthesizing module dffre
+
+@N: CG179 :"E:\Grade-3_2\ISP_Project\lab12\dffre.v":25:13:25:13|Removing redundant assignment
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab12\button.v":1:7:1:12|Synthesizing module button
+
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab12\ledDotMatrix.v":1:7:1:18|Synthesizing module ledDotMatrix
+
+@W: CG296 :"E:\Grade-3_2\ISP_Project\lab12\ledDotMatrix.v":216:13:216:18|Incomplete sensitivity list - assuming completeness
+@W: CG290 :"E:\Grade-3_2\ISP_Project\lab12\ledDotMatrix.v":218:29:218:32|Referenced variable col1 is not in sensitivity list
+@W: CG290 :"E:\Grade-3_2\ISP_Project\lab12\ledDotMatrix.v":219:29:219:32|Referenced variable col2 is not in sensitivity list
+@W: CG290 :"E:\Grade-3_2\ISP_Project\lab12\ledDotMatrix.v":220:29:220:32|Referenced variable col3 is not in sensitivity list
+@W: CG290 :"E:\Grade-3_2\ISP_Project\lab12\ledDotMatrix.v":221:29:221:32|Referenced variable col4 is not in sensitivity list
+@W: CG290 :"E:\Grade-3_2\ISP_Project\lab12\ledDotMatrix.v":222:29:222:32|Referenced variable col5 is not in sensitivity list
+@W: CG290 :"E:\Grade-3_2\ISP_Project\lab12\ledDotMatrix.v":223:29:223:32|Referenced variable col6 is not in sensitivity list
+@W: CG290 :"E:\Grade-3_2\ISP_Project\lab12\ledDotMatrix.v":224:29:224:32|Referenced variable col7 is not in sensitivity list
+@W: CG290 :"E:\Grade-3_2\ISP_Project\lab12\ledDotMatrix.v":225:29:225:32|Referenced variable col8 is not in sensitivity list
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab12\lab12.v":1:7:1:11|Synthesizing module lab12
+

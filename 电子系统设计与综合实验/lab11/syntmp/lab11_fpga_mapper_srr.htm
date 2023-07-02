@@ -1,0 +1,99 @@
+<html><body><samp><pre>
+<!@TC:1462671576>
+<a name=mapperReport14>Synopsys CPLD Technology Mapper, Version maplat, Build 923R, Built May  6 2014</a>
+Copyright (C) 1994-2013, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use or distribution of the software is strictly prohibited.
+Product Version I-2014.03LC 
+@N:<a href="@N:MF248:@XP_HELP">MF248</a> : <!@TM:1462671576> | Running in 64-bit mode. 
+Encoding state machine flag_Data[3:0] (view:work.keyboard(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+   11 -> 11
+@N:<a href="@N:MO225:@XP_HELP">MO225</a> : <a href="e:\grade-3_2\isp_project\lab11\keyboard.v:75:4:75:10:@N:MO225:@XP_MSG">keyboard.v(75)</a><!@TM:1462671576> | No possible illegal states for state machine flag_Data[3:0],safe FSM implementation is disabled
+Encoding state machine scanvalue[3:0] (view:work.keyboard(verilog))
+original code -> new code
+   0001 -> 00
+   0010 -> 01
+   0100 -> 10
+   1000 -> 11
+@N:<a href="@N:MO225:@XP_HELP">MO225</a> : <a href="e:\grade-3_2\isp_project\lab11\keyboard.v:16:4:16:10:@N:MO225:@XP_MSG">keyboard.v(16)</a><!@TM:1462671576> | No possible illegal states for state machine scanvalue[3:0],safe FSM implementation is disabled
+@N: : <a href="e:\grade-3_2\isp_project\lab11\i2c.v:20:4:20:10:@N::@XP_MSG">i2c.v(20)</a><!@TM:1462671576> | Found counter in view:work.i2c(verilog) inst clk_div[3:0]
+Encoding state machine bit_state[38:0] (view:work.i2c(verilog))
+original code -> new code
+   000000 -> 000000
+   000001 -> 000001
+   000010 -> 000011
+   000011 -> 000010
+   000100 -> 000110
+   000101 -> 000111
+   000110 -> 000101
+   000111 -> 000100
+   001000 -> 001100
+   001001 -> 001101
+   001010 -> 001111
+   001011 -> 001110
+   001100 -> 001010
+   001101 -> 001011
+   001110 -> 001001
+   001111 -> 001000
+   010000 -> 011000
+   010001 -> 011001
+   010010 -> 011011
+   010011 -> 011010
+   010100 -> 011110
+   010101 -> 011111
+   010110 -> 011101
+   010111 -> 011100
+   011000 -> 010100
+   011001 -> 010101
+   011010 -> 010111
+   011011 -> 010110
+   011100 -> 010010
+   011101 -> 010011
+   011110 -> 010001
+   011111 -> 010000
+   100000 -> 110000
+   100001 -> 110001
+   100010 -> 110011
+   100011 -> 110010
+   100100 -> 110110
+   100101 -> 110111
+   100110 -> 110101
+Encoding state machine eeprom_state[2:0] (view:work.i2c(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+@N:<a href="@N:MO106:@XP_HELP">MO106</a> : <a href="e:\grade-3_2\isp_project\lab11\decoderhex2dec.v:6:8:6:12:@N:MO106:@XP_MSG">decoderhex2dec.v(6)</a><!@TM:1462671576> | Found ROM, 'decoder1.out_1[6:0]', 11 words by 7 bits 
+<font color=#A52A2A>@W:<a href="@W:FC103:@XP_HELP">FC103</a> : <!@TM:1462671576> | Internal tri state i2c.SDA_1_0 converted to mux. Simulation mismatch can happen </font> 
+---------------------------------------
+<a name=resourceUsage15>Resource Usage Report</a>
+
+Simple gate primitives:
+DFFRH           38 uses
+DFFCRH          16 uses
+DFFC            26 uses
+DFFSH           5 uses
+DFF             24 uses
+IBUF            9 uses
+OBUF            21 uses
+BUFTH           1 use
+AND2            582 uses
+INV             344 uses
+OR2             12 uses
+XOR2            26 uses
+
+
+@N:<a href="@N:FC100:@XP_HELP">FC100</a> : <!@TM:1462671576> | Timing Report not generated for this device, please use place and route tools for timing analysis. 
+I-2014.03LC 
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 42MB peak: 112MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sun May 08 09:39:36 2016
+
+###########################################################]
+
+</pre></samp></body></html>

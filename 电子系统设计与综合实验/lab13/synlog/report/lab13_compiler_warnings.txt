@@ -1,0 +1,3 @@
+@W: CG921 :"E:\Grade-3_2\ISP_Project\lab13\lcd1602.v":50:8:50:12|lcdRs is already declared in this scope.
+@W: CG921 :"E:\Grade-3_2\ISP_Project\lab13\lcd1602.v":51:8:51:12|lcdRw is already declared in this scope.
+

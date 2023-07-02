@@ -1,0 +1,2 @@
+@E: CS112 :"E:\grade-3_2\isp_project\lab8\lab8.v":14:39:14:39|Expecting port name
+

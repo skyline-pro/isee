@@ -1,0 +1,72 @@
+\relax 
+\catcode 95\active
+\@writefile{toc}{\contentsline {section}{\numberline {一}实验目的}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {二}实验任务}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.}基本要求}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1}至少运行下列RV32I 核心指令。}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2}采用5 级流水线技术，对数据冒险实现转发或阻塞功能。}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3}在Nexys Video 开发系统中实现RISC-V 微处理器，要求CPU 的运行速度大于25MHz。}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.}扩展要求}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1}要求设计的微处理器还能运行lb、lh、ld、lbu、lhu、lwu、sb、sh 或sd 等字节、半字和双字数据传送指令。}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2}要求设计的CPU 增加异常（exception）、自陷（trap）、中断（interrupt）等处理方案。}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {三}实验原理与各模块设计}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.}总体设计}{3}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces 流水线流水作业示意图\relax }}{3}{}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{流水线流水作业示意图}{{1}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces 流水线原理框图\relax }}{4}{}\protected@file@percent }
+\newlabel{流水线原理框图}{{2}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.}指令译码ID模块的设计}{5}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces ID模块的输入/输出引脚说明\relax }}{5}{}\protected@file@percent }
+\newlabel{ID模块的输入输出引脚说明}{{3}{5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1}寄存器堆（Registers）子模块的设计}{5}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces 寄存器堆\relax }}{5}{}\protected@file@percent }
+\newlabel{寄存器堆}{{4}{5}}
+\newlabel{寄存器堆}{{1}{6}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {1}{\ignorespaces 寄存器堆}}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2}指令译码(包括立即数产生电路)子模块的设计}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3}分支检测电路的设计}{6}{}\protected@file@percent }
+\newlabel{分支判断核心语句}{{2}{6}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2}{\ignorespaces 分支判断核心语句}}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.4}冒险检测功能电路的设计}{7}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.}执行模块设计}{7}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces EX模块的输入输出引脚说明\relax }}{7}{}\protected@file@percent }
+\newlabel{EX模块输入输出引脚说明}{{5}{7}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1}ALU子模块的设计}{8}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2}数据前推电路}{8}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.}数据存储模块(DataRAM)的设计}{8}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.}取指令模块(IF)的设计}{8}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces IF模块的输入/输出引脚说明\relax }}{8}{}\protected@file@percent }
+\newlabel{IF模块接口信息}{{6}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.}流水线寄存器的设计}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.}顶层设计}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {四}主要仪器设备}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {五}实验结果}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.}Decode模块}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1}仿真图}{9}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Decode模块仿真图\relax }}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2}仿真结果分析}{10}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.}ALU模块}{11}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1}完整仿真图}{11}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces ALU完整仿真图\relax }}{11}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2}仿真图分析}{11}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces ALU前半部分\relax }}{11}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces ALU后半部分\relax }}{11}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.}IF模块}{12}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1}完整仿真结果}{12}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces IF模块仿真结果\relax }}{12}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2}结果分析}{12}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces IF局部分析\relax }}{12}{}\protected@file@percent }
+\newlabel{IF局部图}{{12}{12}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.}CPU顶层}{13}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1}仿真图像}{13}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces CPU顶层仿真结果\relax }}{13}{}\protected@file@percent }
+\newlabel{测试结果}{{13}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces 应有的测试结果\relax }}{13}{}\protected@file@percent }
+\newlabel{应有结果}{{14}{13}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2}结果分析}{14}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.}上板验证}{14}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces 上板结果\relax }}{14}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {六}问题记录}{14}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {七}思考题}{14}{}\protected@file@percent }
+\gdef \@abspage@last{14}

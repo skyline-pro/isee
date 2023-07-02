@@ -1,0 +1,15 @@
+----------------------------------------------------------------------
+Report for cell lcd1602.TECH
+Register bits:  229 of 880 (26.023%)
+I/O cells:      13
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                DFF        21          100.0
+                               DFFC       186          100.0
+                              DFFCR        13          100.0
+                              DFFCS         1          100.0
+                               DFFR         7          100.0
+                               DFFS         1          100.0
+                               IBUF         2          100.0
+                               OBUF        11          100.0
+                              TOTAL       242

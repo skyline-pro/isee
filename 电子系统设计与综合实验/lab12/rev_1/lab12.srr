@@ -1,0 +1,104 @@
+#Build: Synplify Pro I-2014.03LC , Build 063R, May 27 2014
+#install: D:\ispLEVER_Classic2_1\synpbase
+#OS: Windows 7 6.2
+#Hostname: SKYLINE
+
+#Implementation: rev_1
+
+$ Start of Compile
+#Wed May 11 18:44:31 2022
+
+Synopsys Verilog Compiler, version comp201403rcp1, Build 060R, built May 27 2014
+@N|Running in 64-bit mode
+Copyright (C) 1994-2014 Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+
+@N:: Running Verilog Compiler in System Verilog mode
+@N:: Running Verilog Compiler in Multiple File Compilation Unit mode
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\umr_capim.v"
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\scemi_objects.v"
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\scemi_pipes.svh"
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\hypermods.v"
+@I::"E:\Grade-3_2\ISP_Project\lab12\ledDotMatrix.v"
+@I::"E:\Grade-3_2\ISP_Project\lab12\lab12.v"
+@I::"E:\Grade-3_2\ISP_Project\lab12\button.v"
+@I::"E:\Grade-3_2\ISP_Project\lab12\dffre.v"
+Verilog syntax check successful!
+Selecting top level module lab12
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab12\dffre.v":14:7:14:11|Synthesizing module dffre
+
+@N: CG179 :"E:\Grade-3_2\ISP_Project\lab12\dffre.v":25:13:25:13|Removing redundant assignment
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab12\button.v":1:7:1:12|Synthesizing module button
+
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab12\ledDotMatrix.v":1:7:1:18|Synthesizing module ledDotMatrix
+
+@W: CG296 :"E:\Grade-3_2\ISP_Project\lab12\ledDotMatrix.v":216:13:216:18|Incomplete sensitivity list - assuming completeness
+@W: CG290 :"E:\Grade-3_2\ISP_Project\lab12\ledDotMatrix.v":218:29:218:32|Referenced variable col1 is not in sensitivity list
+@W: CG290 :"E:\Grade-3_2\ISP_Project\lab12\ledDotMatrix.v":219:29:219:32|Referenced variable col2 is not in sensitivity list
+@W: CG290 :"E:\Grade-3_2\ISP_Project\lab12\ledDotMatrix.v":220:29:220:32|Referenced variable col3 is not in sensitivity list
+@W: CG290 :"E:\Grade-3_2\ISP_Project\lab12\ledDotMatrix.v":221:29:221:32|Referenced variable col4 is not in sensitivity list
+@W: CG290 :"E:\Grade-3_2\ISP_Project\lab12\ledDotMatrix.v":222:29:222:32|Referenced variable col5 is not in sensitivity list
+@W: CG290 :"E:\Grade-3_2\ISP_Project\lab12\ledDotMatrix.v":223:29:223:32|Referenced variable col6 is not in sensitivity list
+@W: CG290 :"E:\Grade-3_2\ISP_Project\lab12\ledDotMatrix.v":224:29:224:32|Referenced variable col7 is not in sensitivity list
+@W: CG290 :"E:\Grade-3_2\ISP_Project\lab12\ledDotMatrix.v":225:29:225:32|Referenced variable col8 is not in sensitivity list
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab12\lab12.v":1:7:1:11|Synthesizing module lab12
+
+@END
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 69MB peak: 70MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed May 11 18:44:31 2022
+
+###########################################################]
+Synopsys Netlist Linker, version comp201403rcp1, Build 060R, built May 27 2014
+@N|Running in 64-bit mode
+@N: NF107 :"E:\Grade-3_2\ISP_Project\lab12\lab12.v":1:7:1:11|Selected library: work cell: lab12 view verilog as top level
+@N: NF107 :"E:\Grade-3_2\ISP_Project\lab12\lab12.v":1:7:1:11|Selected library: work cell: lab12 view verilog as top level
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed May 11 18:44:33 2022
+
+###########################################################]
+Map & Optimize Report
+
+Synopsys CPLD Technology Mapper, Version maplat, Build 923R, Built May  6 2014
+Copyright (C) 1994-2013, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use or distribution of the software is strictly prohibited.
+Product Version I-2014.03LC 
+@N: MF248 |Running in 64-bit mode.
+@N:"e:\grade-3_2\isp_project\lab12\leddotmatrix.v":27:4:27:9|Found counter in view:work.ledDotMatrix(verilog) inst scanData[3:0]
+@N: MO106 :"e:\grade-3_2\isp_project\lab12\leddotmatrix.v":41:8:41:11|Found ROM, 'col4[5:0]', 16 words by 6 bits 
+@N: MO106 :"e:\grade-3_2\isp_project\lab12\leddotmatrix.v":41:8:41:11|Found ROM, 'col3[5:0]', 16 words by 6 bits 
+@N: MO106 :"e:\grade-3_2\isp_project\lab12\leddotmatrix.v":41:8:41:11|Found ROM, 'col6[3]', 16 words by 1 bits 
+@N: MO106 :"e:\grade-3_2\isp_project\lab12\leddotmatrix.v":41:8:41:11|Found ROM, 'col5[3]', 16 words by 1 bits 
+@N: MO106 :"e:\grade-3_2\isp_project\lab12\leddotmatrix.v":41:8:41:11|Found ROM, 'col2[3]', 16 words by 1 bits 
+@N: MO106 :"e:\grade-3_2\isp_project\lab12\leddotmatrix.v":41:8:41:11|Found ROM, 'col1[3:0]', 16 words by 4 bits 
+@N: MO106 :"e:\grade-3_2\isp_project\lab12\leddotmatrix.v":41:8:41:11|Found ROM, 'col7[1]', 16 words by 1 bits 
+@N: MO106 :"e:\grade-3_2\isp_project\lab12\leddotmatrix.v":41:8:41:11|Found ROM, 'col5[0]', 16 words by 1 bits 
+---------------------------------------
+Resource Usage Report
+
+Simple gate primitives:
+DFFCRH          11 uses
+DFFCSH          1 use
+DFFRH           42 uses
+DFF             3 uses
+IBUF            3 uses
+OBUF            16 uses
+AND2            225 uses
+INV             102 uses
+XOR2            45 uses
+OR2             1 use
+
+
+@N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.
+I-2014.03LC 
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 39MB peak: 105MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed May 11 18:44:33 2022
+
+###########################################################]

@@ -1,0 +1,1995 @@
+|--------------------------------------------------- ----------|
+|- ispLEVER Classic 2.1.00.02.49.20 Equations File            -|
+|- Copyright(C), 1992-2012, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+Equations:
+
+LEDVCC_0_ = !dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q ; (1 pterm, 2 signals)
+
+LEDVCC_1_ = dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q ; (1 pterm, 2 signals)
+
+LEDVCC_2_ = !dynamicshow_counter4_q_1_.Q & dynamicshow_counter4_q_2_.Q ; (1 pterm, 2 signals)
+
+LEDVCC_3_ = dynamicshow_counter4_q_1_.Q & dynamicshow_counter4_q_2_.Q ; (1 pterm, 2 signals)
+
+SCL.D = !i2c_phase2.Q ; (1 pterm, 1 signal)
+SCL.C = clkh ; (1 pterm, 1 signal)
+SCL.CE = !( SCL_0 ) ; (1 pterm, 1 signal)
+
+SCL_0 = !reset
+    # !i2c_eeprom_state_0_.Q & !i2c_eeprom_state_1_.Q
+    # !i2c_phase0.Q & !i2c_phase2.Q ; (3 pterms, 5 signals)
+
+SDA.D = SDA.Q & !i2c_phase1.Q & !i2c_phase3.Q & !i2c_bit_state_2_.Q
+    # SDA.Q & !i2c_bit_state_3_.Q & i2c_bit_state_4_.Q & i2c_bit_state_5_.Q
+       & i2c_eeprom_state_0_.Q
+    # SDA.Q & !i2c_phase3.Q & i2c_bit_state_0_.Q & i2c_eeprom_state_0_.Q
+    # SDA.Q & !i2c_phase3.Q & i2c_bit_state_1_.Q & !i2c_bit_state_2_.Q
+       & !i2c_bit_state_4_.Q
+    # SDA.Q & !i2c_phase3.Q & !i2c_bit_state_0_.Q & i2c_bit_state_2_.Q
+       & !i2c_eeprom_state_0_.Q
+    # SDA.Q & i2c_bit_state_0_.Q & i2c_bit_state_1_.Q & !i2c_bit_state_3_.Q
+       & i2c_bit_state_4_.Q & i2c_eeprom_state_0_.Q
+    # SDA.Q & !i2c_phase1.Q & !i2c_bit_state_0_.Q & !i2c_bit_state_1_.Q
+       & !i2c_bit_state_2_.Q & !i2c_bit_state_4_.Q
+    # SDA.Q & i2c_bit_state_0_.Q & !i2c_bit_state_1_.Q & !i2c_bit_state_2_.Q
+       & i2c_bit_state_4_.Q
+    # SDA.Q & !i2c_bit_state_0_.Q & i2c_bit_state_1_.Q & i2c_bit_state_2_.Q
+       & !i2c_bit_state_3_.Q & i2c_bit_state_5_.Q & i2c_eeprom_state_0_.Q
+    # SDA.Q & !i2c_bit_state_0_.Q & i2c_bit_state_1_.Q & !i2c_bit_state_3_.Q
+       & i2c_bit_state_4_.Q & i2c_eeprom_state_1_.Q
+    # SDA.Q & !i2c_phase3.Q & !i2c_bit_state_1_.Q & i2c_bit_state_4_.Q
+    # SDA.Q & !i2c_phase3.Q & i2c_bit_state_1_.Q & i2c_eeprom_state_0_.Q
+    # i2c_phase3.Q & i2c_WrData_0_.Q & i2c_bit_state_0_.Q
+       & !i2c_bit_state_1_.Q & i2c_bit_state_2_.Q & !i2c_bit_state_3_.Q
+       & i2c_bit_state_4_.Q & !i2c_bit_state_5_.Q & i2c_eeprom_state_0_.Q
+    # i2c_phase1.Q & !i2c_bit_state_0_.Q & i2c_bit_state_1_.Q
+       & !i2c_bit_state_2_.Q & !i2c_bit_state_3_.Q & i2c_bit_state_4_.Q
+       & !i2c_bit_state_5_.Q & i2c_eeprom_state_0_.Q
+    # i2c_phase3.Q & i2c_WrData_1_.Q & !i2c_bit_state_0_.Q
+       & !i2c_bit_state_1_.Q & i2c_bit_state_2_.Q & !i2c_bit_state_3_.Q
+       & i2c_bit_state_4_.Q & i2c_eeprom_state_0_.Q
+    # i2c_phase3.Q & i2c_WrData_3_.Q & i2c_bit_state_0_.Q
+       & !i2c_bit_state_1_.Q & i2c_bit_state_2_.Q & i2c_bit_state_3_.Q
+       & i2c_bit_state_4_.Q & i2c_eeprom_state_0_.Q
+    # i2c_phase3.Q & i2c_WrData_2_.Q & !i2c_bit_state_0_.Q
+       & !i2c_bit_state_1_.Q & i2c_bit_state_2_.Q & i2c_bit_state_3_.Q
+       & i2c_bit_state_4_.Q & i2c_eeprom_state_0_.Q
+    # i2c_phase3.Q & i2c_WrData_4_.Q & i2c_bit_state_0_.Q & i2c_bit_state_1_.Q
+       & i2c_bit_state_2_.Q & i2c_bit_state_3_.Q & i2c_bit_state_4_.Q
+       & i2c_eeprom_state_0_.Q
+    # i2c_phase3.Q & i2c_WrData_5_.Q & !i2c_bit_state_0_.Q
+       & i2c_bit_state_1_.Q & i2c_bit_state_2_.Q & i2c_bit_state_3_.Q
+       & i2c_bit_state_4_.Q & i2c_eeprom_state_0_.Q
+    # i2c_phase3.Q & i2c_WrData_7_.Q & i2c_bit_state_0_.Q & i2c_bit_state_1_.Q
+       & !i2c_bit_state_2_.Q & i2c_bit_state_3_.Q & i2c_bit_state_4_.Q
+       & i2c_eeprom_state_0_.Q
+    # i2c_phase3.Q & i2c_WrData_6_.Q & !i2c_bit_state_0_.Q
+       & i2c_bit_state_1_.Q & !i2c_bit_state_2_.Q & i2c_bit_state_3_.Q
+       & i2c_bit_state_4_.Q & i2c_eeprom_state_0_.Q
+    # i2c_phase3.Q & i2c_Flag_RW.Q & !i2c_bit_state_0_.Q & !i2c_bit_state_1_.Q
+       & !i2c_bit_state_2_.Q & !i2c_bit_state_4_.Q & i2c_eeprom_state_0_.Q
+    # i2c_phase3.Q & i2c_Flag_RW.Q & i2c_bit_state_1_.Q & !i2c_bit_state_2_.Q
+       & i2c_bit_state_3_.Q & i2c_bit_state_4_.Q & !i2c_bit_state_5_.Q
+       & i2c_eeprom_state_1_.Q
+    # SDA.Q & !i2c_phase1.Q & !i2c_Flag_RW.Q & !i2c_bit_state_0_.Q
+       & i2c_bit_state_1_.Q & !i2c_bit_state_2_.Q & i2c_bit_state_4_.Q
+       & i2c_eeprom_state_1_.Q
+    # i2c_phase3.Q & i2c_bit_state_0_.Q & i2c_bit_state_1_.Q
+       & !i2c_bit_state_2_.Q & !i2c_bit_state_3_.Q & !i2c_bit_state_4_.Q
+       & i2c_eeprom_state_0_.Q
+    # i2c_phase3.Q & i2c_Flag_RW.Q & !i2c_bit_state_0_.Q & !i2c_bit_state_1_.Q
+       & !i2c_bit_state_2_.Q & !i2c_bit_state_4_.Q & i2c_eeprom_state_1_.Q
+    # i2c_phase3.Q & i2c_bit_state_0_.Q & i2c_bit_state_1_.Q
+       & !i2c_bit_state_2_.Q & !i2c_bit_state_3_.Q & !i2c_bit_state_4_.Q
+       & i2c_eeprom_state_1_.Q
+    # i2c_phase3.Q & !i2c_bit_state_1_.Q & !i2c_bit_state_2_.Q
+       & i2c_bit_state_3_.Q & !i2c_bit_state_4_.Q & i2c_eeprom_state_0_.Q
+    # i2c_phase3.Q & i2c_bit_state_0_.Q & i2c_bit_state_1_.Q
+       & i2c_bit_state_3_.Q & i2c_bit_state_4_.Q & !i2c_bit_state_5_.Q
+       & i2c_eeprom_state_1_.Q
+    # i2c_phase3.Q & i2c_bit_state_0_.Q & i2c_bit_state_1_.Q
+       & i2c_bit_state_2_.Q & i2c_bit_state_4_.Q & !i2c_bit_state_5_.Q
+       & i2c_eeprom_state_1_.Q
+    # SDA.Q & !i2c_bit_state_0_.Q & !i2c_bit_state_1_.Q & i2c_bit_state_3_.Q
+       & !i2c_bit_state_4_.Q
+    # i2c_phase3.Q & !i2c_bit_state_1_.Q & !i2c_bit_state_2_.Q
+       & i2c_bit_state_3_.Q & !i2c_bit_state_4_.Q & i2c_eeprom_state_1_.Q
+    # i2c_phase1.Q & !i2c_bit_state_1_.Q & i2c_bit_state_2_.Q
+       & i2c_bit_state_5_.Q & i2c_eeprom_state_1_.Q
+    # SDA.Q & !i2c_phase3.Q & i2c_bit_state_2_.Q & !i2c_bit_state_5_.Q
+    # SDA.Q & !i2c_bit_state_1_.Q & i2c_bit_state_2_.Q & i2c_bit_state_5_.Q
+       & i2c_eeprom_state_1_.Q
+    # SDA.Q & !i2c_phase3.Q & !i2c_bit_state_3_.Q & i2c_bit_state_4_.Q
+    # SDA.Q & !i2c_phase3.Q & i2c_bit_state_0_.Q & !i2c_bit_state_2_.Q
+    # SDA.Q & !i2c_bit_state_2_.Q & !i2c_bit_state_3_.Q & i2c_bit_state_4_.Q
+    # SDA.Q & !i2c_eeprom_state_0_.Q & !i2c_eeprom_state_1_.Q ; (39 pterms, 20 signals)
+SDA.OE = i2c_Flag_RW.Q ; (1 pterm, 1 signal)
+SDA.C = clkh ; (1 pterm, 1 signal)
+SDA.CE = reset ; (1 pterm, 1 signal)
+
+button0_d1_q_0_.D = reset ; (1 pterm, 1 signal)
+button0_d1_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button0_d2_q_0_.D = button0_d1_q_0_.Q ; (1 pterm, 1 signal)
+button0_d2_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button0_d3_q_0_.D = button0_d2_q_0_.Q ; (1 pterm, 1 signal)
+button0_d3_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button1_d1_q_0_.D = keyIn_0_ ; (1 pterm, 1 signal)
+button1_d1_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button1_d2_q_0_.D = button1_d1_q_0_.Q ; (1 pterm, 1 signal)
+button1_d2_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button1_d3_q_0_.D = button1_d2_q_0_.Q ; (1 pterm, 1 signal)
+button1_d3_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button2_d1_q_0_.D = keyIn_1_ ; (1 pterm, 1 signal)
+button2_d1_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button2_d2_q_0_.D = button2_d1_q_0_.Q ; (1 pterm, 1 signal)
+button2_d2_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button2_d3_q_0_.D = button2_d2_q_0_.Q ; (1 pterm, 1 signal)
+button2_d3_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button3_d1_q_0_.D = keyIn_2_ ; (1 pterm, 1 signal)
+button3_d1_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button3_d2_q_0_.D = button3_d1_q_0_.Q ; (1 pterm, 1 signal)
+button3_d2_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button3_d3_q_0_.D = button3_d2_q_0_.Q ; (1 pterm, 1 signal)
+button3_d3_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button4_d1_q_0_.D = keyIn_3_ ; (1 pterm, 1 signal)
+button4_d1_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button4_d2_q_0_.D = button4_d1_q_0_.Q ; (1 pterm, 1 signal)
+button4_d2_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button4_d3_q_0_.D = button4_d2_q_0_.Q ; (1 pterm, 1 signal)
+button4_d3_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+dynamicshow_counter4_q_1_.D = !dynamicshow_counter4_q_1_.Q ; (1 pterm, 1 signal)
+dynamicshow_counter4_q_1_.C = clkl ; (1 pterm, 1 signal)
+
+dynamicshow_counter4_q_2_.D = dynamicshow_counter4_q_1_.Q
+       & !dynamicshow_counter4_q_2_.Q
+    # !dynamicshow_counter4_q_1_.Q & dynamicshow_counter4_q_2_.Q ; (2 pterms, 2 signals)
+dynamicshow_counter4_q_2_.C = clkl ; (1 pterm, 1 signal)
+
+dynamicshow_out_0__n = i2c_DataLED_0_.Q & !dynamicshow_counter4_q_1_.Q
+       & !dynamicshow_counter4_q_2_.Q
+    # i2c_DataLED2_0_.Q & dynamicshow_counter4_q_1_.Q
+       & !dynamicshow_counter4_q_2_.Q
+    # keyboard_led_int_Data0_0_.Q & !dynamicshow_counter4_q_1_.Q
+       & dynamicshow_counter4_q_2_.Q
+    # keyboard_led_int_Data1_0_.Q & dynamicshow_counter4_q_1_.Q
+       & dynamicshow_counter4_q_2_.Q ; (4 pterms, 6 signals)
+
+dynamicshow_out_1__n = i2c_DataLED_1_.Q & !dynamicshow_counter4_q_1_.Q
+       & !dynamicshow_counter4_q_2_.Q
+    # i2c_DataLED2_1_.Q & dynamicshow_counter4_q_1_.Q
+       & !dynamicshow_counter4_q_2_.Q
+    # keyboard_led_int_Data0_1_.Q & !dynamicshow_counter4_q_1_.Q
+       & dynamicshow_counter4_q_2_.Q
+    # keyboard_led_int_Data1_1_.Q & dynamicshow_counter4_q_1_.Q
+       & dynamicshow_counter4_q_2_.Q ; (4 pterms, 6 signals)
+
+dynamicshow_out_2__n = i2c_DataLED_2_.Q & !dynamicshow_counter4_q_1_.Q
+       & !dynamicshow_counter4_q_2_.Q
+    # i2c_DataLED2_2_.Q & dynamicshow_counter4_q_1_.Q
+       & !dynamicshow_counter4_q_2_.Q
+    # keyboard_led_int_Data0_2_.Q & !dynamicshow_counter4_q_1_.Q
+       & dynamicshow_counter4_q_2_.Q
+    # keyboard_led_int_Data1_2_.Q & dynamicshow_counter4_q_1_.Q
+       & dynamicshow_counter4_q_2_.Q ; (4 pterms, 6 signals)
+
+dynamicshow_out_3__n = i2c_DataLED_3_.Q & !dynamicshow_counter4_q_1_.Q
+       & !dynamicshow_counter4_q_2_.Q
+    # i2c_DataLED2_3_.Q & dynamicshow_counter4_q_1_.Q
+       & !dynamicshow_counter4_q_2_.Q
+    # keyboard_led_int_Data0_3_.Q & !dynamicshow_counter4_q_1_.Q
+       & dynamicshow_counter4_q_2_.Q
+    # keyboard_led_int_Data1_3_.Q & dynamicshow_counter4_q_1_.Q
+       & dynamicshow_counter4_q_2_.Q ; (4 pterms, 6 signals)
+
+i2c_DataLED2_0_.D = i2c_RdData_4_.Q & !i2c_eeprom_state_0_.Q
+    # keyboard_led_int_Data1_0_.Q & i2c_eeprom_state_0_.Q ; (2 pterms, 3 signals)
+i2c_DataLED2_0_.C = clkh ; (1 pterm, 1 signal)
+i2c_DataLED2_0_.CE = i2c_DataLED_0__0 ; (1 pterm, 1 signal)
+
+i2c_DataLED2_1_.D = i2c_RdData_5_.Q & !i2c_eeprom_state_0_.Q
+    # keyboard_led_int_Data1_1_.Q & i2c_eeprom_state_0_.Q ; (2 pterms, 3 signals)
+i2c_DataLED2_1_.C = clkh ; (1 pterm, 1 signal)
+i2c_DataLED2_1_.CE = i2c_DataLED_0__0 ; (1 pterm, 1 signal)
+
+i2c_DataLED2_2_.D = i2c_RdData_6_.Q & !i2c_eeprom_state_0_.Q
+    # keyboard_led_int_Data1_2_.Q & i2c_eeprom_state_0_.Q ; (2 pterms, 3 signals)
+i2c_DataLED2_2_.C = clkh ; (1 pterm, 1 signal)
+i2c_DataLED2_2_.CE = i2c_DataLED_0__0 ; (1 pterm, 1 signal)
+
+i2c_DataLED2_3_.D = i2c_RdData_7_.Q & !i2c_eeprom_state_0_.Q
+    # keyboard_led_int_Data1_3_.Q & i2c_eeprom_state_0_.Q ; (2 pterms, 3 signals)
+i2c_DataLED2_3_.C = clkh ; (1 pterm, 1 signal)
+i2c_DataLED2_3_.CE = i2c_DataLED_0__0 ; (1 pterm, 1 signal)
+
+i2c_DataLED_0_.D = i2c_RdData_0_.Q & !i2c_eeprom_state_0_.Q
+    # keyboard_led_int_Data0_0_.Q & i2c_eeprom_state_0_.Q ; (2 pterms, 3 signals)
+i2c_DataLED_0_.C = clkh ; (1 pterm, 1 signal)
+i2c_DataLED_0_.CE = i2c_DataLED_0__0 ; (1 pterm, 1 signal)
+
+i2c_DataLED_0__0 = reset & i2c_phase3.Q & !i2c_bit_state_1_.Q
+       & i2c_bit_state_2_.Q & i2c_bit_state_5_.Q & i2c_eeprom_state_1_.Q
+    # reset & i2c_phase3.Q & !i2c_bit_state_0_.Q & i2c_bit_state_1_.Q
+       & !i2c_bit_state_2_.Q & !i2c_bit_state_3_.Q & i2c_bit_state_4_.Q
+       & !i2c_bit_state_5_.Q & i2c_eeprom_state_0_.Q ; (2 pterms, 10 signals)
+
+i2c_DataLED_1_.D = i2c_RdData_1_.Q & !i2c_eeprom_state_0_.Q
+    # keyboard_led_int_Data0_1_.Q & i2c_eeprom_state_0_.Q ; (2 pterms, 3 signals)
+i2c_DataLED_1_.C = clkh ; (1 pterm, 1 signal)
+i2c_DataLED_1_.CE = i2c_DataLED_0__0 ; (1 pterm, 1 signal)
+
+i2c_DataLED_2_.D = i2c_RdData_2_.Q & !i2c_eeprom_state_0_.Q
+    # keyboard_led_int_Data0_2_.Q & i2c_eeprom_state_0_.Q ; (2 pterms, 3 signals)
+i2c_DataLED_2_.C = clkh ; (1 pterm, 1 signal)
+i2c_DataLED_2_.CE = i2c_DataLED_0__0 ; (1 pterm, 1 signal)
+
+i2c_DataLED_3_.D = i2c_RdData_3_.Q & !i2c_eeprom_state_0_.Q
+    # keyboard_led_int_Data0_3_.Q & i2c_eeprom_state_0_.Q ; (2 pterms, 3 signals)
+i2c_DataLED_3_.C = clkh ; (1 pterm, 1 signal)
+i2c_DataLED_3_.CE = i2c_DataLED_0__0 ; (1 pterm, 1 signal)
+
+i2c_Flag_RW.D = !( !i2c_Flag_RW.Q & !i2c_bit_state_3_.Q & i2c_bit_state_4_.Q
+       & i2c_bit_state_5_.Q & !i2c_eeprom_state_1_.Q
+    # i2c_phase3.Q & i2c_bit_state_0_.Q & i2c_bit_state_1_.Q
+       & i2c_bit_state_2_.Q & !i2c_bit_state_3_.Q & i2c_bit_state_4_.Q
+       & !i2c_bit_state_5_.Q & i2c_eeprom_state_0_.Q
+    # !i2c_phase3.Q & !i2c_Flag_RW.Q & i2c_bit_state_3_.Q
+       & !i2c_eeprom_state_1_.Q
+    # !i2c_Flag_RW.Q & !i2c_bit_state_0_.Q & i2c_bit_state_3_.Q
+       & i2c_bit_state_5_.Q & !i2c_eeprom_state_1_.Q
+    # !i2c_phase3.Q & !i2c_Flag_RW.Q & !i2c_bit_state_1_.Q
+       & i2c_bit_state_3_.Q
+    # !i2c_phase3.Q & !i2c_Flag_RW.Q & i2c_bit_state_1_.Q
+       & !i2c_bit_state_4_.Q
+    # !i2c_Flag_RW.Q & !i2c_bit_state_1_.Q & i2c_bit_state_3_.Q
+       & i2c_bit_state_5_.Q
+    # !i2c_Flag_RW.Q & !i2c_bit_state_0_.Q & i2c_bit_state_1_.Q
+       & !i2c_bit_state_4_.Q & i2c_bit_state_5_.Q
+    # !i2c_phase1.Q & !i2c_Flag_RW.Q & !i2c_bit_state_0_.Q
+       & i2c_bit_state_1_.Q & !i2c_bit_state_2_.Q & i2c_bit_state_4_.Q
+       & !i2c_eeprom_state_0_.Q
+    # i2c_phase3.Q & !i2c_bit_state_0_.Q & i2c_bit_state_1_.Q
+       & !i2c_bit_state_3_.Q & i2c_bit_state_4_.Q & !i2c_bit_state_5_.Q
+       & i2c_eeprom_state_1_.Q
+    # i2c_phase3.Q & i2c_bit_state_0_.Q & !i2c_bit_state_1_.Q
+       & !i2c_bit_state_2_.Q & i2c_bit_state_3_.Q & i2c_bit_state_4_.Q
+    # i2c_phase3.Q & !i2c_bit_state_0_.Q & !i2c_bit_state_1_.Q
+       & i2c_bit_state_2_.Q & i2c_bit_state_3_.Q & !i2c_bit_state_4_.Q
+    # !i2c_phase1.Q & !i2c_Flag_RW.Q & !i2c_bit_state_0_.Q
+       & !i2c_bit_state_1_.Q & !i2c_bit_state_2_.Q & !i2c_bit_state_3_.Q
+    # !i2c_Flag_RW.Q & !i2c_bit_state_2_.Q & !i2c_bit_state_3_.Q
+       & i2c_bit_state_4_.Q
+    # !i2c_Flag_RW.Q & i2c_bit_state_0_.Q & !i2c_bit_state_1_.Q
+       & i2c_bit_state_5_.Q
+    # !i2c_phase1.Q & !i2c_Flag_RW.Q & !i2c_bit_state_0_.Q
+       & i2c_bit_state_5_.Q
+    # !i2c_Flag_RW.Q & !i2c_bit_state_0_.Q & i2c_bit_state_2_.Q
+       & i2c_bit_state_5_.Q
+    # !i2c_phase1.Q & !i2c_phase3.Q & !i2c_Flag_RW.Q
+    # !i2c_phase3.Q & !i2c_Flag_RW.Q & i2c_bit_state_2_.Q
+    # !i2c_phase3.Q & !i2c_Flag_RW.Q & i2c_bit_state_0_.Q
+    # !i2c_eeprom_state_0_.Q & !i2c_eeprom_state_1_.Q ) ; (21 pterms, 11 signals)
+i2c_Flag_RW.C = clkh ; (1 pterm, 1 signal)
+i2c_Flag_RW.CE = reset ; (1 pterm, 1 signal)
+
+i2c_RdData_0_.D = SDA.PIN & i2c_phase1.Q & i2c_bit_state_1_.Q
+       & i2c_bit_state_2_.Q & i2c_eeprom_state_1_.Q
+    # i2c_RdData_0_.Q & !i2c_bit_state_2_.Q & i2c_eeprom_state_1_.Q
+    # i2c_RdData_0_.Q & !i2c_bit_state_1_.Q & i2c_eeprom_state_1_.Q
+    # !i2c_phase1.Q & i2c_RdData_0_.Q & i2c_eeprom_state_1_.Q ; (4 pterms, 6 signals)
+i2c_RdData_0_.C = clkh ; (1 pterm, 1 signal)
+i2c_RdData_0_.CE = i2c_RdData_0__0 ; (1 pterm, 1 signal)
+
+i2c_RdData_0__0 = reset & !i2c_eeprom_state_0_.Q & !i2c_eeprom_state_1_.Q
+    # reset & i2c_bit_state_0_.Q & !i2c_bit_state_2_.Q & !i2c_bit_state_3_.Q
+       & i2c_bit_state_4_.Q & !i2c_eeprom_state_0_.Q
+    # reset & !i2c_bit_state_1_.Q & !i2c_bit_state_2_.Q & !i2c_bit_state_3_.Q
+       & i2c_bit_state_4_.Q & !i2c_eeprom_state_0_.Q
+    # reset & !i2c_bit_state_0_.Q & !i2c_bit_state_3_.Q & i2c_bit_state_4_.Q
+       & i2c_bit_state_5_.Q & !i2c_eeprom_state_0_.Q ; (4 pterms, 9 signals)
+
+i2c_RdData_1_.D.X1 = !SDA.PIN & i2c_phase1.Q & i2c_RdData_1_.Q
+       & !i2c_bit_state_0_.Q & i2c_bit_state_1_.Q & !i2c_bit_state_2_.Q
+       & i2c_eeprom_state_1_.Q
+    # SDA.PIN & i2c_phase1.Q & !i2c_RdData_1_.Q & !i2c_bit_state_0_.Q
+       & i2c_bit_state_1_.Q & !i2c_bit_state_2_.Q & i2c_eeprom_state_1_.Q ; (2 pterms, 7 signals)
+i2c_RdData_1_.D.X2 = i2c_RdData_1_.Q & i2c_eeprom_state_1_.Q ; (1 pterm, 2 signals)
+i2c_RdData_1_.C = clkh ; (1 pterm, 1 signal)
+i2c_RdData_1_.CE = i2c_RdData_0__0 ; (1 pterm, 1 signal)
+
+i2c_RdData_2_.D.X1 = !SDA.PIN & i2c_phase1.Q & i2c_RdData_2_.Q
+       & i2c_bit_state_0_.Q & i2c_bit_state_1_.Q & i2c_bit_state_5_.Q
+       & i2c_eeprom_state_1_.Q
+    # SDA.PIN & i2c_phase1.Q & !i2c_RdData_2_.Q & i2c_bit_state_0_.Q
+       & i2c_bit_state_1_.Q & i2c_bit_state_5_.Q & i2c_eeprom_state_1_.Q ; (2 pterms, 7 signals)
+i2c_RdData_2_.D.X2 = i2c_RdData_2_.Q & i2c_eeprom_state_1_.Q ; (1 pterm, 2 signals)
+i2c_RdData_2_.C = clkh ; (1 pterm, 1 signal)
+i2c_RdData_2_.CE = i2c_RdData_0__0 ; (1 pterm, 1 signal)
+
+i2c_RdData_3_.D.X1 = !SDA.PIN & i2c_phase1.Q & i2c_RdData_3_.Q
+       & i2c_bit_state_0_.Q & !i2c_bit_state_1_.Q & i2c_bit_state_5_.Q
+       & i2c_eeprom_state_1_.Q
+    # SDA.PIN & i2c_phase1.Q & !i2c_RdData_3_.Q & i2c_bit_state_0_.Q
+       & !i2c_bit_state_1_.Q & i2c_bit_state_5_.Q & i2c_eeprom_state_1_.Q ; (2 pterms, 7 signals)
+i2c_RdData_3_.D.X2 = i2c_RdData_3_.Q & i2c_eeprom_state_1_.Q ; (1 pterm, 2 signals)
+i2c_RdData_3_.C = clkh ; (1 pterm, 1 signal)
+i2c_RdData_3_.CE = i2c_RdData_0__0 ; (1 pterm, 1 signal)
+
+i2c_RdData_4_.D.X1 = !SDA.PIN & i2c_phase1.Q & i2c_RdData_4_.Q
+       & !i2c_bit_state_0_.Q & !i2c_bit_state_1_.Q & i2c_bit_state_5_.Q
+       & i2c_eeprom_state_1_.Q
+    # SDA.PIN & i2c_phase1.Q & !i2c_RdData_4_.Q & !i2c_bit_state_0_.Q
+       & !i2c_bit_state_1_.Q & i2c_bit_state_5_.Q & i2c_eeprom_state_1_.Q ; (2 pterms, 7 signals)
+i2c_RdData_4_.D.X2 = i2c_RdData_4_.Q & i2c_eeprom_state_1_.Q ; (1 pterm, 2 signals)
+i2c_RdData_4_.C = clkh ; (1 pterm, 1 signal)
+i2c_RdData_4_.CE = i2c_RdData_0__0 ; (1 pterm, 1 signal)
+
+i2c_RdData_5_.D = SDA.PIN & i2c_phase1.Q & !i2c_bit_state_0_.Q
+       & !i2c_bit_state_5_.Q & i2c_eeprom_state_1_.Q
+    # i2c_RdData_5_.Q & i2c_bit_state_5_.Q & i2c_eeprom_state_1_.Q
+    # i2c_RdData_5_.Q & i2c_bit_state_0_.Q & i2c_eeprom_state_1_.Q
+    # !i2c_phase1.Q & i2c_RdData_5_.Q & i2c_eeprom_state_1_.Q ; (4 pterms, 6 signals)
+i2c_RdData_5_.C = clkh ; (1 pterm, 1 signal)
+i2c_RdData_5_.CE = i2c_RdData_0__0 ; (1 pterm, 1 signal)
+
+i2c_RdData_6_.D.X1 = !SDA.PIN & i2c_phase1.Q & i2c_RdData_6_.Q
+       & i2c_bit_state_0_.Q & !i2c_bit_state_1_.Q & !i2c_bit_state_5_.Q
+       & i2c_eeprom_state_1_.Q
+    # SDA.PIN & i2c_phase1.Q & !i2c_RdData_6_.Q & i2c_bit_state_0_.Q
+       & !i2c_bit_state_1_.Q & !i2c_bit_state_5_.Q & i2c_eeprom_state_1_.Q ; (2 pterms, 7 signals)
+i2c_RdData_6_.D.X2 = i2c_RdData_6_.Q & i2c_eeprom_state_1_.Q ; (1 pterm, 2 signals)
+i2c_RdData_6_.C = clkh ; (1 pterm, 1 signal)
+i2c_RdData_6_.CE = i2c_RdData_0__0 ; (1 pterm, 1 signal)
+
+i2c_RdData_7_.D = SDA.PIN & i2c_phase1.Q & i2c_bit_state_1_.Q
+       & !i2c_bit_state_5_.Q & i2c_eeprom_state_1_.Q
+    # i2c_RdData_7_.Q & i2c_bit_state_5_.Q & i2c_eeprom_state_1_.Q
+    # i2c_RdData_7_.Q & !i2c_bit_state_1_.Q & i2c_eeprom_state_1_.Q
+    # !i2c_phase1.Q & i2c_RdData_7_.Q & i2c_eeprom_state_1_.Q ; (4 pterms, 6 signals)
+i2c_RdData_7_.C = clkh ; (1 pterm, 1 signal)
+i2c_RdData_7_.CE = i2c_RdData_0__0 ; (1 pterm, 1 signal)
+
+i2c_WrData_0_.D = keyboard_led_int_Data0_0_.Q ; (1 pterm, 1 signal)
+i2c_WrData_0_.C = clkh ; (1 pterm, 1 signal)
+i2c_WrData_0_.CE = reset & !i2c_eeprom_state_0_.Q & !i2c_eeprom_state_1_.Q ; (1 pterm, 3 signals)
+
+i2c_WrData_1_.D = keyboard_led_int_Data0_1_.Q ; (1 pterm, 1 signal)
+i2c_WrData_1_.C = clkh ; (1 pterm, 1 signal)
+i2c_WrData_1_.CE = reset & !i2c_eeprom_state_0_.Q & !i2c_eeprom_state_1_.Q ; (1 pterm, 3 signals)
+
+i2c_WrData_2_.D = keyboard_led_int_Data0_2_.Q ; (1 pterm, 1 signal)
+i2c_WrData_2_.C = clkh ; (1 pterm, 1 signal)
+i2c_WrData_2_.CE = reset & !i2c_eeprom_state_0_.Q & !i2c_eeprom_state_1_.Q ; (1 pterm, 3 signals)
+
+i2c_WrData_3_.D = keyboard_led_int_Data0_3_.Q ; (1 pterm, 1 signal)
+i2c_WrData_3_.C = clkh ; (1 pterm, 1 signal)
+i2c_WrData_3_.CE = reset & !i2c_eeprom_state_0_.Q & !i2c_eeprom_state_1_.Q ; (1 pterm, 3 signals)
+
+i2c_WrData_4_.D = keyboard_led_int_Data1_0_.Q ; (1 pterm, 1 signal)
+i2c_WrData_4_.C = clkh ; (1 pterm, 1 signal)
+i2c_WrData_4_.CE = reset & !i2c_eeprom_state_0_.Q & !i2c_eeprom_state_1_.Q ; (1 pterm, 3 signals)
+
+i2c_WrData_5_.D = keyboard_led_int_Data1_1_.Q ; (1 pterm, 1 signal)
+i2c_WrData_5_.C = clkh ; (1 pterm, 1 signal)
+i2c_WrData_5_.CE = reset & !i2c_eeprom_state_0_.Q & !i2c_eeprom_state_1_.Q ; (1 pterm, 3 signals)
+
+i2c_WrData_6_.D = keyboard_led_int_Data1_2_.Q ; (1 pterm, 1 signal)
+i2c_WrData_6_.C = clkh ; (1 pterm, 1 signal)
+i2c_WrData_6_.CE = reset & !i2c_eeprom_state_0_.Q & !i2c_eeprom_state_1_.Q ; (1 pterm, 3 signals)
+
+i2c_WrData_7_.D = keyboard_led_int_Data1_3_.Q ; (1 pterm, 1 signal)
+i2c_WrData_7_.C = clkh ; (1 pterm, 1 signal)
+i2c_WrData_7_.CE = reset & !i2c_eeprom_state_0_.Q & !i2c_eeprom_state_1_.Q ; (1 pterm, 3 signals)
+
+i2c_bit_state_0_.D = !( !i2c_Flag_RW.Q & !i2c_bit_state_0_.Q
+       & !i2c_bit_state_1_.Q & !i2c_bit_state_2_.Q & !i2c_bit_state_4_.Q
+    # i2c_phase3.Q & i2c_bit_state_1_.Q & i2c_bit_state_2_.Q
+       & !i2c_bit_state_3_.Q & i2c_bit_state_4_.Q & !i2c_bit_state_5_.Q
+    # i2c_phase3.Q & !i2c_bit_state_1_.Q & !i2c_bit_state_2_.Q
+       & !i2c_bit_state_3_.Q & i2c_bit_state_4_.Q & !i2c_bit_state_5_.Q
+    # i2c_phase3.Q & !i2c_bit_state_1_.Q & i2c_bit_state_2_.Q
+       & i2c_bit_state_3_.Q & i2c_bit_state_4_.Q
+    # i2c_phase3.Q & i2c_bit_state_1_.Q & i2c_bit_state_2_.Q
+       & i2c_bit_state_3_.Q & !i2c_bit_state_4_.Q
+    # i2c_phase3.Q & i2c_bit_state_1_.Q & !i2c_bit_state_2_.Q
+       & i2c_bit_state_3_.Q & i2c_bit_state_4_.Q
+    # i2c_phase3.Q & !i2c_bit_state_1_.Q & i2c_bit_state_2_.Q
+       & !i2c_bit_state_3_.Q & !i2c_bit_state_4_.Q
+    # i2c_phase3.Q & i2c_bit_state_1_.Q & !i2c_bit_state_2_.Q
+       & !i2c_bit_state_3_.Q & !i2c_bit_state_4_.Q
+    # i2c_phase3.Q & !i2c_bit_state_1_.Q & !i2c_bit_state_2_.Q
+       & i2c_bit_state_3_.Q & !i2c_bit_state_4_.Q
+    # i2c_phase3.Q & !i2c_bit_state_1_.Q & i2c_bit_state_2_.Q
+       & i2c_bit_state_5_.Q
+    # i2c_phase3.Q & i2c_bit_state_1_.Q & !i2c_bit_state_2_.Q
+       & i2c_bit_state_5_.Q
+    # !i2c_bit_state_2_.Q & !i2c_bit_state_3_.Q & i2c_bit_state_4_.Q
+       & !i2c_eeprom_state_1_.Q
+    # !i2c_phase3.Q & !i2c_bit_state_0_.Q
+    # !i2c_eeprom_state_0_.Q & !i2c_eeprom_state_1_.Q
+    # i2c_bit_state_5_.Q & !i2c_eeprom_state_1_.Q ) ; (15 pterms, 10 signals)
+i2c_bit_state_0_.C = clkh ; (1 pterm, 1 signal)
+i2c_bit_state_0_.CE = reset ; (1 pterm, 1 signal)
+
+i2c_bit_state_1_.D = !( i2c_phase3.Q & i2c_bit_state_0_.Q
+       & !i2c_bit_state_2_.Q & !i2c_bit_state_3_.Q & i2c_bit_state_4_.Q
+       & !i2c_bit_state_5_.Q
+    # i2c_phase3.Q & i2c_bit_state_0_.Q & !i2c_bit_state_2_.Q
+       & i2c_bit_state_3_.Q & !i2c_bit_state_4_.Q
+    # i2c_phase3.Q & i2c_bit_state_0_.Q & i2c_bit_state_2_.Q
+       & !i2c_bit_state_3_.Q & !i2c_bit_state_4_.Q
+    # i2c_phase3.Q & i2c_bit_state_0_.Q & i2c_bit_state_2_.Q
+       & i2c_bit_state_3_.Q & i2c_bit_state_4_.Q
+    # i2c_phase3.Q & i2c_bit_state_0_.Q & i2c_bit_state_2_.Q
+       & i2c_bit_state_5_.Q
+    # i2c_bit_state_0_.Q & !i2c_bit_state_2_.Q & !i2c_bit_state_3_.Q
+       & i2c_bit_state_4_.Q & !i2c_eeprom_state_1_.Q
+    # i2c_phase3.Q & !i2c_bit_state_2_.Q & !i2c_bit_state_3_.Q
+       & i2c_bit_state_4_.Q & !i2c_eeprom_state_1_.Q
+    # !i2c_bit_state_0_.Q & !i2c_bit_state_1_.Q
+    # !i2c_phase3.Q & !i2c_bit_state_1_.Q
+    # !i2c_eeprom_state_0_.Q & !i2c_eeprom_state_1_.Q
+    # i2c_bit_state_5_.Q & !i2c_eeprom_state_1_.Q ) ; (11 pterms, 9 signals)
+i2c_bit_state_1_.C = clkh ; (1 pterm, 1 signal)
+i2c_bit_state_1_.CE = reset ; (1 pterm, 1 signal)
+
+i2c_bit_state_2_.D = !( !i2c_Flag_RW.Q & !i2c_bit_state_2_.Q
+       & i2c_bit_state_4_.Q & !i2c_bit_state_5_.Q & i2c_eeprom_state_1_.Q
+    # i2c_phase3.Q & !i2c_bit_state_0_.Q & i2c_bit_state_1_.Q
+       & !i2c_bit_state_3_.Q & i2c_bit_state_4_.Q & !i2c_bit_state_5_.Q
+    # i2c_phase3.Q & !i2c_bit_state_0_.Q & i2c_bit_state_1_.Q
+       & i2c_bit_state_3_.Q & !i2c_bit_state_4_.Q
+    # i2c_phase3.Q & !i2c_bit_state_1_.Q & i2c_bit_state_5_.Q
+    # i2c_bit_state_0_.Q & !i2c_bit_state_2_.Q
+    # !i2c_phase3.Q & !i2c_bit_state_2_.Q
+    # !i2c_bit_state_1_.Q & !i2c_bit_state_2_.Q
+    # !i2c_eeprom_state_0_.Q & !i2c_eeprom_state_1_.Q
+    # i2c_bit_state_5_.Q & !i2c_eeprom_state_1_.Q ) ; (9 pterms, 10 signals)
+i2c_bit_state_2_.C = clkh ; (1 pterm, 1 signal)
+i2c_bit_state_2_.CE = reset ; (1 pterm, 1 signal)
+
+i2c_bit_state_3_.T = i2c_phase3.Q & !i2c_bit_state_0_.Q & !i2c_bit_state_1_.Q
+       & i2c_bit_state_2_.Q & !i2c_bit_state_3_.Q & !i2c_bit_state_4_.Q
+       & i2c_eeprom_state_0_.Q
+    # i2c_phase3.Q & !i2c_bit_state_0_.Q & !i2c_bit_state_1_.Q
+       & i2c_bit_state_2_.Q & !i2c_bit_state_3_.Q & !i2c_bit_state_4_.Q
+       & i2c_eeprom_state_1_.Q
+    # i2c_phase3.Q & !i2c_bit_state_0_.Q & !i2c_bit_state_1_.Q
+       & i2c_bit_state_2_.Q & i2c_bit_state_3_.Q & i2c_bit_state_4_.Q
+    # i2c_bit_state_3_.Q & !i2c_eeprom_state_0_.Q & !i2c_eeprom_state_1_.Q ; (4 pterms, 8 signals)
+i2c_bit_state_3_.C = clkh ; (1 pterm, 1 signal)
+i2c_bit_state_3_.CE = reset ; (1 pterm, 1 signal)
+
+i2c_bit_state_4_.D.X1 = i2c_bit_state_4_.Q & i2c_eeprom_state_1_.Q
+    # i2c_bit_state_3_.Q & i2c_bit_state_4_.Q & !i2c_bit_state_5_.Q
+       & i2c_eeprom_state_0_.Q & !i2c_eeprom_state_1_.Q
+    # i2c_bit_state_2_.Q & i2c_bit_state_4_.Q & !i2c_bit_state_5_.Q
+       & i2c_eeprom_state_0_.Q & !i2c_eeprom_state_1_.Q
+    # !i2c_phase3.Q & !i2c_bit_state_0_.Q & i2c_bit_state_1_.Q
+       & i2c_bit_state_4_.Q & !i2c_bit_state_5_.Q & i2c_eeprom_state_0_.Q
+       & !i2c_eeprom_state_1_.Q
+    # i2c_phase3.Q & !i2c_bit_state_0_.Q & !i2c_bit_state_1_.Q
+       & !i2c_bit_state_2_.Q & i2c_bit_state_3_.Q & !i2c_bit_state_4_.Q
+       & i2c_eeprom_state_1_.Q
+    # i2c_phase3.Q & !i2c_bit_state_0_.Q & !i2c_bit_state_1_.Q
+       & !i2c_bit_state_2_.Q & i2c_bit_state_3_.Q & !i2c_bit_state_4_.Q
+       & !i2c_bit_state_5_.Q & i2c_eeprom_state_0_.Q & !i2c_eeprom_state_1_.Q ; (6 pterms, 9 signals)
+i2c_bit_state_4_.D.X2 = i2c_phase3.Q & !i2c_bit_state_1_.Q
+       & i2c_bit_state_2_.Q & i2c_bit_state_4_.Q & i2c_bit_state_5_.Q
+       & i2c_eeprom_state_1_.Q ; (1 pterm, 6 signals)
+i2c_bit_state_4_.C = clkh ; (1 pterm, 1 signal)
+i2c_bit_state_4_.CE = reset ; (1 pterm, 1 signal)
+
+i2c_bit_state_5_.D = i2c_phase3.Q & !i2c_bit_state_0_.Q & !i2c_bit_state_1_.Q
+       & !i2c_bit_state_2_.Q & !i2c_bit_state_3_.Q & i2c_bit_state_4_.Q
+       & i2c_eeprom_state_1_.Q
+    # i2c_bit_state_1_.Q & !i2c_bit_state_3_.Q & i2c_bit_state_4_.Q
+       & i2c_bit_state_5_.Q & i2c_eeprom_state_1_.Q
+    # !i2c_phase3.Q & !i2c_bit_state_3_.Q & i2c_bit_state_4_.Q
+       & i2c_bit_state_5_.Q & i2c_eeprom_state_1_.Q
+    # !i2c_bit_state_2_.Q & !i2c_bit_state_3_.Q & i2c_bit_state_4_.Q
+       & i2c_bit_state_5_.Q & i2c_eeprom_state_1_.Q ; (4 pterms, 8 signals)
+i2c_bit_state_5_.C = clkh ; (1 pterm, 1 signal)
+i2c_bit_state_5_.CE = reset ; (1 pterm, 1 signal)
+
+i2c_clk_div_0_.D = !i2c_clk_div_0_.Q ; (1 pterm, 1 signal)
+i2c_clk_div_0_.C = clkh ; (1 pterm, 1 signal)
+i2c_clk_div_0_.AR = !reset ; (1 pterm, 1 signal)
+
+i2c_clk_div_1_.D = i2c_clk_div_0_.Q & !i2c_clk_div_1_.Q
+    # !i2c_clk_div_0_.Q & i2c_clk_div_1_.Q ; (2 pterms, 2 signals)
+i2c_clk_div_1_.C = clkh ; (1 pterm, 1 signal)
+i2c_clk_div_1_.AR = !reset ; (1 pterm, 1 signal)
+
+i2c_clk_div_2_.D = !i2c_clk_div_2_.Q & i2c_clk_div_0_.Q & i2c_clk_div_1_.Q
+    # i2c_clk_div_2_.Q & !i2c_clk_div_0_.Q
+    # i2c_clk_div_2_.Q & !i2c_clk_div_1_.Q ; (3 pterms, 3 signals)
+i2c_clk_div_2_.C = clkh ; (1 pterm, 1 signal)
+i2c_clk_div_2_.AR = !reset ; (1 pterm, 1 signal)
+
+i2c_clk_div_3_.D = i2c_clk_div_2_.Q & !i2c_clk_div_3_.Q & i2c_clk_div_0_.Q
+       & i2c_clk_div_1_.Q
+    # i2c_clk_div_3_.Q & !i2c_clk_div_0_.Q
+    # !i2c_clk_div_2_.Q & i2c_clk_div_3_.Q
+    # i2c_clk_div_3_.Q & !i2c_clk_div_1_.Q ; (4 pterms, 4 signals)
+i2c_clk_div_3_.C = clkh ; (1 pterm, 1 signal)
+i2c_clk_div_3_.AR = !reset ; (1 pterm, 1 signal)
+
+i2c_eeprom_state_0_.T = !CMD_WR & !i2c_key_delay_5_.Q & !i2c_key_delay_0_.Q
+       & !i2c_key_delay_4_.Q & !i2c_key_delay_1_.Q & !i2c_key_delay_6_.Q
+       & !i2c_key_delay_2_.Q & i2c_key_delay_9_.Q & !i2c_key_delay_8_.Q
+       & !i2c_key_delay_7_.Q & !i2c_key_delay_3_.Q & !i2c_eeprom_state_0_.Q
+       & !i2c_eeprom_state_1_.Q
+    # i2c_phase1.Q & i2c_sda_tem.Q & i2c_bit_state_0_.Q & !i2c_bit_state_1_.Q
+       & i2c_bit_state_2_.Q & i2c_bit_state_3_.Q & !i2c_bit_state_4_.Q
+       & !i2c_bit_state_5_.Q & i2c_eeprom_state_0_.Q
+    # i2c_phase1.Q & i2c_sda_tem.Q & i2c_bit_state_0_.Q & i2c_bit_state_1_.Q
+       & !i2c_bit_state_2_.Q & i2c_bit_state_4_.Q & !i2c_bit_state_5_.Q
+       & i2c_eeprom_state_0_.Q
+    # i2c_phase1.Q & i2c_sda_tem.Q & !i2c_bit_state_0_.Q & i2c_bit_state_1_.Q
+       & i2c_bit_state_2_.Q & !i2c_bit_state_3_.Q & i2c_bit_state_4_.Q
+       & i2c_eeprom_state_0_.Q
+    # !i2c_bit_state_0_.Q & i2c_bit_state_1_.Q & i2c_bit_state_4_.Q
+       & i2c_bit_state_5_.Q & i2c_eeprom_state_0_.Q
+    # i2c_phase3.Q & !i2c_bit_state_2_.Q & !i2c_bit_state_3_.Q
+       & i2c_bit_state_4_.Q & i2c_eeprom_state_0_.Q
+    # !i2c_bit_state_1_.Q & !i2c_bit_state_2_.Q & !i2c_bit_state_3_.Q
+       & i2c_bit_state_4_.Q & i2c_eeprom_state_0_.Q
+    # i2c_bit_state_0_.Q & !i2c_bit_state_2_.Q & !i2c_bit_state_3_.Q
+       & i2c_bit_state_4_.Q & i2c_eeprom_state_0_.Q
+    # i2c_bit_state_2_.Q & i2c_bit_state_4_.Q & i2c_bit_state_5_.Q
+       & i2c_eeprom_state_0_.Q
+    # i2c_eeprom_state_0_.Q & i2c_eeprom_state_1_.Q ; (10 pterms, 22 signals)
+i2c_eeprom_state_0_.C = clkh ; (1 pterm, 1 signal)
+i2c_eeprom_state_0_.AR = !reset ; (1 pterm, 1 signal)
+
+i2c_eeprom_state_1_.T = !CMD_RD & CMD_WR & !i2c_key_delay_5_.Q
+       & !i2c_key_delay_0_.Q & !i2c_key_delay_4_.Q & !i2c_key_delay_1_.Q
+       & !i2c_key_delay_6_.Q & !i2c_key_delay_2_.Q & i2c_key_delay_9_.Q
+       & !i2c_key_delay_8_.Q & !i2c_key_delay_7_.Q & !i2c_key_delay_3_.Q
+       & !i2c_eeprom_state_0_.Q & !i2c_eeprom_state_1_.Q
+    # i2c_phase1.Q & i2c_sda_tem.Q & !i2c_bit_state_0_.Q & i2c_bit_state_1_.Q
+       & !i2c_bit_state_2_.Q & !i2c_bit_state_3_.Q & i2c_bit_state_4_.Q
+       & !i2c_bit_state_5_.Q & i2c_eeprom_state_1_.Q
+    # i2c_phase1.Q & i2c_sda_tem.Q & i2c_bit_state_0_.Q & i2c_bit_state_1_.Q
+       & !i2c_bit_state_2_.Q & i2c_bit_state_3_.Q & i2c_bit_state_4_.Q
+       & !i2c_bit_state_5_.Q & i2c_eeprom_state_1_.Q
+    # i2c_phase1.Q & i2c_sda_tem.Q & i2c_bit_state_0_.Q & !i2c_bit_state_1_.Q
+       & i2c_bit_state_2_.Q & i2c_bit_state_3_.Q & !i2c_bit_state_4_.Q
+       & i2c_eeprom_state_1_.Q
+    # !i2c_bit_state_0_.Q & !i2c_bit_state_1_.Q & i2c_bit_state_2_.Q
+       & !i2c_bit_state_4_.Q & i2c_bit_state_5_.Q & i2c_eeprom_state_1_.Q
+    # !i2c_bit_state_0_.Q & !i2c_bit_state_1_.Q & i2c_bit_state_2_.Q
+       & i2c_bit_state_3_.Q & i2c_bit_state_5_.Q & i2c_eeprom_state_1_.Q
+    # i2c_phase3.Q & !i2c_bit_state_1_.Q & i2c_bit_state_2_.Q
+       & i2c_bit_state_5_.Q & i2c_eeprom_state_1_.Q
+    # i2c_bit_state_3_.Q & !i2c_bit_state_4_.Q & i2c_bit_state_5_.Q
+       & i2c_eeprom_state_1_.Q
+    # i2c_eeprom_state_0_.Q & i2c_eeprom_state_1_.Q ; (9 pterms, 23 signals)
+i2c_eeprom_state_1_.C = clkh ; (1 pterm, 1 signal)
+i2c_eeprom_state_1_.AR = !reset ; (1 pterm, 1 signal)
+
+i2c_key_delay_0_.D = !i2c_key_delay_0_.Q & i2c_start_delay.Q ; (1 pterm, 2 signals)
+i2c_key_delay_0_.C = clkh ; (1 pterm, 1 signal)
+i2c_key_delay_0_.AR = !reset ; (1 pterm, 1 signal)
+
+i2c_key_delay_1_.D = i2c_key_delay_0_.Q & !i2c_key_delay_1_.Q
+       & i2c_start_delay.Q
+    # !i2c_key_delay_0_.Q & i2c_key_delay_1_.Q & i2c_start_delay.Q ; (2 pterms, 3 signals)
+i2c_key_delay_1_.C = clkh ; (1 pterm, 1 signal)
+i2c_key_delay_1_.AR = !reset ; (1 pterm, 1 signal)
+
+i2c_key_delay_2_.D = i2c_key_delay_0_.Q & i2c_key_delay_1_.Q
+       & !i2c_key_delay_2_.Q
+    # !i2c_key_delay_1_.Q & i2c_key_delay_2_.Q
+    # !i2c_key_delay_0_.Q & i2c_key_delay_2_.Q ; (3 pterms, 3 signals)
+i2c_key_delay_2_.C = clkh ; (1 pterm, 1 signal)
+i2c_key_delay_2_.AR = !reset ; (1 pterm, 1 signal)
+
+i2c_key_delay_3_.D = i2c_key_delay_0_.Q & i2c_key_delay_1_.Q
+       & i2c_key_delay_2_.Q & !i2c_key_delay_3_.Q
+    # !i2c_key_delay_2_.Q & i2c_key_delay_3_.Q
+    # !i2c_key_delay_1_.Q & i2c_key_delay_3_.Q
+    # !i2c_key_delay_0_.Q & i2c_key_delay_3_.Q ; (4 pterms, 4 signals)
+i2c_key_delay_3_.C = clkh ; (1 pterm, 1 signal)
+i2c_key_delay_3_.AR = !reset ; (1 pterm, 1 signal)
+
+i2c_key_delay_4_.D.X1 = i2c_key_delay_4_.Q ; (1 pterm, 1 signal)
+i2c_key_delay_4_.D.X2 = i2c_key_delay_0_.Q & i2c_key_delay_1_.Q
+       & i2c_key_delay_2_.Q & i2c_key_delay_3_.Q ; (1 pterm, 4 signals)
+i2c_key_delay_4_.C = clkh ; (1 pterm, 1 signal)
+i2c_key_delay_4_.AR = !reset ; (1 pterm, 1 signal)
+
+i2c_key_delay_5_.T = i2c_key_delay_0_.Q & i2c_key_delay_4_.Q
+       & i2c_key_delay_1_.Q & i2c_key_delay_2_.Q & i2c_key_delay_3_.Q ; (1 pterm, 5 signals)
+i2c_key_delay_5_.C = clkh ; (1 pterm, 1 signal)
+i2c_key_delay_5_.AR = !reset ; (1 pterm, 1 signal)
+
+i2c_key_delay_6_.T = i2c_key_delay_5_.Q & i2c_key_delay_0_.Q
+       & i2c_key_delay_4_.Q & i2c_key_delay_1_.Q & i2c_key_delay_2_.Q
+       & i2c_key_delay_3_.Q ; (1 pterm, 6 signals)
+i2c_key_delay_6_.C = clkh ; (1 pterm, 1 signal)
+i2c_key_delay_6_.AR = !reset ; (1 pterm, 1 signal)
+
+i2c_key_delay_7_.T = i2c_key_delay_5_.Q & i2c_key_delay_0_.Q
+       & i2c_key_delay_4_.Q & i2c_key_delay_1_.Q & i2c_key_delay_6_.Q
+       & i2c_key_delay_2_.Q & i2c_key_delay_3_.Q ; (1 pterm, 7 signals)
+i2c_key_delay_7_.C = clkh ; (1 pterm, 1 signal)
+i2c_key_delay_7_.AR = !reset ; (1 pterm, 1 signal)
+
+i2c_key_delay_8_.T = i2c_key_delay_5_.Q & i2c_key_delay_0_.Q
+       & i2c_key_delay_4_.Q & i2c_key_delay_1_.Q & i2c_key_delay_6_.Q
+       & i2c_key_delay_2_.Q & i2c_key_delay_7_.Q & i2c_key_delay_3_.Q ; (1 pterm, 8 signals)
+i2c_key_delay_8_.C = clkh ; (1 pterm, 1 signal)
+i2c_key_delay_8_.AR = !reset ; (1 pterm, 1 signal)
+
+i2c_key_delay_9_.T = i2c_key_delay_5_.Q & i2c_key_delay_0_.Q
+       & i2c_key_delay_4_.Q & i2c_key_delay_1_.Q & i2c_key_delay_6_.Q
+       & i2c_key_delay_2_.Q & i2c_key_delay_8_.Q & i2c_key_delay_7_.Q
+       & i2c_key_delay_3_.Q & i2c_start_delay.Q
+    # i2c_key_delay_9_.Q & !i2c_start_delay.Q ; (2 pterms, 11 signals)
+i2c_key_delay_9_.C = clkh ; (1 pterm, 1 signal)
+i2c_key_delay_9_.AR = !reset ; (1 pterm, 1 signal)
+
+i2c_phase0.D = i2c_clk_div_2_.Q & i2c_clk_div_3_.Q & i2c_clk_div_0_.Q
+       & i2c_clk_div_1_.Q ; (1 pterm, 4 signals)
+i2c_phase0.C = clkh ; (1 pterm, 1 signal)
+i2c_phase0.AR = !reset ; (1 pterm, 1 signal)
+
+i2c_phase1.D = !i2c_clk_div_2_.Q & !i2c_clk_div_3_.Q & i2c_clk_div_0_.Q
+       & i2c_clk_div_1_.Q ; (1 pterm, 4 signals)
+i2c_phase1.C = clkh ; (1 pterm, 1 signal)
+i2c_phase1.AR = !reset ; (1 pterm, 1 signal)
+
+i2c_phase2.D = i2c_clk_div_2_.Q & !i2c_clk_div_3_.Q & i2c_clk_div_0_.Q
+       & i2c_clk_div_1_.Q ; (1 pterm, 4 signals)
+i2c_phase2.C = clkh ; (1 pterm, 1 signal)
+i2c_phase2.AR = !reset ; (1 pterm, 1 signal)
+
+i2c_phase3.D = !i2c_clk_div_2_.Q & i2c_clk_div_3_.Q & i2c_clk_div_0_.Q
+       & i2c_clk_div_1_.Q ; (1 pterm, 4 signals)
+i2c_phase3.C = clkh ; (1 pterm, 1 signal)
+i2c_phase3.AR = !reset ; (1 pterm, 1 signal)
+
+i2c_sda_tem.D = SDA.PIN ; (1 pterm, 1 signal)
+i2c_sda_tem.C = clkh ; (1 pterm, 1 signal)
+i2c_sda_tem.CE = i2c_sda_tem_0 ; (1 pterm, 1 signal)
+
+i2c_sda_tem_0 = reset & i2c_phase0.Q & i2c_bit_state_0_.Q & i2c_bit_state_1_.Q
+       & !i2c_bit_state_2_.Q & i2c_bit_state_3_.Q & i2c_bit_state_4_.Q
+       & !i2c_bit_state_5_.Q & i2c_eeprom_state_1_.Q
+    # reset & i2c_phase0.Q & !i2c_bit_state_0_.Q & i2c_bit_state_1_.Q
+       & !i2c_bit_state_2_.Q & !i2c_bit_state_3_.Q & i2c_bit_state_4_.Q
+       & !i2c_bit_state_5_.Q & i2c_eeprom_state_1_.Q
+    # reset & i2c_phase0.Q & i2c_bit_state_0_.Q & i2c_bit_state_1_.Q
+       & !i2c_bit_state_2_.Q & i2c_bit_state_3_.Q & i2c_bit_state_4_.Q
+       & !i2c_bit_state_5_.Q & i2c_eeprom_state_0_.Q
+    # reset & i2c_phase0.Q & !i2c_bit_state_0_.Q & i2c_bit_state_1_.Q
+       & i2c_bit_state_2_.Q & !i2c_bit_state_3_.Q & i2c_bit_state_4_.Q
+       & !i2c_bit_state_5_.Q & i2c_eeprom_state_0_.Q
+    # reset & i2c_phase0.Q & i2c_bit_state_0_.Q & !i2c_bit_state_1_.Q
+       & i2c_bit_state_2_.Q & i2c_bit_state_3_.Q & !i2c_bit_state_4_.Q
+       & !i2c_bit_state_5_.Q & i2c_eeprom_state_0_.Q
+    # reset & i2c_bit_state_0_.Q & !i2c_bit_state_1_.Q & i2c_bit_state_2_.Q
+       & i2c_bit_state_3_.Q & !i2c_bit_state_4_.Q & !i2c_bit_state_5_.Q
+       & !i2c_eeprom_state_0_.Q & i2c_eeprom_state_1_.Q ; (6 pterms, 10 signals)
+
+i2c_start_delay.T = !CMD_WR & !i2c_key_delay_5_.Q & !i2c_key_delay_0_.Q
+       & !i2c_key_delay_4_.Q & !i2c_key_delay_1_.Q & !i2c_key_delay_6_.Q
+       & !i2c_key_delay_2_.Q & !i2c_key_delay_9_.Q & !i2c_key_delay_8_.Q
+       & !i2c_key_delay_7_.Q & !i2c_key_delay_3_.Q & !i2c_start_delay.Q
+    # !CMD_RD & !i2c_key_delay_5_.Q & !i2c_key_delay_0_.Q
+       & !i2c_key_delay_4_.Q & !i2c_key_delay_1_.Q & !i2c_key_delay_6_.Q
+       & !i2c_key_delay_2_.Q & !i2c_key_delay_9_.Q & !i2c_key_delay_8_.Q
+       & !i2c_key_delay_7_.Q & !i2c_key_delay_3_.Q & !i2c_start_delay.Q
+    # !i2c_key_delay_5_.Q & !i2c_key_delay_0_.Q & !i2c_key_delay_4_.Q
+       & !i2c_key_delay_1_.Q & !i2c_key_delay_6_.Q & !i2c_key_delay_2_.Q
+       & i2c_key_delay_9_.Q & !i2c_key_delay_8_.Q & !i2c_key_delay_7_.Q
+       & !i2c_key_delay_3_.Q & i2c_start_delay.Q ; (3 pterms, 13 signals)
+i2c_start_delay.C = clkh ; (1 pterm, 1 signal)
+i2c_start_delay.CE = !i2c_eeprom_state_0_.Q & !i2c_eeprom_state_1_.Q ; (1 pterm, 2 signals)
+i2c_start_delay.AR = !reset ; (1 pterm, 1 signal)
+
+keyOut_0_.D = !keyboard_scanvalue_0_.Q & !keyboard_scanvalue_1_.Q ; (1 pterm, 2 signals)
+keyOut_0_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+keyOut_0_.CE = !( !button0_d1_q_0_.Q & !button0_d2_q_0_.Q & !button0_d3_q_0_.Q ) ; (1 pterm, 3 signals)
+
+keyOut_1_.D = keyboard_scanvalue_0_.Q & !keyboard_scanvalue_1_.Q ; (1 pterm, 2 signals)
+keyOut_1_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+keyOut_1_.CE = !( !button0_d1_q_0_.Q & !button0_d2_q_0_.Q & !button0_d3_q_0_.Q ) ; (1 pterm, 3 signals)
+
+keyOut_2_.D = !keyboard_scanvalue_0_.Q & keyboard_scanvalue_1_.Q ; (1 pterm, 2 signals)
+keyOut_2_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+keyOut_2_.CE = !( !button0_d1_q_0_.Q & !button0_d2_q_0_.Q & !button0_d3_q_0_.Q ) ; (1 pterm, 3 signals)
+
+keyOut_3_.D = keyboard_scanvalue_0_.Q & keyboard_scanvalue_1_.Q ; (1 pterm, 2 signals)
+keyOut_3_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+keyOut_3_.CE = !( !button0_d1_q_0_.Q & !button0_d2_q_0_.Q & !button0_d3_q_0_.Q ) ; (1 pterm, 3 signals)
+
+keyboard_combvalue_0_.D = keyOut_0_.Q ; (1 pterm, 1 signal)
+keyboard_combvalue_0_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+keyboard_combvalue_0_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_combvalue_1_.D = keyOut_1_.Q ; (1 pterm, 1 signal)
+keyboard_combvalue_1_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+keyboard_combvalue_1_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_combvalue_2_.D = keyOut_2_.Q ; (1 pterm, 1 signal)
+keyboard_combvalue_2_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+keyboard_combvalue_2_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_combvalue_3_.D = keyOut_3_.Q ; (1 pterm, 1 signal)
+keyboard_combvalue_3_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+keyboard_combvalue_3_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_combvalue_4_.D = !( !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q ) ; (1 pterm, 3 signals)
+keyboard_combvalue_4_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+keyboard_combvalue_4_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_combvalue_5_.D = !( !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q ) ; (1 pterm, 3 signals)
+keyboard_combvalue_5_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+keyboard_combvalue_5_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_combvalue_6_.D = !( !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q ) ; (1 pterm, 3 signals)
+keyboard_combvalue_6_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+keyboard_combvalue_6_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_combvalue_7_.D = !( !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q ) ; (1 pterm, 3 signals)
+keyboard_combvalue_7_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+keyboard_combvalue_7_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_flag_Data_0_.T = !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q
+       & button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & button4_d2_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & button4_d1_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d2_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d1_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d2_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d1_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d2_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d1_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d2_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d1_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d2_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d1_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d2_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d1_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d2_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d1_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d2_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d1_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d2_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d1_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d2_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d1_q_0_.Q
+       & !keyboard_flag_Data_0_.Q ; (33 pterms, 17 signals)
+keyboard_flag_Data_0_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+keyboard_flag_Data_0_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_flag_Data_1_.T = !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q
+       & button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & button4_d2_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & button4_d1_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & keyboard_flag_Data_0_.Q ; (3 pterms, 16 signals)
+keyboard_flag_Data_1_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+keyboard_flag_Data_1_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_int_Data0_0_.D = !keyOut_1_.Q & !keyOut_3_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+    # keyOut_1_.Q & !keyOut_3_.Q & button2_d3_q_0_.Q
+    # keyOut_1_.Q & !keyOut_3_.Q & button2_d2_q_0_.Q
+    # keyOut_1_.Q & !keyOut_3_.Q & button2_d1_q_0_.Q ; (4 pterms, 5 signals)
+keyboard_int_Data0_0_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+keyboard_int_Data0_0_.CE = keyboard_int_Data0_3__0 ; (1 pterm, 1 signal)
+keyboard_int_Data0_0_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_int_Data0_1_.D.X1 = !keyOut_2_.Q & keyOut_1_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+    # !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q ; (2 pterms, 8 signals)
+keyboard_int_Data0_1_.D.X2 = !keyOut_2_.Q ; (1 pterm, 1 signal)
+keyboard_int_Data0_1_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+keyboard_int_Data0_1_.CE = keyboard_int_Data0_3__0 ; (1 pterm, 1 signal)
+keyboard_int_Data0_1_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_int_Data0_2_.D = !( !keyOut_1_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q ) ; (2 pterms, 5 signals)
+keyboard_int_Data0_2_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+keyboard_int_Data0_2_.CE = keyboard_int_Data0_3__0 ; (1 pterm, 1 signal)
+keyboard_int_Data0_2_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_int_Data0_3_.D = keyOut_2_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q ; (1 pterm, 4 signals)
+keyboard_int_Data0_3_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+keyboard_int_Data0_3_.CE = keyboard_int_Data0_3__0 ; (1 pterm, 1 signal)
+keyboard_int_Data0_3_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_int_Data0_3__0 = !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & !keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d2_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & !keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d1_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & !keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & !keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d2_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & !keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d1_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & !keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & !keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d2_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & !keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d1_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & !keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & !keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d2_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & !keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d1_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & !keyboard_flag_Data_1_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & !keyboard_flag_Data_1_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d2_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & !keyboard_flag_Data_1_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d1_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & !keyboard_flag_Data_1_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & !keyboard_flag_Data_1_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d2_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & !keyboard_flag_Data_1_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d1_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & !keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & !keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d2_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & !keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d1_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & !keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & !keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d2_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & !keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d1_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & !keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & !keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d2_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & !keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d1_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & !keyboard_flag_Data_1_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & !keyboard_flag_Data_1_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d2_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & !keyboard_flag_Data_1_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d1_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & !keyboard_flag_Data_1_.Q ; (30 pterms, 18 signals)
+
+keyboard_int_Data1_0_.D = !keyOut_1_.Q & !keyOut_3_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+    # keyOut_1_.Q & !keyOut_3_.Q & button2_d3_q_0_.Q
+    # keyOut_1_.Q & !keyOut_3_.Q & button2_d2_q_0_.Q
+    # keyOut_1_.Q & !keyOut_3_.Q & button2_d1_q_0_.Q ; (4 pterms, 5 signals)
+keyboard_int_Data1_0_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+keyboard_int_Data1_0_.CE = keyboard_int_Data1_0__0 ; (1 pterm, 1 signal)
+keyboard_int_Data1_0_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_int_Data1_0__0 = !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & !keyboard_flag_Data_0_.Q
+       & keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d2_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d1_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d2_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d1_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d2_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d1_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d2_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d1_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & keyboard_flag_Data_1_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & keyboard_flag_Data_1_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d2_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & keyboard_flag_Data_1_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d1_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & keyboard_flag_Data_1_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & keyboard_flag_Data_1_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d2_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & keyboard_flag_Data_1_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d1_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d2_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d1_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d2_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d1_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d2_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d1_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & keyboard_flag_Data_1_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & keyboard_flag_Data_1_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d2_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & keyboard_flag_Data_1_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d1_q_0_.Q
+       & !keyboard_flag_Data_0_.Q & keyboard_flag_Data_1_.Q ; (30 pterms, 18 signals)
+
+keyboard_int_Data1_1_.D.X1 = !keyOut_2_.Q & keyOut_1_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+    # !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q ; (2 pterms, 8 signals)
+keyboard_int_Data1_1_.D.X2 = !keyOut_2_.Q ; (1 pterm, 1 signal)
+keyboard_int_Data1_1_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+keyboard_int_Data1_1_.CE = keyboard_int_Data1_0__0 ; (1 pterm, 1 signal)
+keyboard_int_Data1_1_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_int_Data1_2_.D = !( !keyOut_1_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q ) ; (2 pterms, 5 signals)
+keyboard_int_Data1_2_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+keyboard_int_Data1_2_.CE = keyboard_int_Data1_0__0 ; (1 pterm, 1 signal)
+keyboard_int_Data1_2_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_int_Data1_3_.D = keyOut_2_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q ; (1 pterm, 4 signals)
+keyboard_int_Data1_3_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+keyboard_int_Data1_3_.CE = keyboard_int_Data1_0__0 ; (1 pterm, 1 signal)
+keyboard_int_Data1_3_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_led_int_Data0_0_.D = keyboard_int_Data1_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q & keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & button2_d3_q_0_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & button2_d2_q_0_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & button2_d1_q_0_.Q
+    # !keyOut_1_.Q & !keyOut_3_.Q & button1_d3_q_0_.Q
+    # !keyOut_1_.Q & !keyOut_3_.Q & button1_d2_q_0_.Q
+    # !keyOut_1_.Q & !keyOut_3_.Q & button1_d1_q_0_.Q
+    # !keyOut_1_.Q & button3_d3_q_0_.Q
+    # !keyOut_1_.Q & button3_d2_q_0_.Q
+    # !keyOut_1_.Q & button3_d1_q_0_.Q ; (10 pterms, 15 signals)
+keyboard_led_int_Data0_0_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+keyboard_led_int_Data0_0_.CE = keyboard_led_int_Data0_0__0 ; (1 pterm, 1 signal)
+keyboard_led_int_Data0_0_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_led_int_Data0_0__0 = !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q
+       & button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !keyboard_int_Data1_1_.Q
+       & !button3_d2_q_0_.Q & !keyboard_int_Data1_2_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & button4_d2_q_0_.Q
+       & !button3_d1_q_0_.Q & !keyboard_int_Data1_1_.Q & !button3_d2_q_0_.Q
+       & !keyboard_int_Data1_2_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q & keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & button4_d1_q_0_.Q
+       & !button3_d1_q_0_.Q & !keyboard_int_Data1_1_.Q & !button3_d2_q_0_.Q
+       & !keyboard_int_Data1_2_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q & keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !keyboard_int_Data1_3_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & button4_d2_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !keyboard_int_Data1_3_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & button4_d1_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !keyboard_int_Data1_3_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & keyboard_flag_Data_0_.Q & !keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & button4_d2_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & keyboard_flag_Data_0_.Q & !keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & button4_d1_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & keyboard_flag_Data_0_.Q & !keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d2_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d1_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d2_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d1_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d2_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d1_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d2_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d1_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d2_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d1_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d2_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d1_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d2_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d1_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d2_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d1_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d2_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d1_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d3_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d2_q_0_.Q
+       & !keyboard_flag_Data_0_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d1_q_0_.Q
+       & !keyboard_flag_Data_0_.Q ; (39 pterms, 21 signals)
+
+keyboard_led_int_Data0_1_.D = !keyOut_2_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_2_.Q & keyboard_int_Data1_1_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q & keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & keyboard_int_Data1_1_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & keyboard_flag_Data_1_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button1_d3_q_0_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button1_d2_q_0_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button1_d1_q_0_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & keyboard_int_Data1_1_.Q
+       & button1_d3_q_0_.Q & keyboard_flag_Data_1_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & keyboard_int_Data1_1_.Q
+       & button1_d2_q_0_.Q & keyboard_flag_Data_1_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !keyOut_3_.Q & keyboard_int_Data1_1_.Q
+       & button1_d1_q_0_.Q & keyboard_flag_Data_1_.Q ; (10 pterms, 15 signals)
+keyboard_led_int_Data0_1_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+keyboard_led_int_Data0_1_.CE = keyboard_led_int_Data0_0__0 ; (1 pterm, 1 signal)
+keyboard_led_int_Data0_1_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_led_int_Data0_2_.D = !keyOut_2_.Q & !keyOut_0_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & keyboard_int_Data1_2_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & keyboard_flag_Data_1_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & button1_d3_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & button1_d2_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & button1_d1_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & keyboard_int_Data1_2_.Q
+       & button1_d3_q_0_.Q & keyboard_flag_Data_1_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & keyboard_int_Data1_2_.Q
+       & button1_d2_q_0_.Q & keyboard_flag_Data_1_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & keyboard_int_Data1_2_.Q
+       & button1_d1_q_0_.Q & keyboard_flag_Data_1_.Q ; (8 pterms, 11 signals)
+keyboard_led_int_Data0_2_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+keyboard_led_int_Data0_2_.CE = keyboard_led_int_Data0_0__0 ; (1 pterm, 1 signal)
+keyboard_led_int_Data0_2_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_led_int_Data0_3_.D.X1 = !keyOut_1_.Q & !keyOut_0_.Q
+       & button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !button1_d2_q_0_.Q & button1_d3_q_0_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !keyboard_int_Data1_3_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & !button1_d2_q_0_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d2_q_0_.Q & !keyboard_flag_Data_1_.Q ; (4 pterms, 13 signals)
+keyboard_led_int_Data0_3_.D.X2 = !keyOut_1_.Q & !keyOut_0_.Q
+       & !button1_d2_q_0_.Q ; (1 pterm, 3 signals)
+keyboard_led_int_Data0_3_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+keyboard_led_int_Data0_3_.CE = keyboard_led_int_Data0_0__0 ; (1 pterm, 1 signal)
+keyboard_led_int_Data0_3_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_led_int_Data1_0_.D = keyboard_int_Data0_0_.Q ; (1 pterm, 1 signal)
+keyboard_led_int_Data1_0_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+keyboard_led_int_Data1_0_.CE = keyboard_led_int_Data1_0__0 ; (1 pterm, 1 signal)
+keyboard_led_int_Data1_0_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_led_int_Data1_0__0.X1 = !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q
+       & !keyboard_int_Data0_3_.Q & button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q & keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & button4_d2_q_0_.Q
+       & !keyboard_int_Data0_3_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & button4_d1_q_0_.Q
+       & !keyboard_int_Data0_3_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & keyboard_int_Data0_3_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !keyboard_int_Data0_1_.Q
+       & !button2_d3_q_0_.Q & !keyboard_int_Data0_2_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q & keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q ; (4 pterms, 20 signals)
+keyboard_led_int_Data1_0__0.X2 = !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & keyboard_int_Data0_3_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !keyboard_int_Data0_1_.Q & !button2_d3_q_0_.Q
+       & !keyboard_int_Data0_2_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q ; (1 pterm, 20 signals)
+
+keyboard_led_int_Data1_1_.D = keyboard_int_Data0_1_.Q ; (1 pterm, 1 signal)
+keyboard_led_int_Data1_1_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+keyboard_led_int_Data1_1_.CE = keyboard_led_int_Data1_0__0 ; (1 pterm, 1 signal)
+keyboard_led_int_Data1_1_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_led_int_Data1_2_.D = keyboard_int_Data0_2_.Q ; (1 pterm, 1 signal)
+keyboard_led_int_Data1_2_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+keyboard_led_int_Data1_2_.CE = keyboard_led_int_Data1_0__0 ; (1 pterm, 1 signal)
+keyboard_led_int_Data1_2_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_led_int_Data1_3_.D = keyboard_int_Data0_3_.Q ; (1 pterm, 1 signal)
+keyboard_led_int_Data1_3_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+keyboard_led_int_Data1_3_.CE = keyboard_led_int_Data1_0__0 ; (1 pterm, 1 signal)
+keyboard_led_int_Data1_3_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_scanvalue_0_.D = !keyboard_scanvalue_0_.Q ; (1 pterm, 1 signal)
+keyboard_scanvalue_0_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+keyboard_scanvalue_0_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_scanvalue_1_.D = keyboard_scanvalue_0_.Q & !keyboard_scanvalue_1_.Q
+    # !keyboard_scanvalue_0_.Q & keyboard_scanvalue_1_.Q ; (2 pterms, 2 signals)
+keyboard_scanvalue_1_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+keyboard_scanvalue_1_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_time1Oms.T = !keyboard_timecnt_4_.Q & !keyboard_timecnt_6_.Q
+       & !keyboard_timecnt_7_.Q & !keyboard_timecnt_9_.Q
+       & !keyboard_timecnt_15_.Q & !keyboard_timecnt_11_.Q
+       & keyboard_timecnt_0_.Q & button0_d3_q_0_.Q & keyboard_timecnt_1_.Q
+       & keyboard_timecnt_2_.Q & keyboard_timecnt_3_.Q & keyboard_timecnt_5_.Q
+       & keyboard_timecnt_8_.Q & keyboard_timecnt_10_.Q
+       & keyboard_timecnt_12_.Q & keyboard_timecnt_13_.Q
+       & keyboard_timecnt_14_.Q
+    # !keyboard_timecnt_4_.Q & !keyboard_timecnt_6_.Q & !keyboard_timecnt_7_.Q
+       & !keyboard_timecnt_9_.Q & !keyboard_timecnt_15_.Q
+       & !keyboard_timecnt_11_.Q & button0_d2_q_0_.Q & keyboard_timecnt_0_.Q
+       & keyboard_timecnt_1_.Q & keyboard_timecnt_2_.Q & keyboard_timecnt_3_.Q
+       & keyboard_timecnt_5_.Q & keyboard_timecnt_8_.Q
+       & keyboard_timecnt_10_.Q & keyboard_timecnt_12_.Q
+       & keyboard_timecnt_13_.Q & keyboard_timecnt_14_.Q
+    # !keyboard_timecnt_4_.Q & !keyboard_timecnt_6_.Q & !keyboard_timecnt_7_.Q
+       & !keyboard_timecnt_9_.Q & !keyboard_timecnt_15_.Q
+       & !keyboard_timecnt_11_.Q & button0_d1_q_0_.Q & keyboard_timecnt_0_.Q
+       & keyboard_timecnt_1_.Q & keyboard_timecnt_2_.Q & keyboard_timecnt_3_.Q
+       & keyboard_timecnt_5_.Q & keyboard_timecnt_8_.Q
+       & keyboard_timecnt_10_.Q & keyboard_timecnt_12_.Q
+       & keyboard_timecnt_13_.Q & keyboard_timecnt_14_.Q ; (3 pterms, 19 signals)
+keyboard_time1Oms.C = clkh ; (1 pterm, 1 signal)
+
+keyboard_timecnt_0_.D = !keyboard_timecnt_0_.Q ; (1 pterm, 1 signal)
+keyboard_timecnt_0_.C = clkh ; (1 pterm, 1 signal)
+keyboard_timecnt_0_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_timecnt_10_.T = !keyboard_timecnt_4_.Q & !keyboard_timecnt_6_.Q
+       & !keyboard_timecnt_7_.Q & !keyboard_timecnt_9_.Q
+       & !keyboard_timecnt_15_.Q & !keyboard_timecnt_11_.Q
+       & keyboard_timecnt_0_.Q & keyboard_timecnt_1_.Q & keyboard_timecnt_2_.Q
+       & keyboard_timecnt_3_.Q & keyboard_timecnt_5_.Q & keyboard_timecnt_8_.Q
+       & keyboard_timecnt_10_.Q & keyboard_timecnt_12_.Q
+       & keyboard_timecnt_13_.Q & keyboard_timecnt_14_.Q
+    # keyboard_timecnt_4_.Q & keyboard_timecnt_6_.Q & keyboard_timecnt_7_.Q
+       & keyboard_timecnt_9_.Q & keyboard_timecnt_0_.Q & keyboard_timecnt_1_.Q
+       & keyboard_timecnt_2_.Q & keyboard_timecnt_3_.Q & keyboard_timecnt_5_.Q
+       & keyboard_timecnt_8_.Q ; (2 pterms, 16 signals)
+keyboard_timecnt_10_.C = clkh ; (1 pterm, 1 signal)
+keyboard_timecnt_10_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_timecnt_11_.T = keyboard_timecnt_4_.Q & keyboard_timecnt_6_.Q
+       & keyboard_timecnt_7_.Q & keyboard_timecnt_9_.Q & keyboard_timecnt_0_.Q
+       & keyboard_timecnt_1_.Q & keyboard_timecnt_2_.Q & keyboard_timecnt_3_.Q
+       & keyboard_timecnt_5_.Q & keyboard_timecnt_8_.Q
+       & keyboard_timecnt_10_.Q ; (1 pterm, 11 signals)
+keyboard_timecnt_11_.C = clkh ; (1 pterm, 1 signal)
+keyboard_timecnt_11_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_timecnt_12_.T = !keyboard_timecnt_4_.Q & !keyboard_timecnt_6_.Q
+       & !keyboard_timecnt_7_.Q & !keyboard_timecnt_9_.Q
+       & !keyboard_timecnt_15_.Q & !keyboard_timecnt_11_.Q
+       & keyboard_timecnt_0_.Q & keyboard_timecnt_1_.Q & keyboard_timecnt_2_.Q
+       & keyboard_timecnt_3_.Q & keyboard_timecnt_5_.Q & keyboard_timecnt_8_.Q
+       & keyboard_timecnt_10_.Q & keyboard_timecnt_12_.Q
+       & keyboard_timecnt_13_.Q & keyboard_timecnt_14_.Q
+    # keyboard_timecnt_4_.Q & keyboard_timecnt_6_.Q & keyboard_timecnt_7_.Q
+       & keyboard_timecnt_9_.Q & keyboard_timecnt_11_.Q
+       & keyboard_timecnt_0_.Q & keyboard_timecnt_1_.Q & keyboard_timecnt_2_.Q
+       & keyboard_timecnt_3_.Q & keyboard_timecnt_5_.Q & keyboard_timecnt_8_.Q
+       & keyboard_timecnt_10_.Q ; (2 pterms, 16 signals)
+keyboard_timecnt_12_.C = clkh ; (1 pterm, 1 signal)
+keyboard_timecnt_12_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_timecnt_13_.T = !keyboard_timecnt_4_.Q & !keyboard_timecnt_6_.Q
+       & !keyboard_timecnt_7_.Q & !keyboard_timecnt_9_.Q
+       & !keyboard_timecnt_15_.Q & !keyboard_timecnt_11_.Q
+       & keyboard_timecnt_0_.Q & keyboard_timecnt_1_.Q & keyboard_timecnt_2_.Q
+       & keyboard_timecnt_3_.Q & keyboard_timecnt_5_.Q & keyboard_timecnt_8_.Q
+       & keyboard_timecnt_10_.Q & keyboard_timecnt_12_.Q
+       & keyboard_timecnt_13_.Q & keyboard_timecnt_14_.Q
+    # keyboard_timecnt_4_.Q & keyboard_timecnt_6_.Q & keyboard_timecnt_7_.Q
+       & keyboard_timecnt_9_.Q & keyboard_timecnt_11_.Q
+       & keyboard_timecnt_0_.Q & keyboard_timecnt_1_.Q & keyboard_timecnt_2_.Q
+       & keyboard_timecnt_3_.Q & keyboard_timecnt_5_.Q & keyboard_timecnt_8_.Q
+       & keyboard_timecnt_10_.Q & keyboard_timecnt_12_.Q ; (2 pterms, 16 signals)
+keyboard_timecnt_13_.C = clkh ; (1 pterm, 1 signal)
+keyboard_timecnt_13_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_timecnt_14_.T = !keyboard_timecnt_4_.Q & !keyboard_timecnt_6_.Q
+       & !keyboard_timecnt_7_.Q & !keyboard_timecnt_9_.Q
+       & !keyboard_timecnt_15_.Q & !keyboard_timecnt_11_.Q
+       & keyboard_timecnt_0_.Q & keyboard_timecnt_1_.Q & keyboard_timecnt_2_.Q
+       & keyboard_timecnt_3_.Q & keyboard_timecnt_5_.Q & keyboard_timecnt_8_.Q
+       & keyboard_timecnt_10_.Q & keyboard_timecnt_12_.Q
+       & keyboard_timecnt_13_.Q & keyboard_timecnt_14_.Q
+    # keyboard_timecnt_4_.Q & keyboard_timecnt_6_.Q & keyboard_timecnt_7_.Q
+       & keyboard_timecnt_9_.Q & keyboard_timecnt_11_.Q
+       & keyboard_timecnt_0_.Q & keyboard_timecnt_1_.Q & keyboard_timecnt_2_.Q
+       & keyboard_timecnt_3_.Q & keyboard_timecnt_5_.Q & keyboard_timecnt_8_.Q
+       & keyboard_timecnt_10_.Q & keyboard_timecnt_12_.Q
+       & keyboard_timecnt_13_.Q ; (2 pterms, 16 signals)
+keyboard_timecnt_14_.C = clkh ; (1 pterm, 1 signal)
+keyboard_timecnt_14_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_timecnt_15_.T = keyboard_timecnt_4_.Q & keyboard_timecnt_6_.Q
+       & keyboard_timecnt_7_.Q & keyboard_timecnt_9_.Q
+       & keyboard_timecnt_11_.Q & keyboard_timecnt_0_.Q
+       & keyboard_timecnt_1_.Q & keyboard_timecnt_2_.Q & keyboard_timecnt_3_.Q
+       & keyboard_timecnt_5_.Q & keyboard_timecnt_8_.Q
+       & keyboard_timecnt_10_.Q & keyboard_timecnt_12_.Q
+       & keyboard_timecnt_13_.Q & keyboard_timecnt_14_.Q ; (1 pterm, 15 signals)
+keyboard_timecnt_15_.C = clkh ; (1 pterm, 1 signal)
+keyboard_timecnt_15_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_timecnt_1_.D = keyboard_timecnt_0_.Q & !keyboard_timecnt_1_.Q
+    # !keyboard_timecnt_0_.Q & keyboard_timecnt_1_.Q ; (2 pterms, 2 signals)
+keyboard_timecnt_1_.C = clkh ; (1 pterm, 1 signal)
+keyboard_timecnt_1_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_timecnt_2_.D = keyboard_timecnt_0_.Q & keyboard_timecnt_1_.Q
+       & !keyboard_timecnt_2_.Q
+    # !keyboard_timecnt_1_.Q & keyboard_timecnt_2_.Q
+    # !keyboard_timecnt_0_.Q & keyboard_timecnt_2_.Q ; (3 pterms, 3 signals)
+keyboard_timecnt_2_.C = clkh ; (1 pterm, 1 signal)
+keyboard_timecnt_2_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_timecnt_3_.D = keyboard_timecnt_0_.Q & keyboard_timecnt_1_.Q
+       & keyboard_timecnt_2_.Q & !keyboard_timecnt_3_.Q
+    # !keyboard_timecnt_2_.Q & keyboard_timecnt_3_.Q
+    # !keyboard_timecnt_1_.Q & keyboard_timecnt_3_.Q
+    # !keyboard_timecnt_0_.Q & keyboard_timecnt_3_.Q ; (4 pterms, 4 signals)
+keyboard_timecnt_3_.C = clkh ; (1 pterm, 1 signal)
+keyboard_timecnt_3_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_timecnt_4_.T.X1 = keyboard_timecnt_0_.Q & keyboard_timecnt_1_.Q
+       & keyboard_timecnt_2_.Q & keyboard_timecnt_3_.Q ; (1 pterm, 4 signals)
+keyboard_timecnt_4_.T.X2 = !keyboard_timecnt_4_.Q & !keyboard_timecnt_6_.Q
+       & !keyboard_timecnt_7_.Q & !keyboard_timecnt_9_.Q
+       & !keyboard_timecnt_15_.Q & !keyboard_timecnt_11_.Q
+       & keyboard_timecnt_0_.Q & keyboard_timecnt_1_.Q & keyboard_timecnt_2_.Q
+       & keyboard_timecnt_3_.Q & keyboard_timecnt_5_.Q & keyboard_timecnt_8_.Q
+       & keyboard_timecnt_10_.Q & keyboard_timecnt_12_.Q
+       & keyboard_timecnt_13_.Q & keyboard_timecnt_14_.Q ; (1 pterm, 16 signals)
+keyboard_timecnt_4_.C = clkh ; (1 pterm, 1 signal)
+keyboard_timecnt_4_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_timecnt_5_.T = !keyboard_timecnt_6_.Q & !keyboard_timecnt_7_.Q
+       & !keyboard_timecnt_9_.Q & !keyboard_timecnt_15_.Q
+       & !keyboard_timecnt_11_.Q & keyboard_timecnt_0_.Q
+       & keyboard_timecnt_1_.Q & keyboard_timecnt_2_.Q & keyboard_timecnt_3_.Q
+       & keyboard_timecnt_5_.Q & keyboard_timecnt_8_.Q
+       & keyboard_timecnt_10_.Q & keyboard_timecnt_12_.Q
+       & keyboard_timecnt_13_.Q & keyboard_timecnt_14_.Q
+    # keyboard_timecnt_4_.Q & keyboard_timecnt_0_.Q & keyboard_timecnt_1_.Q
+       & keyboard_timecnt_2_.Q & keyboard_timecnt_3_.Q ; (2 pterms, 16 signals)
+keyboard_timecnt_5_.C = clkh ; (1 pterm, 1 signal)
+keyboard_timecnt_5_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_timecnt_6_.T = keyboard_timecnt_4_.Q & keyboard_timecnt_0_.Q
+       & keyboard_timecnt_1_.Q & keyboard_timecnt_2_.Q & keyboard_timecnt_3_.Q
+       & keyboard_timecnt_5_.Q ; (1 pterm, 6 signals)
+keyboard_timecnt_6_.C = clkh ; (1 pterm, 1 signal)
+keyboard_timecnt_6_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_timecnt_7_.T = keyboard_timecnt_4_.Q & keyboard_timecnt_6_.Q
+       & keyboard_timecnt_0_.Q & keyboard_timecnt_1_.Q & keyboard_timecnt_2_.Q
+       & keyboard_timecnt_3_.Q & keyboard_timecnt_5_.Q ; (1 pterm, 7 signals)
+keyboard_timecnt_7_.C = clkh ; (1 pterm, 1 signal)
+keyboard_timecnt_7_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_timecnt_8_.T = !keyboard_timecnt_4_.Q & !keyboard_timecnt_6_.Q
+       & !keyboard_timecnt_7_.Q & !keyboard_timecnt_9_.Q
+       & !keyboard_timecnt_15_.Q & !keyboard_timecnt_11_.Q
+       & keyboard_timecnt_0_.Q & keyboard_timecnt_1_.Q & keyboard_timecnt_2_.Q
+       & keyboard_timecnt_3_.Q & keyboard_timecnt_5_.Q & keyboard_timecnt_8_.Q
+       & keyboard_timecnt_10_.Q & keyboard_timecnt_12_.Q
+       & keyboard_timecnt_13_.Q & keyboard_timecnt_14_.Q
+    # keyboard_timecnt_4_.Q & keyboard_timecnt_6_.Q & keyboard_timecnt_7_.Q
+       & keyboard_timecnt_0_.Q & keyboard_timecnt_1_.Q & keyboard_timecnt_2_.Q
+       & keyboard_timecnt_3_.Q & keyboard_timecnt_5_.Q ; (2 pterms, 16 signals)
+keyboard_timecnt_8_.C = clkh ; (1 pterm, 1 signal)
+keyboard_timecnt_8_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyboard_timecnt_9_.T = keyboard_timecnt_4_.Q & keyboard_timecnt_6_.Q
+       & keyboard_timecnt_7_.Q & keyboard_timecnt_0_.Q & keyboard_timecnt_1_.Q
+       & keyboard_timecnt_2_.Q & keyboard_timecnt_3_.Q & keyboard_timecnt_5_.Q
+       & keyboard_timecnt_8_.Q ; (1 pterm, 9 signals)
+keyboard_timecnt_9_.C = clkh ; (1 pterm, 1 signal)
+keyboard_timecnt_9_.AR = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q
+       & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+led_0_.D = !keyboard_combvalue_0_.Q & !keyboard_combvalue_1_.Q
+       & !keyboard_combvalue_2_.Q & !keyboard_combvalue_3_.Q
+    # !keyboard_combvalue_4_.Q & !keyboard_combvalue_6_.Q
+    # keyboard_combvalue_4_.Q & keyboard_combvalue_6_.Q
+    # keyboard_combvalue_7_.Q
+    # keyboard_combvalue_5_.Q ; (5 pterms, 8 signals)
+led_0_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+led_0_.AP = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+led_1_.D = !keyboard_combvalue_0_.Q & !keyboard_combvalue_1_.Q
+       & !keyboard_combvalue_2_.Q & !keyboard_combvalue_3_.Q
+    # !keyboard_combvalue_5_.Q & !keyboard_combvalue_6_.Q
+    # keyboard_combvalue_5_.Q & keyboard_combvalue_6_.Q
+    # keyboard_combvalue_7_.Q
+    # keyboard_combvalue_4_.Q ; (5 pterms, 8 signals)
+led_1_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+led_1_.AP = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+led_2_.D = !( keyboard_combvalue_4_.Q & !keyboard_combvalue_5_.Q
+       & !keyboard_combvalue_6_.Q & !keyboard_combvalue_7_.Q
+       & keyboard_combvalue_1_.Q
+    # !keyboard_combvalue_4_.Q & keyboard_combvalue_5_.Q
+       & !keyboard_combvalue_6_.Q & !keyboard_combvalue_7_.Q
+       & keyboard_combvalue_1_.Q
+    # !keyboard_combvalue_4_.Q & !keyboard_combvalue_5_.Q
+       & keyboard_combvalue_6_.Q & !keyboard_combvalue_7_.Q
+       & keyboard_combvalue_1_.Q
+    # !keyboard_combvalue_4_.Q & !keyboard_combvalue_5_.Q
+       & !keyboard_combvalue_6_.Q & keyboard_combvalue_7_.Q
+       & keyboard_combvalue_2_.Q
+    # !keyboard_combvalue_4_.Q & !keyboard_combvalue_5_.Q
+       & !keyboard_combvalue_6_.Q & keyboard_combvalue_7_.Q
+       & keyboard_combvalue_0_.Q
+    # keyboard_combvalue_4_.Q & !keyboard_combvalue_5_.Q
+       & !keyboard_combvalue_6_.Q & !keyboard_combvalue_7_.Q
+       & keyboard_combvalue_3_.Q
+    # !keyboard_combvalue_4_.Q & keyboard_combvalue_5_.Q
+       & !keyboard_combvalue_6_.Q & !keyboard_combvalue_7_.Q
+       & keyboard_combvalue_3_.Q
+    # !keyboard_combvalue_4_.Q & !keyboard_combvalue_5_.Q
+       & keyboard_combvalue_6_.Q & !keyboard_combvalue_7_.Q
+       & keyboard_combvalue_3_.Q ) ; (8 pterms, 8 signals)
+led_2_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+led_2_.AP = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+led_3_.D = !( keyboard_combvalue_4_.Q & !keyboard_combvalue_5_.Q
+       & !keyboard_combvalue_6_.Q & !keyboard_combvalue_7_.Q
+       & keyboard_combvalue_2_.Q
+    # !keyboard_combvalue_4_.Q & keyboard_combvalue_5_.Q
+       & !keyboard_combvalue_6_.Q & !keyboard_combvalue_7_.Q
+       & keyboard_combvalue_2_.Q
+    # !keyboard_combvalue_4_.Q & !keyboard_combvalue_5_.Q
+       & keyboard_combvalue_6_.Q & !keyboard_combvalue_7_.Q
+       & keyboard_combvalue_2_.Q
+    # !keyboard_combvalue_4_.Q & !keyboard_combvalue_5_.Q
+       & !keyboard_combvalue_6_.Q & keyboard_combvalue_7_.Q
+       & keyboard_combvalue_1_.Q
+    # !keyboard_combvalue_4_.Q & !keyboard_combvalue_5_.Q
+       & !keyboard_combvalue_6_.Q & keyboard_combvalue_7_.Q
+       & keyboard_combvalue_2_.Q
+    # keyboard_combvalue_4_.Q & !keyboard_combvalue_5_.Q
+       & !keyboard_combvalue_6_.Q & !keyboard_combvalue_7_.Q
+       & keyboard_combvalue_3_.Q
+    # !keyboard_combvalue_4_.Q & keyboard_combvalue_5_.Q
+       & !keyboard_combvalue_6_.Q & !keyboard_combvalue_7_.Q
+       & keyboard_combvalue_3_.Q
+    # !keyboard_combvalue_4_.Q & !keyboard_combvalue_5_.Q
+       & keyboard_combvalue_6_.Q & !keyboard_combvalue_7_.Q
+       & keyboard_combvalue_3_.Q ) ; (8 pterms, 7 signals)
+led_3_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+led_3_.AP = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+led_4_.D = !( !keyboard_combvalue_4_.Q & !keyboard_combvalue_5_.Q
+       & !keyboard_combvalue_6_.Q & keyboard_combvalue_7_.Q
+       & keyboard_combvalue_3_.Q ) ; (1 pterm, 5 signals)
+led_4_.C = keyboard_time1Oms.Q ; (1 pterm, 1 signal)
+led_4_.AP = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+show_0_ = !dynamicshow_out_1__n & !dynamicshow_out_2__n
+       & !dynamicshow_out_3__n
+    # dynamicshow_out_1__n & dynamicshow_out_0__n & dynamicshow_out_2__n
+    # dynamicshow_out_1__n & dynamicshow_out_0__n & dynamicshow_out_3__n
+    # dynamicshow_out_2__n & dynamicshow_out_3__n ; (4 pterms, 4 signals)
+
+show_1_ = dynamicshow_out_0__n & !dynamicshow_out_2__n & !dynamicshow_out_3__n
+    # dynamicshow_out_1__n & !dynamicshow_out_2__n
+    # dynamicshow_out_1__n & dynamicshow_out_0__n
+    # dynamicshow_out_2__n & dynamicshow_out_3__n ; (4 pterms, 4 signals)
+
+show_2_ = !( !dynamicshow_out_1__n & !dynamicshow_out_0__n
+       & !dynamicshow_out_2__n
+    # dynamicshow_out_1__n & !dynamicshow_out_0__n & !dynamicshow_out_3__n ) ; (2 pterms, 4 signals)
+
+show_3_.X1 = !dynamicshow_out_1__n & !dynamicshow_out_0__n
+    # dynamicshow_out_3__n
+    # dynamicshow_out_1__n & dynamicshow_out_0__n & dynamicshow_out_2__n ; (3 pterms, 4 signals)
+show_3_.X2 = !dynamicshow_out_1__n & !dynamicshow_out_2__n ; (1 pterm, 2 signals)
+
+show_4_ = dynamicshow_out_1__n & !dynamicshow_out_0__n & !dynamicshow_out_2__n
+    # dynamicshow_out_2__n & dynamicshow_out_3__n
+    # dynamicshow_out_1__n & dynamicshow_out_3__n ; (3 pterms, 4 signals)
+
+show_5_ = !dynamicshow_out_1__n & dynamicshow_out_0__n & dynamicshow_out_2__n
+    # dynamicshow_out_1__n & !dynamicshow_out_0__n & dynamicshow_out_2__n
+    # dynamicshow_out_1__n & dynamicshow_out_3__n
+    # dynamicshow_out_2__n & dynamicshow_out_3__n ; (4 pterms, 4 signals)
+
+show_6_ = !dynamicshow_out_1__n & dynamicshow_out_0__n & !dynamicshow_out_2__n
+       & !dynamicshow_out_3__n
+    # !dynamicshow_out_1__n & !dynamicshow_out_0__n & dynamicshow_out_2__n
+    # dynamicshow_out_1__n & dynamicshow_out_3__n
+    # dynamicshow_out_2__n & dynamicshow_out_3__n ; (4 pterms, 4 signals)
+

@@ -1,0 +1,190 @@
+<html><body><samp><pre>
+<!@TC:1462618253>
+#Build: Synplify Pro I-2014.03LC , Build 063R, May 27 2014
+#install: D:\ispLEVER_Classic2_1\synpbase
+#OS: Windows 7 6.2
+#Hostname: SKYLINE
+
+#Implementation: rev_1
+
+<a name=compilerReport13>$ Start of Compile</a>
+#Sat May 07 18:50:53 2016
+
+Synopsys Verilog Compiler, version comp201403rcp1, Build 060R, built May 27 2014
+@N: : <!@TM:1462618253> | Running in 64-bit mode 
+Copyright (C) 1994-2014 Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+
+@N: : <!@TM:1462618253> | : Running Verilog Compiler in System Verilog mode 
+@N: : <!@TM:1462618253> | : Running Verilog Compiler in Multiple File Compilation Unit mode 
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\umr_capim.v"
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\scemi_objects.v"
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\scemi_pipes.svh"
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\hypermods.v"
+@I::"E:\Grade-3_2\ISP_Project\lab9\button.v"
+@I::"E:\Grade-3_2\ISP_Project\lab9\counter_n.v"
+@I::"E:\Grade-3_2\ISP_Project\lab9\decoder2to4.v"
+@I::"E:\Grade-3_2\ISP_Project\lab9\decoderHex2Dec.v"
+@I::"E:\Grade-3_2\ISP_Project\lab9\dffre.v"
+@I::"E:\Grade-3_2\ISP_Project\lab9\dynamicShow.v"
+@I::"E:\Grade-3_2\ISP_Project\lab9\keyboard.v"
+@I::"E:\Grade-3_2\ISP_Project\lab9\lab9.v"
+@I::"E:\Grade-3_2\ISP_Project\lab9\mux16to4.v"
+@I::"E:\Grade-3_2\ISP_Project\lab9\serial.v"
+Verilog syntax check successful!
+Selecting top level module lab9
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\dffre.v:14:7:14:12:@N:CG364:@XP_MSG">dffre.v(14)</a><!@TM:1462618253> | Synthesizing module dffre
+
+@N:<a href="@N:CG179:@XP_HELP">CG179</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\dffre.v:25:13:25:14:@N:CG179:@XP_MSG">dffre.v(25)</a><!@TM:1462618253> | Removing redundant assignment
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\button.v:1:7:1:13:@N:CG364:@XP_MSG">button.v(1)</a><!@TM:1462618253> | Synthesizing module button
+
+<font color=#A52A2A>@W:<a href="@W:CG360:@XP_HELP">CG360</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\button.v:4:11:4:17:@W:CG360:@XP_MSG">button.v(4)</a><!@TM:1462618253> | No assignment to wire keyout</font>
+
+<font color=#A52A2A>@W:<a href="@W:CL168:@XP_HELP">CL168</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\button.v:11:10:11:12:@W:CL168:@XP_MSG">button.v(11)</a><!@TM:1462618253> | Pruning instance d3 -- not in use ...</font>
+
+<font color=#A52A2A>@W:<a href="@W:CL168:@XP_HELP">CL168</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\button.v:10:10:10:12:@W:CL168:@XP_MSG">button.v(10)</a><!@TM:1462618253> | Pruning instance d2 -- not in use ...</font>
+
+<font color=#A52A2A>@W:<a href="@W:CL168:@XP_HELP">CL168</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\button.v:9:10:9:12:@W:CL168:@XP_MSG">button.v(9)</a><!@TM:1462618253> | Pruning instance d1 -- not in use ...</font>
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\keyboard.v:1:7:1:15:@N:CG364:@XP_MSG">keyboard.v(1)</a><!@TM:1462618253> | Synthesizing module keyboard
+
+<font color=#A52A2A>@W:<a href="@W:CG296:@XP_HELP">CG296</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\keyboard.v:200:13:200:28:@W:CG296:@XP_MSG">keyboard.v(200)</a><!@TM:1462618253> | Incomplete sensitivity list - assuming completeness</font>
+<font color=#A52A2A>@W:<a href="@W:CG290:@XP_HELP">CG290</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\keyboard.v:207:19:207:27:@W:CG290:@XP_MSG">keyboard.v(207)</a><!@TM:1462618253> | Referenced variable int_Data is not in sensitivity list</font>
+<font color=#A52A2A>@W:<a href="@W:CL169:@XP_HELP">CL169</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\keyboard.v:75:4:75:10:@W:CL169:@XP_MSG">keyboard.v(75)</a><!@TM:1462618253> | Pruning register flag_Over </font>
+
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\keyboard.v:58:4:58:10:@A:CL282:@XP_MSG">keyboard.v(58)</a><!@TM:1462618253> | Feedback mux created for signal time1Oms -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\keyboard.v:16:4:16:10:@A:CL282:@XP_MSG">keyboard.v(16)</a><!@TM:1462618253> | Feedback mux created for signal key_out[3:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\serial.v:1:7:1:13:@N:CG364:@XP_MSG">serial.v(1)</a><!@TM:1462618253> | Synthesizing module serial
+
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\serial.v:66:4:66:10:@A:CL282:@XP_MSG">serial.v(66)</a><!@TM:1462618253> | Feedback mux created for signal Rx_Data[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\serial.v:42:4:42:10:@W:CL208:@XP_MSG">serial.v(42)</a><!@TM:1462618253> | All reachable assignments to bit 0 of Send_data[9:0] assign 0, register removed by optimization.</font>
+<font color=#A52A2A>@W:<a href="@W:CL208:@XP_HELP">CL208</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\serial.v:42:4:42:10:@W:CL208:@XP_MSG">serial.v(42)</a><!@TM:1462618253> | All reachable assignments to bit 9 of Send_data[9:0] assign 1, register removed by optimization.</font>
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\serial.v:18:4:18:10:@A:CL282:@XP_MSG">serial.v(18)</a><!@TM:1462618253> | Feedback mux created for signal ClockCount_Rx[6:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\serial.v:18:4:18:10:@A:CL282:@XP_MSG">serial.v(18)</a><!@TM:1462618253> | Feedback mux created for signal ClockCount[10:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\serial.v:18:4:18:10:@A:CL282:@XP_MSG">serial.v(18)</a><!@TM:1462618253> | Feedback mux created for signal Clock9600 -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\serial.v:18:4:18:10:@A:CL282:@XP_MSG">serial.v(18)</a><!@TM:1462618253> | Feedback mux created for signal Clock16 -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\counter_n.v:15:7:15:16:@N:CG364:@XP_MSG">counter_n.v(15)</a><!@TM:1462618253> | Synthesizing module counter_n
+
+	n=32'b00000000000000000000000000000100
+	counter_bits=32'b00000000000000000000000000000010
+   Generated name = counter_n_4s_2s
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\mux16to4.v:1:7:1:15:@N:CG364:@XP_MSG">mux16to4.v(1)</a><!@TM:1462618253> | Synthesizing module mux16to4
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\decoderHex2Dec.v:1:7:1:21:@N:CG364:@XP_MSG">decoderHex2Dec.v(1)</a><!@TM:1462618253> | Synthesizing module decoderHex2Dec
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\decoder2to4.v:1:7:1:18:@N:CG364:@XP_MSG">decoder2to4.v(1)</a><!@TM:1462618253> | Synthesizing module decoder2to4
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\dynamicShow.v:1:7:1:18:@N:CG364:@XP_MSG">dynamicShow.v(1)</a><!@TM:1462618253> | Synthesizing module dynamicshow
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\lab9.v:1:7:1:11:@N:CG364:@XP_MSG">lab9.v(1)</a><!@TM:1462618253> | Synthesizing module lab9
+
+<font color=#A52A2A>@W:<a href="@W:CL156:@XP_HELP">CL156</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\dynamicShow.v:8:66:8:71:@W:CL156:@XP_MSG">dynamicShow.v(8)</a><!@TM:1462618253> | *Input reset to expression [instance] has undriven bits that are tied to 0 -- simulation mismatch possible.</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\keyboard.v:75:4:75:10:@W:CL190:@XP_MSG">keyboard.v(75)</a><!@TM:1462618253> | Optimizing register bit temp[0] to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\keyboard.v:75:4:75:10:@W:CL190:@XP_MSG">keyboard.v(75)</a><!@TM:1462618253> | Optimizing register bit temp[5] to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\keyboard.v:75:4:75:10:@W:CL190:@XP_MSG">keyboard.v(75)</a><!@TM:1462618253> | Optimizing register bit temp[6] to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\keyboard.v:75:4:75:10:@W:CL190:@XP_MSG">keyboard.v(75)</a><!@TM:1462618253> | Optimizing register bit temp[7] to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\keyboard.v:75:4:75:10:@W:CL190:@XP_MSG">keyboard.v(75)</a><!@TM:1462618253> | Optimizing register bit temp[8] to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\keyboard.v:75:4:75:10:@W:CL190:@XP_MSG">keyboard.v(75)</a><!@TM:1462618253> | Optimizing register bit temp[9] to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\keyboard.v:75:4:75:10:@W:CL279:@XP_MSG">keyboard.v(75)</a><!@TM:1462618253> | Pruning register bits 9 to 5 of temp[9:0] </font>
+
+<font color=#A52A2A>@W:<a href="@W:CL260:@XP_HELP">CL260</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\keyboard.v:75:4:75:10:@W:CL260:@XP_MSG">keyboard.v(75)</a><!@TM:1462618253> | Pruning register bit 0 of temp[9:0] </font>
+
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\keyboard.v:75:4:75:10:@W:CL190:@XP_MSG">keyboard.v(75)</a><!@TM:1462618253> | Optimizing register bit int_Data[6] to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\keyboard.v:75:4:75:10:@W:CL190:@XP_MSG">keyboard.v(75)</a><!@TM:1462618253> | Optimizing register bit int_Data[7] to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\keyboard.v:75:4:75:10:@W:CL190:@XP_MSG">keyboard.v(75)</a><!@TM:1462618253> | Optimizing register bit int_Data[8] to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\keyboard.v:75:4:75:10:@W:CL190:@XP_MSG">keyboard.v(75)</a><!@TM:1462618253> | Optimizing register bit int_Data[9] to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\keyboard.v:75:4:75:10:@W:CL279:@XP_MSG">keyboard.v(75)</a><!@TM:1462618253> | Pruning register bits 9 to 6 of int_Data[9:0] </font>
+
+@N:<a href="@N:CL201:@XP_HELP">CL201</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\keyboard.v:75:4:75:10:@N:CL201:@XP_MSG">keyboard.v(75)</a><!@TM:1462618253> | Trying to extract state machine for register flag_Data
+Extracted state machine for register flag_Data
+State machine has 4 reachable states with original encodings of:
+   00
+   01
+   10
+   11
+@N:<a href="@N:CL201:@XP_HELP">CL201</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\keyboard.v:16:4:16:10:@N:CL201:@XP_MSG">keyboard.v(16)</a><!@TM:1462618253> | Trying to extract state machine for register scanvalue
+Extracted state machine for register scanvalue
+State machine has 4 reachable states with original encodings of:
+   0001
+   0010
+   0100
+   1000
+<font color=#A52A2A>@W:<a href="@W:CL157:@XP_HELP">CL157</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\button.v:4:11:4:17:@W:CL157:@XP_MSG">button.v(4)</a><!@TM:1462618253> | *Output keyout has undriven bits -- simulation mismatch possible.</font>
+<font color=#A52A2A>@W:<a href="@W:CL159:@XP_HELP">CL159</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\button.v:2:10:2:15:@W:CL159:@XP_MSG">button.v(2)</a><!@TM:1462618253> | Input keyin is unused</font>
+<font color=#A52A2A>@W:<a href="@W:CL159:@XP_HELP">CL159</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\button.v:3:10:3:13:@W:CL159:@XP_MSG">button.v(3)</a><!@TM:1462618253> | Input clk is unused</font>
+@END
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 70MB peak: 72MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat May 07 18:50:53 2016
+
+###########################################################]
+Synopsys Netlist Linker, version comp201403rcp1, Build 060R, built May 27 2014
+@N: : <!@TM:1462618255> | Running in 64-bit mode 
+@N:<a href="@N:NF107:@XP_HELP">NF107</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\lab9.v:1:7:1:11:@N:NF107:@XP_MSG">lab9.v(1)</a><!@TM:1462618255> | Selected library: work cell: lab9 view verilog as top level
+@N:<a href="@N:NF107:@XP_HELP">NF107</a> : <a href="E:\Grade-3_2\ISP_Project\lab9\lab9.v:1:7:1:11:@N:NF107:@XP_MSG">lab9.v(1)</a><!@TM:1462618255> | Selected library: work cell: lab9 view verilog as top level
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 68MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat May 07 18:50:55 2016
+
+###########################################################]
+Map & Optimize Report
+
+<a name=mapperReport14>Synopsys CPLD Technology Mapper, Version maplat, Build 923R, Built May  6 2014</a>
+Copyright (C) 1994-2013, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use or distribution of the software is strictly prohibited.
+Product Version I-2014.03LC 
+@N:<a href="@N:MF248:@XP_HELP">MF248</a> : <!@TM:1462618255> | Running in 64-bit mode. 
+<font color=#A52A2A>@W:<a href="@W:MO111:@XP_HELP">MO111</a> : <a href="e:\grade-3_2\isp_project\lab9\button.v:4:11:4:17:@W:MO111:@XP_MSG">button.v(4)</a><!@TM:1462618255> | Tristate driver keyout on net keyout has its enable tied to GND (module button) </font>
+Encoding state machine flag_Data[3:0] (view:work.keyboard(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+   11 -> 11
+@N:<a href="@N:MO225:@XP_HELP">MO225</a> : <a href="e:\grade-3_2\isp_project\lab9\keyboard.v:75:4:75:10:@N:MO225:@XP_MSG">keyboard.v(75)</a><!@TM:1462618255> | No possible illegal states for state machine flag_Data[3:0],safe FSM implementation is disabled
+Encoding state machine scanvalue[3:0] (view:work.keyboard(verilog))
+original code -> new code
+   0001 -> 00
+   0010 -> 01
+   0100 -> 10
+   1000 -> 11
+@N:<a href="@N:MO225:@XP_HELP">MO225</a> : <a href="e:\grade-3_2\isp_project\lab9\keyboard.v:16:4:16:10:@N:MO225:@XP_MSG">keyboard.v(16)</a><!@TM:1462618255> | No possible illegal states for state machine scanvalue[3:0],safe FSM implementation is disabled
+@N:<a href="@N:MO106:@XP_HELP">MO106</a> : <a href="e:\grade-3_2\isp_project\lab9\decoderhex2dec.v:6:8:6:12:@N:MO106:@XP_MSG">decoderhex2dec.v(6)</a><!@TM:1462618255> | Found ROM, 'decoder1.out_1[6:0]', 11 words by 7 bits 
+<font color=#A52A2A>@W:<a href="@W:FC103:@XP_HELP">FC103</a> : <!@TM:1462618255> | Internal tri state resetButton converted to mux. Simulation mismatch can happen </font> 
+<font color=#A52A2A>@W:<a href="@W:FC103:@XP_HELP">FC103</a> : <!@TM:1462618255> | Internal tri state keyInButton[0] converted to mux. Simulation mismatch can happen </font> 
+<font color=#A52A2A>@W:<a href="@W:FC103:@XP_HELP">FC103</a> : <!@TM:1462618255> | Internal tri state keyInButton[1] converted to mux. Simulation mismatch can happen </font> 
+<font color=#A52A2A>@W:<a href="@W:FC103:@XP_HELP">FC103</a> : <!@TM:1462618255> | Internal tri state keyInButton[2] converted to mux. Simulation mismatch can happen </font> 
+<font color=#A52A2A>@W:<a href="@W:FC103:@XP_HELP">FC103</a> : <!@TM:1462618255> | Internal tri state keyInButton[3] converted to mux. Simulation mismatch can happen </font> 
+<font color=#A52A2A>@W:<a href="@W:FC103:@XP_HELP">FC103</a> : <!@TM:1462618255> | Internal tri state sendButton converted to mux. Simulation mismatch can happen </font> 
+---------------------------------------
+<a name=resourceUsage15>Resource Usage Report</a>
+
+Simple gate primitives:
+DFFRH           52 uses
+DFFC            32 uses
+DFFSH           8 uses
+DFF             3 uses
+DFFCRH          1 use
+IBUF            9 uses
+OBUF            21 uses
+AND2            275 uses
+INV             163 uses
+OR2             8 uses
+XOR2            39 uses
+
+
+@N:<a href="@N:FC100:@XP_HELP">FC100</a> : <!@TM:1462618255> | Timing Report not generated for this device, please use place and route tools for timing analysis. 
+I-2014.03LC 
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 40MB peak: 108MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat May 07 18:50:55 2016
+
+###########################################################]
+
+</pre></samp></body></html>

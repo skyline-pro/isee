@@ -1,0 +1,13 @@
+clk_50m  i
+reset  i
+lcdD[7]  o
+lcdD[6]  o
+lcdD[5]  o
+lcdD[4]  o
+lcdD[3]  o
+lcdD[2]  o
+lcdD[1]  o
+lcdD[0]  o
+lcdRs  o
+lcdRw  o
+ledEN  o

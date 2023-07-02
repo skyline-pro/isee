@@ -1,0 +1,4 @@
+@W: CG921 :"E:\Grade-3_2\ISP_Project\lab14\vga.v":49:9:49:14|vga_hs is already declared in this scope.
+@W: CG921 :"E:\Grade-3_2\ISP_Project\lab14\vga.v":61:8:61:13|vga_vs is already declared in this scope.
+@W: CG921 :"E:\Grade-3_2\ISP_Project\lab14\vga.v":77:14:77:18|vga_d is already declared in this scope.
+

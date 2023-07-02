@@ -1,0 +1,65 @@
+(edif lab13
+  (edifVersion 2 0 0)
+  (edifLevel 0)
+  (keywordMap (keywordLevel 0))
+  (status
+    (written
+      (timeStamp 2022 5 12 17 29 4)
+      (author "Synopsys, Inc.")
+      (program "Synplify Pro" (version "I-2014.03LC , mapper maplat, Build 923R"))
+     )
+   )
+  (external ispmach4s
+    (edifLevel 0)
+    (technology (numberDefinition ))
+    (cell IBUF (cellType GENERIC)
+       (view prim (viewType NETLIST)
+         (interface
+           (port O (direction OUTPUT))
+           (port I0 (direction INPUT))
+         )
+       )
+    )
+  )
+  (library work
+    (edifLevel 0)
+    (technology (numberDefinition ))
+    (cell lab13 (cellType GENERIC)
+       (view verilog (viewType NETLIST)
+         (interface
+           (port clkh (direction INPUT))
+           (port clkl (direction INPUT))
+           (port reset (direction INPUT))
+         )
+         (contents
+          (instance clkh (viewRef prim (cellRef IBUF (libraryRef ispmach4s)))          )
+          (instance clkl (viewRef prim (cellRef IBUF (libraryRef ispmach4s)))          )
+          (instance reset (viewRef prim (cellRef IBUF (libraryRef ispmach4s)))          )
+          (net clkh_c (joined
+           (portRef O (instanceRef clkh))
+          ))
+          (net clkh (joined
+           (portRef clkh)
+           (portRef I0 (instanceRef clkh))
+          ))
+          (net clkl_c (joined
+           (portRef O (instanceRef clkl))
+          ))
+          (net clkl (joined
+           (portRef clkl)
+           (portRef I0 (instanceRef clkl))
+          ))
+          (net reset_c (joined
+           (portRef O (instanceRef reset))
+          ))
+          (net reset (joined
+           (portRef reset)
+           (portRef I0 (instanceRef reset))
+          ))
+         )
+        (property orig_inst_of (string "lab13"))
+       )
+    )
+  )
+  (design lab13 (cellRef lab13 (libraryRef work)))
+)

@@ -1,0 +1,7 @@
+MODULE lab12 DEFIN lab12.v
+	SUBMODULE ledDotMatrix
+		INSTANCE led1
+	SUBMODULE button
+		INSTANCE button1
+	SUBMODULE counter_n
+		INSTANCE conter

@@ -1,0 +1,145 @@
+
+[Device]
+Family = lc4k;
+PartNumber = LC4256V-75T100I;
+Package = 100TQFP;
+PartType = LC4256V;
+Speed = -7.5;
+Operating_condition = IND;
+Status = Production;
+EN_PinGLB = yes;
+EN_PinMacrocell = yes;
+
+[Revision]
+Parent = lc4k256v.lci;
+DATE = 05/08/2016;
+TIME = 13:19:01;
+Source_Format = Pure_Verilog_HDL;
+Synthesis = Synplify;
+
+[Ignore Assignments]
+
+[Clear Assignments]
+
+[Backannotate Assignments]
+
+[Global Constraints]
+
+[Location Assignments]
+layer = OFF;
+clkh = Pin, 88, -, -, -;
+clkl = Pin, 39, -, -, -;
+reset = Pin, 49, -, J, 10;
+LEDVCC_0_ = Pin, 54, -, K, 10;
+LEDVCC_1_ = Pin, 55, -, K, 6;
+LEDVCC_2_ = Pin, 78, -, O, 12;
+LEDVCC_3_ = Pin, 72, -, N, 12;
+keyClock = Pin, 3, -, C, 12;
+keyData = Pin, 4, -, C, 10;
+show_0_ = Pin, 58, -, L, 12;
+show_1_ = Pin, 60, -, L, 6;
+show_2_ = Pin, 65, -, M, 6;
+show_3_ = Pin, 64, -, M, 4;
+show_4_ = Pin, 66, -, M, 10;
+show_5_ = Pin, 56, -, K, 2;
+show_6_ = Pin, 61, -, L, 4;
+
+[Group Assignments]
+layer = OFF;
+
+[Resource Reservations]
+layer = OFF;
+
+[Fitter Report Format]
+
+[Power]
+
+[Source Constraint Option]
+
+[Fast Bypass]
+
+[OSM Bypass]
+
+[Input Registers]
+
+[Netlist/Delay Format]
+NetList = VERILOG;
+
+[IO Types]
+layer = OFF;
+
+[Pullup]
+
+[Slewrate]
+
+[Region]
+
+[Timing Constraints]
+layer = OFF;
+
+[HSI Attributes]
+
+[Input Delay]
+
+[opt global constraints list]
+
+[Explorer User Settings]
+
+[Pin attributes list]
+
+[global constraints list]
+
+[Global Constraints Process Update]
+
+[pin lock limitation]
+
+[LOCATION ASSIGNMENTS LIST]
+
+[RESOURCE RESERVATIONS LIST]
+
+[individual constraints list]
+
+[Attributes list setting]
+
+[Timing Analyzer]
+
+[PLL Assignments]
+
+[Dual Function Macrocell]
+
+[Explorer Results]
+
+[VHDL synplify constraints]
+
+[VHDL spectrum constraints]
+
+[verilog synplify constraints]
+
+[verilog spectrum constraints]
+
+[VHDL synplify constraints list]
+
+[VHDL spectrum constraints list]
+
+[verilog synplify constraints list]
+
+[verilog spectrum constraints list]
+
+[ORP Bypass]
+
+[Register Powerup]
+
+[Constraint Version]
+version = 1.0;
+
+[ORP ASSIGNMENTS]
+layer = OFF;
+
+[Node attribute]
+layer = OFF;
+
+[SYMBOL/MODULE attribute]
+layer = OFF;
+
+[Nodal Constraints]
+layer = OFF;

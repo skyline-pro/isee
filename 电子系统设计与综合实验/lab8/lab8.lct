@@ -1,0 +1,157 @@
+
+[Device]
+Family = lc4k;
+PartNumber = LC4256V-75T100I;
+Package = 100TQFP;
+PartType = LC4256V;
+Speed = -7.5;
+Operating_condition = IND;
+Status = Production;
+EN_PinGLB = yes;
+EN_PinMacrocell = yes;
+
+[Revision]
+Parent = lc4k256v.lci;
+DATE = 05/07/2016;
+TIME = 17:45:50;
+Source_Format = Pure_Verilog_HDL;
+Synthesis = Synplify;
+
+[Ignore Assignments]
+
+[Clear Assignments]
+
+[Backannotate Assignments]
+
+[Global Constraints]
+
+[Location Assignments]
+layer = OFF;
+clkh = Pin, 88, -, -, -;
+clkl = Pin, 39, -, -, -;
+keyIn_0_ = Pin, 8, -, D, 12;
+keyIn_1_ = Pin, 9, -, D, 10;
+keyIn_2_ = Pin, 10, -, D, 6;
+keyIn_3_ = Pin, 11, -, D, 4;
+reset = Pin, 49, -, J, 10;
+LEDVCC_0_ = Pin, 54, -, K, 10;
+LEDVCC_1_ = Pin, 55, -, K, 6;
+LEDVCC_2_ = Pin, 78, -, O, 12;
+LEDVCC_3_ = Pin, 72, -, N, 12;
+keyOut_0_ = Pin, 21, -, F, 10;
+keyOut_1_ = Pin, 22, -, F, 12;
+keyOut_2_ = Pin, 28, -, G, 12;
+keyOut_3_ = Pin, 29, -, G, 10;
+pointTime = Pin, 59, -, L, 10;
+show_0_ = Pin, 58, -, L, 12;
+show_1_ = Pin, 60, -, L, 6;
+show_2_ = Pin, 65, -, M, 6;
+show_3_ = Pin, 64, -, M, 4;
+show_4_ = Pin, 66, -, M, 10;
+show_5_ = Pin, 56, -, K, 2;
+show_6_ = Pin, 61, -, L, 4;
+led_0_ = Pin, 35, -, H, 10;
+led_1_ = Pin, 36, -, H, 6;
+led_2_ = Pin, 37, -, H, 2;
+led_3_ = Pin, 41, -, I, 2;
+led_4_ = Pin, 42, -, I, 6;
+
+[Group Assignments]
+layer = OFF;
+
+[Resource Reservations]
+layer = OFF;
+
+[Fitter Report Format]
+
+[Power]
+
+[Source Constraint Option]
+
+[Fast Bypass]
+
+[OSM Bypass]
+
+[Input Registers]
+
+[Netlist/Delay Format]
+NetList = VERILOG;
+
+[IO Types]
+layer = OFF;
+
+[Pullup]
+
+[Slewrate]
+
+[Region]
+
+[Timing Constraints]
+layer = OFF;
+
+[HSI Attributes]
+
+[Input Delay]
+
+[opt global constraints list]
+
+[Explorer User Settings]
+
+[Pin attributes list]
+
+[global constraints list]
+
+[Global Constraints Process Update]
+
+[pin lock limitation]
+
+[LOCATION ASSIGNMENTS LIST]
+
+[RESOURCE RESERVATIONS LIST]
+
+[individual constraints list]
+
+[Attributes list setting]
+
+[Timing Analyzer]
+
+[PLL Assignments]
+
+[Dual Function Macrocell]
+
+[Explorer Results]
+
+[VHDL synplify constraints]
+
+[VHDL spectrum constraints]
+
+[verilog synplify constraints]
+
+[verilog spectrum constraints]
+
+[VHDL synplify constraints list]
+
+[VHDL spectrum constraints list]
+
+[verilog synplify constraints list]
+
+[verilog spectrum constraints list]
+
+[ORP Bypass]
+
+[Register Powerup]
+
+[Constraint Version]
+version = 1.0;
+
+[ORP ASSIGNMENTS]
+layer = OFF;
+
+[Node attribute]
+layer = OFF;
+
+[SYMBOL/MODULE attribute]
+layer = OFF;
+
+[Nodal Constraints]
+layer = OFF;

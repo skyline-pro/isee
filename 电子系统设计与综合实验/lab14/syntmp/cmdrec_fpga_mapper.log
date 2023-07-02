@@ -1,0 +1,9 @@
+D:\ispLEVER_Classic2_1\synpbase\bin64\m_cpld.exe  -prodtype  synplify_pro  -encrypt  -pro  -rundir  E:\grade-3_2\isp_project\lab14  -part LC4064B  -package T44C  -grade -2.5   -ispmach4s -RWCheckOnRam 1 -areadelay 0 -minc -auto_constrain_io -summaryfile E:\grade-3_2\isp_project\lab14\synlog\report\vga_fpga_mapper.xml -top_level_module  vga  -multisrs  -ta_num_paths 3  -ta_num_points 0  -oedif  E:\grade-3_2\isp_project\lab14\vga.edi  -freq 200.000  E:\grade-3_2\isp_project\lab14\synwork\vga_mult.srs  -ologparam  E:\grade-3_2\isp_project\lab14\syntmp\vga.plg  -osyn  E:\grade-3_2\isp_project\lab14\vga.srm  -prjdir  e:\grade-3_2\isp_project\lab14\  -prjname  vga  -log  E:\grade-3_2\isp_project\lab14\synlog\vga_fpga_mapper.srr 
+rc:0 success:1
+E:\grade-3_2\isp_project\lab14\vga.edi|o|1652409929|111831
+E:\grade-3_2\isp_project\lab14\synwork\vga_mult.srs|i|1652409928|4961
+E:\grade-3_2\isp_project\lab14\syntmp\vga.plg|o|1652409929|0
+E:\grade-3_2\isp_project\lab14\vga.srm|o|1652409929|36087
+E:\grade-3_2\isp_project\lab14\synlog\vga_fpga_mapper.srr|o|1652409929|1167
+D:\ispLEVER_Classic2_1\synpbase\bin\m_cpld.exe|i|1399340484|7067648
+D:\ispLEVER_Classic2_1\synpbase\bin64\m_cpld.exe|i|1399343322|8049664

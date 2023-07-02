@@ -1,0 +1,4 @@
+@N|Running in 64-bit mode
+@N: CG364 :"E:\grade-3_2\isp_project\testverilog\decode.v":1:7:1:12|Synthesizing module decode
+@N: CL177 :"E:\grade-3_2\isp_project\testverilog\decode.v":7:8:7:11|Sharing sequential element out.
+

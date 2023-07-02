@@ -1,0 +1,7 @@
+MODULE lab10 DEFIN lab10.v
+	SUBMODULE dynamicshow
+		INSTANCE dynamicshow
+	SUBMODULE PS2Keyboard
+		INSTANCE ps
+	SUBMODULE button
+		INSTANCE button0

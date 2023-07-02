@@ -1,0 +1,93 @@
+<html><body><samp><pre>
+<!@TC:1462618517>
+#Build: Synplify Pro I-2014.03LC , Build 063R, May 27 2014
+#install: D:\ispLEVER_Classic2_1\synpbase
+#OS: Windows 7 6.2
+#Hostname: SKYLINE
+
+#Implementation: lab9
+
+<a name=compilerReport1>$ Start of Compile</a>
+#Sat May 07 18:55:17 2016
+
+Synopsys Verilog Compiler, version comp201403rcp1, Build 060R, built May 27 2014
+@N: : <!@TM:1462618517> | Running in 64-bit mode 
+Copyright (C) 1994-2014 Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\umr_capim.v"
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\scemi_objects.v"
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\scemi_pipes.svh"
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\hypermods.v"
+@I::"D:\ispLEVER_Classic2_1\ispcpld\..\cae_library\synthesis\verilog\mach.v"
+@I::"E:\grade-3_2\isp_project\lab9\lab9.h"
+@I::"E:\grade-3_2\isp_project\lab9\decoder2to4.v"
+@I::"E:\grade-3_2\isp_project\lab9\decoderHex2Dec.v"
+@I::"E:\grade-3_2\isp_project\lab9\mux16to4.v"
+@I::"E:\grade-3_2\isp_project\lab9\counter_n.v"
+@I::"E:\grade-3_2\isp_project\lab9\dynamicShow.v"
+Verilog syntax check successful!
+Selecting top level module dynamicshow
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="E:\grade-3_2\isp_project\lab9\counter_n.v:15:7:15:16:@N:CG364:@XP_MSG">counter_n.v(15)</a><!@TM:1462618517> | Synthesizing module counter_n
+
+	n=32'b00000000000000000000000000000100
+	counter_bits=32'b00000000000000000000000000000010
+   Generated name = counter_n_4s_2s
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="E:\grade-3_2\isp_project\lab9\mux16to4.v:1:7:1:15:@N:CG364:@XP_MSG">mux16to4.v(1)</a><!@TM:1462618517> | Synthesizing module mux16to4
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="E:\grade-3_2\isp_project\lab9\decoderHex2Dec.v:1:7:1:21:@N:CG364:@XP_MSG">decoderHex2Dec.v(1)</a><!@TM:1462618517> | Synthesizing module decoderHex2Dec
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="E:\grade-3_2\isp_project\lab9\decoder2to4.v:1:7:1:18:@N:CG364:@XP_MSG">decoder2to4.v(1)</a><!@TM:1462618517> | Synthesizing module decoder2to4
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="E:\grade-3_2\isp_project\lab9\dynamicShow.v:1:7:1:18:@N:CG364:@XP_MSG">dynamicShow.v(1)</a><!@TM:1462618517> | Synthesizing module dynamicshow
+
+<font color=#A52A2A>@W:<a href="@W:CS263:@XP_HELP">CS263</a> : <a href="E:\grade-3_2\isp_project\lab9\dynamicShow.v:8:79:8:80:@W:CS263:@XP_MSG">dynamicShow.v(8)</a><!@TM:1462618517> | Port-width mismatch for port en. Formal has width 1, Actual 32</font>
+<font color=#A52A2A>@W:<a href="@W:CL156:@XP_HELP">CL156</a> : <a href="E:\grade-3_2\isp_project\lab9\dynamicShow.v:8:66:8:71:@W:CL156:@XP_MSG">dynamicShow.v(8)</a><!@TM:1462618517> | *Input reset to expression [instance] has undriven bits that are tied to 0 -- simulation mismatch possible.</font>
+@END
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 68MB peak: 69MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat May 07 18:55:17 2016
+
+###########################################################]
+Synopsys Netlist Linker, version comp201403rcp1, Build 060R, built May 27 2014
+@N: : <!@TM:1462618518> | Running in 64-bit mode 
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat May 07 18:55:18 2016
+
+###########################################################]
+Map & Optimize Report
+
+<a name=mapperReport2>Synopsys CPLD Technology Mapper, Version maplat, Build 923R, Built May  6 2014</a>
+Copyright (C) 1994-2013, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use or distribution of the software is strictly prohibited.
+Product Version I-2014.03LC 
+@N:<a href="@N:MF248:@XP_HELP">MF248</a> : <!@TM:1462618518> | Running in 64-bit mode. 
+@N:<a href="@N:MO106:@XP_HELP">MO106</a> : <a href="e:\grade-3_2\isp_project\lab9\decoderhex2dec.v:6:8:6:12:@N:MO106:@XP_MSG">decoderhex2dec.v(6)</a><!@TM:1462618518> | Found ROM, 'decoder1.out_1[6:0]', 11 words by 7 bits 
+---------------------------------------
+<a name=resourceUsage3>Resource Usage Report</a>
+
+Simple gate primitives:
+DFF             2 uses
+IBUF            17 uses
+OBUF            11 uses
+AND2            61 uses
+INV             44 uses
+OR2             12 uses
+
+
+@N:<a href="@N:FC100:@XP_HELP">FC100</a> : <!@TM:1462618518> | Timing Report not generated for this device, please use place and route tools for timing analysis. 
+I-2014.03LC 
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 39MB peak: 104MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat May 07 18:55:18 2016
+
+###########################################################]
+
+</pre></samp></body></html>

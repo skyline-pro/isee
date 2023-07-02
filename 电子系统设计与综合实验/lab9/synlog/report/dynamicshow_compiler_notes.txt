@@ -1,0 +1,7 @@
+@N|Running in 64-bit mode
+@N: CG364 :"E:\grade-3_2\isp_project\lab9\counter_n.v":15:7:15:15|Synthesizing module counter_n
+@N: CG364 :"E:\grade-3_2\isp_project\lab9\mux16to4.v":1:7:1:14|Synthesizing module mux16to4
+@N: CG364 :"E:\grade-3_2\isp_project\lab9\decoderHex2Dec.v":1:7:1:20|Synthesizing module decoderHex2Dec
+@N: CG364 :"E:\grade-3_2\isp_project\lab9\decoder2to4.v":1:7:1:17|Synthesizing module decoder2to4
+@N: CG364 :"E:\grade-3_2\isp_project\lab9\dynamicShow.v":1:7:1:17|Synthesizing module dynamicshow
+

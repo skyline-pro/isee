@@ -1,0 +1,16 @@
+Starting EDIF2BLIF....
+readEDIF ended normally.
+
+EDIF2BLIF: Warning: Remove floating instance: :
+	i2911
+
+Inspect circuit lcd1602
+    Number of input ports   : 2
+    Number of output ports  : 4
+    Number of bidir ports   : 0
+    Number of instances     : 1471
+    Number of nets          : 1473
+
+No design errors found in circuit lcd1602
+
+WriteBLIF ended normally.

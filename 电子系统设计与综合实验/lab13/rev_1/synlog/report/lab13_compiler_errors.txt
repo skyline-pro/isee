@@ -1,0 +1,2 @@
+@E: CS168 :"E:\Grade-3_2\ISP_Project\lab13\lab13.v":7:20:7:20|Port clk does not exist
+

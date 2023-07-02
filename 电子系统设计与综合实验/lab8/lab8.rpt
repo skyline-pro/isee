@@ -1,0 +1,2224 @@
+|--------------------------------------------------------------|
+|- ispLEVER Classic 2.1.00.02.49.20 Fitter Report File        -|
+|- Copyright(C), 1992-2012, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+
+
+The Basic/Detailed Report Format can be selected in the dialog box
+Tools->Fitter Report File Format...
+
+Project_Summary
+~~~~~~~~~~~~~~~
+Project Name         :  lab8
+Project Path         :  E:\Grade-3_2\ISP_Project\lab8
+Project Fitted on    :  Sat May 07 17:46:39 2016
+
+Device               :  M4256_64
+Package              :  100
+GLB Input Mux Size   :  33
+Available Blocks     :  16
+Speed                :  -7.5
+Part Number          :  LC4256V-75T100I
+Source Format        :  Pure_Verilog_HDL
+
+
+// Project 'lab8' Fit Successfully! //
+
+
+Compilation_Times
+~~~~~~~~~~~~~~~~~
+Prefit Time                     0 secs
+Load Design Time                0.05 secs
+Partition Time                  0.08 secs
+Place Time                      0.02 secs
+Route Time                      0.00 secs
+Total Fit Time                  00:00:01
+
+
+Design_Summary
+~~~~~~~~~~~~~~
+Total Input Pins                7
+Total Logic Functions           130
+  Total Output Pins             21
+  Total Bidir I/O Pins          0
+  Total Buried Nodes            109
+Total Flip-Flops                76
+  Total D Flip-Flops            73
+  Total T Flip-Flops            3
+  Total Latches                 0
+Total Product Terms             726
+
+Total Reserved Pins             0
+Total Locked Pins               28
+Total Locked Nodes              0
+
+Total Unique Output Enables     0
+Total Unique Clocks             3
+Total Unique Clock Enables      7
+Total Unique Resets             1
+Total Unique Presets            1
+
+Fmax Logic Levels               3
+
+
+Device_Resource_Summary
+~~~~~~~~~~~~~~~~~~~~~~~
+                                 Device
+                                 Total    Used   Not Used   Utilization
+-----------------------------------------------------------------------
+Dedicated Pins
+  Clock/Input Pins                  4        2      2    -->    50
+  Input-Only Pins                   6        0      6    -->     0
+  I/O / Enable Pins                 2        0      2    -->     0
+I/O Pins                           62       26     36    -->    41
+Logic Functions                   256      130    126    -->    50
+  Input Registers                  64        0     64    -->     0
+
+GLB Inputs                        576      364    212    -->    63
+Logical Product Terms            1280      610    670    -->    47
+Occupied GLBs                      16       16      0    -->   100
+Macrocells                        256      130    126    -->    50
+
+Control Product Terms:
+  GLB Clock/Clock Enables          16       13      3    -->    81
+  GLB Reset/Presets                16        0     16    -->     0
+  Macrocell Clocks                256        0    256    -->     0
+  Macrocell Clock Enables         256       25    231    -->     9
+  Macrocell Enables               256        0    256    -->     0
+  Macrocell Resets                256        4    252    -->     1
+  Macrocell Presets               256        0    256    -->     0
+
+Global Routing Pool               324      118    206    -->    36
+  GRP from IFB                     ..        5     ..    -->    ..
+    (from input signals)           ..        5     ..    -->    ..
+    (from output signals)          ..        0     ..    -->    ..
+    (from bidir signals)           ..        0     ..    -->    ..
+  GRP from MFB                     ..      113     ..    -->    ..
+----------------------------------------------------------------------
+
+<Note> 1 : The available PT is the product term that has not been used.
+<Note> 2 : IFB is I/O feedback.
+<Note> 3 : MFB is macrocell feedback.
+
+
+
+GLB_Resource_Summary
+~~~~~~~~~~~~~~~~~~~~
+                                                                                     # of PT
+               ---  Fanin  ---    I/O    Input  Macrocells       Macrocells   Logic  clusters
+             Unique Shared Total  Pins    Regs Used Inaccessible  available    PTs   used
+-------------------------------------------------------------------------------------------
+Maximum
+  GLB                      36      *(1)     8   --     --             16       80       16
+-------------------------------------------------------------------------------------------
+  GLB    A     15    16    31      0/4      0   10      0              6       34       10
+  GLB    B     11    15    26      0/4      0    9      0              7       35        9
+  GLB    C      1     9    10      0/4      0    6      0             10       24        7
+  GLB    D      5    17    22      4/4      0   12      3              1       48       15
+-------------------------------------------------------------------------------------------
+  GLB    E      6    23    29      0/4      0    8      0              8       42       10
+  GLB    F     12    15    27      2/4      0    7      4              5       55       13
+  GLB    G      0    22    22      2/4      0   14      0              2       30       14
+  GLB    H      7    19    26      3/4      0    6      0             10       43       10
+-------------------------------------------------------------------------------------------
+  GLB    I     15    10    25      2/4      0    5      1             10       33        9
+  GLB    J      0    10    10      1/4      0    3      3             10       46       10
+  GLB    K      6    12    18      3/4      0   11      0              5       32       11
+  GLB    L      2    17    19      4/4      0    7      1              8       35        9
+-------------------------------------------------------------------------------------------
+  GLB    M     17     8    25      3/4      0    9      2              5       37       11
+  GLB    N      6    24    30      1/4      0    7      0              9       43       11
+  GLB    O      8    14    22      1/4      0   12      0              4       30       12
+  GLB    P     19     3    22      0/4      0    4      3              9       43       10
+-------------------------------------------------------------------------------------------
+TOTALS:       130   234   364     26/64     0  130     17            109      610      171
+
+<Note> 1 : For ispMACH 4000 devices, the number of IOs depends on the GLB.
+<Note> 2 : Four rightmost columns above reflect last status of the placement process.
+
+
+
+GLB_Control_Summary
+~~~~~~~~~~~~~~~~~~~
+           Shared Shared | Mcell  Mcell  Mcell  Mcell  Mcell 
+           Clk/CE Rst/Pr | Clock  CE     Enable Reset  Preset
+------------------------------------------------------------------------------
+Maximum
+  GLB        1      1        16     16     16     16     16  
+==============================================================================
+  GLB    A   1      0         0      0      0      2      0
+  GLB    B   1      0         0      0      0      0      0
+  GLB    C   0      0         0      0      0      0      0
+  GLB    D   1      0         0      0      0      1      0
+------------------------------------------------------------------------------
+  GLB    E   1      0         0      2      0      0      0
+  GLB    F   1      0         0      3      0      0      0
+  GLB    G   1      0         0      2      0      0      0
+  GLB    H   1      0         0      2      0      0      0
+------------------------------------------------------------------------------
+  GLB    I   1      0         0      2      0      0      0
+  GLB    J   0      0         0      0      0      0      0
+  GLB    K   1      0         0      7      0      0      0
+  GLB    L   1      0         0      2      0      0      0
+------------------------------------------------------------------------------
+  GLB    M   1      0         0      0      0      1      0
+  GLB    N   1      0         0      1      0      0      0
+  GLB    O   1      0         0      4      0      0      0
+  GLB    P   0      0         0      0      0      0      0
+------------------------------------------------------------------------------
+
+<Note> 1 : For ispMACH 4000 devices, the number of output enables depends on the GLB.
+
+
+
+Optimizer_and_Fitter_Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Pin Assignment :                       Yes
+Group Assignment :                     No
+Pin Reservation :                      No
+
+@Ignore_Project_Constraints :
+  Pin Assignments :                    No
+      Keep Block Assignment            --
+      Keep Segment Assignment          --
+  Group Assignments :                  No
+  Macrocell Assignment :               No
+      Keep Block Assignment            --
+      Keep Segment Assignment          --
+
+@Backannotate_Project_Constraints
+  Pin Assignments :                    No
+  Pin And Block Assignments :          No
+  Pin, Macrocell and Block :           No
+
+@Timing_Constraints :                  No
+
+@Global_Project_Optimization :
+  Balanced Partitioning :              Yes
+  Spread Placement :                   Yes
+
+  Note :
+    Pack Design :
+       Balanced Partitioning = No
+       Spread Placement      = No
+    Spread Design :
+       Balanced Partitioning = Yes
+       Spread Placement      = Yes
+
+
+@Logic_Synthesis :
+  Logic Reduction :                    Yes
+  Node Collapsing :                    FMAX
+  Fmax_Logic_Level :                   1
+  D/T Synthesis :                      Yes
+  XOR Synthesis :                      Yes
+  Max. P-Term for Collapsing :         16
+  Max. P-Term for Splitting :          80
+  Max Symbols :                        24
+
+@Utilization_options
+  Max. % of Macrocells used :          100
+@Usercode                               (HEX)
+@IO_Types                              Default = LVCMOS18 (2)
+@Output_Slew_Rate                      Default = FAST (2)
+@Power                                 Default = HIGH (2)
+@Pull                                  Default = PULLUP_UP (2)
+@Fast_Bypass                           Default = None (2)
+@ORP_Bypass                            Default = None
+@Input_Registers                       Default = None (2)
+@Register_Powerup                      Default = None
+
+Device Options:
+<Note> 1 : Reserved unused I/Os can be independently driven to Low or High, and does not
+           follow the drive level set for the Global Configure Unused I/O Option.
+<Note> 2 : For user-specified constraints on individual signals, refer to the Output,
+           Bidir and Buried Signal Lists.
+
+
+
+Pinout_Listing
+~~~~~~~~~~~~~~
+      | Pin   | Bank |GLB |Assigned|                 | Signal|
+Pin No| Type  |Number|Pad |Pin     |     I/O Type    | Type  | Signal name
+-------------------------------------------------------------------------------------------------
+1     | GND   |   -  |    |        |                 |       |
+2     | TDI   |   -  |    |        |                 |       |
+3     |  I_O  |   0  |C12 |        |                 |       |
+4     |  I_O  |   0  |C10 |        |                 |       |
+5     |  I_O  |   0  |C6  |        |                 |       |
+6     |  I_O  |   0  |C2  |        |                 |       |
+7     |GNDIO0 |   -  |    |        |                 |       |
+8     |  I_O  |   0  |D12 |    *   |LVCMOS18         | Input |keyIn_0_
+9     |  I_O  |   0  |D10 |    *   |LVCMOS18         | Input |keyIn_1_
+10    |  I_O  |   0  |D6  |    *   |LVCMOS18         | Input |keyIn_2_
+11    |  I_O  |   0  |D4  |    *   |LVCMOS18         | Input |keyIn_3_
+12    | IN0   |   0  |    |        |                 |       |
+13    |VCCIO0 |   -  |    |        |                 |       |
+14    |  I_O  |   0  |E4  |        |                 |       |
+15    |  I_O  |   0  |E6  |        |                 |       |
+16    |  I_O  |   0  |E10 |        |                 |       |
+17    |  I_O  |   0  |E12 |        |                 |       |
+18    |GNDIO0 |   -  |    |        |                 |       |
+19    |  I_O  |   0  |F2  |        |                 |       |
+20    |  I_O  |   0  |F6  |        |                 |       |
+21    |  I_O  |   0  |F10 |    *   |LVCMOS18         | Output|keyOut_0_
+22    |  I_O  |   0  |F12 |    *   |LVCMOS18         | Output|keyOut_1_
+23    | IN1   |   0  |    |        |                 |       |
+24    | TCK   |   -  |    |        |                 |       |
+25    | VCC   |   -  |    |        |                 |       |
+26    | GND   |   -  |    |        |                 |       |
+27    | IN2   |   0  |    |        |                 |       |
+28    |  I_O  |   0  |G12 |    *   |LVCMOS18         | Output|keyOut_2_
+29    |  I_O  |   0  |G10 |    *   |LVCMOS18         | Output|keyOut_3_
+30    |  I_O  |   0  |G6  |        |                 |       |
+31    |  I_O  |   0  |G2  |        |                 |       |
+32    |GNDIO0 |   -  |    |        |                 |       |
+33    |VCCIO0 |   -  |    |        |                 |       |
+34    |  I_O  |   0  |H12 |        |                 |       |
+35    |  I_O  |   0  |H10 |    *   |LVCMOS18         | Output|led_0_
+36    |  I_O  |   0  |H6  |    *   |LVCMOS18         | Output|led_1_
+37    |  I_O  |   0  |H2  |    *   |LVCMOS18         | Output|led_2_
+38    |INCLK1 |   0  |    |        |                 |       |
+39    |INCLK2 |   1  |    |    *   |LVCMOS18         | Input |clkl
+40    | VCC   |   -  |    |        |                 |       |
+41    |  I_O  |   1  |I2  |    *   |LVCMOS18         | Output|led_3_
+42    |  I_O  |   1  |I6  |    *   |LVCMOS18         | Output|led_4_
+43    |  I_O  |   1  |I10 |        |                 |       |
+44    |  I_O  |   1  |I12 |        |                 |       |
+45    |VCCIO1 |   -  |    |        |                 |       |
+46    |GNDIO1 |   -  |    |        |                 |       |
+47    |  I_O  |   1  |J2  |        |                 |       |
+48    |  I_O  |   1  |J6  |        |                 |       |
+49    |  I_O  |   1  |J10 |    *   |LVCMOS18         | Input |reset
+50    |  I_O  |   1  |J12 |        |                 |       |
+51    | GND   |   -  |    |        |                 |       |
+52    | TMS   |   -  |    |        |                 |       |
+53    |  I_O  |   1  |K12 |        |                 |       |
+54    |  I_O  |   1  |K10 |    *   |LVCMOS18         | Output|LEDVCC_0_
+55    |  I_O  |   1  |K6  |    *   |LVCMOS18         | Output|LEDVCC_1_
+56    |  I_O  |   1  |K2  |    *   |LVCMOS18         | Output|show_5_
+57    |GNDIO1 |   -  |    |        |                 |       |
+58    |  I_O  |   1  |L12 |    *   |LVCMOS18         | Output|show_0_
+59    |  I_O  |   1  |L10 |    *   |LVCMOS18         | Output|pointTime
+60    |  I_O  |   1  |L6  |    *   |LVCMOS18         | Output|show_1_
+61    |  I_O  |   1  |L4  |    *   |LVCMOS18         | Output|show_6_
+62    | IN3   |   1  |    |        |                 |       |
+63    |VCCIO1 |   -  |    |        |                 |       |
+64    |  I_O  |   1  |M4  |    *   |LVCMOS18         | Output|show_3_
+65    |  I_O  |   1  |M6  |    *   |LVCMOS18         | Output|show_2_
+66    |  I_O  |   1  |M10 |    *   |LVCMOS18         | Output|show_4_
+67    |  I_O  |   1  |M12 |        |                 |       |
+68    |GNDIO1 |   -  |    |        |                 |       |
+69    |  I_O  |   1  |N2  |        |                 |       |
+70    |  I_O  |   1  |N6  |        |                 |       |
+71    |  I_O  |   1  |N10 |        |                 |       |
+72    |  I_O  |   1  |N12 |    *   |LVCMOS18         | Output|LEDVCC_3_
+73    | IN4   |   1  |    |        |                 |       |
+74    | TDO   |   -  |    |        |                 |       |
+75    | VCC   |   -  |    |        |                 |       |
+76    | GND   |   -  |    |        |                 |       |
+77    | IN5   |   1  |    |        |                 |       |
+78    |  I_O  |   1  |O12 |    *   |LVCMOS18         | Output|LEDVCC_2_
+79    |  I_O  |   1  |O10 |        |                 |       |
+80    |  I_O  |   1  |O6  |        |                 |       |
+81    |  I_O  |   1  |O2  |        |                 |       |
+82    |GNDIO1 |   -  |    |        |                 |       |
+83    |VCCIO1 |   -  |    |        |                 |       |
+84    |  I_O  |   1  |P12 |        |                 |       |
+85    |  I_O  |   1  |P10 |        |                 |       |
+86    |  I_O  |   1  |P6  |        |                 |       |
+87    | I_O/OE|   1  |P2  |        |                 |       |
+88    |INCLK3 |   1  |    |    *   |LVCMOS18         | Input |clkh
+89    |INCLK0 |   0  |    |        |                 |       |
+90    | VCC   |   -  |    |        |                 |       |
+91    | I_O/OE|   0  |A2  |        |                 |       |
+92    |  I_O  |   0  |A6  |        |                 |       |
+93    |  I_O  |   0  |A10 |        |                 |       |
+94    |  I_O  |   0  |A12 |        |                 |       |
+95    |VCCIO0 |   -  |    |        |                 |       |
+96    |GNDIO0 |   -  |    |        |                 |       |
+97    |  I_O  |   0  |B2  |        |                 |       |
+98    |  I_O  |   0  |B6  |        |                 |       |
+99    |  I_O  |   0  |B10 |        |                 |       |
+100   |  I_O  |   0  |B12 |        |                 |       |
+-------------------------------------------------------------------------------------------------
+
+<Note> GLB Pad : This notation refers to the GLB I/O pad number in the device.
+<Note> Assigned Pin : user or dedicated input assignment (E.g. Clock pins).
+<Note> Pin Type : 
+          ClkIn : Dedicated input or clock pin 
+           CLK  : Dedicated clock pin
+           I_O  : Input/Output pin
+           INP  : Dedicated input pin
+           JTAG : JTAG Control and test pin
+           NC   : No connected
+
+
+
+Input_Signal_List
+~~~~~~~~~~~~~~~~~
+                Input
+         Pin    Fanout
+ Pin GLB Type                       Pullup Signal
+---------------------------------------------------
+  88  -- INCLK     ----------------      Up clkh
+  39  -- INCLK     ----------------      Up clkl
+   8   D  I/O   1  A---------------      Up keyIn_0_
+   9   D  I/O   1  -----F----------      Up keyIn_1_
+  10   D  I/O   1  ------------M---      Up keyIn_2_
+  11   D  I/O   1  ------------M---      Up keyIn_3_
+  49   J  I/O   1  -B--------------      Up reset
+---------------------------------------------------
+
+
+
+Output_Signal_List
+~~~~~~~~~~~~~~~~~~
+          I         C      P R P       O Output
+          N         L Mc   R E U C O F B Fanout
+ Pin GLB  P LL PTs  S Type E S P E E P P                     Slew Pullup Signal
+----------------------------------------------------------------------------------
+  54   K  2  -   1  1 COM                   ----------------  Fast     Up LEDVCC_0_
+  55   K  2  -   1  1 COM                   ----------------  Fast     Up LEDVCC_1_
+  78   O  2  -   1  1 COM                   ----------------  Fast     Up LEDVCC_2_
+  72   N  2  -   1  1 COM                   ----------------  Fast     Up LEDVCC_3_
+  21   F  4  1   3  1 DFF      R *       6  A--D------KL-N-P  Fast     Up keyOut_0_
+  22   F  4  1   3  2 DFF      R *       8  A--D---HI-KL-N-P  Fast     Up keyOut_1_
+  28   G  4  1   3  1 DFF      R *       11 A--DEF-HI-KLMN-P  Fast     Up keyOut_2_
+  29   G  4  1   3  1 DFF      R *       8  A--D---H--KL-NOP  Fast     Up keyOut_3_
+  35   H 10  1   5  1 DFF  *   S            ----------------  Fast     Up led_0_
+  36   H 10  1   5  1 DFF  *   S            ----------------  Fast     Up led_1_
+  37   H 11  2   4  1 DFF  *   S            ----------------  Fast     Up led_2_
+  41   I 10  2   4  1 DFF  *   S            ----------------  Fast     Up led_3_
+  42   I  7  1   1  1 DFF  *   S            ----------------  Fast     Up led_4_
+  59   L  5  2   2  1 DFF  *   S *          ----------------  Fast     Up pointTime
+  58   L  4  -   4  1 COM                   ----------------  Fast     Up show_0_
+  60   L  4  -   4  1 COM                   ----------------  Fast     Up show_1_
+  65   M  4  -   2  1 COM                   ----------------  Fast     Up show_2_
+  64   M  4  -   4  1 COM                   ----------------  Fast     Up show_3_
+  66   M  4  -   3  1 COM                   ----------------  Fast     Up show_4_
+  56   K  4  -   4  1 COM                   ----------------  Fast     Up show_5_
+  61   L  4  -   4  1 COM                   ----------------  Fast     Up show_6_
+----------------------------------------------------------------------------------
+
+<Note> CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+
+Bidir_Signal_List
+~~~~~~~~~~~~~~~~~
+          I         C      P R P       O Bidir
+          N         L Mc   R E U C O F B Fanout
+ Pin GLB  P LL PTs  S Type E S P E E P P                     Slew Pullup Signal
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+<Note> CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+
+Buried_Signal_List
+~~~~~~~~~~~~~~~~~~
+        I         C      P R P       Node
+        N         L Mc   R E U C I F Fanout
+Mc GLB  P LL PTs  S Type E S P E R P                     Signal
+-------------------------------------------------------------------------------------------
+ 4   B  1  -   2  1 DFF      R       1  ----E-----------  button0_d1_q_0_
+ 3   E  1  1   2  2 DFF      R       1  ----E-----------  button0_d2_q_0_
+ 5   E  1  1   2  1 DFF      R       1  ----E-----------  button0_d3_q_0_
+12   A  1  -   1  1 DFF      R       4  -B-D--------M--P  button1_d1_q_0_
+ 9   P  1  1   1  1 DFF      R       4  -B-D--------M--P  button1_d2_q_0_
+12   M  1  1   1  1 DFF      R       4  -B-D--------M--P  button1_d3_q_0_
+12   F  1  -   2  1 DFF      R       2  -B-D------------  button2_d1_q_0_
+10   D  1  1   1  1 DFF      R       2  -B-D------------  button2_d2_q_0_
+11   D  1  1   1  1 DFF      R       2  -B-D------------  button2_d3_q_0_
+ 9   M  1  -   1  1 DFF      R       1  ---D------------  button3_d1_q_0_
+ 9   D  1  1   1  1 DFF      R       2  A--D------------  button3_d2_q_0_
+ 4   A  1  1   1  1 DFF      R       1  ---D------------  button3_d3_q_0_
+ 3   M  1  -   1  1 DFF      R       2  ---D--------M---  button4_d1_q_0_
+ 4   M  1  1   1  1 DFF      R       2  ---D--------M---  button4_d2_q_0_
+ 8   D  1  1   1  1 DFF      R       2  ---D--------M---  button4_d3_q_0_
+ 1   A  8  -   9  2 COM              1  A---------------  calculate_G_340
+ 6   F 13  -  33  7 COM              1  -------------N--  calculate_G_363_0_a3_1
+12   N  3  1   1  1 DFF    * R       1  -------H--------  calculate_combvalue_0_
+12   K  3  1   1  1 DFF    * R       2  -------HI-------  calculate_combvalue_1_
+ 6   A  3  1   2  1 DFF    * R       2  -------HI-------  calculate_combvalue_2_
+12   O  3  1   1  1 DFF    * R       2  -------HI-------  calculate_combvalue_3_
+ 2   B  5  1   1  1 DFF    * R       2  -------HI-------  calculate_combvalue_4_
+12   B  5  1   1  1 DFF    * R       2  -------HI-------  calculate_combvalue_5_
+ 6   D  5  1   2  1 DFF    * R       2  -------HI-------  calculate_combvalue_6_
+ 8   M  5  1   2  1 DFF    * R       2  -------HI-------  calculate_combvalue_7_
+ 7   K  7  2   3  1 DFF    * R *     9  ---DEF--IJ--MNOP  calculate_flag_Cal_0_
+ 7   P 12  -  12  3 COM              2  ----------KL----  calculate_flag_Cal_0__0
+12   L  8  2   3  1 DFF    * R *     9  ---DEF-HIJ--MN-P  calculate_flag_Cal_1_
+ 3   L 13  2  14  3 TFF    * R       5  A--D-------L-N-P  calculate_flag_Data_0_
+ 2   A 12  2   6  2 TFF    * R       5  A--D-------L-N-P  calculate_flag_Data_1_
+ 4   K  7  2   4  1 DFF    * R *     8  ----EF-HIJ--MN-P  calculate_int_Data0_0_
+ 9   A 10  -   2  1 COM              2  --------I-K-----  calculate_int_Data0_0__0
+ 5   K  8  2   4  1 DFF    * R *     8  ----EF-HIJ--MN-P  calculate_int_Data0_1_
+12   I  6  2   3  1 DFF    * R *     7  ----EF--IJ--MN-P  calculate_int_Data0_2_
+ 9   K  7  2   3  1 DFF    * R *     8  ----EF--IJ--MNOP  calculate_int_Data0_3_
+ 1   K  7  2   4  1 DFF    * R *     8  ----EF-HIJ--MN-P  calculate_int_Data1_0_
+ 7   A 10  -   2  1 COM              2  --------I-K-----  calculate_int_Data1_0__0
+ 3   K  8  2   4  1 DFF    * R *     8  ----EF-HIJ--MN-P  calculate_int_Data1_1_
+ 9   I  6  2   3  1 DFF    * R *     7  ----EF--IJ--MN-P  calculate_int_Data1_2_
+ 8   K  7  2   3  1 DFF    * R *     8  ----EF--IJ--MNOP  calculate_int_Data1_3_
+ 4   H 12  2  10  2 DFF    * R *     1  A---------------  calculate_int_Data_0_
+ 7   N 19  -   8  2 COM              5  ----EF-H-----NO-  calculate_int_Data_0__0
+11   H 16  2  16  4 DFF    * R *     2  -BC-------------  calculate_int_Data_1_
+ 1   N 15  3  13  3 DFF    * R *     2  -BC-------------  calculate_int_Data_2_
+ 2   O  9  2   7  2 DFF    * R *     3  ABC-------------  calculate_int_Data_3_
+ 1   E 18  2  14  3 DFF    * R *     2  -BC-------------  calculate_int_Data_4_
+ 7   E 20  2  14  3 DFF    * R *     2  -BC-------------  calculate_int_Data_5_
+ 8   F 18  2  10  3 DFF    * R *     2  -BC-------------  calculate_int_Data_6_
+ 5   M 17  -  22  5 COM              1  --------------O-  calculate_int_data_cnst_0_3__n
+ 5   O  9  2   3  1 DFF  *   S *     1  A---------------  calculate_led_int_Data2_0_
+ 5   N 21  -   9  2 COM              1  --------------O-  calculate_led_int_Data2_0__0
+ 3   O  3  -   2  1 DFF  *   S *     2  AB--------------  calculate_led_int_Data2_1_
+ 1   O  3  -   1  1 DFF    * R *     1  -B--------------  calculate_led_int_Data2_2_
+ 1   B 11  -   9  2 COM              3  ABC-------------  calculate_led_int_data1_2_0__n
+ 7   J 10  -  14  3 COM              2  ----EF----------  calculate_led_int_data2_0_sqmuxa_n
+ 4   D 16  -  30  6 COM              2  A------------N--  calculate_n_1008_0_n
+ 4   J 10  -  15  3 COM              3  ----EF-------N--  calculate_n_1010_i_n
+ 7   D 17  -   2  2 COM              1  -----------L----  calculate_n_116_n
+ 8   H  3  -   3  1 COM              2  -------HI-------  calculate_n_15_0_n
+14   D  2  -   1  1 COM              5  ----EF-H-----NO-  calculate_n_29_0_n
+ 0   B  9  -   5  1 COM              1  --C-------------  calculate_n_405_n
+ 3   C  7  -   5  1 COM              1  A---------------  calculate_n_429_0_n
+ 5   P 10  -  29  6 COM              3  ----EF--------O-  calculate_n_453_0_n
+ 1   J 10  -  17  4 COM              1  -------H--------  calculate_n_457_0_n
+ 5   I 10  -  22  5 COM              1  ----E-----------  calculate_n_479_0_n
+13   G  7  -   1  1 COM              1  --------------O-  calculate_n_500_n
+12   G 12  -   1  1 COM              2  -----FG---------  calculate_n_510_n
+ 3   N  8  -   9  2 COM              1  --------------O-  calculate_n_730_n
+ 7   F  3  1   1  1 DFF    * R       2  -----FG---------  calculate_scanvalue_0_
+ 8   G  4  1   2  1 DFF    * R       2  -----FG---------  calculate_scanvalue_1_
+ 5   A  3  2   3  1 DFF      R       13 AB-DEFGHI-KLMNO-  calculate_time1Oms
+11   G  4  -   1  1 COM              1  ----E-----------  calculate_time1oms3_9_n
+10   G 16  -   1  1 COM              5  A---EFG-------O-  calculate_time1oms3_n
+ 9   G  2  1   1  1 DFF    * R       1  ------G---------  calculate_timecnt_0_
+ 8   O  7  2   2  1 DFF    * R       2  ------G-------O-  calculate_timecnt_10_
+10   O  6  2   1  1 TFF    * R       1  ------G---------  calculate_timecnt_11_
+ 7   G  4  2   2  1 DFF    * R       2  -----FG---------  calculate_timecnt_12_
+ 9   F  5  2   3  1 DFF    * R       2  -----FG---------  calculate_timecnt_13_
+ 3   G  6  2   4  1 DFF    * R       1  ------G---------  calculate_timecnt_14_
+ 5   G  6  2   2  1 DFF    * R       1  ------G---------  calculate_timecnt_15_
+ 6   G  3  1   2  1 DFF    * R       1  ------G---------  calculate_timecnt_1_
+ 4   G  4  1   3  1 DFF    * R       1  ------G---------  calculate_timecnt_2_
+ 2   G  5  1   4  1 DFF    * R       1  ------G---------  calculate_timecnt_3_
+12   E  4  2   2  1 DFF    * R       2  ----E-G---------  calculate_timecnt_4_
+ 2   E  5  2   3  1 DFF    * R       2  ----E-G---------  calculate_timecnt_5_
+ 0   E  5  2   4  1 DFF    * R       2  ----E-G---------  calculate_timecnt_6_
+ 9   O  3  2   2  1 DFF    * R       2  ------G-------O-  calculate_timecnt_7_
+ 7   O  5  2   3  1 DFF    * R       2  ------G-------O-  calculate_timecnt_8_
+ 4   O  5  2   4  1 DFF    * R       2  ------G-------O-  calculate_timecnt_9_
+ 5   D 17  -   6  2 COM              5  ----EF-H-----NO-  calculate_un1_led_int_data2278_n
+ 5   C  6  -   3  1 COM              2  AB--------------  calculate_un81_n
+12   C  5  -   2  1 COM              2  AB--------------  calculate_un82_i_n
+ 9   B  4  -   2  1 COM              2  AB--------------  calculate_un84_i_n
+ 7   C  5  -   2  1 COM              2  AB--------------  calculate_un85_1_0_n
+ 9   C  5  -   2  1 COM              3  ABC-------------  calculate_un86_i_n
+ 1   C  8  -  10  2 COM              1  -B--------------  data0_2__n
+ 7   B  4  -   2  1 COM              1  A---------------  data1_3__n
+ 9   N  1  1   2  1 DFF      R       5  AB--------K--NO-  dynamicshow_counter4_q_1_
+ 6   O  2  1   3  1 DFF      R       5  AB--------K--NO-  dynamicshow_counter4_q_2_
+ 0   A  6  -   4  1 COM              3  ----------KLM---  dynamicshow_out_0__n
+ 3   B 12  -   8  2 COM              3  ----------KLM---  dynamicshow_out_1__n
+ 5   B  9  -   5  1 COM              3  ----------KLM---  dynamicshow_out_2__n
+ 3   A  6  -   4  1 COM              3  ----------KLM---  dynamicshow_out_3__n
+12   P  3  -   1  1 COM              6  A------HI--L-NO-  keyinbutton_i_0__n
+12   D  3  -   1  1 COM              6  A------H--KL-N-P  keyinbutton_i_1__n
+13   D  3  -   1  1 COM              6  A------H--KL-N-P  keyinbutton_i_2__n
+15   D  3  -   1  1 COM              7  A---EF----KL-N-P  keyinbutton_i_3__n
+ 9   L 11  -   4  1 COM              1  -----------L----  pointTime_0
+ 9   E  3  -   1  1 COM              14 ABCDEFGHI-KLMNO-  resetButton_i
+-------------------------------------------------------------------------------------------
+
+<Note> CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        IR = Input register
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+
+PostFit_Equations
+~~~~~~~~~~~~~~~~~
+LEDVCC_0_ = !dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q ; (1 pterm, 2 signals)
+
+LEDVCC_1_ = dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q ; (1 pterm, 2 signals)
+
+LEDVCC_2_ = !dynamicshow_counter4_q_1_.Q & dynamicshow_counter4_q_2_.Q ; (1 pterm, 2 signals)
+
+LEDVCC_3_ = dynamicshow_counter4_q_1_.Q & dynamicshow_counter4_q_2_.Q ; (1 pterm, 2 signals)
+
+button0_d1_q_0_.D = reset ; (1 pterm, 1 signal)
+button0_d1_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button0_d2_q_0_.D = button0_d1_q_0_.Q ; (1 pterm, 1 signal)
+button0_d2_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button0_d3_q_0_.D = button0_d2_q_0_.Q ; (1 pterm, 1 signal)
+button0_d3_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button1_d1_q_0_.D = keyIn_0_ ; (1 pterm, 1 signal)
+button1_d1_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button1_d2_q_0_.D = button1_d1_q_0_.Q ; (1 pterm, 1 signal)
+button1_d2_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button1_d3_q_0_.D = button1_d2_q_0_.Q ; (1 pterm, 1 signal)
+button1_d3_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button2_d1_q_0_.D = keyIn_1_ ; (1 pterm, 1 signal)
+button2_d1_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button2_d2_q_0_.D = button2_d1_q_0_.Q ; (1 pterm, 1 signal)
+button2_d2_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button2_d3_q_0_.D = button2_d2_q_0_.Q ; (1 pterm, 1 signal)
+button2_d3_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button3_d1_q_0_.D = keyIn_2_ ; (1 pterm, 1 signal)
+button3_d1_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button3_d2_q_0_.D = button3_d1_q_0_.Q ; (1 pterm, 1 signal)
+button3_d2_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button3_d3_q_0_.D = button3_d2_q_0_.Q ; (1 pterm, 1 signal)
+button3_d3_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button4_d1_q_0_.D = keyIn_3_ ; (1 pterm, 1 signal)
+button4_d1_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button4_d2_q_0_.D = button4_d1_q_0_.Q ; (1 pterm, 1 signal)
+button4_d2_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button4_d3_q_0_.D = button4_d2_q_0_.Q ; (1 pterm, 1 signal)
+button4_d3_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+calculate_G_340.X1 = !data1_3__n & calculate_un85_1_0_n
+       & !calculate_int_Data_3_.Q & !calculate_un86_i_n & calculate_un82_i_n
+    # !data1_3__n & !calculate_int_Data_3_.Q & !calculate_un86_i_n
+       & !calculate_un84_i_n & calculate_un82_i_n
+    # !data1_3__n & calculate_un85_1_0_n & !calculate_int_Data_3_.Q
+       & !calculate_un86_i_n & calculate_un81_n
+    # !data1_3__n & !calculate_int_Data_3_.Q & !calculate_un86_i_n
+       & !calculate_un84_i_n & calculate_un81_n
+    # data1_3__n & calculate_int_Data_3_.Q
+    # calculate_int_Data_3_.Q & calculate_un86_i_n
+    # !calculate_un85_1_0_n & calculate_int_Data_3_.Q & calculate_un84_i_n
+    # calculate_int_Data_3_.Q & !calculate_un82_i_n & !calculate_un81_n ; (8 pterms, 7 signals)
+calculate_G_340.X2 = !calculate_n_429_0_n ; (1 pterm, 1 signal)
+
+calculate_G_363_0_a3_1.X1 = calculate_flag_Cal_0_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data0_1_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data0_1_.Q
+    # !calculate_int_Data1_0_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_led_int_data2_0_sqmuxa_n & !calculate_n_1010_i_n
+    # !calculate_int_Data1_0_.Q & !calculate_int_Data1_1_.Q
+       & calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_led_int_data2_0_sqmuxa_n & calculate_n_1010_i_n
+    # calculate_int_Data1_0_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+       & calculate_led_int_data2_0_sqmuxa_n & !calculate_n_1010_i_n
+    # calculate_int_Data1_0_.Q & !calculate_int_Data1_1_.Q
+       & calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+       & calculate_led_int_data2_0_sqmuxa_n & calculate_n_1010_i_n
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_led_int_data2_0_sqmuxa_n
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_n_1010_i_n
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_1_.Q
+       & calculate_int_Data0_0_.Q & calculate_n_1010_i_n
+    # !calculate_flag_Cal_1_.Q & calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q & calculate_led_int_data2_0_sqmuxa_n
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_1_.Q & calculate_int_Data1_3_.Q
+       & calculate_int_Data0_1_.Q & !calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_1_.Q & calculate_int_Data1_2_.Q
+       & calculate_int_Data1_3_.Q & calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_1_.Q & calculate_int_Data1_2_.Q
+       & calculate_int_Data0_1_.Q & !calculate_int_Data0_2_.Q
+       & !calculate_int_Data0_3_.Q
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data0_0_.Q
+       & !calculate_led_int_data2_0_sqmuxa_n & !calculate_n_1010_i_n
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q & calculate_int_Data0_0_.Q
+       & !calculate_led_int_data2_0_sqmuxa_n & calculate_n_1010_i_n
+    # calculate_flag_Cal_0_.Q & calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data0_0_.Q
+       & calculate_led_int_data2_0_sqmuxa_n & !calculate_n_1010_i_n
+    # calculate_flag_Cal_0_.Q & calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q & calculate_int_Data0_0_.Q
+       & calculate_led_int_data2_0_sqmuxa_n & calculate_n_1010_i_n
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data0_1_.Q & !calculate_led_int_data2_0_sqmuxa_n
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_1_.Q & !calculate_n_1010_i_n
+    # !calculate_flag_Cal_1_.Q & calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_1_.Q & calculate_n_1010_i_n
+    # !calculate_flag_Cal_1_.Q & calculate_int_Data1_0_.Q
+       & !calculate_int_Data0_1_.Q & calculate_led_int_data2_0_sqmuxa_n
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_1_.Q & !calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_1_.Q & calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data1_3_.Q & !calculate_int_Data0_1_.Q
+       & calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_1_.Q & calculate_int_Data0_2_.Q
+       & calculate_int_Data0_3_.Q
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_led_int_data2_0_sqmuxa_n & !calculate_n_1010_i_n
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_led_int_data2_0_sqmuxa_n & calculate_n_1010_i_n
+    # calculate_flag_Cal_0_.Q & calculate_int_Data1_0_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+       & calculate_led_int_data2_0_sqmuxa_n & !calculate_n_1010_i_n
+    # calculate_flag_Cal_0_.Q & calculate_int_Data1_0_.Q
+       & calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+       & calculate_led_int_data2_0_sqmuxa_n & calculate_n_1010_i_n
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & !calculate_int_Data0_0_.Q & calculate_int_Data0_1_.Q
+       & !calculate_led_int_data2_0_sqmuxa_n & !calculate_n_1010_i_n
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & calculate_int_Data0_0_.Q & calculate_int_Data0_1_.Q
+       & !calculate_led_int_data2_0_sqmuxa_n & calculate_n_1010_i_n
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & !calculate_int_Data0_0_.Q & calculate_int_Data0_1_.Q
+       & calculate_led_int_data2_0_sqmuxa_n & !calculate_n_1010_i_n
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & calculate_int_Data0_0_.Q & calculate_int_Data0_1_.Q
+       & calculate_led_int_data2_0_sqmuxa_n & calculate_n_1010_i_n ; (32 pterms, 12 signals)
+calculate_G_363_0_a3_1.X2 = !calculate_n_29_0_n ; (1 pterm, 1 signal)
+
+calculate_combvalue_0_.D = keyOut_0_.Q ; (1 pterm, 1 signal)
+calculate_combvalue_0_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_combvalue_0_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_combvalue_1_.D = keyOut_1_.Q ; (1 pterm, 1 signal)
+calculate_combvalue_1_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_combvalue_1_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_combvalue_2_.D = keyOut_2_.Q ; (1 pterm, 1 signal)
+calculate_combvalue_2_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_combvalue_2_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_combvalue_3_.D = keyOut_3_.Q ; (1 pterm, 1 signal)
+calculate_combvalue_3_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_combvalue_3_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_combvalue_4_.D = !( !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q ) ; (1 pterm, 3 signals)
+calculate_combvalue_4_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_combvalue_4_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_combvalue_5_.D = !( !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q ) ; (1 pterm, 3 signals)
+calculate_combvalue_5_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_combvalue_5_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_combvalue_6_.D = !( !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q ) ; (1 pterm, 3 signals)
+calculate_combvalue_6_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_combvalue_6_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_combvalue_7_.D = !( !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q ) ; (1 pterm, 3 signals)
+calculate_combvalue_7_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_combvalue_7_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_flag_Cal_0_.D = !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q
+    # !keyinbutton_i_1__n ; (2 pterms, 4 signals)
+calculate_flag_Cal_0_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_flag_Cal_0_.CE = calculate_flag_Cal_0__0 ; (1 pterm, 1 signal)
+calculate_flag_Cal_0_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_flag_Cal_0__0 = keyOut_3_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q & keyinbutton_i_1__n
+       & keyinbutton_i_2__n & !keyinbutton_i_3__n
+    # keyOut_0_.Q & keyOut_3_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & !keyinbutton_i_1__n & keyinbutton_i_2__n
+       & keyinbutton_i_3__n
+    # keyOut_0_.Q & keyOut_3_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & keyinbutton_i_1__n & !keyinbutton_i_2__n
+       & keyinbutton_i_3__n
+    # keyOut_3_.Q & keyOut_1_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & !keyinbutton_i_1__n & keyinbutton_i_2__n
+       & keyinbutton_i_3__n
+    # keyOut_3_.Q & keyOut_2_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & !keyinbutton_i_1__n & keyinbutton_i_2__n
+       & keyinbutton_i_3__n
+    # keyOut_3_.Q & keyOut_1_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & keyinbutton_i_1__n & !keyinbutton_i_2__n
+       & keyinbutton_i_3__n
+    # keyOut_3_.Q & keyOut_2_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & keyinbutton_i_1__n & !keyinbutton_i_2__n
+       & keyinbutton_i_3__n
+    # keyOut_0_.Q & keyOut_1_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & keyinbutton_i_1__n & keyinbutton_i_2__n
+       & !keyinbutton_i_3__n
+    # keyOut_0_.Q & keyOut_2_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & keyinbutton_i_1__n & keyinbutton_i_2__n
+       & !keyinbutton_i_3__n
+    # keyOut_3_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & calculate_flag_Data_0_.Q
+       & !calculate_flag_Data_1_.Q & !keyinbutton_i_1__n & keyinbutton_i_2__n
+       & keyinbutton_i_3__n
+    # keyOut_3_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & calculate_flag_Data_0_.Q
+       & !calculate_flag_Data_1_.Q & keyinbutton_i_1__n & !keyinbutton_i_2__n
+       & keyinbutton_i_3__n
+    # keyOut_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & calculate_flag_Data_0_.Q
+       & !calculate_flag_Data_1_.Q & keyinbutton_i_1__n & keyinbutton_i_2__n
+       & !keyinbutton_i_3__n ; (12 pterms, 12 signals)
+
+calculate_flag_Cal_1_.D = !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q
+       & !keyinbutton_i_2__n
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & keyinbutton_i_2__n ; (2 pterms, 5 signals)
+calculate_flag_Cal_1_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_flag_Cal_1_.CE = calculate_flag_Cal_0__0 ; (1 pterm, 1 signal)
+calculate_flag_Cal_1_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_flag_Data_0_.T = !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_2_.Q
+       & !calculate_n_116_n & !calculate_flag_Data_0_.Q & keyinbutton_i_0__n
+       & keyinbutton_i_1__n & !keyinbutton_i_2__n & keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_2_.Q & !calculate_n_116_n
+       & !calculate_flag_Data_0_.Q & keyinbutton_i_0__n & !keyinbutton_i_1__n
+       & keyinbutton_i_2__n & keyinbutton_i_3__n
+    # !keyOut_1_.Q & calculate_flag_Data_0_.Q & !calculate_flag_Data_1_.Q
+       & keyinbutton_i_0__n & keyinbutton_i_1__n & keyinbutton_i_2__n
+       & !keyinbutton_i_3__n
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !calculate_n_116_n
+       & !calculate_flag_Data_0_.Q & keyinbutton_i_0__n & keyinbutton_i_1__n
+       & !keyinbutton_i_2__n & keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_1_.Q & !calculate_n_116_n
+       & !calculate_flag_Data_0_.Q & keyinbutton_i_0__n & keyinbutton_i_1__n
+       & !keyinbutton_i_2__n & keyinbutton_i_3__n
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !calculate_n_116_n
+       & !calculate_flag_Data_0_.Q & keyinbutton_i_0__n & !keyinbutton_i_1__n
+       & keyinbutton_i_2__n & keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_1_.Q & !calculate_n_116_n
+       & !calculate_flag_Data_0_.Q & keyinbutton_i_0__n & !keyinbutton_i_1__n
+       & keyinbutton_i_2__n & keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !calculate_n_116_n
+       & !calculate_flag_Data_0_.Q & !keyinbutton_i_0__n & keyinbutton_i_1__n
+       & keyinbutton_i_2__n & keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_2_.Q & !calculate_n_116_n
+       & !calculate_flag_Data_0_.Q & !keyinbutton_i_0__n & keyinbutton_i_1__n
+       & keyinbutton_i_2__n & keyinbutton_i_3__n
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !calculate_n_116_n
+       & !calculate_flag_Data_0_.Q & !keyinbutton_i_0__n & keyinbutton_i_1__n
+       & keyinbutton_i_2__n & keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_1_.Q & !calculate_n_116_n
+       & !calculate_flag_Data_0_.Q & !keyinbutton_i_0__n & keyinbutton_i_1__n
+       & keyinbutton_i_2__n & keyinbutton_i_3__n
+    # keyOut_3_.Q & calculate_flag_Data_0_.Q & keyinbutton_i_0__n
+       & keyinbutton_i_1__n & keyinbutton_i_2__n & !keyinbutton_i_3__n
+    # keyOut_2_.Q & calculate_flag_Data_0_.Q & keyinbutton_i_0__n
+       & keyinbutton_i_1__n & keyinbutton_i_2__n & !keyinbutton_i_3__n
+    # calculate_n_116_n & calculate_flag_Data_0_.Q ; (14 pterms, 11 signals)
+calculate_flag_Data_0_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_flag_Data_0_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_flag_Data_1_.T = !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q
+       & calculate_flag_Data_0_.Q & !calculate_flag_Data_1_.Q
+       & keyinbutton_i_0__n & keyinbutton_i_1__n & !keyinbutton_i_2__n
+       & keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & calculate_flag_Data_0_.Q
+       & !calculate_flag_Data_1_.Q & keyinbutton_i_0__n & !keyinbutton_i_1__n
+       & keyinbutton_i_2__n & keyinbutton_i_3__n
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & calculate_flag_Data_0_.Q
+       & !calculate_flag_Data_1_.Q & keyinbutton_i_0__n & keyinbutton_i_1__n
+       & keyinbutton_i_2__n & !keyinbutton_i_3__n
+    # keyOut_3_.Q & calculate_flag_Data_1_.Q & keyinbutton_i_0__n
+       & keyinbutton_i_1__n & keyinbutton_i_2__n & !keyinbutton_i_3__n
+    # keyOut_2_.Q & calculate_flag_Data_1_.Q & keyinbutton_i_0__n
+       & keyinbutton_i_1__n & keyinbutton_i_2__n & !keyinbutton_i_3__n ; (5 pterms, 10 signals)
+calculate_flag_Data_1_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_flag_Data_1_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_int_Data0_0_.D = !keyOut_0_.Q & !keyOut_2_.Q & !keyinbutton_i_1__n
+    # keyOut_0_.Q & keyinbutton_i_1__n
+    # keyOut_2_.Q & keyinbutton_i_1__n & keyinbutton_i_3__n ; (3 pterms, 4 signals)
+calculate_int_Data0_0_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_int_Data0_0_.CE = calculate_int_Data0_0__0 ; (1 pterm, 1 signal)
+calculate_int_Data0_0_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_int_Data0_0__0 = !calculate_flag_Data_0_.Q
+       & !calculate_flag_Data_1_.Q & !calculate_n_1008_0_n
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_1_.Q & keyinbutton_i_0__n
+       & keyinbutton_i_1__n & keyinbutton_i_2__n & !keyinbutton_i_3__n ; (2 pterms, 10 signals)
+
+calculate_int_Data0_1_.D = keyOut_2_.Q & keyinbutton_i_1__n
+       & keyinbutton_i_2__n & keyinbutton_i_3__n
+    # !keyOut_2_.Q & keyinbutton_i_1__n & !keyinbutton_i_2__n
+    # keyOut_0_.Q & !keyinbutton_i_1__n ; (3 pterms, 5 signals)
+calculate_int_Data0_1_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_int_Data0_1_.CE = calculate_int_Data0_0__0 ; (1 pterm, 1 signal)
+calculate_int_Data0_1_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_int_Data0_2_.D = !keyOut_2_.Q & keyOut_1_.Q
+    # keyOut_2_.Q & !keyinbutton_i_0__n ; (2 pterms, 3 signals)
+calculate_int_Data0_2_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_int_Data0_2_.CE = calculate_int_Data0_0__0 ; (1 pterm, 1 signal)
+calculate_int_Data0_2_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_int_Data0_3_.D = !keyOut_0_.Q & !keyOut_1_.Q & !keyinbutton_i_1__n
+    # !keyOut_0_.Q & !keyOut_1_.Q & !keyinbutton_i_2__n ; (2 pterms, 4 signals)
+calculate_int_Data0_3_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_int_Data0_3_.CE = calculate_int_Data0_0__0 ; (1 pterm, 1 signal)
+calculate_int_Data0_3_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_int_Data1_0_.D = !keyOut_0_.Q & !keyOut_2_.Q & !keyinbutton_i_1__n
+    # keyOut_0_.Q & keyinbutton_i_1__n
+    # keyOut_2_.Q & keyinbutton_i_1__n & keyinbutton_i_3__n ; (3 pterms, 4 signals)
+calculate_int_Data1_0_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_int_Data1_0_.CE = calculate_int_Data1_0__0 ; (1 pterm, 1 signal)
+calculate_int_Data1_0_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_int_Data1_0__0 = !calculate_flag_Data_0_.Q
+       & calculate_flag_Data_1_.Q & !calculate_n_1008_0_n
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_1_.Q & keyinbutton_i_0__n
+       & keyinbutton_i_1__n & keyinbutton_i_2__n & !keyinbutton_i_3__n ; (2 pterms, 10 signals)
+
+calculate_int_Data1_1_.D = keyOut_2_.Q & keyinbutton_i_1__n
+       & keyinbutton_i_2__n & keyinbutton_i_3__n
+    # !keyOut_2_.Q & keyinbutton_i_1__n & !keyinbutton_i_2__n
+    # keyOut_0_.Q & !keyinbutton_i_1__n ; (3 pterms, 5 signals)
+calculate_int_Data1_1_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_int_Data1_1_.CE = calculate_int_Data1_0__0 ; (1 pterm, 1 signal)
+calculate_int_Data1_1_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_int_Data1_2_.D = !keyOut_2_.Q & keyOut_1_.Q
+    # keyOut_2_.Q & !keyinbutton_i_0__n ; (2 pterms, 3 signals)
+calculate_int_Data1_2_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_int_Data1_2_.CE = calculate_int_Data1_0__0 ; (1 pterm, 1 signal)
+calculate_int_Data1_2_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_int_Data1_3_.D = !keyOut_0_.Q & !keyOut_1_.Q & !keyinbutton_i_1__n
+    # !keyOut_0_.Q & !keyOut_1_.Q & !keyinbutton_i_2__n ; (2 pterms, 4 signals)
+calculate_int_Data1_3_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_int_Data1_3_.CE = calculate_int_Data1_0__0 ; (1 pterm, 1 signal)
+calculate_int_Data1_3_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_int_Data_0_.D.X1 = !keyOut_3_.Q & !keyOut_1_.Q
+       & !calculate_un1_led_int_data2278_n & !keyinbutton_i_0__n
+    # !keyOut_1_.Q & !calculate_un1_led_int_data2278_n & keyinbutton_i_0__n
+       & !keyinbutton_i_2__n
+    # keyOut_3_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_int_Data1_0_.Q & calculate_int_Data0_0_.Q
+       & keyinbutton_i_0__n
+    # keyOut_1_.Q & !calculate_un1_led_int_data2278_n & keyinbutton_i_0__n
+       & keyinbutton_i_2__n
+    # calculate_un1_led_int_data2278_n & !calculate_flag_Cal_1_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_n_29_0_n
+    # calculate_un1_led_int_data2278_n & !calculate_flag_Cal_1_.Q
+       & calculate_int_Data0_0_.Q & calculate_n_29_0_n
+    # calculate_un1_led_int_data2278_n & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data0_0_.Q & calculate_n_29_0_n
+    # calculate_un1_led_int_data2278_n & calculate_flag_Cal_1_.Q
+       & calculate_int_Data0_0_.Q & !calculate_n_29_0_n ; (8 pterms, 9 signals)
+calculate_int_Data_0_.D.X2 = calculate_un1_led_int_data2278_n
+       & !calculate_int_Data1_0_.Q ; (1 pterm, 2 signals)
+calculate_int_Data_0_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_int_Data_0_.CE = calculate_int_Data_0__0 ; (1 pterm, 1 signal)
+calculate_int_Data_0_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_int_Data_0__0 = !calculate_flag_Data_0_.Q & !calculate_n_1008_0_n
+    # !keyOut_0_.Q & !keyOut_3_.Q & keyOut_2_.Q & !keyOut_1_.Q
+       & keyinbutton_i_0__n & keyinbutton_i_1__n & keyinbutton_i_2__n
+       & !keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & calculate_flag_Cal_0_.Q
+       & !calculate_flag_Cal_1_.Q & keyinbutton_i_0__n & keyinbutton_i_1__n
+       & keyinbutton_i_2__n & !keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !calculate_flag_Cal_0_.Q
+       & keyinbutton_i_0__n & keyinbutton_i_1__n & keyinbutton_i_2__n
+       & calculate_n_29_0_n & !keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & calculate_flag_Cal_0_.Q
+       & !calculate_int_Data1_3_.Q & !calculate_int_Data0_3_.Q
+       & keyinbutton_i_0__n & keyinbutton_i_1__n & keyinbutton_i_2__n
+       & !keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & calculate_flag_Cal_0_.Q
+       & !calculate_int_Data1_3_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_2_.Q & keyinbutton_i_0__n & keyinbutton_i_1__n
+       & keyinbutton_i_2__n & !keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & calculate_flag_Cal_0_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_3_.Q & keyinbutton_i_0__n & keyinbutton_i_1__n
+       & keyinbutton_i_2__n & !keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & calculate_flag_Cal_0_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_1_.Q & !calculate_int_Data0_2_.Q
+       & keyinbutton_i_0__n & keyinbutton_i_1__n & keyinbutton_i_2__n
+       & !keyinbutton_i_3__n ; (8 pterms, 19 signals)
+
+calculate_int_Data_1_.D = keyOut_3_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_int_Data1_0_.Q & !calculate_int_Data0_0_.Q
+       & calculate_int_Data0_1_.Q & keyinbutton_i_0__n
+    # keyOut_3_.Q & !calculate_un1_led_int_data2278_n
+       & !calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & calculate_int_Data0_0_.Q & keyinbutton_i_0__n
+    # keyOut_3_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_int_Data1_1_.Q & calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_1_.Q & keyinbutton_i_0__n
+    # keyOut_3_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_int_Data1_0_.Q & !calculate_int_Data1_1_.Q
+       & calculate_int_Data0_1_.Q & keyinbutton_i_0__n
+    # !keyOut_2_.Q & !keyOut_1_.Q & !calculate_un1_led_int_data2278_n
+       & keyinbutton_i_0__n & !keyinbutton_i_1__n
+    # calculate_un1_led_int_data2278_n & !calculate_n_457_0_n
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_n_29_0_n
+    # calculate_un1_led_int_data2278_n & calculate_n_457_0_n
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data0_1_.Q
+       & calculate_n_29_0_n
+    # calculate_un1_led_int_data2278_n & calculate_n_457_0_n
+       & calculate_int_Data1_1_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_n_29_0_n
+    # calculate_un1_led_int_data2278_n & calculate_n_457_0_n
+       & !calculate_int_Data1_1_.Q & calculate_int_Data0_1_.Q
+       & !calculate_n_29_0_n
+    # calculate_un1_led_int_data2278_n & !calculate_n_457_0_n
+       & calculate_int_Data1_1_.Q & !calculate_int_Data0_1_.Q
+       & calculate_n_29_0_n
+    # calculate_un1_led_int_data2278_n & !calculate_n_457_0_n
+       & !calculate_int_Data1_1_.Q & calculate_int_Data0_1_.Q
+       & calculate_n_29_0_n
+    # calculate_un1_led_int_data2278_n & !calculate_n_457_0_n
+       & calculate_int_Data1_1_.Q & calculate_int_Data0_1_.Q
+       & !calculate_n_29_0_n
+    # calculate_un1_led_int_data2278_n & calculate_n_457_0_n
+       & calculate_int_Data1_1_.Q & calculate_int_Data0_1_.Q
+       & calculate_n_29_0_n
+    # !keyOut_2_.Q & !calculate_un1_led_int_data2278_n & keyinbutton_i_0__n
+       & !keyinbutton_i_2__n
+    # keyOut_2_.Q & !calculate_un1_led_int_data2278_n & !keyinbutton_i_0__n ; (15 pterms, 13 signals)
+calculate_int_Data_1_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_int_Data_1_.CE = calculate_int_Data_0__0 ; (1 pterm, 1 signal)
+calculate_int_Data_1_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_int_Data_2_.D.X1 = keyOut_1_.Q & !calculate_un1_led_int_data2278_n
+    # calculate_un1_led_int_data2278_n & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_2_.Q & calculate_G_363_0_a3_1
+    # calculate_un1_led_int_data2278_n & calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_2_.Q & !calculate_G_363_0_a3_1
+    # calculate_un1_led_int_data2278_n & calculate_int_Data1_2_.Q
+       & calculate_int_Data0_2_.Q & calculate_G_363_0_a3_1
+    # calculate_un1_led_int_data2278_n & !calculate_int_Data1_2_.Q
+       & calculate_int_Data0_2_.Q & !calculate_G_363_0_a3_1
+    # keyOut_2_.Q & !keyOut_1_.Q & !calculate_un1_led_int_data2278_n
+       & !keyinbutton_i_0__n
+    # keyOut_3_.Q & !keyOut_1_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_int_Data1_1_.Q & !calculate_int_Data0_0_.Q
+       & calculate_int_Data0_1_.Q & keyinbutton_i_0__n
+    # keyOut_3_.Q & !keyOut_1_.Q & !calculate_un1_led_int_data2278_n
+       & !calculate_int_Data1_1_.Q & calculate_int_Data1_2_.Q
+       & calculate_int_Data0_0_.Q & keyinbutton_i_0__n
+    # keyOut_3_.Q & !keyOut_1_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_int_Data1_2_.Q & calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_1_.Q & keyinbutton_i_0__n
+    # keyOut_3_.Q & !keyOut_1_.Q & !calculate_un1_led_int_data2278_n
+       & !calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & !calculate_int_Data1_2_.Q & calculate_int_Data0_1_.Q
+       & keyinbutton_i_0__n
+    # keyOut_3_.Q & !keyOut_1_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & calculate_int_Data1_2_.Q & calculate_int_Data0_1_.Q
+       & keyinbutton_i_0__n ; (11 pterms, 12 signals)
+calculate_int_Data_2_.D.X2 = keyOut_3_.Q & !keyOut_1_.Q
+       & !calculate_un1_led_int_data2278_n & calculate_int_Data1_0_.Q
+       & calculate_int_Data0_2_.Q & keyinbutton_i_0__n ; (1 pterm, 6 signals)
+calculate_int_Data_2_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_int_Data_2_.CE = calculate_int_Data_0__0 ; (1 pterm, 1 signal)
+calculate_int_Data_2_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_int_Data_3_.D.X1 = !calculate_un1_led_int_data2278_n
+       & !calculate_int_data_cnst_0_3__n
+    # calculate_un1_led_int_data2278_n & calculate_int_Data1_3_.Q
+       & calculate_int_Data0_3_.Q & calculate_n_29_0_n
+    # calculate_un1_led_int_data2278_n & !calculate_int_Data1_3_.Q
+       & calculate_int_Data0_3_.Q & !calculate_n_29_0_n
+    # calculate_un1_led_int_data2278_n & !calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_3_.Q & calculate_n_29_0_n
+    # calculate_un1_led_int_data2278_n & calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_3_.Q & !calculate_n_29_0_n ; (5 pterms, 5 signals)
+calculate_int_Data_3_.D.X2 = calculate_un1_led_int_data2278_n
+       & !calculate_n_453_0_n ; (1 pterm, 2 signals)
+calculate_int_Data_3_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_int_Data_3_.CE = calculate_int_Data_0__0 ; (1 pterm, 1 signal)
+calculate_int_Data_3_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_int_Data_4_.D = !keyOut_2_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & !calculate_int_Data1_3_.Q & calculate_int_Data0_0_.Q
+       & calculate_int_Data0_1_.Q & calculate_int_Data0_2_.Q
+       & !calculate_int_Data0_3_.Q & !keyinbutton_i_3__n
+    # !keyOut_2_.Q & calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_0_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data1_2_.Q & calculate_int_Data1_3_.Q
+       & calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_2_.Q & calculate_int_Data0_3_.Q
+       & !keyinbutton_i_3__n
+    # !keyOut_2_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_1_.Q & calculate_int_Data1_2_.Q
+       & !calculate_int_Data1_3_.Q & calculate_int_Data0_0_.Q
+       & calculate_int_Data0_1_.Q & !calculate_int_Data0_2_.Q
+       & !calculate_int_Data0_3_.Q & !keyinbutton_i_3__n
+    # !keyOut_2_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & !calculate_int_Data1_2_.Q & !calculate_int_Data1_3_.Q
+       & calculate_int_Data0_1_.Q & calculate_int_Data0_2_.Q
+       & !calculate_int_Data0_3_.Q & !keyinbutton_i_3__n
+    # !keyOut_2_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & calculate_int_Data1_3_.Q & calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_3_.Q & !keyinbutton_i_3__n
+    # !keyOut_2_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_1_.Q & !calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_1_.Q & !calculate_int_Data0_2_.Q
+       & calculate_int_Data0_3_.Q & !keyinbutton_i_3__n
+    # !keyOut_2_.Q & calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_2_.Q & !calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+       & calculate_int_Data0_2_.Q & !calculate_int_Data0_3_.Q
+       & !keyinbutton_i_3__n
+    # !keyOut_2_.Q & calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_0_.Q & calculate_int_Data1_2_.Q
+       & !calculate_int_Data1_3_.Q & !calculate_int_Data0_1_.Q
+       & calculate_int_Data0_2_.Q & !calculate_int_Data0_3_.Q
+       & !keyinbutton_i_3__n
+    # !keyOut_2_.Q & calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_1_.Q & calculate_int_Data1_2_.Q
+       & !calculate_int_Data1_3_.Q & !calculate_int_Data0_0_.Q
+       & calculate_int_Data0_2_.Q & !calculate_int_Data0_3_.Q
+       & !keyinbutton_i_3__n
+    # !keyOut_2_.Q & calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_0_.Q & !calculate_int_Data1_1_.Q
+       & calculate_int_Data1_2_.Q & !calculate_int_Data1_3_.Q
+       & calculate_int_Data0_2_.Q & !calculate_int_Data0_3_.Q
+       & !keyinbutton_i_3__n
+    # !keyOut_2_.Q & calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_1_.Q & calculate_int_Data1_2_.Q
+       & !calculate_int_Data1_3_.Q & !calculate_int_Data0_1_.Q
+       & calculate_int_Data0_2_.Q & !calculate_int_Data0_3_.Q
+       & !keyinbutton_i_3__n
+    # calculate_un1_led_int_data2278_n & !calculate_n_479_0_n
+       & !calculate_n_29_0_n
+    # calculate_un1_led_int_data2278_n & calculate_n_479_0_n
+       & calculate_n_29_0_n ; (13 pterms, 15 signals)
+calculate_int_Data_4_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_int_Data_4_.CE = calculate_int_Data_0__0 ; (1 pterm, 1 signal)
+calculate_int_Data_4_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_int_Data_5_.D = !keyOut_2_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_0_.Q & calculate_int_Data1_2_.Q
+       & !calculate_int_Data1_3_.Q & calculate_int_Data0_0_.Q
+       & calculate_int_Data0_1_.Q & calculate_int_Data0_2_.Q
+       & !calculate_int_Data0_3_.Q & !keyinbutton_i_3__n
+    # !keyOut_2_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & calculate_int_Data1_2_.Q & !calculate_int_Data1_3_.Q
+       & calculate_int_Data0_0_.Q & calculate_int_Data0_2_.Q
+       & !calculate_int_Data0_3_.Q & !keyinbutton_i_3__n
+    # !keyOut_2_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_1_.Q & calculate_int_Data1_2_.Q
+       & !calculate_int_Data1_3_.Q & calculate_int_Data0_1_.Q
+       & calculate_int_Data0_2_.Q & !calculate_int_Data0_3_.Q
+       & !keyinbutton_i_3__n
+    # !keyOut_2_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & calculate_int_Data1_3_.Q & calculate_int_Data0_2_.Q
+       & !calculate_int_Data0_3_.Q & !keyinbutton_i_3__n
+    # !keyOut_2_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_2_.Q & !calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_1_.Q & !calculate_int_Data0_2_.Q
+       & calculate_int_Data0_3_.Q & !keyinbutton_i_3__n
+    # calculate_un1_led_int_data2278_n & calculate_int_Data1_3_.Q
+       & calculate_int_Data0_3_.Q & calculate_led_int_data2_0_sqmuxa_n
+       & calculate_n_29_0_n & calculate_n_1010_i_n
+    # calculate_un1_led_int_data2278_n & calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_3_.Q & calculate_led_int_data2_0_sqmuxa_n
+       & calculate_n_29_0_n & !calculate_n_1010_i_n
+    # calculate_un1_led_int_data2278_n & !calculate_int_Data1_3_.Q
+       & calculate_int_Data0_3_.Q & !calculate_led_int_data2_0_sqmuxa_n
+       & calculate_n_29_0_n & calculate_n_1010_i_n
+    # calculate_un1_led_int_data2278_n & !calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_3_.Q & !calculate_led_int_data2_0_sqmuxa_n
+       & calculate_n_29_0_n & !calculate_n_1010_i_n
+    # calculate_un1_led_int_data2278_n & calculate_n_453_0_n
+       & calculate_int_Data0_3_.Q & calculate_n_29_0_n & calculate_n_1010_i_n
+    # calculate_un1_led_int_data2278_n & calculate_n_453_0_n
+       & calculate_int_Data1_3_.Q & calculate_led_int_data2_0_sqmuxa_n
+       & calculate_n_29_0_n
+    # calculate_un1_led_int_data2278_n & calculate_n_453_0_n
+       & !calculate_int_Data0_3_.Q & calculate_n_29_0_n
+       & !calculate_n_1010_i_n
+    # calculate_un1_led_int_data2278_n & calculate_n_453_0_n
+       & !calculate_int_Data1_3_.Q & !calculate_led_int_data2_0_sqmuxa_n
+       & calculate_n_29_0_n ; (13 pterms, 17 signals)
+calculate_int_Data_5_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_int_Data_5_.CE = calculate_int_Data_0__0 ; (1 pterm, 1 signal)
+calculate_int_Data_5_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_int_Data_6_.D = !keyOut_2_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & calculate_int_Data1_3_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_2_.Q & calculate_int_Data0_3_.Q
+       & !keyinbutton_i_3__n
+    # calculate_un1_led_int_data2278_n & !calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_3_.Q & !calculate_led_int_data2_0_sqmuxa_n
+       & calculate_n_29_0_n & !calculate_n_1010_i_n
+    # calculate_un1_led_int_data2278_n & calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_3_.Q & calculate_led_int_data2_0_sqmuxa_n
+       & calculate_n_29_0_n & !calculate_n_1010_i_n
+    # calculate_un1_led_int_data2278_n & !calculate_int_Data1_3_.Q
+       & calculate_int_Data0_3_.Q & !calculate_led_int_data2_0_sqmuxa_n
+       & calculate_n_29_0_n & calculate_n_1010_i_n
+    # calculate_un1_led_int_data2278_n & calculate_int_Data1_3_.Q
+       & calculate_int_Data0_3_.Q & calculate_led_int_data2_0_sqmuxa_n
+       & calculate_n_29_0_n & calculate_n_1010_i_n
+    # calculate_un1_led_int_data2278_n & calculate_n_453_0_n
+       & !calculate_int_Data0_3_.Q & calculate_n_29_0_n
+       & !calculate_n_1010_i_n
+    # calculate_un1_led_int_data2278_n & calculate_n_453_0_n
+       & !calculate_int_Data1_3_.Q & !calculate_led_int_data2_0_sqmuxa_n
+       & calculate_n_29_0_n
+    # calculate_un1_led_int_data2278_n & calculate_n_453_0_n
+       & calculate_int_Data0_3_.Q & calculate_n_29_0_n & calculate_n_1010_i_n
+    # calculate_un1_led_int_data2278_n & calculate_n_453_0_n
+       & calculate_int_Data1_3_.Q & calculate_led_int_data2_0_sqmuxa_n
+       & calculate_n_29_0_n ; (9 pterms, 15 signals)
+calculate_int_Data_6_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_int_Data_6_.CE = calculate_int_Data_0__0 ; (1 pterm, 1 signal)
+calculate_int_Data_6_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_int_data_cnst_0_3__n.X1 = !keyOut_2_.Q & !calculate_flag_Cal_0_.Q
+    # !keyOut_2_.Q & !calculate_flag_Cal_1_.Q
+    # !keyOut_2_.Q & calculate_int_Data1_1_.Q & calculate_int_Data1_3_.Q
+    # !keyOut_2_.Q & calculate_int_Data1_2_.Q & calculate_int_Data1_3_.Q
+    # !keyOut_2_.Q & calculate_int_Data0_1_.Q & calculate_int_Data0_3_.Q
+    # !keyOut_2_.Q & calculate_int_Data0_2_.Q & calculate_int_Data0_3_.Q
+    # !keyOut_2_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q
+    # !keyOut_2_.Q & !calculate_int_Data1_0_.Q & !calculate_int_Data1_3_.Q
+       & calculate_int_Data0_3_.Q
+    # !keyOut_2_.Q & !calculate_int_Data1_0_.Q & !calculate_int_Data1_1_.Q
+       & calculate_int_Data1_2_.Q & !calculate_int_Data0_1_.Q
+    # !keyOut_2_.Q & !calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & calculate_int_Data0_0_.Q & !calculate_int_Data0_2_.Q
+    # !keyOut_2_.Q & !calculate_int_Data1_0_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_2_.Q
+    # !keyOut_2_.Q & !calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data1_3_.Q & !calculate_int_Data0_3_.Q
+    # !keyOut_2_.Q & !calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_3_.Q
+    # !keyOut_2_.Q & !calculate_int_Data1_1_.Q & !calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_1_.Q & !calculate_int_Data0_3_.Q
+    # !keyOut_2_.Q & !calculate_int_Data1_3_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_2_.Q & !calculate_int_Data0_3_.Q
+    # !keyOut_2_.Q & !calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & calculate_int_Data1_2_.Q & !calculate_int_Data0_0_.Q
+       & calculate_int_Data0_1_.Q & calculate_int_Data0_2_.Q
+    # !keyOut_2_.Q & calculate_int_Data1_0_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_0_.Q & calculate_int_Data0_1_.Q
+    # !keyOut_2_.Q & calculate_int_Data1_0_.Q & !calculate_int_Data1_3_.Q
+       & calculate_int_Data0_0_.Q & calculate_int_Data0_1_.Q
+       & calculate_int_Data0_2_.Q
+    # !keyOut_2_.Q & calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & calculate_int_Data1_2_.Q & calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_3_.Q
+    # !keyOut_2_.Q & calculate_int_Data1_0_.Q & calculate_int_Data1_3_.Q
+       & calculate_int_Data0_0_.Q & calculate_int_Data0_3_.Q
+    # !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q ; (21 pterms, 17 signals)
+calculate_int_data_cnst_0_3__n.X2 = keyOut_2_.Q ; (1 pterm, 1 signal)
+
+calculate_led_int_Data2_0_.D = !( keyOut_3_.Q & !calculate_flag_Cal_0_.Q
+       & calculate_int_Data1_3_.Q & !calculate_int_Data0_3_.Q
+       & keyinbutton_i_0__n
+    # keyOut_3_.Q & !calculate_flag_Cal_0_.Q & keyinbutton_i_0__n
+       & calculate_n_730_n ) ; (2 pterms, 6 signals)
+calculate_led_int_Data2_0_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_led_int_Data2_0_.CE = calculate_led_int_Data2_0__0 ; (1 pterm, 1 signal)
+calculate_led_int_Data2_0_.AP = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_led_int_Data2_0__0 = !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q
+       & calculate_flag_Cal_0_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data1_2_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_2_.Q & keyinbutton_i_0__n & keyinbutton_i_1__n
+       & keyinbutton_i_2__n & !keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & calculate_flag_Cal_0_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_3_.Q & keyinbutton_i_0__n & keyinbutton_i_1__n
+       & keyinbutton_i_2__n & !keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & calculate_flag_Cal_0_.Q
+       & !calculate_int_Data1_3_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_2_.Q & keyinbutton_i_0__n & keyinbutton_i_1__n
+       & keyinbutton_i_2__n & !keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & calculate_flag_Cal_0_.Q
+       & !calculate_int_Data1_3_.Q & !calculate_int_Data0_3_.Q
+       & keyinbutton_i_0__n & keyinbutton_i_1__n & keyinbutton_i_2__n
+       & !keyinbutton_i_3__n
+    # !calculate_flag_Data_0_.Q & !calculate_flag_Data_1_.Q
+       & !calculate_n_1008_0_n
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !calculate_flag_Cal_0_.Q
+       & keyinbutton_i_0__n & keyinbutton_i_1__n & keyinbutton_i_2__n
+       & calculate_n_29_0_n & !keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & calculate_flag_Cal_0_.Q
+       & !calculate_flag_Cal_1_.Q & keyinbutton_i_0__n & keyinbutton_i_1__n
+       & keyinbutton_i_2__n & !keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & keyinbutton_i_0__n
+       & keyinbutton_i_1__n & keyinbutton_i_2__n & calculate_n_1010_i_n
+       & !keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_1_.Q & keyinbutton_i_0__n
+       & keyinbutton_i_1__n & keyinbutton_i_2__n & !keyinbutton_i_3__n ; (9 pterms, 21 signals)
+
+calculate_led_int_Data2_1_.D = 1 ; (1 pterm, 0 signal)
+calculate_led_int_Data2_1_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_led_int_Data2_1_.CE = calculate_led_int_Data2_0__0 ; (1 pterm, 1 signal)
+calculate_led_int_Data2_1_.AP = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_led_int_Data2_2_.D = 0 ; (0 pterm, 0 signal)
+calculate_led_int_Data2_2_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_led_int_Data2_2_.CE = calculate_led_int_Data2_0__0 ; (1 pterm, 1 signal)
+calculate_led_int_Data2_2_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_led_int_data1_2_0__n = calculate_int_Data_2_.Q
+       & calculate_int_Data_4_.Q & calculate_int_Data_5_.Q
+       & calculate_un82_i_n
+    # calculate_int_Data_1_.Q & calculate_int_Data_4_.Q
+       & calculate_int_Data_5_.Q & calculate_un82_i_n
+    # calculate_int_Data_3_.Q & calculate_int_Data_4_.Q
+       & calculate_int_Data_5_.Q & calculate_un82_i_n
+    # calculate_int_Data_2_.Q & calculate_int_Data_3_.Q & calculate_un86_i_n
+    # calculate_int_Data_1_.Q & calculate_int_Data_3_.Q & calculate_un86_i_n
+    # !calculate_un85_1_0_n & calculate_un84_i_n
+    # !calculate_int_Data_4_.Q & !calculate_int_Data_5_.Q & calculate_un81_n
+    # calculate_int_Data_4_.Q & calculate_un86_i_n
+    # !calculate_int_Data_6_.Q & calculate_un81_n ; (9 pterms, 11 signals)
+
+calculate_led_int_data2_0_sqmuxa_n.X1 = !calculate_flag_Cal_0_.Q
+       & calculate_flag_Cal_1_.Q & !calculate_int_Data1_3_.Q
+       & calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_2_.Q & calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_0_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data1_2_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & calculate_int_Data0_0_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_0_.Q & !calculate_int_Data1_2_.Q
+       & calculate_int_Data0_1_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & calculate_int_Data0_1_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_2_.Q & calculate_int_Data0_0_.Q
+       & calculate_int_Data0_1_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_0_.Q & !calculate_int_Data1_1_.Q
+       & calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_1_.Q & calculate_int_Data0_0_.Q
+       & calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_0_.Q & calculate_int_Data0_1_.Q
+       & calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_1_.Q & calculate_int_Data0_1_.Q
+       & calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data0_0_.Q & calculate_int_Data0_1_.Q
+       & calculate_int_Data0_2_.Q
+    # calculate_int_Data1_3_.Q & !calculate_int_Data0_3_.Q ; (13 pterms, 10 signals)
+calculate_led_int_data2_0_sqmuxa_n.X2 = calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_3_.Q ; (1 pterm, 2 signals)
+
+calculate_n_1008_0_n = !( !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & button1_d2_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d1_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d2_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_2_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d2_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d2_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d1_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_2_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d1_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d1_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_2_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d2_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_2_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d2_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d2_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d1_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_2_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d1_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d1_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_2_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d2_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_2_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d2_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d2_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d1_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_2_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d1_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d1_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d3_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_2_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d3_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d3_q_0_.Q ) ; (30 pterms, 16 signals)
+
+calculate_n_1010_i_n = !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_0_.Q & calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & calculate_int_Data1_3_.Q & !calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_0_.Q & calculate_int_Data1_2_.Q
+       & calculate_int_Data1_3_.Q & !calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_1_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & calculate_int_Data1_2_.Q & calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_0_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_1_.Q & calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_1_.Q & !calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_1_.Q & calculate_int_Data1_2_.Q
+       & calculate_int_Data1_3_.Q & !calculate_int_Data0_1_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_0_.Q & !calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_1_.Q & !calculate_int_Data0_2_.Q
+       & !calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_2_.Q
+       & !calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_0_.Q & calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & calculate_int_Data1_2_.Q & !calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_2_.Q & calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_1_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_2_.Q & !calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_1_.Q & calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_1_.Q & !calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_2_.Q & !calculate_int_Data0_2_.Q
+       & !calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_3_.Q & !calculate_int_Data0_3_.Q ; (15 pterms, 10 signals)
+
+calculate_n_116_n.X1 = !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & calculate_flag_Data_0_.Q & !calculate_flag_Data_1_.Q ; (1 pterm, 14 signals)
+calculate_n_116_n.X2 = !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & calculate_flag_Data_0_.Q & !calculate_flag_Data_1_.Q ; (1 pterm, 14 signals)
+
+calculate_n_15_0_n = !( calculate_combvalue_4_.Q & !calculate_combvalue_5_.Q
+       & !calculate_combvalue_6_.Q
+    # !calculate_combvalue_4_.Q & calculate_combvalue_5_.Q
+       & !calculate_combvalue_6_.Q
+    # !calculate_combvalue_4_.Q & !calculate_combvalue_5_.Q
+       & calculate_combvalue_6_.Q ) ; (3 pterms, 3 signals)
+
+calculate_n_29_0_n = !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q ; (1 pterm, 2 signals)
+
+calculate_n_405_n = !( calculate_int_Data_3_.Q & calculate_int_Data_4_.Q
+       & calculate_int_Data_5_.Q & calculate_un82_i_n
+    # calculate_int_Data_2_.Q & calculate_int_Data_4_.Q
+       & calculate_int_Data_5_.Q & calculate_un82_i_n
+    # calculate_int_Data_1_.Q & calculate_int_Data_4_.Q
+       & calculate_int_Data_5_.Q & calculate_un82_i_n
+    # calculate_un85_1_0_n & !calculate_int_Data_6_.Q
+    # !calculate_un82_i_n & !calculate_un81_n ) ; (5 pterms, 9 signals)
+
+calculate_n_429_0_n = !( !calculate_n_405_n & calculate_led_int_data1_2_0__n
+       & calculate_int_Data_1_.Q
+    # calculate_led_int_data1_2_0__n & calculate_int_Data_1_.Q
+       & calculate_int_Data_2_.Q
+    # calculate_int_Data_2_.Q & calculate_int_Data_4_.Q & calculate_un86_i_n
+    # calculate_int_Data_2_.Q & calculate_int_Data_3_.Q & calculate_un86_i_n
+    # !calculate_n_405_n & calculate_int_Data_2_.Q & !calculate_un86_i_n ) ; (5 pterms, 7 signals)
+
+calculate_n_453_0_n.X1 = calculate_flag_Cal_0_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_2_.Q
+    # !calculate_int_Data1_0_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data1_2_.Q & calculate_int_Data1_3_.Q
+       & calculate_int_Data0_0_.Q & !calculate_int_Data0_2_.Q
+       & !calculate_int_Data0_3_.Q
+    # calculate_int_Data1_0_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data1_3_.Q & !calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_1_.Q & !calculate_int_Data0_2_.Q
+       & calculate_int_Data0_3_.Q
+    # calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data1_3_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_2_.Q & calculate_int_Data0_3_.Q
+    # !calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & calculate_int_Data1_3_.Q & calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_2_.Q & !calculate_int_Data0_3_.Q
+    # !calculate_int_Data1_0_.Q & !calculate_int_Data1_2_.Q
+       & calculate_int_Data1_3_.Q & calculate_int_Data0_0_.Q
+       & calculate_int_Data0_1_.Q & !calculate_int_Data0_2_.Q
+       & !calculate_int_Data0_3_.Q
+    # calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & !calculate_int_Data1_2_.Q & !calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_2_.Q
+       & calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data0_0_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_1_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data0_1_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data0_1_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_2_.Q & calculate_int_Data1_3_.Q
+       & calculate_int_Data0_2_.Q & !calculate_int_Data0_3_.Q
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_0_.Q
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_2_.Q & !calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_1_.Q
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data1_2_.Q & !calculate_int_Data0_1_.Q
+    # !calculate_flag_Cal_1_.Q & calculate_int_Data1_2_.Q
+       & calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_2_.Q & !calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_2_.Q & calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_1_.Q & calculate_int_Data1_2_.Q
+       & !calculate_int_Data1_3_.Q & !calculate_int_Data0_1_.Q
+       & calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & calculate_int_Data1_2_.Q & !calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_0_.Q & calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_int_Data1_0_.Q
+       & calculate_int_Data1_2_.Q & !calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+       & calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & !calculate_int_Data1_1_.Q
+       & calculate_int_Data1_2_.Q & calculate_int_Data1_3_.Q
+       & calculate_int_Data0_1_.Q & calculate_int_Data0_2_.Q
+       & !calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q & calculate_int_Data1_2_.Q
+       & calculate_int_Data1_3_.Q & calculate_int_Data0_0_.Q
+       & calculate_int_Data0_2_.Q & !calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & calculate_int_Data1_2_.Q & calculate_int_Data1_3_.Q
+       & calculate_int_Data0_0_.Q & calculate_int_Data0_1_.Q
+       & calculate_int_Data0_2_.Q & !calculate_int_Data0_3_.Q
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data0_1_.Q & !calculate_int_Data0_2_.Q
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_2_.Q
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_2_.Q ; (28 pterms, 10 signals)
+calculate_n_453_0_n.X2 = !calculate_flag_Cal_1_.Q & calculate_int_Data1_2_.Q
+       & calculate_int_Data0_2_.Q ; (1 pterm, 3 signals)
+
+calculate_n_457_0_n = !calculate_flag_Cal_0_.Q & calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_0_.Q & calculate_int_Data0_1_.Q
+       & calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data1_3_.Q & !calculate_int_Data0_0_.Q
+       & calculate_int_Data0_1_.Q
+    # !calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & calculate_int_Data1_1_.Q & calculate_int_Data1_3_.Q
+       & calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & calculate_int_Data1_1_.Q & calculate_int_Data1_2_.Q
+       & calculate_int_Data1_3_.Q & calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_1_.Q
+    # !calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & calculate_int_Data1_1_.Q & calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_1_.Q & !calculate_int_Data0_2_.Q
+       & !calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_2_.Q & !calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_0_.Q & calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & calculate_int_Data1_1_.Q & calculate_int_Data1_2_.Q
+       & calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & calculate_int_Data1_2_.Q & calculate_int_Data1_3_.Q
+       & calculate_int_Data0_0_.Q & !calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data0_0_.Q
+       & calculate_int_Data0_1_.Q & calculate_int_Data0_2_.Q
+       & calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_0_.Q & calculate_int_Data0_1_.Q
+       & calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & calculate_int_Data1_2_.Q & calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_2_.Q & !calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_2_.Q & !calculate_int_Data0_0_.Q
+       & calculate_int_Data0_2_.Q & calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & calculate_int_Data1_3_.Q & calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_3_.Q & !calculate_int_Data0_0_.Q
+       & calculate_int_Data0_3_.Q
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data0_0_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data0_0_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_0_.Q ; (17 pterms, 10 signals)
+
+calculate_n_479_0_n.X1 = calculate_flag_Cal_0_.Q & !calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_3_.Q
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data1_2_.Q & !calculate_int_Data0_0_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_2_.Q & !calculate_int_Data0_1_.Q
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data1_2_.Q & !calculate_int_Data0_1_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data1_2_.Q & !calculate_int_Data0_1_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data0_1_.Q & !calculate_int_Data0_2_.Q
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data0_1_.Q & !calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data0_1_.Q & !calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_1_.Q & !calculate_int_Data0_2_.Q
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_0_.Q
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_2_.Q & !calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_1_.Q
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_2_.Q
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_2_.Q
+    # calculate_int_Data1_3_.Q & calculate_int_Data0_3_.Q ; (21 pterms, 10 signals)
+calculate_n_479_0_n.X2 = calculate_int_Data1_3_.Q & calculate_int_Data0_3_.Q ; (1 pterm, 2 signals)
+
+calculate_n_500_n = calculate_timecnt_6_.Q & calculate_timecnt_4_.Q
+       & calculate_timecnt_0_.Q & calculate_timecnt_1_.Q
+       & calculate_timecnt_2_.Q & calculate_timecnt_3_.Q
+       & calculate_timecnt_5_.Q ; (1 pterm, 7 signals)
+
+calculate_n_510_n = calculate_timecnt_6_.Q & calculate_timecnt_7_.Q
+       & calculate_timecnt_11_.Q & calculate_timecnt_9_.Q
+       & calculate_timecnt_4_.Q & calculate_timecnt_0_.Q
+       & calculate_timecnt_1_.Q & calculate_timecnt_2_.Q
+       & calculate_timecnt_3_.Q & calculate_timecnt_5_.Q
+       & calculate_timecnt_8_.Q & calculate_timecnt_10_.Q ; (1 pterm, 12 signals)
+
+calculate_n_730_n.X1 = calculate_int_Data1_2_.Q & !calculate_int_Data0_2_.Q
+    # calculate_int_Data1_1_.Q & calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_1_.Q
+    # calculate_int_Data1_1_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_2_.Q
+    # calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & calculate_int_Data1_2_.Q & !calculate_int_Data0_0_.Q
+    # calculate_int_Data1_0_.Q & calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+    # calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_2_.Q
+    # calculate_int_Data1_0_.Q & !calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_1_.Q & !calculate_int_Data0_2_.Q
+    # !calculate_int_Data1_3_.Q & calculate_int_Data0_3_.Q ; (8 pterms, 8 signals)
+calculate_n_730_n.X2 = !calculate_int_Data1_3_.Q & calculate_int_Data0_3_.Q ; (1 pterm, 2 signals)
+
+calculate_scanvalue_0_.D = !calculate_scanvalue_0_.Q ; (1 pterm, 1 signal)
+calculate_scanvalue_0_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_scanvalue_0_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_scanvalue_1_.D = calculate_scanvalue_0_.Q
+       & !calculate_scanvalue_1_.Q
+    # !calculate_scanvalue_0_.Q & calculate_scanvalue_1_.Q ; (2 pterms, 2 signals)
+calculate_scanvalue_1_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_scanvalue_1_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_time1Oms.D = !calculate_time1Oms.Q & !resetButton_i
+       & calculate_time1oms3_n
+    # calculate_time1Oms.Q & resetButton_i
+    # calculate_time1Oms.Q & !calculate_time1oms3_n ; (3 pterms, 3 signals)
+calculate_time1Oms.C = clkh ; (1 pterm, 1 signal)
+
+calculate_time1oms3_9_n = calculate_timecnt_0_.Q & calculate_timecnt_1_.Q
+       & calculate_timecnt_2_.Q & calculate_timecnt_3_.Q ; (1 pterm, 4 signals)
+
+calculate_time1oms3_n = !calculate_timecnt_6_.Q & !calculate_timecnt_7_.Q
+       & !calculate_timecnt_11_.Q & !calculate_timecnt_9_.Q
+       & !calculate_timecnt_4_.Q & !calculate_timecnt_15_.Q
+       & calculate_timecnt_0_.Q & calculate_timecnt_1_.Q
+       & calculate_timecnt_2_.Q & calculate_timecnt_3_.Q
+       & calculate_timecnt_5_.Q & calculate_timecnt_8_.Q
+       & calculate_timecnt_10_.Q & calculate_timecnt_12_.Q
+       & calculate_timecnt_13_.Q & calculate_timecnt_14_.Q ; (1 pterm, 16 signals)
+
+calculate_timecnt_0_.D = !calculate_timecnt_0_.Q ; (1 pterm, 1 signal)
+calculate_timecnt_0_.C = clkh ; (1 pterm, 1 signal)
+calculate_timecnt_0_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_timecnt_10_.D.X1 = calculate_timecnt_7_.Q & calculate_timecnt_9_.Q
+       & calculate_timecnt_8_.Q & !calculate_time1oms3_n & calculate_n_500_n ; (1 pterm, 5 signals)
+calculate_timecnt_10_.D.X2 = calculate_timecnt_10_.Q & !calculate_time1oms3_n ; (1 pterm, 2 signals)
+calculate_timecnt_10_.C = clkh ; (1 pterm, 1 signal)
+calculate_timecnt_10_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_timecnt_11_.T = calculate_timecnt_7_.Q & calculate_timecnt_9_.Q
+       & calculate_timecnt_8_.Q & calculate_timecnt_10_.Q & calculate_n_500_n ; (1 pterm, 5 signals)
+calculate_timecnt_11_.C = clkh ; (1 pterm, 1 signal)
+calculate_timecnt_11_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_timecnt_12_.D = calculate_timecnt_12_.Q & !calculate_time1oms3_n
+       & !calculate_n_510_n
+    # !calculate_timecnt_12_.Q & !calculate_time1oms3_n & calculate_n_510_n ; (2 pterms, 3 signals)
+calculate_timecnt_12_.C = clkh ; (1 pterm, 1 signal)
+calculate_timecnt_12_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_timecnt_13_.D = calculate_timecnt_12_.Q & !calculate_timecnt_13_.Q
+       & !calculate_time1oms3_n & calculate_n_510_n
+    # !calculate_timecnt_12_.Q & calculate_timecnt_13_.Q
+       & !calculate_time1oms3_n
+    # calculate_timecnt_13_.Q & !calculate_time1oms3_n & !calculate_n_510_n ; (3 pterms, 4 signals)
+calculate_timecnt_13_.C = clkh ; (1 pterm, 1 signal)
+calculate_timecnt_13_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_timecnt_14_.D = calculate_timecnt_12_.Q & calculate_timecnt_13_.Q
+       & !calculate_timecnt_14_.Q & !calculate_time1oms3_n & calculate_n_510_n
+    # !calculate_timecnt_13_.Q & calculate_timecnt_14_.Q
+       & !calculate_time1oms3_n
+    # !calculate_timecnt_12_.Q & calculate_timecnt_14_.Q
+       & !calculate_time1oms3_n
+    # calculate_timecnt_14_.Q & !calculate_time1oms3_n & !calculate_n_510_n ; (4 pterms, 5 signals)
+calculate_timecnt_14_.C = clkh ; (1 pterm, 1 signal)
+calculate_timecnt_14_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_timecnt_15_.D.X1 = calculate_timecnt_15_.Q ; (1 pterm, 1 signal)
+calculate_timecnt_15_.D.X2 = calculate_timecnt_12_.Q & calculate_timecnt_13_.Q
+       & calculate_timecnt_14_.Q & calculate_n_510_n ; (1 pterm, 4 signals)
+calculate_timecnt_15_.C = clkh ; (1 pterm, 1 signal)
+calculate_timecnt_15_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_timecnt_1_.D = calculate_timecnt_0_.Q & !calculate_timecnt_1_.Q
+    # !calculate_timecnt_0_.Q & calculate_timecnt_1_.Q ; (2 pterms, 2 signals)
+calculate_timecnt_1_.C = clkh ; (1 pterm, 1 signal)
+calculate_timecnt_1_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_timecnt_2_.D = calculate_timecnt_0_.Q & calculate_timecnt_1_.Q
+       & !calculate_timecnt_2_.Q
+    # !calculate_timecnt_1_.Q & calculate_timecnt_2_.Q
+    # !calculate_timecnt_0_.Q & calculate_timecnt_2_.Q ; (3 pterms, 3 signals)
+calculate_timecnt_2_.C = clkh ; (1 pterm, 1 signal)
+calculate_timecnt_2_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_timecnt_3_.D = calculate_timecnt_0_.Q & calculate_timecnt_1_.Q
+       & calculate_timecnt_2_.Q & !calculate_timecnt_3_.Q
+    # !calculate_timecnt_2_.Q & calculate_timecnt_3_.Q
+    # !calculate_timecnt_1_.Q & calculate_timecnt_3_.Q
+    # !calculate_timecnt_0_.Q & calculate_timecnt_3_.Q ; (4 pterms, 4 signals)
+calculate_timecnt_3_.C = clkh ; (1 pterm, 1 signal)
+calculate_timecnt_3_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_timecnt_4_.D = calculate_timecnt_4_.Q & !calculate_time1oms3_n
+       & !calculate_time1oms3_9_n
+    # !calculate_timecnt_4_.Q & !calculate_time1oms3_n
+       & calculate_time1oms3_9_n ; (2 pterms, 3 signals)
+calculate_timecnt_4_.C = clkh ; (1 pterm, 1 signal)
+calculate_timecnt_4_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_timecnt_5_.D = calculate_timecnt_4_.Q & !calculate_timecnt_5_.Q
+       & !calculate_time1oms3_n & calculate_time1oms3_9_n
+    # !calculate_timecnt_4_.Q & calculate_timecnt_5_.Q
+       & !calculate_time1oms3_n
+    # calculate_timecnt_5_.Q & !calculate_time1oms3_n
+       & !calculate_time1oms3_9_n ; (3 pterms, 4 signals)
+calculate_timecnt_5_.C = clkh ; (1 pterm, 1 signal)
+calculate_timecnt_5_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_timecnt_6_.D = !calculate_timecnt_6_.Q & calculate_timecnt_4_.Q
+       & calculate_timecnt_5_.Q & calculate_time1oms3_9_n
+    # calculate_timecnt_6_.Q & !calculate_timecnt_5_.Q
+    # calculate_timecnt_6_.Q & !calculate_timecnt_4_.Q
+    # calculate_timecnt_6_.Q & !calculate_time1oms3_9_n ; (4 pterms, 4 signals)
+calculate_timecnt_6_.C = clkh ; (1 pterm, 1 signal)
+calculate_timecnt_6_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_timecnt_7_.D = calculate_timecnt_7_.Q & !calculate_n_500_n
+    # !calculate_timecnt_7_.Q & calculate_n_500_n ; (2 pterms, 2 signals)
+calculate_timecnt_7_.C = clkh ; (1 pterm, 1 signal)
+calculate_timecnt_7_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_timecnt_8_.D = calculate_timecnt_7_.Q & !calculate_timecnt_8_.Q
+       & !calculate_time1oms3_n & calculate_n_500_n
+    # !calculate_timecnt_7_.Q & calculate_timecnt_8_.Q
+       & !calculate_time1oms3_n
+    # calculate_timecnt_8_.Q & !calculate_time1oms3_n & !calculate_n_500_n ; (3 pterms, 4 signals)
+calculate_timecnt_8_.C = clkh ; (1 pterm, 1 signal)
+calculate_timecnt_8_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_timecnt_9_.D = calculate_timecnt_7_.Q & !calculate_timecnt_9_.Q
+       & calculate_timecnt_8_.Q & calculate_n_500_n
+    # calculate_timecnt_9_.Q & !calculate_timecnt_8_.Q
+    # !calculate_timecnt_7_.Q & calculate_timecnt_9_.Q
+    # calculate_timecnt_9_.Q & !calculate_n_500_n ; (4 pterms, 4 signals)
+calculate_timecnt_9_.C = clkh ; (1 pterm, 1 signal)
+calculate_timecnt_9_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_un1_led_int_data2278_n = !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q
+       & button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & calculate_flag_Cal_0_.Q
+       & !calculate_flag_Cal_1_.Q
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & button4_d2_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & calculate_flag_Cal_0_.Q & !calculate_flag_Cal_1_.Q
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & button4_d1_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & calculate_flag_Cal_0_.Q & !calculate_flag_Cal_1_.Q
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & button4_d2_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & button4_d1_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q ; (6 pterms, 17 signals)
+
+calculate_un81_n = !( !calculate_int_Data_2_.Q & !calculate_int_Data_3_.Q
+       & !calculate_int_Data_4_.Q & !calculate_int_Data_5_.Q
+    # !calculate_int_Data_1_.Q & !calculate_int_Data_3_.Q
+       & !calculate_int_Data_4_.Q & !calculate_int_Data_5_.Q
+    # !calculate_int_Data_6_.Q ) ; (3 pterms, 6 signals)
+
+calculate_un82_i_n = !( calculate_int_Data_2_.Q & calculate_int_Data_3_.Q
+       & calculate_int_Data_4_.Q & calculate_int_Data_5_.Q
+    # calculate_int_Data_6_.Q ) ; (2 pterms, 5 signals)
+
+calculate_un84_i_n = !calculate_int_Data_3_.Q & !calculate_int_Data_4_.Q
+       & !calculate_int_Data_6_.Q
+    # !calculate_int_Data_5_.Q & !calculate_int_Data_6_.Q ; (2 pterms, 4 signals)
+
+calculate_un85_1_0_n = !( calculate_int_Data_1_.Q & calculate_int_Data_2_.Q
+       & calculate_int_Data_3_.Q & calculate_int_Data_4_.Q
+    # calculate_int_Data_5_.Q ) ; (2 pterms, 5 signals)
+
+calculate_un86_i_n = !calculate_int_Data_2_.Q & !calculate_int_Data_3_.Q
+       & !calculate_int_Data_5_.Q & !calculate_int_Data_6_.Q
+    # !calculate_int_Data_4_.Q & !calculate_int_Data_5_.Q
+       & !calculate_int_Data_6_.Q ; (2 pterms, 5 signals)
+
+data0_2__n.X1 = !calculate_n_405_n & calculate_led_int_data1_2_0__n
+       & calculate_int_Data_1_.Q & !resetButton_i & !calculate_un86_i_n
+    # calculate_n_405_n & !calculate_led_int_data1_2_0__n & !resetButton_i
+       & !calculate_un86_i_n
+    # calculate_n_405_n & !calculate_int_Data_1_.Q & !resetButton_i
+       & !calculate_un86_i_n
+    # !calculate_int_Data_1_.Q & !calculate_int_Data_2_.Q
+       & !calculate_int_Data_4_.Q & !resetButton_i & calculate_un86_i_n
+    # !calculate_led_int_data1_2_0__n & !calculate_int_Data_3_.Q
+       & !calculate_int_Data_4_.Q & !resetButton_i & calculate_un86_i_n
+    # calculate_led_int_data1_2_0__n & !calculate_int_Data_2_.Q
+       & calculate_int_Data_3_.Q & !calculate_int_Data_4_.Q & !resetButton_i
+       & calculate_un86_i_n
+    # calculate_led_int_data1_2_0__n & calculate_int_Data_1_.Q
+       & calculate_int_Data_4_.Q & !resetButton_i & calculate_un86_i_n
+    # !calculate_int_Data_1_.Q & !calculate_int_Data_3_.Q
+       & !calculate_int_Data_4_.Q & !resetButton_i & calculate_un86_i_n
+    # calculate_led_int_data1_2_0__n & calculate_int_Data_1_.Q
+       & calculate_int_Data_2_.Q & calculate_int_Data_3_.Q & !resetButton_i
+       & calculate_un86_i_n ; (9 pterms, 8 signals)
+data0_2__n.X2 = !calculate_int_Data_2_.Q & !resetButton_i ; (1 pterm, 2 signals)
+
+data1_3__n = calculate_int_Data_5_.Q & calculate_int_Data_6_.Q
+       & !resetButton_i
+    # calculate_int_Data_4_.Q & calculate_int_Data_6_.Q & !resetButton_i ; (2 pterms, 4 signals)
+
+dynamicshow_counter4_q_1_.D = !dynamicshow_counter4_q_1_.Q ; (1 pterm, 1 signal)
+dynamicshow_counter4_q_1_.C = clkl ; (1 pterm, 1 signal)
+
+dynamicshow_counter4_q_2_.D = dynamicshow_counter4_q_1_.Q
+       & !dynamicshow_counter4_q_2_.Q
+    # !dynamicshow_counter4_q_1_.Q & dynamicshow_counter4_q_2_.Q ; (2 pterms, 2 signals)
+dynamicshow_counter4_q_2_.C = clkl ; (1 pterm, 1 signal)
+
+dynamicshow_out_0__n = !dynamicshow_counter4_q_1_.Q
+       & !dynamicshow_counter4_q_2_.Q & calculate_int_Data_0_.Q
+       & !resetButton_i
+    # calculate_led_int_Data2_0_.Q & dynamicshow_counter4_q_2_.Q
+    # dynamicshow_counter4_q_1_.Q & calculate_led_int_data1_2_0__n
+       & !resetButton_i
+    # dynamicshow_counter4_q_1_.Q & dynamicshow_counter4_q_2_.Q ; (4 pterms, 6 signals)
+
+dynamicshow_out_1__n = dynamicshow_counter4_q_1_.Q & !calculate_int_Data_3_.Q
+       & !calculate_int_Data_4_.Q & !calculate_int_Data_6_.Q & !resetButton_i
+       & !calculate_un86_i_n
+    # !dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q
+       & calculate_led_int_data1_2_0__n & !calculate_int_Data_1_.Q
+       & !resetButton_i
+    # !dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q
+       & !calculate_led_int_data1_2_0__n & calculate_int_Data_1_.Q
+       & !resetButton_i
+    # dynamicshow_counter4_q_1_.Q & !calculate_int_Data_4_.Q
+       & !calculate_int_Data_5_.Q & !resetButton_i & !calculate_un86_i_n
+    # dynamicshow_counter4_q_1_.Q & !calculate_int_Data_5_.Q
+       & !calculate_int_Data_6_.Q & !resetButton_i & !calculate_un86_i_n
+    # dynamicshow_counter4_q_1_.Q & !calculate_int_Data_6_.Q & !resetButton_i
+       & !calculate_un86_i_n & !calculate_un82_i_n
+    # calculate_led_int_Data2_1_.Q & dynamicshow_counter4_q_2_.Q
+    # dynamicshow_counter4_q_1_.Q & dynamicshow_counter4_q_2_.Q ; (8 pterms, 12 signals)
+
+dynamicshow_out_2__n = dynamicshow_counter4_q_1_.Q & !calculate_int_Data_4_.Q
+       & !calculate_int_Data_5_.Q & !resetButton_i & !calculate_un84_i_n
+    # !dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q & data0_2__n
+    # dynamicshow_counter4_q_1_.Q & !calculate_int_Data_6_.Q & !resetButton_i
+       & !calculate_un84_i_n
+    # calculate_led_int_Data2_2_.Q & dynamicshow_counter4_q_2_.Q
+    # dynamicshow_counter4_q_1_.Q & dynamicshow_counter4_q_2_.Q ; (5 pterms, 9 signals)
+
+dynamicshow_out_3__n = !dynamicshow_counter4_q_1_.Q
+       & !dynamicshow_counter4_q_2_.Q & calculate_G_340 & !resetButton_i
+    # calculate_led_int_Data2_1_.Q & dynamicshow_counter4_q_2_.Q
+    # data1_3__n & dynamicshow_counter4_q_1_.Q
+    # dynamicshow_counter4_q_1_.Q & dynamicshow_counter4_q_2_.Q ; (4 pterms, 6 signals)
+
+keyOut_0_.D = !calculate_scanvalue_0_.Q & !calculate_scanvalue_1_.Q ; (1 pterm, 2 signals)
+keyOut_0_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+keyOut_0_.CE = !resetButton_i ; (1 pterm, 1 signal)
+
+keyOut_1_.D = calculate_scanvalue_0_.Q & !calculate_scanvalue_1_.Q ; (1 pterm, 2 signals)
+keyOut_1_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+keyOut_1_.CE = !resetButton_i ; (1 pterm, 1 signal)
+
+keyOut_2_.D = !calculate_scanvalue_0_.Q & calculate_scanvalue_1_.Q ; (1 pterm, 2 signals)
+keyOut_2_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+keyOut_2_.CE = !resetButton_i ; (1 pterm, 1 signal)
+
+keyOut_3_.D = calculate_scanvalue_0_.Q & calculate_scanvalue_1_.Q ; (1 pterm, 2 signals)
+keyOut_3_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+keyOut_3_.CE = !resetButton_i ; (1 pterm, 1 signal)
+
+keyinbutton_i_0__n = !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyinbutton_i_1__n = !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyinbutton_i_2__n = !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyinbutton_i_3__n = !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+led_0_.D = !calculate_combvalue_0_.Q & !calculate_combvalue_1_.Q
+       & !calculate_combvalue_2_.Q & !calculate_combvalue_3_.Q
+    # !calculate_combvalue_4_.Q & !calculate_combvalue_6_.Q
+    # calculate_combvalue_4_.Q & calculate_combvalue_6_.Q
+    # calculate_combvalue_7_.Q
+    # calculate_combvalue_5_.Q ; (5 pterms, 8 signals)
+led_0_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+led_0_.AP = resetButton_i ; (1 pterm, 1 signal)
+
+led_1_.D = !calculate_combvalue_0_.Q & !calculate_combvalue_1_.Q
+       & !calculate_combvalue_2_.Q & !calculate_combvalue_3_.Q
+    # !calculate_combvalue_5_.Q & !calculate_combvalue_6_.Q
+    # calculate_combvalue_5_.Q & calculate_combvalue_6_.Q
+    # calculate_combvalue_7_.Q
+    # calculate_combvalue_4_.Q ; (5 pterms, 8 signals)
+led_1_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+led_1_.AP = resetButton_i ; (1 pterm, 1 signal)
+
+led_2_.D = !( !calculate_n_15_0_n & !calculate_combvalue_7_.Q
+       & calculate_combvalue_1_.Q
+    # !calculate_combvalue_4_.Q & !calculate_combvalue_5_.Q
+       & !calculate_combvalue_6_.Q & calculate_combvalue_7_.Q
+       & calculate_combvalue_2_.Q
+    # !calculate_combvalue_4_.Q & !calculate_combvalue_5_.Q
+       & !calculate_combvalue_6_.Q & calculate_combvalue_7_.Q
+       & calculate_combvalue_0_.Q
+    # !calculate_n_15_0_n & !calculate_combvalue_7_.Q
+       & calculate_combvalue_3_.Q ) ; (4 pterms, 9 signals)
+led_2_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+led_2_.AP = resetButton_i ; (1 pterm, 1 signal)
+
+led_3_.D = !( !calculate_combvalue_4_.Q & !calculate_combvalue_5_.Q
+       & !calculate_combvalue_6_.Q & calculate_combvalue_7_.Q
+       & calculate_combvalue_1_.Q
+    # !calculate_n_15_0_n & !calculate_combvalue_7_.Q
+       & calculate_combvalue_2_.Q
+    # !calculate_combvalue_4_.Q & !calculate_combvalue_5_.Q
+       & !calculate_combvalue_6_.Q & calculate_combvalue_7_.Q
+       & calculate_combvalue_2_.Q
+    # !calculate_n_15_0_n & !calculate_combvalue_7_.Q
+       & calculate_combvalue_3_.Q ) ; (4 pterms, 8 signals)
+led_3_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+led_3_.AP = resetButton_i ; (1 pterm, 1 signal)
+
+led_4_.D = !( !calculate_combvalue_4_.Q & !calculate_combvalue_5_.Q
+       & !calculate_combvalue_6_.Q & calculate_combvalue_7_.Q
+       & calculate_combvalue_3_.Q ) ; (1 pterm, 5 signals)
+led_4_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+led_4_.AP = resetButton_i ; (1 pterm, 1 signal)
+
+pointTime.D = !keyOut_0_.Q & keyinbutton_i_2__n ; (1 pterm, 2 signals)
+pointTime.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+pointTime.CE = pointTime_0 ; (1 pterm, 1 signal)
+pointTime.AP = resetButton_i ; (1 pterm, 1 signal)
+
+pointTime_0 = calculate_n_116_n
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & keyinbutton_i_0__n
+       & keyinbutton_i_1__n & keyinbutton_i_2__n & !keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_1_.Q & keyinbutton_i_0__n
+       & keyinbutton_i_1__n & keyinbutton_i_2__n & !keyinbutton_i_3__n
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & calculate_flag_Data_0_.Q
+       & !calculate_flag_Data_1_.Q & keyinbutton_i_0__n & keyinbutton_i_1__n
+       & keyinbutton_i_2__n & !keyinbutton_i_3__n ; (4 pterms, 11 signals)
+
+resetButton_i = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+show_0_ = !dynamicshow_out_1__n & !dynamicshow_out_2__n
+       & !dynamicshow_out_3__n
+    # dynamicshow_out_1__n & dynamicshow_out_0__n & dynamicshow_out_2__n
+    # dynamicshow_out_1__n & dynamicshow_out_0__n & dynamicshow_out_3__n
+    # dynamicshow_out_2__n & dynamicshow_out_3__n ; (4 pterms, 4 signals)
+
+show_1_ = dynamicshow_out_0__n & !dynamicshow_out_2__n & !dynamicshow_out_3__n
+    # dynamicshow_out_1__n & !dynamicshow_out_2__n
+    # dynamicshow_out_1__n & dynamicshow_out_0__n
+    # dynamicshow_out_2__n & dynamicshow_out_3__n ; (4 pterms, 4 signals)
+
+show_2_ = !( !dynamicshow_out_1__n & !dynamicshow_out_0__n
+       & !dynamicshow_out_2__n
+    # dynamicshow_out_1__n & !dynamicshow_out_0__n & !dynamicshow_out_3__n ) ; (2 pterms, 4 signals)
+
+show_3_.X1 = !dynamicshow_out_1__n & !dynamicshow_out_0__n
+    # dynamicshow_out_3__n
+    # dynamicshow_out_1__n & dynamicshow_out_0__n & dynamicshow_out_2__n ; (3 pterms, 4 signals)
+show_3_.X2 = !dynamicshow_out_1__n & !dynamicshow_out_2__n ; (1 pterm, 2 signals)
+
+show_4_ = dynamicshow_out_1__n & !dynamicshow_out_0__n & !dynamicshow_out_2__n
+    # dynamicshow_out_2__n & dynamicshow_out_3__n
+    # dynamicshow_out_1__n & dynamicshow_out_3__n ; (3 pterms, 4 signals)
+
+show_5_ = !dynamicshow_out_1__n & dynamicshow_out_0__n & dynamicshow_out_2__n
+    # dynamicshow_out_1__n & !dynamicshow_out_0__n & dynamicshow_out_2__n
+    # dynamicshow_out_1__n & dynamicshow_out_3__n
+    # dynamicshow_out_2__n & dynamicshow_out_3__n ; (4 pterms, 4 signals)
+
+show_6_ = !dynamicshow_out_1__n & dynamicshow_out_0__n & !dynamicshow_out_2__n
+       & !dynamicshow_out_3__n
+    # !dynamicshow_out_1__n & !dynamicshow_out_0__n & dynamicshow_out_2__n
+    # dynamicshow_out_1__n & dynamicshow_out_3__n
+    # dynamicshow_out_2__n & dynamicshow_out_3__n ; (4 pterms, 4 signals)
+
+
+
+

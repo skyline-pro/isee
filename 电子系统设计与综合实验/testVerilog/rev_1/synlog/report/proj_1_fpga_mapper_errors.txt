@@ -1,0 +1,1 @@
+@E: BN314 :"e:\grade-3_2\isp_project\testverilog\top.v":1:7:1:9|Net "innerreset" in work.top(verilog) has multiple drivers 

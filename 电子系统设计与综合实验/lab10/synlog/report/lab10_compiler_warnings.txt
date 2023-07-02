@@ -1,0 +1,13 @@
+@W: CS263 :"E:\grade-3_2\isp_project\lab10\button.v":9:29:9:29|Port-width mismatch for port en. Formal has width 1, Actual 32
+@W: CS263 :"E:\grade-3_2\isp_project\lab10\button.v":9:37:9:37|Port-width mismatch for port r. Formal has width 1, Actual 32
+@W: CS263 :"E:\grade-3_2\isp_project\lab10\button.v":10:28:10:28|Port-width mismatch for port en. Formal has width 1, Actual 32
+@W: CS263 :"E:\grade-3_2\isp_project\lab10\button.v":10:36:10:36|Port-width mismatch for port r. Formal has width 1, Actual 32
+@W: CS263 :"E:\grade-3_2\isp_project\lab10\button.v":11:28:11:28|Port-width mismatch for port en. Formal has width 1, Actual 32
+@W: CS263 :"E:\grade-3_2\isp_project\lab10\button.v":11:36:11:36|Port-width mismatch for port r. Formal has width 1, Actual 32
+@W: CL271 :"E:\grade-3_2\isp_project\lab10\PS2Keyboard.v":32:4:32:9|Pruning bits 10 to 9 of RxData[10:0] -- not in use ...
+@W: CL265 :"E:\grade-3_2\isp_project\lab10\PS2Keyboard.v":32:4:32:9|Pruning bit 0 of RxData[10:0] -- not in use ...
+@W: CL118 :"E:\grade-3_2\isp_project\lab10\PS2Keyboard.v":64:8:64:9|Latch generated from always block for signal save[3:0]; possible missing assignment in an if or case statement.
+@W: CL118 :"E:\grade-3_2\isp_project\lab10\PS2Keyboard.v":64:8:64:9|Latch generated from always block for signal psData[3:0]; possible missing assignment in an if or case statement.
+@W: CS263 :"E:\grade-3_2\isp_project\lab10\dynamicShow.v":8:79:8:79|Port-width mismatch for port en. Formal has width 1, Actual 32
+@W: CL156 :"E:\grade-3_2\isp_project\lab10\dynamicShow.v":8:66:8:70|*Input reset to expression [instance] has undriven bits that are tied to 0 -- simulation mismatch possible.
+

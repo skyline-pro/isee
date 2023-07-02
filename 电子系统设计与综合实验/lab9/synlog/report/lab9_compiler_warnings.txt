@@ -1,0 +1,14 @@
+@W: CS263 :"E:\grade-3_2\isp_project\lab9\button.v":9:29:9:29|Port-width mismatch for port en. Formal has width 1, Actual 32
+@W: CS263 :"E:\grade-3_2\isp_project\lab9\button.v":9:37:9:37|Port-width mismatch for port r. Formal has width 1, Actual 32
+@W: CS263 :"E:\grade-3_2\isp_project\lab9\button.v":10:28:10:28|Port-width mismatch for port en. Formal has width 1, Actual 32
+@W: CS263 :"E:\grade-3_2\isp_project\lab9\button.v":10:36:10:36|Port-width mismatch for port r. Formal has width 1, Actual 32
+@W: CS263 :"E:\grade-3_2\isp_project\lab9\button.v":11:28:11:28|Port-width mismatch for port en. Formal has width 1, Actual 32
+@W: CS263 :"E:\grade-3_2\isp_project\lab9\button.v":11:36:11:36|Port-width mismatch for port r. Formal has width 1, Actual 32
+@W: CL169 :"E:\grade-3_2\isp_project\lab9\keyboard.v":75:4:75:9|Pruning register flag_Over 
+@W: CL169 :"E:\grade-3_2\isp_project\lab9\keyboard.v":75:4:75:9|Pruning register int_Data[9:0] 
+@W: CL169 :"E:\grade-3_2\isp_project\lab9\keyboard.v":75:4:75:9|Pruning register temp[9:0] 
+@W: CL208 :"E:\grade-3_2\isp_project\lab9\serial.v":42:4:42:9|All reachable assignments to bit 0 of Send_data[9:0] assign 0, register removed by optimization.
+@W: CL208 :"E:\grade-3_2\isp_project\lab9\serial.v":42:4:42:9|All reachable assignments to bit 9 of Send_data[9:0] assign 1, register removed by optimization.
+@W: CS263 :"E:\grade-3_2\isp_project\lab9\dynamicShow.v":8:79:8:79|Port-width mismatch for port en. Formal has width 1, Actual 32
+@W: CL156 :"E:\grade-3_2\isp_project\lab9\dynamicShow.v":8:66:8:70|*Input reset to expression [instance] has undriven bits that are tied to 0 -- simulation mismatch possible.
+

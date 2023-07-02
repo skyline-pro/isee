@@ -1,0 +1,9 @@
+MODULE dynamicshow DEFIN dynamicShow.v
+	SUBMODULE decoder2to4
+		INSTANCE decoder2
+	SUBMODULE decoderHex2Dec
+		INSTANCE decoder1
+	SUBMODULE mux16to4
+		INSTANCE mux
+	SUBMODULE counter_n
+		INSTANCE counter4

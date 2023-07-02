@@ -1,0 +1,175 @@
+\documentclass{../source/zjureport}
+
+\major{信息工程}
+ \name{箫宇 }
+\title{波导实验}
+\stuid{ }
+\college{信息与电子工程学院}
+\date{\today}
+\lab{东4-221}
+\course{电磁场与电磁波}
+\instructor{王子立}
+\grades{}
+\expname{波导传输线测量}
+\exptype{测试实验}
+\partner{}
+
+\begin{document}
+    \makecover
+    \makeheader
+
+    \section{实验目的}
+    了解波导传输线的基本特性，容性膜片的负载特性及阻抗匹配方法。
+
+    覆盖的基本概念：
+    \begin{enumerate}
+        \item 波导的传输线模型
+        \item 波导色散特性——波导波长
+        \item 阻抗及匹配
+        \item Smith 圆图
+    \end{enumerate}
+
+    \section{实验原理}
+
+    纵向均匀的波导，如果将场分解成TE 及TM 两种模式，每种模式的场分解成横向场量与纵向场量，再将横向场量分解成模式函数与幅值的乘积，即$\vec{E}_{t}=\vec{e}(\vec{\rho}) V(z), \quad \vec{H}_{t}=\vec{h}(\vec{\rho}) I(z)$,则$V_{z},\quad I_{z}$满足传输线方程
+    $$
+\begin{aligned}
+&\left\{\begin{array}{l}
+\displaystyle \frac{d V(z)}{d z}=-j k_{s} Z I(z) \\
+\displaystyle \frac{d I(z)}{d z}=-j k_{s} Y V(z)
+\end{array}\right.\\
+&k_{z}^{2}=k^{2}-k_{t}^{2}, \quad k=\omega \sqrt{\mu \varepsilon}\\
+&Z=\displaystyle \frac{1}{Y}=\left\{\begin{array}{ll}
+\omega \mu / k_{z} & T E \\
+k_{z} / \omega \varepsilon & T M
+\end{array}\right.
+\end{aligned}
+$$
+
+$V(z)、I(z)$反映电磁场横向分量$\vec{E}_{t},\vec{H}_t$沿纵向Z 的变化。所以就波的纵向传播而言，波导中某一模式电磁波的传播可用一特定参数（$k_z，Z$）的传输线等效。
+
+本实验应用矩形波导传输线，工作于 TE10模式，其横向场$\vec{E}_{t},\vec{H}_t$沿纵向Z
+的传输特性可用（$k_{z01}，Z_{01}$）为特征参数的传输线上电压、电流的传播等效.
+
+传输线的状态可以用以下五组参数等价表示，即电压与电流（$V,I$），入射波与反射波（$V^i,V^r$）、反射系数（$\Gamma=|\Gamma| e^{j \psi}$），阻抗或导纳（$Z = \displaystyle \frac{1}{Y}$）、驻波系数与驻波相位（$\rho$及$d_{min1}/\lambda_g$）。这五组参数相互间可以变换。最常用的是反射系数$\Gamma$，在微波频率下它是一个便于测量的量值。使用驻波测量线，（$\rho$及$d_{min1}/\lambda_g$）也是一组便于测量的量值。
+
+定义传输线上电压最大值与最小值之比为驻波系数VSWR,常用$\rho$表示。
+
+离开终端负载第一个电压波节点的位置为$d_{min1}$，如果用波长$\lambda$归一化，即$\tilde{d}_{\min 1}=d_{\min 1} / \lambda$.
+
+如果波导末端短路（即传输线终端短路），则在传输线上形成纯驻波。驻波两最小点之间的距离为$\lambda_g/2$，由此可测出波导波长$\lambda_g$。
+
+波导中波的传播状态一般由波导终端口所接的负载确定，因此通过测量波导中波的传播状态便可得到其负载特性。
+
+如果矩形波导（截面为$a\times b$）插入一膜片，膜片上开槽，其截面为($a\times b'$)，$b'< b$，则该膜片的等效阻抗呈电容性，叫做容性膜片。本实验用容性膜片+匹配负载作为容性被测负载。
+
+传输线与负载匹配时，则传输线工作于行波状态（负载阻抗$Z_l$等于特征阻抗$Z(0)$），此时传输线传输效率最高，传输功率容量也最大。传输线与负载不匹配时，一般在传输线与负载之间加一阻抗变换器来达到匹配，使传输线工作于行波状态。本实验使用可滑动的单销钉调配器，调节销钉的插入深度和横向位置使波导系统与负载（容性膜片+负载）达到匹配。
+实验中涉及的公式：
+$$
+\begin{aligned}
+&\Gamma(0)=\displaystyle \frac{Z(0)-Z}{Z(0)+Z}=|\Gamma(0)| e^{j \psi(0)} \\
+&Z(0)=Z \displaystyle \frac{1+\Gamma(0)}{1-\Gamma(0)} \quad(\Omega) \\
+&\rho=\displaystyle \frac{V_{\max }}{V_{\min }}=\displaystyle \frac{1+|\Gamma(0)|}{1-|\Gamma(0)|} \\
+&\tilde{d}_{\min 1}=d_{\min 1} / \lambda \\
+&d_{\min 1}=\displaystyle \frac{\psi(0) \lambda_{g}}{4 \pi}+\displaystyle \frac{\lambda_{g}}{4}(\mathrm{~cm}), \quad \text { (如果 } \lambda_{g} \text { 用 } \mathrm{cm} \text { 作单位) } \\
+&\lambda_{g}=\displaystyle \frac{\lambda}{\sqrt{1-\left(\displaystyle \frac{\lambda}{2 a}\right)^{2}}}(\mathrm{~cm}), \quad \text { (如果 } \lambda 、 a \text { 用 } \mathrm{cm} \text { 作单位) }
+\end{aligned}
+$$
+式中$a$为矩形波导宽边，本实验中$a =2.286 cm，b=1.016cm$
+
+    \section{主要仪器设备}
+    固态微波信号源，隔离器，可调衰减器，波长计(频率计)，定向耦合器，波导检波器，驻波测量线，容性膜片+匹配负载，短路块，数字万用表，示波器，屏蔽连接线
+    \section{实验步骤及数据}
+        \subsection{工作频率$f$测量}
+            \begin{enumerate}
+                \item 测量线开口端用短路块短接。
+                \item 接通固态微波信号源，工作状态选择方波调制。
+                \item 调节波导检波器中的短路活塞或三销钉调配器使示波器上显示的检波输出（方波）幅度最大。如果示波器上显示的输出幅度还不够大，可适当减少可调衰减器的衰减量，反之增加可调衰减器的衰减量。
+                \item 用直读式频率计测量此时系统的工作频率$f = 9.535GHz$
+            \end{enumerate}
+        \subsection{波导波长测量}
+            \begin{enumerate}
+                \item 先调节测量线探针插入深度为$1mm$左右，再细心调节测量线上的检波调配装置，使数字万用表上指示的检波输出信号最大，即检波匹配（注意：为使测量线的检波二极管工作在小信号的平方率检波区，探针插入深度不能太深，否则探针本身会引起较大反射，使测量数值产生较大误差）。沿波导横向移动驻波测量探针，使探针位于驻波波腹点（检波的输出最大），此时再调节衰减器使数字万用表读数为$0.500mV$（设定信号在合适的大小），记录此时衰减器的刻度，以便之后测量。
+                \item 慢慢地横向移动测量线探针，记下相邻两个驻波波节点的位置$d_{min1}、d_{min2}$的刻度值。
+            \end{enumerate}
+
+            {\bf 数据记录}：$d_{min1}= 4.262$,$d_{min2} = 2.132$
+
+        \subsection{容性膜片等效负载的测量}
+            实验步骤：
+            \begin{enumerate}
+                \item 测量线开口端接短路块，横向移动测量线探针，找到一个驻波波节点位置$d_{min1(\text{短})}$并作记录（即等效短路面位置）。
+                \item 拆下短路块，接上容性膜片+匹配负载，从$d_{min1(\text{短})}$位置往振荡源信号方向移动驻波测量线探针位置，测得第一个驻波最小点位置$d_{min1(\text{膜片})}$，并作记录。
+            \end{enumerate}
+            数据记录：
+            $$d_{min(\text{短})} = 4.262$$
+            $$d_{min(\text{容性})} = 2.787$$
+            $$P_{min} = 2.493mV$$
+            $$P_{max} = 8.880mV$$
+
+        \subsection{阻抗匹配测量}
+        在测量线与容性膜片+匹配负载之间串接一只单销钉调配器。单销钉调配器是一个其销钉插入波导深度和纵向位置都可以调节的器件。
+        \begin{enumerate}
+            \item 调节衰减器衰减量，使示波器有足够的方波信号显示。
+            \item 细心调节销钉调配器销钉的横向位置和插入波导的深度，使示波器上显示的信号最小（最好能到零）。进而提高示波器的灵敏度和增加输入功率，重复上一调节过程直到当示波器的灵敏度为最高和输入功率为最大且又在示波器上观察到的信号为最小为止，即找到最佳匹配位置。
+            \item 
+            适当增加可调衰减器的衰减量之后，横向移动驻波测量线，记录该输入功率下数字万用表上的$P_{max(\text{匹配})}$与$P_{min(\text{匹配})} $ ，并计算此时的驻波系数$\lambda$。
+        \end{enumerate}
+        {\bf 实验数据：}$P_{min\text{匹配}} = 12.800mV$,$P_{max\text{匹配}} = 21.000mV$
+
+    \section{数据处理}
+        \subsection{根据实测值计算波导波长$\lambda_g$}
+        $\lambda_g = 2\times |d_{min1} - d_{min2}| = 2\times 2.130 = 4.260cm$
+        \subsection{计算实测频率下矩形波导 TE10模的波导波长$\lambda_g$的理论值，并与实验测量值比较}
+        $\lambda = \displaystyle \frac{c}{f} = 3.146cm$
+
+        $\lambda_{g}= \displaystyle \frac{\lambda}{\sqrt{1-\left(\displaystyle \frac{\lambda}{2 a}\right)^{2}}} = 4.320cm$
+
+        由上诉计算结果可知，我们测量值与理论值误差仅有1.3\%
+
+        \subsection{计算容性膜片+匹配负载时的驻波系数$\rho$，在Smith 圆图上读出容性膜片+匹配负载的反射系数$\Gamma$和归一化阻抗值。}
+        计算驻波比系数：
+        $\rho = \sqrt{\displaystyle \frac{P_{MAX}}{P_{MIN}}} = 1.887$
+
+        计算反射系数：
+
+        $\Gamma = \displaystyle \frac{\rho - 1}{\rho + 1} = 0.307$
+
+        $L = 1.475cm$
+
+        $\phi = 245.8$
+
+        根据公式可计算出归一化阻抗：
+
+        $Z=0.673-0.416i$
+
+        \subsection{计算用单销钉调节匹配后的驻波系数}
+        $\rho = \sqrt{\displaystyle \frac{P_{MAX\text{匹配}}}{P_{MIN\text{匹配}}}} = \sqrt{\displaystyle \frac{21}{12.8}} = 1.28$
+
+        \subsection{量出单销钉调配器销钉到负载的长度，计算匹配状态时销钉所呈现的归一化电抗值。借用圆图说明此时系统为什么匹配？}
+        $L = 9.6cm$,$XL = 1.35$
+
+    \section{回答问题}
+        \subsection{测量线开口端不接短路块，任意接一负载，能否测出波导波长？接短路块测波导波长有什么优点？}
+        不一定能够测出波导波长，如果接入的负载恰好匹配，则不能够测出波腹波节，因而无法得到波导波长
+
+        用短路块优点在于在短路块处产生全反射，形成纯驻波，现象比较明显，测比较准确，误差较小 。
+
+        \subsection{测负载驻波相位为什么要先测 $d_{min\text{(短)}}$？}
+        作为短路点的等效位置，因为如果直接以短路块接入的位置作为参考位置，会带来比较大的误差。
+
+        \subsection{在单销钉调配器调配前，测量线探针为什么不能伸入到波导里面？}
+        测量探针本身会带来反射，如果将其伸入波导中，会影响匹配调整的结果，带来实验误差。当探针伸入超过矩形波导宽度的一半后，实验将会无法进行
+
+        \subsection{单销钉调配器调节匹配时，为什么检波器输出指示越小，表示调配得越好？}
+
+        因为检波器测量的是交变的小信号。指示值越小，代表幅值的变化分量占整体的比重越小，测试匹配性能越好。
+
+        \subsection{如果经销钉调配器调配后，测得驻波系数$\rho = 1$，在单销钉调配器与负载之间是否是行波？单销钉调配器至信号源方向是否是行波？为什么？}
+        单销钉匹配器至信号源之间是行波，驻波系数为1时，电压电流沿传输线没有变化，成为行波。单销钉匹配器和负载之间不是行波，因为这段的传输线没有经过匹配，电压波腹点是电流波节点，这种分布为驻波。
+
+    \section{心得体会}
+    此次实验的难度较大，主要体现在难以与理论课学到的知识产生联系，做的时候较为迷茫。不过本次实验操作较为简单，可以比较顺利地完成实验。
+
+    写实验报告时，通过反复阅读实验原理，逐渐懂得了每一步操作的意义，也渐渐地加深了自己对于波导传输线的认识，懂得了匹配的意义，将理论课的知识逐渐与实验的步骤进行了连接。
+\end{document}

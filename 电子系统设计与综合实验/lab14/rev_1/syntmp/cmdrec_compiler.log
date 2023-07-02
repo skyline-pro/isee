@@ -1,0 +1,7 @@
+D:\ispLEVER_Classic2_1\synpbase\bin64\c_ver.exe  -osyn  E:\Grade-3_2\ISP_Project\lab14\rev_1\synwork\lab14_comp.srs  -prodtype  synplify_pro  -nostructver -I E:\Grade-3_2\ISP_Project\lab14\  -I D:\ispLEVER_Classic2_1\synpbase\lib  -sysv  -encrypt  -pro  -dmgen  E:\Grade-3_2\ISP_Project\lab14\rev_1\dm  -ui -fid2 -ram -sharing on -ll 2000 -autosm -D_MULTIPLE_FILE_COMPILATION_UNIT_ -lib work E:\Grade-3_2\ISP_Project\lab14\vga.v -loga  E:\Grade-3_2\ISP_Project\lab14\rev_1\lab14.srr 
+rc:1 success:1
+E:\Grade-3_2\ISP_Project\lab14\rev_1\synwork\lab14_comp.srs|o|1652407640|3835
+E:\Grade-3_2\ISP_Project\lab14\vga.v|i|1652407635|3009
+E:\Grade-3_2\ISP_Project\lab14\rev_1\lab14.srr|o|1652407640|1813
+D:\ispLEVER_Classic2_1\synpbase\bin\c_ver.exe|i|1401198650|2292224
+D:\ispLEVER_Classic2_1\synpbase\bin64\c_ver.exe|i|1401198850|5829632

@@ -1,0 +1,7 @@
+. lab12 lab12.v e:\grade-3_2\isp_project\lab12\lab12.v
+led1 ledDotMatrix ledDotMatrix.v e:\grade-3_2\isp_project\lab12\ledDotMatrix.v
+conter counter_n counter_n.v e:\grade-3_2\isp_project\lab12\counter_n.v
+button1 button button.v e:\grade-3_2\isp_project\lab12\button.v
+button1.d3 dffre dffre.v e:\grade-3_2\isp_project\lab12\dffre.v
+button1.d2 dffre dffre.v e:\grade-3_2\isp_project\lab12\dffre.v
+button1.d1 dffre dffre.v e:\grade-3_2\isp_project\lab12\dffre.v

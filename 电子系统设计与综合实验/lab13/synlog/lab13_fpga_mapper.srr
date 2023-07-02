@@ -1,0 +1,70 @@
+Synopsys CPLD Technology Mapper, Version maplat, Build 923R, Built May  6 2014
+Copyright (C) 1994-2013, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use or distribution of the software is strictly prohibited.
+Product Version I-2014.03LC 
+@N: MF248 |Running in 64-bit mode.
+@W: MO111 :"e:\grade-3_2\isp_project\lab13\lab13.v":6:11:6:15|Tristate driver ledEN on net ledEN has its enable tied to GND (module lab13) 
+Encoding state machine state[6:0] (view:work.lcd1602(verilog))
+original code -> new code
+   00000001 -> 0000000
+   00000010 -> 0000011
+   00000100 -> 0000101
+   00001000 -> 0001001
+   00010000 -> 0010001
+   01000000 -> 0100001
+   10000000 -> 1000001
+@W: BN132 :"e:\grade-3_2\isp_project\lab13\lcd1602.v":56:4:56:9|Removing instance lcd.dataInBuf[47],  because it is equivalent to instance lcd.dataInBuf[40]
+@W: BN132 :"e:\grade-3_2\isp_project\lab13\lcd1602.v":56:4:56:9|Removing instance lcd.dataInBuf[44],  because it is equivalent to instance lcd.dataInBuf[40]
+@W: BN132 :"e:\grade-3_2\isp_project\lab13\lcd1602.v":56:4:56:9|Removing instance lcd.dataInBuf[43],  because it is equivalent to instance lcd.dataInBuf[40]
+@W: BN132 :"e:\grade-3_2\isp_project\lab13\lcd1602.v":56:4:56:9|Removing instance lcd.dataInBuf[46],  because it is equivalent to instance lcd.dataInBuf[42]
+@W: BN132 :"e:\grade-3_2\isp_project\lab13\lcd1602.v":56:4:56:9|Removing instance lcd.dataInBuf[5],  because it is equivalent to instance lcd.dataInBuf[33]
+@W: BN132 :"e:\grade-3_2\isp_project\lab13\lcd1602.v":56:4:56:9|Removing instance lcd.dataInBuf[42],  because it is equivalent to instance lcd.dataInBuf[13]
+@W: BN132 :"e:\grade-3_2\isp_project\lab13\lcd1602.v":56:4:56:9|Removing instance lcd.dataInBuf[55],  because it is equivalent to instance lcd.dataInBuf[52]
+@W: BN132 :"e:\grade-3_2\isp_project\lab13\lcd1602.v":56:4:56:9|Removing instance lcd.dataInBuf[52],  because it is equivalent to instance lcd.dataInBuf[51]
+@W: BN132 :"e:\grade-3_2\isp_project\lab13\lcd1602.v":56:4:56:9|Removing instance lcd.dataInBuf[63],  because it is equivalent to instance lcd.dataInBuf[60]
+@W: BN132 :"e:\grade-3_2\isp_project\lab13\lcd1602.v":56:4:56:9|Removing instance lcd.dataInBuf[60],  because it is equivalent to instance lcd.dataInBuf[59]
+@W: BN132 :"e:\grade-3_2\isp_project\lab13\lcd1602.v":56:4:56:9|Removing instance lcd.dataInBuf[54],  because it is equivalent to instance lcd.dataInBuf[21]
+@W: BN132 :"e:\grade-3_2\isp_project\lab13\lcd1602.v":56:4:56:9|Removing instance lcd.dataInBuf[50],  because it is equivalent to instance lcd.dataInBuf[21]
+@W: BN132 :"e:\grade-3_2\isp_project\lab13\lcd1602.v":56:4:56:9|Removing instance lcd.dataInBuf[68],  because it is equivalent to instance lcd.dataInBuf[67]
+@W: BN132 :"e:\grade-3_2\isp_project\lab13\lcd1602.v":56:4:56:9|Removing instance lcd.dataInBuf[71],  because it is equivalent to instance lcd.dataInBuf[67]
+@W: BN132 :"e:\grade-3_2\isp_project\lab13\lcd1602.v":56:4:56:9|Removing instance lcd.dataInBuf[62],  because it is equivalent to instance lcd.dataInBuf[29]
+@W: BN132 :"e:\grade-3_2\isp_project\lab13\lcd1602.v":56:4:56:9|Removing instance lcd.dataInBuf[79],  because it is equivalent to instance lcd.dataInBuf[76]
+@W: BN132 :"e:\grade-3_2\isp_project\lab13\lcd1602.v":56:4:56:9|Removing instance lcd.dataInBuf[76],  because it is equivalent to instance lcd.dataInBuf[75]
+@W: BN132 :"e:\grade-3_2\isp_project\lab13\lcd1602.v":56:4:56:9|Removing instance lcd.dataInBuf[84],  because it is equivalent to instance lcd.dataInBuf[83]
+@W: BN132 :"e:\grade-3_2\isp_project\lab13\lcd1602.v":56:4:56:9|Removing instance lcd.dataInBuf[92],  because it is equivalent to instance lcd.dataInBuf[91]
+@W: BN132 :"e:\grade-3_2\isp_project\lab13\lcd1602.v":56:4:56:9|Removing instance lcd.dataInBuf[99],  because it is equivalent to instance lcd.dataInBuf[100]
+@W: BN132 :"e:\grade-3_2\isp_project\lab13\lcd1602.v":56:4:56:9|Removing instance lcd.dataInBuf[108],  because it is equivalent to instance lcd.dataInBuf[107]
+@W: BN132 :"e:\grade-3_2\isp_project\lab13\lcd1602.v":56:4:56:9|Removing instance lcd.dataInBuf[116],  because it is equivalent to instance lcd.dataInBuf[115]
+@W: BN132 :"e:\grade-3_2\isp_project\lab13\lcd1602.v":56:4:56:9|Removing instance lcd.dataInBuf[124],  because it is equivalent to instance lcd.dataInBuf[123]
+@W: BN132 :"e:\grade-3_2\isp_project\lab13\lcd1602.v":56:4:56:9|Removing instance lcd.dataInBuf[132],  because it is equivalent to instance lcd.dataInBuf[131]
+@W: BN132 :"e:\grade-3_2\isp_project\lab13\lcd1602.v":56:4:56:9|Removing instance lcd.dataInBuf[140],  because it is equivalent to instance lcd.dataInBuf[139]
+@W: BN132 :"e:\grade-3_2\isp_project\lab13\lcd1602.v":56:4:56:9|Removing instance lcd.dataInBuf[148],  because it is equivalent to instance lcd.dataInBuf[147]
+@W: BN132 :"e:\grade-3_2\isp_project\lab13\lcd1602.v":56:4:56:9|Removing instance lcd.dataInBuf[156],  because it is equivalent to instance lcd.dataInBuf[155]
+---------------------------------------
+Resource Usage Report
+
+Simple gate primitives:
+DFFRH           13 uses
+DFFSH           1 use
+DFFC            195 uses
+DFFCRH          7 uses
+DFF             45 uses
+DFFCSH          1 use
+IBUF            2 uses
+OBUF            10 uses
+BUFTH           1 use
+AND2            320 uses
+INV             165 uses
+XOR2            46 uses
+OR2             1 use
+
+
+@N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.
+I-2014.03LC 
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 41MB peak: 106MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Thu May 12 17:47:34 2022
+
+###########################################################]

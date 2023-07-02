@@ -1,0 +1,2 @@
+@E: CG389 :"E:\grade-3_2\isp_project\lab12\lab12.v":17:47:17:52|Reference to undefined module counter_n
+

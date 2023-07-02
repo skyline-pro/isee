@@ -1,0 +1,452 @@
+#$ TOOL  ispLEVER Classic 2.1.00.02.49.20
+#$ DATE  Sun May 08 13:33:06 2016
+#$ MODULE  lab10
+#$ PINS 16 LEDVCC_3_ show_6_ clkh clkl reset keyClock keyData LEDVCC_2_
+ LEDVCC_1_ LEDVCC_0_ show_5_ show_4_ show_3_ show_2_ show_1_ show_0_
+#$ NODES 40 ps_psData_0_ ps_psData_1_ ps_psData_2_ ps_psData_3_ button0_d1_q_0_
+ button0_d2_q_0_ button0_d3_q_0_ dynamicshow_counter4_q_1_
+ dynamicshow_counter4_q_2_ ps_keyClock_r1 ps_RxEn ps_lastRxData_0_
+ ps_lastRxData_1_ ps_lastRxData_2_ ps_lastRxData_3_ ps_lastRxData_4_
+ ps_lastRxData_5_ ps_lastRxData_6_ ps_lastRxData_7_ ps_ledEn ps_keyClock_r0
+ ps_keyClock_r2 ps_counter_0_ ps_counter_1_ ps_counter_2_ ps_counter_3_
+ ps_RxData_1_ ps_RxData_2_ ps_RxData_3_ ps_RxData_4_ ps_RxData_5_ ps_RxData_6_
+ ps_RxData_7_ ps_RxData_8_ ps_save_0_ ps_save_1_ ps_save_2_ ps_save_3_
+ ps_RxData_1__0 ps_save_0__0
+.model lab10 
+.inputs clkh.BLIF clkl.BLIF reset.BLIF keyClock.BLIF keyData.BLIF ps_psData_0_.Q \
+ ps_psData_1_.Q ps_psData_2_.Q ps_psData_3_.Q button0_d1_q_0_.Q button0_d2_q_0_.Q \
+ button0_d3_q_0_.Q dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_2_.Q \
+ ps_keyClock_r1.Q ps_RxEn.Q ps_lastRxData_0_.Q ps_lastRxData_1_.Q \
+ ps_lastRxData_2_.Q ps_lastRxData_3_.Q ps_lastRxData_4_.Q ps_lastRxData_5_.Q \
+ ps_lastRxData_6_.Q ps_lastRxData_7_.Q ps_ledEn.Q ps_keyClock_r0.Q \
+ ps_keyClock_r2.Q ps_counter_0_.Q ps_counter_1_.Q ps_counter_2_.Q ps_counter_3_.Q \
+ ps_RxData_1_.Q ps_RxData_2_.Q ps_RxData_3_.Q ps_RxData_4_.Q ps_RxData_5_.Q \
+ ps_RxData_6_.Q ps_RxData_7_.Q ps_RxData_8_.Q ps_save_0_.Q ps_save_1_.Q \
+ ps_save_2_.Q ps_save_3_.Q ps_RxData_1__0.BLIF ps_save_0__0.BLIF
+.outputs LEDVCC_3_ show_6_- LEDVCC_2_ LEDVCC_1_ LEDVCC_0_ show_5_- show_4_- \
+ show_3_- show_2_- show_1_- show_0_- ps_psData_0_.D ps_psData_0_.LH \
+ ps_psData_0_.AR ps_psData_1_.D ps_psData_1_.LH ps_psData_1_.AR ps_psData_2_.D \
+ ps_psData_2_.LH ps_psData_2_.AR ps_psData_3_.D ps_psData_3_.LH ps_psData_3_.AR \
+ button0_d1_q_0_.D button0_d1_q_0_.C button0_d2_q_0_.D button0_d2_q_0_.C \
+ button0_d3_q_0_.D button0_d3_q_0_.C dynamicshow_counter4_q_1_.D \
+ dynamicshow_counter4_q_1_.C dynamicshow_counter4_q_2_.D \
+ dynamicshow_counter4_q_2_.C ps_keyClock_r1.D ps_keyClock_r1.C ps_keyClock_r1.AR \
+ ps_RxEn.D ps_RxEn.C ps_RxEn.CE ps_RxEn.AP ps_lastRxData_0_.D ps_lastRxData_0_.C \
+ ps_lastRxData_0_.AP ps_lastRxData_1_.D ps_lastRxData_1_.C ps_lastRxData_1_.AR \
+ ps_lastRxData_2_.D ps_lastRxData_2_.C ps_lastRxData_2_.AP ps_lastRxData_3_.D \
+ ps_lastRxData_3_.C ps_lastRxData_3_.AR ps_lastRxData_4_.D ps_lastRxData_4_.C \
+ ps_lastRxData_4_.AR ps_lastRxData_5_.D ps_lastRxData_5_.C ps_lastRxData_5_.AR \
+ ps_lastRxData_6_.D ps_lastRxData_6_.C ps_lastRxData_6_.AP ps_lastRxData_7_.D \
+ ps_lastRxData_7_.C ps_lastRxData_7_.AR ps_ledEn.D ps_ledEn.C ps_ledEn.AR \
+ ps_keyClock_r0.D ps_keyClock_r0.C ps_keyClock_r0.AR ps_keyClock_r2.D \
+ ps_keyClock_r2.C ps_keyClock_r2.AR ps_counter_0_.D ps_counter_0_.C \
+ ps_counter_0_.CE ps_counter_0_.AR ps_counter_1_.D ps_counter_1_.C \
+ ps_counter_1_.CE ps_counter_1_.AR ps_counter_2_.D ps_counter_2_.C \
+ ps_counter_2_.CE ps_counter_2_.AR ps_counter_3_.D ps_counter_3_.C \
+ ps_counter_3_.CE ps_counter_3_.AR ps_RxData_1_.D.X1 ps_RxData_1_.D.X2 \
+ ps_RxData_1_.C ps_RxData_1_.CE ps_RxData_2_.D.X1 ps_RxData_2_.D.X2 \
+ ps_RxData_2_.C ps_RxData_2_.CE ps_RxData_3_.D.X1 ps_RxData_3_.D.X2 \
+ ps_RxData_3_.C ps_RxData_3_.CE ps_RxData_4_.D.X1 ps_RxData_4_.D.X2 \
+ ps_RxData_4_.C ps_RxData_4_.CE ps_RxData_5_.D.X1 ps_RxData_5_.D.X2 \
+ ps_RxData_5_.C ps_RxData_5_.CE ps_RxData_6_.D.X1 ps_RxData_6_.D.X2 \
+ ps_RxData_6_.C ps_RxData_6_.CE ps_RxData_7_.D.X1 ps_RxData_7_.D.X2 \
+ ps_RxData_7_.C ps_RxData_7_.CE ps_RxData_8_.D.X1 ps_RxData_8_.D.X2 \
+ ps_RxData_8_.C ps_RxData_8_.CE ps_save_0_.D ps_save_0_.LH- ps_save_1_.D \
+ ps_save_1_.LH- ps_save_2_.D ps_save_2_.LH- ps_save_3_.D ps_save_3_.LH- \
+ ps_RxData_1__0 ps_save_0__0
+.names dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_2_.Q LEDVCC_3_
+11 1
+.names ps_psData_0_.Q ps_psData_1_.Q ps_psData_2_.Q ps_psData_3_.Q dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_2_.Q show_6_-
+0-0000 1
+1-1000 1
+-00100 1
+-1-000 1
+.names dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_2_.Q LEDVCC_2_
+01 1
+.names dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_2_.Q LEDVCC_1_
+10 1
+.names dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_2_.Q LEDVCC_0_
+00 1
+.names ps_psData_0_.Q ps_psData_1_.Q ps_psData_2_.Q ps_psData_3_.Q dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_2_.Q show_5_-
+11-000 1
+00-000 1
+-00-00 1
+--0000 1
+.names ps_psData_0_.Q ps_psData_1_.Q ps_psData_2_.Q ps_psData_3_.Q dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_2_.Q show_4_-
+-00-00 1
+--1000 1
+1--000 1
+.names ps_psData_0_.Q ps_psData_1_.Q ps_psData_2_.Q ps_psData_3_.Q dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_2_.Q show_3_-
+0-0000 1
+101000 1
+01-000 1
+-00100 1
+-10000 1
+.names ps_psData_0_.Q ps_psData_1_.Q ps_psData_2_.Q ps_psData_3_.Q dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_2_.Q show_2_-
+01-000 1
+000-00 1
+.names ps_psData_0_.Q ps_psData_1_.Q ps_psData_2_.Q ps_psData_3_.Q dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_2_.Q show_1_-
+000-00 1
+0-1000 1
+-00100 1
+-01000 1
+.names ps_psData_0_.Q ps_psData_1_.Q ps_psData_2_.Q ps_psData_3_.Q dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_2_.Q show_0_-
+0-1000 1
+010-00 1
+-01000 1
+-00100 1
+-10000 1
+.names ps_lastRxData_0_.Q ps_lastRxData_1_.Q ps_lastRxData_2_.Q ps_lastRxData_3_.Q ps_lastRxData_4_.Q ps_lastRxData_5_.Q ps_lastRxData_6_.Q ps_lastRxData_7_.Q ps_save_0_.Q ps_psData_0_.D
+00------1 1
+-1--0---1 1
+0-----1-1 1
+-0---00-1 1
+1---1---1 1
+---10---1 1
+10111100- 1
+01100010- 1
+01101000- 1
+011-0100- 1
+-----11-1 1
+--0-----1 1
+-------11 1
+.names ps_ledEn.Q ps_psData_0_.LH
+0 1
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q ps_psData_0_.AR
+000 1
+.names ps_lastRxData_0_.Q ps_lastRxData_1_.Q ps_lastRxData_2_.Q ps_lastRxData_3_.Q ps_lastRxData_4_.Q ps_lastRxData_5_.Q ps_lastRxData_6_.Q ps_lastRxData_7_.Q ps_save_1_.Q ps_psData_1_.D
+-0-1----1 1
+-0--1---1 1
+----000-1 1
+---1-0--1 1
+01111000- 1
+10111100- 1
+0110-100- 1
+-----11-1 1
+----1-1-1 1
+00------1 1
+11------1 1
+-------11 1
+--0-----1 1
+.names ps_ledEn.Q ps_psData_1_.LH
+0 1
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q ps_psData_1_.AR
+000 1
+.names ps_lastRxData_0_.Q ps_lastRxData_1_.Q ps_lastRxData_2_.Q ps_lastRxData_3_.Q ps_lastRxData_4_.Q ps_lastRxData_5_.Q ps_lastRxData_6_.Q ps_lastRxData_7_.Q ps_save_2_.Q ps_psData_2_.D
+-0----0-1 1
+---10---1 1
+01110100- 1
+01101100- 1
+10100100- 1
+10111100- 1
+----000-1 1
+00------1 1
+----1-1-1 1
+-----11-1 1
+11------1 1
+--0-----1 1
+-------11 1
+.names ps_ledEn.Q ps_psData_2_.LH
+0 1
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q ps_psData_2_.AR
+000 1
+.names ps_lastRxData_0_.Q ps_lastRxData_1_.Q ps_lastRxData_2_.Q ps_lastRxData_3_.Q ps_lastRxData_4_.Q ps_lastRxData_5_.Q ps_lastRxData_6_.Q ps_lastRxData_7_.Q ps_save_3_.Q ps_psData_3_.D
+-0-01---1 1
+0---00--1 1
+-0-10---1 1
+-0---00-1 1
+----1-1-1 1
+01111100- 1
+01100010- 1
+-----11-1 1
+00------1 1
+11------1 1
+-------11 1
+--0-----1 1
+.names ps_ledEn.Q ps_psData_3_.LH
+0 1
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q ps_psData_3_.AR
+000 1
+.names reset.BLIF button0_d1_q_0_.D
+1 1
+.names clkl.BLIF button0_d1_q_0_.C
+1 1
+.names button0_d1_q_0_.Q button0_d2_q_0_.D
+1 1
+.names clkl.BLIF button0_d2_q_0_.C
+1 1
+.names button0_d2_q_0_.Q button0_d3_q_0_.D
+1 1
+.names clkl.BLIF button0_d3_q_0_.C
+1 1
+.names dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_1_.D
+0 1
+.names clkl.BLIF dynamicshow_counter4_q_1_.C
+1 1
+.names dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_2_.Q dynamicshow_counter4_q_2_.D
+10 1
+01 1
+.names clkl.BLIF dynamicshow_counter4_q_2_.C
+1 1
+.names ps_keyClock_r0.Q ps_keyClock_r1.D
+1 1
+.names clkh.BLIF ps_keyClock_r1.C
+1 1
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q ps_keyClock_r1.AR
+000 1
+.names ps_counter_1_.Q ps_counter_2_.Q ps_counter_3_.Q ps_RxEn.D
+00- 1
+--0 1
+.names clkh.BLIF ps_RxEn.C
+1 1
+.names ps_keyClock_r1.Q ps_keyClock_r2.Q ps_RxEn.CE
+01 1
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q ps_RxEn.AP
+000 1
+.names ps_RxData_1_.Q ps_lastRxData_0_.D
+1 1
+.names ps_RxEn.Q ps_lastRxData_0_.C
+0 1
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q ps_lastRxData_0_.AP
+000 1
+.names ps_RxData_2_.Q ps_lastRxData_1_.D
+1 1
+.names ps_RxEn.Q ps_lastRxData_1_.C
+0 1
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q ps_lastRxData_1_.AR
+000 1
+.names ps_RxData_3_.Q ps_lastRxData_2_.D
+1 1
+.names ps_RxEn.Q ps_lastRxData_2_.C
+0 1
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q ps_lastRxData_2_.AP
+000 1
+.names ps_RxData_4_.Q ps_lastRxData_3_.D
+1 1
+.names ps_RxEn.Q ps_lastRxData_3_.C
+0 1
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q ps_lastRxData_3_.AR
+000 1
+.names ps_RxData_5_.Q ps_lastRxData_4_.D
+1 1
+.names ps_RxEn.Q ps_lastRxData_4_.C
+0 1
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q ps_lastRxData_4_.AR
+000 1
+.names ps_RxData_6_.Q ps_lastRxData_5_.D
+1 1
+.names ps_RxEn.Q ps_lastRxData_5_.C
+0 1
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q ps_lastRxData_5_.AR
+000 1
+.names ps_RxData_7_.Q ps_lastRxData_6_.D
+1 1
+.names ps_RxEn.Q ps_lastRxData_6_.C
+0 1
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q ps_lastRxData_6_.AP
+000 1
+.names ps_RxData_8_.Q ps_lastRxData_7_.D
+1 1
+.names ps_RxEn.Q ps_lastRxData_7_.C
+0 1
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q ps_lastRxData_7_.AR
+000 1
+.names ps_lastRxData_0_.Q ps_lastRxData_1_.Q ps_lastRxData_2_.Q ps_lastRxData_3_.Q ps_lastRxData_4_.Q ps_lastRxData_5_.Q ps_lastRxData_6_.Q ps_lastRxData_7_.Q ps_ledEn.D
+00001111 1
+.names ps_RxEn.Q ps_ledEn.C
+0 1
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q ps_ledEn.AR
+000 1
+.names keyClock.BLIF ps_keyClock_r0.D
+1 1
+.names clkh.BLIF ps_keyClock_r0.C
+1 1
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q ps_keyClock_r0.AR
+000 1
+.names ps_keyClock_r1.Q ps_keyClock_r2.D
+1 1
+.names clkh.BLIF ps_keyClock_r2.C
+1 1
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q ps_keyClock_r2.AR
+000 1
+.names ps_counter_0_.Q ps_counter_1_.Q ps_counter_2_.Q ps_counter_3_.Q ps_counter_0_.D
+000- 1
+0--0 1
+.names clkh.BLIF ps_counter_0_.C
+1 1
+.names ps_keyClock_r1.Q ps_keyClock_r2.Q ps_counter_0_.CE
+01 1
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q ps_counter_0_.AR
+000 1
+.names ps_counter_0_.Q ps_counter_1_.Q ps_counter_2_.Q ps_counter_3_.Q ps_counter_1_.D
+100- 1
+01-0 1
+10-0 1
+.names clkh.BLIF ps_counter_1_.C
+1 1
+.names ps_keyClock_r1.Q ps_keyClock_r2.Q ps_counter_1_.CE
+01 1
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q ps_counter_1_.AR
+000 1
+.names ps_counter_0_.Q ps_counter_1_.Q ps_counter_2_.Q ps_counter_3_.Q ps_counter_2_.D
+1100 1
+-010 1
+0-10 1
+.names clkh.BLIF ps_counter_2_.C
+1 1
+.names ps_keyClock_r1.Q ps_keyClock_r2.Q ps_counter_2_.CE
+01 1
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q ps_counter_2_.AR
+000 1
+.names ps_counter_0_.Q ps_counter_1_.Q ps_counter_2_.Q ps_counter_3_.Q ps_counter_3_.D
+1110 1
+-001 1
+.names clkh.BLIF ps_counter_3_.C
+1 1
+.names ps_keyClock_r1.Q ps_keyClock_r2.Q ps_counter_3_.CE
+01 1
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q ps_counter_3_.AR
+000 1
+.names keyData.BLIF ps_counter_0_.Q ps_counter_1_.Q ps_counter_2_.Q ps_counter_3_.Q ps_RxData_1_.Q ps_RxData_1_.D.X1
+010001 1
+110000 1
+.names ps_RxData_1_.Q ps_RxData_1_.D.X2
+1 1
+.names clkh.BLIF ps_RxData_1_.C
+1 1
+.names ps_RxData_1__0.BLIF ps_RxData_1_.CE
+1 1
+.names keyData.BLIF ps_counter_0_.Q ps_counter_1_.Q ps_counter_2_.Q ps_counter_3_.Q ps_RxData_2_.Q ps_RxData_2_.D.X1
+001001 1
+101000 1
+.names ps_RxData_2_.Q ps_RxData_2_.D.X2
+1 1
+.names clkh.BLIF ps_RxData_2_.C
+1 1
+.names ps_RxData_1__0.BLIF ps_RxData_2_.CE
+1 1
+.names keyData.BLIF ps_counter_0_.Q ps_counter_1_.Q ps_counter_2_.Q ps_counter_3_.Q ps_RxData_3_.Q ps_RxData_3_.D.X1
+011001 1
+111000 1
+.names ps_RxData_3_.Q ps_RxData_3_.D.X2
+1 1
+.names clkh.BLIF ps_RxData_3_.C
+1 1
+.names ps_RxData_1__0.BLIF ps_RxData_3_.CE
+1 1
+.names keyData.BLIF ps_counter_0_.Q ps_counter_1_.Q ps_counter_2_.Q ps_counter_3_.Q ps_RxData_4_.Q ps_RxData_4_.D.X1
+000101 1
+100100 1
+.names ps_RxData_4_.Q ps_RxData_4_.D.X2
+1 1
+.names clkh.BLIF ps_RxData_4_.C
+1 1
+.names ps_RxData_1__0.BLIF ps_RxData_4_.CE
+1 1
+.names keyData.BLIF ps_counter_0_.Q ps_counter_1_.Q ps_counter_2_.Q ps_counter_3_.Q ps_RxData_5_.Q ps_RxData_5_.D.X1
+010101 1
+110100 1
+.names ps_RxData_5_.Q ps_RxData_5_.D.X2
+1 1
+.names clkh.BLIF ps_RxData_5_.C
+1 1
+.names ps_RxData_1__0.BLIF ps_RxData_5_.CE
+1 1
+.names keyData.BLIF ps_counter_0_.Q ps_counter_1_.Q ps_counter_2_.Q ps_counter_3_.Q ps_RxData_6_.Q ps_RxData_6_.D.X1
+001101 1
+101100 1
+.names ps_RxData_6_.Q ps_RxData_6_.D.X2
+1 1
+.names clkh.BLIF ps_RxData_6_.C
+1 1
+.names ps_RxData_1__0.BLIF ps_RxData_6_.CE
+1 1
+.names keyData.BLIF ps_counter_0_.Q ps_counter_1_.Q ps_counter_2_.Q ps_counter_3_.Q ps_RxData_7_.Q ps_RxData_7_.D.X1
+011101 1
+111100 1
+.names ps_RxData_7_.Q ps_RxData_7_.D.X2
+1 1
+.names clkh.BLIF ps_RxData_7_.C
+1 1
+.names ps_RxData_1__0.BLIF ps_RxData_7_.CE
+1 1
+.names keyData.BLIF ps_counter_0_.Q ps_counter_1_.Q ps_counter_2_.Q ps_counter_3_.Q ps_RxData_8_.Q ps_RxData_8_.D.X1
+000011 1
+100010 1
+.names ps_RxData_8_.Q ps_RxData_8_.D.X2
+1 1
+.names clkh.BLIF ps_RxData_8_.C
+1 1
+.names ps_RxData_1__0.BLIF ps_RxData_8_.CE
+1 1
+.names ps_lastRxData_0_.Q ps_lastRxData_1_.Q ps_lastRxData_2_.Q ps_lastRxData_3_.Q ps_lastRxData_4_.Q ps_lastRxData_5_.Q ps_lastRxData_6_.Q ps_lastRxData_7_.Q ps_save_0_.Q ps_save_0_.D
+00------1 1
+-0-1----1 1
+0-----1-1 1
+-0---00-1 1
+-1--0---1 1
+1---1---1 1
+10111100- 1
+01100010- 1
+01101000- 1
+011-0100- 1
+-----11-1 1
+--0-----1 1
+-------11 1
+.names ps_save_0__0.BLIF ps_save_0_.LH-
+1 1
+.names ps_lastRxData_0_.Q ps_lastRxData_1_.Q ps_lastRxData_2_.Q ps_lastRxData_3_.Q ps_lastRxData_4_.Q ps_lastRxData_5_.Q ps_lastRxData_6_.Q ps_lastRxData_7_.Q ps_save_1_.Q ps_save_1_.D
+-0-1----1 1
+-0--1---1 1
+---1--1-1 1
+----000-1 1
+01111000- 1
+10111100- 1
+0110-100- 1
+-----11-1 1
+----1-1-1 1
+00------1 1
+11------1 1
+-------11 1
+--0-----1 1
+.names ps_save_0__0.BLIF ps_save_1_.LH-
+1 1
+.names ps_lastRxData_0_.Q ps_lastRxData_1_.Q ps_lastRxData_2_.Q ps_lastRxData_3_.Q ps_lastRxData_4_.Q ps_lastRxData_5_.Q ps_lastRxData_6_.Q ps_lastRxData_7_.Q ps_save_2_.Q ps_save_2_.D
+-0----0-1 1
+---10---1 1
+01110100- 1
+01101100- 1
+10100100- 1
+10111100- 1
+----000-1 1
+00------1 1
+----1-1-1 1
+-----11-1 1
+11------1 1
+--0-----1 1
+-------11 1
+.names ps_save_0__0.BLIF ps_save_2_.LH-
+1 1
+.names ps_lastRxData_0_.Q ps_lastRxData_1_.Q ps_lastRxData_2_.Q ps_lastRxData_3_.Q ps_lastRxData_4_.Q ps_lastRxData_5_.Q ps_lastRxData_6_.Q ps_lastRxData_7_.Q ps_save_3_.Q ps_save_3_.D
+-0-01---1 1
+0---00--1 1
+-0-10---1 1
+-0---00-1 1
+----1-1-1 1
+01111100- 1
+01100010- 1
+-----11-1 1
+00------1 1
+11------1 1
+-------11 1
+--0-----1 1
+.names ps_save_0__0.BLIF ps_save_3_.LH-
+1 1
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q ps_keyClock_r1.Q ps_keyClock_r2.Q ps_RxData_1__0
+1--01 1
+-1-01 1
+--101 1
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q ps_ledEn.Q ps_save_0__0
+---1 1
+000- 1
+.end

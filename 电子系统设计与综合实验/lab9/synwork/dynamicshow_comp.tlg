@@ -1,0 +1,17 @@
+Selecting top level module dynamicshow
+@N: CG364 :"E:\grade-3_2\isp_project\lab9\counter_n.v":15:7:15:15|Synthesizing module counter_n
+
+	n=32'b00000000000000000000000000000100
+	counter_bits=32'b00000000000000000000000000000010
+   Generated name = counter_n_4s_2s
+
+@N: CG364 :"E:\grade-3_2\isp_project\lab9\mux16to4.v":1:7:1:14|Synthesizing module mux16to4
+
+@N: CG364 :"E:\grade-3_2\isp_project\lab9\decoderHex2Dec.v":1:7:1:20|Synthesizing module decoderHex2Dec
+
+@N: CG364 :"E:\grade-3_2\isp_project\lab9\decoder2to4.v":1:7:1:17|Synthesizing module decoder2to4
+
+@N: CG364 :"E:\grade-3_2\isp_project\lab9\dynamicShow.v":1:7:1:17|Synthesizing module dynamicshow
+
+@W: CS263 :"E:\grade-3_2\isp_project\lab9\dynamicShow.v":8:79:8:79|Port-width mismatch for port en. Formal has width 1, Actual 32
+@W: CL156 :"E:\grade-3_2\isp_project\lab9\dynamicShow.v":8:66:8:70|*Input reset to expression [instance] has undriven bits that are tied to 0 -- simulation mismatch possible.

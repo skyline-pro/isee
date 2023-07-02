@@ -1,0 +1,109 @@
+#Build: Synplify Pro I-2014.03LC , Build 063R, May 27 2014
+#install: D:\ispLEVER_Classic2_1\synpbase
+#OS: Windows 7 6.2
+#Hostname: SKYLINE
+
+#Implementation: lab13
+
+$ Start of Compile
+#Fri May 13 08:54:28 2022
+
+Synopsys Verilog Compiler, version comp201403rcp1, Build 060R, built May 27 2014
+@N|Running in 64-bit mode
+Copyright (C) 1994-2014 Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\umr_capim.v"
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\scemi_objects.v"
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\scemi_pipes.svh"
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\hypermods.v"
+@I::"D:\ispLEVER_Classic2_1\ispcpld\..\cae_library\synthesis\verilog\mach.v"
+@I::"E:\grade-3_2\isp_project\lab13\lab13.h"
+@I::"E:\grade-3_2\isp_project\lab13\lcd1602.v"
+@W: CG921 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":50:14:50:17|lcdD is already declared in this scope.
+Verilog syntax check successful!
+Selecting top level module lcd1602
+@N: CG364 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":1:7:1:13|Synthesizing module lcd1602
+
+@A: CL282 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Feedback mux created for signal dataInBuf[255:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@W: CL189 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Register bit dataInBuf[0] is always 0, optimizing ...
+@W: CL189 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Register bit dataInBuf[1] is always 0, optimizing ...
+@W: CL189 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Register bit dataInBuf[2] is always 0, optimizing ...
+@W: CL189 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Register bit dataInBuf[3] is always 0, optimizing ...
+@W: CL189 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Register bit dataInBuf[4] is always 0, optimizing ...
+@W: CL189 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Register bit dataInBuf[6] is always 0, optimizing ...
+@W: CL189 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Register bit dataInBuf[7] is always 0, optimizing ...
+@W: CL190 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Optimizing register bit lcdRw to a constant 0
+@W: CL169 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Pruning register lcdRw 
+
+@W: CL279 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Pruning register bits 7 to 6 of dataInBuf[255:0] 
+
+@W: CL279 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Pruning register bits 4 to 0 of dataInBuf[255:0] 
+
+@W: CL189 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Register bit dataInBuf[8] is always 0, optimizing ...
+@W: CL189 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Register bit dataInBuf[9] is always 0, optimizing ...
+@W: CL189 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Register bit dataInBuf[10] is always 0, optimizing ...
+@W: CL189 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Register bit dataInBuf[11] is always 0, optimizing ...
+@W: CL189 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Register bit dataInBuf[12] is always 0, optimizing ...
+@W: CL189 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Register bit dataInBuf[14] is always 0, optimizing ...
+@W: CL189 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Register bit dataInBuf[15] is always 0, optimizing ...
+@W: CL279 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Pruning register bits 15 to 14 of dataInBuf[255:8] 
+
+@W: CL279 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Pruning register bits 12 to 8 of dataInBuf[255:8] 
+
+@W: CL189 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Register bit dataInBuf[16] is always 0, optimizing ...
+@W: CL189 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Register bit dataInBuf[17] is always 0, optimizing ...
+@W: CL189 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Register bit dataInBuf[18] is always 0, optimizing ...
+@W: CL189 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Register bit dataInBuf[19] is always 0, optimizing ...
+@W: CL189 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Register bit dataInBuf[20] is always 0, optimizing ...
+@W: CL189 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Register bit dataInBuf[22] is always 0, optimizing ...
+@W: CL189 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Register bit dataInBuf[23] is always 0, optimizing ...
+@W: CL279 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Pruning register bits 23 to 22 of dataInBuf[255:16] 
+
+@W: CL279 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Pruning register bits 20 to 16 of dataInBuf[255:16] 
+
+@W: CL189 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Register bit dataInBuf[24] is always 0, optimizing ...
+@W: CL189 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Register bit dataInBuf[25] is always 0, optimizing ...
+@W: CL189 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Register bit dataInBuf[26] is always 0, optimizing ...
+@W: CL189 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Register bit dataInBuf[27] is always 0, optimizing ...
+@W: CL189 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Register bit dataInBuf[28] is always 0, optimizing ...
+@W: CL189 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Register bit dataInBuf[30] is always 0, optimizing ...
+@W: CL189 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Register bit dataInBuf[31] is always 0, optimizing ...
+@W: CL279 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Pruning register bits 31 to 30 of dataInBuf[255:24] 
+
+@W: CL279 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Pruning register bits 28 to 24 of dataInBuf[255:24] 
+
+@N: CL201 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Trying to extract state machine for register state
+Extracted state machine for register state
+State machine has 7 reachable states with original encodings of:
+   00000001
+   00000010
+   00000100
+   00001000
+   00010000
+   01000000
+   10000000
+@W: CL279 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Pruning register bits 39 to 38 of dataInBuf[255:32] 
+
+@W: CL279 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Pruning register bits 36 to 34 of dataInBuf[255:32] 
+
+@W: CL257 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Register bit 0 always 0, optimizing ...
+@W: CL260 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Pruning register bit 32 of dataInBuf[33:32] 
+
+@END
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 73MB peak: 77MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Fri May 13 08:54:28 2022
+
+###########################################################]
+Synopsys Netlist Linker, version comp201403rcp1, Build 060R, built May 27 2014
+@N|Running in 64-bit mode
+File E:\grade-3_2\isp_project\lab13\synwork\lcd1602_comp.srs changed - recompiling
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Fri May 13 08:54:29 2022
+
+###########################################################]

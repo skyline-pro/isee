@@ -1,0 +1,5 @@
+. top top.sch e:\grade-3_2\isp_project\lab1\top.sch
+I1.I10 G_2AND  e:\grade-3_2\isp_project\lab1\
+I2 abeltop abeltop.abl e:\grade-3_2\isp_project\lab1\abeltop.abl
+I1 demo demo.sch e:\grade-3_2\isp_project\lab1\demo.sch
+I1.I9 G_2AND  e:\grade-3_2\isp_project\lab1\

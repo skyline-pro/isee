@@ -1,0 +1,2494 @@
+<HTML>
+<HEAD><TITLE>HTML_REPORT_FILE</TITLE>
+<STYLE TYPE="text/css">
+<!--
+.blink {text-decoration:blink}
+.ms  {font-size: 10pt; font-family: monospace; font-weight: normal}
+.msb {font-size: 10pt; font-family: monospace; font-weight: bold  }
+-->
+</STYLE>
+</HEAD>
+<PRE>
+<A name="Top"></A><H2 align=center> ispLEVER Classic 2.1.00.02.49.20 Fitter Report File </H2>
+<H2 align=center>Copyright(C), 1992-2012, Lattice Semiconductor Corporation</H2>
+<H2 align=center>All Rights Reserved</H2>
+
+
+The Basic/Detailed Report Format can be selected in the dialog box
+Tools->Fitter Report File Format...
+
+<A name="Project_Summary"></A><FONT COLOR=maroon><U><B><big>Project_Summary</big></B></U></FONT>
+<BR>
+Project Name         :  lab13
+Project Path         :  E:\Grade-3_2\ISP_Project\lab13
+Project Fitted on    :  Fri May 13 09:17:07 2022
+
+Device               :  M4256_96
+Package              :  144
+GLB Input Mux Size   :  33
+Available Blocks     :  16
+Speed                :  -7.5
+Part Number          :  LC4256V-75T144I
+Source Format        :  Pure_Verilog_HDL
+
+
+<font color=green size=4><span class=blink><strong><B>Project 'lab13' Fit Successfully!</B></strong></span></font>
+
+
+<A name="Compilation_Times"></A><FONT COLOR=maroon><U><B><big>Compilation_Times</big></B></U></FONT>
+<BR>
+Prefit Time                     0 secs
+Load Design Time                0.05 secs
+Partition Time                  0.22 secs
+Place Time                      0.00 secs
+Route Time                      0.00 secs
+Total Fit Time                  00:00:01
+
+
+<A name="Design_Summary"></A><FONT COLOR=maroon><U><B><big>Design_Summary</big></B></U></FONT>
+<BR>
+Total Input Pins                2
+Total Logic Functions           238
+  Total Output Pins             11
+  Total Bidir I/O Pins          0
+  Total Buried Nodes            227
+Total Flip-Flops                229
+  Total D Flip-Flops            225
+  Total T Flip-Flops            4
+  Total Latches                 0
+Total Product Terms             1264
+
+Total Reserved Pins             0
+Total Locked Pins               13
+Total Locked Nodes              0
+
+Total Unique Output Enables     0
+Total Unique Clocks             2
+Total Unique Clock Enables      3
+Total Unique Resets             1
+Total Unique Presets            1
+
+Fmax Logic Levels               2
+
+
+<A name="Device_Resource_Summary"></A><FONT COLOR=maroon><U><B><big>Device_Resource_Summary</big></B></U></FONT>
+<BR>
+<B>                                 Device
+                                 Total    Used   Not Used   Utilization
+-----------------------------------------------------------------------
+</B>Dedicated Pins
+  Clock/Input Pins                  4        1      3    -->    25
+  Input-Only Pins                  10        0     10    -->     0
+  I/O / Enable Pins                 2        0      2    -->     0
+I/O Pins                           94       12     82    -->    12
+Logic Functions                   256      238     18    -->    92
+  Input Registers                  96        0     96    -->     0
+
+GLB Inputs                        576      411    165    -->    71
+Logical Product Terms            1280     1033    247    -->    80
+Occupied GLBs                      16       16      0    -->   100
+Macrocells                        256      238     18    -->    92
+
+Control Product Terms:
+  GLB Clock/Clock Enables          16       15      1    -->    93
+  GLB Reset/Presets                16        0     16    -->     0
+  Macrocell Clocks                256      124    132    -->    48
+  Macrocell Clock Enables         256       76    180    -->    29
+  Macrocell Enables               256        0    256    -->     0
+  Macrocell Resets                256        7    249    -->     2
+  Macrocell Presets               256        1    255    -->     0
+
+Global Routing Pool               356      229    127    -->    64
+  GRP from IFB                     ..        1     ..    -->    ..
+    (from input signals)           ..        1     ..    -->    ..
+    (from output signals)          ..        0     ..    -->    ..
+    (from bidir signals)           ..        0     ..    -->    ..
+  GRP from MFB                     ..      228     ..    -->    ..
+----------------------------------------------------------------------
+
+&lt;Note&gt; 1 : The available PT is the product term that has not been used.
+&lt;Note&gt; 2 : IFB is I/O feedback.
+&lt;Note&gt; 3 : MFB is macrocell feedback.
+
+
+<A name="GLB_Resource_Summary"></A><FONT COLOR=maroon><U><B><big>GLB_Resource_Summary</big></B></U></FONT>
+<BR>
+<B>                                                                                     # of PT
+               ---  Fanin  ---    I/O    Input  Macrocells       Macrocells   Logic  clusters
+             Unique Shared Total  Pins    Regs Used Inaccessible  available    PTs   used
+-------------------------------------------------------------------------------------------
+Maximum
+  GLB                      36      *(1)     8   --     --             16       80       16
+</B>-------------------------------------------------------------------------------------------
+  GLB    A      8    17    25      0/6      0   15      0              1       64       15
+  GLB    B      7    21    28      0/6      0   14      2              0       72       16
+  GLB    C      7    22    29      0/6      0   15      1              0       65       16
+  GLB    D      6    18    24      0/6      0   15      0              1       73       15
+-------------------------------------------------------------------------------------------
+  GLB    E      5    17    22      0/6      0   16      0              0       35       15
+  GLB    F      7    20    27      0/6      0   15      0              1       63       16
+  GLB    G     11    16    27      0/6      0   15      0              1       61       15
+  GLB    H      6    18    24      0/6      0   15      0              1       64       15
+-------------------------------------------------------------------------------------------
+  GLB    I      8    17    25      0/6      0   16      0              0       62       16
+  GLB    J      9    17    26      1/6      0   16      0              0       65       16
+  GLB    K      7    24    31      3/6      0   16      0              0       72       16
+  GLB    L      8    18    26      5/6      0   11      3              2       72       16
+-------------------------------------------------------------------------------------------
+  GLB    M      7    21    28      2/6      0   14      2              0       65       16
+  GLB    N      4    18    22      1/6      0   15      0              1       60       15
+  GLB    O      4    20    24      0/6      0   15      0              1       72       15
+  GLB    P      4    19    23      0/6      0   15      0              1       68       15
+-------------------------------------------------------------------------------------------
+TOTALS:       108   303   411     12/96     0  238      8             10     1033      248
+
+&lt;Note&gt; 1 : For ispMACH 4000 devices, the number of IOs depends on the GLB.
+&lt;Note&gt; 2 : Four rightmost columns above reflect last status of the placement process.
+
+
+<A name="GLB_Control_Summary"></A><FONT COLOR=maroon><U><B><big>GLB_Control_Summary</big></B></U></FONT>
+<BR>
+<B>           Shared Shared | Mcell  Mcell  Mcell  Mcell  Mcell 
+           Clk/CE Rst/Pr | Clock  CE     Enable Reset  Preset
+------------------------------------------------------------------------------
+Maximum
+  GLB        1      1        16     16     16     16     16  
+==============================================================================
+</B>  GLB    A   1      0        15      0      0      0      0
+  GLB    B   1      0         0     13      0      0      1
+  GLB    C   1      0        14      0      0      0      0
+  GLB    D   1      0        15      0      0      0      0
+------------------------------------------------------------------------------
+  GLB    E   0      0         0      0      0      0      0
+  GLB    F   1      0         8      0      0      0      0
+  GLB    G   1      0        12      0      0      0      0
+  GLB    H   1      0        15      0      0      0      0
+------------------------------------------------------------------------------
+  GLB    I   1      0         0     15      0      1      0
+  GLB    J   1      0        16      0      0      0      0
+  GLB    K   1      0         0     13      0      5      0
+  GLB    L   1      0         0      9      0      0      0
+------------------------------------------------------------------------------
+  GLB    M   1      0         0     12      0      1      0
+  GLB    N   1      0        14      0      0      0      0
+  GLB    O   1      0         0     14      0      0      0
+  GLB    P   1      0        15      0      0      0      0
+------------------------------------------------------------------------------
+
+&lt;Note&gt; 1 : For ispMACH 4000 devices, the number of output enables depends on the GLB.
+
+
+<A name="Optimizer_and_Fitter_Options"></A><FONT COLOR=maroon><U><B><big>Optimizer_and_Fitter_Options</big></B></U></FONT>
+<BR>
+Pin Assignment :                       Yes
+Group Assignment :                     No
+Pin Reservation :                      No
+
+@Ignore_Project_Constraints :
+  Pin Assignments :                    No
+      Keep Block Assignment            --
+      Keep Segment Assignment          --
+  Group Assignments :                  No
+  Macrocell Assignment :               No
+      Keep Block Assignment            --
+      Keep Segment Assignment          --
+
+@Backannotate_Project_Constraints
+  Pin Assignments :                    No
+  Pin And Block Assignments :          No
+  Pin, Macrocell and Block :           No
+
+@Timing_Constraints :                  No
+
+@Global_Project_Optimization :
+  Balanced Partitioning :              No
+  Spread Placement :                   Yes
+
+  Note :
+    Pack Design :
+       Balanced Partitioning = No
+       Spread Placement      = No
+    Spread Design :
+       Balanced Partitioning = Yes
+       Spread Placement      = Yes
+
+
+@Logic_Synthesis :
+  Logic Reduction :                    Yes
+  Node Collapsing :                    FMAX
+  Fmax_Logic_Level :                   1
+  D/T Synthesis :                      Yes
+  XOR Synthesis :                      Yes
+  Max. P-Term for Collapsing :         16
+  Max. P-Term for Splitting :          80
+  Max Symbols :                        24
+
+@Utilization_options
+  Max. % of Macrocells used :          100
+@Usercode                               (HEX)
+@IO_Types                              Default = LVCMOS33 (2)
+@Output_Slew_Rate                      Default = FAST (2)
+@Power                                 Default = HIGH (2)
+@Pull                                  Default = PULLUP_UP (2)
+@Fast_Bypass                           Default = None (2)
+@ORP_Bypass                            Default = None
+@Input_Registers                       Default = None (2)
+@Register_Powerup                      Default = None
+
+Device Options:
+&lt;Note&gt; 1 : Reserved unused I/Os can be independently driven to Low or High, and does not
+           follow the drive level set for the Global Configure Unused I/O Option.
+&lt;Note&gt; 2 : For user-specified constraints on individual signals, refer to the Output,
+           Bidir and Buried Signal Lists.
+
+
+<A name="Pinout_Listing"></A><FONT COLOR=maroon><U><B><big>Pinout_Listing</big></B></U></FONT>
+<BR>
+<B>      | Pin   | Bank |GLB |Assigned|                 | Signal|
+Pin No| Type  |Number|Pad |Pin     |     I/O Type    | Type  | Signal name
+</B>----------------------------------------------------------------------------------
+1     | GND   |   -  |    |        |                 |       |
+2     | TDI   |   -  |    |        |                 |       |
+3     |VCCIO0 |   -  |    |        |                 |       |
+4     |  I_O  |   0  |C12 |        |                 |       |
+5     |  I_O  |   0  |C10 |        |                 |       |
+6     |  I_O  |   0  |C8  |        |                 |       |
+7     |  I_O  |   0  |C6  |        |                 |       |
+8     |  I_O  |   0  |C4  |        |                 |       |
+9     |  I_O  |   0  |C2  |        |                 |       |
+10    |GNDIO0 |   -  |    |        |                 |       |
+11    |  I_O  |   0  |D14 |        |                 |       |
+12    |  I_O  |   0  |D12 |        |                 |       |
+13    |  I_O  |   0  |D10 |        |                 |       |
+14    |  I_O  |   0  |D8  |        |                 |       |
+15    |  I_O  |   0  |D6  |        |                 |       |
+16    |  I_O  |   0  |D4  |        |                 |       |
+17    | IN0   |   0  |    |        |                 |       |
+18    | NC    |   -  |    |        |                 |       |
+19    |VCCIO0 |   -  |    |        |                 |       |
+20    | IN1   |   0  |    |        |                 |       |
+21    |  I_O  |   0  |E2  |        |                 |       |
+22    |  I_O  |   0  |E4  |        |                 |       |
+23    |  I_O  |   0  |E6  |        |                 |       |
+24    |  I_O  |   0  |E8  |        |                 |       |
+25    |  I_O  |   0  |E10 |        |                 |       |
+26    |  I_O  |   0  |E12 |        |                 |       |
+27    |GNDIO0 |   -  |    |        |                 |       |
+28    |  I_O  |   0  |F2  |        |                 |       |
+29    |  I_O  |   0  |F4  |        |                 |       |
+30    |  I_O  |   0  |F6  |        |                 |       |
+31    |  I_O  |   0  |F8  |        |                 |       |
+32    |  I_O  |   0  |F10 |        |                 |       |
+33    |  I_O  |   0  |F12 |        |                 |       |
+34    |VCCIO0 |   -  |    |        |                 |       |
+35    | TCK   |   -  |    |        |                 |       |
+36    | VCC   |   -  |    |        |                 |       |
+37    | GND   |   -  |    |        |                 |       |
+38    | IN2   |   0  |    |        |                 |       |
+39    |  I_O  |   0  |G12 |        |                 |       |
+40    |  I_O  |   0  |G10 |        |                 |       |
+41    |  I_O  |   0  |G8  |        |                 |       |
+42    |  I_O  |   0  |G6  |        |                 |       |
+43    |  I_O  |   0  |G4  |        |                 |       |
+44    |  I_O  |   0  |G2  |        |                 |       |
+45    | IN3   |   0  |    |        |                 |       |
+46    |GNDIO0 |   -  |    |        |                 |       |
+47    |VCCIO0 |   -  |    |        |                 |       |
+48    |  I_O  |   0  |H12 |        |                 |       |
+49    |  I_O  |   0  |H10 |        |                 |       |
+50    |  I_O  |   0  |H8  |        |                 |       |
+51    |  I_O  |   0  |H6  |        |                 |       |
+52    |  I_O  |   0  |H4  |        |                 |       |
+53    |  I_O  |   0  |H2  |        |                 |       |
+54    |INCLK1 |   0  |    |        |                 |       |
+55    |GNDIO1 |   -  |    |        |                 |       |
+56    |INCLK2 |   1  |    |        |                 |       |
+57    | VCC   |   -  |    |        |                 |       |
+58    |  I_O  |   1  |I2  |        |                 |       |
+59    |  I_O  |   1  |I4  |        |                 |       |
+60    |  I_O  |   1  |I6  |        |                 |       |
+61    |  I_O  |   1  |I8  |        |                 |       |
+62    |  I_O  |   1  |I10 |        |                 |       |
+63    |  I_O  |   1  |I12 |        |                 |       |
+64    |VCCIO1 |   -  |    |        |                 |       |
+65    |GNDIO1 |   -  |    |        |                 |       |
+66    |  I_O  |   1  |J2  |        |                 |       |
+67    |  I_O  |   1  |J4  |        |                 |       |
+68    |  I_O  |   1  |J6  |    *   |LVCMOS33         | Input |<A href=#7>reset</A>
+69    |  I_O  |   1  |J8  |        |                 |       |
+70    |  I_O  |   1  |J10 |        |                 |       |
+71    |  I_O  |   1  |J12 |        |                 |       |
+72    | IN4   |   0  |    |        |                 |       |
+73    | GND   |   -  |    |        |                 |       |
+74    | TMS   |   -  |    |        |                 |       |
+75    |VCCIO1 |   -  |    |        |                 |       |
+76    |  I_O  |   1  |K12 |        |                 |       |
+77    |  I_O  |   1  |K10 |        |                 |       |
+78    |  I_O  |   1  |K8  |        |                 |       |
+79    |  I_O  |   1  |K6  |    *   |LVCMOS33         | Output|<A href=#12>lcdD_6_</A>
+80    |  I_O  |   1  |K4  |    *   |LVCMOS33         | Output|<A href=#9>lcdD_7_</A>
+81    |  I_O  |   1  |K2  |    *   |LVCMOS33         | Output|<A href=#14>lcdD_4_</A>
+82    |GNDIO1 |   -  |    |        |                 |       |
+83    |  I_O  |   1  |L14 |    *   |LVCMOS33         | Output|<A href=#13>lcdD_5_</A>
+84    |  I_O  |   1  |L12 |    *   |LVCMOS33         | Output|<A href=#16>lcdD_2_</A>
+85    |  I_O  |   1  |L10 |    *   |LVCMOS33         | Output|<A href=#15>lcdD_3_</A>
+86    |  I_O  |   1  |L8  |    *   |LVCMOS33         | Output|<A href=#18>lcdD_0_</A>
+87    |  I_O  |   1  |L6  |    *   |LVCMOS33         | Output|<A href=#17>lcdD_1_</A>
+88    |  I_O  |   1  |L4  |        |                 |       |
+89    | IN5   |   1  |    |        |                 |       |
+90    | NC    |   -  |    |        |                 |       |
+91    |VCCIO1 |   -  |    |        |                 |       |
+92    | IN6   |   1  |    |        |                 |       |
+93    |  I_O  |   1  |M2  |        |                 |       |
+94    |  I_O  |   1  |M4  |        |                 |       |
+95    |  I_O  |   1  |M6  |        |                 |       |
+96    |  I_O  |   1  |M8  |    *   |LVCMOS33         | Output|<A href=#11>ledEN</A>
+97    |  I_O  |   1  |M10 |        |                 |       |
+98    |  I_O  |   1  |M12 |    *   |LVCMOS33         | Output|<A href=#10>lcdRs</A>
+99    |GNDIO1 |   -  |    |        |                 |       |
+100   |  I_O  |   1  |N2  |    *   |LVCMOS33         | Output|<A href=#8>lcdRw</A>
+101   |  I_O  |   1  |N4  |        |                 |       |
+102   |  I_O  |   1  |N6  |        |                 |       |
+103   |  I_O  |   1  |N8  |        |                 |       |
+104   |  I_O  |   1  |N10 |        |                 |       |
+105   |  I_O  |   1  |N12 |        |                 |       |
+106   |VCCIO1 |   -  |    |        |                 |       |
+107   | TDO   |   -  |    |        |                 |       |
+108   | VCC   |   -  |    |        |                 |       |
+109   | GND   |   -  |    |        |                 |       |
+110   | IN7   |   1  |    |        |                 |       |
+111   |  I_O  |   1  |O12 |        |                 |       |
+112   |  I_O  |   1  |O10 |        |                 |       |
+113   |  I_O  |   1  |O8  |        |                 |       |
+114   |  I_O  |   1  |O6  |        |                 |       |
+115   |  I_O  |   1  |O4  |        |                 |       |
+116   |  I_O  |   1  |O2  |        |                 |       |
+117   | IN8   |   1  |    |        |                 |       |
+118   |GNDIO1 |   -  |    |        |                 |       |
+119   |VCCIO1 |   -  |    |        |                 |       |
+120   |  I_O  |   1  |P12 |        |                 |       |
+121   |  I_O  |   1  |P10 |        |                 |       |
+122   |  I_O  |   1  |P8  |        |                 |       |
+123   |  I_O  |   1  |P6  |        |                 |       |
+124   |  I_O  |   1  |P4  |        |                 |       |
+125   | I_O/OE|   1  |P2  |        |                 |       |
+126   |INCLK3 |   1  |    |        |                 |       |
+127   |GNDIO0 |   -  |    |        |                 |       |
+128   |INCLK0 |   0  |    |    *   |LVCMOS33         | Input |<A href=#6>clk_50m</A>
+129   | VCC   |   -  |    |        |                 |       |
+130   | I_O/OE|   0  |A2  |        |                 |       |
+131   |  I_O  |   0  |A4  |        |                 |       |
+132   |  I_O  |   0  |A6  |        |                 |       |
+133   |  I_O  |   0  |A8  |        |                 |       |
+134   |  I_O  |   0  |A10 |        |                 |       |
+135   |  I_O  |   0  |A12 |        |                 |       |
+136   |VCCIO0 |   -  |    |        |                 |       |
+137   |GNDIO0 |   -  |    |        |                 |       |
+138   |  I_O  |   0  |B2  |        |                 |       |
+139   |  I_O  |   0  |B4  |        |                 |       |
+140   |  I_O  |   0  |B6  |        |                 |       |
+141   |  I_O  |   0  |B8  |        |                 |       |
+142   |  I_O  |   0  |B10 |        |                 |       |
+143   |  I_O  |   0  |B12 |        |                 |       |
+144   | IN9   |   0  |    |        |                 |       |
+----------------------------------------------------------------------------------
+
+&lt;Note&gt; GLB Pad : This notation refers to the GLB I/O pad number in the device.
+&lt;Note&gt; Assigned Pin : user or dedicated input assignment (E.g. Clock pins).
+&lt;Note&gt; Pin Type : 
+          ClkIn : Dedicated input or clock pin 
+           CLK  : Dedicated clock pin
+           I_O  : Input/Output pin
+           INP  : Dedicated input pin
+           JTAG : JTAG Control and test pin
+           NC   : No connected
+
+
+<A name="Input_Signal_List"></A><FONT COLOR=maroon><U><B><big>Input_Signal_List</big></B></U></FONT>
+<BR>
+<B>                Input
+         Pin    Fanout
+ Pin GLB Type                       Pullup Signal
+</B>--------------------------------------------------
+ 128  -- INCLK     ----------------      Up <A name=6>clk_50m</A>
+  68   J  I/O   7  -B---F--I-KLM-O-      Up <A name=7>reset</A>
+--------------------------------------------------
+
+
+<A name="Output_Signal_List"></A><FONT COLOR=maroon><U><B><big>Output_Signal_List</big></B></U></FONT>
+<BR>
+<B>          I         C      P R P       O Output
+          N         L Mc   R E U C O F B Fanout
+ Pin GLB  P LL PTs  S Type E S P E E P P                     Slew Pullup Signal
+</B>--------------------------------------------------------------------------------
+  86   L 15  1  10  3 DFF  *   S *          ----------------  Fast     Up <A href=#18>lcdD_0_</A>
+  87   L 12  1   7  2 DFF    * R *          ----------------  Fast     Up <A href=#17>lcdD_1_</A>
+  84   L 13  1   9  3 DFF    * R *          ----------------  Fast     Up <A href=#16>lcdD_2_</A>
+  85   L 14  1  10  2 DFF    * R *          ----------------  Fast     Up <A href=#15>lcdD_3_</A>
+  81   K 14  1  11  3 DFF    * R *          ----------------  Fast     Up <A href=#14>lcdD_4_</A>
+  83   L 14  1  10  3 DFF    * R *          ----------------  Fast     Up <A href=#13>lcdD_5_</A>
+  79   K 11  1   6  2 DFF    * R *          ----------------  Fast     Up <A href=#12>lcdD_6_</A>
+  80   K 14  1   5  2 DFF    * R *          ----------------  Fast     Up <A href=#9>lcdD_7_</A>
+  98   M 10  1   3  1 DFF    * R            ----------------  Fast     Up <A href=#10>lcdRs</A>
+ 100   N  0  -   0  1 COM                   ----------------  Fast     Up <A href=#8>lcdRw</A>
+  96   M  2  2   2  1 DFF      R         15 ABCD-FGHIJKLMNOP  Fast     Up <A href=#11>ledEN</A>
+--------------------------------------------------------------------------------
+
+&lt;Note&gt; CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+<A name="Bidir_Signal_List"></A><FONT COLOR=maroon><U><B><big>Bidir_Signal_List</big></B></U></FONT>
+<BR>
+<B>          I         C      P R P       O Bidir
+          N         L Mc   R E U C O F B Fanout
+ Pin GLB  P LL PTs  S Type E S P E E P P                     Slew Pullup Signal
+</B>-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+&lt;Note&gt; CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+<A name="Buried_Signal_List"></A><FONT COLOR=maroon><U><B><big>Buried_Signal_List</big></B></U></FONT>
+<BR>
+<B>        I         C      P R P       Node
+        N         L Mc   R E U C I F Fanout
+Mc GLB  P LL PTs  S Type E S P E R P                     Signal
+</B>----------------------------------------------------------------------------
+15   K  1  1   1  1 DFF      R       3  ----E-G---K-----  <A href=#38>cnt_171__i0</A>
+14   G  2  1   2  1 DFF      R       2  ----E-G---------  <A href=#37>cnt_171__i1</A>
+ 3   E  3  2   3  1 DFF      R       1  ----E-----------  <A href=#28>cnt_171__i10</A>
+ 0   E  4  2   4  1 DFF      R       1  ----E-----------  <A href=#27>cnt_171__i11</A>
+ 6   E  5  2   2  1 DFF      R       1  ----E-----------  <A href=#26>cnt_171__i12</A>
+13   G  2  2   2  1 DFF      R       2  ----E-G---------  <A href=#25>cnt_171__i13</A>
+12   G  3  2   3  1 DFF      R       2  ----E-G---------  <A href=#24>cnt_171__i14</A>
+13   F  2  2   2  1 DFF      R       2  ----EF----------  <A href=#23>cnt_171__i15</A>
+ 4   F  3  2   3  1 DFF      R       2  ----EF----------  <A href=#22>cnt_171__i16</A>
+ 2   F  4  2   4  1 DFF      R       2  ----EF----------  <A href=#21>cnt_171__i17</A>
+12   F  5  2   2  2 DFF      R       2  ----EF----------  <A href=#20>cnt_171__i18</A>
+10   F  5  2   1  1 TFF      R       1  ----E-----------  <A href=#19>cnt_171__i19</A>
+ 5   E  3  1   3  1 DFF      R       1  ----E-----------  <A href=#36>cnt_171__i2</A>
+ 2   E  4  1   4  1 DFF      R       1  ----E-----------  <A href=#35>cnt_171__i3</A>
+ 7   E  5  1   2  1 DFF      R       1  ----E-----------  <A href=#34>cnt_171__i4</A>
+10   E  5  1   1  1 TFF      R       1  ----E-----------  <A href=#33>cnt_171__i5</A>
+ 9   E  2  2   2  1 DFF      R       1  ----E-----------  <A href=#32>cnt_171__i6</A>
+ 4   E  3  2   3  1 DFF      R       1  ----E-----------  <A href=#31>cnt_171__i7</A>
+ 1   E  4  2   4  1 DFF      R       1  ----E-----------  <A href=#30>cnt_171__i8</A>
+ 8   E  2  2   2  1 DFF      R       1  ----E-----------  <A href=#29>cnt_171__i9</A>
+12   A  7  2   4  1 DFF      R *     1  A---------------  <A href=#192>dataInBuf_i0_i100</A>
+11   B  8  2   5  1 DFF      R *     1  -B--------------  <A href=#191>dataInBuf_i0_i101</A>
+12   B  7  2   4  1 DFF      R *     2  -B-----------N--  <A href=#190>dataInBuf_i0_i102</A>
+15   J  7  2   4  1 DFF      R *     1  ---------J------  <A href=#189>dataInBuf_i0_i104</A>
+10   H  7  2   4  1 DFF      R *     2  --C----H--------  <A href=#188>dataInBuf_i0_i105</A>
+14   I  7  2   4  1 DFF      R *     1  --------I-------  <A href=#187>dataInBuf_i0_i106</A>
+11   A  7  2   4  1 DFF      R *     1  A---------------  <A href=#186>dataInBuf_i0_i107</A>
+10   A  7  2   4  1 DFF      R *     1  A---------------  <A href=#185>dataInBuf_i0_i108</A>
+10   B  8  2   5  1 DFF      R *     1  -B--------------  <A href=#184>dataInBuf_i0_i109</A>
+14   N  7  2   4  1 DFF      R *     1  -------------N--  <A href=#183>dataInBuf_i0_i110</A>
+14   J  7  2   4  1 DFF      R *     1  ---------J------  <A href=#181>dataInBuf_i0_i112</A>
+13   C  7  2   4  1 DFF      R *     1  --C-------------  <A href=#180>dataInBuf_i0_i113</A>
+13   I  7  2   4  1 DFF      R *     1  --------I-------  <A href=#179>dataInBuf_i0_i114</A>
+ 9   A  7  2   4  1 DFF      R *     2  A-----------M---  <A href=#178>dataInBuf_i0_i115</A>
+ 8   A  7  2   4  1 DFF      R *     1  A---------------  <A href=#177>dataInBuf_i0_i116</A>
+ 9   B  8  2   5  1 DFF      R *     1  -B--------------  <A href=#176>dataInBuf_i0_i117</A>
+13   N  7  2   4  1 DFF      R *     1  -------------N--  <A href=#175>dataInBuf_i0_i118</A>
+13   J  7  2   4  1 DFF      R *     2  ---------J-----P  <A href=#174>dataInBuf_i0_i120</A>
+12   C  7  2   4  1 DFF      R *     1  --C-------------  <A href=#173>dataInBuf_i0_i121</A>
+12   I  7  2   4  1 DFF      R *     1  --------I-------  <A href=#172>dataInBuf_i0_i122</A>
+13   M  7  2   4  1 DFF      R *     1  ------------M---  <A href=#171>dataInBuf_i0_i123</A>
+ 7   A  7  2   4  1 DFF      R *     1  A---------------  <A href=#170>dataInBuf_i0_i124</A>
+ 8   B  8  2   5  1 DFF      R *     1  -B--------------  <A href=#169>dataInBuf_i0_i125</A>
+12   N  7  2   4  1 DFF      R *     1  -------------N--  <A href=#168>dataInBuf_i0_i126</A>
+14   P  7  2   4  1 DFF      R *     1  ---------------P  <A href=#167>dataInBuf_i0_i128</A>
+11   C  7  2   4  1 DFF      R *     1  --C-------------  <A href=#166>dataInBuf_i0_i129</A>
+ 0   J  8  2   5  1 DFF      R *     2  -------H-J------  <A href=#242>dataInBuf_i0_i13</A>
+11   I  7  2   4  1 DFF      R *     1  --------I-------  <A href=#165>dataInBuf_i0_i130</A>
+12   M  7  2   4  1 DFF      R *     1  ------------M---  <A href=#164>dataInBuf_i0_i131</A>
+ 6   A  7  2   4  1 DFF      R *     1  A---------------  <A href=#163>dataInBuf_i0_i132</A>
+ 7   B  8  2   5  1 DFF      R *     1  -B--------------  <A href=#162>dataInBuf_i0_i133</A>
+11   N  7  2   4  2 DFF      R *     1  -------------N--  <A href=#161>dataInBuf_i0_i134</A>
+13   P  7  2   4  1 DFF      R *     1  ---------------P  <A href=#160>dataInBuf_i0_i136</A>
+10   C  7  2   4  1 DFF      R *     1  --C-------------  <A href=#159>dataInBuf_i0_i137</A>
+10   I  7  2   4  1 DFF      R *     1  --------I-------  <A href=#158>dataInBuf_i0_i138</A>
+11   M  7  2   4  1 DFF      R *     1  ------------M---  <A href=#157>dataInBuf_i0_i139</A>
+ 5   A  7  2   4  1 DFF      R *     1  A---------------  <A href=#156>dataInBuf_i0_i140</A>
+ 6   B  8  2   5  1 DFF      R *     2  -BC-------------  <A href=#155>dataInBuf_i0_i141</A>
+10   N  7  2   4  2 DFF      R *     1  -------------N--  <A href=#154>dataInBuf_i0_i142</A>
+12   P  7  2   4  1 DFF      R *     2  ------G--------P  <A href=#153>dataInBuf_i0_i144</A>
+ 9   C  7  2   4  1 DFF      R *     1  --C-------------  <A href=#152>dataInBuf_i0_i145</A>
+ 9   I  7  2   4  1 DFF      R *     1  --------I-------  <A href=#151>dataInBuf_i0_i146</A>
+10   M  7  2   4  1 DFF      R *     1  ------------M---  <A href=#150>dataInBuf_i0_i147</A>
+ 4   A  7  2   4  1 DFF      R *     2  A--------------P  <A href=#149>dataInBuf_i0_i148</A>
+ 4   C  8  2   5  1 DFF      R *     1  --C-------------  <A href=#148>dataInBuf_i0_i149</A>
+ 9   N  7  2   4  2 DFF      R *     1  -------------N--  <A href=#147>dataInBuf_i0_i150</A>
+10   G  7  2   4  1 DFF      R *     1  ------G---------  <A href=#146>dataInBuf_i0_i152</A>
+ 8   C  7  2   4  1 DFF      R *     2  --CD------------  <A href=#145>dataInBuf_i0_i153</A>
+ 8   I  7  2   4  1 DFF      R *     2  ---D----I-------  <A href=#144>dataInBuf_i0_i154</A>
+ 9   M  7  2   4  1 DFF      R *     1  ------------M---  <A href=#143>dataInBuf_i0_i155</A>
+11   P  7  2   4  1 DFF      R *     1  ---------------P  <A href=#142>dataInBuf_i0_i156</A>
+ 3   C  8  2   5  1 DFF      R *     2  --C----------N--  <A href=#141>dataInBuf_i0_i157</A>
+ 8   N  7  2   4  2 DFF      R *     1  -------------N--  <A href=#140>dataInBuf_i0_i158</A>
+ 2   G  8  2   5  1 DFF      R *     1  ------G---------  <A href=#139>dataInBuf_i0_i160</A>
+12   D  8  2   5  1 DFF      R *     1  ---D------------  <A href=#138>dataInBuf_i0_i161</A>
+11   D  8  2   5  1 DFF      R *     1  ---D------------  <A href=#137>dataInBuf_i0_i162</A>
+ 7   M  7  2   4  1 DFF      R *     1  ------------M---  <A href=#136>dataInBuf_i0_i163</A>
+ 7   P  8  2   5  1 DFF      R *     1  ---------------P  <A href=#135>dataInBuf_i0_i164</A>
+ 4   N  8  2   5  2 DFF      R *     1  -------------N--  <A href=#134>dataInBuf_i0_i165</A>
+ 7   N  7  2   4  2 DFF      R *     1  -------------N--  <A href=#133>dataInBuf_i0_i166</A>
+ 9   G  7  2   4  1 DFF      R *     1  ------G---------  <A href=#132>dataInBuf_i0_i168</A>
+10   D  8  2   5  1 DFF      R *     1  ---D------------  <A href=#131>dataInBuf_i0_i169</A>
+ 9   D  8  2   5  1 DFF      R *     1  ---D------------  <A href=#130>dataInBuf_i0_i170</A>
+ 6   M  7  2   4  1 DFF      R *     2  ------------M-O-  <A href=#129>dataInBuf_i0_i171</A>
+ 6   P  8  2   5  1 DFF      R *     1  ---------------P  <A href=#128>dataInBuf_i0_i172</A>
+ 3   N  8  2   5  2 DFF      R *     1  -------------N--  <A href=#127>dataInBuf_i0_i173</A>
+ 6   N  7  2   4  2 DFF      R *     1  -------------N--  <A href=#126>dataInBuf_i0_i174</A>
+ 1   G  8  2   5  1 DFF      R *     1  ------G---------  <A href=#125>dataInBuf_i0_i176</A>
+14   D  7  2   4  1 DFF      R *     1  ---D------------  <A href=#124>dataInBuf_i0_i177</A>
+ 8   D  8  2   5  1 DFF      R *     2  ---D--G---------  <A href=#123>dataInBuf_i0_i178</A>
+13   O  7  2   5  2 DFF      R *     1  --------------O-  <A href=#122>dataInBuf_i0_i179</A>
+ 5   P  8  2   5  1 DFF      R *     1  ---------------P  <A href=#121>dataInBuf_i0_i180</A>
+ 1   N  8  2   5  1 DFF      R *     1  -------------N--  <A href=#120>dataInBuf_i0_i181</A>
+ 5   N  7  2   4  2 DFF      R *     2  ---------J---N--  <A href=#119>dataInBuf_i0_i182</A>
+ 8   G  7  2   4  1 DFF      R *     2  ------GH--------  <A href=#118>dataInBuf_i0_i184</A>
+13   D  7  2   4  1 DFF      R *     1  ---D------------  <A href=#117>dataInBuf_i0_i185</A>
+ 0   G  8  2   5  1 DFF      R *     1  ------G---------  <A href=#115>dataInBuf_i0_i186</A>
+12   O  7  2   5  2 DFF      R *     1  --------------O-  <A href=#114>dataInBuf_i0_i187</A>
+ 4   P  8  2   5  1 DFF      R *     1  ---------------P  <A href=#113>dataInBuf_i0_i188</A>
+ 0   N  8  2   5  1 DFF      R *     2  -------------NO-  <A href=#112>dataInBuf_i0_i189</A>
+12   J  7  2   4  1 DFF      R *     1  ---------J------  <A href=#111>dataInBuf_i0_i190</A>
+ 1   H  8  2   5  1 DFF      R *     1  -------H--------  <A href=#110>dataInBuf_i0_i192</A>
+ 7   D  8  2   5  1 DFF      R *     1  ---D------------  <A href=#109>dataInBuf_i0_i193</A>
+ 7   G  7  2   4  1 DFF      R *     1  ------G---------  <A href=#108>dataInBuf_i0_i194</A>
+11   O  7  2   5  2 DFF      R *     1  --------------O-  <A href=#107>dataInBuf_i0_i195</A>
+ 3   P  8  2   5  1 DFF      R *     1  ---------------P  <A href=#106>dataInBuf_i0_i196</A>
+ 2   O  8  2   6  2 DFF      R *     1  --------------O-  <A href=#105>dataInBuf_i0_i197</A>
+11   J  7  2   4  1 DFF      R *     1  ---------J------  <A href=#104>dataInBuf_i0_i198</A>
+ 9   H  7  2   4  1 DFF      R *     1  -------H--------  <A href=#103>dataInBuf_i0_i200</A>
+ 6   D  8  2   5  1 DFF      R *     2  ---D----I-------  <A href=#102>dataInBuf_i0_i201</A>
+ 6   G  7  2   4  1 DFF      R *     2  --C---G---------  <A href=#101>dataInBuf_i0_i202</A>
+10   O  7  2   5  2 DFF      R *     1  --------------O-  <A href=#100>dataInBuf_i0_i203</A>
+ 2   P  8  2   5  1 DFF      R *     1  ---------------P  <A href=#99>dataInBuf_i0_i204</A>
+ 1   O  8  2   6  2 DFF      R *     2  ---D----------O-  <A href=#98>dataInBuf_i0_i205</A>
+10   J  7  2   4  1 DFF      R *     1  ---------J------  <A href=#97>dataInBuf_i0_i206</A>
+ 0   H  8  2   5  1 DFF      R *     1  -------H--------  <A href=#96>dataInBuf_i0_i208</A>
+ 7   I  7  2   4  1 DFF      R *     1  --------I-------  <A href=#95>dataInBuf_i0_i209</A>
+ 3   H  8  2   5  1 DFF      R *     1  -------H--------  <A href=#241>dataInBuf_i0_i21</A>
+ 7   C  7  2   4  1 DFF      R *     1  --C-------------  <A href=#94>dataInBuf_i0_i210</A>
+ 9   O  7  2   5  2 DFF      R *     1  --------------O-  <A href=#92>dataInBuf_i0_i211</A>
+ 1   P  8  2   5  1 DFF      R *     1  ---------------P  <A href=#91>dataInBuf_i0_i212</A>
+ 5   D  8  2   5  1 DFF      R *     1  ---D------------  <A href=#90>dataInBuf_i0_i213</A>
+ 9   J  7  2   4  1 DFF      R *     1  ---------J------  <A href=#89>dataInBuf_i0_i214</A>
+ 8   H  7  2   4  1 DFF      R *     1  -------H--------  <A href=#88>dataInBuf_i0_i216</A>
+ 6   I  7  2   4  1 DFF      R *     1  --------I-------  <A href=#87>dataInBuf_i0_i217</A>
+ 6   C  7  2   4  1 DFF      R *     1  --C-------------  <A href=#86>dataInBuf_i0_i218</A>
+ 8   O  7  2   5  2 DFF      R *     2  --------I-----O-  <A href=#85>dataInBuf_i0_i219</A>
+ 0   P  8  2   5  1 DFF      R *     1  ---------------P  <A href=#84>dataInBuf_i0_i220</A>
+ 4   D  8  2   5  1 DFF      R *     1  ---D------------  <A href=#83>dataInBuf_i0_i221</A>
+ 8   J  7  2   4  1 DFF      R *     1  ---------J------  <A href=#82>dataInBuf_i0_i222</A>
+ 7   H  7  2   4  1 DFF      R *     1  -------H--------  <A href=#81>dataInBuf_i0_i224</A>
+ 5   I  7  2   4  1 DFF      R *     1  --------I-------  <A href=#80>dataInBuf_i0_i225</A>
+ 5   C  7  2   4  1 DFF      R *     2  --C------J------  <A href=#79>dataInBuf_i0_i226</A>
+ 4   I  7  2   4  1 DFF      R *     1  --------I-------  <A href=#78>dataInBuf_i0_i227</A>
+10   P  7  2   4  1 DFF      R *     1  ---------------P  <A href=#77>dataInBuf_i0_i228</A>
+ 3   D  8  2   5  1 DFF      R *     1  ---D------------  <A href=#76>dataInBuf_i0_i229</A>
+ 7   J  7  2   4  1 DFF      R *     1  ---------J------  <A href=#75>dataInBuf_i0_i230</A>
+ 6   H  7  2   4  1 DFF      R *     1  -------H--------  <A href=#74>dataInBuf_i0_i232</A>
+ 3   I  7  2   4  1 DFF      R *     2  --------I--L----  <A href=#73>dataInBuf_i0_i233</A>
+ 6   J  7  2   4  1 DFF      R *     1  ---------J------  <A href=#72>dataInBuf_i0_i234</A>
+ 2   I  7  2   4  1 DFF      R *     1  --------I-------  <A href=#71>dataInBuf_i0_i235</A>
+ 9   P  7  2   4  1 DFF      R *     1  ---------------P  <A href=#70>dataInBuf_i0_i236</A>
+ 2   D  8  2   5  1 DFF      R *     1  ---D------------  <A href=#69>dataInBuf_i0_i237</A>
+ 5   J  7  2   4  1 DFF      R *     1  ---------J------  <A href=#68>dataInBuf_i0_i238</A>
+ 5   H  7  2   4  1 DFF      R *     1  -------H--------  <A href=#67>dataInBuf_i0_i240</A>
+14   L  7  2   5  2 DFF      R *     1  -----------L----  <A href=#66>dataInBuf_i0_i241</A>
+ 4   J  7  2   4  1 DFF      R *     1  ---------J------  <A href=#64>dataInBuf_i0_i242</A>
+ 1   I  7  2   4  1 DFF      R *     1  --------I-------  <A href=#63>dataInBuf_i0_i243</A>
+ 8   P  7  2   4  1 DFF      R *     2  ----------K----P  <A href=#62>dataInBuf_i0_i244</A>
+ 1   D  8  2   5  1 DFF      R *     1  ---D------------  <A href=#61>dataInBuf_i0_i245</A>
+ 3   J  7  2   4  1 DFF      R *     1  ---------J------  <A href=#60>dataInBuf_i0_i246</A>
+ 4   H  7  2   4  1 DFF      R *     2  -------H---L----  <A href=#59>dataInBuf_i0_i248</A>
+ 0   L  7  2   5  1 DFF      R *     1  -----------L----  <A href=#58>dataInBuf_i0_i249</A>
+ 2   J  7  2   4  1 DFF      R *     2  ---------J-L----  <A href=#57>dataInBuf_i0_i250</A>
+ 0   I  7  2   4  1 DFF      R *     2  --------I--L----  <A href=#56>dataInBuf_i0_i251</A>
+11   K  7  2   4  2 DFF      R *     1  ----------K-----  <A href=#55>dataInBuf_i0_i252</A>
+ 0   D  8  2   5  1 DFF      R *     2  ---D-------L----  <A href=#54>dataInBuf_i0_i253</A>
+ 1   J  7  2   4  1 DFF      R *     2  ---------JK-----  <A href=#53>dataInBuf_i0_i254</A>
+11   F 10  -   3  1 COM              15 ABCD-FGHIJKLMNOP  <A href=#245>dataInBuf_i0_i254_0</A>
+ 2   H  8  2   5  1 DFF      R *     1  -------H--------  <A href=#240>dataInBuf_i0_i29</A>
+14   B 11  1   3  1 DFF      R *     2  AB--------------  <A href=#239>dataInBuf_i0_i33</A>
+15   M 11  1   3  1 DFF      R *     2  ----------K-M---  <A href=#238>dataInBuf_i0_i34</A>
+14   H  7  2   4  1 DFF      R *     1  -------H--------  <A href=#237>dataInBuf_i0_i37</A>
+ 9   F 11  1   3  2 DFF      R *     2  -----FG---------  <A href=#236>dataInBuf_i0_i38</A>
+14   A  7  2   4  1 DFF      R *     1  A---------------  <A href=#235>dataInBuf_i0_i41</A>
+10   K  8  2   5  2 DFF      R *     1  ----------K-----  <A href=#234>dataInBuf_i0_i42</A>
+13   H  7  2   4  1 DFF      R *     1  -------H--------  <A href=#233>dataInBuf_i0_i45</A>
+ 5   G  8  2   5  1 DFF      R *     1  ------G---------  <A href=#232>dataInBuf_i0_i46</A>
+ 5   F 11  1   3  2 DFF      R *     2  -----FG---------  <A href=#231>dataInBuf_i0_i48</A>
+13   A  7  2   4  1 DFF      R *     1  A---------------  <A href=#230>dataInBuf_i0_i49</A>
+14   K 11  1   3  2 DFF      R *     2  ---------JK-----  <A href=#243>dataInBuf_i0_i5</A>
+ 9   K  8  2   5  2 DFF      R *     1  ----------K-----  <A href=#229>dataInBuf_i0_i50</A>
+12   H  7  2   4  1 DFF      R *     1  -------H--------  <A href=#228>dataInBuf_i0_i53</A>
+ 4   G  8  2   5  1 DFF      R *     2  A-----G---------  <A href=#227>dataInBuf_i0_i54</A>
+ 3   G  8  2   5  1 DFF      R *     1  ------G---------  <A href=#226>dataInBuf_i0_i56</A>
+ 3   A  8  2   5  1 DFF      R *     1  A---------------  <A href=#225>dataInBuf_i0_i57</A>
+13   K  7  2   4  2 DFF      R *     1  ----------K-----  <A href=#224>dataInBuf_i0_i58</A>
+11   H  7  2   4  1 DFF      R *     2  -------H----M---  <A href=#223>dataInBuf_i0_i61</A>
+ 2   A  8  2   5  1 DFF      R *     1  A---------------  <A href=#222>dataInBuf_i0_i62</A>
+11   G  7  2   4  1 DFF      R *     2  -----FG---------  <A href=#221>dataInBuf_i0_i64</A>
+ 1   A  8  2   5  1 DFF      R *     2  A----F----------  <A href=#220>dataInBuf_i0_i65</A>
+12   K  7  2   4  2 DFF      R *     1  ----------K-----  <A href=#219>dataInBuf_i0_i66</A>
+14   M  7  2   4  1 DFF      R *     1  ------------M---  <A href=#218>dataInBuf_i0_i69</A>
+ 0   A  8  2   5  1 DFF      R *     2  AB--------------  <A href=#217>dataInBuf_i0_i70</A>
+ 3   F 13  1  10  3 DFF      R *     1  -----F----------  <A href=#216>dataInBuf_i0_i72</A>
+ 8   F 12  1   5  2 DFF      R *     1  -----F----------  <A href=#215>dataInBuf_i0_i73</A>
+ 5   K 12  1   5  2 DFF      R *     1  ----------K-----  <A href=#214>dataInBuf_i0_i74</A>
+ 5   M 12  1   5  1 DFF      R *     1  ------------M---  <A href=#213>dataInBuf_i0_i77</A>
+ 3   B 13  1  10  2 DFF      R *     1  -B--------------  <A href=#212>dataInBuf_i0_i78</A>
+ 1   F 13  1  10  2 DFF      R *     2  -----F-----L----  <A href=#210>dataInBuf_i0_i80</A>
+ 7   F 12  1   5  2 DFF      R *     1  -----F----------  <A href=#209>dataInBuf_i0_i81</A>
+ 3   K 12  1   5  2 DFF      R *     1  ----------K-----  <A href=#208>dataInBuf_i0_i82</A>
+14   C 11  1   3  1 DFF      R *     1  --C-------------  <A href=#207>dataInBuf_i0_i83</A>
+13   B 11  1   3  1 DFF      R *     1  -B--------------  <A href=#206>dataInBuf_i0_i84</A>
+ 3   M 13  1  10  2 DFF      R *     1  ------------M---  <A href=#205>dataInBuf_i0_i85</A>
+ 5   B 12  1   5  1 DFF      R *     1  -B--------------  <A href=#204>dataInBuf_i0_i86</A>
+11   L 12  1   6  2 DFF      R *     1  -----------L----  <A href=#203>dataInBuf_i0_i88</A>
+ 6   F 12  1   5  2 DFF      R *     1  -----F----------  <A href=#202>dataInBuf_i0_i89</A>
+ 1   K 12  1   5  1 DFF      R *     1  ----------K-----  <A href=#201>dataInBuf_i0_i90</A>
+ 1   C 13  1  10  2 DFF      R *     1  --C-------------  <A href=#200>dataInBuf_i0_i91</A>
+ 1   B 13  1  10  2 DFF      R *     2  AB--------------  <A href=#199>dataInBuf_i0_i92</A>
+ 1   M 13  1  10  2 DFF      R *     2  -B----------M---  <A href=#198>dataInBuf_i0_i93</A>
+ 0   B 12  1   5  1 DFF      R *     1  -B--------------  <A href=#197>dataInBuf_i0_i94</A>
+ 7   L 12  1   6  2 DFF      R *     2  ---------J-L----  <A href=#196>dataInBuf_i0_i96</A>
+ 0   F 12  1   5  1 DFF      R *     2  -----F-H--------  <A href=#195>dataInBuf_i0_i97</A>
+ 0   K 12  1   5  1 DFF      R *     2  --------I-K-----  <A href=#194>dataInBuf_i0_i98</A>
+ 0   C 12  1   5  1 DFF      R *     2  A-C-------------  <A href=#193>dataInBuf_i0_i99</A>
+ 6   O 11  1   5  2 DFF    * R *     7  -BC--F----KLM-O-  <A href=#52>dispCount_i0_i0</A>
+ 7   O  7  1   4  2 DFF    * R *     7  -BC--F----KLM-O-  <A href=#51>dispCount_i0_i1</A>
+ 5   O  8  1   5  2 DFF    * R *     7  -BC--F----KLM-O-  <A href=#50>dispCount_i0_i2</A>
+ 0   O  9  1   5  1 DFF    * R *     7  -BC--F----KLM-O-  <A href=#49>dispCount_i0_i3</A>
+ 4   O 11  1   5  2 TFF    * R *     7  -BC--F----KLM-O-  <A href=#48>dispCount_i0_i4</A>
+ 3   O 11  1   5  2 TFF    * R *     7  -BC--F----KLM-O-  <A href=#47>dispCount_i0_i5</A>
+14   F  8  -   2  1 COM              1  --------------O-  <A href=#244>dispCount_i0_i5_0</A>
+15   C  6  -   1  1 COM              14 ABCD--GHIJKLMNOP  <A href=#41>lcdRs_N_618</A>
+12   E  6  -   1  1 COM              1  ----E-----------  <A href=#93>n5085</A>
+15   E  9  -   1  1 COM              1  ----E-----------  <A href=#211>n5106</A>
+14   E 13  -   1  1 COM              1  ------G---------  <A href=#182>n5134</A>
+11   E 15  -   1  1 COM              1  -----F----------  <A href=#65>n5148</A>
+13   E 20  -   1  1 COM              1  ------------M---  <A href=#116>n5194</A>
+ 2   L 11  1   3  1 DFF    * R       15 ABCD-FGHIJKLMNOP  <A href=#39>state_FSM_i1</A>
+14   O  9  1   1  1 DFF    * R       15 ABCD-FGHIJKLMNOP  <A href=#40>state_FSM_i2</A>
+ 6   K  3  1   2  1 DFF    * R       2  ----------KL----  <A href=#42>state_FSM_i3</A>
+ 5   L  3  1   1  1 DFF    * R       2  ----------KL----  <A href=#43>state_FSM_i4</A>
+15   I  3  1   2  1 DFF    * R       2  ----------KL----  <A href=#44>state_FSM_i5</A>
+ 7   K  3  1   2  1 DFF    * R       3  --------I-KL----  <A href=#45>state_FSM_i6</A>
+15   B  9  1   2  1 DFF  *   S       13 ABCD-FGH-JK-MNOP  <A href=#46>state_FSM_i7</A>
+----------------------------------------------------------------------------
+
+&lt;Note&gt; CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        IR = Input register
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+<A name="PostFit_Equations"></A><FONT COLOR=maroon><U><B><big>PostFit_Equations</big></B></U></FONT>
+<BR>
+<A name=38>cnt_171__i0.D</A> = !<A href=#38>cnt_171__i0.Q</A> ; (1 pterm, 1 signal)
+cnt_171__i0.C = <A href=#6>clk_50m</A> ; (1 pterm, 1 signal)
+
+<A name=37>cnt_171__i1.D</A> = <A href=#37>cnt_171__i1.Q</A> & !<A href=#38>cnt_171__i0.Q</A>
+    # !cnt_171__i1.Q & cnt_171__i0.Q ; (2 pterms, 2 signals)
+cnt_171__i1.C = <A href=#6>clk_50m</A> ; (1 pterm, 1 signal)
+
+<A name=28>cnt_171__i10.D</A> = !<A href=#28>cnt_171__i10.Q</A> & <A href=#29>cnt_171__i9.Q</A> & <A href=#211>n5106</A>
+    # cnt_171__i10.Q & !cnt_171__i9.Q
+    # cnt_171__i10.Q & !n5106 ; (3 pterms, 3 signals)
+cnt_171__i10.C = <A href=#6>clk_50m</A> ; (1 pterm, 1 signal)
+
+<A name=27>cnt_171__i11.D</A> = !<A href=#27>cnt_171__i11.Q</A> & <A href=#28>cnt_171__i10.Q</A> & <A href=#29>cnt_171__i9.Q</A> & <A href=#211>n5106</A>
+    # cnt_171__i11.Q & !cnt_171__i9.Q
+    # cnt_171__i11.Q & !cnt_171__i10.Q
+    # cnt_171__i11.Q & !n5106 ; (4 pterms, 4 signals)
+cnt_171__i11.C = <A href=#6>clk_50m</A> ; (1 pterm, 1 signal)
+
+<A name=26>cnt_171__i12.D.X1</A> = <A href=#26>cnt_171__i12.Q</A> ; (1 pterm, 1 signal)
+cnt_171__i12.D.X2 = <A href=#27>cnt_171__i11.Q</A> & <A href=#28>cnt_171__i10.Q</A> & <A href=#29>cnt_171__i9.Q</A> & <A href=#211>n5106</A> ; (1 pterm, 4 signals)
+cnt_171__i12.C = <A href=#6>clk_50m</A> ; (1 pterm, 1 signal)
+
+<A name=25>cnt_171__i13.D</A> = <A href=#25>cnt_171__i13.Q</A> & !<A href=#182>n5134</A>
+    # !cnt_171__i13.Q & n5134 ; (2 pterms, 2 signals)
+cnt_171__i13.C = <A href=#6>clk_50m</A> ; (1 pterm, 1 signal)
+
+<A name=24>cnt_171__i14.D</A> = !<A href=#24>cnt_171__i14.Q</A> & <A href=#25>cnt_171__i13.Q</A> & <A href=#182>n5134</A>
+    # cnt_171__i14.Q & !cnt_171__i13.Q
+    # cnt_171__i14.Q & !n5134 ; (3 pterms, 3 signals)
+cnt_171__i14.C = <A href=#6>clk_50m</A> ; (1 pterm, 1 signal)
+
+<A name=23>cnt_171__i15.D</A> = <A href=#23>cnt_171__i15.Q</A> & !<A href=#65>n5148</A>
+    # !cnt_171__i15.Q & n5148 ; (2 pterms, 2 signals)
+cnt_171__i15.C = <A href=#6>clk_50m</A> ; (1 pterm, 1 signal)
+
+<A name=22>cnt_171__i16.D</A> = !<A href=#22>cnt_171__i16.Q</A> & <A href=#23>cnt_171__i15.Q</A> & <A href=#65>n5148</A>
+    # cnt_171__i16.Q & !cnt_171__i15.Q
+    # cnt_171__i16.Q & !n5148 ; (3 pterms, 3 signals)
+cnt_171__i16.C = <A href=#6>clk_50m</A> ; (1 pterm, 1 signal)
+
+<A name=21>cnt_171__i17.D</A> = !<A href=#21>cnt_171__i17.Q</A> & <A href=#22>cnt_171__i16.Q</A> & <A href=#23>cnt_171__i15.Q</A> & <A href=#65>n5148</A>
+    # cnt_171__i17.Q & !cnt_171__i15.Q
+    # cnt_171__i17.Q & !cnt_171__i16.Q
+    # cnt_171__i17.Q & !n5148 ; (4 pterms, 4 signals)
+cnt_171__i17.C = <A href=#6>clk_50m</A> ; (1 pterm, 1 signal)
+
+<A name=20>cnt_171__i18.D.X1</A> = <A href=#20>cnt_171__i18.Q</A> ; (1 pterm, 1 signal)
+cnt_171__i18.D.X2 = <A href=#21>cnt_171__i17.Q</A> & <A href=#22>cnt_171__i16.Q</A> & <A href=#23>cnt_171__i15.Q</A> & <A href=#65>n5148</A> ; (1 pterm, 4 signals)
+cnt_171__i18.C = <A href=#6>clk_50m</A> ; (1 pterm, 1 signal)
+
+<A name=19>cnt_171__i19.T</A> = <A href=#20>cnt_171__i18.Q</A> & <A href=#21>cnt_171__i17.Q</A> & <A href=#22>cnt_171__i16.Q</A>
+       & <A href=#23>cnt_171__i15.Q</A> & <A href=#65>n5148</A> ; (1 pterm, 5 signals)
+cnt_171__i19.C = <A href=#6>clk_50m</A> ; (1 pterm, 1 signal)
+
+<A name=36>cnt_171__i2.D</A> = !<A href=#36>cnt_171__i2.Q</A> & <A href=#37>cnt_171__i1.Q</A> & <A href=#38>cnt_171__i0.Q</A>
+    # cnt_171__i2.Q & !cnt_171__i1.Q
+    # cnt_171__i2.Q & !cnt_171__i0.Q ; (3 pterms, 3 signals)
+cnt_171__i2.C = <A href=#6>clk_50m</A> ; (1 pterm, 1 signal)
+
+<A name=35>cnt_171__i3.D</A> = !<A href=#35>cnt_171__i3.Q</A> & <A href=#36>cnt_171__i2.Q</A> & <A href=#37>cnt_171__i1.Q</A> & <A href=#38>cnt_171__i0.Q</A>
+    # cnt_171__i3.Q & !cnt_171__i1.Q
+    # cnt_171__i3.Q & !cnt_171__i2.Q
+    # cnt_171__i3.Q & !cnt_171__i0.Q ; (4 pterms, 4 signals)
+cnt_171__i3.C = <A href=#6>clk_50m</A> ; (1 pterm, 1 signal)
+
+<A name=34>cnt_171__i4.D.X1</A> = <A href=#34>cnt_171__i4.Q</A> ; (1 pterm, 1 signal)
+cnt_171__i4.D.X2 = <A href=#35>cnt_171__i3.Q</A> & <A href=#36>cnt_171__i2.Q</A> & <A href=#37>cnt_171__i1.Q</A>
+       & <A href=#38>cnt_171__i0.Q</A> ; (1 pterm, 4 signals)
+cnt_171__i4.C = <A href=#6>clk_50m</A> ; (1 pterm, 1 signal)
+
+<A name=33>cnt_171__i5.T</A> = <A href=#34>cnt_171__i4.Q</A> & <A href=#35>cnt_171__i3.Q</A> & <A href=#36>cnt_171__i2.Q</A> & <A href=#37>cnt_171__i1.Q</A>
+       & <A href=#38>cnt_171__i0.Q</A> ; (1 pterm, 5 signals)
+cnt_171__i5.C = <A href=#6>clk_50m</A> ; (1 pterm, 1 signal)
+
+<A name=32>cnt_171__i6.D</A> = <A href=#32>cnt_171__i6.Q</A> & !<A href=#93>n5085</A>
+    # !cnt_171__i6.Q & n5085 ; (2 pterms, 2 signals)
+cnt_171__i6.C = <A href=#6>clk_50m</A> ; (1 pterm, 1 signal)
+
+<A name=31>cnt_171__i7.D</A> = !<A href=#31>cnt_171__i7.Q</A> & <A href=#32>cnt_171__i6.Q</A> & <A href=#93>n5085</A>
+    # cnt_171__i7.Q & !cnt_171__i6.Q
+    # cnt_171__i7.Q & !n5085 ; (3 pterms, 3 signals)
+cnt_171__i7.C = <A href=#6>clk_50m</A> ; (1 pterm, 1 signal)
+
+<A name=30>cnt_171__i8.D</A> = !<A href=#30>cnt_171__i8.Q</A> & <A href=#31>cnt_171__i7.Q</A> & <A href=#32>cnt_171__i6.Q</A> & <A href=#93>n5085</A>
+    # cnt_171__i8.Q & !cnt_171__i6.Q
+    # cnt_171__i8.Q & !cnt_171__i7.Q
+    # cnt_171__i8.Q & !n5085 ; (4 pterms, 4 signals)
+cnt_171__i8.C = <A href=#6>clk_50m</A> ; (1 pterm, 1 signal)
+
+<A name=29>cnt_171__i9.D</A> = <A href=#29>cnt_171__i9.Q</A> & !<A href=#211>n5106</A>
+    # !cnt_171__i9.Q & n5106 ; (2 pterms, 2 signals)
+cnt_171__i9.C = <A href=#6>clk_50m</A> ; (1 pterm, 1 signal)
+
+<A name=192>dataInBuf_i0_i100.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#192>dataInBuf_i0_i100.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#199>dataInBuf_i0_i92.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i92.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i100.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i100.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=191>dataInBuf_i0_i101.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#191>dataInBuf_i0_i101.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#198>dataInBuf_i0_i93.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i93.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i101.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i101.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=190>dataInBuf_i0_i102.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#190>dataInBuf_i0_i102.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#197>dataInBuf_i0_i94.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i94.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i102.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i102.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=189>dataInBuf_i0_i104.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#189>dataInBuf_i0_i104.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#196>dataInBuf_i0_i96.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i96.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i104.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i104.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=188>dataInBuf_i0_i105.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#188>dataInBuf_i0_i105.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#195>dataInBuf_i0_i97.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i97.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i105.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i105.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=187>dataInBuf_i0_i106.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#187>dataInBuf_i0_i106.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#194>dataInBuf_i0_i98.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i98.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i106.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i106.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=186>dataInBuf_i0_i107.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#186>dataInBuf_i0_i107.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#193>dataInBuf_i0_i99.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i99.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i107.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i107.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=185>dataInBuf_i0_i108.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#185>dataInBuf_i0_i108.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#192>dataInBuf_i0_i100.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i100.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i108.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i108.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=184>dataInBuf_i0_i109.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#184>dataInBuf_i0_i109.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#191>dataInBuf_i0_i101.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i101.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i109.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i109.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=183>dataInBuf_i0_i110.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#183>dataInBuf_i0_i110.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#190>dataInBuf_i0_i102.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i102.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i110.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i110.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=181>dataInBuf_i0_i112.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#181>dataInBuf_i0_i112.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#189>dataInBuf_i0_i104.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i104.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i112.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i112.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=180>dataInBuf_i0_i113.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#180>dataInBuf_i0_i113.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#188>dataInBuf_i0_i105.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i105.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i113.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i113.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=179>dataInBuf_i0_i114.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#179>dataInBuf_i0_i114.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#187>dataInBuf_i0_i106.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i106.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i114.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i114.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=178>dataInBuf_i0_i115.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#178>dataInBuf_i0_i115.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#186>dataInBuf_i0_i107.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i107.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i115.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i115.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=177>dataInBuf_i0_i116.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#177>dataInBuf_i0_i116.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#185>dataInBuf_i0_i108.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i108.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i116.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i116.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=176>dataInBuf_i0_i117.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#176>dataInBuf_i0_i117.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#184>dataInBuf_i0_i109.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i109.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i117.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i117.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=175>dataInBuf_i0_i118.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#175>dataInBuf_i0_i118.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#183>dataInBuf_i0_i110.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i110.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i118.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i118.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=174>dataInBuf_i0_i120.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#174>dataInBuf_i0_i120.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#181>dataInBuf_i0_i112.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i112.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i120.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i120.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=173>dataInBuf_i0_i121.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#173>dataInBuf_i0_i121.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#180>dataInBuf_i0_i113.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i113.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i121.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i121.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=172>dataInBuf_i0_i122.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#172>dataInBuf_i0_i122.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#179>dataInBuf_i0_i114.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i114.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i122.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i122.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=171>dataInBuf_i0_i123.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#171>dataInBuf_i0_i123.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#178>dataInBuf_i0_i115.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i115.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i123.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i123.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=170>dataInBuf_i0_i124.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#170>dataInBuf_i0_i124.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#177>dataInBuf_i0_i116.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i116.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i124.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i124.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=169>dataInBuf_i0_i125.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#169>dataInBuf_i0_i125.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#176>dataInBuf_i0_i117.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i117.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i125.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i125.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=168>dataInBuf_i0_i126.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#168>dataInBuf_i0_i126.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#175>dataInBuf_i0_i118.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i118.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i126.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i126.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=167>dataInBuf_i0_i128.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#167>dataInBuf_i0_i128.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#174>dataInBuf_i0_i120.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i120.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i128.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i128.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=166>dataInBuf_i0_i129.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#166>dataInBuf_i0_i129.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#173>dataInBuf_i0_i121.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i121.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i129.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i129.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=242>dataInBuf_i0_i13.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#242>dataInBuf_i0_i13.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#243>dataInBuf_i0_i5.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i5.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i13.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i13.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=165>dataInBuf_i0_i130.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#165>dataInBuf_i0_i130.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#172>dataInBuf_i0_i122.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i122.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i130.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i130.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=164>dataInBuf_i0_i131.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#164>dataInBuf_i0_i131.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#171>dataInBuf_i0_i123.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i123.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i131.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i131.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=163>dataInBuf_i0_i132.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#163>dataInBuf_i0_i132.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#170>dataInBuf_i0_i124.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i124.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i132.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i132.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=162>dataInBuf_i0_i133.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#162>dataInBuf_i0_i133.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#169>dataInBuf_i0_i125.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i125.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i133.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i133.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=161>dataInBuf_i0_i134.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#161>dataInBuf_i0_i134.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#168>dataInBuf_i0_i126.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i126.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i134.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i134.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=160>dataInBuf_i0_i136.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#160>dataInBuf_i0_i136.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#167>dataInBuf_i0_i128.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i128.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i136.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i136.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=159>dataInBuf_i0_i137.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#159>dataInBuf_i0_i137.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#166>dataInBuf_i0_i129.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i129.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i137.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i137.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=158>dataInBuf_i0_i138.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#158>dataInBuf_i0_i138.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#165>dataInBuf_i0_i130.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i130.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i138.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i138.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=157>dataInBuf_i0_i139.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#157>dataInBuf_i0_i139.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#164>dataInBuf_i0_i131.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i131.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i139.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i139.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=156>dataInBuf_i0_i140.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#156>dataInBuf_i0_i140.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#163>dataInBuf_i0_i132.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i132.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i140.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i140.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=155>dataInBuf_i0_i141.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#155>dataInBuf_i0_i141.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#162>dataInBuf_i0_i133.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i133.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i141.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i141.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=154>dataInBuf_i0_i142.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#154>dataInBuf_i0_i142.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#161>dataInBuf_i0_i134.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i134.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i142.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i142.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=153>dataInBuf_i0_i144.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#153>dataInBuf_i0_i144.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#160>dataInBuf_i0_i136.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i136.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i144.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i144.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=152>dataInBuf_i0_i145.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#152>dataInBuf_i0_i145.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#159>dataInBuf_i0_i137.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i137.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i145.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i145.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=151>dataInBuf_i0_i146.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#151>dataInBuf_i0_i146.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#158>dataInBuf_i0_i138.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i138.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i146.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i146.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=150>dataInBuf_i0_i147.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#150>dataInBuf_i0_i147.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#157>dataInBuf_i0_i139.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i139.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i147.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i147.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=149>dataInBuf_i0_i148.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#149>dataInBuf_i0_i148.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#156>dataInBuf_i0_i140.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i140.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i148.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i148.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=148>dataInBuf_i0_i149.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#148>dataInBuf_i0_i149.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#155>dataInBuf_i0_i141.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i141.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i149.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i149.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=147>dataInBuf_i0_i150.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#147>dataInBuf_i0_i150.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#154>dataInBuf_i0_i142.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i142.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i150.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i150.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=146>dataInBuf_i0_i152.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#146>dataInBuf_i0_i152.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#153>dataInBuf_i0_i144.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i144.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i152.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i152.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=145>dataInBuf_i0_i153.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#145>dataInBuf_i0_i153.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#152>dataInBuf_i0_i145.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i145.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i153.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i153.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=144>dataInBuf_i0_i154.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#144>dataInBuf_i0_i154.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#151>dataInBuf_i0_i146.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i146.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i154.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i154.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=143>dataInBuf_i0_i155.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#143>dataInBuf_i0_i155.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#150>dataInBuf_i0_i147.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i147.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i155.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i155.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=142>dataInBuf_i0_i156.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#142>dataInBuf_i0_i156.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#149>dataInBuf_i0_i148.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i148.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i156.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i156.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=141>dataInBuf_i0_i157.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#141>dataInBuf_i0_i157.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#148>dataInBuf_i0_i149.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i149.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i157.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i157.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=140>dataInBuf_i0_i158.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#140>dataInBuf_i0_i158.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#147>dataInBuf_i0_i150.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i150.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i158.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i158.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=139>dataInBuf_i0_i160.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#139>dataInBuf_i0_i160.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#146>dataInBuf_i0_i152.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i152.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i160.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i160.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=138>dataInBuf_i0_i161.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#138>dataInBuf_i0_i161.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#145>dataInBuf_i0_i153.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i153.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i161.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i161.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=137>dataInBuf_i0_i162.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#137>dataInBuf_i0_i162.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#144>dataInBuf_i0_i154.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i154.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i162.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i162.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=136>dataInBuf_i0_i163.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#136>dataInBuf_i0_i163.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#143>dataInBuf_i0_i155.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i155.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i163.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i163.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=135>dataInBuf_i0_i164.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#135>dataInBuf_i0_i164.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#142>dataInBuf_i0_i156.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i156.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i164.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i164.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=134>dataInBuf_i0_i165.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#134>dataInBuf_i0_i165.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#141>dataInBuf_i0_i157.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i157.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i165.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i165.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=133>dataInBuf_i0_i166.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#133>dataInBuf_i0_i166.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#140>dataInBuf_i0_i158.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i158.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i166.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i166.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=132>dataInBuf_i0_i168.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#132>dataInBuf_i0_i168.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#139>dataInBuf_i0_i160.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i160.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i168.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i168.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=131>dataInBuf_i0_i169.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#131>dataInBuf_i0_i169.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#138>dataInBuf_i0_i161.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i161.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i169.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i169.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=130>dataInBuf_i0_i170.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#130>dataInBuf_i0_i170.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#137>dataInBuf_i0_i162.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i162.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i170.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i170.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=129>dataInBuf_i0_i171.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#129>dataInBuf_i0_i171.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#136>dataInBuf_i0_i163.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i163.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i171.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i171.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=128>dataInBuf_i0_i172.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#128>dataInBuf_i0_i172.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#135>dataInBuf_i0_i164.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i164.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i172.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i172.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=127>dataInBuf_i0_i173.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#127>dataInBuf_i0_i173.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#134>dataInBuf_i0_i165.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i165.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i173.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i173.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=126>dataInBuf_i0_i174.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#126>dataInBuf_i0_i174.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#133>dataInBuf_i0_i166.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i166.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i174.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i174.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=125>dataInBuf_i0_i176.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#125>dataInBuf_i0_i176.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#132>dataInBuf_i0_i168.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i168.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i176.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i176.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=124>dataInBuf_i0_i177.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#124>dataInBuf_i0_i177.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#131>dataInBuf_i0_i169.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i169.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i177.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i177.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=123>dataInBuf_i0_i178.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#123>dataInBuf_i0_i178.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#130>dataInBuf_i0_i170.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i170.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i178.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i178.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=122>dataInBuf_i0_i179.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#122>dataInBuf_i0_i179.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#129>dataInBuf_i0_i171.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i171.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i179.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i179.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=121>dataInBuf_i0_i180.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#121>dataInBuf_i0_i180.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#128>dataInBuf_i0_i172.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i172.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i180.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i180.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=120>dataInBuf_i0_i181.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#120>dataInBuf_i0_i181.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#127>dataInBuf_i0_i173.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i173.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i181.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i181.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=119>dataInBuf_i0_i182.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#119>dataInBuf_i0_i182.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#126>dataInBuf_i0_i174.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i174.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i182.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i182.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=118>dataInBuf_i0_i184.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#118>dataInBuf_i0_i184.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#125>dataInBuf_i0_i176.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i176.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i184.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i184.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=117>dataInBuf_i0_i185.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#117>dataInBuf_i0_i185.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#124>dataInBuf_i0_i177.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i177.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i185.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i185.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=115>dataInBuf_i0_i186.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#115>dataInBuf_i0_i186.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#123>dataInBuf_i0_i178.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i178.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i186.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i186.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=114>dataInBuf_i0_i187.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#114>dataInBuf_i0_i187.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#122>dataInBuf_i0_i179.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i179.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i187.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i187.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=113>dataInBuf_i0_i188.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#113>dataInBuf_i0_i188.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#121>dataInBuf_i0_i180.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i180.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i188.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i188.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=112>dataInBuf_i0_i189.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#112>dataInBuf_i0_i189.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#120>dataInBuf_i0_i181.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i181.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i189.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i189.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=111>dataInBuf_i0_i190.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#111>dataInBuf_i0_i190.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#119>dataInBuf_i0_i182.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i182.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i190.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i190.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=110>dataInBuf_i0_i192.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#110>dataInBuf_i0_i192.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#118>dataInBuf_i0_i184.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i184.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i192.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i192.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=109>dataInBuf_i0_i193.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#109>dataInBuf_i0_i193.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#117>dataInBuf_i0_i185.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i185.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i193.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i193.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=108>dataInBuf_i0_i194.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#108>dataInBuf_i0_i194.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#115>dataInBuf_i0_i186.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i186.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i194.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i194.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=107>dataInBuf_i0_i195.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#107>dataInBuf_i0_i195.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#114>dataInBuf_i0_i187.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i187.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i195.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i195.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=106>dataInBuf_i0_i196.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#106>dataInBuf_i0_i196.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#113>dataInBuf_i0_i188.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i188.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i196.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i196.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=105>dataInBuf_i0_i197.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#105>dataInBuf_i0_i197.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#112>dataInBuf_i0_i189.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i189.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i197.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i197.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=104>dataInBuf_i0_i198.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#104>dataInBuf_i0_i198.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#111>dataInBuf_i0_i190.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i190.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i198.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i198.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=103>dataInBuf_i0_i200.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#103>dataInBuf_i0_i200.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#110>dataInBuf_i0_i192.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i192.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i200.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i200.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=102>dataInBuf_i0_i201.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#102>dataInBuf_i0_i201.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#109>dataInBuf_i0_i193.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i193.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i201.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i201.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=101>dataInBuf_i0_i202.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#101>dataInBuf_i0_i202.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#108>dataInBuf_i0_i194.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i194.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i202.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i202.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=100>dataInBuf_i0_i203.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#100>dataInBuf_i0_i203.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#107>dataInBuf_i0_i195.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i195.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i203.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i203.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=99>dataInBuf_i0_i204.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#99>dataInBuf_i0_i204.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#106>dataInBuf_i0_i196.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i196.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i204.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i204.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=98>dataInBuf_i0_i205.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#98>dataInBuf_i0_i205.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#105>dataInBuf_i0_i197.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i197.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i205.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i205.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=97>dataInBuf_i0_i206.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#97>dataInBuf_i0_i206.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#104>dataInBuf_i0_i198.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i198.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i206.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i206.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=96>dataInBuf_i0_i208.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#96>dataInBuf_i0_i208.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#103>dataInBuf_i0_i200.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i200.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i208.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i208.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=95>dataInBuf_i0_i209.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#95>dataInBuf_i0_i209.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#102>dataInBuf_i0_i201.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i201.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i209.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i209.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=241>dataInBuf_i0_i21.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#241>dataInBuf_i0_i21.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#242>dataInBuf_i0_i13.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i13.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i21.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i21.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=94>dataInBuf_i0_i210.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#94>dataInBuf_i0_i210.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#101>dataInBuf_i0_i202.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i202.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i210.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i210.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=92>dataInBuf_i0_i211.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#92>dataInBuf_i0_i211.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#100>dataInBuf_i0_i203.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i203.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i211.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i211.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=91>dataInBuf_i0_i212.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#91>dataInBuf_i0_i212.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#99>dataInBuf_i0_i204.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i204.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i212.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i212.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=90>dataInBuf_i0_i213.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#90>dataInBuf_i0_i213.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#98>dataInBuf_i0_i205.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i205.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i213.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i213.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=89>dataInBuf_i0_i214.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#89>dataInBuf_i0_i214.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#97>dataInBuf_i0_i206.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i206.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i214.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i214.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=88>dataInBuf_i0_i216.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#88>dataInBuf_i0_i216.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#96>dataInBuf_i0_i208.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i208.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i216.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i216.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=87>dataInBuf_i0_i217.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#87>dataInBuf_i0_i217.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#95>dataInBuf_i0_i209.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i209.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i217.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i217.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=86>dataInBuf_i0_i218.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#86>dataInBuf_i0_i218.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#94>dataInBuf_i0_i210.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i210.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i218.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i218.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=85>dataInBuf_i0_i219.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#85>dataInBuf_i0_i219.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#92>dataInBuf_i0_i211.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i211.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i219.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i219.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=84>dataInBuf_i0_i220.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#84>dataInBuf_i0_i220.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#91>dataInBuf_i0_i212.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i212.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i220.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i220.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=83>dataInBuf_i0_i221.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#83>dataInBuf_i0_i221.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#90>dataInBuf_i0_i213.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i213.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i221.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i221.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=82>dataInBuf_i0_i222.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#82>dataInBuf_i0_i222.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#89>dataInBuf_i0_i214.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i214.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i222.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i222.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=81>dataInBuf_i0_i224.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#81>dataInBuf_i0_i224.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#88>dataInBuf_i0_i216.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i216.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i224.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i224.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=80>dataInBuf_i0_i225.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#80>dataInBuf_i0_i225.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#87>dataInBuf_i0_i217.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i217.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i225.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i225.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=79>dataInBuf_i0_i226.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#79>dataInBuf_i0_i226.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#86>dataInBuf_i0_i218.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i218.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i226.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i226.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=78>dataInBuf_i0_i227.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#78>dataInBuf_i0_i227.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#85>dataInBuf_i0_i219.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i219.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i227.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i227.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=77>dataInBuf_i0_i228.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#77>dataInBuf_i0_i228.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#84>dataInBuf_i0_i220.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i220.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i228.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i228.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=76>dataInBuf_i0_i229.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#76>dataInBuf_i0_i229.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#83>dataInBuf_i0_i221.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i221.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i229.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i229.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=75>dataInBuf_i0_i230.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#75>dataInBuf_i0_i230.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#82>dataInBuf_i0_i222.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i222.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i230.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i230.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=74>dataInBuf_i0_i232.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#74>dataInBuf_i0_i232.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#81>dataInBuf_i0_i224.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i224.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i232.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i232.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=73>dataInBuf_i0_i233.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#73>dataInBuf_i0_i233.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#80>dataInBuf_i0_i225.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i225.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i233.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i233.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=72>dataInBuf_i0_i234.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#72>dataInBuf_i0_i234.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#79>dataInBuf_i0_i226.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i226.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i234.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i234.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=71>dataInBuf_i0_i235.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#71>dataInBuf_i0_i235.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#78>dataInBuf_i0_i227.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i227.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i235.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i235.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=70>dataInBuf_i0_i236.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#70>dataInBuf_i0_i236.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#77>dataInBuf_i0_i228.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i228.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i236.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i236.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=69>dataInBuf_i0_i237.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#69>dataInBuf_i0_i237.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#76>dataInBuf_i0_i229.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i229.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i237.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i237.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=68>dataInBuf_i0_i238.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#68>dataInBuf_i0_i238.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#75>dataInBuf_i0_i230.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i230.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i238.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i238.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=67>dataInBuf_i0_i240.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#67>dataInBuf_i0_i240.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#74>dataInBuf_i0_i232.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i232.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i240.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i240.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=66>dataInBuf_i0_i241.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#66>dataInBuf_i0_i241.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#73>dataInBuf_i0_i233.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i233.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i241.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i241.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=64>dataInBuf_i0_i242.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#64>dataInBuf_i0_i242.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#72>dataInBuf_i0_i234.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i234.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i242.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i242.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=63>dataInBuf_i0_i243.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#63>dataInBuf_i0_i243.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#71>dataInBuf_i0_i235.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i235.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i243.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i243.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=62>dataInBuf_i0_i244.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#62>dataInBuf_i0_i244.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#70>dataInBuf_i0_i236.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i236.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i244.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i244.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=61>dataInBuf_i0_i245.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#61>dataInBuf_i0_i245.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#69>dataInBuf_i0_i237.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i237.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i245.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i245.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=60>dataInBuf_i0_i246.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#60>dataInBuf_i0_i246.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#68>dataInBuf_i0_i238.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i238.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i246.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i246.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=59>dataInBuf_i0_i248.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#59>dataInBuf_i0_i248.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#67>dataInBuf_i0_i240.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i240.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i248.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i248.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=58>dataInBuf_i0_i249.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#58>dataInBuf_i0_i249.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#66>dataInBuf_i0_i241.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i241.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i249.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i249.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=57>dataInBuf_i0_i250.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#57>dataInBuf_i0_i250.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#64>dataInBuf_i0_i242.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i242.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i250.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i250.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=56>dataInBuf_i0_i251.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#56>dataInBuf_i0_i251.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#63>dataInBuf_i0_i243.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i243.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i251.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i251.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=55>dataInBuf_i0_i252.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#55>dataInBuf_i0_i252.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#62>dataInBuf_i0_i244.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i244.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i252.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i252.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=54>dataInBuf_i0_i253.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#54>dataInBuf_i0_i253.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#61>dataInBuf_i0_i245.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i245.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i253.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i253.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=53>dataInBuf_i0_i254.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#53>dataInBuf_i0_i254.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#60>dataInBuf_i0_i246.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i246.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i254.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i254.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=245>dataInBuf_i0_i254_0</A> = !<A href=#7>reset</A>
+    # !<A href=#39>state_FSM_i1.Q</A> & !<A href=#40>state_FSM_i2.Q</A> & !<A href=#46>state_FSM_i7.Q</A>
+    # state_FSM_i1.Q & <A href=#47>dispCount_i0_i5.Q</A> & !<A href=#48>dispCount_i0_i4.Q</A>
+       & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A> & !<A href=#51>dispCount_i0_i1.Q</A>
+       & !<A href=#52>dispCount_i0_i0.Q</A> ; (3 pterms, 10 signals)
+
+<A name=240>dataInBuf_i0_i29.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#240>dataInBuf_i0_i29.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#241>dataInBuf_i0_i21.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i21.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i29.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i29.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=239>dataInBuf_i0_i33.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#47>dispCount_i0_i5.Q</A> & <A href=#48>dispCount_i0_i4.Q</A>
+       & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A> & !<A href=#51>dispCount_i0_i1.Q</A>
+       & !<A href=#52>dispCount_i0_i0.Q</A> & <A href=#239>dataInBuf_i0_i33.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A> ; (2 pterms, 9 signals)
+dataInBuf_i0_i33.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i33.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=238>dataInBuf_i0_i34.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#47>dispCount_i0_i5.Q</A> & <A href=#48>dispCount_i0_i4.Q</A>
+       & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A> & !<A href=#51>dispCount_i0_i1.Q</A>
+       & !<A href=#52>dispCount_i0_i0.Q</A> & <A href=#238>dataInBuf_i0_i34.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A> ; (2 pterms, 9 signals)
+dataInBuf_i0_i34.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i34.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=237>dataInBuf_i0_i37.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#237>dataInBuf_i0_i37.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#240>dataInBuf_i0_i29.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i29.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i37.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i37.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=236>dataInBuf_i0_i38.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#47>dispCount_i0_i5.Q</A> & <A href=#48>dispCount_i0_i4.Q</A>
+       & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A> & !<A href=#51>dispCount_i0_i1.Q</A>
+       & !<A href=#52>dispCount_i0_i0.Q</A> & <A href=#236>dataInBuf_i0_i38.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A> ; (2 pterms, 9 signals)
+dataInBuf_i0_i38.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i38.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=235>dataInBuf_i0_i41.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#235>dataInBuf_i0_i41.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#239>dataInBuf_i0_i33.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i33.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i41.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i41.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=234>dataInBuf_i0_i42.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#234>dataInBuf_i0_i42.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#238>dataInBuf_i0_i34.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i34.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i42.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i42.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=233>dataInBuf_i0_i45.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#233>dataInBuf_i0_i45.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#237>dataInBuf_i0_i37.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i37.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i45.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i45.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=232>dataInBuf_i0_i46.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#232>dataInBuf_i0_i46.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#236>dataInBuf_i0_i38.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i38.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i46.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i46.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=231>dataInBuf_i0_i48.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#47>dispCount_i0_i5.Q</A> & <A href=#48>dispCount_i0_i4.Q</A>
+       & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A> & !<A href=#51>dispCount_i0_i1.Q</A>
+       & !<A href=#52>dispCount_i0_i0.Q</A> & <A href=#231>dataInBuf_i0_i48.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A> ; (2 pterms, 9 signals)
+dataInBuf_i0_i48.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i48.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=230>dataInBuf_i0_i49.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#230>dataInBuf_i0_i49.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#235>dataInBuf_i0_i41.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i41.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i49.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i49.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=243>dataInBuf_i0_i5.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#47>dispCount_i0_i5.Q</A> & <A href=#48>dispCount_i0_i4.Q</A>
+       & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A> & !<A href=#51>dispCount_i0_i1.Q</A>
+       & !<A href=#52>dispCount_i0_i0.Q</A> & <A href=#243>dataInBuf_i0_i5.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A> ; (2 pterms, 9 signals)
+dataInBuf_i0_i5.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i5.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=229>dataInBuf_i0_i50.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#229>dataInBuf_i0_i50.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#234>dataInBuf_i0_i42.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i42.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i50.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i50.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=228>dataInBuf_i0_i53.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#228>dataInBuf_i0_i53.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#233>dataInBuf_i0_i45.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i45.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i53.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i53.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=227>dataInBuf_i0_i54.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#227>dataInBuf_i0_i54.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#232>dataInBuf_i0_i46.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i46.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i54.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i54.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=226>dataInBuf_i0_i56.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#226>dataInBuf_i0_i56.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#231>dataInBuf_i0_i48.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i48.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i56.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i56.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=225>dataInBuf_i0_i57.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#225>dataInBuf_i0_i57.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#230>dataInBuf_i0_i49.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i49.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i57.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i57.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=224>dataInBuf_i0_i58.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#224>dataInBuf_i0_i58.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#229>dataInBuf_i0_i50.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i50.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i58.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i58.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=223>dataInBuf_i0_i61.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#223>dataInBuf_i0_i61.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#228>dataInBuf_i0_i53.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i53.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i61.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i61.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=222>dataInBuf_i0_i62.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#222>dataInBuf_i0_i62.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#227>dataInBuf_i0_i54.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i54.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i62.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i62.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=221>dataInBuf_i0_i64.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#221>dataInBuf_i0_i64.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#226>dataInBuf_i0_i56.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i56.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i64.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i64.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=220>dataInBuf_i0_i65.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#220>dataInBuf_i0_i65.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#225>dataInBuf_i0_i57.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i57.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i65.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i65.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=219>dataInBuf_i0_i66.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#219>dataInBuf_i0_i66.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#224>dataInBuf_i0_i58.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i58.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i66.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i66.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=218>dataInBuf_i0_i69.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#218>dataInBuf_i0_i69.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#223>dataInBuf_i0_i61.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i61.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i69.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i69.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=217>dataInBuf_i0_i70.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#41>lcdRs_N_618</A> & <A href=#217>dataInBuf_i0_i70.Q</A>
+    # state_FSM_i1.Q & lcdRs_N_618 & <A href=#222>dataInBuf_i0_i62.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i62.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i70.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i70.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=216>dataInBuf_i0_i72.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#47>dispCount_i0_i5.Q</A> & <A href=#48>dispCount_i0_i4.Q</A>
+       & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A> & !<A href=#51>dispCount_i0_i1.Q</A>
+       & !<A href=#52>dispCount_i0_i0.Q</A> & <A href=#216>dataInBuf_i0_i72.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # state_FSM_i1.Q & dispCount_i0_i0.Q & <A href=#221>dataInBuf_i0_i64.Q</A>
+    # state_FSM_i1.Q & dispCount_i0_i1.Q & dataInBuf_i0_i64.Q
+    # state_FSM_i1.Q & dispCount_i0_i2.Q & dataInBuf_i0_i64.Q
+    # state_FSM_i1.Q & dispCount_i0_i3.Q & dataInBuf_i0_i64.Q
+    # state_FSM_i1.Q & !dispCount_i0_i4.Q & dataInBuf_i0_i64.Q
+    # state_FSM_i1.Q & dispCount_i0_i5.Q & dataInBuf_i0_i64.Q
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i64.Q ; (9 pterms, 11 signals)
+dataInBuf_i0_i72.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i72.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=215>dataInBuf_i0_i73.D.X1</A> = !<A href=#39>state_FSM_i1.Q</A> & <A href=#40>state_FSM_i2.Q</A> & <A href=#220>dataInBuf_i0_i65.Q</A>
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !<A href=#47>dispCount_i0_i5.Q</A>
+       & <A href=#48>dispCount_i0_i4.Q</A> & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A>
+       & !<A href=#51>dispCount_i0_i1.Q</A> & !<A href=#52>dispCount_i0_i0.Q</A> & !<A href=#215>dataInBuf_i0_i73.Q</A>
+       & dataInBuf_i0_i65.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i73.Q & !dataInBuf_i0_i65.Q ; (3 pterms, 10 signals)
+dataInBuf_i0_i73.D.X2 = <A href=#39>state_FSM_i1.Q</A> & <A href=#220>dataInBuf_i0_i65.Q</A> ; (1 pterm, 2 signals)
+dataInBuf_i0_i73.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i73.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=214>dataInBuf_i0_i74.D.X1</A> = !<A href=#39>state_FSM_i1.Q</A> & <A href=#40>state_FSM_i2.Q</A> & <A href=#219>dataInBuf_i0_i66.Q</A>
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !<A href=#47>dispCount_i0_i5.Q</A>
+       & <A href=#48>dispCount_i0_i4.Q</A> & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A>
+       & !<A href=#51>dispCount_i0_i1.Q</A> & !<A href=#52>dispCount_i0_i0.Q</A> & !<A href=#214>dataInBuf_i0_i74.Q</A>
+       & dataInBuf_i0_i66.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i74.Q & !dataInBuf_i0_i66.Q ; (3 pterms, 10 signals)
+dataInBuf_i0_i74.D.X2 = <A href=#39>state_FSM_i1.Q</A> & <A href=#219>dataInBuf_i0_i66.Q</A> ; (1 pterm, 2 signals)
+dataInBuf_i0_i74.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i74.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=213>dataInBuf_i0_i77.D.X1</A> = !<A href=#39>state_FSM_i1.Q</A> & <A href=#40>state_FSM_i2.Q</A> & <A href=#218>dataInBuf_i0_i69.Q</A>
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !<A href=#47>dispCount_i0_i5.Q</A>
+       & <A href=#48>dispCount_i0_i4.Q</A> & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A>
+       & !<A href=#51>dispCount_i0_i1.Q</A> & !<A href=#52>dispCount_i0_i0.Q</A> & !<A href=#213>dataInBuf_i0_i77.Q</A>
+       & dataInBuf_i0_i69.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i77.Q & !dataInBuf_i0_i69.Q ; (3 pterms, 10 signals)
+dataInBuf_i0_i77.D.X2 = <A href=#39>state_FSM_i1.Q</A> & <A href=#218>dataInBuf_i0_i69.Q</A> ; (1 pterm, 2 signals)
+dataInBuf_i0_i77.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i77.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=212>dataInBuf_i0_i78.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#47>dispCount_i0_i5.Q</A> & <A href=#48>dispCount_i0_i4.Q</A>
+       & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A> & !<A href=#51>dispCount_i0_i1.Q</A>
+       & !<A href=#52>dispCount_i0_i0.Q</A> & <A href=#212>dataInBuf_i0_i78.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # state_FSM_i1.Q & dispCount_i0_i0.Q & <A href=#217>dataInBuf_i0_i70.Q</A>
+    # state_FSM_i1.Q & dispCount_i0_i1.Q & dataInBuf_i0_i70.Q
+    # state_FSM_i1.Q & dispCount_i0_i2.Q & dataInBuf_i0_i70.Q
+    # state_FSM_i1.Q & dispCount_i0_i3.Q & dataInBuf_i0_i70.Q
+    # state_FSM_i1.Q & !dispCount_i0_i4.Q & dataInBuf_i0_i70.Q
+    # state_FSM_i1.Q & dispCount_i0_i5.Q & dataInBuf_i0_i70.Q
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i70.Q ; (9 pterms, 11 signals)
+dataInBuf_i0_i78.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i78.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=210>dataInBuf_i0_i80.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#47>dispCount_i0_i5.Q</A> & <A href=#48>dispCount_i0_i4.Q</A>
+       & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A> & !<A href=#51>dispCount_i0_i1.Q</A>
+       & !<A href=#52>dispCount_i0_i0.Q</A> & <A href=#210>dataInBuf_i0_i80.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # state_FSM_i1.Q & dispCount_i0_i0.Q & <A href=#216>dataInBuf_i0_i72.Q</A>
+    # state_FSM_i1.Q & dispCount_i0_i1.Q & dataInBuf_i0_i72.Q
+    # state_FSM_i1.Q & dispCount_i0_i2.Q & dataInBuf_i0_i72.Q
+    # state_FSM_i1.Q & dispCount_i0_i3.Q & dataInBuf_i0_i72.Q
+    # state_FSM_i1.Q & !dispCount_i0_i4.Q & dataInBuf_i0_i72.Q
+    # state_FSM_i1.Q & dispCount_i0_i5.Q & dataInBuf_i0_i72.Q
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i72.Q ; (9 pterms, 11 signals)
+dataInBuf_i0_i80.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i80.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=209>dataInBuf_i0_i81.D.X1</A> = !<A href=#39>state_FSM_i1.Q</A> & <A href=#40>state_FSM_i2.Q</A> & <A href=#215>dataInBuf_i0_i73.Q</A>
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !<A href=#47>dispCount_i0_i5.Q</A>
+       & <A href=#48>dispCount_i0_i4.Q</A> & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A>
+       & !<A href=#51>dispCount_i0_i1.Q</A> & !<A href=#52>dispCount_i0_i0.Q</A> & !<A href=#209>dataInBuf_i0_i81.Q</A>
+       & dataInBuf_i0_i73.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i81.Q & !dataInBuf_i0_i73.Q ; (3 pterms, 10 signals)
+dataInBuf_i0_i81.D.X2 = <A href=#39>state_FSM_i1.Q</A> & <A href=#215>dataInBuf_i0_i73.Q</A> ; (1 pterm, 2 signals)
+dataInBuf_i0_i81.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i81.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=208>dataInBuf_i0_i82.D.X1</A> = !<A href=#39>state_FSM_i1.Q</A> & <A href=#40>state_FSM_i2.Q</A> & <A href=#214>dataInBuf_i0_i74.Q</A>
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !<A href=#47>dispCount_i0_i5.Q</A>
+       & <A href=#48>dispCount_i0_i4.Q</A> & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A>
+       & !<A href=#51>dispCount_i0_i1.Q</A> & !<A href=#52>dispCount_i0_i0.Q</A> & !<A href=#208>dataInBuf_i0_i82.Q</A>
+       & dataInBuf_i0_i74.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i82.Q & !dataInBuf_i0_i74.Q ; (3 pterms, 10 signals)
+dataInBuf_i0_i82.D.X2 = <A href=#39>state_FSM_i1.Q</A> & <A href=#214>dataInBuf_i0_i74.Q</A> ; (1 pterm, 2 signals)
+dataInBuf_i0_i82.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i82.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=207>dataInBuf_i0_i83.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#47>dispCount_i0_i5.Q</A> & <A href=#48>dispCount_i0_i4.Q</A>
+       & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A> & !<A href=#51>dispCount_i0_i1.Q</A>
+       & !<A href=#52>dispCount_i0_i0.Q</A> & <A href=#207>dataInBuf_i0_i83.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A> ; (2 pterms, 9 signals)
+dataInBuf_i0_i83.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i83.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=206>dataInBuf_i0_i84.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#47>dispCount_i0_i5.Q</A> & <A href=#48>dispCount_i0_i4.Q</A>
+       & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A> & !<A href=#51>dispCount_i0_i1.Q</A>
+       & !<A href=#52>dispCount_i0_i0.Q</A> & <A href=#206>dataInBuf_i0_i84.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A> ; (2 pterms, 9 signals)
+dataInBuf_i0_i84.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i84.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=205>dataInBuf_i0_i85.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#47>dispCount_i0_i5.Q</A> & <A href=#48>dispCount_i0_i4.Q</A>
+       & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A> & !<A href=#51>dispCount_i0_i1.Q</A>
+       & !<A href=#52>dispCount_i0_i0.Q</A> & <A href=#205>dataInBuf_i0_i85.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # state_FSM_i1.Q & dispCount_i0_i0.Q & <A href=#213>dataInBuf_i0_i77.Q</A>
+    # state_FSM_i1.Q & dispCount_i0_i1.Q & dataInBuf_i0_i77.Q
+    # state_FSM_i1.Q & dispCount_i0_i2.Q & dataInBuf_i0_i77.Q
+    # state_FSM_i1.Q & dispCount_i0_i3.Q & dataInBuf_i0_i77.Q
+    # state_FSM_i1.Q & !dispCount_i0_i4.Q & dataInBuf_i0_i77.Q
+    # state_FSM_i1.Q & dispCount_i0_i5.Q & dataInBuf_i0_i77.Q
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i77.Q ; (9 pterms, 11 signals)
+dataInBuf_i0_i85.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i85.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=204>dataInBuf_i0_i86.D.X1</A> = !<A href=#39>state_FSM_i1.Q</A> & <A href=#40>state_FSM_i2.Q</A> & <A href=#212>dataInBuf_i0_i78.Q</A>
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !<A href=#47>dispCount_i0_i5.Q</A>
+       & <A href=#48>dispCount_i0_i4.Q</A> & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A>
+       & !<A href=#51>dispCount_i0_i1.Q</A> & !<A href=#52>dispCount_i0_i0.Q</A> & !<A href=#204>dataInBuf_i0_i86.Q</A>
+       & dataInBuf_i0_i78.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i86.Q & !dataInBuf_i0_i78.Q ; (3 pterms, 10 signals)
+dataInBuf_i0_i86.D.X2 = <A href=#39>state_FSM_i1.Q</A> & <A href=#212>dataInBuf_i0_i78.Q</A> ; (1 pterm, 2 signals)
+dataInBuf_i0_i86.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i86.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=203>dataInBuf_i0_i88.D.X1</A> = !<A href=#39>state_FSM_i1.Q</A> & <A href=#40>state_FSM_i2.Q</A> & <A href=#210>dataInBuf_i0_i80.Q</A>
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !<A href=#47>dispCount_i0_i5.Q</A>
+       & <A href=#48>dispCount_i0_i4.Q</A> & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A>
+       & !<A href=#51>dispCount_i0_i1.Q</A> & !<A href=#52>dispCount_i0_i0.Q</A> & !<A href=#203>dataInBuf_i0_i88.Q</A>
+       & dataInBuf_i0_i80.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i88.Q & !dataInBuf_i0_i80.Q ; (3 pterms, 10 signals)
+dataInBuf_i0_i88.D.X2 = <A href=#39>state_FSM_i1.Q</A> & <A href=#210>dataInBuf_i0_i80.Q</A> ; (1 pterm, 2 signals)
+dataInBuf_i0_i88.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i88.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=202>dataInBuf_i0_i89.D.X1</A> = !<A href=#39>state_FSM_i1.Q</A> & <A href=#40>state_FSM_i2.Q</A> & <A href=#209>dataInBuf_i0_i81.Q</A>
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !<A href=#47>dispCount_i0_i5.Q</A>
+       & <A href=#48>dispCount_i0_i4.Q</A> & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A>
+       & !<A href=#51>dispCount_i0_i1.Q</A> & !<A href=#52>dispCount_i0_i0.Q</A> & !<A href=#202>dataInBuf_i0_i89.Q</A>
+       & dataInBuf_i0_i81.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i89.Q & !dataInBuf_i0_i81.Q ; (3 pterms, 10 signals)
+dataInBuf_i0_i89.D.X2 = <A href=#39>state_FSM_i1.Q</A> & <A href=#209>dataInBuf_i0_i81.Q</A> ; (1 pterm, 2 signals)
+dataInBuf_i0_i89.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i89.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=201>dataInBuf_i0_i90.D.X1</A> = !<A href=#39>state_FSM_i1.Q</A> & <A href=#40>state_FSM_i2.Q</A> & <A href=#208>dataInBuf_i0_i82.Q</A>
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !<A href=#47>dispCount_i0_i5.Q</A>
+       & <A href=#48>dispCount_i0_i4.Q</A> & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A>
+       & !<A href=#51>dispCount_i0_i1.Q</A> & !<A href=#52>dispCount_i0_i0.Q</A> & !<A href=#201>dataInBuf_i0_i90.Q</A>
+       & dataInBuf_i0_i82.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i90.Q & !dataInBuf_i0_i82.Q ; (3 pterms, 10 signals)
+dataInBuf_i0_i90.D.X2 = <A href=#39>state_FSM_i1.Q</A> & <A href=#208>dataInBuf_i0_i82.Q</A> ; (1 pterm, 2 signals)
+dataInBuf_i0_i90.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i90.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=200>dataInBuf_i0_i91.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#47>dispCount_i0_i5.Q</A> & <A href=#48>dispCount_i0_i4.Q</A>
+       & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A> & !<A href=#51>dispCount_i0_i1.Q</A>
+       & !<A href=#52>dispCount_i0_i0.Q</A> & <A href=#200>dataInBuf_i0_i91.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # state_FSM_i1.Q & dispCount_i0_i0.Q & <A href=#207>dataInBuf_i0_i83.Q</A>
+    # state_FSM_i1.Q & dispCount_i0_i1.Q & dataInBuf_i0_i83.Q
+    # state_FSM_i1.Q & dispCount_i0_i2.Q & dataInBuf_i0_i83.Q
+    # state_FSM_i1.Q & dispCount_i0_i3.Q & dataInBuf_i0_i83.Q
+    # state_FSM_i1.Q & !dispCount_i0_i4.Q & dataInBuf_i0_i83.Q
+    # state_FSM_i1.Q & dispCount_i0_i5.Q & dataInBuf_i0_i83.Q
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i83.Q ; (9 pterms, 11 signals)
+dataInBuf_i0_i91.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i91.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=199>dataInBuf_i0_i92.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#47>dispCount_i0_i5.Q</A> & <A href=#48>dispCount_i0_i4.Q</A>
+       & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A> & !<A href=#51>dispCount_i0_i1.Q</A>
+       & !<A href=#52>dispCount_i0_i0.Q</A> & <A href=#199>dataInBuf_i0_i92.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # state_FSM_i1.Q & dispCount_i0_i0.Q & <A href=#206>dataInBuf_i0_i84.Q</A>
+    # state_FSM_i1.Q & dispCount_i0_i1.Q & dataInBuf_i0_i84.Q
+    # state_FSM_i1.Q & dispCount_i0_i2.Q & dataInBuf_i0_i84.Q
+    # state_FSM_i1.Q & dispCount_i0_i3.Q & dataInBuf_i0_i84.Q
+    # state_FSM_i1.Q & !dispCount_i0_i4.Q & dataInBuf_i0_i84.Q
+    # state_FSM_i1.Q & dispCount_i0_i5.Q & dataInBuf_i0_i84.Q
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i84.Q ; (9 pterms, 11 signals)
+dataInBuf_i0_i92.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i92.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=198>dataInBuf_i0_i93.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#47>dispCount_i0_i5.Q</A> & <A href=#48>dispCount_i0_i4.Q</A>
+       & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A> & !<A href=#51>dispCount_i0_i1.Q</A>
+       & !<A href=#52>dispCount_i0_i0.Q</A> & <A href=#198>dataInBuf_i0_i93.Q</A>
+    # <A href=#46>state_FSM_i7.Q</A>
+    # state_FSM_i1.Q & dispCount_i0_i0.Q & <A href=#205>dataInBuf_i0_i85.Q</A>
+    # state_FSM_i1.Q & dispCount_i0_i1.Q & dataInBuf_i0_i85.Q
+    # state_FSM_i1.Q & dispCount_i0_i2.Q & dataInBuf_i0_i85.Q
+    # state_FSM_i1.Q & dispCount_i0_i3.Q & dataInBuf_i0_i85.Q
+    # state_FSM_i1.Q & !dispCount_i0_i4.Q & dataInBuf_i0_i85.Q
+    # state_FSM_i1.Q & dispCount_i0_i5.Q & dataInBuf_i0_i85.Q
+    # <A href=#40>state_FSM_i2.Q</A> & dataInBuf_i0_i85.Q ; (9 pterms, 11 signals)
+dataInBuf_i0_i93.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i93.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=197>dataInBuf_i0_i94.D.X1</A> = !<A href=#39>state_FSM_i1.Q</A> & <A href=#40>state_FSM_i2.Q</A> & <A href=#204>dataInBuf_i0_i86.Q</A>
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !<A href=#47>dispCount_i0_i5.Q</A>
+       & <A href=#48>dispCount_i0_i4.Q</A> & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A>
+       & !<A href=#51>dispCount_i0_i1.Q</A> & !<A href=#52>dispCount_i0_i0.Q</A> & !<A href=#197>dataInBuf_i0_i94.Q</A>
+       & dataInBuf_i0_i86.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i94.Q & !dataInBuf_i0_i86.Q ; (3 pterms, 10 signals)
+dataInBuf_i0_i94.D.X2 = <A href=#39>state_FSM_i1.Q</A> & <A href=#204>dataInBuf_i0_i86.Q</A> ; (1 pterm, 2 signals)
+dataInBuf_i0_i94.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i94.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=196>dataInBuf_i0_i96.D.X1</A> = !<A href=#39>state_FSM_i1.Q</A> & <A href=#40>state_FSM_i2.Q</A> & <A href=#203>dataInBuf_i0_i88.Q</A>
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !<A href=#47>dispCount_i0_i5.Q</A>
+       & <A href=#48>dispCount_i0_i4.Q</A> & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A>
+       & !<A href=#51>dispCount_i0_i1.Q</A> & !<A href=#52>dispCount_i0_i0.Q</A> & !<A href=#196>dataInBuf_i0_i96.Q</A>
+       & dataInBuf_i0_i88.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i96.Q & !dataInBuf_i0_i88.Q ; (3 pterms, 10 signals)
+dataInBuf_i0_i96.D.X2 = <A href=#39>state_FSM_i1.Q</A> & <A href=#203>dataInBuf_i0_i88.Q</A> ; (1 pterm, 2 signals)
+dataInBuf_i0_i96.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i96.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=195>dataInBuf_i0_i97.D.X1</A> = !<A href=#39>state_FSM_i1.Q</A> & <A href=#40>state_FSM_i2.Q</A> & <A href=#202>dataInBuf_i0_i89.Q</A>
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !<A href=#47>dispCount_i0_i5.Q</A>
+       & <A href=#48>dispCount_i0_i4.Q</A> & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A>
+       & !<A href=#51>dispCount_i0_i1.Q</A> & !<A href=#52>dispCount_i0_i0.Q</A> & !<A href=#195>dataInBuf_i0_i97.Q</A>
+       & dataInBuf_i0_i89.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i97.Q & !dataInBuf_i0_i89.Q ; (3 pterms, 10 signals)
+dataInBuf_i0_i97.D.X2 = <A href=#39>state_FSM_i1.Q</A> & <A href=#202>dataInBuf_i0_i89.Q</A> ; (1 pterm, 2 signals)
+dataInBuf_i0_i97.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i97.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=194>dataInBuf_i0_i98.D.X1</A> = !<A href=#39>state_FSM_i1.Q</A> & <A href=#40>state_FSM_i2.Q</A> & <A href=#201>dataInBuf_i0_i90.Q</A>
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !<A href=#47>dispCount_i0_i5.Q</A>
+       & <A href=#48>dispCount_i0_i4.Q</A> & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A>
+       & !<A href=#51>dispCount_i0_i1.Q</A> & !<A href=#52>dispCount_i0_i0.Q</A> & !<A href=#194>dataInBuf_i0_i98.Q</A>
+       & dataInBuf_i0_i90.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i98.Q & !dataInBuf_i0_i90.Q ; (3 pterms, 10 signals)
+dataInBuf_i0_i98.D.X2 = <A href=#39>state_FSM_i1.Q</A> & <A href=#201>dataInBuf_i0_i90.Q</A> ; (1 pterm, 2 signals)
+dataInBuf_i0_i98.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i98.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=193>dataInBuf_i0_i99.D.X1</A> = !<A href=#39>state_FSM_i1.Q</A> & <A href=#40>state_FSM_i2.Q</A> & <A href=#200>dataInBuf_i0_i91.Q</A>
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !<A href=#47>dispCount_i0_i5.Q</A>
+       & <A href=#48>dispCount_i0_i4.Q</A> & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A>
+       & !<A href=#51>dispCount_i0_i1.Q</A> & !<A href=#52>dispCount_i0_i0.Q</A> & !<A href=#193>dataInBuf_i0_i99.Q</A>
+       & dataInBuf_i0_i91.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i99.Q & !dataInBuf_i0_i91.Q ; (3 pterms, 10 signals)
+dataInBuf_i0_i99.D.X2 = <A href=#39>state_FSM_i1.Q</A> & <A href=#200>dataInBuf_i0_i91.Q</A> ; (1 pterm, 2 signals)
+dataInBuf_i0_i99.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dataInBuf_i0_i99.CE = !( <A href=#245>dataInBuf_i0_i254_0</A> ) ; (1 pterm, 1 signal)
+
+<A name=52>dispCount_i0_i0.D</A> = !( !<A href=#40>state_FSM_i2.Q</A> & <A href=#47>dispCount_i0_i5.Q</A>
+       & !<A href=#48>dispCount_i0_i4.Q</A> & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A>
+       & !<A href=#51>dispCount_i0_i1.Q</A>
+    # !state_FSM_i2.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+    # !<A href=#39>state_FSM_i1.Q</A> & !state_FSM_i2.Q
+    # <A href=#52>dispCount_i0_i0.Q</A> ) ; (4 pterms, 8 signals)
+dispCount_i0_i0.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dispCount_i0_i0.CE = !( <A href=#244>dispCount_i0_i5_0</A> ) ; (1 pterm, 1 signal)
+dispCount_i0_i0.AR = !<A href=#7>reset</A> ; (1 pterm, 1 signal)
+
+<A name=51>dispCount_i0_i1.D</A> = !( !<A href=#39>state_FSM_i1.Q</A> & !<A href=#40>state_FSM_i2.Q</A>
+    # !<A href=#51>dispCount_i0_i1.Q</A> & !<A href=#52>dispCount_i0_i0.Q</A>
+    # dispCount_i0_i1.Q & dispCount_i0_i0.Q ) ; (3 pterms, 4 signals)
+dispCount_i0_i1.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dispCount_i0_i1.CE = !( <A href=#244>dispCount_i0_i5_0</A> ) ; (1 pterm, 1 signal)
+dispCount_i0_i1.AR = !<A href=#7>reset</A> ; (1 pterm, 1 signal)
+
+<A name=50>dispCount_i0_i2.D</A> = !( <A href=#50>dispCount_i0_i2.Q</A> & <A href=#51>dispCount_i0_i1.Q</A>
+       & <A href=#52>dispCount_i0_i0.Q</A>
+    # !<A href=#39>state_FSM_i1.Q</A> & !<A href=#40>state_FSM_i2.Q</A>
+    # !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+    # !dispCount_i0_i2.Q & !dispCount_i0_i0.Q ) ; (4 pterms, 5 signals)
+dispCount_i0_i2.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dispCount_i0_i2.CE = !( <A href=#244>dispCount_i0_i5_0</A> ) ; (1 pterm, 1 signal)
+dispCount_i0_i2.AR = !<A href=#7>reset</A> ; (1 pterm, 1 signal)
+
+<A name=49>dispCount_i0_i3.D.X1</A> = <A href=#39>state_FSM_i1.Q</A> & <A href=#49>dispCount_i0_i3.Q</A>
+    # <A href=#40>state_FSM_i2.Q</A> & dispCount_i0_i3.Q
+    # !state_FSM_i1.Q & !state_FSM_i2.Q & <A href=#50>dispCount_i0_i2.Q</A>
+       & <A href=#51>dispCount_i0_i1.Q</A> & <A href=#52>dispCount_i0_i0.Q</A> ; (3 pterms, 6 signals)
+dispCount_i0_i3.D.X2 = <A href=#50>dispCount_i0_i2.Q</A> & <A href=#51>dispCount_i0_i1.Q</A>
+       & <A href=#52>dispCount_i0_i0.Q</A> ; (1 pterm, 3 signals)
+dispCount_i0_i3.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dispCount_i0_i3.CE = !( <A href=#244>dispCount_i0_i5_0</A> ) ; (1 pterm, 1 signal)
+dispCount_i0_i3.AR = !<A href=#7>reset</A> ; (1 pterm, 1 signal)
+
+<A name=48>dispCount_i0_i4.T</A> = !<A href=#40>state_FSM_i2.Q</A> & !<A href=#47>dispCount_i0_i5.Q</A> & <A href=#48>dispCount_i0_i4.Q</A>
+       & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A> & !<A href=#51>dispCount_i0_i1.Q</A>
+       & !<A href=#52>dispCount_i0_i0.Q</A>
+    # state_FSM_i2.Q & dispCount_i0_i3.Q & dispCount_i0_i2.Q
+       & dispCount_i0_i1.Q & dispCount_i0_i0.Q
+    # <A href=#39>state_FSM_i1.Q</A> & dispCount_i0_i3.Q & dispCount_i0_i2.Q
+       & dispCount_i0_i1.Q & dispCount_i0_i0.Q
+    # !state_FSM_i1.Q & !state_FSM_i2.Q & dispCount_i0_i4.Q ; (4 pterms, 8 signals)
+dispCount_i0_i4.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dispCount_i0_i4.CE = !( <A href=#244>dispCount_i0_i5_0</A> ) ; (1 pterm, 1 signal)
+dispCount_i0_i4.AR = !<A href=#7>reset</A> ; (1 pterm, 1 signal)
+
+<A name=47>dispCount_i0_i5.T</A> = !<A href=#40>state_FSM_i2.Q</A> & <A href=#47>dispCount_i0_i5.Q</A> & !<A href=#48>dispCount_i0_i4.Q</A>
+       & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A> & !<A href=#51>dispCount_i0_i1.Q</A>
+       & !<A href=#52>dispCount_i0_i0.Q</A>
+    # state_FSM_i2.Q & dispCount_i0_i4.Q & dispCount_i0_i3.Q
+       & dispCount_i0_i2.Q & dispCount_i0_i1.Q & dispCount_i0_i0.Q
+    # <A href=#39>state_FSM_i1.Q</A> & dispCount_i0_i4.Q & dispCount_i0_i3.Q
+       & dispCount_i0_i2.Q & dispCount_i0_i1.Q & dispCount_i0_i0.Q
+    # !state_FSM_i1.Q & !state_FSM_i2.Q & dispCount_i0_i5.Q ; (4 pterms, 8 signals)
+dispCount_i0_i5.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+dispCount_i0_i5.CE = !( <A href=#244>dispCount_i0_i5_0</A> ) ; (1 pterm, 1 signal)
+dispCount_i0_i5.AR = !<A href=#7>reset</A> ; (1 pterm, 1 signal)
+
+<A name=244>dispCount_i0_i5_0</A> = !<A href=#39>state_FSM_i1.Q</A> & !<A href=#40>state_FSM_i2.Q</A>
+    # state_FSM_i1.Q & !<A href=#47>dispCount_i0_i5.Q</A> & <A href=#48>dispCount_i0_i4.Q</A>
+       & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A> & !<A href=#51>dispCount_i0_i1.Q</A>
+       & !<A href=#52>dispCount_i0_i0.Q</A> ; (2 pterms, 8 signals)
+
+<A name=18>lcdD_0_.D</A> = !<A href=#40>state_FSM_i2.Q</A> & !<A href=#42>state_FSM_i3.Q</A> & !<A href=#43>state_FSM_i4.Q</A>
+       & !<A href=#44>state_FSM_i5.Q</A> & !<A href=#45>state_FSM_i6.Q</A> & <A href=#47>dispCount_i0_i5.Q</A>
+       & !<A href=#48>dispCount_i0_i4.Q</A> & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A>
+       & !<A href=#51>dispCount_i0_i1.Q</A> & !<A href=#52>dispCount_i0_i0.Q</A>
+    # !<A href=#39>state_FSM_i1.Q</A> & !state_FSM_i2.Q & !state_FSM_i3.Q & !state_FSM_i4.Q
+       & !state_FSM_i5.Q & !state_FSM_i6.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & !dispCount_i0_i4.Q
+       & <A href=#59>dataInBuf_i0_i248.Q</A>
+    # state_FSM_i1.Q & dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & dataInBuf_i0_i248.Q
+    # state_FSM_i1.Q & dispCount_i0_i0.Q & dataInBuf_i0_i248.Q
+    # state_FSM_i1.Q & dispCount_i0_i1.Q & dataInBuf_i0_i248.Q
+    # state_FSM_i1.Q & dispCount_i0_i2.Q & dataInBuf_i0_i248.Q
+    # state_FSM_i1.Q & dispCount_i0_i3.Q & dataInBuf_i0_i248.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i248.Q ; (9 pterms, 13 signals)
+lcdD_0_.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+lcdD_0_.CE = !( <A href=#39>state_FSM_i1.Q</A> & <A href=#47>dispCount_i0_i5.Q</A> & !<A href=#48>dispCount_i0_i4.Q</A>
+       & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A> & !<A href=#51>dispCount_i0_i1.Q</A>
+       & !<A href=#52>dispCount_i0_i0.Q</A> ) ; (1 pterm, 7 signals)
+lcdD_0_.AP = !<A href=#7>reset</A> ; (1 pterm, 1 signal)
+
+<A name=17>lcdD_1_.D.X1</A> = !<A href=#39>state_FSM_i1.Q</A> & !<A href=#40>state_FSM_i2.Q</A> & !<A href=#42>state_FSM_i3.Q</A>
+       & <A href=#58>dataInBuf_i0_i249.Q</A>
+    # !state_FSM_i1.Q & !state_FSM_i2.Q & state_FSM_i3.Q
+       & !dataInBuf_i0_i249.Q
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !<A href=#47>dispCount_i0_i5.Q</A>
+       & <A href=#48>dispCount_i0_i4.Q</A> & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A>
+       & !<A href=#51>dispCount_i0_i1.Q</A> & !<A href=#52>dispCount_i0_i0.Q</A> & dataInBuf_i0_i249.Q
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !state_FSM_i3.Q & dispCount_i0_i5.Q
+       & !dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q & dataInBuf_i0_i249.Q
+    # state_FSM_i1.Q & !state_FSM_i2.Q & state_FSM_i3.Q & dispCount_i0_i5.Q
+       & !dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q & !dataInBuf_i0_i249.Q ; (5 pterms, 10 signals)
+lcdD_1_.D.X2 = <A href=#58>dataInBuf_i0_i249.Q</A> ; (1 pterm, 1 signal)
+lcdD_1_.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+lcdD_1_.CE = !( <A href=#39>state_FSM_i1.Q</A> & <A href=#47>dispCount_i0_i5.Q</A> & !<A href=#48>dispCount_i0_i4.Q</A>
+       & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A> & !<A href=#51>dispCount_i0_i1.Q</A>
+       & !<A href=#52>dispCount_i0_i0.Q</A> ) ; (1 pterm, 7 signals)
+lcdD_1_.AR = !<A href=#7>reset</A> ; (1 pterm, 1 signal)
+
+<A name=16>lcdD_2_.D.X1</A> = !<A href=#39>state_FSM_i1.Q</A> & !<A href=#40>state_FSM_i2.Q</A> & <A href=#43>state_FSM_i4.Q</A>
+       & !<A href=#57>dataInBuf_i0_i250.Q</A>
+    # !state_FSM_i1.Q & !state_FSM_i2.Q & <A href=#42>state_FSM_i3.Q</A>
+       & !dataInBuf_i0_i250.Q
+    # !state_FSM_i1.Q & !state_FSM_i2.Q & !state_FSM_i3.Q & !state_FSM_i4.Q
+       & dataInBuf_i0_i250.Q
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !<A href=#47>dispCount_i0_i5.Q</A>
+       & <A href=#48>dispCount_i0_i4.Q</A> & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A>
+       & !<A href=#51>dispCount_i0_i1.Q</A> & !<A href=#52>dispCount_i0_i0.Q</A> & dataInBuf_i0_i250.Q
+    # state_FSM_i1.Q & !state_FSM_i2.Q & state_FSM_i3.Q & dispCount_i0_i5.Q
+       & !dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q & !dataInBuf_i0_i250.Q
+    # state_FSM_i1.Q & !state_FSM_i2.Q & state_FSM_i4.Q & dispCount_i0_i5.Q
+       & !dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q & !dataInBuf_i0_i250.Q
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !state_FSM_i3.Q & !state_FSM_i4.Q
+       & dispCount_i0_i5.Q & !dispCount_i0_i4.Q & !dispCount_i0_i3.Q
+       & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q
+       & dataInBuf_i0_i250.Q ; (7 pterms, 11 signals)
+lcdD_2_.D.X2 = <A href=#57>dataInBuf_i0_i250.Q</A> ; (1 pterm, 1 signal)
+lcdD_2_.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+lcdD_2_.CE = !( <A href=#39>state_FSM_i1.Q</A> & <A href=#47>dispCount_i0_i5.Q</A> & !<A href=#48>dispCount_i0_i4.Q</A>
+       & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A> & !<A href=#51>dispCount_i0_i1.Q</A>
+       & !<A href=#52>dispCount_i0_i0.Q</A> ) ; (1 pterm, 7 signals)
+lcdD_2_.AR = !<A href=#7>reset</A> ; (1 pterm, 1 signal)
+
+<A name=15>lcdD_3_.D.X1</A> = !<A href=#39>state_FSM_i1.Q</A> & !<A href=#40>state_FSM_i2.Q</A> & !<A href=#42>state_FSM_i3.Q</A>
+       & <A href=#43>state_FSM_i4.Q</A>
+    # !state_FSM_i1.Q & !state_FSM_i2.Q & !state_FSM_i3.Q & <A href=#44>state_FSM_i5.Q</A>
+    # !state_FSM_i2.Q & !state_FSM_i3.Q & state_FSM_i4.Q & <A href=#47>dispCount_i0_i5.Q</A>
+       & !<A href=#48>dispCount_i0_i4.Q</A> & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A>
+       & !<A href=#51>dispCount_i0_i1.Q</A> & !<A href=#52>dispCount_i0_i0.Q</A> & !<A href=#56>dataInBuf_i0_i251.Q</A>
+    # !state_FSM_i2.Q & !state_FSM_i3.Q & state_FSM_i5.Q & dispCount_i0_i5.Q
+       & !dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q & !dataInBuf_i0_i251.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i251.Q
+    # state_FSM_i1.Q & state_FSM_i3.Q & dispCount_i0_i5.Q & !dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i251.Q
+    # state_FSM_i1.Q & !state_FSM_i4.Q & !state_FSM_i5.Q & dispCount_i0_i5.Q
+       & !dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q & dataInBuf_i0_i251.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i251.Q ; (8 pterms, 12 signals)
+lcdD_3_.D.X2 = <A href=#39>state_FSM_i1.Q</A> & !<A href=#40>state_FSM_i2.Q</A> & <A href=#56>dataInBuf_i0_i251.Q</A> ; (1 pterm, 3 signals)
+lcdD_3_.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+lcdD_3_.CE = !( <A href=#39>state_FSM_i1.Q</A> & <A href=#47>dispCount_i0_i5.Q</A> & !<A href=#48>dispCount_i0_i4.Q</A>
+       & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A> & !<A href=#51>dispCount_i0_i1.Q</A>
+       & !<A href=#52>dispCount_i0_i0.Q</A> ) ; (1 pterm, 7 signals)
+lcdD_3_.AR = !<A href=#7>reset</A> ; (1 pterm, 1 signal)
+
+<A name=14>lcdD_4_.D</A> = !<A href=#40>state_FSM_i2.Q</A> & !<A href=#42>state_FSM_i3.Q</A> & !<A href=#43>state_FSM_i4.Q</A>
+       & <A href=#44>state_FSM_i5.Q</A> & <A href=#47>dispCount_i0_i5.Q</A> & !<A href=#48>dispCount_i0_i4.Q</A>
+       & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A> & !<A href=#51>dispCount_i0_i1.Q</A>
+       & !<A href=#52>dispCount_i0_i0.Q</A>
+    # !<A href=#39>state_FSM_i1.Q</A> & !state_FSM_i2.Q & !state_FSM_i3.Q & !state_FSM_i4.Q
+       & state_FSM_i5.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & !dispCount_i0_i4.Q
+       & <A href=#55>dataInBuf_i0_i252.Q</A>
+    # state_FSM_i1.Q & dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & dataInBuf_i0_i252.Q
+    # state_FSM_i1.Q & dispCount_i0_i0.Q & dataInBuf_i0_i252.Q
+    # state_FSM_i1.Q & dispCount_i0_i1.Q & dataInBuf_i0_i252.Q
+    # state_FSM_i1.Q & dispCount_i0_i2.Q & dataInBuf_i0_i252.Q
+    # state_FSM_i1.Q & dispCount_i0_i3.Q & dataInBuf_i0_i252.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i252.Q ; (9 pterms, 12 signals)
+lcdD_4_.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+lcdD_4_.CE = !( <A href=#39>state_FSM_i1.Q</A> & <A href=#47>dispCount_i0_i5.Q</A> & !<A href=#48>dispCount_i0_i4.Q</A>
+       & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A> & !<A href=#51>dispCount_i0_i1.Q</A>
+       & !<A href=#52>dispCount_i0_i0.Q</A> ) ; (1 pterm, 7 signals)
+lcdD_4_.AR = !<A href=#7>reset</A> ; (1 pterm, 1 signal)
+
+<A name=13>lcdD_5_.D</A> = !<A href=#40>state_FSM_i2.Q</A> & !<A href=#42>state_FSM_i3.Q</A> & !<A href=#43>state_FSM_i4.Q</A>
+       & <A href=#44>state_FSM_i5.Q</A> & <A href=#47>dispCount_i0_i5.Q</A> & !<A href=#48>dispCount_i0_i4.Q</A>
+       & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A> & !<A href=#51>dispCount_i0_i1.Q</A>
+       & !<A href=#52>dispCount_i0_i0.Q</A>
+    # !<A href=#39>state_FSM_i1.Q</A> & !state_FSM_i2.Q & !state_FSM_i3.Q & !state_FSM_i4.Q
+       & state_FSM_i5.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & !dispCount_i0_i4.Q
+       & <A href=#54>dataInBuf_i0_i253.Q</A>
+    # state_FSM_i1.Q & dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & dataInBuf_i0_i253.Q
+    # state_FSM_i1.Q & dispCount_i0_i0.Q & dataInBuf_i0_i253.Q
+    # state_FSM_i1.Q & dispCount_i0_i1.Q & dataInBuf_i0_i253.Q
+    # state_FSM_i1.Q & dispCount_i0_i2.Q & dataInBuf_i0_i253.Q
+    # state_FSM_i1.Q & dispCount_i0_i3.Q & dataInBuf_i0_i253.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i253.Q ; (9 pterms, 12 signals)
+lcdD_5_.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+lcdD_5_.CE = !( <A href=#39>state_FSM_i1.Q</A> & <A href=#47>dispCount_i0_i5.Q</A> & !<A href=#48>dispCount_i0_i4.Q</A>
+       & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A> & !<A href=#51>dispCount_i0_i1.Q</A>
+       & !<A href=#52>dispCount_i0_i0.Q</A> ) ; (1 pterm, 7 signals)
+lcdD_5_.AR = !<A href=#7>reset</A> ; (1 pterm, 1 signal)
+
+<A name=12>lcdD_6_.D.X1</A> = !<A href=#39>state_FSM_i1.Q</A> & <A href=#40>state_FSM_i2.Q</A> & <A href=#53>dataInBuf_i0_i254.Q</A>
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !<A href=#47>dispCount_i0_i5.Q</A>
+       & <A href=#48>dispCount_i0_i4.Q</A> & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A>
+       & !<A href=#51>dispCount_i0_i1.Q</A> & !<A href=#52>dispCount_i0_i0.Q</A> & !dataInBuf_i0_i254.Q
+    # state_FSM_i1.Q & !state_FSM_i2.Q & dispCount_i0_i5.Q
+       & !dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q & dataInBuf_i0_i254.Q ; (3 pterms, 9 signals)
+lcdD_6_.D.X2 = <A href=#39>state_FSM_i1.Q</A> & <A href=#53>dataInBuf_i0_i254.Q</A> ; (1 pterm, 2 signals)
+lcdD_6_.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+lcdD_6_.CE = !( <A href=#39>state_FSM_i1.Q</A> & <A href=#47>dispCount_i0_i5.Q</A> & !<A href=#48>dispCount_i0_i4.Q</A>
+       & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A> & !<A href=#51>dispCount_i0_i1.Q</A>
+       & !<A href=#52>dispCount_i0_i0.Q</A> ) ; (1 pterm, 7 signals)
+lcdD_6_.AR = !<A href=#7>reset</A> ; (1 pterm, 1 signal)
+
+<A name=9>lcdD_7_.D</A> = !<A href=#40>state_FSM_i2.Q</A> & !<A href=#42>state_FSM_i3.Q</A> & !<A href=#43>state_FSM_i4.Q</A>
+       & !<A href=#44>state_FSM_i5.Q</A> & <A href=#45>state_FSM_i6.Q</A> & <A href=#47>dispCount_i0_i5.Q</A>
+       & !<A href=#48>dispCount_i0_i4.Q</A> & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A>
+       & !<A href=#51>dispCount_i0_i1.Q</A> & !<A href=#52>dispCount_i0_i0.Q</A>
+    # <A href=#39>state_FSM_i1.Q</A> & !state_FSM_i2.Q & !dispCount_i0_i5.Q
+       & dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q
+    # !state_FSM_i1.Q & !state_FSM_i2.Q & !state_FSM_i3.Q & !state_FSM_i4.Q
+       & !state_FSM_i5.Q & state_FSM_i6.Q ; (3 pterms, 12 signals)
+lcdD_7_.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+lcdD_7_.CE = !( <A href=#39>state_FSM_i1.Q</A> & <A href=#47>dispCount_i0_i5.Q</A> & !<A href=#48>dispCount_i0_i4.Q</A>
+       & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A> & !<A href=#51>dispCount_i0_i1.Q</A>
+       & !<A href=#52>dispCount_i0_i0.Q</A> ) ; (1 pterm, 7 signals)
+lcdD_7_.AR = !<A href=#7>reset</A> ; (1 pterm, 1 signal)
+
+<A name=10>lcdRs.D</A> = !( !<A href=#40>state_FSM_i2.Q</A> & !<A href=#47>dispCount_i0_i5.Q</A> & <A href=#48>dispCount_i0_i4.Q</A>
+       & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A> & !<A href=#51>dispCount_i0_i1.Q</A>
+       & !<A href=#52>dispCount_i0_i0.Q</A>
+    # !<A href=#39>state_FSM_i1.Q</A> & !state_FSM_i2.Q ) ; (2 pterms, 8 signals)
+lcdRs.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+lcdRs.AR = !<A href=#7>reset</A> ; (1 pterm, 1 signal)
+
+<A name=41>lcdRs_N_618</A> = !( !<A href=#47>dispCount_i0_i5.Q</A> & <A href=#48>dispCount_i0_i4.Q</A> & !<A href=#49>dispCount_i0_i3.Q</A>
+       & !<A href=#50>dispCount_i0_i2.Q</A> & !<A href=#51>dispCount_i0_i1.Q</A> & !<A href=#52>dispCount_i0_i0.Q</A> ) ; (1 pterm, 6 signals)
+
+<A name=8>lcdRw</A> = 0 ; (0 pterm, 0 signal)
+
+<A name=11>ledEN.D</A> = <A href=#11>ledEN.Q</A> & !<A href=#116>n5194</A>
+    # !ledEN.Q & n5194 ; (2 pterms, 2 signals)
+ledEN.C = <A href=#6>clk_50m</A> ; (1 pterm, 1 signal)
+
+<A name=93>n5085</A> = <A href=#33>cnt_171__i5.Q</A> & <A href=#34>cnt_171__i4.Q</A> & <A href=#35>cnt_171__i3.Q</A> & <A href=#36>cnt_171__i2.Q</A>
+       & <A href=#37>cnt_171__i1.Q</A> & <A href=#38>cnt_171__i0.Q</A> ; (1 pterm, 6 signals)
+
+<A name=211>n5106</A> = <A href=#30>cnt_171__i8.Q</A> & <A href=#31>cnt_171__i7.Q</A> & <A href=#32>cnt_171__i6.Q</A> & <A href=#33>cnt_171__i5.Q</A>
+       & <A href=#34>cnt_171__i4.Q</A> & <A href=#35>cnt_171__i3.Q</A> & <A href=#36>cnt_171__i2.Q</A> & <A href=#37>cnt_171__i1.Q</A>
+       & <A href=#38>cnt_171__i0.Q</A> ; (1 pterm, 9 signals)
+
+<A name=182>n5134</A> = <A href=#26>cnt_171__i12.Q</A> & <A href=#27>cnt_171__i11.Q</A> & <A href=#28>cnt_171__i10.Q</A> & <A href=#29>cnt_171__i9.Q</A>
+       & <A href=#30>cnt_171__i8.Q</A> & <A href=#31>cnt_171__i7.Q</A> & <A href=#32>cnt_171__i6.Q</A> & <A href=#33>cnt_171__i5.Q</A>
+       & <A href=#34>cnt_171__i4.Q</A> & <A href=#35>cnt_171__i3.Q</A> & <A href=#36>cnt_171__i2.Q</A> & <A href=#37>cnt_171__i1.Q</A>
+       & <A href=#38>cnt_171__i0.Q</A> ; (1 pterm, 13 signals)
+
+<A name=65>n5148</A> = <A href=#24>cnt_171__i14.Q</A> & <A href=#25>cnt_171__i13.Q</A> & <A href=#26>cnt_171__i12.Q</A> & <A href=#27>cnt_171__i11.Q</A>
+       & <A href=#28>cnt_171__i10.Q</A> & <A href=#29>cnt_171__i9.Q</A> & <A href=#30>cnt_171__i8.Q</A> & <A href=#31>cnt_171__i7.Q</A>
+       & <A href=#32>cnt_171__i6.Q</A> & <A href=#33>cnt_171__i5.Q</A> & <A href=#34>cnt_171__i4.Q</A> & <A href=#35>cnt_171__i3.Q</A>
+       & <A href=#36>cnt_171__i2.Q</A> & <A href=#37>cnt_171__i1.Q</A> & <A href=#38>cnt_171__i0.Q</A> ; (1 pterm, 15 signals)
+
+<A name=116>n5194</A> = <A href=#19>cnt_171__i19.Q</A> & <A href=#20>cnt_171__i18.Q</A> & <A href=#21>cnt_171__i17.Q</A> & <A href=#22>cnt_171__i16.Q</A>
+       & <A href=#23>cnt_171__i15.Q</A> & <A href=#24>cnt_171__i14.Q</A> & <A href=#25>cnt_171__i13.Q</A> & <A href=#26>cnt_171__i12.Q</A>
+       & <A href=#27>cnt_171__i11.Q</A> & <A href=#28>cnt_171__i10.Q</A> & <A href=#29>cnt_171__i9.Q</A> & <A href=#30>cnt_171__i8.Q</A>
+       & <A href=#31>cnt_171__i7.Q</A> & <A href=#32>cnt_171__i6.Q</A> & <A href=#33>cnt_171__i5.Q</A> & <A href=#34>cnt_171__i4.Q</A>
+       & <A href=#35>cnt_171__i3.Q</A> & <A href=#36>cnt_171__i2.Q</A> & <A href=#37>cnt_171__i1.Q</A> & <A href=#38>cnt_171__i0.Q</A> ; (1 pterm, 20 signals)
+
+<A name=39>state_FSM_i1.D</A> = !( !<A href=#40>state_FSM_i2.Q</A> & !<A href=#42>state_FSM_i3.Q</A> & <A href=#47>dispCount_i0_i5.Q</A>
+       & !<A href=#48>dispCount_i0_i4.Q</A> & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A>
+       & !<A href=#51>dispCount_i0_i1.Q</A> & !<A href=#52>dispCount_i0_i0.Q</A>
+    # !state_FSM_i2.Q & !state_FSM_i3.Q & !dispCount_i0_i5.Q
+       & dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q
+    # !<A href=#39>state_FSM_i1.Q</A> & !state_FSM_i2.Q & !state_FSM_i3.Q ) ; (3 pterms, 9 signals)
+state_FSM_i1.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+state_FSM_i1.AR = !<A href=#7>reset</A> ; (1 pterm, 1 signal)
+
+<A name=40>state_FSM_i2.D</A> = <A href=#39>state_FSM_i1.Q</A> & !<A href=#47>dispCount_i0_i5.Q</A> & <A href=#48>dispCount_i0_i4.Q</A>
+       & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A> & !<A href=#51>dispCount_i0_i1.Q</A>
+       & !<A href=#52>dispCount_i0_i0.Q</A> ; (1 pterm, 7 signals)
+state_FSM_i2.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+state_FSM_i2.AR = !<A href=#7>reset</A> ; (1 pterm, 1 signal)
+
+<A name=42>state_FSM_i3.D</A> = <A href=#43>state_FSM_i4.Q</A> ; (1 pterm, 1 signal)
+state_FSM_i3.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+state_FSM_i3.AR = !<A href=#7>reset</A> ; (1 pterm, 1 signal)
+
+<A name=43>state_FSM_i4.D</A> = <A href=#44>state_FSM_i5.Q</A> ; (1 pterm, 1 signal)
+state_FSM_i4.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+state_FSM_i4.AR = !<A href=#7>reset</A> ; (1 pterm, 1 signal)
+
+<A name=44>state_FSM_i5.D</A> = <A href=#45>state_FSM_i6.Q</A> ; (1 pterm, 1 signal)
+state_FSM_i5.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+state_FSM_i5.AR = !<A href=#7>reset</A> ; (1 pterm, 1 signal)
+
+<A name=45>state_FSM_i6.D</A> = <A href=#46>state_FSM_i7.Q</A> ; (1 pterm, 1 signal)
+state_FSM_i6.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+state_FSM_i6.AR = !<A href=#7>reset</A> ; (1 pterm, 1 signal)
+
+<A name=46>state_FSM_i7.D</A> = <A href=#39>state_FSM_i1.Q</A> & <A href=#47>dispCount_i0_i5.Q</A> & !<A href=#48>dispCount_i0_i4.Q</A>
+       & !<A href=#49>dispCount_i0_i3.Q</A> & !<A href=#50>dispCount_i0_i2.Q</A> & !<A href=#51>dispCount_i0_i1.Q</A>
+       & !<A href=#52>dispCount_i0_i0.Q</A> ; (1 pterm, 7 signals)
+state_FSM_i7.C = <A href=#11>ledEN.Q</A> ; (1 pterm, 1 signal)
+state_FSM_i7.AP = !<A href=#7>reset</A> ; (1 pterm, 1 signal)
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+
+

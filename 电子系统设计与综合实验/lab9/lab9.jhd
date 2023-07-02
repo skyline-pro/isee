@@ -1,0 +1,19 @@
+MODULE lab9 DEFIN lab9.v
+	SUBMODULE dynamicshow
+		INSTANCE dynamicshow
+	SUBMODULE serial
+		INSTANCE serial
+	SUBMODULE keyboard
+		INSTANCE keyboard
+	SUBMODULE button
+		INSTANCE button5
+	SUBMODULE button
+		INSTANCE button4
+	SUBMODULE button
+		INSTANCE button3
+	SUBMODULE button
+		INSTANCE button2
+	SUBMODULE button
+		INSTANCE button1
+	SUBMODULE button
+		INSTANCE button0

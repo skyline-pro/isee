@@ -1,0 +1,88 @@
+%%% protect protected_file
+f "d:\isplever_classic2_1\synpbase\lib\vlog\umr_capim.v"; #file 0
+af  .standard "sv";
+af  .is_verilog 1;
+f "d:\isplever_classic2_1\synpbase\lib\vlog\scemi_objects.v"; #file 1
+af  .standard "sv";
+af  .is_verilog 1;
+f "d:\isplever_classic2_1\synpbase\lib\vlog\scemi_pipes.svh"; #file 2
+af  .standard "sv";
+af  .is_verilog 1;
+f "d:\isplever_classic2_1\synpbase\lib\vlog\hypermods.v"; #file 3
+af  .standard "sv";
+af  .is_verilog 1;
+f "e:\grade-3_2\isp_project\lab13\button.v"; #file 4
+af  .standard "sv";
+af  .is_verilog 1;
+f "e:\grade-3_2\isp_project\lab13\dffre.v"; #file 5
+af  .standard "sv";
+af  .is_verilog 1;
+f "e:\grade-3_2\isp_project\lab13\lcd1602.v"; #file 6
+af  .standard "sv";
+af  .is_verilog 1;
+f "e:\grade-3_2\isp_project\lab13\lab13.v"; #file 7
+af  .standard "sv";
+af  .is_verilog 1;
+VNAME 'ispmach4s.IBUF.prim'; # view id 0
+@ERMRHl#bNcOE#ARQzbwRs;Hl
+RNP3bH#sRHl4N;
+P#R3$DM_HCM	sRH8"bH#lENOcQ#3A3zwblsH"F;
+R
+m;HjRQ;H
+NR#3HbRN84b;
+R:fjjkRLVRRmmjRQ;R
+bfjj:Rk0sCsR0keCRB
+B;bjRf:VjRNCD#RDVN#tCRh
+7;@
+ 
+
+ftell;
+@E@MR@4(::4(::R44RsIF	NRDLR4dPHCsD;Fo
+RNP3MDHCRMFd
+U;N3PRHC#PsFHDo;R4
+RNP3_H#PHCsDRFo4N;
+PFR3shHoNRlC"LDN4;d"
+RNPFosH_#HM0V_FRN"DL"4d;P
+NRD3OCkNMb0_#C_b.0CHlRjj3jjjjjN;
+POR3DMCNk#b_04Cb_l0HC3Rjjjjjj
+j;N3PR#00lD0H#0CHlRjj3jjjjjN;
+P#R3$lM_#_s##HC08;Rj
+RNP3FVDI0_#NR0C{P
+NRD3VFbI_s#Fb_bNbD8HCR
+4;N3PRVIDF_HkMJVkHHRC84N;
+PVR3D_FIbCNsMH0_bN#_#o#HMRC84N;
+PVR3D_FIDbFF#s_LFM	CR
+j;}N;
+P$R#M#_HlCHG8MDNo;R4
+RNP3M#$_#lV_FoskHb_8;Rj
+RNP3M#$_lMkOsEN#cR.jN;
+P#R3$DM_HCM	sRH8"U{B.g4nqqc-(-ABcnc6-nq(UB-wdUdB.4cqA"d};P
+NR83OLN_#P{CR
+RNP#_$MsCCVsOCMCD_OFRO	{P
+NR#1$0RCl{P
+NR$3#MC_sVFODO0	_$RbCg};
+;;
+}
+
+};N3PRFFL#bF08M4CR;R
+H@:@(.j:4:4.:dD:O	OERD;	E
+RNH3Ds0_HFsolMNCOR"D"	E;R
+H@:@(.6:4:4.:UD:O	ODRD;	D
+RNH3Ds0_HFsolMNCOR"D"	D;R
+H@:@(.j:.:..:cC:s#RC0sCC#0N;
+HsR30FD_sMHoNRlC"#sCC;0"
+fsRjR:jHl#bNcOE#ARQzbwRsRHlOED	
+=SmOED	_SO
+QOj=D;	E
+fsRjR:jHl#bNcOE#ARQzbwRsRHlODD	
+=SmODD	_SO
+QOj=D;	D
+fsRjR:jHl#bNcOE#ARQzbwRsRHlsCC#0m
+S=#sCCO0_
+jSQ=#sCC
+0;bjRf:VjRNCD#R7thR7th;R
+bfjj:Rk0sCBReBBReB
+;
+
+
+@ 

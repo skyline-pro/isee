@@ -1,0 +1,13 @@
+D:\ispLEVER_Classic2_1\synpbase\bin64\c_ver.exe  -osyn  E:\grade-3_2\isp_project\lab12\synwork\lab12_comp.srs  -top  lab12  -prodtype  synplify_pro  -nostructver -I e:\grade-3_2\isp_project\lab12\  -I D:\ispLEVER_Classic2_1\synpbase\lib  -v2001  -encrypt  -pro  -dmgen  E:\grade-3_2\isp_project\lab12\dm  -compiler_compatible -ui -fid2 -ram -sharing on -ll 2000 -autosm -lib work D:\ispLEVER_Classic2_1\ispcpld\..\cae_library\synthesis\verilog\mach.v -lib work E:\grade-3_2\isp_project\lab12\lab12.h -lib work E:\grade-3_2\isp_project\lab12\ledDotMatrix.v -lib work E:\grade-3_2\isp_project\lab12\dffre.v -lib work E:\grade-3_2\isp_project\lab12\button.v -lib work E:\grade-3_2\isp_project\lab12\counter_n.v -lib work E:\grade-3_2\isp_project\lab12\lab12.v -loga  E:\grade-3_2\isp_project\lab12\lab12.srr 
+rc:1 success:1
+E:\grade-3_2\isp_project\lab12\synwork\lab12_comp.srs|o|1652401654|6770
+D:\ispLEVER_Classic2_1\ispcpld\..\cae_library\synthesis\verilog\mach.v|i|1336476608|12168
+E:\grade-3_2\isp_project\lab12\lab12.h|i|1652265673|0
+E:\grade-3_2\isp_project\lab12\ledDotMatrix.v|i|1652265868|6766
+E:\grade-3_2\isp_project\lab12\dffre.v|i|1649680967|789
+E:\grade-3_2\isp_project\lab12\button.v|i|1462619260|357
+E:\grade-3_2\isp_project\lab12\counter_n.v|i|1460379863|821
+E:\grade-3_2\isp_project\lab12\lab12.v|i|1652401584|698
+E:\grade-3_2\isp_project\lab12\lab12.srr|o|1652401654|4227
+D:\ispLEVER_Classic2_1\synpbase\bin\c_ver.exe|i|1401198650|2292224
+D:\ispLEVER_Classic2_1\synpbase\bin64\c_ver.exe|i|1401198850|5829632

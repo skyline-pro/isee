@@ -1,0 +1,14 @@
+@N|Running in 64-bit mode
+@N: CG364 :"E:\grade-3_2\isp_project\lab8\dffre.v":14:7:14:11|Synthesizing module dffre
+@N: CG179 :"E:\grade-3_2\isp_project\lab8\dffre.v":25:13:25:13|Removing redundant assignment
+@N: CG364 :"E:\grade-3_2\isp_project\lab8\button.v":1:7:1:12|Synthesizing module button
+@N: CG364 :"E:\grade-3_2\isp_project\lab8\calculate.v":1:7:1:15|Synthesizing module calculate
+@N: CG364 :"E:\grade-3_2\isp_project\lab8\counter_n.v":15:7:15:15|Synthesizing module counter_n
+@N: CG364 :"E:\grade-3_2\isp_project\lab8\mux16to4.v":1:7:1:14|Synthesizing module mux16to4
+@N: CG364 :"E:\grade-3_2\isp_project\lab8\decoderHex2Dec.v":1:7:1:20|Synthesizing module decoderHex2Dec
+@N: CG364 :"E:\grade-3_2\isp_project\lab8\decoder2to4.v":1:7:1:17|Synthesizing module decoder2to4
+@N: CG364 :"E:\grade-3_2\isp_project\lab8\dynamicshow.v":1:7:1:17|Synthesizing module dynamicshow
+@N: CG364 :"E:\grade-3_2\isp_project\lab8\lab8.v":1:7:1:10|Synthesizing module lab8
+@N: CL201 :"E:\grade-3_2\isp_project\lab8\calculate.v":77:4:77:9|Trying to extract state machine for register flag_Data
+@N: CL201 :"E:\grade-3_2\isp_project\lab8\calculate.v":18:4:18:9|Trying to extract state machine for register scanvalue
+

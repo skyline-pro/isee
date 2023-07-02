@@ -1,0 +1,16 @@
+clkh  i
+clkl  i
+reset  i
+LEDVCC[3]  o
+LEDVCC[2]  o
+LEDVCC[1]  o
+LEDVCC[0]  o
+show[6]  o
+show[5]  o
+show[4]  o
+show[3]  o
+show[2]  o
+show[1]  o
+show[0]  o
+keyClock  b
+keyData  b

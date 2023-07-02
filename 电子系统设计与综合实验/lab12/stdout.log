@@ -1,0 +1,53 @@
+Running in Lattice mode
+
+
+Starting:    D:\ispLEVER_Classic2_1\synpbase\win64\mbin\synbatch.exe
+Install:     D:\ispLEVER_Classic2_1\synpbase
+Date:        Fri May 13 08:27:34 2022
+Version:     I-2014.03LC 
+
+Arguments:   -product synplify_pro  -batch e:/grade-3_2/isp_project/lab12\lab12.prj
+ProductType: synplify_pro
+
+
+
+
+
+log file: "E:\grade-3_2\isp_project\lab12\lab12.srr"
+
+Running lab12|lab12
+
+Running: Compile on lab12|lab12
+
+Running: Compile Process on lab12|lab12
+
+Running: Compile Input on lab12|lab12
+Copied E:\grade-3_2\isp_project\lab12\synwork\lab12_comp.srs to E:\grade-3_2\isp_project\lab12\lab12.srs
+compiler Completed with warnings
+Return Code: 1
+Run Time:0h:00m:01s
+
+Running: Multi-srs Generator on lab12|lab12
+Copied E:\grade-3_2\isp_project\lab12\synwork\lab12_comp.srs to E:\grade-3_2\isp_project\lab12\synwork\lab12_s.srs
+multi_srs_gen Completed
+Return Code: 0
+Run Time:0h:00m:01s
+Copied E:\grade-3_2\isp_project\lab12\synwork\lab12_mult.srs to E:\grade-3_2\isp_project\lab12\lab12.srs
+Copied E:\grade-3_2\isp_project\lab12\lab12.srr to E:\grade-3_2\isp_project\lab12\lab12.srf
+Complete: Compile Process on lab12|lab12
+Complete: Compile on lab12|lab12
+
+Running: Map on lab12|lab12
+
+Running: Map & Optimize on lab12|lab12
+fpga_mapper Completed
+Return Code: 0
+Run Time:0h:00m:00s
+Complete: Map on lab12|lab12
+Copied E:\grade-3_2\isp_project\lab12\lab12.srr to E:\grade-3_2\isp_project\lab12\lab12.srf
+Complete: Logic Synthesis on lab12|lab12
+
+exit status=0
+
+exit status=0
+

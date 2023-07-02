@@ -1,0 +1,4 @@
+@W: CS263 :"E:\grade-3_2\isp_project\testverilog\random.v":5:84:5:88|Port-width mismatch for port q. Formal has width 3, Actual 4
+@W: CS263 :"E:\grade-3_2\isp_project\testverilog\random.v":7:44:7:44|Port-width mismatch for port en. Formal has width 1, Actual 32
+@W: CS263 :"E:\grade-3_2\isp_project\testverilog\random.v":8:86:8:90|Port-width mismatch for port q. Formal has width 3, Actual 4
+

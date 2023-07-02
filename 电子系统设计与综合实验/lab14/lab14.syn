@@ -1,0 +1,11 @@
+JDF B
+// Created by Version 2.1 
+PROJECT lab14
+DESIGN lab14 Normal
+DEVKIT LC4256V-75T144I
+ENTRY Pure Verilog HDL
+MODULE vga.v
+MODSTYLE vga Normal
+SYNTHESIS_TOOL Synplify
+SIMULATOR_TOOL ModelSim
+TOPMODULE vga

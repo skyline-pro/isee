@@ -1,0 +1,7 @@
+D:\ispLEVER_Classic2_1\synpbase\bin64\syn_nfilter.exe  -link  -top  vga  -multisrs  E:\grade-3_2\isp_project\lab14\synwork\vga_comp.srs  -osyn  E:\grade-3_2\isp_project\lab14\synwork\vga_mult.srs  -log  E:\grade-3_2\isp_project\lab14\synlog\vga_multi_srs_gen.srr 
+rc:0 success:1
+E:\grade-3_2\isp_project\lab14\synwork\vga_comp.srs|i|1652409927|4029
+E:\grade-3_2\isp_project\lab14\synwork\vga_mult.srs|o|1652409928|4961
+E:\grade-3_2\isp_project\lab14\synlog\vga_multi_srs_gen.srr|o|1652409928|456
+D:\ispLEVER_Classic2_1\synpbase\bin\syn_nfilter.exe|i|1401198736|2741760
+D:\ispLEVER_Classic2_1\synpbase\bin64\syn_nfilter.exe|i|1401198932|6337536

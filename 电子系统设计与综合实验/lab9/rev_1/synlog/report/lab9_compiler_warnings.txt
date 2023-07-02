@@ -1,0 +1,27 @@
+@W: CG360 :"E:\Grade-3_2\ISP_Project\lab9\button.v":4:11:4:16|No assignment to wire keyout
+@W: CL168 :"E:\Grade-3_2\ISP_Project\lab9\button.v":11:10:11:11|Pruning instance d3 -- not in use ...
+@W: CL168 :"E:\Grade-3_2\ISP_Project\lab9\button.v":10:10:10:11|Pruning instance d2 -- not in use ...
+@W: CL168 :"E:\Grade-3_2\ISP_Project\lab9\button.v":9:10:9:11|Pruning instance d1 -- not in use ...
+@W: CG296 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":200:13:200:27|Incomplete sensitivity list - assuming completeness
+@W: CG290 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":207:19:207:26|Referenced variable int_Data is not in sensitivity list
+@W: CL169 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":75:4:75:9|Pruning register flag_Over 
+@W: CL208 :"E:\Grade-3_2\ISP_Project\lab9\serial.v":42:4:42:9|All reachable assignments to bit 0 of Send_data[9:0] assign 0, register removed by optimization.
+@W: CL208 :"E:\Grade-3_2\ISP_Project\lab9\serial.v":42:4:42:9|All reachable assignments to bit 9 of Send_data[9:0] assign 1, register removed by optimization.
+@W: CL156 :"E:\Grade-3_2\ISP_Project\lab9\dynamicShow.v":8:66:8:70|*Input reset to expression [instance] has undriven bits that are tied to 0 -- simulation mismatch possible.
+@W: CL190 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":75:4:75:9|Optimizing register bit temp[0] to a constant 0
+@W: CL190 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":75:4:75:9|Optimizing register bit temp[5] to a constant 0
+@W: CL190 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":75:4:75:9|Optimizing register bit temp[6] to a constant 0
+@W: CL190 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":75:4:75:9|Optimizing register bit temp[7] to a constant 0
+@W: CL190 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":75:4:75:9|Optimizing register bit temp[8] to a constant 0
+@W: CL190 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":75:4:75:9|Optimizing register bit temp[9] to a constant 0
+@W: CL279 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":75:4:75:9|Pruning register bits 9 to 5 of temp[9:0] 
+@W: CL260 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":75:4:75:9|Pruning register bit 0 of temp[9:0] 
+@W: CL190 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":75:4:75:9|Optimizing register bit int_Data[6] to a constant 0
+@W: CL190 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":75:4:75:9|Optimizing register bit int_Data[7] to a constant 0
+@W: CL190 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":75:4:75:9|Optimizing register bit int_Data[8] to a constant 0
+@W: CL190 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":75:4:75:9|Optimizing register bit int_Data[9] to a constant 0
+@W: CL279 :"E:\Grade-3_2\ISP_Project\lab9\keyboard.v":75:4:75:9|Pruning register bits 9 to 6 of int_Data[9:0] 
+@W: CL157 :"E:\Grade-3_2\ISP_Project\lab9\button.v":4:11:4:16|*Output keyout has undriven bits -- simulation mismatch possible.
+@W: CL159 :"E:\Grade-3_2\ISP_Project\lab9\button.v":2:10:2:14|Input keyin is unused
+@W: CL159 :"E:\Grade-3_2\ISP_Project\lab9\button.v":3:10:3:12|Input clk is unused
+

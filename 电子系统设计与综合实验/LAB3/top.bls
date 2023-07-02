@@ -1,0 +1,7 @@
+#$ TOOL SCH2BLF 2.1.00.02 
+#$ TITLE top.bls 
+#$ MODULE top 
+
+.model top
+
+.end

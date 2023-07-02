@@ -1,0 +1,2 @@
+@E: CS164 :"E:\grade-3_2\isp_project\lab9\dynamicShow.v":15:41:15:46|Expecting wire for output connection, found LEDVCC
+

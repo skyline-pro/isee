@@ -1,0 +1,137 @@
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 193, Invalid node name: BEGIN un1_vcnt_4
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 194, Ignore line: Fanin Number		10
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 195, Ignore line: Pterm Number		4
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 196, Ignore line: Fanin per Macrocell	N/A
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 197, Ignore line: Cluster PT		N/A
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 198, Ignore line: Logic Levels		N/A
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 199, Ignore line: Fanin Node      	vcnt_0_.Q           	5
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 200, Ignore line: Fanin Node      	vcnt_1_.Q           	7
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 201, Ignore line: Fanin Node      	vcnt_2_.Q           	3
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 202, Ignore line: Fanin Node      	vcnt_3_.Q           	4
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 203, Ignore line: Fanin Node      	vcnt_4_.Q           	10
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 204, Ignore line: Fanin Node      	vcnt_5_.Q           	7
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 205, Ignore line: Fanin Node      	vcnt_6_.Q           	5
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 206, Ignore line: Fanin Node      	vcnt_7_.Q           	1
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 207, Ignore line: Fanin Node      	vcnt_8_.Q           	1
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 208, Ignore line: Fanin Node      	vcnt_9_.Q           	5
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 209, Ignore line: END
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 213, Invalid node name: BEGIN un1_hcnt_8
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 214, Ignore line: Fanin Number		9
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 215, Ignore line: Pterm Number		4
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 216, Ignore line: Fanin per Macrocell	N/A
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 217, Ignore line: Cluster PT		N/A
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 218, Ignore line: Logic Levels		N/A
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 219, Ignore line: Fanin Node      	hcnt_2_.Q           	3
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 220, Ignore line: Fanin Node      	hcnt_3_.Q           	4
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 221, Ignore line: Fanin Node      	hcnt_4_.Q           	1
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 222, Ignore line: Fanin Node      	hcnt_5_.Q           	3
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 223, Ignore line: Fanin Node      	hcnt_6_.Q           	1
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 224, Ignore line: Fanin Node      	hcnt_7_.Q           	1
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 225, Ignore line: Fanin Node      	hcnt_8_.Q           	1
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 226, Ignore line: Fanin Node      	hcnt_9_.Q           	1
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 227, Ignore line: Fanin Node      	hcnt_10_.Q          	2
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 228, Ignore line: END
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1139, Invalid node name: BEGIN N_5_i_1
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1140, Ignore line: Fanin Number		14
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1141, Ignore line: Pterm Number		11
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1142, Ignore line: Fanin per Macrocell	N/A
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1143, Ignore line: Cluster PT		N/A
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1144, Ignore line: Logic Levels		N/A
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1145, Ignore line: Fanin Input     	orient.BLIF         	0
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1146, Ignore line: Fanin Node      	un1_vcnt_4.BLIF     	4
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1147, Ignore line: Fanin Node      	vcnt_1_.Q           	7
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1148, Ignore line: Fanin Node      	vcnt_2_.Q           	3
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1149, Ignore line: Fanin Node      	vcnt_3_.Q           	4
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1150, Ignore line: Fanin Node      	vcnt_4_.Q           	10
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1151, Ignore line: Fanin Node      	vcnt_5_.Q           	7
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1152, Ignore line: Fanin Node      	vcnt_6_.Q           	5
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1153, Ignore line: Fanin Node      	vcnt_7_.Q           	1
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1154, Ignore line: Fanin Node      	vcnt_8_.Q           	1
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1155, Ignore line: Fanin Node      	vcnt_9_.Q           	5
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1156, Ignore line: Fanin Node      	N_782_0_1.BLIF      	2
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1157, Ignore line: Fanin Node      	vga_d21.BLIF        	4
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1158, Ignore line: Fanin Node      	un1_vcnt_6_i.BLIF   	4
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1159, Ignore line: END
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1163, Invalid node name: BEGIN N_5_i_3
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1164, Ignore line: Fanin Number		12
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1165, Ignore line: Pterm Number		9
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1166, Ignore line: Fanin per Macrocell	N/A
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1167, Ignore line: Cluster PT		N/A
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1168, Ignore line: Logic Levels		N/A
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1169, Ignore line: Fanin Input     	orient.BLIF         	0
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1170, Ignore line: Fanin Node      	un1_hcnt_8.BLIF     	4
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1171, Ignore line: Fanin Node      	hcnt_2_.Q           	3
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1172, Ignore line: Fanin Node      	hcnt_3_.Q           	4
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1173, Ignore line: Fanin Node      	hcnt_4_.Q           	1
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1174, Ignore line: Fanin Node      	hcnt_5_.Q           	3
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1175, Ignore line: Fanin Node      	hcnt_6_.Q           	1
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1176, Ignore line: Fanin Node      	hcnt_7_.Q           	1
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1177, Ignore line: Fanin Node      	hcnt_8_.Q           	1
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1178, Ignore line: Fanin Node      	hcnt_9_.Q           	1
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1179, Ignore line: Fanin Node      	hcnt_10_.Q          	2
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1180, Ignore line: Fanin Node      	un1_hcnt_4.BLIF     	4
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1181, Ignore line: END
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1185, Invalid node name: BEGIN N_782_0_1
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1186, Ignore line: Fanin Number		6
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1187, Ignore line: Pterm Number		2
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1188, Ignore line: Fanin per Macrocell	N/A
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1189, Ignore line: Cluster PT		N/A
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1190, Ignore line: Logic Levels		N/A
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1191, Ignore line: Fanin Node      	vcnt_0_.Q           	5
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1192, Ignore line: Fanin Node      	vcnt_1_.Q           	7
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1193, Ignore line: Fanin Node      	vcnt_2_.Q           	3
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1194, Ignore line: Fanin Node      	vcnt_3_.Q           	4
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1195, Ignore line: Fanin Node      	vcnt_4_.Q           	10
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1196, Ignore line: Fanin Node      	vcnt_5_.Q           	7
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1197, Ignore line: END
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1201, Invalid node name: BEGIN vga_d21
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1202, Ignore line: Fanin Number		10
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1203, Ignore line: Pterm Number		4
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1204, Ignore line: Fanin per Macrocell	N/A
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1205, Ignore line: Cluster PT		N/A
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1206, Ignore line: Logic Levels		N/A
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1207, Ignore line: Fanin Node      	vcnt_0_.Q           	5
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1208, Ignore line: Fanin Node      	vcnt_1_.Q           	7
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1209, Ignore line: Fanin Node      	vcnt_2_.Q           	3
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1210, Ignore line: Fanin Node      	vcnt_3_.Q           	4
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1211, Ignore line: Fanin Node      	vcnt_4_.Q           	10
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1212, Ignore line: Fanin Node      	vcnt_5_.Q           	7
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1213, Ignore line: Fanin Node      	vcnt_6_.Q           	5
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1214, Ignore line: Fanin Node      	vcnt_7_.Q           	1
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1215, Ignore line: Fanin Node      	vcnt_8_.Q           	1
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1216, Ignore line: Fanin Node      	vcnt_9_.Q           	5
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1217, Ignore line: END
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1221, Invalid node name: BEGIN un1_hcnt_4
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1222, Ignore line: Fanin Number		9
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1223, Ignore line: Pterm Number		4
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1224, Ignore line: Fanin per Macrocell	N/A
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1225, Ignore line: Cluster PT		N/A
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1226, Ignore line: Logic Levels		N/A
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1227, Ignore line: Fanin Node      	hcnt_2_.Q           	3
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1228, Ignore line: Fanin Node      	hcnt_3_.Q           	4
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1229, Ignore line: Fanin Node      	hcnt_4_.Q           	1
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1230, Ignore line: Fanin Node      	hcnt_5_.Q           	3
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1231, Ignore line: Fanin Node      	hcnt_6_.Q           	1
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1232, Ignore line: Fanin Node      	hcnt_7_.Q           	1
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1233, Ignore line: Fanin Node      	hcnt_8_.Q           	1
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1234, Ignore line: Fanin Node      	hcnt_9_.Q           	1
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1235, Ignore line: Fanin Node      	hcnt_10_.Q          	2
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1236, Ignore line: END
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1240, Invalid node name: BEGIN un1_vcnt_6_i
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1241, Ignore line: Fanin Number		10
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1242, Ignore line: Pterm Number		4
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1243, Ignore line: Fanin per Macrocell	N/A
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1244, Ignore line: Cluster PT		N/A
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1245, Ignore line: Logic Levels		N/A
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1246, Ignore line: Fanin Node      	vcnt_0_.Q           	5
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1247, Ignore line: Fanin Node      	vcnt_1_.Q           	7
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1248, Ignore line: Fanin Node      	vcnt_2_.Q           	3
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1249, Ignore line: Fanin Node      	vcnt_3_.Q           	4
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1250, Ignore line: Fanin Node      	vcnt_4_.Q           	10
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1251, Ignore line: Fanin Node      	vcnt_5_.Q           	7
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1252, Ignore line: Fanin Node      	vcnt_6_.Q           	5
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1253, Ignore line: Fanin Node      	vcnt_7_.Q           	1
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1254, Ignore line: Fanin Node      	vcnt_8_.Q           	1
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1255, Ignore line: Fanin Node      	vcnt_9_.Q           	5
+E:\Grade-3_2\ISP_Project\lab14\lab14.sif : <W5000> : Line 1256, Ignore line: END
+

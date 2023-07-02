@@ -1,0 +1,4378 @@
+#$ TOOL ispLEVER Classic 2.1.00.02.49.20
+#$ DATE Sun May 08 11:33:09 2016
+#$ MODULE lab11
+#$ PINS 31 led_2_ led_1_ keyIn_3_ led_0_ keyOut_2_ led_4_ keyOut_1_ keyOut_0_ \
+#  keyOut_3_ LEDVCC_2_ LEDVCC_1_ LEDVCC_3_ LEDVCC_0_ show_5_ show_6_ show_4_ clkh show_3_ \
+#  clkl show_2_ reset show_1_ CMD_RD show_0_ CMD_WR SCL SDA keyIn_2_ keyIn_1_ keyIn_0_ led_3_
+#$ NODES 130 keyboard_led_int_Data1_0_ keyboard_led_int_Data1_1_ \
+#  keyboard_led_int_Data1_2_ keyboard_led_int_Data1_3_ keyboard_led_int_Data0_0_ \
+#  keyboard_led_int_Data0_1_ keyboard_led_int_Data0_2_ keyboard_combvalue_4_ \
+#  keyboard_led_int_Data0_3_ keyboard_combvalue_5_ i2c_DataLED_0_ \
+#  keyboard_combvalue_6_ i2c_DataLED_1_ keyboard_combvalue_7_ i2c_DataLED_2_ \
+#  keyboard_timecnt_4_ i2c_DataLED_3_ keyboard_timecnt_6_ i2c_DataLED2_0_ \
+#  keyboard_timecnt_7_ i2c_DataLED2_1_ keyboard_timecnt_9_ i2c_DataLED2_2_ \
+#  keyboard_timecnt_15_ i2c_DataLED2_3_ keyboard_timecnt_11_ button4_d1_q_0_ \
+#  keyboard_time1Oms button4_d2_q_0_ keyboard_int_Data0_3_ button4_d3_q_0_ \
+#  keyboard_int_Data1_0_ button3_d1_q_0_ keyboard_int_Data1_1_ button3_d2_q_0_ \
+#  keyboard_int_Data1_2_ button3_d3_q_0_ keyboard_int_Data1_3_ button2_d1_q_0_ \
+#  keyboard_int_Data0_0_ button2_d2_q_0_ keyboard_int_Data0_1_ button2_d3_q_0_ \
+#  keyboard_int_Data0_2_ button1_d1_q_0_ keyboard_combvalue_0_ button1_d2_q_0_ \
+#  keyboard_combvalue_1_ button1_d3_q_0_ keyboard_combvalue_2_ button0_d1_q_0_ \
+#  keyboard_combvalue_3_ button0_d2_q_0_ keyboard_timecnt_0_ button0_d3_q_0_ \
+#  keyboard_timecnt_1_ dynamicshow_counter4_q_1_ keyboard_timecnt_2_ \
+#  dynamicshow_counter4_q_2_ keyboard_timecnt_3_ keyboard_timecnt_5_ \
+#  keyboard_led_0_reg dynamicshow_out_1__n keyboard_timecnt_8_ dynamicshow_out_0__n \
+#  keyboard_timecnt_10_ keyboard_led_1_reg keyboard_timecnt_12_ keyboard_timecnt_13_ \
+#  keyboard_led_2_reg keyboard_timecnt_14_ keyboard_led_3_reg keyboard_led_4_reg \
+#  keyboard_key_out_0_reg i2c_phase1 i2c_phase3 keyboard_key_out_1_reg i2c_phase0 \
+#  i2c_phase2 keyboard_flag_Data_0_ keyboard_key_out_2_reg i2c_clk_div_2_ \
+#  i2c_clk_div_3_ keyboard_key_out_3_reg i2c_key_delay_5_ keyboard_scanvalue_0_ \
+#  i2c_key_delay_0_ keyboard_scanvalue_1_ i2c_key_delay_4_ i2c_key_delay_1_ \
+#  i2c_key_delay_6_ i2c_key_delay_2_ i2c_key_delay_9_ i2c_key_delay_8_ \
+#  i2c_key_delay_7_ i2c_key_delay_3_ i2c_RdData_0_ i2c_RdData_1_ i2c_RdData_2_ \
+#  keyboard_flag_Data_1_ i2c_RdData_3_ i2c_RdData_4_ i2c_RdData_5_ i2c_RdData_6_ \
+#  i2c_RdData_7_ i2c_sda_tem i2c_Flag_RW i2c_sda_buf i2c_clk_div_0_ i2c_clk_div_1_ \
+#  i2c_scl_bufreg i2c_WrData_0_ i2c_WrData_1_ i2c_WrData_2_ i2c_WrData_3_ \
+#  i2c_WrData_4_ i2c_WrData_5_ i2c_WrData_6_ i2c_WrData_7_ i2c_start_delay \
+#  i2c_bit_state_0_ i2c_bit_state_1_ i2c_bit_state_2_ i2c_bit_state_3_ \
+#  i2c_bit_state_4_ i2c_bit_state_5_ i2c_eeprom_state_0_ i2c_eeprom_state_1_ \
+#  dynamicshow_out_2__n dynamicshow_out_3__n
+.model lab11
+.inputs keyIn_3_.BLIF clkh.BLIF clkl.BLIF reset.BLIF CMD_RD.BLIF CMD_WR.BLIF \
+keyIn_2_.BLIF keyIn_1_.BLIF keyIn_0_.BLIF keyboard_led_int_Data1_0_.BLIF \
+keyboard_led_int_Data1_1_.BLIF keyboard_led_int_Data1_2_.BLIF \
+keyboard_led_int_Data1_3_.BLIF keyboard_led_int_Data0_0_.BLIF \
+keyboard_led_int_Data0_1_.BLIF keyboard_led_int_Data0_2_.BLIF \
+keyboard_combvalue_4_.BLIF keyboard_led_int_Data0_3_.BLIF \
+keyboard_combvalue_5_.BLIF i2c_DataLED_0_.BLIF keyboard_combvalue_6_.BLIF \
+i2c_DataLED_1_.BLIF keyboard_combvalue_7_.BLIF i2c_DataLED_2_.BLIF \
+keyboard_timecnt_4_.BLIF i2c_DataLED_3_.BLIF keyboard_timecnt_6_.BLIF \
+i2c_DataLED2_0_.BLIF keyboard_timecnt_7_.BLIF i2c_DataLED2_1_.BLIF \
+keyboard_timecnt_9_.BLIF i2c_DataLED2_2_.BLIF keyboard_timecnt_15_.BLIF \
+i2c_DataLED2_3_.BLIF keyboard_timecnt_11_.BLIF button4_d1_q_0_.BLIF \
+keyboard_time1Oms.BLIF button4_d2_q_0_.BLIF keyboard_int_Data0_3_.BLIF \
+button4_d3_q_0_.BLIF keyboard_int_Data1_0_.BLIF button3_d1_q_0_.BLIF \
+keyboard_int_Data1_1_.BLIF button3_d2_q_0_.BLIF keyboard_int_Data1_2_.BLIF \
+button3_d3_q_0_.BLIF keyboard_int_Data1_3_.BLIF button2_d1_q_0_.BLIF \
+keyboard_int_Data0_0_.BLIF button2_d2_q_0_.BLIF keyboard_int_Data0_1_.BLIF \
+button2_d3_q_0_.BLIF keyboard_int_Data0_2_.BLIF button1_d1_q_0_.BLIF \
+keyboard_combvalue_0_.BLIF button1_d2_q_0_.BLIF keyboard_combvalue_1_.BLIF \
+button1_d3_q_0_.BLIF keyboard_combvalue_2_.BLIF button0_d1_q_0_.BLIF \
+keyboard_combvalue_3_.BLIF button0_d2_q_0_.BLIF keyboard_timecnt_0_.BLIF \
+button0_d3_q_0_.BLIF keyboard_timecnt_1_.BLIF dynamicshow_counter4_q_1_.BLIF \
+keyboard_timecnt_2_.BLIF dynamicshow_counter4_q_2_.BLIF \
+keyboard_timecnt_3_.BLIF keyboard_timecnt_5_.BLIF keyboard_led_0_reg.BLIF \
+dynamicshow_out_1__n.BLIF keyboard_timecnt_8_.BLIF dynamicshow_out_0__n.BLIF \
+keyboard_timecnt_10_.BLIF keyboard_led_1_reg.BLIF keyboard_timecnt_12_.BLIF \
+keyboard_timecnt_13_.BLIF keyboard_led_2_reg.BLIF keyboard_timecnt_14_.BLIF \
+keyboard_led_3_reg.BLIF keyboard_led_4_reg.BLIF keyboard_key_out_0_reg.BLIF \
+i2c_phase1.BLIF i2c_phase3.BLIF keyboard_key_out_1_reg.BLIF i2c_phase0.BLIF \
+i2c_phase2.BLIF keyboard_flag_Data_0_.BLIF keyboard_key_out_2_reg.BLIF \
+i2c_clk_div_2_.BLIF i2c_clk_div_3_.BLIF keyboard_key_out_3_reg.BLIF \
+i2c_key_delay_5_.BLIF keyboard_scanvalue_0_.BLIF i2c_key_delay_0_.BLIF \
+keyboard_scanvalue_1_.BLIF i2c_key_delay_4_.BLIF i2c_key_delay_1_.BLIF \
+i2c_key_delay_6_.BLIF i2c_key_delay_2_.BLIF i2c_key_delay_9_.BLIF \
+i2c_key_delay_8_.BLIF i2c_key_delay_7_.BLIF i2c_key_delay_3_.BLIF \
+i2c_RdData_0_.BLIF i2c_RdData_1_.BLIF i2c_RdData_2_.BLIF \
+keyboard_flag_Data_1_.BLIF i2c_RdData_3_.BLIF i2c_RdData_4_.BLIF \
+i2c_RdData_5_.BLIF i2c_RdData_6_.BLIF i2c_RdData_7_.BLIF i2c_sda_tem.BLIF \
+i2c_Flag_RW.BLIF i2c_sda_buf.BLIF i2c_clk_div_0_.BLIF i2c_clk_div_1_.BLIF \
+i2c_scl_bufreg.BLIF i2c_WrData_0_.BLIF i2c_WrData_1_.BLIF i2c_WrData_2_.BLIF \
+i2c_WrData_3_.BLIF i2c_WrData_4_.BLIF i2c_WrData_5_.BLIF i2c_WrData_6_.BLIF \
+i2c_WrData_7_.BLIF i2c_start_delay.BLIF i2c_bit_state_0_.BLIF \
+i2c_bit_state_1_.BLIF i2c_bit_state_2_.BLIF i2c_bit_state_3_.BLIF \
+i2c_bit_state_4_.BLIF i2c_bit_state_5_.BLIF i2c_eeprom_state_0_.BLIF \
+i2c_eeprom_state_1_.BLIF dynamicshow_out_2__n.BLIF dynamicshow_out_3__n.BLIF \
+SDA.PIN.BLIF
+.outputs led_4_ keyOut_3_ LEDVCC_3_ show_6_ SCL led_3_ led_2_ led_1_ led_0_ \
+keyOut_2_ keyOut_1_ keyOut_0_ LEDVCC_2_ LEDVCC_1_ LEDVCC_0_ show_5_ show_4_ \
+show_2_ show_1_ show_0_ keyboard_scanvalue_0_.D keyboard_scanvalue_0_.C \
+keyboard_scanvalue_0_.AR keyboard_scanvalue_1_.D keyboard_scanvalue_1_.C \
+keyboard_scanvalue_1_.AR keyboard_flag_Data_0_.D keyboard_flag_Data_0_.C \
+keyboard_flag_Data_0_.AR keyboard_flag_Data_1_.C keyboard_flag_Data_1_.AR \
+keyboard_led_int_Data1_2_.D keyboard_led_int_Data1_2_.CE \
+keyboard_led_int_Data1_2_.C keyboard_led_int_Data1_2_.AR \
+keyboard_led_int_Data1_3_.D keyboard_led_int_Data1_3_.CE \
+keyboard_led_int_Data1_3_.C keyboard_led_int_Data1_3_.AR \
+keyboard_int_Data1_0_.D keyboard_int_Data1_0_.CE keyboard_int_Data1_0_.C \
+keyboard_int_Data1_0_.AR keyboard_int_Data1_1_.CE keyboard_int_Data1_1_.C \
+keyboard_int_Data1_1_.AR keyboard_int_Data1_2_.D keyboard_int_Data1_2_.CE \
+keyboard_int_Data1_2_.C keyboard_int_Data1_2_.AR keyboard_int_Data1_3_.D \
+keyboard_int_Data1_3_.CE keyboard_int_Data1_3_.C keyboard_int_Data1_3_.AR \
+keyboard_int_Data0_0_.D keyboard_int_Data0_0_.CE keyboard_int_Data0_0_.C \
+keyboard_int_Data0_0_.AR keyboard_int_Data0_1_.CE keyboard_int_Data0_1_.C \
+keyboard_int_Data0_1_.AR keyboard_int_Data0_2_.D keyboard_int_Data0_2_.CE \
+keyboard_int_Data0_2_.C keyboard_int_Data0_2_.AR keyboard_int_Data0_3_.D \
+keyboard_int_Data0_3_.CE keyboard_int_Data0_3_.C keyboard_int_Data0_3_.AR \
+keyboard_key_out_0_reg.D keyboard_key_out_0_reg.CE keyboard_key_out_0_reg.C \
+keyboard_key_out_1_reg.D keyboard_key_out_1_reg.CE keyboard_key_out_1_reg.C \
+keyboard_key_out_2_reg.D keyboard_key_out_2_reg.CE keyboard_key_out_2_reg.C \
+keyboard_key_out_3_reg.D keyboard_key_out_3_reg.CE keyboard_key_out_3_reg.C \
+keyboard_timecnt_12_.C keyboard_timecnt_12_.AR keyboard_timecnt_13_.C \
+keyboard_timecnt_13_.AR keyboard_timecnt_14_.C keyboard_timecnt_14_.AR \
+keyboard_timecnt_15_.C keyboard_timecnt_15_.AR keyboard_led_0_reg.D \
+keyboard_led_0_reg.C keyboard_led_0_reg.AP keyboard_led_1_reg.D \
+keyboard_led_1_reg.C keyboard_led_1_reg.AP keyboard_led_2_reg.D \
+keyboard_led_2_reg.C keyboard_led_2_reg.AP keyboard_led_3_reg.D \
+keyboard_led_3_reg.C keyboard_led_3_reg.AP keyboard_led_4_reg.D \
+keyboard_led_4_reg.C keyboard_led_4_reg.AP keyboard_led_int_Data0_0_.D \
+keyboard_led_int_Data0_0_.CE keyboard_led_int_Data0_0_.C \
+keyboard_led_int_Data0_0_.AR keyboard_led_int_Data0_1_.D \
+keyboard_led_int_Data0_1_.CE keyboard_led_int_Data0_1_.C \
+keyboard_led_int_Data0_1_.AR keyboard_led_int_Data0_2_.D \
+keyboard_led_int_Data0_2_.CE keyboard_led_int_Data0_2_.C \
+keyboard_led_int_Data0_2_.AR keyboard_led_int_Data0_3_.CE \
+keyboard_led_int_Data0_3_.C keyboard_led_int_Data0_3_.AR \
+keyboard_led_int_Data1_0_.D keyboard_led_int_Data1_0_.CE \
+keyboard_led_int_Data1_0_.C keyboard_led_int_Data1_0_.AR \
+keyboard_led_int_Data1_1_.D keyboard_led_int_Data1_1_.CE \
+keyboard_led_int_Data1_1_.C keyboard_led_int_Data1_1_.AR \
+keyboard_combvalue_5_.D keyboard_combvalue_5_.C keyboard_combvalue_5_.AR \
+keyboard_combvalue_6_.D keyboard_combvalue_6_.C keyboard_combvalue_6_.AR \
+keyboard_combvalue_7_.D keyboard_combvalue_7_.C keyboard_combvalue_7_.AR \
+keyboard_timecnt_0_.D keyboard_timecnt_0_.C keyboard_timecnt_0_.AR \
+keyboard_timecnt_1_.D keyboard_timecnt_1_.C keyboard_timecnt_1_.AR \
+keyboard_timecnt_2_.D keyboard_timecnt_2_.C keyboard_timecnt_2_.AR \
+keyboard_timecnt_3_.D keyboard_timecnt_3_.C keyboard_timecnt_3_.AR \
+keyboard_timecnt_4_.D keyboard_timecnt_4_.C keyboard_timecnt_4_.AR \
+keyboard_timecnt_5_.C keyboard_timecnt_5_.AR keyboard_timecnt_6_.C \
+keyboard_timecnt_6_.AR keyboard_timecnt_7_.C keyboard_timecnt_7_.AR \
+keyboard_timecnt_8_.C keyboard_timecnt_8_.AR keyboard_timecnt_9_.C \
+keyboard_timecnt_9_.AR keyboard_timecnt_10_.C keyboard_timecnt_10_.AR \
+keyboard_timecnt_11_.C keyboard_timecnt_11_.AR keyboard_combvalue_0_.D \
+keyboard_combvalue_0_.C keyboard_combvalue_0_.AR keyboard_combvalue_1_.D \
+keyboard_combvalue_1_.C keyboard_combvalue_1_.AR keyboard_combvalue_2_.D \
+keyboard_combvalue_2_.C keyboard_combvalue_2_.AR keyboard_combvalue_3_.D \
+keyboard_combvalue_3_.C keyboard_combvalue_3_.AR keyboard_combvalue_4_.D \
+keyboard_combvalue_4_.C keyboard_combvalue_4_.AR keyboard_time1Oms.C \
+i2c_eeprom_state_1_.C i2c_eeprom_state_1_.AR i2c_eeprom_state_0_.C \
+i2c_eeprom_state_0_.AR i2c_bit_state_1_.D i2c_bit_state_1_.CE \
+i2c_bit_state_1_.C i2c_bit_state_2_.D i2c_bit_state_2_.CE i2c_bit_state_2_.C \
+i2c_bit_state_3_.D i2c_bit_state_3_.CE i2c_bit_state_3_.C i2c_bit_state_4_.D \
+i2c_bit_state_4_.CE i2c_bit_state_4_.C i2c_bit_state_5_.D i2c_bit_state_5_.CE \
+i2c_bit_state_5_.C i2c_bit_state_0_.D i2c_bit_state_0_.CE i2c_bit_state_0_.C \
+i2c_WrData_6_.D i2c_WrData_6_.CE i2c_WrData_6_.C i2c_WrData_7_.D \
+i2c_WrData_7_.CE i2c_WrData_7_.C i2c_DataLED2_0_.D i2c_DataLED2_0_.CE \
+i2c_DataLED2_0_.C i2c_DataLED2_1_.D i2c_DataLED2_1_.CE i2c_DataLED2_1_.C \
+i2c_DataLED2_2_.D i2c_DataLED2_2_.CE i2c_DataLED2_2_.C i2c_DataLED2_3_.D \
+i2c_DataLED2_3_.CE i2c_DataLED2_3_.C i2c_DataLED_0_.D i2c_DataLED_0_.CE \
+i2c_DataLED_0_.C i2c_DataLED_1_.D i2c_DataLED_1_.CE i2c_DataLED_1_.C \
+i2c_DataLED_2_.D i2c_DataLED_2_.CE i2c_DataLED_2_.C i2c_DataLED_3_.D \
+i2c_DataLED_3_.CE i2c_DataLED_3_.C i2c_WrData_0_.D i2c_WrData_0_.CE \
+i2c_WrData_0_.C i2c_WrData_1_.D i2c_WrData_1_.CE i2c_WrData_1_.C \
+i2c_WrData_2_.D i2c_WrData_2_.CE i2c_WrData_2_.C i2c_WrData_3_.D \
+i2c_WrData_3_.CE i2c_WrData_3_.C i2c_WrData_4_.D i2c_WrData_4_.CE \
+i2c_WrData_4_.C i2c_WrData_5_.D i2c_WrData_5_.CE i2c_WrData_5_.C \
+i2c_RdData_0_.D i2c_RdData_0_.CE i2c_RdData_0_.C i2c_RdData_1_.CE \
+i2c_RdData_1_.C i2c_RdData_2_.CE i2c_RdData_2_.C i2c_RdData_3_.CE \
+i2c_RdData_3_.C i2c_RdData_4_.CE i2c_RdData_4_.C i2c_RdData_5_.D \
+i2c_RdData_5_.CE i2c_RdData_5_.C i2c_RdData_6_.CE i2c_RdData_6_.C \
+i2c_RdData_7_.D i2c_RdData_7_.CE i2c_RdData_7_.C i2c_key_delay_0_.D \
+i2c_key_delay_0_.C i2c_key_delay_0_.AR i2c_key_delay_1_.D i2c_key_delay_1_.C \
+i2c_key_delay_1_.AR i2c_key_delay_2_.D i2c_key_delay_2_.C i2c_key_delay_2_.AR \
+i2c_key_delay_3_.D i2c_key_delay_3_.C i2c_key_delay_3_.AR i2c_key_delay_4_.C \
+i2c_key_delay_4_.AR i2c_key_delay_5_.C i2c_key_delay_5_.AR i2c_key_delay_6_.C \
+i2c_key_delay_6_.AR i2c_key_delay_7_.C i2c_key_delay_7_.AR i2c_key_delay_8_.C \
+i2c_key_delay_8_.AR i2c_key_delay_9_.C i2c_key_delay_9_.AR i2c_clk_div_0_.D \
+i2c_clk_div_0_.C i2c_clk_div_0_.AR i2c_clk_div_1_.D i2c_clk_div_1_.C \
+i2c_clk_div_1_.AR i2c_clk_div_2_.D i2c_clk_div_2_.C i2c_clk_div_2_.AR \
+i2c_clk_div_3_.D i2c_clk_div_3_.C i2c_clk_div_3_.AR i2c_Flag_RW.D \
+i2c_Flag_RW.CE i2c_Flag_RW.C i2c_sda_buf.D i2c_sda_buf.CE i2c_sda_buf.C \
+i2c_start_delay.CE i2c_start_delay.C i2c_start_delay.AR i2c_sda_tem.D \
+i2c_sda_tem.CE i2c_sda_tem.C i2c_scl_bufreg.D i2c_scl_bufreg.CE \
+i2c_scl_bufreg.C i2c_phase0.D i2c_phase0.C i2c_phase0.AR i2c_phase1.D \
+i2c_phase1.C i2c_phase1.AR i2c_phase2.D i2c_phase2.C i2c_phase2.AR \
+i2c_phase3.D i2c_phase3.C i2c_phase3.AR dynamicshow_counter4_q_1_.D \
+dynamicshow_counter4_q_1_.C dynamicshow_counter4_q_2_.D \
+dynamicshow_counter4_q_2_.C button4_d1_q_0_.D button4_d1_q_0_.C \
+button4_d2_q_0_.D button4_d2_q_0_.C button4_d3_q_0_.D button4_d3_q_0_.C \
+button0_d1_q_0_.D button0_d1_q_0_.C button0_d2_q_0_.D button0_d2_q_0_.C \
+button0_d3_q_0_.D button0_d3_q_0_.C button1_d1_q_0_.D button1_d1_q_0_.C \
+button1_d2_q_0_.D button1_d2_q_0_.C button1_d3_q_0_.D button1_d3_q_0_.C \
+button2_d1_q_0_.D button2_d1_q_0_.C button2_d2_q_0_.D button2_d2_q_0_.C \
+button2_d3_q_0_.D button2_d3_q_0_.C button3_d1_q_0_.D button3_d1_q_0_.C \
+button3_d2_q_0_.D button3_d2_q_0_.C button3_d3_q_0_.D button3_d3_q_0_.C SDA \
+dynamicshow_out_1__n dynamicshow_out_0__n dynamicshow_out_2__n \
+dynamicshow_out_3__n SDA.OE show_3_.X1 show_3_.X2 \
+keyboard_led_int_Data0_3_.D.X1 keyboard_led_int_Data0_3_.D.X2 \
+keyboard_timecnt_6_.D.X1 keyboard_timecnt_6_.D.X2 keyboard_timecnt_7_.D.X1 \
+keyboard_timecnt_7_.D.X2 keyboard_timecnt_9_.D.X1 keyboard_timecnt_9_.D.X2 \
+keyboard_timecnt_15_.D.X1 keyboard_timecnt_15_.D.X2 keyboard_timecnt_11_.D.X1 \
+keyboard_timecnt_11_.D.X2 keyboard_time1Oms.D.X1 keyboard_time1Oms.D.X2 \
+keyboard_int_Data1_1_.D.X1 keyboard_int_Data1_1_.D.X2 \
+keyboard_int_Data0_1_.D.X1 keyboard_int_Data0_1_.D.X2 keyboard_timecnt_5_.D.X1 \
+keyboard_timecnt_5_.D.X2 keyboard_timecnt_8_.D.X1 keyboard_timecnt_8_.D.X2 \
+keyboard_timecnt_10_.D.X1 keyboard_timecnt_10_.D.X2 keyboard_timecnt_12_.D.X1 \
+keyboard_timecnt_12_.D.X2 keyboard_timecnt_13_.D.X1 keyboard_timecnt_13_.D.X2 \
+keyboard_timecnt_14_.D.X1 keyboard_timecnt_14_.D.X2 i2c_key_delay_5_.D.X1 \
+i2c_key_delay_5_.D.X2 i2c_key_delay_4_.D.X1 i2c_key_delay_4_.D.X2 \
+i2c_key_delay_6_.D.X1 i2c_key_delay_6_.D.X2 i2c_key_delay_9_.D.X1 \
+i2c_key_delay_9_.D.X2 i2c_key_delay_8_.D.X1 i2c_key_delay_8_.D.X2 \
+i2c_key_delay_7_.D.X1 i2c_key_delay_7_.D.X2 i2c_RdData_1_.D.X1 \
+i2c_RdData_1_.D.X2 i2c_RdData_2_.D.X1 i2c_RdData_2_.D.X2 \
+keyboard_flag_Data_1_.D.X1 keyboard_flag_Data_1_.D.X2 i2c_RdData_3_.D.X1 \
+i2c_RdData_3_.D.X2 i2c_RdData_4_.D.X1 i2c_RdData_4_.D.X2 i2c_RdData_6_.D.X1 \
+i2c_RdData_6_.D.X2 i2c_start_delay.D.X1 i2c_start_delay.D.X2 \
+i2c_eeprom_state_0_.D.X1 i2c_eeprom_state_0_.D.X2 i2c_eeprom_state_1_.D.X1 \
+i2c_eeprom_state_1_.D.X2
+.names keyboard_scanvalue_0_.BLIF keyboard_scanvalue_1_.BLIF \
+keyboard_scanvalue_1_.D
+10 1
+01 1
+00 0
+11 0
+.names button4_d1_q_0_.BLIF button4_d2_q_0_.BLIF button4_d3_q_0_.BLIF \
+button3_d1_q_0_.BLIF button3_d2_q_0_.BLIF button3_d3_q_0_.BLIF \
+button2_d1_q_0_.BLIF button2_d2_q_0_.BLIF button2_d3_q_0_.BLIF \
+button1_d1_q_0_.BLIF button1_d2_q_0_.BLIF button1_d3_q_0_.BLIF \
+keyboard_key_out_0_reg.BLIF keyboard_key_out_1_reg.BLIF \
+keyboard_flag_Data_0_.BLIF keyboard_key_out_2_reg.BLIF \
+keyboard_key_out_3_reg.BLIF keyboard_flag_Data_0_.D
+000000000--100-0- 1
+000000000-1-00-0- 1
+0000000001--00-0- 1
+000--1000000-0-00 1
+000-1-000000-0-00 1
+0001--000000-0-00 1
+000000--1000-0-00 1
+000000-1-000-0-00 1
+0000001--000-0-00 1
+000--10000000--00 1
+000-1-0000000--00 1
+0001--0000000--00 1
+000000--10000--00 1
+000000-1-0000--00 1
+0000001--0000--00 1
+000--100000000--0 1
+000-1-00000000--0 1
+0001--00000000--0 1
+000000--100000--0 1
+000000-1-00000--0 1
+0000001--00000--0 1
+000000000--1-0-00 1
+000000000-1--0-00 1
+0000000001---0-00 1
+000000000--10--00 1
+000000000-1-0--00 1
+0000000001--0--00 1
+000000000--100--0 1
+000000000-1-00--0 1
+0000000001--00--0 1
+000-----------1-- 1
+--------------11- 1
+-------------11-- 1
+------------1-1-- 1
+--------1-----1-- 1
+-------1------1-- 1
+------1-------1-- 1
+-----1--------1-- 1
+----1---------1-- 1
+---1----------1-- 1
+-----------1--1-- 1
+----------1---1-- 1
+---------1----1-- 1
+---------000--0-1 0
+--100000000000-0- 0
+-1-00000000000-0- 0
+1--00000000000-0- 0
+---000000000--0-- 0
+-------------101- 0
+------------1-01- 0
+------------110-- 0
+--------1--1--0-- 0
+-------1---1--0-- 0
+------1----1--0-- 0
+-----1-----1--0-- 0
+----1------1--0-- 0
+---1-------1--0-- 0
+--------1-1---0-- 0
+-------1--1---0-- 0
+------1---1---0-- 0
+-----1----1---0-- 0
+----1-----1---0-- 0
+---1------1---0-- 0
+--------11----0-- 0
+-------1-1----0-- 0
+------1--1----0-- 0
+-----1---1----0-- 0
+----1----1----0-- 0
+---1-----1----0-- 0
+-----1--1-----0-- 0
+----1---1-----0-- 0
+---1----1-----0-- 0
+-----1-1------0-- 0
+----1--1------0-- 0
+---1---1------0-- 0
+-----11-------0-- 0
+----1-1-------0-- 0
+---1--1-------0-- 0
+--------------011 0
+-------------10-1 0
+------------1-0-1 0
+--1-----------0-- 0
+-1------------0-- 0
+1-------------0-- 0
+.names keyboard_scanvalue_0_.BLIF keyboard_scanvalue_1_.BLIF \
+keyboard_key_out_0_reg.D
+00 1
+1- 0
+-1 0
+.names keyboard_scanvalue_0_.BLIF keyboard_scanvalue_1_.BLIF \
+keyboard_key_out_3_reg.D
+11 1
+0- 0
+-0 0
+.names keyboard_combvalue_4_.BLIF keyboard_combvalue_5_.BLIF \
+keyboard_combvalue_6_.BLIF keyboard_combvalue_7_.BLIF \
+keyboard_combvalue_0_.BLIF keyboard_combvalue_1_.BLIF \
+keyboard_combvalue_2_.BLIF keyboard_combvalue_3_.BLIF keyboard_led_0_reg.D
+----0000 1
+0-0----- 1
+1-1----- 1
+---1---- 1
+-1------ 1
+1000--1- 0
+0010--1- 0
+1000-1-- 0
+0010-1-- 0
+10001--- 0
+00101--- 0
+1000---1 0
+0010---1 0
+.names keyboard_combvalue_4_.BLIF keyboard_combvalue_5_.BLIF \
+keyboard_combvalue_6_.BLIF keyboard_combvalue_7_.BLIF \
+keyboard_combvalue_0_.BLIF keyboard_combvalue_1_.BLIF \
+keyboard_combvalue_2_.BLIF keyboard_combvalue_3_.BLIF keyboard_led_1_reg.D
+----0000 1
+-00----- 1
+-11----- 1
+---1---- 1
+1------- 1
+0100--1- 0
+0010--1- 0
+0100-1-- 0
+0010-1-- 0
+01001--- 0
+00101--- 0
+0100---1 0
+0010---1 0
+.names keyboard_combvalue_4_.BLIF keyboard_combvalue_5_.BLIF \
+keyboard_combvalue_6_.BLIF keyboard_combvalue_7_.BLIF \
+keyboard_combvalue_0_.BLIF keyboard_combvalue_1_.BLIF \
+keyboard_combvalue_2_.BLIF keyboard_combvalue_3_.BLIF keyboard_led_2_reg.D
+---10-0- 1
+---0-0-0 1
+0000---- 1
+-11----- 1
+1-1----- 1
+11------ 1
+--11---- 1
+-1-1---- 1
+1--1---- 1
+1000-1-- 0
+0100-1-- 0
+0010-1-- 0
+0001--1- 0
+00011--- 0
+1000---1 0
+0100---1 0
+0010---1 0
+.names keyboard_combvalue_4_.BLIF keyboard_combvalue_5_.BLIF \
+keyboard_combvalue_6_.BLIF keyboard_combvalue_7_.BLIF \
+keyboard_combvalue_1_.BLIF keyboard_combvalue_2_.BLIF \
+keyboard_combvalue_3_.BLIF keyboard_led_3_reg.D
+---100- 1
+---0-00 1
+0000--- 1
+--11--- 1
+-1-1--- 1
+1--1--- 1
+-11---- 1
+1-1---- 1
+11----- 1
+1000-1- 0
+0100-1- 0
+0010-1- 0
+00011-- 0
+0001-1- 0
+1000--1 0
+0100--1 0
+0010--1 0
+.names keyboard_combvalue_4_.BLIF keyboard_combvalue_5_.BLIF \
+keyboard_combvalue_6_.BLIF keyboard_combvalue_7_.BLIF \
+keyboard_combvalue_3_.BLIF keyboard_led_4_reg.D
+---0- 1
+--1-- 1
+-1--- 1
+1---- 1
+----0 1
+00011 0
+.names keyboard_int_Data1_0_.BLIF button3_d1_q_0_.BLIF button3_d2_q_0_.BLIF \
+button3_d3_q_0_.BLIF button2_d1_q_0_.BLIF button2_d2_q_0_.BLIF \
+button2_d3_q_0_.BLIF button1_d1_q_0_.BLIF button1_d2_q_0_.BLIF \
+button1_d3_q_0_.BLIF keyboard_key_out_0_reg.BLIF keyboard_key_out_1_reg.BLIF \
+keyboard_key_out_2_reg.BLIF keyboard_key_out_3_reg.BLIF \
+keyboard_flag_Data_1_.BLIF keyboard_led_int_Data0_0_.D
+1000000000----1 1
+------1---0-0-- 1
+-----1----0-0-- 1
+----1-----0-0-- 1
+---------1-0-0- 1
+--------1--0-0- 1
+-------1---0-0- 1
+---1-------0--- 1
+--1--------0--- 1
+-1---------0--- 1
+-0001-----1--1- 0
+-0001-------11- 0
+-000-1----1--1- 0
+-000--1---1--1- 0
+-000-1------11- 0
+-000--1-----11- 0
+----1-----11--- 0
+----1------11-- 0
+-----1----11--- 0
+------1---11--- 0
+-----1-----11-- 0
+------1----11-- 0
+0000000000----- 0
+-000000000----0 0
+-000--1000--1-- 0
+-000-1-000--1-- 0
+-0001--000--1-- 0
+-000--10001---- 0
+-000-1-0001---- 0
+-0001--0001---- 0
+-000000--1---1- 0
+-000000-1----1- 0
+-0000001-----1- 0
+----000--1-1--- 0
+----000-1--1--- 0
+----0001---1--- 0
+---1000----1--- 0
+--1-000----1--- 0
+-1--000----1--- 0
+.names button4_d1_q_0_.BLIF button4_d2_q_0_.BLIF button4_d3_q_0_.BLIF \
+keyboard_int_Data1_1_.BLIF button2_d1_q_0_.BLIF button2_d2_q_0_.BLIF \
+button2_d3_q_0_.BLIF button1_d1_q_0_.BLIF button1_d2_q_0_.BLIF \
+button1_d3_q_0_.BLIF keyboard_key_out_0_reg.BLIF keyboard_key_out_1_reg.BLIF \
+keyboard_key_out_2_reg.BLIF keyboard_key_out_3_reg.BLIF \
+keyboard_flag_Data_1_.BLIF keyboard_led_int_Data0_1_.D
+000-000000--0-- 1
+---1000000--0-1 1
+000----000-00-- 1
+---1---000-00-1 1
+000------100-0- 1
+000-----1-00-0- 1
+000----1--00-0- 1
+---1-----100-01 1
+---1----1-00-01 1
+---1---1--00-01 1
+-------000--1-- 0
+--10----------- 0
+-1-0----------- 0
+1--0----------- 0
+---------1---1- 0
+--------1----1- 0
+-------1-----1- 0
+---------11---- 0
+--------1-1---- 0
+-------1--1---- 0
+------1----1--- 0
+-----1-----1--- 0
+----1------1--- 0
+---------1-1--- 0
+--------1--1--- 0
+-------1---1--- 0
+--1-----------0 0
+-1------------0 0
+1-------------0 0
+.names button4_d1_q_0_.BLIF button4_d2_q_0_.BLIF button4_d3_q_0_.BLIF \
+keyboard_int_Data1_2_.BLIF button1_d1_q_0_.BLIF button1_d2_q_0_.BLIF \
+button1_d3_q_0_.BLIF keyboard_key_out_0_reg.BLIF keyboard_key_out_2_reg.BLIF \
+keyboard_key_out_3_reg.BLIF keyboard_flag_Data_1_.BLIF \
+keyboard_led_int_Data0_2_.D
+000-00000-- 1
+---100000-1 1
+000---10-0- 1
+000--1-0-0- 1
+000-1--0-0- 1
+---1--10-01 1
+---1-1-0-01 1
+---11--0-01 1
+----000-1-- 0
+--10------- 0
+-1-0------- 0
+1--0------- 0
+------1--1- 0
+-----1---1- 0
+----1----1- 0
+-------1--- 0
+--1-------0 0
+-1--------0 0
+1---------0 0
+.names keyboard_timecnt_0_.BLIF keyboard_timecnt_0_.D
+0 1
+1 0
+.names keyboard_timecnt_4_.BLIF keyboard_timecnt_6_.BLIF \
+keyboard_timecnt_7_.BLIF keyboard_timecnt_9_.BLIF keyboard_timecnt_15_.BLIF \
+keyboard_timecnt_11_.BLIF keyboard_timecnt_0_.BLIF keyboard_timecnt_1_.BLIF \
+keyboard_timecnt_2_.BLIF keyboard_timecnt_3_.BLIF keyboard_timecnt_5_.BLIF \
+keyboard_timecnt_8_.BLIF keyboard_timecnt_10_.BLIF keyboard_timecnt_12_.BLIF \
+keyboard_timecnt_13_.BLIF keyboard_timecnt_14_.BLIF keyboard_timecnt_4_.D
+0-----1111----0- 1
+0-----1111---0-- 1
+0-----1111--0--- 1
+0-----1111-0---- 1
+0-----11110----- 1
+0----11111------ 1
+0---1-1111------ 1
+0--1--1111------ 1
+0-1---1111------ 1
+01----1111------ 1
+0-----1111-----0 1
+1--------0------ 1
+1-------0------- 1
+1------0-------- 1
+1-----0--------- 1
+000000----111111 0
+1-----1111------ 0
+0--------0------ 0
+0-------0------- 0
+0------0-------- 0
+0-----0--------- 0
+.names i2c_phase3.BLIF i2c_bit_state_0_.BLIF i2c_bit_state_1_.BLIF \
+i2c_bit_state_2_.BLIF i2c_bit_state_3_.BLIF i2c_bit_state_4_.BLIF \
+i2c_bit_state_5_.BLIF i2c_eeprom_state_0_.BLIF i2c_eeprom_state_1_.BLIF \
+i2c_bit_state_1_.D
+11-0-11-1 1
+-01-1-01- 1
+0-1-1-01- 1
+-01--001- 1
+0-1--001- 1
+--110101- 1
+11-00001- 1
+11-11001- 1
+11-01101- 1
+11-10101- 1
+11-1100-1 1
+11-1010-1 1
+11-000--1 1
+11-011--1 1
+001---01- 1
+-01-----1 1
+0-1-----1 1
+11-0010-- 0
+11-010--- 0
+11-100--- 0
+11-111--- 0
+11-1--1-- 0
+-1-001--0 0
+1--001--0 0
+-00------ 0
+0-0------ 0
+-------00 0
+------1-0 0
+.names i2c_phase3.BLIF i2c_Flag_RW.BLIF i2c_bit_state_0_.BLIF \
+i2c_bit_state_1_.BLIF i2c_bit_state_2_.BLIF i2c_bit_state_3_.BLIF \
+i2c_bit_state_4_.BLIF i2c_bit_state_5_.BLIF i2c_eeprom_state_0_.BLIF \
+i2c_eeprom_state_1_.BLIF i2c_bit_state_2_.D
+----1110-1 1
+1-01-0001- 1
+1-01-11010 1
+1101-11--1 1
+1-01-00--1 1
+1-01--11-1 1
+---01--01- 1
+0---1--01- 1
+--1-1--01- 1
+--111----1 1
+---01--0-1 1
+0---1----1 1
+-0--0-10-1 0
+1-01-010-- 0
+1-01-10--- 0
+1--0---1-- 0
+--1-0----- 0
+0---0----- 0
+---00----- 0
+--------00 0
+-------1-0 0
+.names i2c_phase3.BLIF i2c_bit_state_0_.BLIF i2c_bit_state_1_.BLIF \
+i2c_bit_state_2_.BLIF i2c_bit_state_3_.BLIF i2c_bit_state_4_.BLIF \
+i2c_eeprom_state_0_.BLIF i2c_eeprom_state_1_.BLIF i2c_bit_state_3_.D
+1001-01- 1
+1001-0-1 1
+---01-1- 1
+--1-1-1- 1
+-1--1-1- 1
+0---1-1- 1
+---01--1 1
+--1-1--1 1
+-1--1--1 1
+0---1--1 1
+1001-1-- 0
+---00--- 0
+--1-0--- 0
+-1--0--- 0
+0---0--- 0
+------00 0
+.names i2c_phase3.BLIF i2c_bit_state_0_.BLIF i2c_bit_state_1_.BLIF \
+i2c_bit_state_2_.BLIF i2c_bit_state_3_.BLIF i2c_bit_state_4_.BLIF \
+i2c_bit_state_5_.BLIF i2c_eeprom_state_0_.BLIF i2c_eeprom_state_1_.BLIF \
+i2c_bit_state_4_.D
+10001-01- 1
+001--101- 1
+10001---1 1
+---1-101- 1
+----1101- 1
+--1--1--1 1
+0----1--1 1
+---0-1--1 1
+-----10-1 1
+1-01--1-- 0
+--000---0 0
+1--00---0 0
+-1-00---0 0
+--1--0--- 0
+0----0--- 0
+---1-0--- 0
+-1---0--- 0
+----00--- 0
+-------00 0
+------1-0 0
+.names i2c_phase3.BLIF i2c_bit_state_0_.BLIF i2c_bit_state_1_.BLIF \
+i2c_bit_state_2_.BLIF i2c_bit_state_3_.BLIF i2c_bit_state_4_.BLIF \
+i2c_bit_state_5_.BLIF i2c_eeprom_state_1_.BLIF i2c_bit_state_5_.D
+100001-1 1
+--1-0111 1
+0---0111 1
+---00111 1
+1-01---- 0
+--1---0- 0
+-1----0- 0
+0-----0- 0
+-----0-- 0
+----1--- 0
+-------0 0
+.names i2c_phase3.BLIF i2c_Flag_RW.BLIF i2c_bit_state_0_.BLIF \
+i2c_bit_state_1_.BLIF i2c_bit_state_2_.BLIF i2c_bit_state_3_.BLIF \
+i2c_bit_state_4_.BLIF i2c_bit_state_5_.BLIF i2c_eeprom_state_0_.BLIF \
+i2c_eeprom_state_1_.BLIF i2c_bit_state_0_.D
+1--110-1-1 1
+11-000001- 1
+--1000001- 1
+1--111101- 1
+1--101001- 1
+1--001101- 1
+1--110001- 1
+1--010101- 1
+1--011001- 1
+11-0000--1 1
+0-1--1-01- 1
+0-1-1--01- 1
+1--10010-1 1
+0-1---001- 1
+1--10100-1 1
+1--01010-1 1
+1--00-11-1 1
+--10000--1 1
+1--01100-1 1
+1--1111--1 1
+1--0011--1 1
+1--1100--1 1
+0-1------1 1
+-0000-0--- 0
+1--11010-- 0
+1--00010-- 0
+1--0111--- 0
+1--1110--- 0
+1--1011--- 0
+1--0100--- 0
+1--1000--- 0
+1--0010--- 0
+1--01--1-- 0
+1--10--1-- 0
+----001--0 0
+0-0------- 0
+--------00 0
+-------1-0 0
+.names keyboard_led_int_Data1_0_.BLIF i2c_RdData_4_.BLIF \
+i2c_eeprom_state_0_.BLIF i2c_DataLED2_0_.D
+-10 1
+1-1 1
+-00 0
+0-1 0
+.names keyboard_led_int_Data1_1_.BLIF i2c_RdData_5_.BLIF \
+i2c_eeprom_state_0_.BLIF i2c_DataLED2_1_.D
+-10 1
+1-1 1
+-00 0
+0-1 0
+.names keyboard_led_int_Data1_2_.BLIF i2c_RdData_6_.BLIF \
+i2c_eeprom_state_0_.BLIF i2c_DataLED2_2_.D
+-10 1
+1-1 1
+-00 0
+0-1 0
+.names keyboard_led_int_Data1_3_.BLIF i2c_RdData_7_.BLIF \
+i2c_eeprom_state_0_.BLIF i2c_DataLED2_3_.D
+-10 1
+1-1 1
+-00 0
+0-1 0
+.names keyboard_led_int_Data0_0_.BLIF i2c_RdData_0_.BLIF \
+i2c_eeprom_state_0_.BLIF i2c_DataLED_0_.D
+-10 1
+1-1 1
+-00 0
+0-1 0
+.names keyboard_led_int_Data0_1_.BLIF i2c_RdData_1_.BLIF \
+i2c_eeprom_state_0_.BLIF i2c_DataLED_1_.D
+-10 1
+1-1 1
+-00 0
+0-1 0
+.names keyboard_led_int_Data0_2_.BLIF i2c_RdData_2_.BLIF \
+i2c_eeprom_state_0_.BLIF i2c_DataLED_2_.D
+-10 1
+1-1 1
+-00 0
+0-1 0
+.names keyboard_led_int_Data0_3_.BLIF i2c_RdData_3_.BLIF \
+i2c_eeprom_state_0_.BLIF i2c_DataLED_3_.D
+-10 1
+1-1 1
+-00 0
+0-1 0
+.names i2c_phase1.BLIF i2c_RdData_0_.BLIF i2c_bit_state_1_.BLIF \
+i2c_bit_state_2_.BLIF i2c_eeprom_state_1_.BLIF SDA.PIN.BLIF i2c_RdData_0_.D
+1-1111 1
+-1-01- 1
+-10-1- 1
+01--1- 1
+1-11-0 0
+-0-0-- 0
+-00--- 0
+00---- 0
+----0- 0
+.names i2c_phase1.BLIF i2c_RdData_5_.BLIF i2c_bit_state_0_.BLIF \
+i2c_bit_state_5_.BLIF i2c_eeprom_state_1_.BLIF SDA.PIN.BLIF i2c_RdData_5_.D
+1-0011 1
+-1-11- 1
+-11-1- 1
+01--1- 1
+1-00-0 0
+-0-1-- 0
+-01--- 0
+00---- 0
+----0- 0
+.names i2c_phase1.BLIF i2c_RdData_7_.BLIF i2c_bit_state_1_.BLIF \
+i2c_bit_state_5_.BLIF i2c_eeprom_state_1_.BLIF SDA.PIN.BLIF i2c_RdData_7_.D
+1-1011 1
+-1-11- 1
+-10-1- 1
+01--1- 1
+1-10-0 0
+-0-1-- 0
+-00--- 0
+00---- 0
+----0- 0
+.names i2c_key_delay_0_.BLIF i2c_start_delay.BLIF i2c_key_delay_0_.D
+01 1
+1- 0
+-0 0
+.names i2c_key_delay_0_.BLIF i2c_key_delay_1_.BLIF i2c_start_delay.BLIF \
+i2c_key_delay_1_.D
+101 1
+011 1
+00- 0
+11- 0
+--0 0
+.names i2c_clk_div_0_.BLIF i2c_clk_div_0_.D
+0 1
+1 0
+.names i2c_phase1.BLIF i2c_phase3.BLIF i2c_Flag_RW.BLIF i2c_bit_state_0_.BLIF \
+i2c_bit_state_1_.BLIF i2c_bit_state_2_.BLIF i2c_bit_state_3_.BLIF \
+i2c_bit_state_4_.BLIF i2c_bit_state_5_.BLIF i2c_eeprom_state_0_.BLIF \
+i2c_eeprom_state_1_.BLIF i2c_Flag_RW.D
+-1---0100-1 1
+-1-00-110-1 1
+--11---0-1- 1
+-1--010-01- 1
+-1--111-0-1 1
+--1110----1 1
+--1-1-1--1- 1
+--1--1-111- 1
+-1--010-0-1 1
+-1-011--010 1
+--1--0-0--1 1
+--10-0---10 1
+-1-1-1--001 1
+--11-1--1-1 1
+--1---0-11- 1
+--1--00--10 1
+--1-1---1-1 1
+-1--01-101- 1
+-1-0-01-01- 1
+--10--11--1 1
+--1-0-0---1 1
+1--00000-1- 1
+1--01011--1 1
+1--00000--1 1
+-1-111--1-1 1
+-1-11-1--1- 1
+-1-11--0-1- 1
+-1-1---001- 1
+-1--1--001- 1
+-1-11-1---1 1
+-1-11--0--1 1
+-1-1---00-1 1
+-1--1--00-1 1
+-01------1- 1
+-01-------1 1
+--0---011-0 0
+-1-1110101- 0
+-00---1---0 0
+--0-0-1-1-- 0
+-00-1--0--- 0
+--00--1-1-0 0
+-00-0-1---- 0
+--001--01-- 0
+0-0010-1-0- 0
+-1-01-010-1 0
+-1-10011--- 0
+-1-00110--- 0
+0-00000---- 0
+--0--001--- 0
+--010---1-- 0
+0-00----1-- 0
+--00-1--1-- 0
+000-------- 0
+-00--1----- 0
+-001------- 0
+---------00 0
+.names i2c_phase1.BLIF i2c_phase3.BLIF i2c_Flag_RW.BLIF i2c_sda_buf.BLIF \
+i2c_WrData_0_.BLIF i2c_WrData_1_.BLIF i2c_WrData_2_.BLIF i2c_WrData_3_.BLIF \
+i2c_WrData_4_.BLIF i2c_WrData_5_.BLIF i2c_WrData_6_.BLIF i2c_WrData_7_.BLIF \
+i2c_bit_state_0_.BLIF i2c_bit_state_1_.BLIF i2c_bit_state_2_.BLIF \
+i2c_bit_state_3_.BLIF i2c_bit_state_4_.BLIF i2c_bit_state_5_.BLIF \
+i2c_eeprom_state_0_.BLIF i2c_eeprom_state_1_.BLIF i2c_sda_buf.D
+00-1----------0----- 1
+-0-1--------1-----1- 1
+---1-----------0111- 1
+-0-1---------10-0--- 1
+-0-1--------0-1---0- 1
+---1--------11-01-1- 1
+---1--------100-1--- 1
+0--1--------000-0--- 1
+---1--------01-01--1 1
+---1--------0110-11- 1
+-0-1---------0-1---- 1
+-0-1---------1----1- 1
+-1--1-------1010101- 1
+1-----------0100101- 1
+-1-----1----10111-1- 1
+-1------1---11111-1- 1
+-1----1-----00111-1- 1
+-1---1------00101-1- 1
+-1-------1--01111-1- 1
+-1---------111011-1- 1
+-1--------1-01011-1- 1
+-11---------000-0-1- 1
+-11----------10110-1 1
+-1----------11000-1- 1
+0-01--------010-1--1 1
+-11---------000-0--1 1
+-1-----------0010-1- 1
+-1----------11000--1 1
+-1----------11-110-1 1
+-1----------111-10-1 1
+-1-----------0010--1 1
+---1--------00-10--- 1
+1------------01--1-1 1
+-0-1--------1-0----- 1
+-0-1----------1--0-- 1
+---1---------01--1-1 1
+-0-1-----------01--- 1
+---1----------001--- 1
+---1--------------00 1
+--00--------01----0- 0
+-1------------10001- 0
+0--0--------1--011-- 0
+-11----------1-1-101 0
+0--0--0-----00-11--- 0
+0--0-0------0--01--- 0
+--00------0-0-011--- 0
+110-------0-0101--1- 0
+110----------0000-1- 0
+0--0---0----10--11-- 0
+---0-0--------10-1-0 0
+-11-------0-0-0111-1 0
+110---------01-1--01 0
+-1---------01101-11- 0
+-1-----0----1011-01- 0
+-1------0---1111-11- 0
+-1----------1-1-00-1 0
+---0--------1--011-0 0
+--00---------000---- 0
+0--0----------001--- 0
+---0---------110---0 0
+-1----0-----00-1101- 0
+110---------0-000--1 0
+-1--------0-0-011-10 0
+---0--------01-0--0- 0
+-0-0---------1---1-- 0
+-0-0----------1----0 0
+-1----------111-0-1- 0
+-1----------10-00-10 0
+0--0---------0--1-0- 0
+-1---0------0010-01- 0
+-0-0----------1--0-- 0
+-1------------1000-1 0
+-1----------0111--01 0
+-1----------01--0-01 0
+-0-0---------1-1---- 0
+-0-0----------0-0--- 0
+-1-----------01-1001 0
+---0---------1-011-- 0
+10----------00000-1- 0
+10----------01011-01 0
+-1--0-------1010-01- 0
+-1----0-----00-11-10 0
+-1---------01101--10 0
+10----------00000--1 0
+-1------0---1111--10 0
+-1-----0----1011--10 0
+------------00100110 0
+-1-------0--0111--1- 0
+-1----------00011-1- 0
+-1----------0110-010 0
+---0----------1-00-- 0
+------------111-0101 0
+-1----------010-0-1- 0
+-1----------11-1-101 0
+------------1111-101 0
+0--0----------1-0--- 0
+-1----------111--101 0
+---0----------1-0--0 0
+-1----------00011--1 0
+-1----------10000--1 0
+---0--------1-001--- 0
+-1----------1-1-0-10 0
+-1-----------1-10-1- 0
+-1-----------1-10--1 0
+---0--------0110---- 0
+00-0---------------- 0
+---0---------00-1--- 0
+---0--------------00 0
+.names reset.BLIF i2c_phase0.BLIF i2c_bit_state_0_.BLIF i2c_bit_state_1_.BLIF \
+i2c_bit_state_2_.BLIF i2c_bit_state_3_.BLIF i2c_bit_state_4_.BLIF \
+i2c_bit_state_5_.BLIF i2c_eeprom_state_0_.BLIF i2c_eeprom_state_1_.BLIF \
+i2c_sda_tem.CE
+1-10110001 1
+111011001- 1
+110110101- 1
+111101101- 1
+11010010-1 1
+11110110-1 1
+----00---0 0
+--0-1---0- 0
+-0----1--- 0
+---00----- 0
+--1-1-1--- 0
+---0-0---- 0
+---1--0--- 0
+-0------1- 0
+--1--0---- 0
+--0--1---- 0
+-------1-- 0
+0--------- 0
+--------00 0
+.names reset.BLIF i2c_phase0.BLIF i2c_phase2.BLIF i2c_eeprom_state_0_.BLIF \
+i2c_eeprom_state_1_.BLIF i2c_scl_bufreg.CE
+1-11- 1
+11-1- 1
+1-1-1 1
+11--1 1
+-00-- 0
+---00 0
+0---- 0
+.names i2c_clk_div_2_.BLIF i2c_clk_div_3_.BLIF i2c_clk_div_0_.BLIF \
+i2c_clk_div_1_.BLIF i2c_phase0.D
+1111 1
+--0- 0
+-0-- 0
+0--- 0
+---0 0
+.names i2c_clk_div_2_.BLIF i2c_clk_div_3_.BLIF i2c_clk_div_0_.BLIF \
+i2c_clk_div_1_.BLIF i2c_phase1.D
+0011 1
+--0- 0
+-1-- 0
+1--- 0
+---0 0
+.names i2c_clk_div_2_.BLIF i2c_clk_div_3_.BLIF i2c_clk_div_0_.BLIF \
+i2c_clk_div_1_.BLIF i2c_phase2.D
+1011 1
+--0- 0
+-1-- 0
+0--- 0
+---0 0
+.names i2c_clk_div_2_.BLIF i2c_clk_div_3_.BLIF i2c_clk_div_0_.BLIF \
+i2c_clk_div_1_.BLIF i2c_phase3.D
+0111 1
+--0- 0
+-0-- 0
+1--- 0
+---0 0
+.names keyboard_led_int_Data1_1_.BLIF keyboard_led_int_Data0_1_.BLIF \
+i2c_DataLED_1_.BLIF i2c_DataLED2_1_.BLIF dynamicshow_counter4_q_1_.BLIF \
+dynamicshow_counter4_q_2_.BLIF dynamicshow_out_1__n
+--1-00 1
+---110 1
+-1--01 1
+1---11 1
+--0-00 0
+---010 0
+-0--01 0
+0---11 0
+.names keyboard_led_int_Data1_0_.BLIF keyboard_led_int_Data0_0_.BLIF \
+i2c_DataLED_0_.BLIF i2c_DataLED2_0_.BLIF dynamicshow_counter4_q_1_.BLIF \
+dynamicshow_counter4_q_2_.BLIF dynamicshow_out_0__n
+--1-00 1
+---110 1
+-1--01 1
+1---11 1
+--0-00 0
+---010 0
+-0--01 0
+0---11 0
+.names keyboard_led_int_Data1_2_.BLIF keyboard_led_int_Data0_2_.BLIF \
+i2c_DataLED_2_.BLIF i2c_DataLED2_2_.BLIF dynamicshow_counter4_q_1_.BLIF \
+dynamicshow_counter4_q_2_.BLIF dynamicshow_out_2__n
+--1-00 1
+---110 1
+-1--01 1
+1---11 1
+--0-00 0
+---010 0
+-0--01 0
+0---11 0
+.names keyboard_led_int_Data1_3_.BLIF keyboard_led_int_Data0_3_.BLIF \
+i2c_DataLED_3_.BLIF i2c_DataLED2_3_.BLIF dynamicshow_counter4_q_1_.BLIF \
+dynamicshow_counter4_q_2_.BLIF dynamicshow_out_3__n
+--1-00 1
+---110 1
+-1--01 1
+1---11 1
+--0-00 0
+---010 0
+-0--01 0
+0---11 0
+.names keyboard_led_4_reg.BLIF led_4_
+1 1
+0 0
+.names keyboard_key_out_3_reg.BLIF keyOut_3_
+1 1
+0 0
+.names dynamicshow_counter4_q_1_.BLIF dynamicshow_counter4_q_2_.BLIF LEDVCC_3_
+11 1
+0- 0
+-0 0
+.names dynamicshow_out_1__n.BLIF dynamicshow_out_0__n.BLIF \
+dynamicshow_out_2__n.BLIF dynamicshow_out_3__n.BLIF show_6_
+0100 1
+001- 1
+1--1 1
+--11 1
+-000 0
+-110 0
+0-01 0
+1--0 0
+.names i2c_scl_bufreg.BLIF SCL
+1 1
+0 0
+.names keyboard_led_3_reg.BLIF led_3_
+1 1
+0 0
+.names keyboard_led_2_reg.BLIF led_2_
+1 1
+0 0
+.names keyboard_led_1_reg.BLIF led_1_
+1 1
+0 0
+.names keyboard_led_0_reg.BLIF led_0_
+1 1
+0 0
+.names keyboard_key_out_2_reg.BLIF keyOut_2_
+1 1
+0 0
+.names keyboard_key_out_1_reg.BLIF keyOut_1_
+1 1
+0 0
+.names keyboard_key_out_0_reg.BLIF keyOut_0_
+1 1
+0 0
+.names dynamicshow_counter4_q_1_.BLIF dynamicshow_counter4_q_2_.BLIF LEDVCC_2_
+01 1
+1- 0
+-0 0
+.names dynamicshow_counter4_q_1_.BLIF dynamicshow_counter4_q_2_.BLIF LEDVCC_1_
+10 1
+0- 0
+-1 0
+.names dynamicshow_counter4_q_1_.BLIF dynamicshow_counter4_q_2_.BLIF LEDVCC_0_
+00 1
+1- 0
+-1 0
+.names dynamicshow_out_1__n.BLIF dynamicshow_out_0__n.BLIF \
+dynamicshow_out_2__n.BLIF dynamicshow_out_3__n.BLIF show_5_
+011- 1
+101- 1
+1--1 1
+--11 1
+11-0 0
+0-0- 0
+00-0 0
+--00 0
+.names dynamicshow_out_1__n.BLIF dynamicshow_out_0__n.BLIF \
+dynamicshow_out_2__n.BLIF dynamicshow_out_3__n.BLIF show_4_
+100- 1
+--11 1
+1--1 1
+0-0- 0
+--10 0
+-1-0 0
+.names dynamicshow_out_1__n.BLIF dynamicshow_out_0__n.BLIF \
+dynamicshow_out_2__n.BLIF dynamicshow_out_3__n.BLIF show_2_
+0-1- 1
+-1-- 1
+1--1 1
+000- 0
+10-0 0
+.names dynamicshow_out_1__n.BLIF dynamicshow_out_0__n.BLIF \
+dynamicshow_out_2__n.BLIF dynamicshow_out_3__n.BLIF show_1_
+-100 1
+1-0- 1
+11-- 1
+--11 1
+000- 0
+0-01 0
+-010 0
+0-10 0
+.names dynamicshow_out_1__n.BLIF dynamicshow_out_0__n.BLIF \
+dynamicshow_out_2__n.BLIF dynamicshow_out_3__n.BLIF show_0_
+0-00 1
+111- 1
+11-1 1
+--11 1
+-010 0
+-001 0
+0-10 0
+0-01 0
+1-00 0
+.names keyboard_scanvalue_0_.BLIF keyboard_scanvalue_0_.D
+0 1
+1 0
+.names keyboard_time1Oms.BLIF keyboard_scanvalue_0_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_scanvalue_0_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_time1Oms.BLIF keyboard_scanvalue_1_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_scanvalue_1_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_time1Oms.BLIF keyboard_flag_Data_0_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_flag_Data_0_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_time1Oms.BLIF keyboard_flag_Data_1_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_flag_Data_1_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_int_Data0_2_.BLIF keyboard_led_int_Data1_2_.D
+1 1
+0 0
+.names button4_d1_q_0_.BLIF button4_d2_q_0_.BLIF keyboard_int_Data0_3_.BLIF \
+button4_d3_q_0_.BLIF button3_d1_q_0_.BLIF button3_d2_q_0_.BLIF \
+button3_d3_q_0_.BLIF button2_d1_q_0_.BLIF button2_d2_q_0_.BLIF \
+keyboard_int_Data0_1_.BLIF button2_d3_q_0_.BLIF keyboard_int_Data0_2_.BLIF \
+button1_d1_q_0_.BLIF button1_d2_q_0_.BLIF button1_d3_q_0_.BLIF \
+keyboard_key_out_0_reg.BLIF keyboard_key_out_1_reg.BLIF \
+keyboard_flag_Data_0_.BLIF keyboard_key_out_2_reg.BLIF \
+keyboard_flag_Data_1_.BLIF keyboard_led_int_Data1_2_.CE
+---10000000000000100 1
+-1--0000000000000100 1
+1---0000000000000100 1
+--0100000-0-00000100 1
+-10-00000-0-00000100 1
+1-0-00000-0-00000100 1
+00-0---------------- 0
+--1--------1-------- 0
+--1------1---------- 0
+------------------1- 0
+-----------------0-- 0
+----------------1--- 0
+---------------1---- 0
+--------------1----- 0
+-------------1------ 0
+------------1------- 0
+----------1--------- 0
+--------1----------- 0
+-------1------------ 0
+------1------------- 0
+-----1-------------- 0
+----1--------------- 0
+-------------------1 0
+.names keyboard_time1Oms.BLIF keyboard_led_int_Data1_2_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_led_int_Data1_2_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_int_Data0_3_.BLIF keyboard_led_int_Data1_3_.D
+1 1
+0 0
+.names button4_d1_q_0_.BLIF button4_d2_q_0_.BLIF keyboard_int_Data0_3_.BLIF \
+button4_d3_q_0_.BLIF button3_d1_q_0_.BLIF button3_d2_q_0_.BLIF \
+button3_d3_q_0_.BLIF button2_d1_q_0_.BLIF button2_d2_q_0_.BLIF \
+keyboard_int_Data0_1_.BLIF button2_d3_q_0_.BLIF keyboard_int_Data0_2_.BLIF \
+button1_d1_q_0_.BLIF button1_d2_q_0_.BLIF button1_d3_q_0_.BLIF \
+keyboard_key_out_0_reg.BLIF keyboard_key_out_1_reg.BLIF \
+keyboard_flag_Data_0_.BLIF keyboard_key_out_2_reg.BLIF \
+keyboard_flag_Data_1_.BLIF keyboard_led_int_Data1_3_.CE
+---10000000000000100 1
+-1--0000000000000100 1
+1---0000000000000100 1
+--0100000-0-00000100 1
+-10-00000-0-00000100 1
+1-0-00000-0-00000100 1
+00-0---------------- 0
+--1--------1-------- 0
+--1------1---------- 0
+------------------1- 0
+-----------------0-- 0
+----------------1--- 0
+---------------1---- 0
+--------------1----- 0
+-------------1------ 0
+------------1------- 0
+----------1--------- 0
+--------1----------- 0
+-------1------------ 0
+------1------------- 0
+-----1-------------- 0
+----1--------------- 0
+-------------------1 0
+.names keyboard_time1Oms.BLIF keyboard_led_int_Data1_3_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_led_int_Data1_3_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button2_d1_q_0_.BLIF button2_d2_q_0_.BLIF button2_d3_q_0_.BLIF \
+keyboard_key_out_1_reg.BLIF keyboard_key_out_3_reg.BLIF \
+keyboard_int_Data1_0_.D
+00000 1
+--110 1
+-1-10 1
+1--10 1
+0001- 0
+--10- 0
+-1-0- 0
+1--0- 0
+----1 0
+.names button4_d1_q_0_.BLIF button4_d2_q_0_.BLIF button4_d3_q_0_.BLIF \
+button3_d1_q_0_.BLIF button3_d2_q_0_.BLIF button3_d3_q_0_.BLIF \
+button2_d1_q_0_.BLIF button2_d2_q_0_.BLIF button2_d3_q_0_.BLIF \
+button1_d1_q_0_.BLIF button1_d2_q_0_.BLIF button1_d3_q_0_.BLIF \
+keyboard_key_out_0_reg.BLIF keyboard_key_out_1_reg.BLIF \
+keyboard_flag_Data_0_.BLIF keyboard_key_out_2_reg.BLIF \
+keyboard_key_out_3_reg.BLIF keyboard_flag_Data_1_.BLIF \
+keyboard_int_Data1_0_.CE
+000--1000000-00001 1
+000-1-000000-00001 1
+0001--000000-00001 1
+000000--1000-00001 1
+000000-1-000-00001 1
+0000001--000-00001 1
+000--10000000-0001 1
+000-1-0000000-0001 1
+0001--0000000-0001 1
+000000--10000-0001 1
+000000-1-0000-0001 1
+0000001--0000-0001 1
+000--1000000000-01 1
+000-1-000000000-01 1
+0001--000000000-01 1
+000000--1000000-01 1
+000000-1-000000-01 1
+0000001--000000-01 1
+000000000--10000-1 1
+000000000-1-0000-1 1
+0000000001--0000-1 1
+000000000--1-00001 1
+000000000-1--00001 1
+0000000001---00001 1
+000000000--10-0001 1
+000000000-1-0-0001 1
+0000000001--0-0001 1
+000000000--1000-01 1
+000000000-1-000-01 1
+0000000001--000-01 1
+---------000----1- 0
+---000000000------ 0
+-------------1-1-- 0
+------------1--1-- 0
+------------11---- 0
+---------------11- 0
+-------------1--1- 0
+------------1---1- 0
+--------1--1------ 0
+-------1---1------ 0
+------1----1------ 0
+-----1-----1------ 0
+----1------1------ 0
+---1-------1------ 0
+--------1-1------- 0
+-------1--1------- 0
+------1---1------- 0
+-----1----1------- 0
+----1-----1------- 0
+---1------1------- 0
+--------11-------- 0
+-------1-1-------- 0
+------1--1-------- 0
+-----1---1-------- 0
+----1----1-------- 0
+---1-----1-------- 0
+-----1--1--------- 0
+----1---1--------- 0
+---1----1--------- 0
+-----1-1---------- 0
+----1--1---------- 0
+---1---1---------- 0
+-----11----------- 0
+----1-1----------- 0
+---1--1----------- 0
+--------------1--- 0
+--1--------------- 0
+-1---------------- 0
+1----------------- 0
+-----------------0 0
+.names keyboard_time1Oms.BLIF keyboard_int_Data1_0_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_int_Data1_0_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button4_d1_q_0_.BLIF button4_d2_q_0_.BLIF button4_d3_q_0_.BLIF \
+button3_d1_q_0_.BLIF button3_d2_q_0_.BLIF button3_d3_q_0_.BLIF \
+button2_d1_q_0_.BLIF button2_d2_q_0_.BLIF button2_d3_q_0_.BLIF \
+button1_d1_q_0_.BLIF button1_d2_q_0_.BLIF button1_d3_q_0_.BLIF \
+keyboard_key_out_0_reg.BLIF keyboard_key_out_1_reg.BLIF \
+keyboard_flag_Data_0_.BLIF keyboard_key_out_2_reg.BLIF \
+keyboard_key_out_3_reg.BLIF keyboard_flag_Data_1_.BLIF \
+keyboard_int_Data1_1_.CE
+000--1000000-00001 1
+000-1-000000-00001 1
+0001--000000-00001 1
+000000--1000-00001 1
+000000-1-000-00001 1
+0000001--000-00001 1
+000--10000000-0001 1
+000-1-0000000-0001 1
+0001--0000000-0001 1
+000000--10000-0001 1
+000000-1-0000-0001 1
+0000001--0000-0001 1
+000--1000000000-01 1
+000-1-000000000-01 1
+0001--000000000-01 1
+000000--1000000-01 1
+000000-1-000000-01 1
+0000001--000000-01 1
+000000000--10000-1 1
+000000000-1-0000-1 1
+0000000001--0000-1 1
+000000000--1-00001 1
+000000000-1--00001 1
+0000000001---00001 1
+000000000--10-0001 1
+000000000-1-0-0001 1
+0000000001--0-0001 1
+000000000--1000-01 1
+000000000-1-000-01 1
+0000000001--000-01 1
+---------000----1- 0
+---000000000------ 0
+-------------1-1-- 0
+------------1--1-- 0
+------------11---- 0
+---------------11- 0
+-------------1--1- 0
+------------1---1- 0
+--------1--1------ 0
+-------1---1------ 0
+------1----1------ 0
+-----1-----1------ 0
+----1------1------ 0
+---1-------1------ 0
+--------1-1------- 0
+-------1--1------- 0
+------1---1------- 0
+-----1----1------- 0
+----1-----1------- 0
+---1------1------- 0
+--------11-------- 0
+-------1-1-------- 0
+------1--1-------- 0
+-----1---1-------- 0
+----1----1-------- 0
+---1-----1-------- 0
+-----1--1--------- 0
+----1---1--------- 0
+---1----1--------- 0
+-----1-1---------- 0
+----1--1---------- 0
+---1---1---------- 0
+-----11----------- 0
+----1-1----------- 0
+---1--1----------- 0
+--------------1--- 0
+--1--------------- 0
+-1---------------- 0
+1----------------- 0
+-----------------0 0
+.names keyboard_time1Oms.BLIF keyboard_int_Data1_1_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_int_Data1_1_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button1_d1_q_0_.BLIF button1_d2_q_0_.BLIF button1_d3_q_0_.BLIF \
+keyboard_key_out_1_reg.BLIF keyboard_key_out_2_reg.BLIF \
+keyboard_int_Data1_2_.D
+---1- 1
+--1-1 1
+-1--1 1
+1---1 1
+0000- 0
+---00 0
+.names button4_d1_q_0_.BLIF button4_d2_q_0_.BLIF button4_d3_q_0_.BLIF \
+button3_d1_q_0_.BLIF button3_d2_q_0_.BLIF button3_d3_q_0_.BLIF \
+button2_d1_q_0_.BLIF button2_d2_q_0_.BLIF button2_d3_q_0_.BLIF \
+button1_d1_q_0_.BLIF button1_d2_q_0_.BLIF button1_d3_q_0_.BLIF \
+keyboard_key_out_0_reg.BLIF keyboard_key_out_1_reg.BLIF \
+keyboard_flag_Data_0_.BLIF keyboard_key_out_2_reg.BLIF \
+keyboard_key_out_3_reg.BLIF keyboard_flag_Data_1_.BLIF \
+keyboard_int_Data1_2_.CE
+000--1000000-00001 1
+000-1-000000-00001 1
+0001--000000-00001 1
+000000--1000-00001 1
+000000-1-000-00001 1
+0000001--000-00001 1
+000--10000000-0001 1
+000-1-0000000-0001 1
+0001--0000000-0001 1
+000000--10000-0001 1
+000000-1-0000-0001 1
+0000001--0000-0001 1
+000--1000000000-01 1
+000-1-000000000-01 1
+0001--000000000-01 1
+000000--1000000-01 1
+000000-1-000000-01 1
+0000001--000000-01 1
+000000000--10000-1 1
+000000000-1-0000-1 1
+0000000001--0000-1 1
+000000000--1-00001 1
+000000000-1--00001 1
+0000000001---00001 1
+000000000--10-0001 1
+000000000-1-0-0001 1
+0000000001--0-0001 1
+000000000--1000-01 1
+000000000-1-000-01 1
+0000000001--000-01 1
+---------000----1- 0
+---000000000------ 0
+-------------1-1-- 0
+------------1--1-- 0
+------------11---- 0
+---------------11- 0
+-------------1--1- 0
+------------1---1- 0
+--------1--1------ 0
+-------1---1------ 0
+------1----1------ 0
+-----1-----1------ 0
+----1------1------ 0
+---1-------1------ 0
+--------1-1------- 0
+-------1--1------- 0
+------1---1------- 0
+-----1----1------- 0
+----1-----1------- 0
+---1------1------- 0
+--------11-------- 0
+-------1-1-------- 0
+------1--1-------- 0
+-----1---1-------- 0
+----1----1-------- 0
+---1-----1-------- 0
+-----1--1--------- 0
+----1---1--------- 0
+---1----1--------- 0
+-----1-1---------- 0
+----1--1---------- 0
+---1---1---------- 0
+-----11----------- 0
+----1-1----------- 0
+---1--1----------- 0
+--------------1--- 0
+--1--------------- 0
+-1---------------- 0
+1----------------- 0
+-----------------0 0
+.names keyboard_time1Oms.BLIF keyboard_int_Data1_2_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_int_Data1_2_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button1_d1_q_0_.BLIF button1_d2_q_0_.BLIF button1_d3_q_0_.BLIF \
+keyboard_key_out_2_reg.BLIF keyboard_int_Data1_3_.D
+0001 1
+--1- 0
+-1-- 0
+1--- 0
+---0 0
+.names button4_d1_q_0_.BLIF button4_d2_q_0_.BLIF button4_d3_q_0_.BLIF \
+button3_d1_q_0_.BLIF button3_d2_q_0_.BLIF button3_d3_q_0_.BLIF \
+button2_d1_q_0_.BLIF button2_d2_q_0_.BLIF button2_d3_q_0_.BLIF \
+button1_d1_q_0_.BLIF button1_d2_q_0_.BLIF button1_d3_q_0_.BLIF \
+keyboard_key_out_0_reg.BLIF keyboard_key_out_1_reg.BLIF \
+keyboard_flag_Data_0_.BLIF keyboard_key_out_2_reg.BLIF \
+keyboard_key_out_3_reg.BLIF keyboard_flag_Data_1_.BLIF \
+keyboard_int_Data1_3_.CE
+000--1000000-00001 1
+000-1-000000-00001 1
+0001--000000-00001 1
+000000--1000-00001 1
+000000-1-000-00001 1
+0000001--000-00001 1
+000--10000000-0001 1
+000-1-0000000-0001 1
+0001--0000000-0001 1
+000000--10000-0001 1
+000000-1-0000-0001 1
+0000001--0000-0001 1
+000--1000000000-01 1
+000-1-000000000-01 1
+0001--000000000-01 1
+000000--1000000-01 1
+000000-1-000000-01 1
+0000001--000000-01 1
+000000000--10000-1 1
+000000000-1-0000-1 1
+0000000001--0000-1 1
+000000000--1-00001 1
+000000000-1--00001 1
+0000000001---00001 1
+000000000--10-0001 1
+000000000-1-0-0001 1
+0000000001--0-0001 1
+000000000--1000-01 1
+000000000-1-000-01 1
+0000000001--000-01 1
+---------000----1- 0
+---000000000------ 0
+-------------1-1-- 0
+------------1--1-- 0
+------------11---- 0
+---------------11- 0
+-------------1--1- 0
+------------1---1- 0
+--------1--1------ 0
+-------1---1------ 0
+------1----1------ 0
+-----1-----1------ 0
+----1------1------ 0
+---1-------1------ 0
+--------1-1------- 0
+-------1--1------- 0
+------1---1------- 0
+-----1----1------- 0
+----1-----1------- 0
+---1------1------- 0
+--------11-------- 0
+-------1-1-------- 0
+------1--1-------- 0
+-----1---1-------- 0
+----1----1-------- 0
+---1-----1-------- 0
+-----1--1--------- 0
+----1---1--------- 0
+---1----1--------- 0
+-----1-1---------- 0
+----1--1---------- 0
+---1---1---------- 0
+-----11----------- 0
+----1-1----------- 0
+---1--1----------- 0
+--------------1--- 0
+--1--------------- 0
+-1---------------- 0
+1----------------- 0
+-----------------0 0
+.names keyboard_time1Oms.BLIF keyboard_int_Data1_3_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_int_Data1_3_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button2_d1_q_0_.BLIF button2_d2_q_0_.BLIF button2_d3_q_0_.BLIF \
+keyboard_key_out_1_reg.BLIF keyboard_key_out_3_reg.BLIF \
+keyboard_int_Data0_0_.D
+00000 1
+--110 1
+-1-10 1
+1--10 1
+0001- 0
+--10- 0
+-1-0- 0
+1--0- 0
+----1 0
+.names button4_d1_q_0_.BLIF button4_d2_q_0_.BLIF button4_d3_q_0_.BLIF \
+button3_d1_q_0_.BLIF button3_d2_q_0_.BLIF button3_d3_q_0_.BLIF \
+button2_d1_q_0_.BLIF button2_d2_q_0_.BLIF button2_d3_q_0_.BLIF \
+button1_d1_q_0_.BLIF button1_d2_q_0_.BLIF button1_d3_q_0_.BLIF \
+keyboard_key_out_0_reg.BLIF keyboard_key_out_1_reg.BLIF \
+keyboard_flag_Data_0_.BLIF keyboard_key_out_2_reg.BLIF \
+keyboard_key_out_3_reg.BLIF keyboard_flag_Data_1_.BLIF \
+keyboard_int_Data0_0_.CE
+000--1000000-00000 1
+000-1-000000-00000 1
+0001--000000-00000 1
+000000--1000-00000 1
+000000-1-000-00000 1
+0000001--000-00000 1
+000--10000000-0000 1
+000-1-0000000-0000 1
+0001--0000000-0000 1
+000000--10000-0000 1
+000000-1-0000-0000 1
+0000001--0000-0000 1
+000--1000000000-00 1
+000-1-000000000-00 1
+0001--000000000-00 1
+000000--1000000-00 1
+000000-1-000000-00 1
+0000001--000000-00 1
+000000000--10000-0 1
+000000000-1-0000-0 1
+0000000001--0000-0 1
+000000000--1-00000 1
+000000000-1--00000 1
+0000000001---00000 1
+000000000--10-0000 1
+000000000-1-0-0000 1
+0000000001--0-0000 1
+000000000--1000-00 1
+000000000-1-000-00 1
+0000000001--000-00 1
+---------000----1- 0
+---000000000------ 0
+-------------1-1-- 0
+------------1--1-- 0
+------------11---- 0
+---------------11- 0
+-------------1--1- 0
+------------1---1- 0
+--------1--1------ 0
+-------1---1------ 0
+------1----1------ 0
+-----1-----1------ 0
+----1------1------ 0
+---1-------1------ 0
+--------1-1------- 0
+-------1--1------- 0
+------1---1------- 0
+-----1----1------- 0
+----1-----1------- 0
+---1------1------- 0
+--------11-------- 0
+-------1-1-------- 0
+------1--1-------- 0
+-----1---1-------- 0
+----1----1-------- 0
+---1-----1-------- 0
+-----1--1--------- 0
+----1---1--------- 0
+---1----1--------- 0
+-----1-1---------- 0
+----1--1---------- 0
+---1---1---------- 0
+-----11----------- 0
+----1-1----------- 0
+---1--1----------- 0
+--------------1--- 0
+--1--------------- 0
+-1---------------- 0
+1----------------- 0
+-----------------1 0
+.names keyboard_time1Oms.BLIF keyboard_int_Data0_0_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_int_Data0_0_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button4_d1_q_0_.BLIF button4_d2_q_0_.BLIF button4_d3_q_0_.BLIF \
+button3_d1_q_0_.BLIF button3_d2_q_0_.BLIF button3_d3_q_0_.BLIF \
+button2_d1_q_0_.BLIF button2_d2_q_0_.BLIF button2_d3_q_0_.BLIF \
+button1_d1_q_0_.BLIF button1_d2_q_0_.BLIF button1_d3_q_0_.BLIF \
+keyboard_key_out_0_reg.BLIF keyboard_key_out_1_reg.BLIF \
+keyboard_flag_Data_0_.BLIF keyboard_key_out_2_reg.BLIF \
+keyboard_key_out_3_reg.BLIF keyboard_flag_Data_1_.BLIF \
+keyboard_int_Data0_1_.CE
+000--1000000-00000 1
+000-1-000000-00000 1
+0001--000000-00000 1
+000000--1000-00000 1
+000000-1-000-00000 1
+0000001--000-00000 1
+000--10000000-0000 1
+000-1-0000000-0000 1
+0001--0000000-0000 1
+000000--10000-0000 1
+000000-1-0000-0000 1
+0000001--0000-0000 1
+000--1000000000-00 1
+000-1-000000000-00 1
+0001--000000000-00 1
+000000--1000000-00 1
+000000-1-000000-00 1
+0000001--000000-00 1
+000000000--10000-0 1
+000000000-1-0000-0 1
+0000000001--0000-0 1
+000000000--1-00000 1
+000000000-1--00000 1
+0000000001---00000 1
+000000000--10-0000 1
+000000000-1-0-0000 1
+0000000001--0-0000 1
+000000000--1000-00 1
+000000000-1-000-00 1
+0000000001--000-00 1
+---------000----1- 0
+---000000000------ 0
+-------------1-1-- 0
+------------1--1-- 0
+------------11---- 0
+---------------11- 0
+-------------1--1- 0
+------------1---1- 0
+--------1--1------ 0
+-------1---1------ 0
+------1----1------ 0
+-----1-----1------ 0
+----1------1------ 0
+---1-------1------ 0
+--------1-1------- 0
+-------1--1------- 0
+------1---1------- 0
+-----1----1------- 0
+----1-----1------- 0
+---1------1------- 0
+--------11-------- 0
+-------1-1-------- 0
+------1--1-------- 0
+-----1---1-------- 0
+----1----1-------- 0
+---1-----1-------- 0
+-----1--1--------- 0
+----1---1--------- 0
+---1----1--------- 0
+-----1-1---------- 0
+----1--1---------- 0
+---1---1---------- 0
+-----11----------- 0
+----1-1----------- 0
+---1--1----------- 0
+--------------1--- 0
+--1--------------- 0
+-1---------------- 0
+1----------------- 0
+-----------------1 0
+.names keyboard_time1Oms.BLIF keyboard_int_Data0_1_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_int_Data0_1_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button1_d1_q_0_.BLIF button1_d2_q_0_.BLIF button1_d3_q_0_.BLIF \
+keyboard_key_out_1_reg.BLIF keyboard_key_out_2_reg.BLIF \
+keyboard_int_Data0_2_.D
+---1- 1
+--1-1 1
+-1--1 1
+1---1 1
+0000- 0
+---00 0
+.names button4_d1_q_0_.BLIF button4_d2_q_0_.BLIF button4_d3_q_0_.BLIF \
+button3_d1_q_0_.BLIF button3_d2_q_0_.BLIF button3_d3_q_0_.BLIF \
+button2_d1_q_0_.BLIF button2_d2_q_0_.BLIF button2_d3_q_0_.BLIF \
+button1_d1_q_0_.BLIF button1_d2_q_0_.BLIF button1_d3_q_0_.BLIF \
+keyboard_key_out_0_reg.BLIF keyboard_key_out_1_reg.BLIF \
+keyboard_flag_Data_0_.BLIF keyboard_key_out_2_reg.BLIF \
+keyboard_key_out_3_reg.BLIF keyboard_flag_Data_1_.BLIF \
+keyboard_int_Data0_2_.CE
+000--1000000-00000 1
+000-1-000000-00000 1
+0001--000000-00000 1
+000000--1000-00000 1
+000000-1-000-00000 1
+0000001--000-00000 1
+000--10000000-0000 1
+000-1-0000000-0000 1
+0001--0000000-0000 1
+000000--10000-0000 1
+000000-1-0000-0000 1
+0000001--0000-0000 1
+000--1000000000-00 1
+000-1-000000000-00 1
+0001--000000000-00 1
+000000--1000000-00 1
+000000-1-000000-00 1
+0000001--000000-00 1
+000000000--10000-0 1
+000000000-1-0000-0 1
+0000000001--0000-0 1
+000000000--1-00000 1
+000000000-1--00000 1
+0000000001---00000 1
+000000000--10-0000 1
+000000000-1-0-0000 1
+0000000001--0-0000 1
+000000000--1000-00 1
+000000000-1-000-00 1
+0000000001--000-00 1
+---------000----1- 0
+---000000000------ 0
+-------------1-1-- 0
+------------1--1-- 0
+------------11---- 0
+---------------11- 0
+-------------1--1- 0
+------------1---1- 0
+--------1--1------ 0
+-------1---1------ 0
+------1----1------ 0
+-----1-----1------ 0
+----1------1------ 0
+---1-------1------ 0
+--------1-1------- 0
+-------1--1------- 0
+------1---1------- 0
+-----1----1------- 0
+----1-----1------- 0
+---1------1------- 0
+--------11-------- 0
+-------1-1-------- 0
+------1--1-------- 0
+-----1---1-------- 0
+----1----1-------- 0
+---1-----1-------- 0
+-----1--1--------- 0
+----1---1--------- 0
+---1----1--------- 0
+-----1-1---------- 0
+----1--1---------- 0
+---1---1---------- 0
+-----11----------- 0
+----1-1----------- 0
+---1--1----------- 0
+--------------1--- 0
+--1--------------- 0
+-1---------------- 0
+1----------------- 0
+-----------------1 0
+.names keyboard_time1Oms.BLIF keyboard_int_Data0_2_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_int_Data0_2_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button1_d1_q_0_.BLIF button1_d2_q_0_.BLIF button1_d3_q_0_.BLIF \
+keyboard_key_out_2_reg.BLIF keyboard_int_Data0_3_.D
+0001 1
+--1- 0
+-1-- 0
+1--- 0
+---0 0
+.names button4_d1_q_0_.BLIF button4_d2_q_0_.BLIF button4_d3_q_0_.BLIF \
+button3_d1_q_0_.BLIF button3_d2_q_0_.BLIF button3_d3_q_0_.BLIF \
+button2_d1_q_0_.BLIF button2_d2_q_0_.BLIF button2_d3_q_0_.BLIF \
+button1_d1_q_0_.BLIF button1_d2_q_0_.BLIF button1_d3_q_0_.BLIF \
+keyboard_key_out_0_reg.BLIF keyboard_key_out_1_reg.BLIF \
+keyboard_flag_Data_0_.BLIF keyboard_key_out_2_reg.BLIF \
+keyboard_key_out_3_reg.BLIF keyboard_flag_Data_1_.BLIF \
+keyboard_int_Data0_3_.CE
+000--1000000-00000 1
+000-1-000000-00000 1
+0001--000000-00000 1
+000000--1000-00000 1
+000000-1-000-00000 1
+0000001--000-00000 1
+000--10000000-0000 1
+000-1-0000000-0000 1
+0001--0000000-0000 1
+000000--10000-0000 1
+000000-1-0000-0000 1
+0000001--0000-0000 1
+000--1000000000-00 1
+000-1-000000000-00 1
+0001--000000000-00 1
+000000--1000000-00 1
+000000-1-000000-00 1
+0000001--000000-00 1
+000000000--10000-0 1
+000000000-1-0000-0 1
+0000000001--0000-0 1
+000000000--1-00000 1
+000000000-1--00000 1
+0000000001---00000 1
+000000000--10-0000 1
+000000000-1-0-0000 1
+0000000001--0-0000 1
+000000000--1000-00 1
+000000000-1-000-00 1
+0000000001--000-00 1
+---------000----1- 0
+---000000000------ 0
+-------------1-1-- 0
+------------1--1-- 0
+------------11---- 0
+---------------11- 0
+-------------1--1- 0
+------------1---1- 0
+--------1--1------ 0
+-------1---1------ 0
+------1----1------ 0
+-----1-----1------ 0
+----1------1------ 0
+---1-------1------ 0
+--------1-1------- 0
+-------1--1------- 0
+------1---1------- 0
+-----1----1------- 0
+----1-----1------- 0
+---1------1------- 0
+--------11-------- 0
+-------1-1-------- 0
+------1--1-------- 0
+-----1---1-------- 0
+----1----1-------- 0
+---1-----1-------- 0
+-----1--1--------- 0
+----1---1--------- 0
+---1----1--------- 0
+-----1-1---------- 0
+----1--1---------- 0
+---1---1---------- 0
+-----11----------- 0
+----1-1----------- 0
+---1--1----------- 0
+--------------1--- 0
+--1--------------- 0
+-1---------------- 0
+1----------------- 0
+-----------------1 0
+.names keyboard_time1Oms.BLIF keyboard_int_Data0_3_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_int_Data0_3_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_key_out_0_reg.CE
+-1- 1
+1-- 1
+--1 1
+000 0
+.names keyboard_time1Oms.BLIF keyboard_key_out_0_reg.C
+1 1
+0 0
+.names keyboard_scanvalue_0_.BLIF keyboard_scanvalue_1_.BLIF \
+keyboard_key_out_1_reg.D
+10 1
+0- 0
+-1 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_key_out_1_reg.CE
+-1- 1
+1-- 1
+--1 1
+000 0
+.names keyboard_time1Oms.BLIF keyboard_key_out_1_reg.C
+1 1
+0 0
+.names keyboard_scanvalue_0_.BLIF keyboard_scanvalue_1_.BLIF \
+keyboard_key_out_2_reg.D
+01 1
+1- 0
+-0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_key_out_2_reg.CE
+-1- 1
+1-- 1
+--1 1
+000 0
+.names keyboard_time1Oms.BLIF keyboard_key_out_2_reg.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_key_out_3_reg.CE
+-1- 1
+1-- 1
+--1 1
+000 0
+.names keyboard_time1Oms.BLIF keyboard_key_out_3_reg.C
+1 1
+0 0
+.names clkh.BLIF keyboard_timecnt_12_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_timecnt_12_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names clkh.BLIF keyboard_timecnt_13_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_timecnt_13_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names clkh.BLIF keyboard_timecnt_14_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_timecnt_14_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names clkh.BLIF keyboard_timecnt_15_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_timecnt_15_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_time1Oms.BLIF keyboard_led_0_reg.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_led_0_reg.AP
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_time1Oms.BLIF keyboard_led_1_reg.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_led_1_reg.AP
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_time1Oms.BLIF keyboard_led_2_reg.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_led_2_reg.AP
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_time1Oms.BLIF keyboard_led_3_reg.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_led_3_reg.AP
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_time1Oms.BLIF keyboard_led_4_reg.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_led_4_reg.AP
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button4_d1_q_0_.BLIF button4_d2_q_0_.BLIF button4_d3_q_0_.BLIF \
+button3_d1_q_0_.BLIF keyboard_int_Data1_1_.BLIF button3_d2_q_0_.BLIF \
+keyboard_int_Data1_2_.BLIF button3_d3_q_0_.BLIF keyboard_int_Data1_3_.BLIF \
+button2_d1_q_0_.BLIF button2_d2_q_0_.BLIF button2_d3_q_0_.BLIF \
+button1_d1_q_0_.BLIF button1_d2_q_0_.BLIF button1_d3_q_0_.BLIF \
+keyboard_key_out_0_reg.BLIF keyboard_key_out_1_reg.BLIF \
+keyboard_flag_Data_0_.BLIF keyboard_key_out_2_reg.BLIF \
+keyboard_key_out_3_reg.BLIF keyboard_flag_Data_1_.BLIF \
+keyboard_led_int_Data0_0_.CE
+--100000-0000000010-- 1
+-1-00000-0000000010-- 1
+1--00000-0000000010-- 1
+--10-0-000000000010-- 1
+-1-0-0-000000000010-- 1
+1--0-0-000000000010-- 1
+--10-0-0-0000000010-0 1
+-1-0-0-0-0000000010-0 1
+1--0-0-0-0000000010-0 1
+000----1-000000-0000- 1
+000--1---000000-0000- 1
+0001-----000000-0000- 1
+0000-0-0---1000-0000- 1
+0000-0-0--1-000-0000- 1
+0000-0-0-1--000-0000- 1
+000----1-0000000-000- 1
+000--1---0000000-000- 1
+0001-----0000000-000- 1
+0000-0-0---10000-000- 1
+0000-0-0--1-0000-000- 1
+0000-0-0-1--0000-000- 1
+000----1-000000000-0- 1
+000--1---000000000-0- 1
+0001-----000000000-0- 1
+0000-0-0---1000000-0- 1
+0000-0-0--1-000000-0- 1
+0000-0-0-1--000000-0- 1
+0000-0-0-000--10000-- 1
+0000-0-0-000-1-0000-- 1
+0000-0-0-0001--0000-- 1
+0000-0-0-000--1-0000- 1
+0000-0-0-000-1--0000- 1
+0000-0-0-0001---0000- 1
+0000-0-0-000--10-000- 1
+0000-0-0-000-1-0-000- 1
+0000-0-0-0001--0-000- 1
+0000-0-0-000--1000-0- 1
+0000-0-0-000-1-000-0- 1
+0000-0-0-0001--000-0- 1
+----1---1--------1--1 0
+------1-1--------1--1 0
+0000-0-0-000000------ 0
+------------000--0-1- 0
+------------1----1--- 0
+---1-------------1--- 0
+---------1-------1--- 0
+-------------1---1--- 0
+-----1-----------1--- 0
+----------1------1--- 0
+--------------1--1--- 0
+-------1---------1--- 0
+-----------1-----1--- 0
+1----------------0--- 0
+---------------1-1--- 0
+----------------11--- 0
+-----------------11-- 0
+-1---------------0--- 0
+--1--------------0--- 0
+----------------1-1-- 0
+---------------1--1-- 0
+---------------11---- 0
+------------------11- 0
+----------------1--1- 0
+---------------1---1- 0
+-----------1--1------ 0
+----------1---1------ 0
+---------1----1------ 0
+-------1------1------ 0
+-----1--------1------ 0
+---1----------1------ 0
+-----------1-1------- 0
+----------1--1------- 0
+---------1---1------- 0
+-------1-----1------- 0
+-----1-------1------- 0
+---1---------1------- 0
+-----------11-------- 0
+----------1-1-------- 0
+---------1--1-------- 0
+-------1----1-------- 0
+-----1------1-------- 0
+---1--------1-------- 0
+-------1---1--------- 0
+-----1-----1--------- 0
+---1-------1--------- 0
+-------1--1---------- 0
+-----1----1---------- 0
+---1------1---------- 0
+-------1-1----------- 0
+-----1---1----------- 0
+---1-----1----------- 0
+.names keyboard_time1Oms.BLIF keyboard_led_int_Data0_0_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_led_int_Data0_0_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button4_d1_q_0_.BLIF button4_d2_q_0_.BLIF button4_d3_q_0_.BLIF \
+button3_d1_q_0_.BLIF keyboard_int_Data1_1_.BLIF button3_d2_q_0_.BLIF \
+keyboard_int_Data1_2_.BLIF button3_d3_q_0_.BLIF keyboard_int_Data1_3_.BLIF \
+button2_d1_q_0_.BLIF button2_d2_q_0_.BLIF button2_d3_q_0_.BLIF \
+button1_d1_q_0_.BLIF button1_d2_q_0_.BLIF button1_d3_q_0_.BLIF \
+keyboard_key_out_0_reg.BLIF keyboard_key_out_1_reg.BLIF \
+keyboard_flag_Data_0_.BLIF keyboard_key_out_2_reg.BLIF \
+keyboard_key_out_3_reg.BLIF keyboard_flag_Data_1_.BLIF \
+keyboard_led_int_Data0_1_.CE
+--100000-0000000010-- 1
+-1-00000-0000000010-- 1
+1--00000-0000000010-- 1
+--10-0-000000000010-- 1
+-1-0-0-000000000010-- 1
+1--0-0-000000000010-- 1
+--10-0-0-0000000010-0 1
+-1-0-0-0-0000000010-0 1
+1--0-0-0-0000000010-0 1
+000----1-000000-0000- 1
+000--1---000000-0000- 1
+0001-----000000-0000- 1
+0000-0-0---1000-0000- 1
+0000-0-0--1-000-0000- 1
+0000-0-0-1--000-0000- 1
+000----1-0000000-000- 1
+000--1---0000000-000- 1
+0001-----0000000-000- 1
+0000-0-0---10000-000- 1
+0000-0-0--1-0000-000- 1
+0000-0-0-1--0000-000- 1
+000----1-000000000-0- 1
+000--1---000000000-0- 1
+0001-----000000000-0- 1
+0000-0-0---1000000-0- 1
+0000-0-0--1-000000-0- 1
+0000-0-0-1--000000-0- 1
+0000-0-0-000--10000-- 1
+0000-0-0-000-1-0000-- 1
+0000-0-0-0001--0000-- 1
+0000-0-0-000--1-0000- 1
+0000-0-0-000-1--0000- 1
+0000-0-0-0001---0000- 1
+0000-0-0-000--10-000- 1
+0000-0-0-000-1-0-000- 1
+0000-0-0-0001--0-000- 1
+0000-0-0-000--1000-0- 1
+0000-0-0-000-1-000-0- 1
+0000-0-0-0001--000-0- 1
+----1---1--------1--1 0
+------1-1--------1--1 0
+0000-0-0-000000------ 0
+------------000--0-1- 0
+------------1----1--- 0
+---1-------------1--- 0
+---------1-------1--- 0
+-------------1---1--- 0
+-----1-----------1--- 0
+----------1------1--- 0
+--------------1--1--- 0
+-------1---------1--- 0
+-----------1-----1--- 0
+1----------------0--- 0
+---------------1-1--- 0
+----------------11--- 0
+-----------------11-- 0
+-1---------------0--- 0
+--1--------------0--- 0
+----------------1-1-- 0
+---------------1--1-- 0
+---------------11---- 0
+------------------11- 0
+----------------1--1- 0
+---------------1---1- 0
+-----------1--1------ 0
+----------1---1------ 0
+---------1----1------ 0
+-------1------1------ 0
+-----1--------1------ 0
+---1----------1------ 0
+-----------1-1------- 0
+----------1--1------- 0
+---------1---1------- 0
+-------1-----1------- 0
+-----1-------1------- 0
+---1---------1------- 0
+-----------11-------- 0
+----------1-1-------- 0
+---------1--1-------- 0
+-------1----1-------- 0
+-----1------1-------- 0
+---1--------1-------- 0
+-------1---1--------- 0
+-----1-----1--------- 0
+---1-------1--------- 0
+-------1--1---------- 0
+-----1----1---------- 0
+---1------1---------- 0
+-------1-1----------- 0
+-----1---1----------- 0
+---1-----1----------- 0
+.names keyboard_time1Oms.BLIF keyboard_led_int_Data0_1_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_led_int_Data0_1_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button4_d1_q_0_.BLIF button4_d2_q_0_.BLIF button4_d3_q_0_.BLIF \
+button3_d1_q_0_.BLIF keyboard_int_Data1_1_.BLIF button3_d2_q_0_.BLIF \
+keyboard_int_Data1_2_.BLIF button3_d3_q_0_.BLIF keyboard_int_Data1_3_.BLIF \
+button2_d1_q_0_.BLIF button2_d2_q_0_.BLIF button2_d3_q_0_.BLIF \
+button1_d1_q_0_.BLIF button1_d2_q_0_.BLIF button1_d3_q_0_.BLIF \
+keyboard_key_out_0_reg.BLIF keyboard_key_out_1_reg.BLIF \
+keyboard_flag_Data_0_.BLIF keyboard_key_out_2_reg.BLIF \
+keyboard_key_out_3_reg.BLIF keyboard_flag_Data_1_.BLIF \
+keyboard_led_int_Data0_2_.CE
+--100000-0000000010-- 1
+-1-00000-0000000010-- 1
+1--00000-0000000010-- 1
+--10-0-000000000010-- 1
+-1-0-0-000000000010-- 1
+1--0-0-000000000010-- 1
+--10-0-0-0000000010-0 1
+-1-0-0-0-0000000010-0 1
+1--0-0-0-0000000010-0 1
+000----1-000000-0000- 1
+000--1---000000-0000- 1
+0001-----000000-0000- 1
+0000-0-0---1000-0000- 1
+0000-0-0--1-000-0000- 1
+0000-0-0-1--000-0000- 1
+000----1-0000000-000- 1
+000--1---0000000-000- 1
+0001-----0000000-000- 1
+0000-0-0---10000-000- 1
+0000-0-0--1-0000-000- 1
+0000-0-0-1--0000-000- 1
+000----1-000000000-0- 1
+000--1---000000000-0- 1
+0001-----000000000-0- 1
+0000-0-0---1000000-0- 1
+0000-0-0--1-000000-0- 1
+0000-0-0-1--000000-0- 1
+0000-0-0-000--10000-- 1
+0000-0-0-000-1-0000-- 1
+0000-0-0-0001--0000-- 1
+0000-0-0-000--1-0000- 1
+0000-0-0-000-1--0000- 1
+0000-0-0-0001---0000- 1
+0000-0-0-000--10-000- 1
+0000-0-0-000-1-0-000- 1
+0000-0-0-0001--0-000- 1
+0000-0-0-000--1000-0- 1
+0000-0-0-000-1-000-0- 1
+0000-0-0-0001--000-0- 1
+----1---1--------1--1 0
+------1-1--------1--1 0
+0000-0-0-000000------ 0
+------------000--0-1- 0
+------------1----1--- 0
+---1-------------1--- 0
+---------1-------1--- 0
+-------------1---1--- 0
+-----1-----------1--- 0
+----------1------1--- 0
+--------------1--1--- 0
+-------1---------1--- 0
+-----------1-----1--- 0
+1----------------0--- 0
+---------------1-1--- 0
+----------------11--- 0
+-----------------11-- 0
+-1---------------0--- 0
+--1--------------0--- 0
+----------------1-1-- 0
+---------------1--1-- 0
+---------------11---- 0
+------------------11- 0
+----------------1--1- 0
+---------------1---1- 0
+-----------1--1------ 0
+----------1---1------ 0
+---------1----1------ 0
+-------1------1------ 0
+-----1--------1------ 0
+---1----------1------ 0
+-----------1-1------- 0
+----------1--1------- 0
+---------1---1------- 0
+-------1-----1------- 0
+-----1-------1------- 0
+---1---------1------- 0
+-----------11-------- 0
+----------1-1-------- 0
+---------1--1-------- 0
+-------1----1-------- 0
+-----1------1-------- 0
+---1--------1-------- 0
+-------1---1--------- 0
+-----1-----1--------- 0
+---1-------1--------- 0
+-------1--1---------- 0
+-----1----1---------- 0
+---1------1---------- 0
+-------1-1----------- 0
+-----1---1----------- 0
+---1-----1----------- 0
+.names keyboard_time1Oms.BLIF keyboard_led_int_Data0_2_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_led_int_Data0_2_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button4_d1_q_0_.BLIF button4_d2_q_0_.BLIF button4_d3_q_0_.BLIF \
+button3_d1_q_0_.BLIF keyboard_int_Data1_1_.BLIF button3_d2_q_0_.BLIF \
+keyboard_int_Data1_2_.BLIF button3_d3_q_0_.BLIF keyboard_int_Data1_3_.BLIF \
+button2_d1_q_0_.BLIF button2_d2_q_0_.BLIF button2_d3_q_0_.BLIF \
+button1_d1_q_0_.BLIF button1_d2_q_0_.BLIF button1_d3_q_0_.BLIF \
+keyboard_key_out_0_reg.BLIF keyboard_key_out_1_reg.BLIF \
+keyboard_flag_Data_0_.BLIF keyboard_key_out_2_reg.BLIF \
+keyboard_key_out_3_reg.BLIF keyboard_flag_Data_1_.BLIF \
+keyboard_led_int_Data0_3_.CE
+--100000-0000000010-- 1
+-1-00000-0000000010-- 1
+1--00000-0000000010-- 1
+--10-0-000000000010-- 1
+-1-0-0-000000000010-- 1
+1--0-0-000000000010-- 1
+--10-0-0-0000000010-0 1
+-1-0-0-0-0000000010-0 1
+1--0-0-0-0000000010-0 1
+000----1-000000-0000- 1
+000--1---000000-0000- 1
+0001-----000000-0000- 1
+0000-0-0---1000-0000- 1
+0000-0-0--1-000-0000- 1
+0000-0-0-1--000-0000- 1
+000----1-0000000-000- 1
+000--1---0000000-000- 1
+0001-----0000000-000- 1
+0000-0-0---10000-000- 1
+0000-0-0--1-0000-000- 1
+0000-0-0-1--0000-000- 1
+000----1-000000000-0- 1
+000--1---000000000-0- 1
+0001-----000000000-0- 1
+0000-0-0---1000000-0- 1
+0000-0-0--1-000000-0- 1
+0000-0-0-1--000000-0- 1
+0000-0-0-000--10000-- 1
+0000-0-0-000-1-0000-- 1
+0000-0-0-0001--0000-- 1
+0000-0-0-000--1-0000- 1
+0000-0-0-000-1--0000- 1
+0000-0-0-0001---0000- 1
+0000-0-0-000--10-000- 1
+0000-0-0-000-1-0-000- 1
+0000-0-0-0001--0-000- 1
+0000-0-0-000--1000-0- 1
+0000-0-0-000-1-000-0- 1
+0000-0-0-0001--000-0- 1
+----1---1--------1--1 0
+------1-1--------1--1 0
+0000-0-0-000000------ 0
+------------000--0-1- 0
+------------1----1--- 0
+---1-------------1--- 0
+---------1-------1--- 0
+-------------1---1--- 0
+-----1-----------1--- 0
+----------1------1--- 0
+--------------1--1--- 0
+-------1---------1--- 0
+-----------1-----1--- 0
+1----------------0--- 0
+---------------1-1--- 0
+----------------11--- 0
+-----------------11-- 0
+-1---------------0--- 0
+--1--------------0--- 0
+----------------1-1-- 0
+---------------1--1-- 0
+---------------11---- 0
+------------------11- 0
+----------------1--1- 0
+---------------1---1- 0
+-----------1--1------ 0
+----------1---1------ 0
+---------1----1------ 0
+-------1------1------ 0
+-----1--------1------ 0
+---1----------1------ 0
+-----------1-1------- 0
+----------1--1------- 0
+---------1---1------- 0
+-------1-----1------- 0
+-----1-------1------- 0
+---1---------1------- 0
+-----------11-------- 0
+----------1-1-------- 0
+---------1--1-------- 0
+-------1----1-------- 0
+-----1------1-------- 0
+---1--------1-------- 0
+-------1---1--------- 0
+-----1-----1--------- 0
+---1-------1--------- 0
+-------1--1---------- 0
+-----1----1---------- 0
+---1------1---------- 0
+-------1-1----------- 0
+-----1---1----------- 0
+---1-----1----------- 0
+.names keyboard_time1Oms.BLIF keyboard_led_int_Data0_3_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_led_int_Data0_3_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_int_Data0_0_.BLIF keyboard_led_int_Data1_0_.D
+1 1
+0 0
+.names button4_d1_q_0_.BLIF button4_d2_q_0_.BLIF keyboard_int_Data0_3_.BLIF \
+button4_d3_q_0_.BLIF button3_d1_q_0_.BLIF button3_d2_q_0_.BLIF \
+button3_d3_q_0_.BLIF button2_d1_q_0_.BLIF button2_d2_q_0_.BLIF \
+keyboard_int_Data0_1_.BLIF button2_d3_q_0_.BLIF keyboard_int_Data0_2_.BLIF \
+button1_d1_q_0_.BLIF button1_d2_q_0_.BLIF button1_d3_q_0_.BLIF \
+keyboard_key_out_0_reg.BLIF keyboard_key_out_1_reg.BLIF \
+keyboard_flag_Data_0_.BLIF keyboard_key_out_2_reg.BLIF \
+keyboard_flag_Data_1_.BLIF keyboard_led_int_Data1_0_.CE
+---10000000000000100 1
+-1--0000000000000100 1
+1---0000000000000100 1
+--0100000-0-00000100 1
+-10-00000-0-00000100 1
+1-0-00000-0-00000100 1
+00-0---------------- 0
+--1--------1-------- 0
+--1------1---------- 0
+------------------1- 0
+-----------------0-- 0
+----------------1--- 0
+---------------1---- 0
+--------------1----- 0
+-------------1------ 0
+------------1------- 0
+----------1--------- 0
+--------1----------- 0
+-------1------------ 0
+------1------------- 0
+-----1-------------- 0
+----1--------------- 0
+-------------------1 0
+.names keyboard_time1Oms.BLIF keyboard_led_int_Data1_0_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_led_int_Data1_0_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_int_Data0_1_.BLIF keyboard_led_int_Data1_1_.D
+1 1
+0 0
+.names button4_d1_q_0_.BLIF button4_d2_q_0_.BLIF keyboard_int_Data0_3_.BLIF \
+button4_d3_q_0_.BLIF button3_d1_q_0_.BLIF button3_d2_q_0_.BLIF \
+button3_d3_q_0_.BLIF button2_d1_q_0_.BLIF button2_d2_q_0_.BLIF \
+keyboard_int_Data0_1_.BLIF button2_d3_q_0_.BLIF keyboard_int_Data0_2_.BLIF \
+button1_d1_q_0_.BLIF button1_d2_q_0_.BLIF button1_d3_q_0_.BLIF \
+keyboard_key_out_0_reg.BLIF keyboard_key_out_1_reg.BLIF \
+keyboard_flag_Data_0_.BLIF keyboard_key_out_2_reg.BLIF \
+keyboard_flag_Data_1_.BLIF keyboard_led_int_Data1_1_.CE
+---10000000000000100 1
+-1--0000000000000100 1
+1---0000000000000100 1
+--0100000-0-00000100 1
+-10-00000-0-00000100 1
+1-0-00000-0-00000100 1
+00-0---------------- 0
+--1--------1-------- 0
+--1------1---------- 0
+------------------1- 0
+-----------------0-- 0
+----------------1--- 0
+---------------1---- 0
+--------------1----- 0
+-------------1------ 0
+------------1------- 0
+----------1--------- 0
+--------1----------- 0
+-------1------------ 0
+------1------------- 0
+-----1-------------- 0
+----1--------------- 0
+-------------------1 0
+.names keyboard_time1Oms.BLIF keyboard_led_int_Data1_1_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_led_int_Data1_1_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button2_d1_q_0_.BLIF button2_d2_q_0_.BLIF button2_d3_q_0_.BLIF \
+keyboard_combvalue_5_.D
+-1- 1
+1-- 1
+--1 1
+000 0
+.names keyboard_time1Oms.BLIF keyboard_combvalue_5_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_combvalue_5_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button3_d1_q_0_.BLIF button3_d2_q_0_.BLIF button3_d3_q_0_.BLIF \
+keyboard_combvalue_6_.D
+-1- 1
+1-- 1
+--1 1
+000 0
+.names keyboard_time1Oms.BLIF keyboard_combvalue_6_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_combvalue_6_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button4_d1_q_0_.BLIF button4_d2_q_0_.BLIF button4_d3_q_0_.BLIF \
+keyboard_combvalue_7_.D
+-1- 1
+1-- 1
+--1 1
+000 0
+.names keyboard_time1Oms.BLIF keyboard_combvalue_7_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_combvalue_7_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names clkh.BLIF keyboard_timecnt_0_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_timecnt_0_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_timecnt_0_.BLIF keyboard_timecnt_1_.BLIF keyboard_timecnt_1_.D
+10 1
+01 1
+00 0
+11 0
+.names clkh.BLIF keyboard_timecnt_1_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_timecnt_1_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_timecnt_0_.BLIF keyboard_timecnt_1_.BLIF \
+keyboard_timecnt_2_.BLIF keyboard_timecnt_2_.D
+110 1
+-01 1
+0-1 1
+111 0
+-00 0
+0-0 0
+.names clkh.BLIF keyboard_timecnt_2_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_timecnt_2_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_timecnt_0_.BLIF keyboard_timecnt_1_.BLIF \
+keyboard_timecnt_2_.BLIF keyboard_timecnt_3_.BLIF keyboard_timecnt_3_.D
+1110 1
+--01 1
+-0-1 1
+0--1 1
+1111 0
+--00 0
+-0-0 0
+0--0 0
+.names clkh.BLIF keyboard_timecnt_3_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_timecnt_3_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names clkh.BLIF keyboard_timecnt_4_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_timecnt_4_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names clkh.BLIF keyboard_timecnt_5_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_timecnt_5_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names clkh.BLIF keyboard_timecnt_6_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_timecnt_6_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names clkh.BLIF keyboard_timecnt_7_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_timecnt_7_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names clkh.BLIF keyboard_timecnt_8_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_timecnt_8_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names clkh.BLIF keyboard_timecnt_9_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_timecnt_9_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names clkh.BLIF keyboard_timecnt_10_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_timecnt_10_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names clkh.BLIF keyboard_timecnt_11_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_timecnt_11_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_key_out_0_reg.BLIF keyboard_combvalue_0_.D
+1 1
+0 0
+.names keyboard_time1Oms.BLIF keyboard_combvalue_0_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_combvalue_0_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_key_out_1_reg.BLIF keyboard_combvalue_1_.D
+1 1
+0 0
+.names keyboard_time1Oms.BLIF keyboard_combvalue_1_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_combvalue_1_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_key_out_2_reg.BLIF keyboard_combvalue_2_.D
+1 1
+0 0
+.names keyboard_time1Oms.BLIF keyboard_combvalue_2_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_combvalue_2_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_key_out_3_reg.BLIF keyboard_combvalue_3_.D
+1 1
+0 0
+.names keyboard_time1Oms.BLIF keyboard_combvalue_3_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_combvalue_3_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button1_d1_q_0_.BLIF button1_d2_q_0_.BLIF button1_d3_q_0_.BLIF \
+keyboard_combvalue_4_.D
+-1- 1
+1-- 1
+--1 1
+000 0
+.names keyboard_time1Oms.BLIF keyboard_combvalue_4_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_combvalue_4_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names clkh.BLIF keyboard_time1Oms.C
+1 1
+0 0
+.names clkh.BLIF i2c_eeprom_state_1_.C
+1 1
+0 0
+.names reset.BLIF i2c_eeprom_state_1_.AR
+0 1
+1 0
+.names clkh.BLIF i2c_eeprom_state_0_.C
+1 1
+0 0
+.names reset.BLIF i2c_eeprom_state_0_.AR
+0 1
+1 0
+.names reset.BLIF i2c_bit_state_1_.CE
+1 1
+0 0
+.names clkh.BLIF i2c_bit_state_1_.C
+1 1
+0 0
+.names reset.BLIF i2c_bit_state_2_.CE
+1 1
+0 0
+.names clkh.BLIF i2c_bit_state_2_.C
+1 1
+0 0
+.names reset.BLIF i2c_bit_state_3_.CE
+1 1
+0 0
+.names clkh.BLIF i2c_bit_state_3_.C
+1 1
+0 0
+.names reset.BLIF i2c_bit_state_4_.CE
+1 1
+0 0
+.names clkh.BLIF i2c_bit_state_4_.C
+1 1
+0 0
+.names reset.BLIF i2c_bit_state_5_.CE
+1 1
+0 0
+.names clkh.BLIF i2c_bit_state_5_.C
+1 1
+0 0
+.names reset.BLIF i2c_bit_state_0_.CE
+1 1
+0 0
+.names clkh.BLIF i2c_bit_state_0_.C
+1 1
+0 0
+.names keyboard_led_int_Data1_2_.BLIF i2c_WrData_6_.D
+1 1
+0 0
+.names reset.BLIF i2c_eeprom_state_0_.BLIF i2c_eeprom_state_1_.BLIF \
+i2c_WrData_6_.CE
+100 1
+-1- 0
+0-- 0
+--1 0
+.names clkh.BLIF i2c_WrData_6_.C
+1 1
+0 0
+.names keyboard_led_int_Data1_3_.BLIF i2c_WrData_7_.D
+1 1
+0 0
+.names reset.BLIF i2c_eeprom_state_0_.BLIF i2c_eeprom_state_1_.BLIF \
+i2c_WrData_7_.CE
+100 1
+-1- 0
+0-- 0
+--1 0
+.names clkh.BLIF i2c_WrData_7_.C
+1 1
+0 0
+.names reset.BLIF i2c_phase3.BLIF i2c_bit_state_0_.BLIF i2c_bit_state_1_.BLIF \
+i2c_bit_state_2_.BLIF i2c_bit_state_3_.BLIF i2c_bit_state_4_.BLIF \
+i2c_bit_state_5_.BLIF i2c_eeprom_state_0_.BLIF i2c_eeprom_state_1_.BLIF \
+i2c_DataLED2_0_.CE
+110100101- 1
+11-01--1-1 1
+--1----0-- 0
+---0---0-- 0
+---11----- 0
+-----1-0-- 0
+---0-----0 0
+----0--1-- 0
+---1----0- 0
+------00-- 0
+-0-------- 0
+0--------- 0
+.names clkh.BLIF i2c_DataLED2_0_.C
+1 1
+0 0
+.names reset.BLIF i2c_phase3.BLIF i2c_bit_state_0_.BLIF i2c_bit_state_1_.BLIF \
+i2c_bit_state_2_.BLIF i2c_bit_state_3_.BLIF i2c_bit_state_4_.BLIF \
+i2c_bit_state_5_.BLIF i2c_eeprom_state_0_.BLIF i2c_eeprom_state_1_.BLIF \
+i2c_DataLED2_1_.CE
+110100101- 1
+11-01--1-1 1
+---0---0-- 0
+--1----0-- 0
+-----1-0-- 0
+------00-- 0
+----0--1-- 0
+---11----- 0
+---0-----0 0
+-------00- 0
+-0-------- 0
+0--------- 0
+.names clkh.BLIF i2c_DataLED2_1_.C
+1 1
+0 0
+.names reset.BLIF i2c_phase3.BLIF i2c_bit_state_0_.BLIF i2c_bit_state_1_.BLIF \
+i2c_bit_state_2_.BLIF i2c_bit_state_3_.BLIF i2c_bit_state_4_.BLIF \
+i2c_bit_state_5_.BLIF i2c_eeprom_state_0_.BLIF i2c_eeprom_state_1_.BLIF \
+i2c_DataLED2_2_.CE
+110100101- 1
+11-01--1-1 1
+--1----0-- 0
+---0---0-- 0
+---11----- 0
+-----1-0-- 0
+---0-----0 0
+----0--1-- 0
+---1----0- 0
+------00-- 0
+-0-------- 0
+0--------- 0
+.names clkh.BLIF i2c_DataLED2_2_.C
+1 1
+0 0
+.names reset.BLIF i2c_phase3.BLIF i2c_bit_state_0_.BLIF i2c_bit_state_1_.BLIF \
+i2c_bit_state_2_.BLIF i2c_bit_state_3_.BLIF i2c_bit_state_4_.BLIF \
+i2c_bit_state_5_.BLIF i2c_eeprom_state_0_.BLIF i2c_eeprom_state_1_.BLIF \
+i2c_DataLED2_3_.CE
+110100101- 1
+11-01--1-1 1
+---0---0-- 0
+--1----0-- 0
+-----1-0-- 0
+------00-- 0
+----0--1-- 0
+---11----- 0
+---0-----0 0
+-------00- 0
+-0-------- 0
+0--------- 0
+.names clkh.BLIF i2c_DataLED2_3_.C
+1 1
+0 0
+.names reset.BLIF i2c_phase3.BLIF i2c_bit_state_0_.BLIF i2c_bit_state_1_.BLIF \
+i2c_bit_state_2_.BLIF i2c_bit_state_3_.BLIF i2c_bit_state_4_.BLIF \
+i2c_bit_state_5_.BLIF i2c_eeprom_state_0_.BLIF i2c_eeprom_state_1_.BLIF \
+i2c_DataLED_0_.CE
+110100101- 1
+11-01--1-1 1
+--1----0-- 0
+---0---0-- 0
+---11----- 0
+-----1-0-- 0
+---0-----0 0
+----0--1-- 0
+---1----0- 0
+------00-- 0
+-0-------- 0
+0--------- 0
+.names clkh.BLIF i2c_DataLED_0_.C
+1 1
+0 0
+.names reset.BLIF i2c_phase3.BLIF i2c_bit_state_0_.BLIF i2c_bit_state_1_.BLIF \
+i2c_bit_state_2_.BLIF i2c_bit_state_3_.BLIF i2c_bit_state_4_.BLIF \
+i2c_bit_state_5_.BLIF i2c_eeprom_state_0_.BLIF i2c_eeprom_state_1_.BLIF \
+i2c_DataLED_1_.CE
+110100101- 1
+11-01--1-1 1
+---0---0-- 0
+--1----0-- 0
+-----1-0-- 0
+------00-- 0
+----0--1-- 0
+---11----- 0
+---0-----0 0
+-------00- 0
+-0-------- 0
+0--------- 0
+.names clkh.BLIF i2c_DataLED_1_.C
+1 1
+0 0
+.names reset.BLIF i2c_phase3.BLIF i2c_bit_state_0_.BLIF i2c_bit_state_1_.BLIF \
+i2c_bit_state_2_.BLIF i2c_bit_state_3_.BLIF i2c_bit_state_4_.BLIF \
+i2c_bit_state_5_.BLIF i2c_eeprom_state_0_.BLIF i2c_eeprom_state_1_.BLIF \
+i2c_DataLED_2_.CE
+110100101- 1
+11-01--1-1 1
+--1----0-- 0
+---0---0-- 0
+---11----- 0
+-----1-0-- 0
+---0-----0 0
+----0--1-- 0
+---1----0- 0
+------00-- 0
+-0-------- 0
+0--------- 0
+.names clkh.BLIF i2c_DataLED_2_.C
+1 1
+0 0
+.names reset.BLIF i2c_phase3.BLIF i2c_bit_state_0_.BLIF i2c_bit_state_1_.BLIF \
+i2c_bit_state_2_.BLIF i2c_bit_state_3_.BLIF i2c_bit_state_4_.BLIF \
+i2c_bit_state_5_.BLIF i2c_eeprom_state_0_.BLIF i2c_eeprom_state_1_.BLIF \
+i2c_DataLED_3_.CE
+110100101- 1
+11-01--1-1 1
+---0---0-- 0
+--1----0-- 0
+-----1-0-- 0
+------00-- 0
+----0--1-- 0
+---11----- 0
+---0-----0 0
+-------00- 0
+-0-------- 0
+0--------- 0
+.names clkh.BLIF i2c_DataLED_3_.C
+1 1
+0 0
+.names keyboard_led_int_Data0_0_.BLIF i2c_WrData_0_.D
+1 1
+0 0
+.names reset.BLIF i2c_eeprom_state_0_.BLIF i2c_eeprom_state_1_.BLIF \
+i2c_WrData_0_.CE
+100 1
+-1- 0
+0-- 0
+--1 0
+.names clkh.BLIF i2c_WrData_0_.C
+1 1
+0 0
+.names keyboard_led_int_Data0_1_.BLIF i2c_WrData_1_.D
+1 1
+0 0
+.names reset.BLIF i2c_eeprom_state_0_.BLIF i2c_eeprom_state_1_.BLIF \
+i2c_WrData_1_.CE
+100 1
+-1- 0
+0-- 0
+--1 0
+.names clkh.BLIF i2c_WrData_1_.C
+1 1
+0 0
+.names keyboard_led_int_Data0_2_.BLIF i2c_WrData_2_.D
+1 1
+0 0
+.names reset.BLIF i2c_eeprom_state_0_.BLIF i2c_eeprom_state_1_.BLIF \
+i2c_WrData_2_.CE
+100 1
+-1- 0
+0-- 0
+--1 0
+.names clkh.BLIF i2c_WrData_2_.C
+1 1
+0 0
+.names keyboard_led_int_Data0_3_.BLIF i2c_WrData_3_.D
+1 1
+0 0
+.names reset.BLIF i2c_eeprom_state_0_.BLIF i2c_eeprom_state_1_.BLIF \
+i2c_WrData_3_.CE
+100 1
+-1- 0
+0-- 0
+--1 0
+.names clkh.BLIF i2c_WrData_3_.C
+1 1
+0 0
+.names keyboard_led_int_Data1_0_.BLIF i2c_WrData_4_.D
+1 1
+0 0
+.names reset.BLIF i2c_eeprom_state_0_.BLIF i2c_eeprom_state_1_.BLIF \
+i2c_WrData_4_.CE
+100 1
+-1- 0
+0-- 0
+--1 0
+.names clkh.BLIF i2c_WrData_4_.C
+1 1
+0 0
+.names keyboard_led_int_Data1_1_.BLIF i2c_WrData_5_.D
+1 1
+0 0
+.names reset.BLIF i2c_eeprom_state_0_.BLIF i2c_eeprom_state_1_.BLIF \
+i2c_WrData_5_.CE
+100 1
+-1- 0
+0-- 0
+--1 0
+.names clkh.BLIF i2c_WrData_5_.C
+1 1
+0 0
+.names reset.BLIF i2c_bit_state_0_.BLIF i2c_bit_state_1_.BLIF \
+i2c_bit_state_2_.BLIF i2c_bit_state_3_.BLIF i2c_bit_state_4_.BLIF \
+i2c_bit_state_5_.BLIF i2c_eeprom_state_0_.BLIF i2c_eeprom_state_1_.BLIF \
+i2c_RdData_0_.CE
+10--0110- 1
+1-0001-0- 1
+11-001-0- 1
+1------00 1
+-01---0-1 0
+-1-1----1 0
+---1--0-1 0
+-------1- 0
+0-------- 0
+-----0--1 0
+----1---1 0
+.names clkh.BLIF i2c_RdData_0_.C
+1 1
+0 0
+.names reset.BLIF i2c_bit_state_0_.BLIF i2c_bit_state_1_.BLIF \
+i2c_bit_state_2_.BLIF i2c_bit_state_3_.BLIF i2c_bit_state_4_.BLIF \
+i2c_bit_state_5_.BLIF i2c_eeprom_state_0_.BLIF i2c_eeprom_state_1_.BLIF \
+i2c_RdData_1_.CE
+10--0110- 1
+1-0001-0- 1
+11-001-0- 1
+1------00 1
+-01---0-1 0
+-1-1----1 0
+---1--0-1 0
+-------1- 0
+0-------- 0
+-----0--1 0
+----1---1 0
+.names clkh.BLIF i2c_RdData_1_.C
+1 1
+0 0
+.names reset.BLIF i2c_bit_state_0_.BLIF i2c_bit_state_1_.BLIF \
+i2c_bit_state_2_.BLIF i2c_bit_state_3_.BLIF i2c_bit_state_4_.BLIF \
+i2c_bit_state_5_.BLIF i2c_eeprom_state_0_.BLIF i2c_eeprom_state_1_.BLIF \
+i2c_RdData_2_.CE
+10--0110- 1
+1-0001-0- 1
+11-001-0- 1
+1------00 1
+-01---0-1 0
+-1-1----1 0
+---1--0-1 0
+-------1- 0
+0-------- 0
+-----0--1 0
+----1---1 0
+.names clkh.BLIF i2c_RdData_2_.C
+1 1
+0 0
+.names reset.BLIF i2c_bit_state_0_.BLIF i2c_bit_state_1_.BLIF \
+i2c_bit_state_2_.BLIF i2c_bit_state_3_.BLIF i2c_bit_state_4_.BLIF \
+i2c_bit_state_5_.BLIF i2c_eeprom_state_0_.BLIF i2c_eeprom_state_1_.BLIF \
+i2c_RdData_3_.CE
+10--0110- 1
+1-0001-0- 1
+11-001-0- 1
+1------00 1
+-01---0-1 0
+-1-1----1 0
+---1--0-1 0
+-------1- 0
+0-------- 0
+-----0--1 0
+----1---1 0
+.names clkh.BLIF i2c_RdData_3_.C
+1 1
+0 0
+.names reset.BLIF i2c_bit_state_0_.BLIF i2c_bit_state_1_.BLIF \
+i2c_bit_state_2_.BLIF i2c_bit_state_3_.BLIF i2c_bit_state_4_.BLIF \
+i2c_bit_state_5_.BLIF i2c_eeprom_state_0_.BLIF i2c_eeprom_state_1_.BLIF \
+i2c_RdData_4_.CE
+10--0110- 1
+1-0001-0- 1
+11-001-0- 1
+1------00 1
+-01---0-1 0
+-1-1----1 0
+---1--0-1 0
+-------1- 0
+0-------- 0
+-----0--1 0
+----1---1 0
+.names clkh.BLIF i2c_RdData_4_.C
+1 1
+0 0
+.names reset.BLIF i2c_bit_state_0_.BLIF i2c_bit_state_1_.BLIF \
+i2c_bit_state_2_.BLIF i2c_bit_state_3_.BLIF i2c_bit_state_4_.BLIF \
+i2c_bit_state_5_.BLIF i2c_eeprom_state_0_.BLIF i2c_eeprom_state_1_.BLIF \
+i2c_RdData_5_.CE
+10--0110- 1
+1-0001-0- 1
+11-001-0- 1
+1------00 1
+-01---0-1 0
+-1-1----1 0
+---1--0-1 0
+-------1- 0
+0-------- 0
+-----0--1 0
+----1---1 0
+.names clkh.BLIF i2c_RdData_5_.C
+1 1
+0 0
+.names reset.BLIF i2c_bit_state_0_.BLIF i2c_bit_state_1_.BLIF \
+i2c_bit_state_2_.BLIF i2c_bit_state_3_.BLIF i2c_bit_state_4_.BLIF \
+i2c_bit_state_5_.BLIF i2c_eeprom_state_0_.BLIF i2c_eeprom_state_1_.BLIF \
+i2c_RdData_6_.CE
+10--0110- 1
+1-0001-0- 1
+11-001-0- 1
+1------00 1
+-01---0-1 0
+-1-1----1 0
+---1--0-1 0
+-------1- 0
+0-------- 0
+-----0--1 0
+----1---1 0
+.names clkh.BLIF i2c_RdData_6_.C
+1 1
+0 0
+.names reset.BLIF i2c_bit_state_0_.BLIF i2c_bit_state_1_.BLIF \
+i2c_bit_state_2_.BLIF i2c_bit_state_3_.BLIF i2c_bit_state_4_.BLIF \
+i2c_bit_state_5_.BLIF i2c_eeprom_state_0_.BLIF i2c_eeprom_state_1_.BLIF \
+i2c_RdData_7_.CE
+10--0110- 1
+1-0001-0- 1
+11-001-0- 1
+1------00 1
+-01---0-1 0
+-1-1----1 0
+---1--0-1 0
+-------1- 0
+0-------- 0
+-----0--1 0
+----1---1 0
+.names clkh.BLIF i2c_RdData_7_.C
+1 1
+0 0
+.names clkh.BLIF i2c_key_delay_0_.C
+1 1
+0 0
+.names reset.BLIF i2c_key_delay_0_.AR
+0 1
+1 0
+.names clkh.BLIF i2c_key_delay_1_.C
+1 1
+0 0
+.names reset.BLIF i2c_key_delay_1_.AR
+0 1
+1 0
+.names i2c_key_delay_0_.BLIF i2c_key_delay_1_.BLIF i2c_key_delay_2_.BLIF \
+i2c_key_delay_2_.D
+110 1
+-01 1
+0-1 1
+111 0
+-00 0
+0-0 0
+.names clkh.BLIF i2c_key_delay_2_.C
+1 1
+0 0
+.names reset.BLIF i2c_key_delay_2_.AR
+0 1
+1 0
+.names i2c_key_delay_0_.BLIF i2c_key_delay_1_.BLIF i2c_key_delay_2_.BLIF \
+i2c_key_delay_3_.BLIF i2c_key_delay_3_.D
+1110 1
+--01 1
+-0-1 1
+0--1 1
+1111 0
+--00 0
+-0-0 0
+0--0 0
+.names clkh.BLIF i2c_key_delay_3_.C
+1 1
+0 0
+.names reset.BLIF i2c_key_delay_3_.AR
+0 1
+1 0
+.names clkh.BLIF i2c_key_delay_4_.C
+1 1
+0 0
+.names reset.BLIF i2c_key_delay_4_.AR
+0 1
+1 0
+.names clkh.BLIF i2c_key_delay_5_.C
+1 1
+0 0
+.names reset.BLIF i2c_key_delay_5_.AR
+0 1
+1 0
+.names clkh.BLIF i2c_key_delay_6_.C
+1 1
+0 0
+.names reset.BLIF i2c_key_delay_6_.AR
+0 1
+1 0
+.names clkh.BLIF i2c_key_delay_7_.C
+1 1
+0 0
+.names reset.BLIF i2c_key_delay_7_.AR
+0 1
+1 0
+.names clkh.BLIF i2c_key_delay_8_.C
+1 1
+0 0
+.names reset.BLIF i2c_key_delay_8_.AR
+0 1
+1 0
+.names clkh.BLIF i2c_key_delay_9_.C
+1 1
+0 0
+.names reset.BLIF i2c_key_delay_9_.AR
+0 1
+1 0
+.names clkh.BLIF i2c_clk_div_0_.C
+1 1
+0 0
+.names reset.BLIF i2c_clk_div_0_.AR
+0 1
+1 0
+.names i2c_clk_div_0_.BLIF i2c_clk_div_1_.BLIF i2c_clk_div_1_.D
+10 1
+01 1
+00 0
+11 0
+.names clkh.BLIF i2c_clk_div_1_.C
+1 1
+0 0
+.names reset.BLIF i2c_clk_div_1_.AR
+0 1
+1 0
+.names i2c_clk_div_2_.BLIF i2c_clk_div_0_.BLIF i2c_clk_div_1_.BLIF \
+i2c_clk_div_2_.D
+011 1
+10- 1
+1-0 1
+111 0
+00- 0
+0-0 0
+.names clkh.BLIF i2c_clk_div_2_.C
+1 1
+0 0
+.names reset.BLIF i2c_clk_div_2_.AR
+0 1
+1 0
+.names i2c_clk_div_2_.BLIF i2c_clk_div_3_.BLIF i2c_clk_div_0_.BLIF \
+i2c_clk_div_1_.BLIF i2c_clk_div_3_.D
+1011 1
+-10- 1
+01-- 1
+-1-0 1
+1111 0
+-00- 0
+00-- 0
+-0-0 0
+.names clkh.BLIF i2c_clk_div_3_.C
+1 1
+0 0
+.names reset.BLIF i2c_clk_div_3_.AR
+0 1
+1 0
+.names reset.BLIF i2c_Flag_RW.CE
+1 1
+0 0
+.names clkh.BLIF i2c_Flag_RW.C
+1 1
+0 0
+.names reset.BLIF i2c_sda_buf.CE
+1 1
+0 0
+.names clkh.BLIF i2c_sda_buf.C
+1 1
+0 0
+.names i2c_eeprom_state_0_.BLIF i2c_eeprom_state_1_.BLIF i2c_start_delay.CE
+00 1
+1- 0
+-1 0
+.names clkh.BLIF i2c_start_delay.C
+1 1
+0 0
+.names reset.BLIF i2c_start_delay.AR
+0 1
+1 0
+.names SDA.PIN.BLIF i2c_sda_tem.D
+1 1
+0 0
+.names clkh.BLIF i2c_sda_tem.C
+1 1
+0 0
+.names i2c_phase2.BLIF i2c_scl_bufreg.D
+0 1
+1 0
+.names clkh.BLIF i2c_scl_bufreg.C
+1 1
+0 0
+.names clkh.BLIF i2c_phase0.C
+1 1
+0 0
+.names reset.BLIF i2c_phase0.AR
+0 1
+1 0
+.names clkh.BLIF i2c_phase1.C
+1 1
+0 0
+.names reset.BLIF i2c_phase1.AR
+0 1
+1 0
+.names clkh.BLIF i2c_phase2.C
+1 1
+0 0
+.names reset.BLIF i2c_phase2.AR
+0 1
+1 0
+.names clkh.BLIF i2c_phase3.C
+1 1
+0 0
+.names reset.BLIF i2c_phase3.AR
+0 1
+1 0
+.names dynamicshow_counter4_q_1_.BLIF dynamicshow_counter4_q_1_.D
+0 1
+1 0
+.names clkl.BLIF dynamicshow_counter4_q_1_.C
+1 1
+0 0
+.names dynamicshow_counter4_q_1_.BLIF dynamicshow_counter4_q_2_.BLIF \
+dynamicshow_counter4_q_2_.D
+10 1
+01 1
+00 0
+11 0
+.names clkl.BLIF dynamicshow_counter4_q_2_.C
+1 1
+0 0
+.names keyIn_3_.BLIF button4_d1_q_0_.D
+1 1
+0 0
+.names clkl.BLIF button4_d1_q_0_.C
+1 1
+0 0
+.names button4_d1_q_0_.BLIF button4_d2_q_0_.D
+1 1
+0 0
+.names clkl.BLIF button4_d2_q_0_.C
+1 1
+0 0
+.names button4_d2_q_0_.BLIF button4_d3_q_0_.D
+1 1
+0 0
+.names clkl.BLIF button4_d3_q_0_.C
+1 1
+0 0
+.names reset.BLIF button0_d1_q_0_.D
+1 1
+0 0
+.names clkl.BLIF button0_d1_q_0_.C
+1 1
+0 0
+.names button0_d1_q_0_.BLIF button0_d2_q_0_.D
+1 1
+0 0
+.names clkl.BLIF button0_d2_q_0_.C
+1 1
+0 0
+.names button0_d2_q_0_.BLIF button0_d3_q_0_.D
+1 1
+0 0
+.names clkl.BLIF button0_d3_q_0_.C
+1 1
+0 0
+.names keyIn_0_.BLIF button1_d1_q_0_.D
+1 1
+0 0
+.names clkl.BLIF button1_d1_q_0_.C
+1 1
+0 0
+.names button1_d1_q_0_.BLIF button1_d2_q_0_.D
+1 1
+0 0
+.names clkl.BLIF button1_d2_q_0_.C
+1 1
+0 0
+.names button1_d2_q_0_.BLIF button1_d3_q_0_.D
+1 1
+0 0
+.names clkl.BLIF button1_d3_q_0_.C
+1 1
+0 0
+.names keyIn_1_.BLIF button2_d1_q_0_.D
+1 1
+0 0
+.names clkl.BLIF button2_d1_q_0_.C
+1 1
+0 0
+.names button2_d1_q_0_.BLIF button2_d2_q_0_.D
+1 1
+0 0
+.names clkl.BLIF button2_d2_q_0_.C
+1 1
+0 0
+.names button2_d2_q_0_.BLIF button2_d3_q_0_.D
+1 1
+0 0
+.names clkl.BLIF button2_d3_q_0_.C
+1 1
+0 0
+.names keyIn_2_.BLIF button3_d1_q_0_.D
+1 1
+0 0
+.names clkl.BLIF button3_d1_q_0_.C
+1 1
+0 0
+.names button3_d1_q_0_.BLIF button3_d2_q_0_.D
+1 1
+0 0
+.names clkl.BLIF button3_d2_q_0_.C
+1 1
+0 0
+.names button3_d2_q_0_.BLIF button3_d3_q_0_.D
+1 1
+0 0
+.names clkl.BLIF button3_d3_q_0_.C
+1 1
+0 0
+.names i2c_sda_buf.BLIF SDA
+1 1
+0 0
+.names i2c_Flag_RW.BLIF SDA.OE
+1 1
+0 0
+.names dynamicshow_out_1__n.BLIF dynamicshow_out_2__n.BLIF show_3_.X1
+00 1
+1- 0
+-1 0
+.names dynamicshow_out_1__n.BLIF dynamicshow_out_0__n.BLIF \
+dynamicshow_out_2__n.BLIF dynamicshow_out_3__n.BLIF show_3_.X2
+00-- 1
+---1 1
+111- 1
+01-0 0
+10-0 0
+1-00 0
+.names button1_d2_q_0_.BLIF keyboard_key_out_0_reg.BLIF \
+keyboard_key_out_1_reg.BLIF keyboard_led_int_Data0_3_.D.X1
+000 1
+1-- 0
+-1- 0
+--1 0
+.names button3_d1_q_0_.BLIF button3_d2_q_0_.BLIF button3_d3_q_0_.BLIF \
+keyboard_int_Data1_3_.BLIF button2_d1_q_0_.BLIF button2_d2_q_0_.BLIF \
+button2_d3_q_0_.BLIF button1_d1_q_0_.BLIF button1_d2_q_0_.BLIF \
+button1_d3_q_0_.BLIF keyboard_key_out_0_reg.BLIF keyboard_key_out_1_reg.BLIF \
+keyboard_flag_Data_1_.BLIF keyboard_led_int_Data0_3_.D.X2
+-------10-00- 1
+--------0100- 1
+0000000-0-00- 1
+000-000-0-000 1
+--------1---- 0
+----------1-- 0
+-----------1- 0
+1------0-0--- 0
+-1-----0-0--- 0
+--1----0-0--- 0
+----1--0-0--- 0
+-----1-0-0--- 0
+------10-0--- 0
+---1---0-0--1 0
+.names keyboard_timecnt_6_.BLIF keyboard_timecnt_6_.D.X1
+1 1
+0 0
+.names keyboard_timecnt_4_.BLIF keyboard_timecnt_6_.BLIF \
+keyboard_timecnt_0_.BLIF keyboard_timecnt_1_.BLIF keyboard_timecnt_2_.BLIF \
+keyboard_timecnt_3_.BLIF keyboard_timecnt_5_.BLIF keyboard_timecnt_6_.D.X2
+1-11111 1
+0------ 0
+--0---- 0
+---0--- 0
+----0-- 0
+-----0- 0
+------0 0
+.names keyboard_timecnt_7_.BLIF keyboard_timecnt_7_.D.X1
+1 1
+0 0
+.names keyboard_timecnt_4_.BLIF keyboard_timecnt_6_.BLIF \
+keyboard_timecnt_7_.BLIF keyboard_timecnt_0_.BLIF keyboard_timecnt_1_.BLIF \
+keyboard_timecnt_2_.BLIF keyboard_timecnt_3_.BLIF keyboard_timecnt_5_.BLIF \
+keyboard_timecnt_7_.D.X2
+11-11111 1
+0------- 0
+-0------ 0
+---0---- 0
+----0--- 0
+-----0-- 0
+------0- 0
+-------0 0
+.names keyboard_timecnt_9_.BLIF keyboard_timecnt_9_.D.X1
+1 1
+0 0
+.names keyboard_timecnt_4_.BLIF keyboard_timecnt_6_.BLIF \
+keyboard_timecnt_7_.BLIF keyboard_timecnt_9_.BLIF keyboard_timecnt_0_.BLIF \
+keyboard_timecnt_1_.BLIF keyboard_timecnt_2_.BLIF keyboard_timecnt_3_.BLIF \
+keyboard_timecnt_5_.BLIF keyboard_timecnt_8_.BLIF keyboard_timecnt_9_.D.X2
+111-111111 1
+0--------- 0
+-0-------- 0
+--0------- 0
+----0----- 0
+-----0---- 0
+------0--- 0
+-------0-- 0
+--------0- 0
+---------0 0
+.names keyboard_timecnt_15_.BLIF keyboard_timecnt_15_.D.X1
+1 1
+0 0
+.names keyboard_timecnt_4_.BLIF keyboard_timecnt_6_.BLIF \
+keyboard_timecnt_7_.BLIF keyboard_timecnt_9_.BLIF keyboard_timecnt_15_.BLIF \
+keyboard_timecnt_11_.BLIF keyboard_timecnt_0_.BLIF keyboard_timecnt_1_.BLIF \
+keyboard_timecnt_2_.BLIF keyboard_timecnt_3_.BLIF keyboard_timecnt_5_.BLIF \
+keyboard_timecnt_8_.BLIF keyboard_timecnt_10_.BLIF keyboard_timecnt_12_.BLIF \
+keyboard_timecnt_13_.BLIF keyboard_timecnt_14_.BLIF keyboard_timecnt_15_.D.X2
+1111-11111111111 1
+0--------------- 0
+-0-------------- 0
+--0------------- 0
+---0------------ 0
+-----0---------- 0
+------0--------- 0
+-------0-------- 0
+--------0------- 0
+---------0------ 0
+----------0----- 0
+-----------0---- 0
+------------0--- 0
+-------------0-- 0
+--------------0- 0
+---------------0 0
+.names keyboard_timecnt_11_.BLIF keyboard_timecnt_11_.D.X1
+1 1
+0 0
+.names keyboard_timecnt_4_.BLIF keyboard_timecnt_6_.BLIF \
+keyboard_timecnt_7_.BLIF keyboard_timecnt_9_.BLIF keyboard_timecnt_11_.BLIF \
+keyboard_timecnt_0_.BLIF keyboard_timecnt_1_.BLIF keyboard_timecnt_2_.BLIF \
+keyboard_timecnt_3_.BLIF keyboard_timecnt_5_.BLIF keyboard_timecnt_8_.BLIF \
+keyboard_timecnt_10_.BLIF keyboard_timecnt_11_.D.X2
+1111-1111111 1
+0----------- 0
+-0---------- 0
+--0--------- 0
+---0-------- 0
+-----0------ 0
+------0----- 0
+-------0---- 0
+--------0--- 0
+---------0-- 0
+----------0- 0
+-----------0 0
+.names keyboard_time1Oms.BLIF keyboard_time1Oms.D.X1
+1 1
+0 0
+.names keyboard_timecnt_4_.BLIF keyboard_timecnt_6_.BLIF \
+keyboard_timecnt_7_.BLIF keyboard_timecnt_9_.BLIF keyboard_timecnt_15_.BLIF \
+keyboard_timecnt_11_.BLIF keyboard_time1Oms.BLIF button0_d1_q_0_.BLIF \
+button0_d2_q_0_.BLIF keyboard_timecnt_0_.BLIF button0_d3_q_0_.BLIF \
+keyboard_timecnt_1_.BLIF keyboard_timecnt_2_.BLIF keyboard_timecnt_3_.BLIF \
+keyboard_timecnt_5_.BLIF keyboard_timecnt_8_.BLIF keyboard_timecnt_10_.BLIF \
+keyboard_timecnt_12_.BLIF keyboard_timecnt_13_.BLIF keyboard_timecnt_14_.BLIF \
+keyboard_time1Oms.D.X2
+000000-1-1-111111111 1
+000000--11-111111111 1
+000000---11111111111 1
+1------------------- 0
+-1------------------ 0
+--1----------------- 0
+---1---------------- 0
+----1--------------- 0
+-----1-------------- 0
+---------0---------- 0
+-----------0-------- 0
+------------0------- 0
+-------------0------ 0
+--------------0----- 0
+---------------0---- 0
+----------------0--- 0
+-----------------0-- 0
+------------------0- 0
+-------------------0 0
+-------00-0--------- 0
+.names keyboard_key_out_2_reg.BLIF keyboard_int_Data1_1_.D.X1
+0 1
+1 0
+.names button3_d1_q_0_.BLIF button3_d2_q_0_.BLIF button3_d3_q_0_.BLIF \
+button2_d1_q_0_.BLIF button2_d2_q_0_.BLIF button2_d3_q_0_.BLIF \
+keyboard_key_out_1_reg.BLIF keyboard_key_out_2_reg.BLIF \
+keyboard_int_Data1_1_.D.X2
+000---10 1
+000000-- 1
+1------- 0
+-1------ 0
+--1----- 0
+---1--0- 0
+----1-0- 0
+-----10- 0
+---1---1 0
+----1--1 0
+-----1-1 0
+.names keyboard_key_out_2_reg.BLIF keyboard_int_Data0_1_.D.X1
+0 1
+1 0
+.names button3_d1_q_0_.BLIF button3_d2_q_0_.BLIF button3_d3_q_0_.BLIF \
+button2_d1_q_0_.BLIF button2_d2_q_0_.BLIF button2_d3_q_0_.BLIF \
+keyboard_key_out_1_reg.BLIF keyboard_key_out_2_reg.BLIF \
+keyboard_int_Data0_1_.D.X2
+000---10 1
+000000-- 1
+1------- 0
+-1------ 0
+--1----- 0
+---1--0- 0
+----1-0- 0
+-----10- 0
+---1---1 0
+----1--1 0
+-----1-1 0
+.names keyboard_timecnt_5_.BLIF keyboard_timecnt_5_.D.X1
+1 1
+0 0
+.names keyboard_timecnt_4_.BLIF keyboard_timecnt_6_.BLIF \
+keyboard_timecnt_7_.BLIF keyboard_timecnt_9_.BLIF keyboard_timecnt_15_.BLIF \
+keyboard_timecnt_11_.BLIF keyboard_timecnt_0_.BLIF keyboard_timecnt_1_.BLIF \
+keyboard_timecnt_2_.BLIF keyboard_timecnt_3_.BLIF keyboard_timecnt_5_.BLIF \
+keyboard_timecnt_8_.BLIF keyboard_timecnt_10_.BLIF keyboard_timecnt_12_.BLIF \
+keyboard_timecnt_13_.BLIF keyboard_timecnt_14_.BLIF keyboard_timecnt_5_.D.X2
+-000001111111111 1
+1-----1111------ 1
+------0--------- 0
+-------0-------- 0
+--------0------- 0
+---------0------ 0
+01-------------- 0
+0-1------------- 0
+0--1------------ 0
+0---1----------- 0
+0----1---------- 0
+0---------0----- 0
+0----------0---- 0
+0-----------0--- 0
+0------------0-- 0
+0-------------0- 0
+0--------------0 0
+.names keyboard_timecnt_8_.BLIF keyboard_timecnt_8_.D.X1
+1 1
+0 0
+.names keyboard_timecnt_4_.BLIF keyboard_timecnt_6_.BLIF \
+keyboard_timecnt_7_.BLIF keyboard_timecnt_9_.BLIF keyboard_timecnt_15_.BLIF \
+keyboard_timecnt_11_.BLIF keyboard_timecnt_0_.BLIF keyboard_timecnt_1_.BLIF \
+keyboard_timecnt_2_.BLIF keyboard_timecnt_3_.BLIF keyboard_timecnt_5_.BLIF \
+keyboard_timecnt_8_.BLIF keyboard_timecnt_10_.BLIF keyboard_timecnt_12_.BLIF \
+keyboard_timecnt_13_.BLIF keyboard_timecnt_14_.BLIF keyboard_timecnt_8_.D.X2
+0000001111111111 1
+111---11111----- 1
+------0--------- 0
+-------0-------- 0
+--------0------- 0
+---------0------ 0
+----------0----- 0
+01-------------- 0
+10-------------- 0
+0-1------------- 0
+1-0------------- 0
+0--1------------ 0
+0---1----------- 0
+0----1---------- 0
+0----------0---- 0
+0-----------0--- 0
+0------------0-- 0
+0-------------0- 0
+0--------------0 0
+.names keyboard_timecnt_10_.BLIF keyboard_timecnt_10_.D.X1
+1 1
+0 0
+.names keyboard_timecnt_4_.BLIF keyboard_timecnt_6_.BLIF \
+keyboard_timecnt_7_.BLIF keyboard_timecnt_9_.BLIF keyboard_timecnt_15_.BLIF \
+keyboard_timecnt_11_.BLIF keyboard_timecnt_0_.BLIF keyboard_timecnt_1_.BLIF \
+keyboard_timecnt_2_.BLIF keyboard_timecnt_3_.BLIF keyboard_timecnt_5_.BLIF \
+keyboard_timecnt_8_.BLIF keyboard_timecnt_10_.BLIF keyboard_timecnt_12_.BLIF \
+keyboard_timecnt_13_.BLIF keyboard_timecnt_14_.BLIF keyboard_timecnt_10_.D.X2
+0000001111111111 1
+1111--111111---- 1
+------0--------- 0
+-------0-------- 0
+--------0------- 0
+---------0------ 0
+----------0----- 0
+-----------0---- 0
+01-------------- 0
+10-------------- 0
+0-1------------- 0
+1-0------------- 0
+0--1------------ 0
+1--0------------ 0
+0---1----------- 0
+0----1---------- 0
+0-----------0--- 0
+0------------0-- 0
+0-------------0- 0
+0--------------0 0
+.names keyboard_timecnt_12_.BLIF keyboard_timecnt_12_.D.X1
+1 1
+0 0
+.names keyboard_timecnt_4_.BLIF keyboard_timecnt_6_.BLIF \
+keyboard_timecnt_7_.BLIF keyboard_timecnt_9_.BLIF keyboard_timecnt_15_.BLIF \
+keyboard_timecnt_11_.BLIF keyboard_timecnt_0_.BLIF keyboard_timecnt_1_.BLIF \
+keyboard_timecnt_2_.BLIF keyboard_timecnt_3_.BLIF keyboard_timecnt_5_.BLIF \
+keyboard_timecnt_8_.BLIF keyboard_timecnt_10_.BLIF keyboard_timecnt_12_.BLIF \
+keyboard_timecnt_13_.BLIF keyboard_timecnt_14_.BLIF keyboard_timecnt_12_.D.X2
+0000001111111111 1
+1111-11111111--- 1
+------0--------- 0
+-------0-------- 0
+--------0------- 0
+---------0------ 0
+----------0----- 0
+-----------0---- 0
+------------0--- 0
+01-------------- 0
+10-------------- 0
+0-1------------- 0
+1-0------------- 0
+0--1------------ 0
+1--0------------ 0
+0---1----------- 0
+0----1---------- 0
+1----0---------- 0
+0------------0-- 0
+0-------------0- 0
+0--------------0 0
+.names keyboard_timecnt_13_.BLIF keyboard_timecnt_13_.D.X1
+1 1
+0 0
+.names keyboard_timecnt_4_.BLIF keyboard_timecnt_6_.BLIF \
+keyboard_timecnt_7_.BLIF keyboard_timecnt_9_.BLIF keyboard_timecnt_15_.BLIF \
+keyboard_timecnt_11_.BLIF keyboard_timecnt_0_.BLIF keyboard_timecnt_1_.BLIF \
+keyboard_timecnt_2_.BLIF keyboard_timecnt_3_.BLIF keyboard_timecnt_5_.BLIF \
+keyboard_timecnt_8_.BLIF keyboard_timecnt_10_.BLIF keyboard_timecnt_12_.BLIF \
+keyboard_timecnt_13_.BLIF keyboard_timecnt_14_.BLIF keyboard_timecnt_13_.D.X2
+0000001111111111 1
+1111-111111111-- 1
+------0--------- 0
+-------0-------- 0
+--------0------- 0
+---------0------ 0
+----------0----- 0
+-----------0---- 0
+------------0--- 0
+-------------0-- 0
+01-------------- 0
+10-------------- 0
+0-1------------- 0
+1-0------------- 0
+0--1------------ 0
+1--0------------ 0
+0---1----------- 0
+0----1---------- 0
+1----0---------- 0
+0-------------0- 0
+0--------------0 0
+.names keyboard_timecnt_14_.BLIF keyboard_timecnt_14_.D.X1
+1 1
+0 0
+.names keyboard_timecnt_4_.BLIF keyboard_timecnt_6_.BLIF \
+keyboard_timecnt_7_.BLIF keyboard_timecnt_9_.BLIF keyboard_timecnt_15_.BLIF \
+keyboard_timecnt_11_.BLIF keyboard_timecnt_0_.BLIF keyboard_timecnt_1_.BLIF \
+keyboard_timecnt_2_.BLIF keyboard_timecnt_3_.BLIF keyboard_timecnt_5_.BLIF \
+keyboard_timecnt_8_.BLIF keyboard_timecnt_10_.BLIF keyboard_timecnt_12_.BLIF \
+keyboard_timecnt_13_.BLIF keyboard_timecnt_14_.BLIF keyboard_timecnt_14_.D.X2
+0000001111111111 1
+1111-1111111111- 1
+------0--------- 0
+-------0-------- 0
+--------0------- 0
+---------0------ 0
+----------0----- 0
+-----------0---- 0
+------------0--- 0
+-------------0-- 0
+--------------0- 0
+01-------------- 0
+10-------------- 0
+0-1------------- 0
+1-0------------- 0
+0--1------------ 0
+1--0------------ 0
+0---1----------- 0
+0----1---------- 0
+1----0---------- 0
+0--------------0 0
+.names i2c_key_delay_5_.BLIF i2c_key_delay_5_.D.X1
+1 1
+0 0
+.names i2c_key_delay_5_.BLIF i2c_key_delay_0_.BLIF i2c_key_delay_4_.BLIF \
+i2c_key_delay_1_.BLIF i2c_key_delay_2_.BLIF i2c_key_delay_3_.BLIF \
+i2c_key_delay_5_.D.X2
+-11111 1
+-0---- 0
+--0--- 0
+---0-- 0
+----0- 0
+-----0 0
+.names i2c_key_delay_4_.BLIF i2c_key_delay_4_.D.X1
+1 1
+0 0
+.names i2c_key_delay_0_.BLIF i2c_key_delay_4_.BLIF i2c_key_delay_1_.BLIF \
+i2c_key_delay_2_.BLIF i2c_key_delay_3_.BLIF i2c_key_delay_4_.D.X2
+1-111 1
+0---- 0
+--0-- 0
+---0- 0
+----0 0
+.names i2c_key_delay_6_.BLIF i2c_key_delay_6_.D.X1
+1 1
+0 0
+.names i2c_key_delay_5_.BLIF i2c_key_delay_0_.BLIF i2c_key_delay_4_.BLIF \
+i2c_key_delay_1_.BLIF i2c_key_delay_6_.BLIF i2c_key_delay_2_.BLIF \
+i2c_key_delay_3_.BLIF i2c_key_delay_6_.D.X2
+1111-11 1
+0------ 0
+-0----- 0
+--0---- 0
+---0--- 0
+-----0- 0
+------0 0
+.names i2c_key_delay_9_.BLIF i2c_key_delay_9_.D.X1
+1 1
+0 0
+.names i2c_key_delay_5_.BLIF i2c_key_delay_0_.BLIF i2c_key_delay_4_.BLIF \
+i2c_key_delay_1_.BLIF i2c_key_delay_6_.BLIF i2c_key_delay_2_.BLIF \
+i2c_key_delay_9_.BLIF i2c_key_delay_8_.BLIF i2c_key_delay_7_.BLIF \
+i2c_key_delay_3_.BLIF i2c_start_delay.BLIF i2c_key_delay_9_.D.X2
+111111-1111 1
+------1---0 1
+1111111111- 1
+0---------1 0
+-0--------1 0
+--0-------1 0
+---0------1 0
+----0-----1 0
+-----0----1 0
+-------0--1 0
+--------0-1 0
+---------01 0
+------0---0 0
+.names i2c_key_delay_8_.BLIF i2c_key_delay_8_.D.X1
+1 1
+0 0
+.names i2c_key_delay_5_.BLIF i2c_key_delay_0_.BLIF i2c_key_delay_4_.BLIF \
+i2c_key_delay_1_.BLIF i2c_key_delay_6_.BLIF i2c_key_delay_2_.BLIF \
+i2c_key_delay_8_.BLIF i2c_key_delay_7_.BLIF i2c_key_delay_3_.BLIF \
+i2c_key_delay_8_.D.X2
+111111-11 1
+0-------- 0
+-0------- 0
+--0------ 0
+---0----- 0
+----0---- 0
+-----0--- 0
+-------0- 0
+--------0 0
+.names i2c_key_delay_7_.BLIF i2c_key_delay_7_.D.X1
+1 1
+0 0
+.names i2c_key_delay_5_.BLIF i2c_key_delay_0_.BLIF i2c_key_delay_4_.BLIF \
+i2c_key_delay_1_.BLIF i2c_key_delay_6_.BLIF i2c_key_delay_2_.BLIF \
+i2c_key_delay_7_.BLIF i2c_key_delay_3_.BLIF i2c_key_delay_7_.D.X2
+111111-1 1
+0------- 0
+-0------ 0
+--0----- 0
+---0---- 0
+----0--- 0
+-----0-- 0
+-------0 0
+.names i2c_RdData_1_.BLIF i2c_eeprom_state_1_.BLIF i2c_RdData_1_.D.X1
+11 1
+0- 0
+-0 0
+.names i2c_phase1.BLIF i2c_RdData_1_.BLIF i2c_bit_state_0_.BLIF \
+i2c_bit_state_1_.BLIF i2c_bit_state_2_.BLIF i2c_eeprom_state_1_.BLIF \
+SDA.PIN.BLIF i2c_RdData_1_.D.X2
+1001011 1
+1101010 1
+0------ 0
+--1---- 0
+---0--- 0
+----1-- 0
+-----0- 0
+-1----1 0
+-0----0 0
+.names i2c_RdData_2_.BLIF i2c_eeprom_state_1_.BLIF i2c_RdData_2_.D.X1
+11 1
+0- 0
+-0 0
+.names i2c_phase1.BLIF i2c_RdData_2_.BLIF i2c_bit_state_0_.BLIF \
+i2c_bit_state_1_.BLIF i2c_bit_state_5_.BLIF i2c_eeprom_state_1_.BLIF \
+SDA.PIN.BLIF i2c_RdData_2_.D.X2
+1011111 1
+1111110 1
+0------ 0
+--0---- 0
+---0--- 0
+----0-- 0
+-----0- 0
+-1----1 0
+-0----0 0
+.names keyboard_flag_Data_1_.BLIF keyboard_flag_Data_1_.D.X1
+1 1
+0 0
+.names button4_d1_q_0_.BLIF button4_d2_q_0_.BLIF button4_d3_q_0_.BLIF \
+button3_d1_q_0_.BLIF button3_d2_q_0_.BLIF button3_d3_q_0_.BLIF \
+button2_d1_q_0_.BLIF button2_d2_q_0_.BLIF button2_d3_q_0_.BLIF \
+button1_d1_q_0_.BLIF button1_d2_q_0_.BLIF button1_d3_q_0_.BLIF \
+keyboard_key_out_0_reg.BLIF keyboard_key_out_1_reg.BLIF \
+keyboard_flag_Data_0_.BLIF keyboard_key_out_2_reg.BLIF \
+keyboard_flag_Data_1_.BLIF keyboard_flag_Data_1_.D.X2
+1--0000000000010- 1
+-1-0000000000010- 1
+--10000000000010- 1
+---1------------- 0
+----1------------ 0
+-----1----------- 0
+------1---------- 0
+-------1--------- 0
+--------1-------- 0
+---------1------- 0
+----------1------ 0
+-----------1----- 0
+------------1---- 0
+-------------1--- 0
+--------------0-- 0
+---------------1- 0
+000-------------- 0
+.names i2c_RdData_3_.BLIF i2c_eeprom_state_1_.BLIF i2c_RdData_3_.D.X1
+11 1
+0- 0
+-0 0
+.names i2c_phase1.BLIF i2c_RdData_3_.BLIF i2c_bit_state_0_.BLIF \
+i2c_bit_state_1_.BLIF i2c_bit_state_5_.BLIF i2c_eeprom_state_1_.BLIF \
+SDA.PIN.BLIF i2c_RdData_3_.D.X2
+1010111 1
+1110110 1
+0------ 0
+--0---- 0
+---1--- 0
+----0-- 0
+-----0- 0
+-1----1 0
+-0----0 0
+.names i2c_RdData_4_.BLIF i2c_eeprom_state_1_.BLIF i2c_RdData_4_.D.X1
+11 1
+0- 0
+-0 0
+.names i2c_phase1.BLIF i2c_RdData_4_.BLIF i2c_bit_state_0_.BLIF \
+i2c_bit_state_1_.BLIF i2c_bit_state_5_.BLIF i2c_eeprom_state_1_.BLIF \
+SDA.PIN.BLIF i2c_RdData_4_.D.X2
+1000111 1
+1100110 1
+0------ 0
+--1---- 0
+---1--- 0
+----0-- 0
+-----0- 0
+-1----1 0
+-0----0 0
+.names i2c_RdData_6_.BLIF i2c_eeprom_state_1_.BLIF i2c_RdData_6_.D.X1
+11 1
+0- 0
+-0 0
+.names i2c_phase1.BLIF i2c_RdData_6_.BLIF i2c_bit_state_0_.BLIF \
+i2c_bit_state_1_.BLIF i2c_bit_state_5_.BLIF i2c_eeprom_state_1_.BLIF \
+SDA.PIN.BLIF i2c_RdData_6_.D.X2
+1010011 1
+1110010 1
+0------ 0
+--0---- 0
+---1--- 0
+----1-- 0
+-----0- 0
+-1----1 0
+-0----0 0
+.names i2c_key_delay_6_.BLIF i2c_start_delay.BLIF i2c_start_delay.D.X1
+01 1
+1- 0
+-0 0
+.names CMD_RD.BLIF CMD_WR.BLIF i2c_key_delay_5_.BLIF i2c_key_delay_0_.BLIF \
+i2c_key_delay_4_.BLIF i2c_key_delay_1_.BLIF i2c_key_delay_6_.BLIF \
+i2c_key_delay_2_.BLIF i2c_key_delay_9_.BLIF i2c_key_delay_8_.BLIF \
+i2c_key_delay_7_.BLIF i2c_key_delay_3_.BLIF i2c_start_delay.BLIF \
+i2c_start_delay.D.X2
+0-00000000000 1
+-000000000000 1
+--0000-010001 1
+------1-----1 1
+--1---0------ 0
+---1--0------ 0
+----1-0------ 0
+-----10------ 0
+------01----- 0
+------0--1--- 0
+------0---1-- 0
+------0----1- 0
+--1---------0 0
+---1--------0 0
+----1-------0 0
+-----1------0 0
+------1-----0 0
+-------1----0 0
+--------1---0 0
+---------1--0 0
+----------1-0 0
+-----------10 0
+------0-0---1 0
+11----------0 0
+.names i2c_eeprom_state_0_.BLIF i2c_eeprom_state_1_.BLIF \
+i2c_eeprom_state_0_.D.X1
+10 1
+0- 0
+-1 0
+.names CMD_WR.BLIF i2c_phase1.BLIF i2c_phase3.BLIF i2c_key_delay_5_.BLIF \
+i2c_key_delay_0_.BLIF i2c_key_delay_4_.BLIF i2c_key_delay_1_.BLIF \
+i2c_key_delay_6_.BLIF i2c_key_delay_2_.BLIF i2c_key_delay_9_.BLIF \
+i2c_key_delay_8_.BLIF i2c_key_delay_7_.BLIF i2c_key_delay_3_.BLIF \
+i2c_sda_tem.BLIF i2c_bit_state_0_.BLIF i2c_bit_state_1_.BLIF \
+i2c_bit_state_2_.BLIF i2c_bit_state_3_.BLIF i2c_bit_state_4_.BLIF \
+i2c_bit_state_5_.BLIF i2c_eeprom_state_0_.BLIF i2c_eeprom_state_1_.BLIF \
+i2c_eeprom_state_0_.D.X2
+0--0000001000-------00 1
+-1-----------110110010 1
+---------------0001-10 1
+--------------01--1110 1
+--1-------------001-10 1
+--------------1-001-10 1
+-1-----------1110-1010 1
+----------------1-1110 1
+-1-----------101101-10 1
+---------------------1 0
+1-------------------0- 0
+---1----------------0- 0
+----1---------------0- 0
+-----1--------------0- 0
+------1-------------0- 0
+-------1------------0- 0
+--------1-----------0- 0
+---------0----------0- 0
+----------1---------0- 0
+-----------1--------0- 0
+------------1-------0- 0
+-0----------------0-1- 0
+-------------0----0-1- 0
+--------------0---0-1- 0
+---------------1--0-1- 0
+----------------0-0-1- 0
+-----------------00-1- 0
+------------------011- 0
+---------------001--1- 0
+-0--------------1--01- 0
+-------------0--1--01- 0
+--------------0--1-01- 0
+-0------------1-01--1- 0
+-------------01-01--1- 0
+--------------1-01-11- 0
+--------------1-1-101- 0
+---------------01-101- 0
+----------------11101- 0
+--0-----------010--01- 0
+.names i2c_eeprom_state_0_.BLIF i2c_eeprom_state_1_.BLIF \
+i2c_eeprom_state_1_.D.X1
+01 1
+1- 0
+-0 0
+.names CMD_RD.BLIF CMD_WR.BLIF i2c_phase1.BLIF i2c_phase3.BLIF \
+i2c_key_delay_5_.BLIF i2c_key_delay_0_.BLIF i2c_key_delay_4_.BLIF \
+i2c_key_delay_1_.BLIF i2c_key_delay_6_.BLIF i2c_key_delay_2_.BLIF \
+i2c_key_delay_9_.BLIF i2c_key_delay_8_.BLIF i2c_key_delay_7_.BLIF \
+i2c_key_delay_3_.BLIF i2c_sda_tem.BLIF i2c_bit_state_0_.BLIF \
+i2c_bit_state_1_.BLIF i2c_bit_state_2_.BLIF i2c_bit_state_3_.BLIF \
+i2c_bit_state_4_.BLIF i2c_bit_state_5_.BLIF i2c_eeprom_state_0_.BLIF \
+i2c_eeprom_state_1_.BLIF i2c_eeprom_state_1_.D.X2
+01--0000001000-------00 1
+---1------------01--101 1
+---------------0011-101 1
+---------------001-0101 1
+------------------10101 1
+--1-----------110110-01 1
+--1-----------101001001 1
+--1-----------111011001 1
+---------------------1- 0
+1---------------------0 0
+-0--------------------0 0
+----1-----------------0 0
+-----1----------------0 0
+------1---------------0 0
+-------1--------------0 0
+--------1-------------0 0
+---------1------------0 0
+----------0-----------0 0
+-----------1----------0 0
+------------1---------0 0
+-------------1--------0 0
+---0-----------1--0---1 0
+--0-------------1-0---1 0
+--------------0-1-0---1 0
+---------------11-0---1 0
+----------------110---1 0
+----------------000---1 0
+--0-------------1--1--1 0
+--------------0-1--1--1 0
+----------------11-1--1 0
+----------------00-1--1 0
+----------------1-00--1 0
+----------------1-0-1-1 0
+----------------1--11-1 0
+--0-------------0---0-1 0
+--------------0-0---0-1 0
+---------------00---0-1 0
+----------------00--0-1 0
+----------------0-0-0-1 0
+----------------0--10-1 0
+----------------1--00-1 0
+---0-----------10--1--1 0
+---------------01-11--1 0
+---0------------0-01--1 0
+.end

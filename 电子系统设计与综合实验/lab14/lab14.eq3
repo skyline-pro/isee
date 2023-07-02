@@ -1,0 +1,287 @@
+|--------------------------------------------------- ----------|
+|- ispLEVER Classic 2.1.00.02.49.20 Equations File            -|
+|- Copyright(C), 1992-2012, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+Equations:
+
+N_127 = orient & !vcnt_2_.Q & !vcnt_3_.Q & !vcnt_5_.Q & !vcnt_6_.Q & vcnt_7_.Q
+       & !vcnt_8_.Q & !vcnt_9_.Q
+    # orient & !vcnt_1_.Q & !vcnt_3_.Q & !vcnt_5_.Q & !vcnt_6_.Q & vcnt_7_.Q
+       & !vcnt_8_.Q & !vcnt_9_.Q
+    # orient & !vcnt_4_.Q & !vcnt_5_.Q & !vcnt_6_.Q & vcnt_7_.Q & !vcnt_8_.Q
+       & !vcnt_9_.Q
+    # orient & !vcnt_7_.Q & !vcnt_8_.Q & !vcnt_9_.Q & N_854_i ; (4 pterms, 11 signals)
+
+N_130 = orient & N_98_i & vcnt_7_.Q & !vcnt_8_.Q & !vcnt_9_.Q
+    # orient & !vcnt_3_.Q & !vcnt_4_.Q & !vcnt_6_.Q & !vcnt_7_.Q & vcnt_8_.Q
+       & !vcnt_9_.Q
+    # orient & !vcnt_2_.Q & !vcnt_4_.Q & !vcnt_6_.Q & !vcnt_7_.Q & vcnt_8_.Q
+       & !vcnt_9_.Q
+    # orient & !vcnt_5_.Q & !vcnt_6_.Q & !vcnt_7_.Q & vcnt_8_.Q & !vcnt_9_.Q ; (4 pterms, 10 signals)
+
+N_140 = vcnt_0_.Q & vcnt_1_.Q & vcnt_2_.Q & vcnt_4_.Q & vcnt_5_.Q & vcnt_6_.Q
+    # vcnt_3_.Q & vcnt_4_.Q & vcnt_5_.Q & vcnt_6_.Q ; (2 pterms, 7 signals)
+
+N_343_i = hcnt_2_.Q & hcnt_3_.Q & hcnt_5_.Q & hcnt_8_.Q
+    # hcnt_4_.Q & hcnt_5_.Q & hcnt_8_.Q
+    # hcnt_7_.Q & hcnt_8_.Q
+    # hcnt_6_.Q & hcnt_8_.Q ; (4 pterms, 7 signals)
+
+N_509_0 = hcnt_2_.Q & hcnt_3_.Q & hcnt_4_.Q & hcnt_5_.Q & hcnt_7_.Q
+       & hcnt_9_.Q
+    # hcnt_6_.Q & hcnt_7_.Q & hcnt_9_.Q
+    # hcnt_8_.Q & hcnt_9_.Q ; (3 pterms, 8 signals)
+
+N_854_i = vcnt_0_.Q & vcnt_1_.Q & vcnt_3_.Q & vcnt_6_.Q
+    # vcnt_2_.Q & vcnt_3_.Q & vcnt_6_.Q
+    # vcnt_5_.Q & vcnt_6_.Q
+    # vcnt_4_.Q & vcnt_6_.Q ; (4 pterms, 7 signals)
+
+N_87_0 = hcnt_3_.Q & hcnt_4_.Q & hcnt_6_.Q & hcnt_9_.Q & !hcnt_10_.Q
+       & !N_509_0
+    # hcnt_5_.Q & hcnt_6_.Q & hcnt_9_.Q & !hcnt_10_.Q & !N_509_0
+    # hcnt_8_.Q & hcnt_9_.Q & !hcnt_10_.Q & !N_509_0
+    # hcnt_7_.Q & hcnt_9_.Q & !hcnt_10_.Q & !N_509_0 ; (4 pterms, 9 signals)
+
+N_95_0.X1 = vcnt_9_.Q & !un1_vcnt_8_i
+    # vcnt_6_.Q & vcnt_7_.Q & vcnt_8_.Q & !vcnt_9_.Q & !un1_vcnt_8_i ; (2 pterms, 5 signals)
+N_95_0.X2 = !vcnt_1_.Q & !vcnt_2_.Q & !vcnt_3_.Q & !vcnt_4_.Q & !vcnt_5_.Q
+       & vcnt_6_.Q & vcnt_7_.Q & vcnt_8_.Q & !vcnt_9_.Q & !un1_vcnt_8_i ; (1 pterm, 10 signals)
+
+N_97_i = hcnt_3_.Q & hcnt_4_.Q & hcnt_5_.Q & hcnt_6_.Q
+    # hcnt_2_.Q & hcnt_4_.Q & hcnt_5_.Q & hcnt_6_.Q ; (2 pterms, 5 signals)
+
+N_98_i = !( !vcnt_0_.Q & !vcnt_1_.Q & !vcnt_2_.Q & !vcnt_3_.Q & !vcnt_4_.Q
+    # !vcnt_5_.Q
+    # !vcnt_6_.Q ) ; (3 pterms, 7 signals)
+
+hcnt_0_.D = !hcnt_0_.Q & !hcnt_5_.Q & !hcnt_6_.Q & !hcnt_7_.Q & !hcnt_8_.Q
+       & !hcnt_9_.Q
+    # !hcnt_0_.Q & !hcnt_10_.Q ; (2 pterms, 7 signals)
+hcnt_0_.C = clk_50m ; (1 pterm, 1 signal)
+hcnt_0_.AR = !reset ; (1 pterm, 1 signal)
+
+hcnt_10_.D = hcnt_0_.Q & hcnt_1_.Q & hcnt_2_.Q & hcnt_3_.Q & hcnt_4_.Q
+       & hcnt_5_.Q & hcnt_6_.Q & hcnt_7_.Q & hcnt_8_.Q & hcnt_9_.Q
+       & !hcnt_10_.Q
+    # !hcnt_5_.Q & !hcnt_6_.Q & !hcnt_7_.Q & !hcnt_8_.Q & !hcnt_9_.Q
+       & hcnt_10_.Q ; (2 pterms, 11 signals)
+hcnt_10_.C = clk_50m ; (1 pterm, 1 signal)
+hcnt_10_.AR = !reset ; (1 pterm, 1 signal)
+
+hcnt_1_.D = hcnt_0_.Q & !hcnt_1_.Q
+    # !hcnt_0_.Q & hcnt_1_.Q ; (2 pterms, 2 signals)
+hcnt_1_.C = clk_50m ; (1 pterm, 1 signal)
+hcnt_1_.AR = !reset ; (1 pterm, 1 signal)
+
+hcnt_2_.D = hcnt_0_.Q & hcnt_1_.Q & !hcnt_2_.Q
+    # !hcnt_1_.Q & hcnt_2_.Q
+    # !hcnt_0_.Q & hcnt_2_.Q ; (3 pterms, 3 signals)
+hcnt_2_.C = clk_50m ; (1 pterm, 1 signal)
+hcnt_2_.AR = !reset ; (1 pterm, 1 signal)
+
+hcnt_3_.D = hcnt_0_.Q & hcnt_1_.Q & hcnt_2_.Q & !hcnt_3_.Q
+    # !hcnt_2_.Q & hcnt_3_.Q
+    # !hcnt_1_.Q & hcnt_3_.Q
+    # !hcnt_0_.Q & hcnt_3_.Q ; (4 pterms, 4 signals)
+hcnt_3_.C = clk_50m ; (1 pterm, 1 signal)
+hcnt_3_.AR = !reset ; (1 pterm, 1 signal)
+
+hcnt_4_.D.X1 = hcnt_0_.Q & hcnt_1_.Q & hcnt_2_.Q & hcnt_3_.Q ; (1 pterm, 4 signals)
+hcnt_4_.D.X2 = hcnt_4_.Q ; (1 pterm, 1 signal)
+hcnt_4_.C = clk_50m ; (1 pterm, 1 signal)
+hcnt_4_.AR = !reset ; (1 pterm, 1 signal)
+
+hcnt_5_.T = hcnt_0_.Q & hcnt_1_.Q & hcnt_2_.Q & hcnt_3_.Q & hcnt_4_.Q
+       & !hcnt_6_.Q & !hcnt_7_.Q & !hcnt_8_.Q & !hcnt_9_.Q
+    # hcnt_0_.Q & hcnt_1_.Q & hcnt_2_.Q & hcnt_3_.Q & hcnt_4_.Q & !hcnt_10_.Q
+    # hcnt_5_.Q & hcnt_10_.Q ; (3 pterms, 11 signals)
+hcnt_5_.C = clk_50m ; (1 pterm, 1 signal)
+hcnt_5_.AR = !reset ; (1 pterm, 1 signal)
+
+hcnt_6_.T = hcnt_0_.Q & hcnt_1_.Q & hcnt_2_.Q & hcnt_3_.Q & hcnt_4_.Q
+       & hcnt_5_.Q ; (1 pterm, 6 signals)
+hcnt_6_.C = clk_50m ; (1 pterm, 1 signal)
+hcnt_6_.AR = !reset ; (1 pterm, 1 signal)
+
+hcnt_7_.T = hcnt_0_.Q & hcnt_1_.Q & hcnt_2_.Q & hcnt_3_.Q & hcnt_4_.Q
+       & hcnt_5_.Q & hcnt_6_.Q ; (1 pterm, 7 signals)
+hcnt_7_.C = clk_50m ; (1 pterm, 1 signal)
+hcnt_7_.AR = !reset ; (1 pterm, 1 signal)
+
+hcnt_8_.T = hcnt_0_.Q & hcnt_1_.Q & hcnt_2_.Q & hcnt_3_.Q & hcnt_4_.Q
+       & hcnt_5_.Q & hcnt_6_.Q & hcnt_7_.Q ; (1 pterm, 8 signals)
+hcnt_8_.C = clk_50m ; (1 pterm, 1 signal)
+hcnt_8_.AR = !reset ; (1 pterm, 1 signal)
+
+hcnt_9_.T = hcnt_0_.Q & hcnt_1_.Q & hcnt_2_.Q & hcnt_3_.Q & hcnt_4_.Q
+       & hcnt_5_.Q & hcnt_6_.Q & hcnt_7_.Q & hcnt_8_.Q ; (1 pterm, 9 signals)
+hcnt_9_.C = clk_50m ; (1 pterm, 1 signal)
+hcnt_9_.AR = !reset ; (1 pterm, 1 signal)
+
+inst_enable.D = !( vcnt_3_.Q & vcnt_4_.Q & vcnt_6_.Q & vcnt_9_.Q
+    # hcnt_7_.Q & hcnt_8_.Q & hcnt_9_.Q
+    # hcnt_6_.Q & hcnt_8_.Q & hcnt_9_.Q
+    # hcnt_5_.Q & hcnt_8_.Q & hcnt_9_.Q
+    # vcnt_5_.Q & vcnt_6_.Q & vcnt_9_.Q
+    # hcnt_10_.Q
+    # vcnt_8_.Q & vcnt_9_.Q
+    # vcnt_7_.Q & vcnt_9_.Q ) ; (8 pterms, 13 signals)
+inst_enable.C = clk_50m ; (1 pterm, 1 signal)
+inst_enable.AR = !reset ; (1 pterm, 1 signal)
+
+un1_vcnt_8_i = !( !vcnt_0_.Q & !vcnt_1_.Q & !vcnt_4_.Q & !vcnt_5_.Q
+       & !vcnt_6_.Q & !vcnt_7_.Q & !vcnt_8_.Q
+    # !vcnt_3_.Q & !vcnt_4_.Q & !vcnt_5_.Q & !vcnt_6_.Q & !vcnt_7_.Q
+       & !vcnt_8_.Q
+    # !vcnt_2_.Q & !vcnt_4_.Q & !vcnt_5_.Q & !vcnt_6_.Q & !vcnt_7_.Q
+       & !vcnt_8_.Q
+    # !vcnt_9_.Q ) ; (4 pterms, 10 signals)
+
+vcnt_0_.D = !vcnt_0_.Q ; (1 pterm, 1 signal)
+vcnt_0_.C = vga_hs.Q ; (1 pterm, 1 signal)
+vcnt_0_.AR = !reset ; (1 pterm, 1 signal)
+
+vcnt_1_.D = !( vcnt_4_.Q & vcnt_5_.Q & vcnt_6_.Q & vcnt_9_.Q
+    # !vcnt_0_.Q & !vcnt_1_.Q
+    # vcnt_0_.Q & vcnt_1_.Q
+    # vcnt_8_.Q & vcnt_9_.Q
+    # vcnt_7_.Q & vcnt_9_.Q ) ; (5 pterms, 8 signals)
+vcnt_1_.C = vga_hs.Q ; (1 pterm, 1 signal)
+vcnt_1_.AR = !reset ; (1 pterm, 1 signal)
+
+vcnt_2_.D = vcnt_0_.Q & vcnt_1_.Q & !vcnt_2_.Q
+    # !vcnt_1_.Q & vcnt_2_.Q
+    # !vcnt_0_.Q & vcnt_2_.Q ; (3 pterms, 3 signals)
+vcnt_2_.C = vga_hs.Q ; (1 pterm, 1 signal)
+vcnt_2_.AR = !reset ; (1 pterm, 1 signal)
+
+vcnt_3_.D = vcnt_0_.Q & vcnt_1_.Q & vcnt_2_.Q & !vcnt_3_.Q
+    # !vcnt_2_.Q & vcnt_3_.Q
+    # !vcnt_1_.Q & vcnt_3_.Q
+    # !vcnt_0_.Q & vcnt_3_.Q ; (4 pterms, 4 signals)
+vcnt_3_.C = vga_hs.Q ; (1 pterm, 1 signal)
+vcnt_3_.AR = !reset ; (1 pterm, 1 signal)
+
+vcnt_4_.T = vcnt_0_.Q & vcnt_1_.Q & vcnt_2_.Q & vcnt_3_.Q & !vcnt_7_.Q
+       & !vcnt_8_.Q
+    # vcnt_0_.Q & vcnt_1_.Q & vcnt_2_.Q & vcnt_3_.Q & !vcnt_9_.Q
+    # vcnt_3_.Q & vcnt_4_.Q & vcnt_5_.Q & vcnt_6_.Q & vcnt_9_.Q
+    # vcnt_2_.Q & vcnt_4_.Q & vcnt_5_.Q & vcnt_6_.Q & vcnt_9_.Q
+    # vcnt_1_.Q & vcnt_4_.Q & vcnt_5_.Q & vcnt_6_.Q & vcnt_9_.Q
+    # vcnt_0_.Q & vcnt_4_.Q & vcnt_5_.Q & vcnt_6_.Q & vcnt_9_.Q
+    # vcnt_4_.Q & vcnt_8_.Q & vcnt_9_.Q
+    # vcnt_4_.Q & vcnt_7_.Q & vcnt_9_.Q ; (8 pterms, 10 signals)
+vcnt_4_.C = vga_hs.Q ; (1 pterm, 1 signal)
+vcnt_4_.AR = !reset ; (1 pterm, 1 signal)
+
+vcnt_5_.T.X1 = vcnt_5_.Q & vcnt_8_.Q & vcnt_9_.Q
+    # vcnt_5_.Q & vcnt_7_.Q & vcnt_9_.Q
+    # vcnt_0_.Q & vcnt_1_.Q & vcnt_2_.Q & vcnt_3_.Q & vcnt_4_.Q & !vcnt_9_.Q
+    # vcnt_0_.Q & vcnt_1_.Q & vcnt_2_.Q & vcnt_3_.Q & vcnt_4_.Q & vcnt_5_.Q
+       & !vcnt_6_.Q & vcnt_9_.Q
+    # !vcnt_0_.Q & !vcnt_1_.Q & !vcnt_2_.Q & !vcnt_3_.Q & vcnt_4_.Q
+       & vcnt_5_.Q & vcnt_6_.Q & vcnt_9_.Q
+    # vcnt_0_.Q & vcnt_1_.Q & vcnt_2_.Q & vcnt_3_.Q & vcnt_4_.Q & !vcnt_5_.Q
+       & !vcnt_7_.Q & !vcnt_8_.Q & vcnt_9_.Q ; (6 pterms, 10 signals)
+vcnt_5_.T.X2 = vcnt_4_.Q & vcnt_5_.Q & vcnt_6_.Q & !vcnt_7_.Q & !vcnt_8_.Q
+       & vcnt_9_.Q ; (1 pterm, 6 signals)
+vcnt_5_.C = vga_hs.Q ; (1 pterm, 1 signal)
+vcnt_5_.AR = !reset ; (1 pterm, 1 signal)
+
+vcnt_6_.T.X1 = vcnt_6_.Q & vcnt_7_.Q & vcnt_9_.Q
+    # vcnt_6_.Q & vcnt_8_.Q & vcnt_9_.Q
+    # vcnt_0_.Q & vcnt_1_.Q & vcnt_2_.Q & vcnt_3_.Q & vcnt_4_.Q & vcnt_5_.Q
+       & !vcnt_9_.Q
+    # !vcnt_0_.Q & !vcnt_1_.Q & !vcnt_2_.Q & !vcnt_3_.Q & vcnt_4_.Q
+       & vcnt_5_.Q & vcnt_6_.Q & vcnt_9_.Q
+    # vcnt_0_.Q & vcnt_1_.Q & vcnt_2_.Q & vcnt_3_.Q & vcnt_4_.Q & vcnt_5_.Q
+       & !vcnt_6_.Q & !vcnt_7_.Q & !vcnt_8_.Q & vcnt_9_.Q ; (5 pterms, 10 signals)
+vcnt_6_.T.X2 = vcnt_4_.Q & vcnt_5_.Q & vcnt_6_.Q & !vcnt_7_.Q & !vcnt_8_.Q
+       & vcnt_9_.Q ; (1 pterm, 6 signals)
+vcnt_6_.C = vga_hs.Q ; (1 pterm, 1 signal)
+vcnt_6_.AR = !reset ; (1 pterm, 1 signal)
+
+vcnt_7_.T = vcnt_0_.Q & vcnt_1_.Q & vcnt_2_.Q & vcnt_3_.Q & vcnt_4_.Q
+       & vcnt_5_.Q & vcnt_6_.Q ; (1 pterm, 7 signals)
+vcnt_7_.C = vga_hs.Q ; (1 pterm, 1 signal)
+vcnt_7_.AR = !reset ; (1 pterm, 1 signal)
+
+vcnt_8_.T = vcnt_0_.Q & vcnt_1_.Q & vcnt_2_.Q & vcnt_3_.Q & vcnt_4_.Q
+       & vcnt_5_.Q & vcnt_6_.Q & vcnt_7_.Q ; (1 pterm, 8 signals)
+vcnt_8_.C = vga_hs.Q ; (1 pterm, 1 signal)
+vcnt_8_.AR = !reset ; (1 pterm, 1 signal)
+
+vcnt_9_.D = vcnt_0_.Q & vcnt_1_.Q & vcnt_2_.Q & vcnt_3_.Q & vcnt_4_.Q
+       & vcnt_5_.Q & vcnt_6_.Q & vcnt_7_.Q & vcnt_8_.Q & !vcnt_9_.Q
+    # !vcnt_0_.Q & !vcnt_1_.Q & !vcnt_2_.Q & !vcnt_3_.Q & !vcnt_7_.Q
+       & !vcnt_8_.Q & vcnt_9_.Q
+    # !vcnt_6_.Q & !vcnt_7_.Q & !vcnt_8_.Q & vcnt_9_.Q
+    # !vcnt_5_.Q & !vcnt_7_.Q & !vcnt_8_.Q & vcnt_9_.Q
+    # !vcnt_4_.Q & !vcnt_7_.Q & !vcnt_8_.Q & vcnt_9_.Q ; (5 pterms, 10 signals)
+vcnt_9_.C = vga_hs.Q ; (1 pterm, 1 signal)
+vcnt_9_.AR = !reset ; (1 pterm, 1 signal)
+
+vga_d_0_.X1 = !orient & inst_enable.Q & !hcnt_7_.Q & !hcnt_9_.Q & !hcnt_10_.Q
+       & N_343_i & !N_130 & !N_127
+    # !orient & N_97_i & inst_enable.Q & !N_87_0 & hcnt_8_.Q & !N_130 & !N_127
+    # !orient & inst_enable.Q & hcnt_2_.Q & hcnt_5_.Q & hcnt_6_.Q & !hcnt_7_.Q
+       & !hcnt_8_.Q & !hcnt_9_.Q & !hcnt_10_.Q & !N_130 & !N_127
+    # !orient & inst_enable.Q & hcnt_3_.Q & hcnt_5_.Q & hcnt_6_.Q & !hcnt_7_.Q
+       & !hcnt_8_.Q & !hcnt_9_.Q & !hcnt_10_.Q & !N_130 & !N_127
+    # !orient & inst_enable.Q & hcnt_4_.Q & hcnt_5_.Q & hcnt_6_.Q & !hcnt_7_.Q
+       & !hcnt_8_.Q & !hcnt_9_.Q & !hcnt_10_.Q & !N_130 & !N_127
+    # !orient & inst_enable.Q & !hcnt_6_.Q & hcnt_7_.Q & !hcnt_8_.Q
+       & !hcnt_9_.Q & !hcnt_10_.Q & !N_130 & !N_127
+    # !orient & inst_enable.Q & !hcnt_3_.Q & !hcnt_4_.Q & !hcnt_5_.Q
+       & hcnt_7_.Q & !hcnt_8_.Q & !hcnt_9_.Q & !hcnt_10_.Q & !N_130 & !N_127
+    # !orient & inst_enable.Q & !hcnt_4_.Q & !hcnt_5_.Q & !hcnt_6_.Q
+       & !hcnt_9_.Q & !hcnt_10_.Q & N_343_i & !N_130 & !N_127
+    # !orient & inst_enable.Q & !N_87_0 & hcnt_10_.Q & !N_130 & !N_127
+    # !orient & inst_enable.Q & !N_87_0 & hcnt_9_.Q & !N_130 & !N_127
+    # orient & inst_enable.Q & !N_95_0 & vcnt_9_.Q & !N_130 & !N_127
+    # orient & inst_enable.Q & !N_95_0 & vcnt_7_.Q & vcnt_8_.Q & !N_130
+       & !N_127
+    # orient & inst_enable.Q & !N_95_0 & vcnt_8_.Q & !N_130 & N_140 & !N_127 ; (13 pterms, 21 signals)
+vga_d_0_.X2 = inst_enable.Q & !N_130 & !N_127 ; (1 pterm, 3 signals)
+
+vga_d_1_.X1 = !orient & !N_97_i & inst_enable.Q & !hcnt_9_.Q & !hcnt_10_.Q
+       & N_343_i & !N_509_0
+    # !orient & inst_enable.Q & !hcnt_7_.Q & !hcnt_9_.Q & !hcnt_10_.Q
+       & N_343_i & !N_509_0
+    # !orient & inst_enable.Q & !hcnt_5_.Q & !hcnt_7_.Q & !hcnt_8_.Q
+       & !hcnt_9_.Q & !hcnt_10_.Q & !N_509_0
+    # !orient & inst_enable.Q & !hcnt_6_.Q & !hcnt_7_.Q & !hcnt_8_.Q
+       & !hcnt_9_.Q & !hcnt_10_.Q & !N_509_0
+    # !orient & inst_enable.Q & !hcnt_2_.Q & !hcnt_3_.Q & !hcnt_4_.Q
+       & !hcnt_7_.Q & !hcnt_8_.Q & !hcnt_9_.Q & !hcnt_10_.Q & !N_509_0
+    # orient & inst_enable.Q & vcnt_9_.Q & !un1_vcnt_8_i
+    # orient & inst_enable.Q & !vcnt_7_.Q & !vcnt_8_.Q & !un1_vcnt_8_i
+       & N_854_i
+    # orient & inst_enable.Q & vcnt_8_.Q & N_140 & !un1_vcnt_8_i
+    # orient & !N_98_i & inst_enable.Q & vcnt_7_.Q & !un1_vcnt_8_i
+    # orient & inst_enable.Q & vcnt_7_.Q & vcnt_8_.Q & !un1_vcnt_8_i ; (10 pterms, 21 signals)
+vga_d_1_.X2 = !orient & inst_enable.Q & !hcnt_10_.Q & !N_509_0 ; (1 pterm, 4 signals)
+
+vga_d_2_ = !orient & inst_enable.Q & !hcnt_10_.Q & N_343_i & !N_509_0
+    # !orient & inst_enable.Q & hcnt_9_.Q & !hcnt_10_.Q & !N_509_0
+    # orient & N_98_i & inst_enable.Q & vcnt_7_.Q & !un1_vcnt_8_i
+    # orient & inst_enable.Q & vcnt_9_.Q & !un1_vcnt_8_i
+    # orient & inst_enable.Q & vcnt_8_.Q & !un1_vcnt_8_i ; (5 pterms, 11 signals)
+
+vga_hs.D = !( hcnt_4_.Q & hcnt_5_.Q & !hcnt_7_.Q & hcnt_8_.Q & hcnt_9_.Q
+       & !hcnt_10_.Q
+    # hcnt_6_.Q & !hcnt_7_.Q & hcnt_8_.Q & hcnt_9_.Q & !hcnt_10_.Q ) ; (2 pterms, 7 signals)
+vga_hs.C = clk_50m ; (1 pterm, 1 signal)
+vga_hs.AP = !reset ; (1 pterm, 1 signal)
+
+vga_vs.D = !( vcnt_1_.Q & !vcnt_2_.Q & vcnt_3_.Q & vcnt_4_.Q & !vcnt_5_.Q
+       & vcnt_6_.Q & !vcnt_7_.Q & !vcnt_8_.Q & vcnt_9_.Q
+    # vcnt_0_.Q & !vcnt_2_.Q & vcnt_3_.Q & vcnt_4_.Q & !vcnt_5_.Q & vcnt_6_.Q
+       & !vcnt_7_.Q & !vcnt_8_.Q & vcnt_9_.Q ) ; (2 pterms, 10 signals)
+vga_vs.C = vga_hs.Q ; (1 pterm, 1 signal)
+vga_vs.AP = !reset ; (1 pterm, 1 signal)
+

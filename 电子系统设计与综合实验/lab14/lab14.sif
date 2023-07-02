@@ -1,0 +1,1260 @@
+// Node Statistic Information File
+// Tool:  ispLEVER Classic 2.1.00.02.49.20
+// Design 'vga' created   Fri May 13 10:28:53 2022
+
+// Fmax Logic Level: 1.
+
+// Path: vcnt_0_.Q
+//    -> vcnt_9_.D
+
+// Signal Name: vga_d_2_
+// Type: Output
+BEGIN vga_d_2_
+Fanin Number		10
+Pterm Number		4
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	orient.BLIF         	0
+Fanin Node      	un1_hcnt_8.BLIF     	4
+Fanin Node      	inst_enable.Q       	8
+Fanin Node      	vcnt_6_.Q           	5
+Fanin Node      	vcnt_7_.Q           	1
+Fanin Node      	vcnt_8_.Q           	1
+Fanin Node      	vcnt_9_.Q           	5
+Fanin Node      	N_782_0_1.BLIF      	2
+Fanin Node      	un1_hcnt_4.BLIF     	4
+Fanin Node      	un1_vcnt_6_i.BLIF   	4
+END
+
+// Signal Name: vga_d_1_.X1
+// Type: Output
+BEGIN vga_d_1_.X1
+Fanin Number		21
+Pterm Number		11
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	orient.BLIF         	0
+Fanin Node      	un1_vcnt_4.BLIF     	4
+Fanin Node      	un1_hcnt_8.BLIF     	4
+Fanin Node      	inst_enable.Q       	8
+Fanin Node      	hcnt_2_.Q           	3
+Fanin Node      	hcnt_3_.Q           	4
+Fanin Node      	hcnt_4_.Q           	1
+Fanin Node      	hcnt_5_.Q           	3
+Fanin Node      	hcnt_6_.Q           	1
+Fanin Node      	hcnt_7_.Q           	1
+Fanin Node      	hcnt_8_.Q           	1
+Fanin Node      	hcnt_9_.Q           	1
+Fanin Node      	hcnt_10_.Q          	2
+Fanin Node      	vcnt_6_.Q           	5
+Fanin Node      	vcnt_7_.Q           	1
+Fanin Node      	vcnt_8_.Q           	1
+Fanin Node      	vcnt_9_.Q           	5
+Fanin Node      	N_782_0_1.BLIF      	2
+Fanin Node      	vga_d21.BLIF        	4
+Fanin Node      	un1_hcnt_4.BLIF     	4
+Fanin Node      	un1_vcnt_6_i.BLIF   	4
+END
+
+// Signal Name: vga_d_1_.X2
+// Type: Output
+BEGIN vga_d_1_.X2
+Fanin Number		4
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	orient.BLIF         	0
+Fanin Node      	un1_hcnt_8.BLIF     	4
+Fanin Node      	inst_enable.Q       	8
+Fanin Node      	un1_hcnt_4.BLIF     	4
+END
+
+// Signal Name: vga_d_0_.X1
+// Type: Output
+BEGIN vga_d_0_.X1
+Fanin Number		22
+Pterm Number		9
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	orient.BLIF         	0
+Fanin Node      	inst_enable.Q       	8
+Fanin Node      	hcnt_2_.Q           	3
+Fanin Node      	hcnt_3_.Q           	4
+Fanin Node      	hcnt_4_.Q           	1
+Fanin Node      	hcnt_5_.Q           	3
+Fanin Node      	hcnt_6_.Q           	1
+Fanin Node      	hcnt_7_.Q           	1
+Fanin Node      	hcnt_8_.Q           	1
+Fanin Node      	hcnt_9_.Q           	1
+Fanin Node      	hcnt_10_.Q          	2
+Fanin Node      	vcnt_2_.Q           	3
+Fanin Node      	vcnt_3_.Q           	4
+Fanin Node      	vcnt_4_.Q           	10
+Fanin Node      	vcnt_5_.Q           	7
+Fanin Node      	vcnt_6_.Q           	5
+Fanin Node      	vcnt_7_.Q           	1
+Fanin Node      	vcnt_8_.Q           	1
+Fanin Node      	vcnt_9_.Q           	5
+Fanin Node      	N_5_i_1.BLIF        	11
+Fanin Node      	N_5_i_3.BLIF        	9
+Fanin Node      	N_782_0_1.BLIF      	2
+END
+
+// Signal Name: vga_d_0_.X2
+// Type: Output
+BEGIN vga_d_0_.X2
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	inst_enable.Q       	8
+Fanin Node      	N_5_i_1.BLIF        	11
+Fanin Node      	N_5_i_3.BLIF        	9
+END
+
+// Signal Name: vga_hs.D
+// Type: Output_reg
+BEGIN vga_hs.D
+Fanin Number		7
+Pterm Number		2
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	hcnt_4_.Q           	1
+Fanin Node      	hcnt_5_.Q           	3
+Fanin Node      	hcnt_6_.Q           	1
+Fanin Node      	hcnt_7_.Q           	1
+Fanin Node      	hcnt_8_.Q           	1
+Fanin Node      	hcnt_9_.Q           	1
+Fanin Node      	hcnt_10_.Q          	2
+END
+
+// Signal Name: vga_hs.C
+// Type: Output_reg
+BEGIN vga_hs.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clk_50m.BLIF        	0
+END
+
+// Signal Name: vga_hs.AP
+// Type: Output_reg
+BEGIN vga_hs.AP
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset.BLIF          	0
+END
+
+// Signal Name: vga_vs.D
+// Type: Output_reg
+BEGIN vga_vs.D
+Fanin Number		0
+Pterm Number		0
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+END
+
+// Signal Name: vga_vs.C
+// Type: Output_reg
+BEGIN vga_vs.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Output    	vga_hs.Q            	2
+END
+
+// Signal Name: vga_vs.AP
+// Type: Output_reg
+BEGIN vga_vs.AP
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset.BLIF          	0
+END
+
+// Signal Name: un1_vcnt_4
+// Type: Node
+BEGIN un1_vcnt_4
+Fanin Number		10
+Pterm Number		4
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	vcnt_0_.Q           	5
+Fanin Node      	vcnt_1_.Q           	7
+Fanin Node      	vcnt_2_.Q           	3
+Fanin Node      	vcnt_3_.Q           	4
+Fanin Node      	vcnt_4_.Q           	10
+Fanin Node      	vcnt_5_.Q           	7
+Fanin Node      	vcnt_6_.Q           	5
+Fanin Node      	vcnt_7_.Q           	1
+Fanin Node      	vcnt_8_.Q           	1
+Fanin Node      	vcnt_9_.Q           	5
+END
+
+// Signal Name: un1_hcnt_8
+// Type: Node
+BEGIN un1_hcnt_8
+Fanin Number		9
+Pterm Number		4
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	hcnt_2_.Q           	3
+Fanin Node      	hcnt_3_.Q           	4
+Fanin Node      	hcnt_4_.Q           	1
+Fanin Node      	hcnt_5_.Q           	3
+Fanin Node      	hcnt_6_.Q           	1
+Fanin Node      	hcnt_7_.Q           	1
+Fanin Node      	hcnt_8_.Q           	1
+Fanin Node      	hcnt_9_.Q           	1
+Fanin Node      	hcnt_10_.Q          	2
+END
+
+// Signal Name: hcnt_0_.D
+// Type: Node_reg
+BEGIN hcnt_0_.D
+Fanin Number		7
+Pterm Number		2
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	hcnt_0_.Q           	2
+Fanin Node      	hcnt_5_.Q           	3
+Fanin Node      	hcnt_6_.Q           	1
+Fanin Node      	hcnt_7_.Q           	1
+Fanin Node      	hcnt_8_.Q           	1
+Fanin Node      	hcnt_9_.Q           	1
+Fanin Node      	hcnt_10_.Q          	2
+END
+
+// Signal Name: hcnt_0_.C
+// Type: Node_reg
+BEGIN hcnt_0_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clk_50m.BLIF        	0
+END
+
+// Signal Name: hcnt_0_.AR
+// Type: Node_reg
+BEGIN hcnt_0_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset.BLIF          	0
+END
+
+// Signal Name: inst_enable.D
+// Type: Node_reg
+BEGIN inst_enable.D
+Fanin Number		13
+Pterm Number		8
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	hcnt_5_.Q           	3
+Fanin Node      	hcnt_6_.Q           	1
+Fanin Node      	hcnt_7_.Q           	1
+Fanin Node      	hcnt_8_.Q           	1
+Fanin Node      	hcnt_9_.Q           	1
+Fanin Node      	hcnt_10_.Q          	2
+Fanin Node      	vcnt_3_.Q           	4
+Fanin Node      	vcnt_4_.Q           	10
+Fanin Node      	vcnt_5_.Q           	7
+Fanin Node      	vcnt_6_.Q           	5
+Fanin Node      	vcnt_7_.Q           	1
+Fanin Node      	vcnt_8_.Q           	1
+Fanin Node      	vcnt_9_.Q           	5
+END
+
+// Signal Name: inst_enable.C
+// Type: Node_reg
+BEGIN inst_enable.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clk_50m.BLIF        	0
+END
+
+// Signal Name: inst_enable.AR
+// Type: Node_reg
+BEGIN inst_enable.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset.BLIF          	0
+END
+
+// Signal Name: hcnt_1_.D
+// Type: Node_reg
+BEGIN hcnt_1_.D
+Fanin Number		2
+Pterm Number		2
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	hcnt_0_.Q           	2
+Fanin Node      	hcnt_1_.Q           	2
+END
+
+// Signal Name: hcnt_1_.C
+// Type: Node_reg
+BEGIN hcnt_1_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clk_50m.BLIF        	0
+END
+
+// Signal Name: hcnt_1_.AR
+// Type: Node_reg
+BEGIN hcnt_1_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset.BLIF          	0
+END
+
+// Signal Name: hcnt_2_.D
+// Type: Node_reg
+BEGIN hcnt_2_.D
+Fanin Number		3
+Pterm Number		3
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	hcnt_0_.Q           	2
+Fanin Node      	hcnt_1_.Q           	2
+Fanin Node      	hcnt_2_.Q           	3
+END
+
+// Signal Name: hcnt_2_.C
+// Type: Node_reg
+BEGIN hcnt_2_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clk_50m.BLIF        	0
+END
+
+// Signal Name: hcnt_2_.AR
+// Type: Node_reg
+BEGIN hcnt_2_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset.BLIF          	0
+END
+
+// Signal Name: hcnt_3_.D
+// Type: Node_reg
+BEGIN hcnt_3_.D
+Fanin Number		4
+Pterm Number		4
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	hcnt_0_.Q           	2
+Fanin Node      	hcnt_1_.Q           	2
+Fanin Node      	hcnt_2_.Q           	3
+Fanin Node      	hcnt_3_.Q           	4
+END
+
+// Signal Name: hcnt_3_.C
+// Type: Node_reg
+BEGIN hcnt_3_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clk_50m.BLIF        	0
+END
+
+// Signal Name: hcnt_3_.AR
+// Type: Node_reg
+BEGIN hcnt_3_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset.BLIF          	0
+END
+
+// Signal Name: hcnt_4_.D.X1
+// Type: Node_reg
+BEGIN hcnt_4_.D.X1
+Fanin Number		5
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	hcnt_0_.Q           	2
+Fanin Node      	hcnt_1_.Q           	2
+Fanin Node      	hcnt_2_.Q           	3
+Fanin Node      	hcnt_3_.Q           	4
+Fanin Node      	hcnt_4_.Q           	1
+END
+
+// Signal Name: hcnt_4_.D.X2
+// Type: Node_reg
+BEGIN hcnt_4_.D.X2
+Fanin Number		5
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	hcnt_0_.Q           	2
+Fanin Node      	hcnt_1_.Q           	2
+Fanin Node      	hcnt_2_.Q           	3
+Fanin Node      	hcnt_3_.Q           	4
+Fanin Node      	hcnt_4_.Q           	1
+END
+
+// Signal Name: hcnt_4_.C
+// Type: Node_reg
+BEGIN hcnt_4_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clk_50m.BLIF        	0
+END
+
+// Signal Name: hcnt_4_.AR
+// Type: Node_reg
+BEGIN hcnt_4_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset.BLIF          	0
+END
+
+// Signal Name: hcnt_5_.T
+// Type: Node_reg
+BEGIN hcnt_5_.T
+Fanin Number		11
+Pterm Number		3
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	hcnt_0_.Q           	2
+Fanin Node      	hcnt_1_.Q           	2
+Fanin Node      	hcnt_2_.Q           	3
+Fanin Node      	hcnt_3_.Q           	4
+Fanin Node      	hcnt_4_.Q           	1
+Fanin Node      	hcnt_5_.Q           	3
+Fanin Node      	hcnt_6_.Q           	1
+Fanin Node      	hcnt_7_.Q           	1
+Fanin Node      	hcnt_8_.Q           	1
+Fanin Node      	hcnt_9_.Q           	1
+Fanin Node      	hcnt_10_.Q          	2
+END
+
+// Signal Name: hcnt_5_.C
+// Type: Node_reg
+BEGIN hcnt_5_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clk_50m.BLIF        	0
+END
+
+// Signal Name: hcnt_5_.AR
+// Type: Node_reg
+BEGIN hcnt_5_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset.BLIF          	0
+END
+
+// Signal Name: hcnt_6_.T
+// Type: Node_reg
+BEGIN hcnt_6_.T
+Fanin Number		6
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	hcnt_0_.Q           	2
+Fanin Node      	hcnt_1_.Q           	2
+Fanin Node      	hcnt_2_.Q           	3
+Fanin Node      	hcnt_3_.Q           	4
+Fanin Node      	hcnt_4_.Q           	1
+Fanin Node      	hcnt_5_.Q           	3
+END
+
+// Signal Name: hcnt_6_.C
+// Type: Node_reg
+BEGIN hcnt_6_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clk_50m.BLIF        	0
+END
+
+// Signal Name: hcnt_6_.AR
+// Type: Node_reg
+BEGIN hcnt_6_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset.BLIF          	0
+END
+
+// Signal Name: hcnt_7_.T
+// Type: Node_reg
+BEGIN hcnt_7_.T
+Fanin Number		7
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	hcnt_0_.Q           	2
+Fanin Node      	hcnt_1_.Q           	2
+Fanin Node      	hcnt_2_.Q           	3
+Fanin Node      	hcnt_3_.Q           	4
+Fanin Node      	hcnt_4_.Q           	1
+Fanin Node      	hcnt_5_.Q           	3
+Fanin Node      	hcnt_6_.Q           	1
+END
+
+// Signal Name: hcnt_7_.C
+// Type: Node_reg
+BEGIN hcnt_7_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clk_50m.BLIF        	0
+END
+
+// Signal Name: hcnt_7_.AR
+// Type: Node_reg
+BEGIN hcnt_7_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset.BLIF          	0
+END
+
+// Signal Name: hcnt_8_.T
+// Type: Node_reg
+BEGIN hcnt_8_.T
+Fanin Number		8
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	hcnt_0_.Q           	2
+Fanin Node      	hcnt_1_.Q           	2
+Fanin Node      	hcnt_2_.Q           	3
+Fanin Node      	hcnt_3_.Q           	4
+Fanin Node      	hcnt_4_.Q           	1
+Fanin Node      	hcnt_5_.Q           	3
+Fanin Node      	hcnt_6_.Q           	1
+Fanin Node      	hcnt_7_.Q           	1
+END
+
+// Signal Name: hcnt_8_.C
+// Type: Node_reg
+BEGIN hcnt_8_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clk_50m.BLIF        	0
+END
+
+// Signal Name: hcnt_8_.AR
+// Type: Node_reg
+BEGIN hcnt_8_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset.BLIF          	0
+END
+
+// Signal Name: hcnt_9_.T
+// Type: Node_reg
+BEGIN hcnt_9_.T
+Fanin Number		9
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	hcnt_0_.Q           	2
+Fanin Node      	hcnt_1_.Q           	2
+Fanin Node      	hcnt_2_.Q           	3
+Fanin Node      	hcnt_3_.Q           	4
+Fanin Node      	hcnt_4_.Q           	1
+Fanin Node      	hcnt_5_.Q           	3
+Fanin Node      	hcnt_6_.Q           	1
+Fanin Node      	hcnt_7_.Q           	1
+Fanin Node      	hcnt_8_.Q           	1
+END
+
+// Signal Name: hcnt_9_.C
+// Type: Node_reg
+BEGIN hcnt_9_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clk_50m.BLIF        	0
+END
+
+// Signal Name: hcnt_9_.AR
+// Type: Node_reg
+BEGIN hcnt_9_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset.BLIF          	0
+END
+
+// Signal Name: hcnt_10_.D
+// Type: Node_reg
+BEGIN hcnt_10_.D
+Fanin Number		11
+Pterm Number		2
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	hcnt_0_.Q           	2
+Fanin Node      	hcnt_1_.Q           	2
+Fanin Node      	hcnt_2_.Q           	3
+Fanin Node      	hcnt_3_.Q           	4
+Fanin Node      	hcnt_4_.Q           	1
+Fanin Node      	hcnt_5_.Q           	3
+Fanin Node      	hcnt_6_.Q           	1
+Fanin Node      	hcnt_7_.Q           	1
+Fanin Node      	hcnt_8_.Q           	1
+Fanin Node      	hcnt_9_.Q           	1
+Fanin Node      	hcnt_10_.Q          	2
+END
+
+// Signal Name: hcnt_10_.C
+// Type: Node_reg
+BEGIN hcnt_10_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clk_50m.BLIF        	0
+END
+
+// Signal Name: hcnt_10_.AR
+// Type: Node_reg
+BEGIN hcnt_10_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset.BLIF          	0
+END
+
+// Signal Name: vcnt_0_.D
+// Type: Node_reg
+BEGIN vcnt_0_.D
+Fanin Number		10
+Pterm Number		5
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	vcnt_0_.Q           	5
+Fanin Node      	vcnt_1_.Q           	7
+Fanin Node      	vcnt_2_.Q           	3
+Fanin Node      	vcnt_3_.Q           	4
+Fanin Node      	vcnt_4_.Q           	10
+Fanin Node      	vcnt_5_.Q           	7
+Fanin Node      	vcnt_6_.Q           	5
+Fanin Node      	vcnt_7_.Q           	1
+Fanin Node      	vcnt_8_.Q           	1
+Fanin Node      	vcnt_9_.Q           	5
+END
+
+// Signal Name: vcnt_0_.C
+// Type: Node_reg
+BEGIN vcnt_0_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Output    	vga_hs.Q            	2
+END
+
+// Signal Name: vcnt_0_.AR
+// Type: Node_reg
+BEGIN vcnt_0_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset.BLIF          	0
+END
+
+// Signal Name: vcnt_1_.D
+// Type: Node_reg
+BEGIN vcnt_1_.D
+Fanin Number		10
+Pterm Number		7
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	vcnt_0_.Q           	5
+Fanin Node      	vcnt_1_.Q           	7
+Fanin Node      	vcnt_2_.Q           	3
+Fanin Node      	vcnt_3_.Q           	4
+Fanin Node      	vcnt_4_.Q           	10
+Fanin Node      	vcnt_5_.Q           	7
+Fanin Node      	vcnt_6_.Q           	5
+Fanin Node      	vcnt_7_.Q           	1
+Fanin Node      	vcnt_8_.Q           	1
+Fanin Node      	vcnt_9_.Q           	5
+END
+
+// Signal Name: vcnt_1_.C
+// Type: Node_reg
+BEGIN vcnt_1_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Output    	vga_hs.Q            	2
+END
+
+// Signal Name: vcnt_1_.AR
+// Type: Node_reg
+BEGIN vcnt_1_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset.BLIF          	0
+END
+
+// Signal Name: vcnt_2_.D
+// Type: Node_reg
+BEGIN vcnt_2_.D
+Fanin Number		3
+Pterm Number		3
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	vcnt_0_.Q           	5
+Fanin Node      	vcnt_1_.Q           	7
+Fanin Node      	vcnt_2_.Q           	3
+END
+
+// Signal Name: vcnt_2_.C
+// Type: Node_reg
+BEGIN vcnt_2_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Output    	vga_hs.Q            	2
+END
+
+// Signal Name: vcnt_2_.AR
+// Type: Node_reg
+BEGIN vcnt_2_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset.BLIF          	0
+END
+
+// Signal Name: vcnt_3_.D
+// Type: Node_reg
+BEGIN vcnt_3_.D
+Fanin Number		4
+Pterm Number		4
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	vcnt_0_.Q           	5
+Fanin Node      	vcnt_1_.Q           	7
+Fanin Node      	vcnt_2_.Q           	3
+Fanin Node      	vcnt_3_.Q           	4
+END
+
+// Signal Name: vcnt_3_.C
+// Type: Node_reg
+BEGIN vcnt_3_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Output    	vga_hs.Q            	2
+END
+
+// Signal Name: vcnt_3_.AR
+// Type: Node_reg
+BEGIN vcnt_3_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset.BLIF          	0
+END
+
+// Signal Name: vcnt_4_.D
+// Type: Node_reg
+BEGIN vcnt_4_.D
+Fanin Number		10
+Pterm Number		10
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	vcnt_0_.Q           	5
+Fanin Node      	vcnt_1_.Q           	7
+Fanin Node      	vcnt_2_.Q           	3
+Fanin Node      	vcnt_3_.Q           	4
+Fanin Node      	vcnt_4_.Q           	10
+Fanin Node      	vcnt_5_.Q           	7
+Fanin Node      	vcnt_6_.Q           	5
+Fanin Node      	vcnt_7_.Q           	1
+Fanin Node      	vcnt_8_.Q           	1
+Fanin Node      	vcnt_9_.Q           	5
+END
+
+// Signal Name: vcnt_4_.C
+// Type: Node_reg
+BEGIN vcnt_4_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Output    	vga_hs.Q            	2
+END
+
+// Signal Name: vcnt_4_.AR
+// Type: Node_reg
+BEGIN vcnt_4_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset.BLIF          	0
+END
+
+// Signal Name: vcnt_5_.T
+// Type: Node_reg
+BEGIN vcnt_5_.T
+Fanin Number		10
+Pterm Number		7
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	vcnt_0_.Q           	5
+Fanin Node      	vcnt_1_.Q           	7
+Fanin Node      	vcnt_2_.Q           	3
+Fanin Node      	vcnt_3_.Q           	4
+Fanin Node      	vcnt_4_.Q           	10
+Fanin Node      	vcnt_5_.Q           	7
+Fanin Node      	vcnt_6_.Q           	5
+Fanin Node      	vcnt_7_.Q           	1
+Fanin Node      	vcnt_8_.Q           	1
+Fanin Node      	vcnt_9_.Q           	5
+END
+
+// Signal Name: vcnt_5_.C
+// Type: Node_reg
+BEGIN vcnt_5_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Output    	vga_hs.Q            	2
+END
+
+// Signal Name: vcnt_5_.AR
+// Type: Node_reg
+BEGIN vcnt_5_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset.BLIF          	0
+END
+
+// Signal Name: vcnt_6_.T.X1
+// Type: Node_reg
+BEGIN vcnt_6_.T.X1
+Fanin Number		10
+Pterm Number		5
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	vcnt_0_.Q           	5
+Fanin Node      	vcnt_1_.Q           	7
+Fanin Node      	vcnt_2_.Q           	3
+Fanin Node      	vcnt_3_.Q           	4
+Fanin Node      	vcnt_4_.Q           	10
+Fanin Node      	vcnt_5_.Q           	7
+Fanin Node      	vcnt_6_.Q           	5
+Fanin Node      	vcnt_7_.Q           	1
+Fanin Node      	vcnt_8_.Q           	1
+Fanin Node      	vcnt_9_.Q           	5
+END
+
+// Signal Name: vcnt_6_.T.X2
+// Type: Node_reg
+BEGIN vcnt_6_.T.X2
+Fanin Number		10
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	vcnt_0_.Q           	5
+Fanin Node      	vcnt_1_.Q           	7
+Fanin Node      	vcnt_2_.Q           	3
+Fanin Node      	vcnt_3_.Q           	4
+Fanin Node      	vcnt_4_.Q           	10
+Fanin Node      	vcnt_5_.Q           	7
+Fanin Node      	vcnt_6_.Q           	5
+Fanin Node      	vcnt_7_.Q           	1
+Fanin Node      	vcnt_8_.Q           	1
+Fanin Node      	vcnt_9_.Q           	5
+END
+
+// Signal Name: vcnt_6_.C
+// Type: Node_reg
+BEGIN vcnt_6_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Output    	vga_hs.Q            	2
+END
+
+// Signal Name: vcnt_6_.AR
+// Type: Node_reg
+BEGIN vcnt_6_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset.BLIF          	0
+END
+
+// Signal Name: vcnt_7_.T
+// Type: Node_reg
+BEGIN vcnt_7_.T
+Fanin Number		7
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	vcnt_0_.Q           	5
+Fanin Node      	vcnt_1_.Q           	7
+Fanin Node      	vcnt_2_.Q           	3
+Fanin Node      	vcnt_3_.Q           	4
+Fanin Node      	vcnt_4_.Q           	10
+Fanin Node      	vcnt_5_.Q           	7
+Fanin Node      	vcnt_6_.Q           	5
+END
+
+// Signal Name: vcnt_7_.C
+// Type: Node_reg
+BEGIN vcnt_7_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Output    	vga_hs.Q            	2
+END
+
+// Signal Name: vcnt_7_.AR
+// Type: Node_reg
+BEGIN vcnt_7_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset.BLIF          	0
+END
+
+// Signal Name: vcnt_8_.T
+// Type: Node_reg
+BEGIN vcnt_8_.T
+Fanin Number		8
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	vcnt_0_.Q           	5
+Fanin Node      	vcnt_1_.Q           	7
+Fanin Node      	vcnt_2_.Q           	3
+Fanin Node      	vcnt_3_.Q           	4
+Fanin Node      	vcnt_4_.Q           	10
+Fanin Node      	vcnt_5_.Q           	7
+Fanin Node      	vcnt_6_.Q           	5
+Fanin Node      	vcnt_7_.Q           	1
+END
+
+// Signal Name: vcnt_8_.C
+// Type: Node_reg
+BEGIN vcnt_8_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Output    	vga_hs.Q            	2
+END
+
+// Signal Name: vcnt_8_.AR
+// Type: Node_reg
+BEGIN vcnt_8_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset.BLIF          	0
+END
+
+// Signal Name: vcnt_9_.D
+// Type: Node_reg
+BEGIN vcnt_9_.D
+Fanin Number		10
+Pterm Number		5
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	vcnt_0_.Q           	5
+Fanin Node      	vcnt_1_.Q           	7
+Fanin Node      	vcnt_2_.Q           	3
+Fanin Node      	vcnt_3_.Q           	4
+Fanin Node      	vcnt_4_.Q           	10
+Fanin Node      	vcnt_5_.Q           	7
+Fanin Node      	vcnt_6_.Q           	5
+Fanin Node      	vcnt_7_.Q           	1
+Fanin Node      	vcnt_8_.Q           	1
+Fanin Node      	vcnt_9_.Q           	5
+END
+
+// Signal Name: vcnt_9_.C
+// Type: Node_reg
+BEGIN vcnt_9_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Output    	vga_hs.Q            	2
+END
+
+// Signal Name: vcnt_9_.AR
+// Type: Node_reg
+BEGIN vcnt_9_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset.BLIF          	0
+END
+
+// Signal Name: N_5_i_1
+// Type: Node
+BEGIN N_5_i_1
+Fanin Number		14
+Pterm Number		11
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	orient.BLIF         	0
+Fanin Node      	un1_vcnt_4.BLIF     	4
+Fanin Node      	vcnt_1_.Q           	7
+Fanin Node      	vcnt_2_.Q           	3
+Fanin Node      	vcnt_3_.Q           	4
+Fanin Node      	vcnt_4_.Q           	10
+Fanin Node      	vcnt_5_.Q           	7
+Fanin Node      	vcnt_6_.Q           	5
+Fanin Node      	vcnt_7_.Q           	1
+Fanin Node      	vcnt_8_.Q           	1
+Fanin Node      	vcnt_9_.Q           	5
+Fanin Node      	N_782_0_1.BLIF      	2
+Fanin Node      	vga_d21.BLIF        	4
+Fanin Node      	un1_vcnt_6_i.BLIF   	4
+END
+
+// Signal Name: N_5_i_3
+// Type: Node
+BEGIN N_5_i_3
+Fanin Number		12
+Pterm Number		9
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	orient.BLIF         	0
+Fanin Node      	un1_hcnt_8.BLIF     	4
+Fanin Node      	hcnt_2_.Q           	3
+Fanin Node      	hcnt_3_.Q           	4
+Fanin Node      	hcnt_4_.Q           	1
+Fanin Node      	hcnt_5_.Q           	3
+Fanin Node      	hcnt_6_.Q           	1
+Fanin Node      	hcnt_7_.Q           	1
+Fanin Node      	hcnt_8_.Q           	1
+Fanin Node      	hcnt_9_.Q           	1
+Fanin Node      	hcnt_10_.Q          	2
+Fanin Node      	un1_hcnt_4.BLIF     	4
+END
+
+// Signal Name: N_782_0_1
+// Type: Node
+BEGIN N_782_0_1
+Fanin Number		6
+Pterm Number		2
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	vcnt_0_.Q           	5
+Fanin Node      	vcnt_1_.Q           	7
+Fanin Node      	vcnt_2_.Q           	3
+Fanin Node      	vcnt_3_.Q           	4
+Fanin Node      	vcnt_4_.Q           	10
+Fanin Node      	vcnt_5_.Q           	7
+END
+
+// Signal Name: vga_d21
+// Type: Node
+BEGIN vga_d21
+Fanin Number		10
+Pterm Number		4
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	vcnt_0_.Q           	5
+Fanin Node      	vcnt_1_.Q           	7
+Fanin Node      	vcnt_2_.Q           	3
+Fanin Node      	vcnt_3_.Q           	4
+Fanin Node      	vcnt_4_.Q           	10
+Fanin Node      	vcnt_5_.Q           	7
+Fanin Node      	vcnt_6_.Q           	5
+Fanin Node      	vcnt_7_.Q           	1
+Fanin Node      	vcnt_8_.Q           	1
+Fanin Node      	vcnt_9_.Q           	5
+END
+
+// Signal Name: un1_hcnt_4
+// Type: Node
+BEGIN un1_hcnt_4
+Fanin Number		9
+Pterm Number		4
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	hcnt_2_.Q           	3
+Fanin Node      	hcnt_3_.Q           	4
+Fanin Node      	hcnt_4_.Q           	1
+Fanin Node      	hcnt_5_.Q           	3
+Fanin Node      	hcnt_6_.Q           	1
+Fanin Node      	hcnt_7_.Q           	1
+Fanin Node      	hcnt_8_.Q           	1
+Fanin Node      	hcnt_9_.Q           	1
+Fanin Node      	hcnt_10_.Q          	2
+END
+
+// Signal Name: un1_vcnt_6_i
+// Type: Node
+BEGIN un1_vcnt_6_i
+Fanin Number		10
+Pterm Number		4
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	vcnt_0_.Q           	5
+Fanin Node      	vcnt_1_.Q           	7
+Fanin Node      	vcnt_2_.Q           	3
+Fanin Node      	vcnt_3_.Q           	4
+Fanin Node      	vcnt_4_.Q           	10
+Fanin Node      	vcnt_5_.Q           	7
+Fanin Node      	vcnt_6_.Q           	5
+Fanin Node      	vcnt_7_.Q           	1
+Fanin Node      	vcnt_8_.Q           	1
+Fanin Node      	vcnt_9_.Q           	5
+END
+
+// Design 'vga' used clock signal list:
+CLOCK	clk_50m
+

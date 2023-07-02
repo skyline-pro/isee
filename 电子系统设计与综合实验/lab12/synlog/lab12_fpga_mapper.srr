@@ -1,0 +1,41 @@
+Synopsys CPLD Technology Mapper, Version maplat, Build 923R, Built May  6 2014
+Copyright (C) 1994-2013, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use or distribution of the software is strictly prohibited.
+Product Version I-2014.03LC 
+@N: MF248 |Running in 64-bit mode.
+@N:"e:\grade-3_2\isp_project\lab12\counter_n.v":29:0:29:5|Found counter in view:work.counter_n_48829s_16s(verilog) inst q[16:1]
+@N:"e:\grade-3_2\isp_project\lab12\leddotmatrix.v":27:4:27:9|Found counter in view:work.ledDotMatrix(verilog) inst scanData[3:0]
+@N: MO106 :"e:\grade-3_2\isp_project\lab12\leddotmatrix.v":41:8:41:11|Found ROM, 'col4[5:0]', 16 words by 6 bits 
+@N: MO106 :"e:\grade-3_2\isp_project\lab12\leddotmatrix.v":41:8:41:11|Found ROM, 'col3[5:0]', 16 words by 6 bits 
+@N: MO106 :"e:\grade-3_2\isp_project\lab12\leddotmatrix.v":41:8:41:11|Found ROM, 'col6[3]', 16 words by 1 bits 
+@N: MO106 :"e:\grade-3_2\isp_project\lab12\leddotmatrix.v":41:8:41:11|Found ROM, 'col5[3]', 16 words by 1 bits 
+@N: MO106 :"e:\grade-3_2\isp_project\lab12\leddotmatrix.v":41:8:41:11|Found ROM, 'col2[3]', 16 words by 1 bits 
+@N: MO106 :"e:\grade-3_2\isp_project\lab12\leddotmatrix.v":41:8:41:11|Found ROM, 'col1[3:0]', 16 words by 4 bits 
+@N: MO106 :"e:\grade-3_2\isp_project\lab12\leddotmatrix.v":41:8:41:11|Found ROM, 'col7[1]', 16 words by 1 bits 
+@N: MO106 :"e:\grade-3_2\isp_project\lab12\leddotmatrix.v":41:8:41:11|Found ROM, 'col5[0]', 16 words by 1 bits 
+---------------------------------------
+Resource Usage Report
+
+Simple gate primitives:
+DFFC            16 uses
+DFFCRH          11 uses
+DFFCSH          1 use
+DFFRH           42 uses
+DFF             3 uses
+IBUF            2 uses
+OBUF            16 uses
+AND2            265 uses
+INV             109 uses
+XOR2            61 uses
+OR2             1 use
+
+
+@N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.
+I-2014.03LC 
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 40MB peak: 105MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Fri May 13 08:27:36 2022
+
+###########################################################]

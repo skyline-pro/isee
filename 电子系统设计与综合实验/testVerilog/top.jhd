@@ -1,0 +1,21 @@
+MODULE top DEFIN top.v
+	SUBMODULE to4decode
+		INSTANCE decode2
+	SUBMODULE decode
+		INSTANCE decode
+	SUBMODULE mux
+		INSTANCE mux
+	SUBMODULE counter_n
+		INSTANCE scan
+	SUBMODULE counter_n
+		INSTANCE timeWin
+	SUBMODULE adder
+		INSTANCE adder
+	SUBMODULE counter_n
+		INSTANCE timeAll
+	SUBMODULE random
+		INSTANCE random
+	SUBMODULE key
+		INSTANCE rst
+	SUBMODULE key
+		INSTANCE generator

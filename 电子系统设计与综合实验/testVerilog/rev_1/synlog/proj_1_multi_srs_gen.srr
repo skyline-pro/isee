@@ -1,0 +1,12 @@
+Synopsys Netlist Linker, version comp201403rcp1, Build 060R, built May 27 2014
+@N|Running in 64-bit mode
+File E:\Grade-3_2\ISP_Project\testVerilog\rev_1\synwork\proj_1_comp.srs changed - recompiling
+@N: NF107 :"E:\Grade-3_2\ISP_Project\testVerilog\top.v":1:7:1:9|Selected library: work cell: top view verilog as top level
+@N: NF107 :"E:\Grade-3_2\ISP_Project\testVerilog\top.v":1:7:1:9|Selected library: work cell: top view verilog as top level
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon Apr 11 23:14:30 2016
+
+###########################################################]

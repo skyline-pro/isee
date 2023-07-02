@@ -1,0 +1,31 @@
+Selecting top level module lab12
+@N: CG364 :"E:\grade-3_2\isp_project\lab12\counter_n.v":15:7:15:15|Synthesizing module counter_n
+
+	n=32'b00000000000000001011111010111101
+	counter_bits=32'b00000000000000000000000000010000
+   Generated name = counter_n_48829s_16s
+
+@N: CG364 :"E:\grade-3_2\isp_project\lab12\dffre.v":14:7:14:11|Synthesizing module dffre
+
+@N: CG179 :"E:\grade-3_2\isp_project\lab12\dffre.v":25:13:25:13|Removing redundant assignment
+@N: CG364 :"E:\grade-3_2\isp_project\lab12\button.v":1:7:1:12|Synthesizing module button
+
+@W: CS263 :"E:\grade-3_2\isp_project\lab12\button.v":9:29:9:29|Port-width mismatch for port en. Formal has width 1, Actual 32
+@W: CS263 :"E:\grade-3_2\isp_project\lab12\button.v":9:37:9:37|Port-width mismatch for port r. Formal has width 1, Actual 32
+@W: CS263 :"E:\grade-3_2\isp_project\lab12\button.v":10:28:10:28|Port-width mismatch for port en. Formal has width 1, Actual 32
+@W: CS263 :"E:\grade-3_2\isp_project\lab12\button.v":10:36:10:36|Port-width mismatch for port r. Formal has width 1, Actual 32
+@W: CS263 :"E:\grade-3_2\isp_project\lab12\button.v":11:28:11:28|Port-width mismatch for port en. Formal has width 1, Actual 32
+@W: CS263 :"E:\grade-3_2\isp_project\lab12\button.v":11:36:11:36|Port-width mismatch for port r. Formal has width 1, Actual 32
+@N: CG364 :"E:\grade-3_2\isp_project\lab12\ledDotMatrix.v":1:7:1:18|Synthesizing module ledDotMatrix
+
+@W: CG296 :"E:\grade-3_2\isp_project\lab12\ledDotMatrix.v":216:13:216:18|Incomplete sensitivity list - assuming completeness
+@W: CG290 :"E:\grade-3_2\isp_project\lab12\ledDotMatrix.v":218:29:218:32|Referenced variable col1 is not in sensitivity list
+@W: CG290 :"E:\grade-3_2\isp_project\lab12\ledDotMatrix.v":219:29:219:32|Referenced variable col2 is not in sensitivity list
+@W: CG290 :"E:\grade-3_2\isp_project\lab12\ledDotMatrix.v":220:29:220:32|Referenced variable col3 is not in sensitivity list
+@W: CG290 :"E:\grade-3_2\isp_project\lab12\ledDotMatrix.v":221:29:221:32|Referenced variable col4 is not in sensitivity list
+@W: CG290 :"E:\grade-3_2\isp_project\lab12\ledDotMatrix.v":222:29:222:32|Referenced variable col5 is not in sensitivity list
+@W: CG290 :"E:\grade-3_2\isp_project\lab12\ledDotMatrix.v":223:29:223:32|Referenced variable col6 is not in sensitivity list
+@W: CG290 :"E:\grade-3_2\isp_project\lab12\ledDotMatrix.v":224:29:224:32|Referenced variable col7 is not in sensitivity list
+@W: CG290 :"E:\grade-3_2\isp_project\lab12\ledDotMatrix.v":225:29:225:32|Referenced variable col8 is not in sensitivity list
+@N: CG364 :"E:\grade-3_2\isp_project\lab12\lab12.v":1:7:1:11|Synthesizing module lab12
+

@@ -1,0 +1,27 @@
+JDF B
+// Created by Version 2.1 
+PROJECT lab8
+DESIGN lab8 Normal
+DEVKIT LC4256V-75T100I
+ENTRY Pure Verilog HDL
+MODULE dffre.v
+MODSTYLE dffre Normal
+MODULE decoder2to4.v
+MODSTYLE decoder2to4 Normal
+MODULE calculate.v
+MODSTYLE calculate Normal
+MODULE button.v
+MODSTYLE button Normal
+MODULE dynamicshow.v
+MODSTYLE dynamicshow Normal
+MODULE counter_n.v
+MODSTYLE counter_n Normal
+MODULE lab8.v
+MODSTYLE lab8 Normal
+MODULE mux16to4.v
+MODSTYLE mux16to4 Normal
+MODULE decoderHex2Dec.v
+MODSTYLE decoderHex2Dec Normal
+SYNTHESIS_TOOL Synplify
+SIMULATOR_TOOL ModelSim
+TOPMODULE lab8

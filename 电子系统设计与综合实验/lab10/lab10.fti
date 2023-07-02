@@ -1,0 +1,183 @@
+#PLAFILE     lab10.bl5
+#DATE        Sun May 08 13:33:11 2016
+
+#DESIGN      lab10
+#DEVICE      MACH4S-256
+
+
+// Default settings.
+DATA GLOBAL tINDIO:0
+
+
+// Signal locations
+DATA LOCATION clkh:*_*_88
+DATA LOCATION clkl:*_*_39
+DATA LOCATION reset:J_*_49
+DATA LOCATION keyClock:C_*_3
+DATA LOCATION keyData:C_*_4
+DATA LOCATION LEDVCC_3_:N_2_72
+DATA LOCATION show_6_:L_5_61
+DATA LOCATION LEDVCC_2_:O_2_78
+DATA LOCATION LEDVCC_1_:K_7_55
+DATA LOCATION LEDVCC_0_:K_11_54
+DATA LOCATION show_5_:K_2_56
+DATA LOCATION show_4_:M_10_66
+DATA LOCATION show_3_:M_4_64
+DATA LOCATION show_2_:M_6_65
+DATA LOCATION show_1_:L_10_60
+DATA LOCATION show_0_:L_2_58
+DATA LOCATION ps_psData_0_:C_1
+DATA LOCATION ps_psData_1_:G_4
+DATA LOCATION ps_psData_2_:F_4
+DATA LOCATION ps_psData_3_:D_3
+DATA LOCATION button0_d1_q_0_:N_10
+DATA LOCATION button0_d2_q_0_:C_3
+DATA LOCATION button0_d3_q_0_:C_5
+DATA LOCATION dynamicshow_counter4_q_1_:O_10
+DATA LOCATION dynamicshow_counter4_q_2_:P_7
+DATA LOCATION ps_keyClock_r1:J_12
+DATA LOCATION ps_RxEn:H_3
+DATA LOCATION ps_lastRxData_0_:I_5
+DATA LOCATION ps_lastRxData_1_:J_4
+DATA LOCATION ps_lastRxData_2_:I_7
+DATA LOCATION ps_lastRxData_3_:J_5
+DATA LOCATION ps_lastRxData_4_:I_9
+DATA LOCATION ps_lastRxData_5_:J_7
+DATA LOCATION ps_lastRxData_6_:I_12
+DATA LOCATION ps_lastRxData_7_:J_9
+DATA LOCATION ps_ledEn:C_7
+DATA LOCATION ps_keyClock_r0:D_9
+DATA LOCATION ps_keyClock_r2:H_10
+DATA LOCATION ps_counter_0_:E_10
+DATA LOCATION ps_counter_1_:E_2
+DATA LOCATION ps_counter_2_:H_1
+DATA LOCATION ps_counter_3_:H_6
+DATA LOCATION ps_RxData_1_:I_0
+DATA LOCATION ps_RxData_2_:J_0
+DATA LOCATION ps_RxData_3_:I_1
+DATA LOCATION ps_RxData_4_:J_1
+DATA LOCATION ps_RxData_5_:I_2
+DATA LOCATION ps_RxData_6_:J_2
+DATA LOCATION ps_RxData_7_:I_3
+DATA LOCATION ps_RxData_8_:J_3
+DATA LOCATION ps_save_0_:O_5
+DATA LOCATION ps_save_1_:A_4
+DATA LOCATION ps_save_2_:B_4
+DATA LOCATION ps_save_3_:N_5
+DATA LOCATION ps_RxData_1__0:E_5
+DATA LOCATION ps_save_0__0:C_11
+
+// Signals direction
+DATA IO_DIR clkh:IN
+DATA IO_DIR clkl:IN
+DATA IO_DIR reset:IN
+DATA IO_DIR keyClock:IN
+DATA IO_DIR keyData:IN
+DATA IO_DIR LEDVCC_3_:OUT
+DATA IO_DIR show_6_:OUT
+DATA IO_DIR LEDVCC_2_:OUT
+DATA IO_DIR LEDVCC_1_:OUT
+DATA IO_DIR LEDVCC_0_:OUT
+DATA IO_DIR show_5_:OUT
+DATA IO_DIR show_4_:OUT
+DATA IO_DIR show_3_:OUT
+DATA IO_DIR show_2_:OUT
+DATA IO_DIR show_1_:OUT
+DATA IO_DIR show_0_:OUT
+
+// Global Clocks
+DATA GLB_CLOCK clkh:3
+DATA GLB_CLOCK clkl:2
+
+// Signals using Shared Clock or CE
+DATA tBCLK ps_psData_0_.C
+DATA tBCLK ps_psData_1_.C
+DATA tBCLK ps_psData_2_.C
+DATA tBCLK ps_psData_3_.C
+DATA tBCLK ps_RxEn.CE
+DATA tBCLK ps_counter_0_.CE
+DATA tBCLK ps_counter_1_.CE
+DATA tBCLK ps_counter_2_.CE
+DATA tBCLK ps_counter_3_.CE
+DATA tBCLK ps_RxData_1_.CE
+DATA tBCLK ps_RxData_2_.CE
+DATA tBCLK ps_RxData_3_.CE
+DATA tBCLK ps_RxData_4_.CE
+DATA tBCLK ps_RxData_5_.CE
+DATA tBCLK ps_RxData_6_.CE
+DATA tBCLK ps_RxData_7_.CE
+DATA tBCLK ps_RxData_8_.CE
+DATA tBCLK ps_save_0_.C
+DATA tBCLK ps_save_1_.C
+DATA tBCLK ps_save_2_.C
+DATA tBCLK ps_save_3_.C
+
+// Signals using Shared Init Pterm
+DATA tBSR ps_psData_0_.AR
+DATA tBSR ps_psData_1_.AR
+DATA tBSR ps_psData_2_.AR
+DATA tBSR ps_psData_3_.AR
+DATA tBSR ps_keyClock_r1.AR
+DATA tBSR ps_RxEn.PR
+DATA tBSR ps_lastRxData_0_.PR
+DATA tBSR ps_lastRxData_1_.AR
+DATA tBSR ps_lastRxData_2_.PR
+DATA tBSR ps_lastRxData_3_.AR
+DATA tBSR ps_lastRxData_4_.AR
+DATA tBSR ps_lastRxData_5_.AR
+DATA tBSR ps_lastRxData_6_.PR
+DATA tBSR ps_lastRxData_7_.AR
+DATA tBSR ps_ledEn.AR
+DATA tBSR ps_keyClock_r0.AR
+DATA tBSR ps_keyClock_r2.AR
+DATA tBSR ps_counter_0_.AR
+DATA tBSR ps_counter_1_.AR
+DATA tBSR ps_counter_2_.AR
+DATA tBSR ps_counter_3_.AR
+
+// Block Load Adders
+DATA tBLA ps_lastRxData_7_:7
+DATA tBLA ps_lastRxData_6_:7
+DATA tBLA ps_lastRxData_5_:7
+DATA tBLA ps_lastRxData_4_:7
+DATA tBLA ps_lastRxData_3_:7
+DATA tBLA ps_lastRxData_2_:7
+DATA tBLA ps_lastRxData_1_:7
+DATA tBLA ps_lastRxData_0_:7
+DATA tBLA button0_d3_q_0_:7
+DATA tBLA button0_d2_q_0_:7
+DATA tBLA button0_d1_q_0_:7
+DATA tBLA dynamicshow_counter4_q_2_:5
+DATA tBLA dynamicshow_counter4_q_1_:5
+DATA tBLA ps_save_0__0:3
+DATA tBLA ps_counter_3_:3
+DATA tBLA ps_counter_2_:3
+DATA tBLA ps_counter_1_:3
+DATA tBLA ps_counter_0_:3
+DATA tBLA ps_ledEn:3
+DATA tBLA ps_RxEn:2
+DATA tBLA ps_psData_3_:2
+DATA tBLA ps_psData_2_:2
+DATA tBLA ps_psData_1_:2
+DATA tBLA ps_psData_0_:2
+DATA tBLA ps_RxData_1__0:1
+DATA tBLA ps_save_3_:1
+DATA tBLA ps_save_2_:1
+DATA tBLA ps_save_1_:1
+DATA tBLA ps_save_0_:1
+DATA tBLA ps_keyClock_r2:1
+DATA tBLA ps_keyClock_r1:1
+DATA tBLA keyData:1
+
+// Signals using OSM or fast 5-PTs path
+DATA tOSM LEDVCC_3_
+DATA tOSM show_6_
+DATA tOSM LEDVCC_2_
+DATA tOSM LEDVCC_1_
+DATA tOSM LEDVCC_0_
+DATA tOSM show_5_
+DATA tOSM show_4_
+DATA tOSM show_3_
+DATA tOSM show_2_
+DATA tOSM show_1_
+DATA tOSM show_0_

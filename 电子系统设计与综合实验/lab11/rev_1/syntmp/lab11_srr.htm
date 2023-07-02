@@ -1,0 +1,229 @@
+<html><body><samp><pre>
+<!@TC:1462638021>
+#Build: Synplify Pro I-2014.03LC , Build 063R, May 27 2014
+#install: D:\ispLEVER_Classic2_1\synpbase
+#OS: Windows 7 6.2
+#Hostname: SKYLINE
+
+#Implementation: rev_1
+
+<a name=compilerReport57>$ Start of Compile</a>
+#Sun May 08 00:20:21 2016
+
+Synopsys Verilog Compiler, version comp201403rcp1, Build 060R, built May 27 2014
+@N: : <!@TM:1462638021> | Running in 64-bit mode 
+Copyright (C) 1994-2014 Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+
+@N: : <!@TM:1462638021> | : Running Verilog Compiler in System Verilog mode 
+@N: : <!@TM:1462638021> | : Running Verilog Compiler in Multiple File Compilation Unit mode 
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\umr_capim.v"
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\scemi_objects.v"
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\scemi_pipes.svh"
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\hypermods.v"
+@I::"E:\Grade-3_2\ISP_Project\lab11\button.v"
+@I::"E:\Grade-3_2\ISP_Project\lab11\counter_n.v"
+@I::"E:\Grade-3_2\ISP_Project\lab11\decoder2to4.v"
+@I::"E:\Grade-3_2\ISP_Project\lab11\decoderHex2Dec.v"
+@I::"E:\Grade-3_2\ISP_Project\lab11\dffre.v"
+@I::"E:\Grade-3_2\ISP_Project\lab11\dynamicShow.v"
+@I::"E:\Grade-3_2\ISP_Project\lab11\i2c.v"
+@I::"E:\Grade-3_2\ISP_Project\lab11\keyboard.v"
+@I::"E:\Grade-3_2\ISP_Project\lab11\lab11.v"
+@I::"E:\Grade-3_2\ISP_Project\lab11\mux16to4.v"
+Verilog syntax check successful!
+Selecting top level module lab11
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\dffre.v:14:7:14:12:@N:CG364:@XP_MSG">dffre.v(14)</a><!@TM:1462638021> | Synthesizing module dffre
+
+@N:<a href="@N:CG179:@XP_HELP">CG179</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\dffre.v:25:13:25:14:@N:CG179:@XP_MSG">dffre.v(25)</a><!@TM:1462638021> | Removing redundant assignment
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\button.v:1:7:1:13:@N:CG364:@XP_MSG">button.v(1)</a><!@TM:1462638021> | Synthesizing module button
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\keyboard.v:1:7:1:15:@N:CG364:@XP_MSG">keyboard.v(1)</a><!@TM:1462638021> | Synthesizing module keyboard
+
+<font color=#A52A2A>@W:<a href="@W:CL169:@XP_HELP">CL169</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\keyboard.v:75:4:75:10:@W:CL169:@XP_MSG">keyboard.v(75)</a><!@TM:1462638021> | Pruning register flag_Over </font>
+
+<font color=#A52A2A>@W:<a href="@W:CL169:@XP_HELP">CL169</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\keyboard.v:75:4:75:10:@W:CL169:@XP_MSG">keyboard.v(75)</a><!@TM:1462638021> | Pruning register int_Data[9:0] </font>
+
+<font color=#A52A2A>@W:<a href="@W:CL169:@XP_HELP">CL169</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\keyboard.v:75:4:75:10:@W:CL169:@XP_MSG">keyboard.v(75)</a><!@TM:1462638021> | Pruning register temp[9:0] </font>
+
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\keyboard.v:58:4:58:10:@A:CL282:@XP_MSG">keyboard.v(58)</a><!@TM:1462638021> | Feedback mux created for signal time1Oms -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\keyboard.v:16:4:16:10:@A:CL282:@XP_MSG">keyboard.v(16)</a><!@TM:1462638021> | Feedback mux created for signal key_out[3:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:1:7:1:10:@N:CG364:@XP_MSG">i2c.v(1)</a><!@TM:1462638021> | Synthesizing module i2c
+
+<font color=#A52A2A>@W:<a href="@W:CL271:@XP_HELP">CL271</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@W:CL271:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Pruning bits 7 to 4 of RdData[7:0] -- not in use ...</font>
+
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@A:CL282:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Feedback mux created for signal sda_tem -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@A:CL282:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Feedback mux created for signal sda_buf -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@A:CL282:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Feedback mux created for signal scl_buf -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@A:CL282:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Feedback mux created for signal bit_state[5:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@A:CL282:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Feedback mux created for signal WrData[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@A:CL282:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Feedback mux created for signal Flag_WR -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@A:CL282:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Feedback mux created for signal RdData_cl[0:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@A:CL282:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Feedback mux created for signal RdData[0:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@A:CL282:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Feedback mux created for signal DataLED_cl[0:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@A:CL282:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Feedback mux created for signal DataLED[0:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@A:CL282:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Feedback mux created for signal RdData_cl[0:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@A:CL282:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Feedback mux created for signal RdData[1:1] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@A:CL282:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Feedback mux created for signal DataLED_cl[0:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@A:CL282:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Feedback mux created for signal DataLED[1:1] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@A:CL282:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Feedback mux created for signal RdData_cl[0:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@A:CL282:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Feedback mux created for signal RdData[2:2] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@A:CL282:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Feedback mux created for signal DataLED_cl[0:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@A:CL282:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Feedback mux created for signal DataLED[2:2] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@A:CL282:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Feedback mux created for signal RdData_cl[0:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@A:CL282:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Feedback mux created for signal RdData[3:3] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@A:CL282:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Feedback mux created for signal DataLED_cl[0:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@A:CL282:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Feedback mux created for signal DataLED[3:3] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@W:CL189:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Register bit WrData[4] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@W:CL189:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Register bit WrData[5] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@W:CL189:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Register bit WrData[6] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@W:CL189:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Register bit WrData[7] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@W:CL279:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Pruning register bits 7 to 4 of WrData[7:0] </font>
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\counter_n.v:15:7:15:16:@N:CG364:@XP_MSG">counter_n.v(15)</a><!@TM:1462638021> | Synthesizing module counter_n
+
+	n=32'b00000000000000000000000000000100
+	counter_bits=32'b00000000000000000000000000000010
+   Generated name = counter_n_4s_2s
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\mux16to4.v:1:7:1:15:@N:CG364:@XP_MSG">mux16to4.v(1)</a><!@TM:1462638021> | Synthesizing module mux16to4
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\decoderHex2Dec.v:1:7:1:21:@N:CG364:@XP_MSG">decoderHex2Dec.v(1)</a><!@TM:1462638021> | Synthesizing module decoderHex2Dec
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\decoder2to4.v:1:7:1:18:@N:CG364:@XP_MSG">decoder2to4.v(1)</a><!@TM:1462638021> | Synthesizing module decoder2to4
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\dynamicShow.v:1:7:1:18:@N:CG364:@XP_MSG">dynamicShow.v(1)</a><!@TM:1462638021> | Synthesizing module dynamicshow
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\lab11.v:1:7:1:12:@N:CG364:@XP_MSG">lab11.v(1)</a><!@TM:1462638021> | Synthesizing module lab11
+
+<font color=#A52A2A>@W:<a href="@W:CG781:@XP_HELP">CG781</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\lab11.v:24:8:24:11:@W:CG781:@XP_MSG">lab11.v(24)</a><!@TM:1462638021> | Undriven input RST on instance i2c, tying to 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL156:@XP_HELP">CL156</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\dynamicShow.v:8:66:8:71:@W:CL156:@XP_MSG">dynamicShow.v(8)</a><!@TM:1462638021> | *Input reset to expression [instance] has undriven bits that are tied to 0 -- simulation mismatch possible.</font>
+@N:<a href="@N:CL201:@XP_HELP">CL201</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@N:CL201:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Trying to extract state machine for register eeprom_state
+Extracted state machine for register eeprom_state
+State machine has 3 reachable states with original encodings of:
+   00
+   01
+   10
+@N:<a href="@N:CL201:@XP_HELP">CL201</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@N:CL201:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Trying to extract state machine for register bit_state
+Extracted state machine for register bit_state
+State machine has 4 reachable states with original encodings of:
+   000000
+   000001
+   000010
+   000011
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@W:CL189:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Register bit RdData[0] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@W:CL189:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Register bit RdData_cl[0] is always 1, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@W:CL189:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Register bit RdData[1] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@W:CL189:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Register bit RdData[2] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@W:CL189:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Register bit RdData[3] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL169:@XP_HELP">CL169</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:66:4:66:10:@W:CL169:@XP_MSG">i2c.v(66)</a><!@TM:1462638021> | Pruning register WrData[3:0] </font>
+
+<font color=#A52A2A>@W:<a href="@W:CL159:@XP_HELP">CL159</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\i2c.v:4:16:4:23:@W:CL159:@XP_MSG">i2c.v(4)</a><!@TM:1462638021> | Input DATA_IN is unused</font>
+@N:<a href="@N:CL201:@XP_HELP">CL201</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\keyboard.v:75:4:75:10:@N:CL201:@XP_MSG">keyboard.v(75)</a><!@TM:1462638021> | Trying to extract state machine for register flag_Data
+Extracted state machine for register flag_Data
+State machine has 4 reachable states with original encodings of:
+   00
+   01
+   10
+   11
+@N:<a href="@N:CL201:@XP_HELP">CL201</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\keyboard.v:16:4:16:10:@N:CL201:@XP_MSG">keyboard.v(16)</a><!@TM:1462638021> | Trying to extract state machine for register scanvalue
+Extracted state machine for register scanvalue
+State machine has 4 reachable states with original encodings of:
+   0001
+   0010
+   0100
+   1000
+@END
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 71MB peak: 72MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sun May 08 00:20:21 2016
+
+###########################################################]
+Synopsys Netlist Linker, version comp201403rcp1, Build 060R, built May 27 2014
+@N: : <!@TM:1462638023> | Running in 64-bit mode 
+@N:<a href="@N:NF107:@XP_HELP">NF107</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\lab11.v:1:7:1:12:@N:NF107:@XP_MSG">lab11.v(1)</a><!@TM:1462638023> | Selected library: work cell: lab11 view verilog as top level
+@N:<a href="@N:NF107:@XP_HELP">NF107</a> : <a href="E:\Grade-3_2\ISP_Project\lab11\lab11.v:1:7:1:12:@N:NF107:@XP_MSG">lab11.v(1)</a><!@TM:1462638023> | Selected library: work cell: lab11 view verilog as top level
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 68MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sun May 08 00:20:23 2016
+
+###########################################################]
+Map & Optimize Report
+
+<a name=mapperReport58>Synopsys CPLD Technology Mapper, Version maplat, Build 923R, Built May  6 2014</a>
+Copyright (C) 1994-2013, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use or distribution of the software is strictly prohibited.
+Product Version I-2014.03LC 
+@N:<a href="@N:MF248:@XP_HELP">MF248</a> : <!@TM:1462638023> | Running in 64-bit mode. 
+<font color=#A52A2A>@W:<a href="@W:MO171:@XP_HELP">MO171</a> : <a href="e:\grade-3_2\isp_project\lab11\i2c.v:20:4:20:10:@W:MO171:@XP_MSG">i2c.v(20)</a><!@TM:1462638023> | Sequential instance i2c.phase0 reduced to a combinational gate by constant propagation </font>
+<font color=#A52A2A>@W:<a href="@W:MO171:@XP_HELP">MO171</a> : <a href="e:\grade-3_2\isp_project\lab11\i2c.v:20:4:20:10:@W:MO171:@XP_MSG">i2c.v(20)</a><!@TM:1462638023> | Sequential instance i2c.phase1 reduced to a combinational gate by constant propagation </font>
+<font color=#A52A2A>@W:<a href="@W:MO171:@XP_HELP">MO171</a> : <a href="e:\grade-3_2\isp_project\lab11\i2c.v:20:4:20:10:@W:MO171:@XP_MSG">i2c.v(20)</a><!@TM:1462638023> | Sequential instance i2c.phase2 reduced to a combinational gate by constant propagation </font>
+<font color=#A52A2A>@W:<a href="@W:MO171:@XP_HELP">MO171</a> : <a href="e:\grade-3_2\isp_project\lab11\i2c.v:20:4:20:10:@W:MO171:@XP_MSG">i2c.v(20)</a><!@TM:1462638023> | Sequential instance i2c.phase3 reduced to a combinational gate by constant propagation </font>
+<font color=#A52A2A>@W:<a href="@W:MO171:@XP_HELP">MO171</a> : <a href="e:\grade-3_2\isp_project\lab11\i2c.v:66:4:66:10:@W:MO171:@XP_MSG">i2c.v(66)</a><!@TM:1462638023> | Sequential instance i2c.start_delay reduced to a combinational gate by constant propagation </font>
+<font color=#A52A2A>@W: : <a href="e:\grade-3_2\isp_project\lab11\i2c.v:75:16:75:20:@W::@XP_MSG">i2c.v(75)</a><!@TM:1462638023> | Optimizing internal tristate to a wire based on don't care (X) analysis</font>
+Encoding state machine flag_Data[3:0] (view:work.keyboard(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+   11 -> 11
+@N:<a href="@N:MO225:@XP_HELP">MO225</a> : <a href="e:\grade-3_2\isp_project\lab11\keyboard.v:75:4:75:10:@N:MO225:@XP_MSG">keyboard.v(75)</a><!@TM:1462638023> | No possible illegal states for state machine flag_Data[3:0],safe FSM implementation is disabled
+Encoding state machine scanvalue[3:0] (view:work.keyboard(verilog))
+original code -> new code
+   0001 -> 00
+   0010 -> 01
+   0100 -> 10
+   1000 -> 11
+@N:<a href="@N:MO225:@XP_HELP">MO225</a> : <a href="e:\grade-3_2\isp_project\lab11\keyboard.v:16:4:16:10:@N:MO225:@XP_MSG">keyboard.v(16)</a><!@TM:1462638023> | No possible illegal states for state machine scanvalue[3:0],safe FSM implementation is disabled
+@N: : <a href="e:\grade-3_2\isp_project\lab11\i2c.v:20:4:20:10:@N::@XP_MSG">i2c.v(20)</a><!@TM:1462638023> | Found counter in view:work.i2c(verilog) inst clk_div[3:0]
+Encoding state machine bit_state[3:0] (view:work.i2c(verilog))
+original code -> new code
+   000000 -> 00
+   000001 -> 01
+   000010 -> 10
+   000011 -> 11
+@N:<a href="@N:MO225:@XP_HELP">MO225</a> : <a href="e:\grade-3_2\isp_project\lab11\i2c.v:66:4:66:10:@N:MO225:@XP_MSG">i2c.v(66)</a><!@TM:1462638023> | No possible illegal states for state machine bit_state[3:0],safe FSM implementation is disabled
+Encoding state machine eeprom_state[2:0] (view:work.i2c(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="e:\grade-3_2\isp_project\lab11\i2c.v:52:4:52:10:@W:BN132:@XP_MSG">i2c.v(52)</a><!@TM:1462638023> | Removing instance i2c.key_delay[1],  because it is equivalent to instance i2c.key_delay[0]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="e:\grade-3_2\isp_project\lab11\i2c.v:52:4:52:10:@W:BN132:@XP_MSG">i2c.v(52)</a><!@TM:1462638023> | Removing instance i2c.key_delay[9],  because it is equivalent to instance i2c.key_delay[0]</font>
+@N:<a href="@N:MO106:@XP_HELP">MO106</a> : <a href="e:\grade-3_2\isp_project\lab11\decoderhex2dec.v:6:8:6:12:@N:MO106:@XP_MSG">decoderhex2dec.v(6)</a><!@TM:1462638023> | Found ROM, 'decoder1.out_1[6:0]', 11 words by 7 bits 
+<font color=#A52A2A>@W:<a href="@W:FC103:@XP_HELP">FC103</a> : <!@TM:1462638023> | Internal tri state i2c.DataLED_2_2 converted to mux. Simulation mismatch can happen </font> 
+<font color=#A52A2A>@W:<a href="@W:FC103:@XP_HELP">FC103</a> : <!@TM:1462638023> | Internal tri state i2c.DataLED_2_1 converted to mux. Simulation mismatch can happen </font> 
+<font color=#A52A2A>@W:<a href="@W:FC103:@XP_HELP">FC103</a> : <!@TM:1462638023> | Internal tri state i2c.DataLED_2_0 converted to mux. Simulation mismatch can happen </font> 
+<font color=#A52A2A>@W:<a href="@W:FC103:@XP_HELP">FC103</a> : <!@TM:1462638023> | Internal tri state i2c.DataLED_2 converted to mux. Simulation mismatch can happen </font> 
+---------------------------------------
+<a name=resourceUsage59>Resource Usage Report</a>
+
+Simple gate primitives:
+DFFRH           40 uses
+DFFCRH          16 uses
+DFFC            4 uses
+DFFSH           5 uses
+DFF             32 uses
+IBUF            9 uses
+OBUF            21 uses
+BUFTH           1 use
+AND2            236 uses
+INV             165 uses
+XOR2            29 uses
+OR2             9 uses
+
+
+@N:<a href="@N:FC100:@XP_HELP">FC100</a> : <!@TM:1462638023> | Timing Report not generated for this device, please use place and route tools for timing analysis. 
+I-2014.03LC 
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 40MB peak: 106MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sun May 08 00:20:23 2016
+
+###########################################################]
+
+</pre></samp></body></html>

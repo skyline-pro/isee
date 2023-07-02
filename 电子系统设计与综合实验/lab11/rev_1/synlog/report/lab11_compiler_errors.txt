@@ -1,0 +1,2 @@
+@E: CS153 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":173:87:173:87|Can't mix blocking and non-blocking assignments to a variable
+

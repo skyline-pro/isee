@@ -1,0 +1,1199 @@
+#$ TOOL  ispLEVER Classic 2.1.00.02.49.20
+#$ DATE  Sat May 07 17:46:29 2016
+#$ MODULE  lab8
+#$ PINS 28 keyIn_3_ show_5_ show_4_ show_3_ show_6_ show_2_ show_1_ LEDVCC_3_
+ show_0_ reset LEDVCC_2_ clkl LEDVCC_1_ clkh LEDVCC_0_ keyIn_2_ keyIn_1_ keyIn_0_
+ keyOut_0_ led_3_ led_2_ led_1_ keyOut_3_ led_0_ led_4_ pointTime keyOut_2_
+ keyOut_1_
+#$ NODES 109 calculate_n_405_n data1_3__n calculate_un85_1_0_n
+ calculate_led_int_Data2_0_ calculate_led_int_Data2_1_ calculate_led_int_Data2_2_
+ button4_d1_q_0_ calculate_n_429_0_n button4_d2_q_0_ button4_d3_q_0_
+ dynamicshow_out_1__n button3_d1_q_0_ dynamicshow_out_0__n button3_d2_q_0_
+ button3_d3_q_0_ button2_d1_q_0_ dynamicshow_out_2__n button2_d2_q_0_
+ button2_d3_q_0_ button1_d1_q_0_ button1_d2_q_0_ button1_d3_q_0_ button0_d1_q_0_
+ button0_d2_q_0_ button0_d3_q_0_ dynamicshow_counter4_q_1_
+ dynamicshow_counter4_q_2_ calculate_un1_led_int_data2278_n dynamicshow_out_3__n
+ calculate_n_15_0_n calculate_led_int_data1_2_0__n calculate_int_Data_0_
+ calculate_flag_Cal_0_ data0_2__n calculate_flag_Cal_1_ calculate_combvalue_4_
+ calculate_combvalue_5_ calculate_combvalue_6_ calculate_combvalue_7_
+ calculate_n_479_0_n calculate_timecnt_6_ calculate_timecnt_7_
+ calculate_timecnt_11_ calculate_timecnt_9_ calculate_n_457_0_n
+ calculate_timecnt_4_ calculate_timecnt_15_ calculate_time1Oms
+ calculate_int_Data1_0_ calculate_int_Data1_1_ calculate_n_453_0_n
+ calculate_int_Data1_2_ calculate_int_Data1_3_ calculate_int_Data0_0_
+ calculate_int_Data0_1_ calculate_int_data_cnst_0_3__n calculate_int_Data0_2_
+ calculate_int_Data0_3_ calculate_combvalue_0_ calculate_combvalue_1_
+ calculate_combvalue_2_ calculate_combvalue_3_ calculate_timecnt_0_
+ calculate_timecnt_1_ calculate_timecnt_2_ calculate_timecnt_3_
+ calculate_timecnt_5_ calculate_timecnt_8_ calculate_timecnt_10_
+ calculate_timecnt_12_ calculate_timecnt_13_ calculate_timecnt_14_
+ calculate_int_Data_1_ calculate_int_Data_2_ calculate_int_Data_3_
+ calculate_int_Data_4_ calculate_int_Data_5_ calculate_int_Data_6_
+ calculate_n_116_n calculate_flag_Data_0_ calculate_flag_Data_1_
+ calculate_scanvalue_0_ calculate_scanvalue_1_ calculate_n_1008_0_n
+ calculate_led_int_data2_0_sqmuxa_n keyinbutton_i_0__n keyinbutton_i_1__n
+ calculate_n_730_n keyinbutton_i_2__n calculate_n_29_0_n calculate_n_1010_i_n
+ calculate_G_340 keyinbutton_i_3__n resetButton_i calculate_time1oms3_n
+ calculate_un86_i_n calculate_time1oms3_9_n calculate_un84_i_n calculate_n_510_n
+ calculate_un82_i_n calculate_G_363_0_a3_1 calculate_n_500_n calculate_un81_n
+ pointTime_0 calculate_led_int_Data2_0__0 calculate_int_Data_0__0
+ calculate_flag_Cal_0__0 calculate_int_Data1_0__0 calculate_int_Data0_0__0
+.model lab8 
+.inputs keyIn_3_.BLIF reset.BLIF clkl.BLIF clkh.BLIF keyIn_2_.BLIF keyIn_1_.BLIF \
+ keyIn_0_.BLIF calculate_n_405_n.BLIF data1_3__n.BLIF calculate_un85_1_0_n.BLIF \
+ keyOut_0_.Q calculate_led_int_Data2_0_.Q calculate_led_int_Data2_1_.Q \
+ keyOut_1_.Q calculate_led_int_Data2_2_.Q keyOut_2_.Q button4_d1_q_0_.Q \
+ keyOut_3_.Q calculate_n_429_0_n.BLIF button4_d2_q_0_.Q button4_d3_q_0_.Q \
+ dynamicshow_out_1__n.BLIF button3_d1_q_0_.Q dynamicshow_out_0__n.BLIF \
+ button3_d2_q_0_.Q button3_d3_q_0_.Q button2_d1_q_0_.Q dynamicshow_out_2__n.BLIF \
+ button2_d2_q_0_.Q button2_d3_q_0_.Q button1_d1_q_0_.Q button1_d2_q_0_.Q \
+ button1_d3_q_0_.Q button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+ dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_2_.Q \
+ calculate_un1_led_int_data2278_n.BLIF dynamicshow_out_3__n.BLIF \
+ calculate_n_15_0_n.BLIF calculate_led_int_data1_2_0__n.BLIF \
+ calculate_int_Data_0_.Q calculate_flag_Cal_0_.Q data0_2__n.BLIF \
+ calculate_flag_Cal_1_.Q calculate_combvalue_4_.Q calculate_combvalue_5_.Q \
+ calculate_combvalue_6_.Q calculate_combvalue_7_.Q calculate_n_479_0_n.BLIF \
+ calculate_timecnt_6_.Q calculate_timecnt_7_.Q calculate_timecnt_11_.Q \
+ calculate_timecnt_9_.Q calculate_n_457_0_n.BLIF calculate_timecnt_4_.Q \
+ calculate_timecnt_15_.Q calculate_time1Oms.Q calculate_int_Data1_0_.Q \
+ calculate_int_Data1_1_.Q calculate_n_453_0_n.BLIF calculate_int_Data1_2_.Q \
+ calculate_int_Data1_3_.Q calculate_int_Data0_0_.Q calculate_int_Data0_1_.Q \
+ calculate_int_data_cnst_0_3__n.BLIF calculate_int_Data0_2_.Q \
+ calculate_int_Data0_3_.Q calculate_combvalue_0_.Q calculate_combvalue_1_.Q \
+ calculate_combvalue_2_.Q calculate_combvalue_3_.Q calculate_timecnt_0_.Q \
+ calculate_timecnt_1_.Q calculate_timecnt_2_.Q calculate_timecnt_3_.Q \
+ calculate_timecnt_5_.Q calculate_timecnt_8_.Q calculate_timecnt_10_.Q \
+ calculate_timecnt_12_.Q calculate_timecnt_13_.Q calculate_timecnt_14_.Q \
+ calculate_int_Data_1_.Q calculate_int_Data_2_.Q calculate_int_Data_3_.Q \
+ calculate_int_Data_4_.Q calculate_int_Data_5_.Q calculate_int_Data_6_.Q \
+ calculate_n_116_n.BLIF calculate_flag_Data_0_.Q calculate_flag_Data_1_.Q \
+ calculate_scanvalue_0_.Q calculate_scanvalue_1_.Q calculate_n_1008_0_n.BLIF \
+ calculate_led_int_data2_0_sqmuxa_n.BLIF keyinbutton_i_0__n.BLIF \
+ keyinbutton_i_1__n.BLIF calculate_n_730_n.BLIF keyinbutton_i_2__n.BLIF \
+ calculate_n_29_0_n.BLIF calculate_n_1010_i_n.BLIF calculate_G_340.BLIF \
+ keyinbutton_i_3__n.BLIF resetButton_i.BLIF calculate_time1oms3_n.BLIF \
+ calculate_un86_i_n.BLIF calculate_time1oms3_9_n.BLIF calculate_un84_i_n.BLIF \
+ calculate_n_510_n.BLIF calculate_un82_i_n.BLIF calculate_G_363_0_a3_1.BLIF \
+ calculate_n_500_n.BLIF calculate_un81_n.BLIF pointTime_0.BLIF \
+ calculate_led_int_Data2_0__0.BLIF calculate_int_Data_0__0.BLIF \
+ calculate_flag_Cal_0__0.BLIF calculate_int_Data1_0__0.BLIF \
+ calculate_int_Data0_0__0.BLIF
+.outputs show_5_ show_4_ show_3_.X1 show_3_.X2 show_6_ show_2_- show_1_ \
+ LEDVCC_3_ show_0_ LEDVCC_2_ LEDVCC_1_ LEDVCC_0_ keyOut_0_.D keyOut_0_.C \
+ keyOut_0_.CE led_3_.D- led_3_.C led_3_.AP led_2_.D- led_2_.C led_2_.AP led_1_.D \
+ led_1_.C led_1_.AP keyOut_3_.D keyOut_3_.C keyOut_3_.CE led_0_.D led_0_.C \
+ led_0_.AP led_4_.D- led_4_.C led_4_.AP pointTime.D pointTime.C pointTime.CE \
+ pointTime.AP keyOut_2_.D keyOut_2_.C keyOut_2_.CE keyOut_1_.D keyOut_1_.C \
+ keyOut_1_.CE calculate_n_405_n- data1_3__n calculate_un85_1_0_n- \
+ calculate_led_int_Data2_0_.D- calculate_led_int_Data2_0_.C \
+ calculate_led_int_Data2_0_.CE calculate_led_int_Data2_0_.AP \
+ calculate_led_int_Data2_1_.D calculate_led_int_Data2_1_.C \
+ calculate_led_int_Data2_1_.CE calculate_led_int_Data2_1_.AP \
+ calculate_led_int_Data2_2_.D calculate_led_int_Data2_2_.C \
+ calculate_led_int_Data2_2_.CE calculate_led_int_Data2_2_.AR button4_d1_q_0_.D \
+ button4_d1_q_0_.C calculate_n_429_0_n- button4_d2_q_0_.D button4_d2_q_0_.C \
+ button4_d3_q_0_.D button4_d3_q_0_.C dynamicshow_out_1__n button3_d1_q_0_.D \
+ button3_d1_q_0_.C dynamicshow_out_0__n button3_d2_q_0_.D button3_d2_q_0_.C \
+ button3_d3_q_0_.D button3_d3_q_0_.C button2_d1_q_0_.D button2_d1_q_0_.C \
+ dynamicshow_out_2__n button2_d2_q_0_.D button2_d2_q_0_.C button2_d3_q_0_.D \
+ button2_d3_q_0_.C button1_d1_q_0_.D button1_d1_q_0_.C button1_d2_q_0_.D \
+ button1_d2_q_0_.C button1_d3_q_0_.D button1_d3_q_0_.C button0_d1_q_0_.D \
+ button0_d1_q_0_.C button0_d2_q_0_.D button0_d2_q_0_.C button0_d3_q_0_.D \
+ button0_d3_q_0_.C dynamicshow_counter4_q_1_.D dynamicshow_counter4_q_1_.C \
+ dynamicshow_counter4_q_2_.D dynamicshow_counter4_q_2_.C \
+ calculate_un1_led_int_data2278_n dynamicshow_out_3__n calculate_n_15_0_n- \
+ calculate_led_int_data1_2_0__n calculate_int_Data_0_.D.X1 \
+ calculate_int_Data_0_.D.X2 calculate_int_Data_0_.C calculate_int_Data_0_.CE \
+ calculate_int_Data_0_.AR calculate_flag_Cal_0_.D calculate_flag_Cal_0_.C \
+ calculate_flag_Cal_0_.CE calculate_flag_Cal_0_.AR data0_2__n.X1 data0_2__n.X2 \
+ calculate_flag_Cal_1_.D calculate_flag_Cal_1_.C calculate_flag_Cal_1_.CE \
+ calculate_flag_Cal_1_.AR calculate_combvalue_4_.D- calculate_combvalue_4_.C \
+ calculate_combvalue_4_.AR calculate_combvalue_5_.D- calculate_combvalue_5_.C \
+ calculate_combvalue_5_.AR calculate_combvalue_6_.D- calculate_combvalue_6_.C \
+ calculate_combvalue_6_.AR calculate_combvalue_7_.D- calculate_combvalue_7_.C \
+ calculate_combvalue_7_.AR calculate_n_479_0_n.X1 calculate_n_479_0_n.X2 \
+ calculate_timecnt_6_.D calculate_timecnt_6_.C calculate_timecnt_6_.AR \
+ calculate_timecnt_7_.D calculate_timecnt_7_.C calculate_timecnt_7_.AR \
+ calculate_timecnt_11_.T calculate_timecnt_11_.C calculate_timecnt_11_.AR \
+ calculate_timecnt_9_.D calculate_timecnt_9_.C calculate_timecnt_9_.AR \
+ calculate_n_457_0_n calculate_timecnt_4_.D calculate_timecnt_4_.C \
+ calculate_timecnt_4_.AR calculate_timecnt_15_.D.X1 calculate_timecnt_15_.D.X2 \
+ calculate_timecnt_15_.C calculate_timecnt_15_.AR calculate_time1Oms.D \
+ calculate_time1Oms.C calculate_int_Data1_0_.D calculate_int_Data1_0_.C \
+ calculate_int_Data1_0_.CE calculate_int_Data1_0_.AR calculate_int_Data1_1_.D \
+ calculate_int_Data1_1_.C calculate_int_Data1_1_.CE calculate_int_Data1_1_.AR \
+ calculate_n_453_0_n.X1 calculate_n_453_0_n.X2 calculate_int_Data1_2_.D \
+ calculate_int_Data1_2_.C calculate_int_Data1_2_.CE calculate_int_Data1_2_.AR \
+ calculate_int_Data1_3_.D calculate_int_Data1_3_.C calculate_int_Data1_3_.CE \
+ calculate_int_Data1_3_.AR calculate_int_Data0_0_.D calculate_int_Data0_0_.C \
+ calculate_int_Data0_0_.CE calculate_int_Data0_0_.AR calculate_int_Data0_1_.D \
+ calculate_int_Data0_1_.C calculate_int_Data0_1_.CE calculate_int_Data0_1_.AR \
+ calculate_int_data_cnst_0_3__n.X1 calculate_int_data_cnst_0_3__n.X2 \
+ calculate_int_Data0_2_.D calculate_int_Data0_2_.C calculate_int_Data0_2_.CE \
+ calculate_int_Data0_2_.AR calculate_int_Data0_3_.D calculate_int_Data0_3_.C \
+ calculate_int_Data0_3_.CE calculate_int_Data0_3_.AR calculate_combvalue_0_.D \
+ calculate_combvalue_0_.C calculate_combvalue_0_.AR calculate_combvalue_1_.D \
+ calculate_combvalue_1_.C calculate_combvalue_1_.AR calculate_combvalue_2_.D \
+ calculate_combvalue_2_.C calculate_combvalue_2_.AR calculate_combvalue_3_.D \
+ calculate_combvalue_3_.C calculate_combvalue_3_.AR calculate_timecnt_0_.D \
+ calculate_timecnt_0_.C calculate_timecnt_0_.AR calculate_timecnt_1_.D \
+ calculate_timecnt_1_.C calculate_timecnt_1_.AR calculate_timecnt_2_.D \
+ calculate_timecnt_2_.C calculate_timecnt_2_.AR calculate_timecnt_3_.D \
+ calculate_timecnt_3_.C calculate_timecnt_3_.AR calculate_timecnt_5_.D \
+ calculate_timecnt_5_.C calculate_timecnt_5_.AR calculate_timecnt_8_.D \
+ calculate_timecnt_8_.C calculate_timecnt_8_.AR calculate_timecnt_10_.D.X1 \
+ calculate_timecnt_10_.D.X2 calculate_timecnt_10_.C calculate_timecnt_10_.AR \
+ calculate_timecnt_12_.D calculate_timecnt_12_.C calculate_timecnt_12_.AR \
+ calculate_timecnt_13_.D calculate_timecnt_13_.C calculate_timecnt_13_.AR \
+ calculate_timecnt_14_.D calculate_timecnt_14_.C calculate_timecnt_14_.AR \
+ calculate_int_Data_1_.D calculate_int_Data_1_.C calculate_int_Data_1_.CE \
+ calculate_int_Data_1_.AR calculate_int_Data_2_.D.X1 calculate_int_Data_2_.D.X2 \
+ calculate_int_Data_2_.C calculate_int_Data_2_.CE calculate_int_Data_2_.AR \
+ calculate_int_Data_3_.D.X1 calculate_int_Data_3_.D.X2 calculate_int_Data_3_.C \
+ calculate_int_Data_3_.CE calculate_int_Data_3_.AR calculate_int_Data_4_.D \
+ calculate_int_Data_4_.C calculate_int_Data_4_.CE calculate_int_Data_4_.AR \
+ calculate_int_Data_5_.D calculate_int_Data_5_.C calculate_int_Data_5_.CE \
+ calculate_int_Data_5_.AR calculate_int_Data_6_.D calculate_int_Data_6_.C \
+ calculate_int_Data_6_.CE calculate_int_Data_6_.AR calculate_n_116_n.X1 \
+ calculate_n_116_n.X2 calculate_flag_Data_0_.T calculate_flag_Data_0_.C \
+ calculate_flag_Data_0_.AR calculate_flag_Data_1_.T calculate_flag_Data_1_.C \
+ calculate_flag_Data_1_.AR calculate_scanvalue_0_.D calculate_scanvalue_0_.C \
+ calculate_scanvalue_0_.AR calculate_scanvalue_1_.D calculate_scanvalue_1_.C \
+ calculate_scanvalue_1_.AR calculate_n_1008_0_n- \
+ calculate_led_int_data2_0_sqmuxa_n.X1 calculate_led_int_data2_0_sqmuxa_n.X2 \
+ keyinbutton_i_0__n keyinbutton_i_1__n calculate_n_730_n.X1 calculate_n_730_n.X2 \
+ keyinbutton_i_2__n calculate_n_29_0_n calculate_n_1010_i_n calculate_G_340.X1 \
+ calculate_G_340.X2 keyinbutton_i_3__n resetButton_i calculate_time1oms3_n \
+ calculate_un86_i_n calculate_time1oms3_9_n calculate_un84_i_n calculate_n_510_n \
+ calculate_un82_i_n- calculate_G_363_0_a3_1.X1 calculate_G_363_0_a3_1.X2 \
+ calculate_n_500_n calculate_un81_n- pointTime_0 calculate_led_int_Data2_0__0 \
+ calculate_int_Data_0__0 calculate_flag_Cal_0__0 calculate_int_Data1_0__0 \
+ calculate_int_Data0_0__0
+.names dynamicshow_out_1__n.BLIF dynamicshow_out_0__n.BLIF dynamicshow_out_2__n.BLIF dynamicshow_out_3__n.BLIF show_5_
+011- 1
+101- 1
+1--1 1
+--11 1
+.names dynamicshow_out_1__n.BLIF dynamicshow_out_0__n.BLIF dynamicshow_out_2__n.BLIF dynamicshow_out_3__n.BLIF show_4_
+100- 1
+--11 1
+1--1 1
+.names dynamicshow_out_1__n.BLIF dynamicshow_out_0__n.BLIF dynamicshow_out_2__n.BLIF dynamicshow_out_3__n.BLIF show_3_.X1
+00-- 1
+---1 1
+111- 1
+.names dynamicshow_out_1__n.BLIF dynamicshow_out_2__n.BLIF show_3_.X2
+00 1
+.names dynamicshow_out_1__n.BLIF dynamicshow_out_0__n.BLIF dynamicshow_out_2__n.BLIF dynamicshow_out_3__n.BLIF show_6_
+0100 1
+001- 1
+1--1 1
+--11 1
+.names dynamicshow_out_1__n.BLIF dynamicshow_out_0__n.BLIF dynamicshow_out_2__n.BLIF dynamicshow_out_3__n.BLIF show_2_-
+000- 1
+10-0 1
+.names dynamicshow_out_1__n.BLIF dynamicshow_out_0__n.BLIF dynamicshow_out_2__n.BLIF dynamicshow_out_3__n.BLIF show_1_
+-100 1
+1-0- 1
+11-- 1
+--11 1
+.names dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_2_.Q LEDVCC_3_
+11 1
+.names dynamicshow_out_1__n.BLIF dynamicshow_out_0__n.BLIF dynamicshow_out_2__n.BLIF dynamicshow_out_3__n.BLIF show_0_
+0-00 1
+111- 1
+11-1 1
+--11 1
+.names dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_2_.Q LEDVCC_2_
+01 1
+.names dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_2_.Q LEDVCC_1_
+10 1
+.names dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_2_.Q LEDVCC_0_
+00 1
+.names calculate_scanvalue_0_.Q calculate_scanvalue_1_.Q keyOut_0_.D
+00 1
+.names calculate_time1Oms.Q keyOut_0_.C
+1 1
+.names resetButton_i.BLIF keyOut_0_.CE
+0 1
+.names calculate_n_15_0_n.BLIF calculate_combvalue_4_.Q calculate_combvalue_5_.Q calculate_combvalue_6_.Q calculate_combvalue_7_.Q calculate_combvalue_1_.Q calculate_combvalue_2_.Q calculate_combvalue_3_.Q led_3_.D-
+-00011-- 1
+0---0-1- 1
+-0001-1- 1
+0---0--1 1
+.names calculate_time1Oms.Q led_3_.C
+1 1
+.names resetButton_i.BLIF led_3_.AP
+1 1
+.names calculate_n_15_0_n.BLIF calculate_combvalue_4_.Q calculate_combvalue_5_.Q calculate_combvalue_6_.Q calculate_combvalue_7_.Q calculate_combvalue_0_.Q calculate_combvalue_1_.Q calculate_combvalue_2_.Q calculate_combvalue_3_.Q led_2_.D-
+0---0-1-- 1
+-0001--1- 1
+-00011--- 1
+0---0---1 1
+.names calculate_time1Oms.Q led_2_.C
+1 1
+.names resetButton_i.BLIF led_2_.AP
+1 1
+.names calculate_combvalue_4_.Q calculate_combvalue_5_.Q calculate_combvalue_6_.Q calculate_combvalue_7_.Q calculate_combvalue_0_.Q calculate_combvalue_1_.Q calculate_combvalue_2_.Q calculate_combvalue_3_.Q led_1_.D
+----0000 1
+-00----- 1
+-11----- 1
+---1---- 1
+1------- 1
+.names calculate_time1Oms.Q led_1_.C
+1 1
+.names resetButton_i.BLIF led_1_.AP
+1 1
+.names calculate_scanvalue_0_.Q calculate_scanvalue_1_.Q keyOut_3_.D
+11 1
+.names calculate_time1Oms.Q keyOut_3_.C
+1 1
+.names resetButton_i.BLIF keyOut_3_.CE
+0 1
+.names calculate_combvalue_4_.Q calculate_combvalue_5_.Q calculate_combvalue_6_.Q calculate_combvalue_7_.Q calculate_combvalue_0_.Q calculate_combvalue_1_.Q calculate_combvalue_2_.Q calculate_combvalue_3_.Q led_0_.D
+----0000 1
+0-0----- 1
+1-1----- 1
+---1---- 1
+-1------ 1
+.names calculate_time1Oms.Q led_0_.C
+1 1
+.names resetButton_i.BLIF led_0_.AP
+1 1
+.names calculate_combvalue_4_.Q calculate_combvalue_5_.Q calculate_combvalue_6_.Q calculate_combvalue_7_.Q calculate_combvalue_3_.Q led_4_.D-
+00011 1
+.names calculate_time1Oms.Q led_4_.C
+1 1
+.names resetButton_i.BLIF led_4_.AP
+1 1
+.names keyOut_0_.Q keyinbutton_i_2__n.BLIF pointTime.D
+01 1
+.names calculate_time1Oms.Q pointTime.C
+1 1
+.names pointTime_0.BLIF pointTime.CE
+1 1
+.names resetButton_i.BLIF pointTime.AP
+1 1
+.names calculate_scanvalue_0_.Q calculate_scanvalue_1_.Q keyOut_2_.D
+01 1
+.names calculate_time1Oms.Q keyOut_2_.C
+1 1
+.names resetButton_i.BLIF keyOut_2_.CE
+0 1
+.names calculate_scanvalue_0_.Q calculate_scanvalue_1_.Q keyOut_1_.D
+10 1
+.names calculate_time1Oms.Q keyOut_1_.C
+1 1
+.names resetButton_i.BLIF keyOut_1_.CE
+0 1
+.names calculate_un85_1_0_n.BLIF calculate_int_Data_1_.Q calculate_int_Data_2_.Q calculate_int_Data_3_.Q calculate_int_Data_4_.Q calculate_int_Data_5_.Q calculate_int_Data_6_.Q calculate_un82_i_n.BLIF calculate_un81_n.BLIF calculate_n_405_n-
+---111-1- 1
+--1-11-1- 1
+-1--11-1- 1
+1-----0-- 1
+-------00 1
+.names calculate_int_Data_4_.Q calculate_int_Data_5_.Q calculate_int_Data_6_.Q resetButton_i.BLIF data1_3__n
+-110 1
+1-10 1
+.names calculate_int_Data_1_.Q calculate_int_Data_2_.Q calculate_int_Data_3_.Q calculate_int_Data_4_.Q calculate_int_Data_5_.Q calculate_un85_1_0_n-
+1111- 1
+----1 1
+.names keyOut_3_.Q calculate_flag_Cal_0_.Q calculate_int_Data1_3_.Q calculate_int_Data0_3_.Q keyinbutton_i_0__n.BLIF calculate_n_730_n.BLIF calculate_led_int_Data2_0_.D-
+10101- 1
+10--11 1
+.names calculate_time1Oms.Q calculate_led_int_Data2_0_.C
+1 1
+.names calculate_led_int_Data2_0__0.BLIF calculate_led_int_Data2_0_.CE
+1 1
+.names resetButton_i.BLIF calculate_led_int_Data2_0_.AP
+1 1
+.names calculate_led_int_Data2_1_.D
+ 1
+.names calculate_time1Oms.Q calculate_led_int_Data2_1_.C
+1 1
+.names calculate_led_int_Data2_0__0.BLIF calculate_led_int_Data2_1_.CE
+1 1
+.names resetButton_i.BLIF calculate_led_int_Data2_1_.AP
+1 1
+.names calculate_led_int_Data2_2_.D
+.names calculate_time1Oms.Q calculate_led_int_Data2_2_.C
+1 1
+.names calculate_led_int_Data2_0__0.BLIF calculate_led_int_Data2_2_.CE
+1 1
+.names resetButton_i.BLIF calculate_led_int_Data2_2_.AR
+1 1
+.names keyIn_3_.BLIF button4_d1_q_0_.D
+1 1
+.names clkl.BLIF button4_d1_q_0_.C
+1 1
+.names calculate_n_405_n.BLIF calculate_led_int_data1_2_0__n.BLIF calculate_int_Data_1_.Q calculate_int_Data_2_.Q calculate_int_Data_3_.Q calculate_int_Data_4_.Q calculate_un86_i_n.BLIF calculate_n_429_0_n-
+011---- 1
+-111--- 1
+---1-11 1
+---11-1 1
+0--1--0 1
+.names button4_d1_q_0_.Q button4_d2_q_0_.D
+1 1
+.names clkl.BLIF button4_d2_q_0_.C
+1 1
+.names button4_d2_q_0_.Q button4_d3_q_0_.D
+1 1
+.names clkl.BLIF button4_d3_q_0_.C
+1 1
+.names calculate_led_int_Data2_1_.Q dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_2_.Q calculate_led_int_data1_2_0__n.BLIF calculate_int_Data_1_.Q calculate_int_Data_3_.Q calculate_int_Data_4_.Q calculate_int_Data_5_.Q calculate_int_Data_6_.Q resetButton_i.BLIF calculate_un86_i_n.BLIF calculate_un82_i_n.BLIF dynamicshow_out_1__n
+-1---00-000- 1
+-0010----0-- 1
+-0001----0-- 1
+-1----00-00- 1
+-1-----0000- 1
+-1------0000 1
+1-1--------- 1
+-11--------- 1
+.names keyIn_2_.BLIF button3_d1_q_0_.D
+1 1
+.names clkl.BLIF button3_d1_q_0_.C
+1 1
+.names calculate_led_int_Data2_0_.Q dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_2_.Q calculate_led_int_data1_2_0__n.BLIF calculate_int_Data_0_.Q resetButton_i.BLIF dynamicshow_out_0__n
+-00-10 1
+1-1--- 1
+-1-1-0 1
+-11--- 1
+.names button3_d1_q_0_.Q button3_d2_q_0_.D
+1 1
+.names clkl.BLIF button3_d2_q_0_.C
+1 1
+.names button3_d2_q_0_.Q button3_d3_q_0_.D
+1 1
+.names clkl.BLIF button3_d3_q_0_.C
+1 1
+.names keyIn_1_.BLIF button2_d1_q_0_.D
+1 1
+.names clkl.BLIF button2_d1_q_0_.C
+1 1
+.names calculate_led_int_Data2_2_.Q dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_2_.Q data0_2__n.BLIF calculate_int_Data_4_.Q calculate_int_Data_5_.Q calculate_int_Data_6_.Q resetButton_i.BLIF calculate_un84_i_n.BLIF dynamicshow_out_2__n
+-1--00-00 1
+-001----- 1
+-1----000 1
+1-1------ 1
+-11------ 1
+.names button2_d1_q_0_.Q button2_d2_q_0_.D
+1 1
+.names clkl.BLIF button2_d2_q_0_.C
+1 1
+.names button2_d2_q_0_.Q button2_d3_q_0_.D
+1 1
+.names clkl.BLIF button2_d3_q_0_.C
+1 1
+.names keyIn_0_.BLIF button1_d1_q_0_.D
+1 1
+.names clkl.BLIF button1_d1_q_0_.C
+1 1
+.names button1_d1_q_0_.Q button1_d2_q_0_.D
+1 1
+.names clkl.BLIF button1_d2_q_0_.C
+1 1
+.names button1_d2_q_0_.Q button1_d3_q_0_.D
+1 1
+.names clkl.BLIF button1_d3_q_0_.C
+1 1
+.names reset.BLIF button0_d1_q_0_.D
+1 1
+.names clkl.BLIF button0_d1_q_0_.C
+1 1
+.names button0_d1_q_0_.Q button0_d2_q_0_.D
+1 1
+.names clkl.BLIF button0_d2_q_0_.C
+1 1
+.names button0_d2_q_0_.Q button0_d3_q_0_.D
+1 1
+.names clkl.BLIF button0_d3_q_0_.C
+1 1
+.names dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_1_.D
+0 1
+.names clkl.BLIF dynamicshow_counter4_q_1_.C
+1 1
+.names dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_2_.Q dynamicshow_counter4_q_2_.D
+10 1
+01 1
+.names clkl.BLIF dynamicshow_counter4_q_2_.C
+1 1
+.names keyOut_0_.Q keyOut_1_.Q keyOut_2_.Q button4_d1_q_0_.Q button4_d2_q_0_.Q button4_d3_q_0_.Q button3_d1_q_0_.Q button3_d2_q_0_.Q button3_d3_q_0_.Q button2_d1_q_0_.Q button2_d2_q_0_.Q button2_d3_q_0_.Q button1_d1_q_0_.Q button1_d2_q_0_.Q button1_d3_q_0_.Q calculate_flag_Cal_0_.Q calculate_flag_Cal_1_.Q calculate_un1_led_int_data2278_n
+000--100000000010 1
+000-1-00000000010 1
+0001--00000000010 1
+000--100000000001 1
+000-1-00000000001 1
+0001--00000000001 1
+.names data1_3__n.BLIF calculate_led_int_Data2_1_.Q dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_2_.Q calculate_G_340.BLIF resetButton_i.BLIF dynamicshow_out_3__n
+--0010 1
+-1-1-- 1
+1-1--- 1
+--11-- 1
+.names calculate_combvalue_4_.Q calculate_combvalue_5_.Q calculate_combvalue_6_.Q calculate_n_15_0_n-
+100 1
+010 1
+001 1
+.names calculate_un85_1_0_n.BLIF calculate_int_Data_1_.Q calculate_int_Data_2_.Q calculate_int_Data_3_.Q calculate_int_Data_4_.Q calculate_int_Data_5_.Q calculate_int_Data_6_.Q calculate_un86_i_n.BLIF calculate_un84_i_n.BLIF calculate_un82_i_n.BLIF calculate_un81_n.BLIF calculate_led_int_data1_2_0__n
+--1-11---1- 1
+-1--11---1- 1
+---111---1- 1
+--11---1--- 1
+-1-1---1--- 1
+0-------1-- 1
+----00----1 1
+----1--1--- 1
+------0---1 1
+.names keyOut_1_.Q keyOut_3_.Q calculate_un1_led_int_data2278_n.BLIF calculate_flag_Cal_1_.Q calculate_int_Data1_0_.Q calculate_int_Data0_0_.Q keyinbutton_i_0__n.BLIF keyinbutton_i_2__n.BLIF calculate_n_29_0_n.BLIF calculate_int_Data_0_.D.X1
+000---0-- 1
+0-0---10- 1
+-10-111-- 1
+1-0---11- 1
+--10-0--0 1
+--10-1--1 1
+--11-0--1 1
+--11-1--0 1
+.names calculate_un1_led_int_data2278_n.BLIF calculate_int_Data1_0_.Q calculate_int_Data_0_.D.X2
+10 1
+.names calculate_time1Oms.Q calculate_int_Data_0_.C
+1 1
+.names calculate_int_Data_0__0.BLIF calculate_int_Data_0_.CE
+1 1
+.names resetButton_i.BLIF calculate_int_Data_0_.AR
+1 1
+.names keyOut_1_.Q keyOut_2_.Q keyOut_3_.Q keyinbutton_i_1__n.BLIF calculate_flag_Cal_0_.D
+000- 1
+---0 1
+.names calculate_time1Oms.Q calculate_flag_Cal_0_.C
+1 1
+.names calculate_flag_Cal_0__0.BLIF calculate_flag_Cal_0_.CE
+1 1
+.names resetButton_i.BLIF calculate_flag_Cal_0_.AR
+1 1
+.names calculate_n_405_n.BLIF calculate_led_int_data1_2_0__n.BLIF calculate_int_Data_1_.Q calculate_int_Data_2_.Q calculate_int_Data_3_.Q calculate_int_Data_4_.Q resetButton_i.BLIF calculate_un86_i_n.BLIF data0_2__n.X1
+011---00 1
+10----00 1
+1-0---00 1
+--00-001 1
+-0--0001 1
+-1-01001 1
+-11--101 1
+--0-0001 1
+-1111-01 1
+.names calculate_int_Data_2_.Q resetButton_i.BLIF data0_2__n.X2
+00 1
+.names keyOut_0_.Q keyOut_1_.Q keyOut_2_.Q keyOut_3_.Q keyinbutton_i_2__n.BLIF calculate_flag_Cal_1_.D
+000-0 1
+-0001 1
+.names calculate_time1Oms.Q calculate_flag_Cal_1_.C
+1 1
+.names calculate_flag_Cal_0__0.BLIF calculate_flag_Cal_1_.CE
+1 1
+.names resetButton_i.BLIF calculate_flag_Cal_1_.AR
+1 1
+.names button1_d1_q_0_.Q button1_d2_q_0_.Q button1_d3_q_0_.Q calculate_combvalue_4_.D-
+000 1
+.names calculate_time1Oms.Q calculate_combvalue_4_.C
+1 1
+.names resetButton_i.BLIF calculate_combvalue_4_.AR
+1 1
+.names button2_d1_q_0_.Q button2_d2_q_0_.Q button2_d3_q_0_.Q calculate_combvalue_5_.D-
+000 1
+.names calculate_time1Oms.Q calculate_combvalue_5_.C
+1 1
+.names resetButton_i.BLIF calculate_combvalue_5_.AR
+1 1
+.names button3_d1_q_0_.Q button3_d2_q_0_.Q button3_d3_q_0_.Q calculate_combvalue_6_.D-
+000 1
+.names calculate_time1Oms.Q calculate_combvalue_6_.C
+1 1
+.names resetButton_i.BLIF calculate_combvalue_6_.AR
+1 1
+.names button4_d1_q_0_.Q button4_d2_q_0_.Q button4_d3_q_0_.Q calculate_combvalue_7_.D-
+000 1
+.names calculate_time1Oms.Q calculate_combvalue_7_.C
+1 1
+.names resetButton_i.BLIF calculate_combvalue_7_.AR
+1 1
+.names calculate_flag_Cal_0_.Q calculate_flag_Cal_1_.Q calculate_int_Data1_0_.Q calculate_int_Data1_1_.Q calculate_int_Data1_2_.Q calculate_int_Data1_3_.Q calculate_int_Data0_0_.Q calculate_int_Data0_1_.Q calculate_int_Data0_2_.Q calculate_int_Data0_3_.Q calculate_n_479_0_n.X1
+1----0---0 1
+-0---0---0 1
+1---0---0- 1
+-0--0---0- 1
+-0000----- 1
+-0-00-0--- 1
+-00-0--0-- 1
+1--00--0-- 1
+-0-00--0-- 1
+-0--0-00-- 1
+-000----0- 1
+-0-0--0-0- 1
+-00----00- 1
+1--0---00- 1
+-0-0---00- 1
+-0----000- 1
+1-000-0--- 1
+1-0-0-00-- 1
+1-00--0-0- 1
+1-0---000- 1
+-----1---1 1
+.names calculate_int_Data1_3_.Q calculate_int_Data0_3_.Q calculate_n_479_0_n.X2
+11 1
+.names calculate_timecnt_6_.Q calculate_timecnt_4_.Q calculate_timecnt_5_.Q calculate_time1oms3_9_n.BLIF calculate_timecnt_6_.D
+0111 1
+1-0- 1
+10-- 1
+1--0 1
+.names clkh.BLIF calculate_timecnt_6_.C
+1 1
+.names resetButton_i.BLIF calculate_timecnt_6_.AR
+1 1
+.names calculate_timecnt_7_.Q calculate_n_500_n.BLIF calculate_timecnt_7_.D
+10 1
+01 1
+.names clkh.BLIF calculate_timecnt_7_.C
+1 1
+.names resetButton_i.BLIF calculate_timecnt_7_.AR
+1 1
+.names calculate_timecnt_7_.Q calculate_timecnt_9_.Q calculate_timecnt_8_.Q calculate_timecnt_10_.Q calculate_n_500_n.BLIF calculate_timecnt_11_.T
+11111 1
+.names clkh.BLIF calculate_timecnt_11_.C
+1 1
+.names resetButton_i.BLIF calculate_timecnt_11_.AR
+1 1
+.names calculate_timecnt_7_.Q calculate_timecnt_9_.Q calculate_timecnt_8_.Q calculate_n_500_n.BLIF calculate_timecnt_9_.D
+1011 1
+-10- 1
+01-- 1
+-1-0 1
+.names clkh.BLIF calculate_timecnt_9_.C
+1 1
+.names resetButton_i.BLIF calculate_timecnt_9_.AR
+1 1
+.names calculate_flag_Cal_0_.Q calculate_flag_Cal_1_.Q calculate_int_Data1_0_.Q calculate_int_Data1_1_.Q calculate_int_Data1_2_.Q calculate_int_Data1_3_.Q calculate_int_Data0_0_.Q calculate_int_Data0_1_.Q calculate_int_Data0_2_.Q calculate_int_Data0_3_.Q calculate_n_457_0_n
+0-10-0011- 1
+0-100001-- 1
+0-01-1100- 1
+0-011110-- 1
+0-01--1000 1
+0-1-000-1- 1
+0-011-10-0 1
+0-0-111-0- 1
+0-10--0111 1
+0-100-01-1 1
+0-0-1-1-00 1
+0-1-0-0-11 1
+0-0--11--0 1
+0-1--00--1 1
+1-0---0--- 1
+-0----0--- 1
+-00------- 1
+.names calculate_timecnt_4_.Q calculate_time1oms3_n.BLIF calculate_time1oms3_9_n.BLIF calculate_timecnt_4_.D
+100 1
+001 1
+.names clkh.BLIF calculate_timecnt_4_.C
+1 1
+.names resetButton_i.BLIF calculate_timecnt_4_.AR
+1 1
+.names calculate_timecnt_15_.Q calculate_timecnt_15_.D.X1
+1 1
+.names calculate_timecnt_12_.Q calculate_timecnt_13_.Q calculate_timecnt_14_.Q calculate_n_510_n.BLIF calculate_timecnt_15_.D.X2
+1111 1
+.names clkh.BLIF calculate_timecnt_15_.C
+1 1
+.names resetButton_i.BLIF calculate_timecnt_15_.AR
+1 1
+.names calculate_time1Oms.Q resetButton_i.BLIF calculate_time1oms3_n.BLIF calculate_time1Oms.D
+001 1
+11- 1
+1-0 1
+.names clkh.BLIF calculate_time1Oms.C
+1 1
+.names keyOut_0_.Q keyOut_2_.Q keyinbutton_i_1__n.BLIF keyinbutton_i_3__n.BLIF calculate_int_Data1_0_.D
+000- 1
+1-1- 1
+-111 1
+.names calculate_time1Oms.Q calculate_int_Data1_0_.C
+1 1
+.names calculate_int_Data1_0__0.BLIF calculate_int_Data1_0_.CE
+1 1
+.names resetButton_i.BLIF calculate_int_Data1_0_.AR
+1 1
+.names keyOut_0_.Q keyOut_2_.Q keyinbutton_i_1__n.BLIF keyinbutton_i_2__n.BLIF keyinbutton_i_3__n.BLIF calculate_int_Data1_1_.D
+-1111 1
+-010- 1
+1-0-- 1
+.names calculate_time1Oms.Q calculate_int_Data1_1_.C
+1 1
+.names calculate_int_Data1_0__0.BLIF calculate_int_Data1_1_.CE
+1 1
+.names resetButton_i.BLIF calculate_int_Data1_1_.AR
+1 1
+.names calculate_flag_Cal_0_.Q calculate_flag_Cal_1_.Q calculate_int_Data1_0_.Q calculate_int_Data1_1_.Q calculate_int_Data1_2_.Q calculate_int_Data1_3_.Q calculate_int_Data0_0_.Q calculate_int_Data0_1_.Q calculate_int_Data0_2_.Q calculate_int_Data0_3_.Q calculate_n_453_0_n.X1
+1---0---0- 1
+-0--0---0- 1
+--00011-00 1
+--1-000001 1
+---100-001 1
+---001-100 1
+--0-011100 1
+--11000-01 1
+-0-0--0--- 1
+-0----00-- 1
+-000------ 1
+-00----0-- 1
+-0-0---0-- 1
+01--01--10 1
+1-000-0--- 1
+1-0-0-00-- 1
+1--00--0-- 1
+-0--1---1- 1
+01--10--01 1
+01-110-0-1 1
+0111100--1 1
+0-1-1000-1 1
+0--011-110 1
+0-00111-10 1
+0-0-111110 1
+1--0---00- 1
+1-00--0-0- 1
+1-0---000- 1
+.names calculate_flag_Cal_1_.Q calculate_int_Data1_2_.Q calculate_int_Data0_2_.Q calculate_n_453_0_n.X2
+011 1
+.names keyOut_1_.Q keyOut_2_.Q keyinbutton_i_0__n.BLIF calculate_int_Data1_2_.D
+10- 1
+-10 1
+.names calculate_time1Oms.Q calculate_int_Data1_2_.C
+1 1
+.names calculate_int_Data1_0__0.BLIF calculate_int_Data1_2_.CE
+1 1
+.names resetButton_i.BLIF calculate_int_Data1_2_.AR
+1 1
+.names keyOut_0_.Q keyOut_1_.Q keyinbutton_i_1__n.BLIF keyinbutton_i_2__n.BLIF calculate_int_Data1_3_.D
+000- 1
+00-0 1
+.names calculate_time1Oms.Q calculate_int_Data1_3_.C
+1 1
+.names calculate_int_Data1_0__0.BLIF calculate_int_Data1_3_.CE
+1 1
+.names resetButton_i.BLIF calculate_int_Data1_3_.AR
+1 1
+.names keyOut_0_.Q keyOut_2_.Q keyinbutton_i_1__n.BLIF keyinbutton_i_3__n.BLIF calculate_int_Data0_0_.D
+000- 1
+1-1- 1
+-111 1
+.names calculate_time1Oms.Q calculate_int_Data0_0_.C
+1 1
+.names calculate_int_Data0_0__0.BLIF calculate_int_Data0_0_.CE
+1 1
+.names resetButton_i.BLIF calculate_int_Data0_0_.AR
+1 1
+.names keyOut_0_.Q keyOut_2_.Q keyinbutton_i_1__n.BLIF keyinbutton_i_2__n.BLIF keyinbutton_i_3__n.BLIF calculate_int_Data0_1_.D
+-1111 1
+-010- 1
+1-0-- 1
+.names calculate_time1Oms.Q calculate_int_Data0_1_.C
+1 1
+.names calculate_int_Data0_0__0.BLIF calculate_int_Data0_1_.CE
+1 1
+.names resetButton_i.BLIF calculate_int_Data0_1_.AR
+1 1
+.names keyOut_2_.Q button4_d1_q_0_.Q button4_d2_q_0_.Q button4_d3_q_0_.Q button1_d1_q_0_.Q button1_d2_q_0_.Q button1_d3_q_0_.Q calculate_flag_Cal_0_.Q calculate_flag_Cal_1_.Q calculate_int_Data1_0_.Q calculate_int_Data1_1_.Q calculate_int_Data1_2_.Q calculate_int_Data1_3_.Q calculate_int_Data0_0_.Q calculate_int_Data0_1_.Q calculate_int_Data0_2_.Q calculate_int_Data0_3_.Q calculate_int_data_cnst_0_3__n.X1
+0------0--------- 1
+0-------0-------- 1
+0---------1-1---- 1
+0----------11---- 1
+0-------------1-1 1
+0--------------11 1
+0000------------- 1
+0--------0--0---1 1
+0--------001--0-- 1
+0--------01--1-0- 1
+0--------0-0-0-0- 1
+0---------000---0 1
+0---------00-0--0 1
+0---------0--00-0 1
+0-----------0-000 1
+0--------011-011- 1
+0--------1-0-01-- 1
+0--------1--0111- 1
+0--------111-1--0 1
+0--------1--11--1 1
+-000000---------- 1
+.names keyOut_2_.Q calculate_int_data_cnst_0_3__n.X2
+1 1
+.names keyOut_1_.Q keyOut_2_.Q keyinbutton_i_0__n.BLIF calculate_int_Data0_2_.D
+10- 1
+-10 1
+.names calculate_time1Oms.Q calculate_int_Data0_2_.C
+1 1
+.names calculate_int_Data0_0__0.BLIF calculate_int_Data0_2_.CE
+1 1
+.names resetButton_i.BLIF calculate_int_Data0_2_.AR
+1 1
+.names keyOut_0_.Q keyOut_1_.Q keyinbutton_i_1__n.BLIF keyinbutton_i_2__n.BLIF calculate_int_Data0_3_.D
+000- 1
+00-0 1
+.names calculate_time1Oms.Q calculate_int_Data0_3_.C
+1 1
+.names calculate_int_Data0_0__0.BLIF calculate_int_Data0_3_.CE
+1 1
+.names resetButton_i.BLIF calculate_int_Data0_3_.AR
+1 1
+.names keyOut_0_.Q calculate_combvalue_0_.D
+1 1
+.names calculate_time1Oms.Q calculate_combvalue_0_.C
+1 1
+.names resetButton_i.BLIF calculate_combvalue_0_.AR
+1 1
+.names keyOut_1_.Q calculate_combvalue_1_.D
+1 1
+.names calculate_time1Oms.Q calculate_combvalue_1_.C
+1 1
+.names resetButton_i.BLIF calculate_combvalue_1_.AR
+1 1
+.names keyOut_2_.Q calculate_combvalue_2_.D
+1 1
+.names calculate_time1Oms.Q calculate_combvalue_2_.C
+1 1
+.names resetButton_i.BLIF calculate_combvalue_2_.AR
+1 1
+.names keyOut_3_.Q calculate_combvalue_3_.D
+1 1
+.names calculate_time1Oms.Q calculate_combvalue_3_.C
+1 1
+.names resetButton_i.BLIF calculate_combvalue_3_.AR
+1 1
+.names calculate_timecnt_0_.Q calculate_timecnt_0_.D
+0 1
+.names clkh.BLIF calculate_timecnt_0_.C
+1 1
+.names resetButton_i.BLIF calculate_timecnt_0_.AR
+1 1
+.names calculate_timecnt_0_.Q calculate_timecnt_1_.Q calculate_timecnt_1_.D
+10 1
+01 1
+.names clkh.BLIF calculate_timecnt_1_.C
+1 1
+.names resetButton_i.BLIF calculate_timecnt_1_.AR
+1 1
+.names calculate_timecnt_0_.Q calculate_timecnt_1_.Q calculate_timecnt_2_.Q calculate_timecnt_2_.D
+110 1
+-01 1
+0-1 1
+.names clkh.BLIF calculate_timecnt_2_.C
+1 1
+.names resetButton_i.BLIF calculate_timecnt_2_.AR
+1 1
+.names calculate_timecnt_0_.Q calculate_timecnt_1_.Q calculate_timecnt_2_.Q calculate_timecnt_3_.Q calculate_timecnt_3_.D
+1110 1
+--01 1
+-0-1 1
+0--1 1
+.names clkh.BLIF calculate_timecnt_3_.C
+1 1
+.names resetButton_i.BLIF calculate_timecnt_3_.AR
+1 1
+.names calculate_timecnt_4_.Q calculate_timecnt_5_.Q calculate_time1oms3_n.BLIF calculate_time1oms3_9_n.BLIF calculate_timecnt_5_.D
+1001 1
+010- 1
+-100 1
+.names clkh.BLIF calculate_timecnt_5_.C
+1 1
+.names resetButton_i.BLIF calculate_timecnt_5_.AR
+1 1
+.names calculate_timecnt_7_.Q calculate_timecnt_8_.Q calculate_time1oms3_n.BLIF calculate_n_500_n.BLIF calculate_timecnt_8_.D
+1001 1
+010- 1
+-100 1
+.names clkh.BLIF calculate_timecnt_8_.C
+1 1
+.names resetButton_i.BLIF calculate_timecnt_8_.AR
+1 1
+.names calculate_timecnt_7_.Q calculate_timecnt_9_.Q calculate_timecnt_8_.Q calculate_time1oms3_n.BLIF calculate_n_500_n.BLIF calculate_timecnt_10_.D.X1
+11101 1
+.names calculate_timecnt_10_.Q calculate_time1oms3_n.BLIF calculate_timecnt_10_.D.X2
+10 1
+.names clkh.BLIF calculate_timecnt_10_.C
+1 1
+.names resetButton_i.BLIF calculate_timecnt_10_.AR
+1 1
+.names calculate_timecnt_12_.Q calculate_time1oms3_n.BLIF calculate_n_510_n.BLIF calculate_timecnt_12_.D
+100 1
+001 1
+.names clkh.BLIF calculate_timecnt_12_.C
+1 1
+.names resetButton_i.BLIF calculate_timecnt_12_.AR
+1 1
+.names calculate_timecnt_12_.Q calculate_timecnt_13_.Q calculate_time1oms3_n.BLIF calculate_n_510_n.BLIF calculate_timecnt_13_.D
+1001 1
+010- 1
+-100 1
+.names clkh.BLIF calculate_timecnt_13_.C
+1 1
+.names resetButton_i.BLIF calculate_timecnt_13_.AR
+1 1
+.names calculate_timecnt_12_.Q calculate_timecnt_13_.Q calculate_timecnt_14_.Q calculate_time1oms3_n.BLIF calculate_n_510_n.BLIF calculate_timecnt_14_.D
+11001 1
+-010- 1
+0-10- 1
+--100 1
+.names clkh.BLIF calculate_timecnt_14_.C
+1 1
+.names resetButton_i.BLIF calculate_timecnt_14_.AR
+1 1
+.names keyOut_1_.Q keyOut_2_.Q keyOut_3_.Q calculate_un1_led_int_data2278_n.BLIF calculate_n_457_0_n.BLIF calculate_int_Data1_0_.Q calculate_int_Data1_1_.Q calculate_int_Data0_0_.Q calculate_int_Data0_1_.Q keyinbutton_i_0__n.BLIF keyinbutton_i_1__n.BLIF keyinbutton_i_2__n.BLIF calculate_n_29_0_n.BLIF calculate_int_Data_1_.D
+--10-1-011--- 1
+--10-011-1--- 1
+--10--1101--- 1
+--10-10-11--- 1
+00-0-----10-- 1
+---10-0-0---0 1
+---11-0-0---1 1
+---11-1-0---0 1
+---11-0-1---0 1
+---10-1-0---1 1
+---10-0-1---1 1
+---10-1-1---0 1
+---11-1-1---1 1
+-0-0-----1-0- 1
+-1-0-----0--- 1
+.names calculate_time1Oms.Q calculate_int_Data_1_.C
+1 1
+.names calculate_int_Data_0__0.BLIF calculate_int_Data_1_.CE
+1 1
+.names resetButton_i.BLIF calculate_int_Data_1_.AR
+1 1
+.names keyOut_1_.Q keyOut_2_.Q keyOut_3_.Q calculate_un1_led_int_data2278_n.BLIF calculate_int_Data1_0_.Q calculate_int_Data1_1_.Q calculate_int_Data1_2_.Q calculate_int_Data0_0_.Q calculate_int_Data0_1_.Q calculate_int_Data0_2_.Q keyinbutton_i_0__n.BLIF calculate_G_363_0_a3_1.BLIF calculate_int_Data_2_.D.X1
+1--0-------- 1
+---1--0--0-1 1
+---1--1--0-0 1
+---1--1--1-1 1
+---1--0--1-0 1
+01-0------0- 1
+0-10-1-01-1- 1
+0-10-011--1- 1
+0-10--110-1- 1
+0-10010-1-1- 1
+0-10111-1-1- 1
+.names keyOut_1_.Q keyOut_3_.Q calculate_un1_led_int_data2278_n.BLIF calculate_int_Data1_0_.Q calculate_int_Data0_2_.Q keyinbutton_i_0__n.BLIF calculate_int_Data_2_.D.X2
+010111 1
+.names calculate_time1Oms.Q calculate_int_Data_2_.C
+1 1
+.names calculate_int_Data_0__0.BLIF calculate_int_Data_2_.CE
+1 1
+.names resetButton_i.BLIF calculate_int_Data_2_.AR
+1 1
+.names calculate_un1_led_int_data2278_n.BLIF calculate_int_Data1_3_.Q calculate_int_data_cnst_0_3__n.BLIF calculate_int_Data0_3_.Q calculate_n_29_0_n.BLIF calculate_int_Data_3_.D.X1
+0-0-- 1
+11-11 1
+10-10 1
+10-01 1
+11-00 1
+.names calculate_un1_led_int_data2278_n.BLIF calculate_n_453_0_n.BLIF calculate_int_Data_3_.D.X2
+10 1
+.names calculate_time1Oms.Q calculate_int_Data_3_.C
+1 1
+.names calculate_int_Data_0__0.BLIF calculate_int_Data_3_.CE
+1 1
+.names resetButton_i.BLIF calculate_int_Data_3_.AR
+1 1
+.names keyOut_2_.Q calculate_un1_led_int_data2278_n.BLIF calculate_flag_Cal_0_.Q calculate_flag_Cal_1_.Q calculate_n_479_0_n.BLIF calculate_int_Data1_0_.Q calculate_int_Data1_1_.Q calculate_int_Data1_2_.Q calculate_int_Data1_3_.Q calculate_int_Data0_0_.Q calculate_int_Data0_1_.Q calculate_int_Data0_2_.Q calculate_int_Data0_3_.Q calculate_n_29_0_n.BLIF keyinbutton_i_3__n.BLIF calculate_int_Data_4_.D
+0011-11-01110-0 1
+0-11-10011001-0 1
+0011--1101100-0 1
+0011-1100-110-0 1
+0011--001-1-0-0 1
+0011--1-0-001-0 1
+0-11---100010-0 1
+0-11-0-10-010-0 1
+0-11--0100-10-0 1
+0-11-0010--10-0 1
+0-11--010-010-0 1
+-1--0--------0- 1
+-1--1--------1- 1
+.names calculate_time1Oms.Q calculate_int_Data_4_.C
+1 1
+.names calculate_int_Data_0__0.BLIF calculate_int_Data_4_.CE
+1 1
+.names resetButton_i.BLIF calculate_int_Data_4_.AR
+1 1
+.names keyOut_2_.Q calculate_un1_led_int_data2278_n.BLIF calculate_flag_Cal_0_.Q calculate_flag_Cal_1_.Q calculate_int_Data1_0_.Q calculate_int_Data1_1_.Q calculate_n_453_0_n.BLIF calculate_int_Data1_2_.Q calculate_int_Data1_3_.Q calculate_int_Data0_0_.Q calculate_int_Data0_1_.Q calculate_int_Data0_2_.Q calculate_int_Data0_3_.Q calculate_led_int_data2_0_sqmuxa_n.BLIF calculate_n_29_0_n.BLIF calculate_n_1010_i_n.BLIF keyinbutton_i_3__n.BLIF calculate_int_Data_5_.D
+00111--101110---0 1
+001111-101-10---0 1
+0011-1-10-110---0 1
+0011-0-01--10---0 1
+0011---10-001---0 1
+-1------1---1111- 1
+-1------1---0110- 1
+-1------0---1011- 1
+-1------0---0010- 1
+-1----1-----1-11- 1
+-1----1-1----11-- 1
+-1----1-----0-10- 1
+-1----1-0----01-- 1
+.names calculate_time1Oms.Q calculate_int_Data_5_.C
+1 1
+.names calculate_int_Data_0__0.BLIF calculate_int_Data_5_.CE
+1 1
+.names resetButton_i.BLIF calculate_int_Data_5_.AR
+1 1
+.names keyOut_2_.Q calculate_un1_led_int_data2278_n.BLIF calculate_flag_Cal_0_.Q calculate_flag_Cal_1_.Q calculate_int_Data1_1_.Q calculate_n_453_0_n.BLIF calculate_int_Data1_2_.Q calculate_int_Data1_3_.Q calculate_int_Data0_1_.Q calculate_int_Data0_2_.Q calculate_int_Data0_3_.Q calculate_led_int_data2_0_sqmuxa_n.BLIF calculate_n_29_0_n.BLIF calculate_n_1010_i_n.BLIF keyinbutton_i_3__n.BLIF calculate_int_Data_6_.D
+00110-01001---0 1
+-1-----0--0010- 1
+-1-----1--0110- 1
+-1-----0--1011- 1
+-1-----1--1111- 1
+-1---1----0-10- 1
+-1---1-0---01-- 1
+-1---1----1-11- 1
+-1---1-1---11-- 1
+.names calculate_time1Oms.Q calculate_int_Data_6_.C
+1 1
+.names calculate_int_Data_0__0.BLIF calculate_int_Data_6_.CE
+1 1
+.names resetButton_i.BLIF calculate_int_Data_6_.AR
+1 1
+.names keyOut_0_.Q keyOut_1_.Q keyOut_2_.Q button4_d1_q_0_.Q button4_d2_q_0_.Q button4_d3_q_0_.Q button3_d1_q_0_.Q button3_d2_q_0_.Q button3_d3_q_0_.Q button1_d1_q_0_.Q button1_d2_q_0_.Q button1_d3_q_0_.Q calculate_flag_Data_0_.Q calculate_flag_Data_1_.Q calculate_n_116_n.X1
+00000000000010 1
+.names keyOut_0_.Q keyOut_1_.Q keyOut_2_.Q button4_d1_q_0_.Q button4_d2_q_0_.Q button4_d3_q_0_.Q button2_d1_q_0_.Q button2_d2_q_0_.Q button2_d3_q_0_.Q button1_d1_q_0_.Q button1_d2_q_0_.Q button1_d3_q_0_.Q calculate_flag_Data_0_.Q calculate_flag_Data_1_.Q calculate_n_116_n.X2
+00000000000010 1
+.names keyOut_0_.Q keyOut_1_.Q keyOut_2_.Q keyOut_3_.Q calculate_n_116_n.BLIF calculate_flag_Data_0_.Q calculate_flag_Data_1_.Q keyinbutton_i_0__n.BLIF keyinbutton_i_1__n.BLIF keyinbutton_i_2__n.BLIF keyinbutton_i_3__n.BLIF calculate_flag_Data_0_.T
+0-0000-1101 1
+0-0000-1011 1
+-0---101110 1
+-00000-1101 1
+00-000-1101 1
+-00000-1011 1
+00-000-1011 1
+000-00-0111 1
+0-0000-0111 1
+-00000-0111 1
+00-000-0111 1
+---1-1-1110 1
+--1--1-1110 1
+----11----- 1
+.names calculate_time1Oms.Q calculate_flag_Data_0_.C
+1 1
+.names resetButton_i.BLIF calculate_flag_Data_0_.AR
+1 1
+.names keyOut_0_.Q keyOut_1_.Q keyOut_2_.Q keyOut_3_.Q calculate_flag_Data_0_.Q calculate_flag_Data_1_.Q keyinbutton_i_0__n.BLIF keyinbutton_i_1__n.BLIF keyinbutton_i_2__n.BLIF keyinbutton_i_3__n.BLIF calculate_flag_Data_1_.T
+000-101101 1
+000-101011 1
+-000101110 1
+---1-11110 1
+--1--11110 1
+.names calculate_time1Oms.Q calculate_flag_Data_1_.C
+1 1
+.names resetButton_i.BLIF calculate_flag_Data_1_.AR
+1 1
+.names calculate_scanvalue_0_.Q calculate_scanvalue_0_.D
+0 1
+.names calculate_time1Oms.Q calculate_scanvalue_0_.C
+1 1
+.names resetButton_i.BLIF calculate_scanvalue_0_.AR
+1 1
+.names calculate_scanvalue_0_.Q calculate_scanvalue_1_.Q calculate_scanvalue_1_.D
+10 1
+01 1
+.names calculate_time1Oms.Q calculate_scanvalue_1_.C
+1 1
+.names resetButton_i.BLIF calculate_scanvalue_1_.AR
+1 1
+.names keyOut_0_.Q keyOut_1_.Q keyOut_2_.Q button4_d1_q_0_.Q keyOut_3_.Q button4_d2_q_0_.Q button4_d3_q_0_.Q button3_d1_q_0_.Q button3_d2_q_0_.Q button3_d3_q_0_.Q button2_d1_q_0_.Q button2_d2_q_0_.Q button2_d3_q_0_.Q button1_d1_q_0_.Q button1_d2_q_0_.Q button1_d3_q_0_.Q calculate_n_1008_0_n-
+0000-00000000-1- 1
+0000-000000001-- 1
+0000-00000000--1 1
+-000000000000-1- 1
+0-00000000000-1- 1
+00-0000000000-1- 1
+-0000000000001-- 1
+0-000000000001-- 1
+00-00000000001-- 1
+-000000--1000000 1
+0-00000--1000000 1
+00-0000--1000000 1
+-000000-1-000000 1
+0-00000-1-000000 1
+00-0000-1-000000 1
+-0000001--000000 1
+0-000001--000000 1
+00-00001--000000 1
+-000000000--1000 1
+0-00000000--1000 1
+00-0000000--1000 1
+-000000000-1-000 1
+0-00000000-1-000 1
+00-0000000-1-000 1
+-0000000001--000 1
+0-000000001--000 1
+00-00000001--000 1
+-000000000000--1 1
+0-00000000000--1 1
+00-0000000000--1 1
+.names calculate_flag_Cal_0_.Q calculate_flag_Cal_1_.Q calculate_int_Data1_0_.Q calculate_int_Data1_1_.Q calculate_int_Data1_2_.Q calculate_int_Data1_3_.Q calculate_int_Data0_0_.Q calculate_int_Data0_1_.Q calculate_int_Data0_2_.Q calculate_int_Data0_3_.Q calculate_led_int_data2_0_sqmuxa_n.X1
+01---0---1 1
+01--0---1- 1
+01000----- 1
+01-00-1--- 1
+010-0--1-- 1
+01-00--1-- 1
+01--0-11-- 1
+0100----1- 1
+01-0--1-1- 1
+010----11- 1
+01-0---11- 1
+01----111- 1
+-----1---0 1
+.names calculate_int_Data1_3_.Q calculate_int_Data0_3_.Q calculate_led_int_data2_0_sqmuxa_n.X2
+10 1
+.names button1_d1_q_0_.Q button1_d2_q_0_.Q button1_d3_q_0_.Q keyinbutton_i_0__n
+000 1
+.names button2_d1_q_0_.Q button2_d2_q_0_.Q button2_d3_q_0_.Q keyinbutton_i_1__n
+000 1
+.names calculate_int_Data1_0_.Q calculate_int_Data1_1_.Q calculate_int_Data1_2_.Q calculate_int_Data1_3_.Q calculate_int_Data0_0_.Q calculate_int_Data0_1_.Q calculate_int_Data0_2_.Q calculate_int_Data0_3_.Q calculate_n_730_n.X1
+--1---0- 1
+-11--0-- 1
+-1---00- 1
+111-0--- 1
+1-1-00-- 1
+11--0-0- 1
+1---000- 1
+---0---1 1
+.names calculate_int_Data1_3_.Q calculate_int_Data0_3_.Q calculate_n_730_n.X2
+01 1
+.names button3_d1_q_0_.Q button3_d2_q_0_.Q button3_d3_q_0_.Q keyinbutton_i_2__n
+000 1
+.names calculate_flag_Cal_0_.Q calculate_flag_Cal_1_.Q calculate_n_29_0_n
+01 1
+.names calculate_flag_Cal_0_.Q calculate_flag_Cal_1_.Q calculate_int_Data1_0_.Q calculate_int_Data1_1_.Q calculate_int_Data1_2_.Q calculate_int_Data1_3_.Q calculate_int_Data0_0_.Q calculate_int_Data0_1_.Q calculate_int_Data0_2_.Q calculate_int_Data0_3_.Q calculate_n_1010_i_n
+011--1000- 1
+0111-10-0- 1
+011-1100-- 1
+0111110--- 1
+01-1-1-00- 1
+01-111-0-- 1
+011---0000 1
+0111--0-00 1
+011-1-00-0 1
+01111-0--0 1
+01--11--0- 1
+01-1---000 1
+01-11--0-0 1
+01--1---00 1
+01---1---0 1
+.names data1_3__n.BLIF calculate_un85_1_0_n.BLIF calculate_int_Data_3_.Q calculate_un86_i_n.BLIF calculate_un84_i_n.BLIF calculate_un82_i_n.BLIF calculate_un81_n.BLIF calculate_G_340.X1
+0100-1- 1
+0-0001- 1
+0100--1 1
+0-000-1 1
+1-1---- 1
+--11--- 1
+-01-1-- 1
+--1--00 1
+.names calculate_n_429_0_n.BLIF calculate_G_340.X2
+0 1
+.names button4_d1_q_0_.Q button4_d2_q_0_.Q button4_d3_q_0_.Q keyinbutton_i_3__n
+000 1
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q resetButton_i
+000 1
+.names calculate_timecnt_6_.Q calculate_timecnt_7_.Q calculate_timecnt_11_.Q calculate_timecnt_9_.Q calculate_timecnt_4_.Q calculate_timecnt_15_.Q calculate_timecnt_0_.Q calculate_timecnt_1_.Q calculate_timecnt_2_.Q calculate_timecnt_3_.Q calculate_timecnt_5_.Q calculate_timecnt_8_.Q calculate_timecnt_10_.Q calculate_timecnt_12_.Q calculate_timecnt_13_.Q calculate_timecnt_14_.Q calculate_time1oms3_n
+0000001111111111 1
+.names calculate_int_Data_2_.Q calculate_int_Data_3_.Q calculate_int_Data_4_.Q calculate_int_Data_5_.Q calculate_int_Data_6_.Q calculate_un86_i_n
+00-00 1
+--000 1
+.names calculate_timecnt_0_.Q calculate_timecnt_1_.Q calculate_timecnt_2_.Q calculate_timecnt_3_.Q calculate_time1oms3_9_n
+1111 1
+.names calculate_int_Data_3_.Q calculate_int_Data_4_.Q calculate_int_Data_5_.Q calculate_int_Data_6_.Q calculate_un84_i_n
+00-0 1
+--00 1
+.names calculate_timecnt_6_.Q calculate_timecnt_7_.Q calculate_timecnt_11_.Q calculate_timecnt_9_.Q calculate_timecnt_4_.Q calculate_timecnt_0_.Q calculate_timecnt_1_.Q calculate_timecnt_2_.Q calculate_timecnt_3_.Q calculate_timecnt_5_.Q calculate_timecnt_8_.Q calculate_timecnt_10_.Q calculate_n_510_n
+111111111111 1
+.names calculate_int_Data_2_.Q calculate_int_Data_3_.Q calculate_int_Data_4_.Q calculate_int_Data_5_.Q calculate_int_Data_6_.Q calculate_un82_i_n-
+1111- 1
+----1 1
+.names calculate_flag_Cal_0_.Q calculate_flag_Cal_1_.Q calculate_int_Data1_0_.Q calculate_int_Data1_1_.Q calculate_int_Data1_2_.Q calculate_int_Data1_3_.Q calculate_int_Data0_0_.Q calculate_int_Data0_1_.Q calculate_int_Data0_2_.Q calculate_int_Data0_3_.Q calculate_led_int_data2_0_sqmuxa_n.BLIF calculate_n_1010_i_n.BLIF calculate_G_363_0_a3_1.X1
+1--0---0---- 1
+-0-0---0---- 1
+--00--00--00 1
+--00--10--01 1
+--10--00--10 1
+--10--10--11 1
+-000------0- 1
+-0-0--0----0 1
+-0-0--1----1 1
+-010------1- 1
+01-0-1-1-0-- 1
+01-011-10--- 1
+01-01--100-- 1
+1-00--0---00 1
+1-00--1---01 1
+1-10--0---10 1
+1-10--1---11 1
+-00----0--0- 1
+-0----00---0 1
+-0----10---1 1
+-01----0--1- 1
+01-1-0-0-1-- 1
+01-100-01--- 1
+01-10--011-- 1
+1-0---00--00 1
+1-0---10--01 1
+1-1---00--10 1
+1-1---10--11 1
+0101--01--00 1
+0101--11--01 1
+0111--01--10 1
+0111--11--11 1
+.names calculate_n_29_0_n.BLIF calculate_G_363_0_a3_1.X2
+0 1
+.names calculate_timecnt_6_.Q calculate_timecnt_4_.Q calculate_timecnt_0_.Q calculate_timecnt_1_.Q calculate_timecnt_2_.Q calculate_timecnt_3_.Q calculate_timecnt_5_.Q calculate_n_500_n
+1111111 1
+.names calculate_int_Data_1_.Q calculate_int_Data_2_.Q calculate_int_Data_3_.Q calculate_int_Data_4_.Q calculate_int_Data_5_.Q calculate_int_Data_6_.Q calculate_un81_n-
+-0000- 1
+0-000- 1
+-----0 1
+.names keyOut_0_.Q keyOut_1_.Q keyOut_2_.Q keyOut_3_.Q calculate_n_116_n.BLIF calculate_flag_Data_0_.Q calculate_flag_Data_1_.Q keyinbutton_i_0__n.BLIF keyinbutton_i_1__n.BLIF keyinbutton_i_2__n.BLIF keyinbutton_i_3__n.BLIF pointTime_0
+----1------ 1
+000----1110 1
+00-0---1110 1
+-000-101110 1
+.names keyOut_0_.Q keyOut_1_.Q keyOut_2_.Q keyOut_3_.Q calculate_flag_Cal_0_.Q calculate_flag_Cal_1_.Q calculate_int_Data1_1_.Q calculate_int_Data1_2_.Q calculate_int_Data1_3_.Q calculate_int_Data0_1_.Q calculate_int_Data0_2_.Q calculate_int_Data0_3_.Q calculate_flag_Data_0_.Q calculate_flag_Data_1_.Q calculate_n_1008_0_n.BLIF keyinbutton_i_0__n.BLIF keyinbutton_i_1__n.BLIF keyinbutton_i_2__n.BLIF calculate_n_29_0_n.BLIF calculate_n_1010_i_n.BLIF keyinbutton_i_3__n.BLIF calculate_led_int_Data2_0__0
+000-1-00-00----111--0 1
+000-1-00---0---111--0 1
+000-1---000----111--0 1
+000-1---0--0---111--0 1
+------------000------ 1
+000-0----------1111-0 1
+000-10---------111--0 1
+000------------111-10 1
+00-0-----------111--0 1
+.names keyOut_0_.Q keyOut_1_.Q keyOut_2_.Q keyOut_3_.Q calculate_flag_Cal_0_.Q calculate_flag_Cal_1_.Q calculate_int_Data1_1_.Q calculate_int_Data1_2_.Q calculate_int_Data1_3_.Q calculate_int_Data0_1_.Q calculate_int_Data0_2_.Q calculate_int_Data0_3_.Q calculate_flag_Data_0_.Q calculate_n_1008_0_n.BLIF keyinbutton_i_0__n.BLIF keyinbutton_i_1__n.BLIF keyinbutton_i_2__n.BLIF calculate_n_29_0_n.BLIF keyinbutton_i_3__n.BLIF calculate_int_Data_0__0
+------------00----- 1
+0010----------111-0 1
+000-10--------111-0 1
+000-0---------11110 1
+000-1---0--0--111-0 1
+000-1---000---111-0 1
+000-1-00---0--111-0 1
+000-1-00-00---111-0 1
+.names keyOut_0_.Q keyOut_1_.Q keyOut_2_.Q keyOut_3_.Q button1_d1_q_0_.Q button1_d2_q_0_.Q button1_d3_q_0_.Q calculate_flag_Data_0_.Q calculate_flag_Data_1_.Q keyinbutton_i_1__n.BLIF keyinbutton_i_2__n.BLIF keyinbutton_i_3__n.BLIF calculate_flag_Cal_0__0
+---1000--110 1
+1--1000--011 1
+1--1000--101 1
+-1-1000--011 1
+--11000--011 1
+-1-1000--101 1
+--11000--101 1
+11--000--110 1
+1-1-000--110 1
+---100010011 1
+---100010101 1
+1---00010110 1
+.names keyOut_0_.Q keyOut_1_.Q keyOut_3_.Q calculate_flag_Data_0_.Q calculate_flag_Data_1_.Q calculate_n_1008_0_n.BLIF keyinbutton_i_0__n.BLIF keyinbutton_i_1__n.BLIF keyinbutton_i_2__n.BLIF keyinbutton_i_3__n.BLIF calculate_int_Data1_0__0
+---010---- 1
+000---1110 1
+.names keyOut_0_.Q keyOut_1_.Q keyOut_3_.Q calculate_flag_Data_0_.Q calculate_flag_Data_1_.Q calculate_n_1008_0_n.BLIF keyinbutton_i_0__n.BLIF keyinbutton_i_1__n.BLIF keyinbutton_i_2__n.BLIF keyinbutton_i_3__n.BLIF calculate_int_Data0_0__0
+---000---- 1
+000---1110 1
+.end

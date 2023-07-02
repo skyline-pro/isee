@@ -1,0 +1,1109 @@
+#$ TOOL ispLEVER Classic 2.1.00.02.49.20
+#$ DATE Fri May 13 10:45:33 2022
+#$ MODULE vga
+#$ PINS 8 vga_d_2_ vga_d_1_ clk_50m vga_d_0_ reset orient vga_hs vga_vs
+#$ NODES 362 N_923_i N_98_i inst_hsyncintreg N_103_i un1_vcnt_1 N_143_i un1_vcnt_6 \
+#  N_1030_i G_39 N_172_i G_41 N_5_i G_43 N_131_i G_45 N_130_i G_49 N_128_i G_51 N_129_i G_53 \
+#  N_126_i G_55 N_127_i G_74 N_125_i G_76 N_185_0 G_84 N_139_i G_86 N_97_i hcnt_0_ N_250_i \
+#  inst_enable N_186_i hcnt_1_ N_95_0 hcnt_2_ N_252_i hcnt_3_ N_93_0 hcnt_4_ N_87_0 hcnt_5_ \
+#  N_85_i hcnt_6_ hcnt_7_ hcnt_8_ hcnt_9_ N_890_i hcnt_10_ N_893_0 vcnt_0_ N_884_i vcnt_1_ \
+#  N_887_0 vcnt_2_ N_883_0 vcnt_3_ N_465_i vcnt_4_ N_145_i vcnt_5_ N_148_0 vcnt_6_ N_138_i \
+#  vcnt_7_ N_9_i vcnt_8_ N_1036_i vcnt_9_ N_154_i N_99_i hsyncint8 N_86_0 N_105 N_83_i N_108 \
+#  N_119_i N_111 hsyncint8_1_0 N_137 N_340_i N_207 N_343_i N_333 N_334_i N_462 N_337_0 N_465 \
+#  N_333_i N_591 N_458_0 N_656 N_459_i N_658 N_462_0 N_887 N_549_i N_890 hcnt13_i N_37 \
+#  N_583_0 N_82 N_83 N_156_i N_84 N_157_i N_87 N_174_i N_90 N_7_i N_98 N_135_i N_117 N_1035_i \
+#  N_118 N_133_i N_120 N_132_i N_123 N_142_i N_125 N_67_0 N_129 N_123_i N_130 N_591_0 N_132 \
+#  N_117_i N_133 N_118_i N_1035 N_37_i N_135 N_1030_i_1 N_1036 N_1030_i_2 N_140 N_125_1 \
+#  N_142 N_125_2 N_143 N_7_i_1 N_147 N_7_i_2 N_1037 N_7_i_3 N_150 N_7_i_4 N_151 N_549_1 N_155 \
+#  N_549_2 N_156 N_157_1 N_174 N_9_i_1 N_549 N_9_i_2 hcnt_3_i_x2_5_ N_9_i_3 N_42 N_87_0_1 \
+#  hcnt_3_i_x2_10_ N_97_i_1 N_52 N_185_0_1 N_157 N_185_0_2 hcnt13 N_5_i_1 N_583 N_5_i_2 \
+#  N_50 N_5_i_3 N_48 N_5_i_4 N_46 N_5_i_5 N_44 N_5_i_6 N_40 N_139_1 N_38 N_139_2 N_36 N_131_1 \
+#  N_459 N_131_2 N_458 N_128_1 N_334 N_128_2 N_337 N_127_1 N_343 N_127_2 N_340 N_126_1 N_592 \
+#  N_126_2 hsyncint8_1 N_67_0_1 N_119 N_591_0_1 N_86 N_37_i_1 N_138 N_156_1 N_154 N_1037_1 \
+#  N_173 N_147_1 N_60 N_890_1 N_62 N_143_1 N_64 N_108_1 N_66 N_140_1 N_74 N_1036_1 N_72 \
+#  N_1035_1 N_145 N_133_1 N_148 N_130_1 N_186 N_129_1 N_185 N_465_1 N_250 N_120_1 N_252 \
+#  N_118_1 N_883 vga_d_i_0_m2_1__un3_n N_884 vga_d_i_0_m2_1__un1_n N_893 \
+#  vga_d_i_0_m2_1__un0_n N_97 N_93 vcnt12 vcnt_3_i_x2_9_ vcnt_3_i_x2_1_ vcnt_3_i_x2_4_ \
+#  un1_hcnt_8 un1_vcnt_8 N_95 N_139 N_126 N_127 N_128 N_131 N_94 N_172 N_1030 vcnt_3_i_x2_6_ \
+#  N_68 vcnt_3_i_x2_5_ N_923 N_854 N_149 N_81 N_77 N_739 N_75 N_817 N_851 N_848 N_702 N_70 \
+#  un1_vcnt_2 N_845 N_814 N_813 N_736 N_735 N_101 N_699 N_509 N_506 N_505 N_502 N_102 \
+#  vcnt_i_3__n vcnt_i_2__n vcnt_i_4__n vcnt_i_5__n vcnt_i_8__n vcnt_i_9__n hcnt_i_6__n \
+#  N_120_i hcnt_i_7__n hcnt_i_8__n hcnt_i_9__n hcnt_i_10__n N_147_i vcnt_i_6__n N_60_i_0 \
+#  un1_vcnt_6_i orient_i hcnt_i_4__n hcnt_i_5__n vcnt_i_1__n vcnt_i_7__n hcnt_i_2__n \
+#  hcnt_i_3__n vcnt_i_0__n N_140_i N_62_i N_592_i hcnt_i_0__n N_658_i N_656_i N_207_i \
+#  N_137_i reset_i clk_50m_c reset_c orient_c vga_vsDFFSHreg N_101_0 N_102_i N_105_0 \
+#  N_108_i N_111_0 un1_vcnt_8_i N_502_i N_505_0 N_506_i N_509_0 vcnt12_i N_699_i N_702_0 \
+#  N_735_0 N_736_i N_739_i un1_vcnt_1_i N_813_0 N_814_i N_817_i un1_vcnt_2_i N_845_i \
+#  N_848_0 N_851_i N_854_i N_75_i N_77_i N_1037_i N_81_i N_149_i N_82_0 N_84_0 N_91_i N_92_i \
+#  N_94_0
+.model vga
+.inputs clk_50m.BLIF reset.BLIF orient.BLIF N_923_i.BLIF N_98_i.BLIF \
+inst_hsyncintreg.BLIF N_103_i.BLIF un1_vcnt_1.BLIF N_143_i.BLIF \
+un1_vcnt_6.BLIF N_1030_i.BLIF G_39.BLIF N_172_i.BLIF G_41.BLIF N_5_i.BLIF \
+G_43.BLIF N_131_i.BLIF G_45.BLIF N_130_i.BLIF G_49.BLIF N_128_i.BLIF G_51.BLIF \
+N_129_i.BLIF G_53.BLIF N_126_i.BLIF G_55.BLIF N_127_i.BLIF G_74.BLIF \
+N_125_i.BLIF G_76.BLIF N_185_0.BLIF G_84.BLIF N_139_i.BLIF G_86.BLIF \
+N_97_i.BLIF hcnt_0_.BLIF N_250_i.BLIF inst_enable.BLIF N_186_i.BLIF \
+hcnt_1_.BLIF N_95_0.BLIF hcnt_2_.BLIF N_252_i.BLIF hcnt_3_.BLIF N_93_0.BLIF \
+hcnt_4_.BLIF N_87_0.BLIF hcnt_5_.BLIF N_85_i.BLIF hcnt_6_.BLIF hcnt_7_.BLIF \
+hcnt_8_.BLIF hcnt_9_.BLIF N_890_i.BLIF hcnt_10_.BLIF N_893_0.BLIF vcnt_0_.BLIF \
+N_884_i.BLIF vcnt_1_.BLIF N_887_0.BLIF vcnt_2_.BLIF N_883_0.BLIF vcnt_3_.BLIF \
+N_465_i.BLIF vcnt_4_.BLIF N_145_i.BLIF vcnt_5_.BLIF N_148_0.BLIF vcnt_6_.BLIF \
+N_138_i.BLIF vcnt_7_.BLIF N_9_i.BLIF vcnt_8_.BLIF N_1036_i.BLIF vcnt_9_.BLIF \
+N_154_i.BLIF N_99_i.BLIF hsyncint8.BLIF N_86_0.BLIF N_105.BLIF N_83_i.BLIF \
+N_108.BLIF N_119_i.BLIF N_111.BLIF hsyncint8_1_0.BLIF N_137.BLIF N_340_i.BLIF \
+N_207.BLIF N_343_i.BLIF N_333.BLIF N_334_i.BLIF N_462.BLIF N_337_0.BLIF \
+N_465.BLIF N_333_i.BLIF N_591.BLIF N_458_0.BLIF N_656.BLIF N_459_i.BLIF \
+N_658.BLIF N_462_0.BLIF N_887.BLIF N_549_i.BLIF N_890.BLIF hcnt13_i.BLIF \
+N_37.BLIF N_583_0.BLIF N_82.BLIF N_83.BLIF N_156_i.BLIF N_84.BLIF N_157_i.BLIF \
+N_87.BLIF N_174_i.BLIF N_90.BLIF N_7_i.BLIF N_98.BLIF N_135_i.BLIF N_117.BLIF \
+N_1035_i.BLIF N_118.BLIF N_133_i.BLIF N_120.BLIF N_132_i.BLIF N_123.BLIF \
+N_142_i.BLIF N_125.BLIF N_67_0.BLIF N_129.BLIF N_123_i.BLIF N_130.BLIF \
+N_591_0.BLIF N_132.BLIF N_117_i.BLIF N_133.BLIF N_118_i.BLIF N_1035.BLIF \
+N_37_i.BLIF N_135.BLIF N_1030_i_1.BLIF N_1036.BLIF N_1030_i_2.BLIF N_140.BLIF \
+N_125_1.BLIF N_142.BLIF N_125_2.BLIF N_143.BLIF N_7_i_1.BLIF N_147.BLIF \
+N_7_i_2.BLIF N_1037.BLIF N_7_i_3.BLIF N_150.BLIF N_7_i_4.BLIF N_151.BLIF \
+N_549_1.BLIF N_155.BLIF N_549_2.BLIF N_156.BLIF N_157_1.BLIF N_174.BLIF \
+N_9_i_1.BLIF N_549.BLIF N_9_i_2.BLIF hcnt_3_i_x2_5_.BLIF N_9_i_3.BLIF \
+N_42.BLIF N_87_0_1.BLIF hcnt_3_i_x2_10_.BLIF N_97_i_1.BLIF N_52.BLIF \
+N_185_0_1.BLIF N_157.BLIF N_185_0_2.BLIF hcnt13.BLIF N_5_i_1.BLIF N_583.BLIF \
+N_5_i_2.BLIF N_50.BLIF N_5_i_3.BLIF N_48.BLIF N_5_i_4.BLIF N_46.BLIF \
+N_5_i_5.BLIF N_44.BLIF N_5_i_6.BLIF N_40.BLIF N_139_1.BLIF N_38.BLIF \
+N_139_2.BLIF N_36.BLIF N_131_1.BLIF N_459.BLIF N_131_2.BLIF N_458.BLIF \
+N_128_1.BLIF N_334.BLIF N_128_2.BLIF N_337.BLIF N_127_1.BLIF N_343.BLIF \
+N_127_2.BLIF N_340.BLIF N_126_1.BLIF N_592.BLIF N_126_2.BLIF hsyncint8_1.BLIF \
+N_67_0_1.BLIF N_119.BLIF N_591_0_1.BLIF N_86.BLIF N_37_i_1.BLIF N_138.BLIF \
+N_156_1.BLIF N_154.BLIF N_1037_1.BLIF N_173.BLIF N_147_1.BLIF N_60.BLIF \
+N_890_1.BLIF N_62.BLIF N_143_1.BLIF N_64.BLIF N_108_1.BLIF N_66.BLIF \
+N_140_1.BLIF N_74.BLIF N_1036_1.BLIF N_72.BLIF N_1035_1.BLIF N_145.BLIF \
+N_133_1.BLIF N_148.BLIF N_130_1.BLIF N_186.BLIF N_129_1.BLIF N_185.BLIF \
+N_465_1.BLIF N_250.BLIF N_120_1.BLIF N_252.BLIF N_118_1.BLIF N_883.BLIF \
+vga_d_i_0_m2_1__un3_n.BLIF N_884.BLIF vga_d_i_0_m2_1__un1_n.BLIF N_893.BLIF \
+vga_d_i_0_m2_1__un0_n.BLIF N_97.BLIF N_93.BLIF vcnt12.BLIF vcnt_3_i_x2_9_.BLIF \
+vcnt_3_i_x2_1_.BLIF vcnt_3_i_x2_4_.BLIF un1_hcnt_8.BLIF un1_vcnt_8.BLIF \
+N_95.BLIF N_139.BLIF N_126.BLIF N_127.BLIF N_128.BLIF N_131.BLIF N_94.BLIF \
+N_172.BLIF N_1030.BLIF vcnt_3_i_x2_6_.BLIF N_68.BLIF vcnt_3_i_x2_5_.BLIF \
+N_923.BLIF N_854.BLIF N_149.BLIF N_81.BLIF N_77.BLIF N_739.BLIF N_75.BLIF \
+N_817.BLIF N_851.BLIF N_848.BLIF N_702.BLIF N_70.BLIF un1_vcnt_2.BLIF \
+N_845.BLIF N_814.BLIF N_813.BLIF N_736.BLIF N_735.BLIF N_101.BLIF N_699.BLIF \
+N_509.BLIF N_506.BLIF N_505.BLIF N_502.BLIF N_102.BLIF vcnt_i_3__n.BLIF \
+vcnt_i_2__n.BLIF vcnt_i_4__n.BLIF vcnt_i_5__n.BLIF vcnt_i_8__n.BLIF \
+vcnt_i_9__n.BLIF hcnt_i_6__n.BLIF N_120_i.BLIF hcnt_i_7__n.BLIF \
+hcnt_i_8__n.BLIF hcnt_i_9__n.BLIF hcnt_i_10__n.BLIF N_147_i.BLIF \
+vcnt_i_6__n.BLIF N_60_i_0.BLIF un1_vcnt_6_i.BLIF orient_i.BLIF \
+hcnt_i_4__n.BLIF hcnt_i_5__n.BLIF vcnt_i_1__n.BLIF vcnt_i_7__n.BLIF \
+hcnt_i_2__n.BLIF hcnt_i_3__n.BLIF vcnt_i_0__n.BLIF N_140_i.BLIF N_62_i.BLIF \
+N_592_i.BLIF hcnt_i_0__n.BLIF N_658_i.BLIF N_656_i.BLIF N_207_i.BLIF \
+N_137_i.BLIF reset_i.BLIF clk_50m_c.BLIF reset_c.BLIF orient_c.BLIF \
+vga_vsDFFSHreg.BLIF N_101_0.BLIF N_102_i.BLIF N_105_0.BLIF N_108_i.BLIF \
+N_111_0.BLIF un1_vcnt_8_i.BLIF N_502_i.BLIF N_505_0.BLIF N_506_i.BLIF \
+N_509_0.BLIF vcnt12_i.BLIF N_699_i.BLIF N_702_0.BLIF N_735_0.BLIF N_736_i.BLIF \
+N_739_i.BLIF un1_vcnt_1_i.BLIF N_813_0.BLIF N_814_i.BLIF N_817_i.BLIF \
+un1_vcnt_2_i.BLIF N_845_i.BLIF N_848_0.BLIF N_851_i.BLIF N_854_i.BLIF \
+N_75_i.BLIF N_77_i.BLIF N_1037_i.BLIF N_81_i.BLIF N_149_i.BLIF N_82_0.BLIF \
+N_84_0.BLIF N_91_i.BLIF N_92_i.BLIF N_94_0.BLIF
+.outputs vga_d_2_ vga_hs vga_vs vga_d_1_ vga_d_0_ hcnt_6_.D hcnt_6_.C \
+hcnt_6_.AR hcnt_7_.D hcnt_7_.C hcnt_7_.AR hcnt_8_.D hcnt_8_.C hcnt_8_.AR \
+hcnt_9_.D hcnt_9_.C hcnt_9_.AR hcnt_10_.D hcnt_10_.C hcnt_10_.AR vcnt_0_.D \
+vcnt_0_.C vcnt_0_.AR vcnt_1_.D vcnt_1_.C vcnt_1_.AR vcnt_2_.D vcnt_2_.C \
+vcnt_2_.AR vcnt_3_.D vcnt_3_.C vcnt_3_.AR vcnt_4_.D vcnt_4_.C vcnt_4_.AR \
+vcnt_5_.D vcnt_5_.C vcnt_5_.AR vcnt_6_.D vcnt_6_.C vcnt_6_.AR vcnt_7_.D \
+vcnt_7_.C vcnt_7_.AR vcnt_8_.D vcnt_8_.C vcnt_8_.AR vcnt_9_.D vcnt_9_.C \
+vcnt_9_.AR hcnt_0_.D hcnt_0_.C hcnt_0_.AR hcnt_1_.D hcnt_1_.C hcnt_1_.AR \
+hcnt_2_.D hcnt_2_.C hcnt_2_.AR hcnt_3_.D hcnt_3_.C hcnt_3_.AR hcnt_4_.D \
+hcnt_4_.C hcnt_4_.AR hcnt_5_.D hcnt_5_.C hcnt_5_.AR inst_hsyncintreg.D \
+inst_hsyncintreg.C inst_hsyncintreg.AP inst_enable.D inst_enable.C \
+inst_enable.AR vga_vsDFFSHreg.D vga_vsDFFSHreg.C vga_vsDFFSHreg.AP N_923_i \
+N_98_i N_103_i un1_vcnt_1 N_143_i un1_vcnt_6 N_1030_i N_172_i N_5_i N_131_i \
+N_130_i N_128_i N_129_i N_126_i N_127_i N_125_i N_185_0 N_139_i N_97_i N_250_i \
+N_186_i N_95_0 N_252_i N_93_0 N_87_0 N_85_i N_890_i N_893_0 N_884_i N_887_0 \
+N_883_0 N_465_i N_145_i N_148_0 N_138_i N_9_i N_1036_i N_154_i N_99_i \
+hsyncint8 N_86_0 N_105 N_83_i N_108 N_119_i N_111 hsyncint8_1_0 N_137 N_340_i \
+N_207 N_343_i N_333 N_334_i N_462 N_337_0 N_465 N_333_i N_591 N_458_0 N_656 \
+N_459_i N_658 N_462_0 N_887 N_549_i N_890 hcnt13_i N_37 N_583_0 N_82 N_83 \
+N_156_i N_84 N_157_i N_87 N_174_i N_90 N_7_i N_98 N_135_i N_117 N_1035_i N_118 \
+N_133_i N_120 N_132_i N_123 N_142_i N_125 N_67_0 N_129 N_123_i N_130 N_591_0 \
+N_132 N_117_i N_133 N_118_i N_1035 N_37_i N_135 N_1030_i_1 N_1036 N_1030_i_2 \
+N_140 N_125_1 N_142 N_125_2 N_143 N_7_i_1 N_147 N_7_i_2 N_1037 N_7_i_3 N_150 \
+N_7_i_4 N_151 N_549_1 N_155 N_549_2 N_156 N_157_1 N_174 N_9_i_1 N_549 N_9_i_2 \
+N_9_i_3 N_42 N_87_0_1 N_97_i_1 N_52 N_185_0_1 N_157 N_185_0_2 hcnt13 N_5_i_1 \
+N_583 N_5_i_2 N_50 N_5_i_3 N_48 N_5_i_4 N_46 N_5_i_5 N_44 N_5_i_6 N_40 N_139_1 \
+N_38 N_139_2 N_36 N_131_1 N_459 N_131_2 N_458 N_128_1 N_334 N_128_2 N_337 \
+N_127_1 N_343 N_127_2 N_340 N_126_1 N_592 N_126_2 hsyncint8_1 N_67_0_1 N_119 \
+N_591_0_1 N_86 N_37_i_1 N_138 N_156_1 N_154 N_1037_1 N_173 N_147_1 N_60 \
+N_890_1 N_62 N_143_1 N_64 N_108_1 N_66 N_140_1 N_74 N_1036_1 N_72 N_1035_1 \
+N_145 N_133_1 N_148 N_130_1 N_186 N_129_1 N_185 N_465_1 N_250 N_120_1 N_252 \
+N_118_1 N_883 vga_d_i_0_m2_1__un3_n N_884 vga_d_i_0_m2_1__un1_n N_893 \
+vga_d_i_0_m2_1__un0_n N_97 N_93 vcnt12 un1_hcnt_8 un1_vcnt_8 N_95 N_139 N_126 \
+N_127 N_128 N_131 N_94 N_172 N_1030 N_68 N_923 N_854 N_149 N_81 N_77 N_739 \
+N_75 N_817 N_851 N_848 N_702 N_70 un1_vcnt_2 N_845 N_814 N_813 N_736 N_735 \
+N_101 N_699 N_509 N_506 N_505 N_502 N_102 vcnt_i_3__n vcnt_i_2__n vcnt_i_4__n \
+vcnt_i_5__n vcnt_i_8__n vcnt_i_9__n hcnt_i_6__n N_120_i hcnt_i_7__n \
+hcnt_i_8__n hcnt_i_9__n hcnt_i_10__n N_147_i vcnt_i_6__n N_60_i_0 un1_vcnt_6_i \
+orient_i hcnt_i_4__n hcnt_i_5__n vcnt_i_1__n vcnt_i_7__n hcnt_i_2__n \
+hcnt_i_3__n vcnt_i_0__n N_140_i N_62_i N_592_i hcnt_i_0__n N_658_i N_656_i \
+N_207_i N_137_i reset_i clk_50m_c reset_c orient_c N_101_0 N_102_i N_105_0 \
+N_108_i N_111_0 un1_vcnt_8_i N_502_i N_505_0 N_506_i N_509_0 vcnt12_i N_699_i \
+N_702_0 N_735_0 N_736_i N_739_i un1_vcnt_1_i N_813_0 N_814_i N_817_i \
+un1_vcnt_2_i N_845_i N_848_0 N_851_i N_854_i N_75_i N_77_i N_1037_i N_81_i \
+N_149_i N_82_0 N_84_0 N_91_i N_92_i N_94_0 G_39 G_41 G_43 G_45 G_49 G_51 G_53 \
+G_55 G_74 G_76 G_84 G_86 hcnt_3_i_x2_5_ hcnt_3_i_x2_10_ vcnt_3_i_x2_9_ \
+vcnt_3_i_x2_1_ vcnt_3_i_x2_4_ vcnt_3_i_x2_6_ vcnt_3_i_x2_5_
+.names hcnt_3_i_x2_10_.BLIF hcnt13.BLIF hcnt_10_.D
+11 1
+.names vcnt_3_i_x2_1_.BLIF vcnt12.BLIF vcnt_1_.D
+11 1
+.names vcnt_3_i_x2_4_.BLIF vcnt12.BLIF vcnt_4_.D
+11 1
+.names vcnt_3_i_x2_5_.BLIF vcnt12.BLIF vcnt_5_.D
+11 1
+.names vcnt_3_i_x2_6_.BLIF vcnt12.BLIF vcnt_6_.D
+11 1
+.names vcnt_3_i_x2_9_.BLIF vcnt12.BLIF vcnt_9_.D
+11 1
+.names hcnt13.BLIF hcnt_i_0__n.BLIF hcnt_0_.D
+11 1
+.names hcnt_3_i_x2_5_.BLIF hcnt13.BLIF hcnt_5_.D
+11 1
+.names hsyncint8.BLIF inst_hsyncintreg.D
+0 1
+.names N_37.BLIF un1_vcnt_2.BLIF inst_enable.D
+11 1
+.names N_67_0.BLIF vga_vsDFFSHreg.D
+0 1
+.names N_923.BLIF N_923_i
+0 1
+.names N_92_i.BLIF N_923_i.BLIF N_98_i
+11 1
+.names vcnt_i_4__n.BLIF vcnt_i_5__n.BLIF N_103_i
+11 1
+.names un1_vcnt_1_i.BLIF un1_vcnt_1
+0 1
+.names N_143.BLIF N_143_i
+0 1
+.names N_148.BLIF vcnt_i_9__n.BLIF un1_vcnt_6
+11 1
+.names N_1030_i_1.BLIF N_1030_i_2.BLIF N_1030_i
+11 1
+.names N_172.BLIF N_172_i
+0 1
+.names N_5_i_5.BLIF N_5_i_6.BLIF N_5_i
+11 1
+.names N_131.BLIF N_131_i
+0 1
+.names N_130.BLIF N_130_i
+0 1
+.names N_128.BLIF N_128_i
+0 1
+.names N_129.BLIF N_129_i
+0 1
+.names N_126.BLIF N_126_i
+0 1
+.names N_127.BLIF N_127_i
+0 1
+.names N_125.BLIF N_125_i
+0 1
+.names N_185_0_1.BLIF N_185_0_2.BLIF N_185_0
+11 1
+.names N_139.BLIF N_139_i
+0 1
+.names N_97_i_1.BLIF hcnt_4_.BLIF N_97_i
+11 1
+.names N_250.BLIF N_250_i
+0 1
+.names N_186.BLIF N_186_i
+0 1
+.names N_186_i.BLIF un1_vcnt_8.BLIF N_95_0
+11 1
+.names N_252.BLIF N_252_i
+0 1
+.names N_85_i.BLIF N_252_i.BLIF N_93_0
+11 1
+.names N_87_0_1.BLIF un1_hcnt_8.BLIF N_87_0
+11 1
+.names hcnt_5_.BLIF hcnt_6_.BLIF N_85_i
+11 1
+.names N_890.BLIF N_890_i
+0 1
+.names N_890_i.BLIF vcnt_7_.BLIF N_893_0
+11 1
+.names N_884.BLIF N_884_i
+0 1
+.names N_884_i.BLIF vcnt_4_.BLIF N_887_0
+11 1
+.names vcnt_1_.BLIF vcnt_2_.BLIF N_883_0
+11 1
+.names N_465.BLIF N_465_i
+0 1
+.names N_145.BLIF N_145_i
+0 1
+.names N_145_i.BLIF vcnt_8_.BLIF N_148_0
+11 1
+.names N_138.BLIF N_138_i
+0 1
+.names N_9_i_3.BLIF N_1036_i.BLIF N_9_i
+11 1
+.names N_1036.BLIF N_1036_i
+0 1
+.names N_154.BLIF N_154_i
+0 1
+.names N_154_i.BLIF inst_enable.BLIF N_99_i
+11 1
+.names N_592_i.BLIF hsyncint8_1.BLIF hsyncint8
+11 1
+.names hcnt_7_.BLIF hcnt_8_.BLIF N_86_0
+11 1
+.names N_105_0.BLIF N_105
+0 1
+.names hcnt_i_9__n.BLIF hcnt_i_10__n.BLIF N_83_i
+11 1
+.names N_108_1.BLIF vcnt_i_7__n.BLIF N_108
+11 1
+.names N_119.BLIF N_119_i
+0 1
+.names N_111_0.BLIF N_111
+0 1
+.names N_83.BLIF N_119_i.BLIF hsyncint8_1_0
+11 1
+.names N_62_i.BLIF vcnt_i_3__n.BLIF N_137
+11 1
+.names N_340.BLIF N_340_i
+0 1
+.names vcnt_i_0__n.BLIF vcnt_i_1__n.BLIF N_207
+11 1
+.names N_340_i.BLIF hcnt_8_.BLIF N_343_i
+11 1
+.names N_333_i.BLIF N_333
+0 1
+.names N_334.BLIF N_334_i
+0 1
+.names N_462_0.BLIF N_462
+0 1
+.names N_334_i.BLIF hcnt_5_.BLIF N_337_0
+11 1
+.names N_465_1.BLIF hcnt_i_8__n.BLIF N_465
+11 1
+.names hcnt_2_.BLIF hcnt_3_.BLIF N_333_i
+11 1
+.names N_591_0.BLIF N_591
+0 1
+.names hcnt_3_.BLIF hcnt_4_.BLIF N_458_0
+11 1
+.names N_207.BLIF vcnt_i_2__n.BLIF N_656
+11 1
+.names N_459.BLIF N_459_i
+0 1
+.names N_656.BLIF vcnt_i_3__n.BLIF N_658
+11 1
+.names N_459_i.BLIF hcnt_6_.BLIF N_462_0
+11 1
+.names N_887_0.BLIF N_887
+0 1
+.names N_549.BLIF N_549_i
+0 1
+.names N_890_1.BLIF vcnt_i_6__n.BLIF N_890
+11 1
+.names N_549_i.BLIF hcnt_10_.BLIF hcnt13_i
+11 1
+.names N_37_i.BLIF N_37
+0 1
+.names hcnt_4_.BLIF hcnt_5_.BLIF N_583_0
+11 1
+.names N_82_0.BLIF N_82
+0 1
+.names N_83_i.BLIF N_83
+0 1
+.names N_156.BLIF N_156_i
+0 1
+.names N_84_0.BLIF N_84
+0 1
+.names N_157.BLIF N_157_i
+0 1
+.names N_87_0.BLIF N_87
+0 1
+.names N_174.BLIF N_174_i
+0 1
+.names vga_d_i_0_m2_1__un1_n.BLIF vga_d_i_0_m2_1__un0_n.BLIF N_90
+1- 1
+-1 1
+.names N_7_i_4.BLIF N_7_i_3.BLIF N_7_i
+11 1
+.names N_98_i.BLIF N_98
+0 1
+.names N_135.BLIF N_135_i
+0 1
+.names hcnt_i_8__n.BLIF hcnt_i_10__n.BLIF N_117
+11 1
+.names N_1035.BLIF N_1035_i
+0 1
+.names N_118_1.BLIF hcnt_i_10__n.BLIF N_118
+11 1
+.names N_133.BLIF N_133_i
+0 1
+.names N_120_1.BLIF hcnt_5_.BLIF N_120
+11 1
+.names N_132.BLIF N_132_i
+0 1
+.names N_155.BLIF N_583.BLIF N_123
+11 1
+.names N_142.BLIF N_142_i
+0 1
+.names N_125_1.BLIF N_125_2.BLIF N_125
+11 1
+.names N_67_0_1.BLIF vcnt_9_.BLIF N_67_0
+11 1
+.names N_129_1.BLIF orient_i.BLIF N_129
+11 1
+.names N_123.BLIF N_123_i
+0 1
+.names N_130_1.BLIF N_151.BLIF N_130
+11 1
+.names N_591_0_1.BLIF hcnt_9_.BLIF N_591_0
+11 1
+.names N_97.BLIF N_173.BLIF N_132
+11 1
+.names N_117.BLIF N_117_i
+0 1
+.names N_133_1.BLIF hcnt_i_8__n.BLIF N_133
+11 1
+.names N_118.BLIF N_118_i
+0 1
+.names N_1035_1.BLIF un1_vcnt_6.BLIF N_1035
+11 1
+.names N_37_i_1.BLIF N_118_i.BLIF N_37_i
+11 1
+.names N_172.BLIF N_854.BLIF N_135
+11 1
+.names N_91_i.BLIF N_103_i.BLIF N_1030_i_1
+11 1
+.names N_1036_1.BLIF vcnt_i_8__n.BLIF N_1036
+11 1
+.names N_143_i.BLIF vcnt_i_6__n.BLIF N_1030_i_2
+11 1
+.names N_140_1.BLIF vcnt_4_.BLIF N_140
+11 1
+.names N_150.BLIF N_157_i.BLIF N_125_1
+11 1
+.names N_91_i.BLIF N_702.BLIF N_142
+11 1
+.names N_174_i.BLIF hcnt_i_8__n.BLIF N_125_2
+11 1
+.names N_143_1.BLIF vcnt_3_.BLIF N_143
+11 1
+.names N_135_i.BLIF N_1035_i.BLIF N_7_i_1
+11 1
+.names N_147_1.BLIF vcnt_4_.BLIF N_147
+11 1
+.names N_90.BLIF N_99_i.BLIF N_7_i_2
+11 1
+.names N_1037_1.BLIF vcnt_4_.BLIF N_1037
+11 1
+.names N_132_i.BLIF N_133_i.BLIF N_7_i_3
+11 1
+.names N_83_i.BLIF orient_i.BLIF N_150
+11 1
+.names N_7_i_1.BLIF N_7_i_2.BLIF N_7_i_4
+11 1
+.names orient_c.BLIF vcnt_i_9__n.BLIF N_151
+11 1
+.names N_155.BLIF hcnt_i_5__n.BLIF N_549_1
+11 1
+.names hcnt_i_6__n.BLIF hcnt_i_7__n.BLIF N_155
+11 1
+.names hcnt_i_8__n.BLIF hcnt_i_9__n.BLIF N_549_2
+11 1
+.names N_156_1.BLIF hcnt_i_5__n.BLIF N_156
+11 1
+.names N_156_i.BLIF hcnt_6_.BLIF N_157_1
+11 1
+.names N_93.BLIF hcnt_i_7__n.BLIF N_174
+11 1
+.names N_172_i.BLIF inst_enable.BLIF N_9_i_1
+11 1
+.names N_549_1.BLIF N_549_2.BLIF N_549
+11 1
+.names N_90.BLIF N_138_i.BLIF N_9_i_2
+11 1
+.names N_9_i_1.BLIF N_9_i_2.BLIF N_9_i_3
+11 1
+.names N_40.BLIF hcnt_4_.BLIF N_42
+11 1
+.names N_465_i.BLIF hcnt_9_.BLIF N_87_0_1
+11 1
+.names N_85_i.BLIF N_250_i.BLIF N_97_i_1
+11 1
+.names N_50.BLIF hcnt_9_.BLIF N_52
+11 1
+.names N_139_i.BLIF vcnt_6_.BLIF N_185_0_1
+11 1
+.names N_157_1.BLIF hcnt_7_.BLIF N_157
+11 1
+.names vcnt_7_.BLIF vcnt_8_.BLIF N_185_0_2
+11 1
+.names hcnt13_i.BLIF hcnt13
+0 1
+.names N_99_i.BLIF N_125_i.BLIF N_5_i_1
+11 1
+.names N_583_0.BLIF N_583
+0 1
+.names N_126_i.BLIF N_127_i.BLIF N_5_i_2
+11 1
+.names N_48.BLIF hcnt_8_.BLIF N_50
+11 1
+.names N_128_i.BLIF N_129_i.BLIF N_5_i_3
+11 1
+.names N_46.BLIF hcnt_7_.BLIF N_48
+11 1
+.names N_130_i.BLIF N_131_i.BLIF N_5_i_4
+11 1
+.names N_44.BLIF hcnt_6_.BLIF N_46
+11 1
+.names N_5_i_1.BLIF N_5_i_2.BLIF N_5_i_5
+11 1
+.names N_42.BLIF hcnt_5_.BLIF N_44
+11 1
+.names N_5_i_3.BLIF N_5_i_4.BLIF N_5_i_6
+11 1
+.names N_38.BLIF hcnt_3_.BLIF N_40
+11 1
+.names N_103_i.BLIF vcnt_i_1__n.BLIF N_139_1
+11 1
+.names N_36.BLIF hcnt_2_.BLIF N_38
+11 1
+.names vcnt_i_2__n.BLIF vcnt_i_3__n.BLIF N_139_2
+11 1
+.names hcnt_0_.BLIF hcnt_1_.BLIF N_36
+11 1
+.names N_173.BLIF hcnt_i_4__n.BLIF N_131_1
+11 1
+.names N_458.BLIF hcnt_i_5__n.BLIF N_459
+11 1
+.names hcnt_i_5__n.BLIF hcnt_i_6__n.BLIF N_131_2
+11 1
+.names N_458_0.BLIF N_458
+0 1
+.names N_87.BLIF N_97_i.BLIF N_128_1
+11 1
+.names N_333.BLIF hcnt_i_4__n.BLIF N_334
+11 1
+.names hcnt_8_.BLIF orient_i.BLIF N_128_2
+11 1
+.names N_337_0.BLIF N_337
+0 1
+.names N_94.BLIF N_151.BLIF N_127_1
+11 1
+.names N_343_i.BLIF N_343
+0 1
+.names N_893.BLIF vcnt_i_8__n.BLIF N_127_2
+11 1
+.names N_155.BLIF N_337.BLIF N_340
+11 1
+.names N_84.BLIF N_95.BLIF N_126_1
+11 1
+.names N_591.BLIF hcnt_i_10__n.BLIF N_592
+11 1
+.names orient_c.BLIF un1_vcnt_6_i.BLIF N_126_2
+11 1
+.names hsyncint8_1_0.BLIF hsyncint8_1
+0 1
+.names N_142_i.BLIF un1_vcnt_1.BLIF N_67_0_1
+11 1
+.names N_86.BLIF hcnt_i_10__n.BLIF N_119
+11 1
+.names N_123_i.BLIF hcnt_8_.BLIF N_591_0_1
+11 1
+.names N_86_0.BLIF N_86
+0 1
+.names N_83.BLIF N_117_i.BLIF N_37_i_1
+11 1
+.names N_150.BLIF N_343.BLIF N_138
+11 1
+.names hcnt_i_3__n.BLIF hcnt_i_4__n.BLIF N_156_1
+11 1
+.names N_173.BLIF hcnt_i_7__n.BLIF N_154
+11 1
+.names N_92_i.BLIF N_658_i.BLIF N_1037_1
+11 1
+.names N_150.BLIF N_343_i.BLIF N_173
+11 1
+.names N_656_i.BLIF vcnt_3_.BLIF N_147_1
+11 1
+.names vcnt_0_.BLIF vcnt_1_.BLIF N_60
+11 1
+.names N_887.BLIF vcnt_i_5__n.BLIF N_890_1
+11 1
+.names N_60.BLIF vcnt_2_.BLIF N_62
+11 1
+.names N_207_i.BLIF vcnt_2_.BLIF N_143_1
+11 1
+.names N_62.BLIF vcnt_3_.BLIF N_64
+11 1
+.names N_105.BLIF vcnt_i_6__n.BLIF N_108_1
+11 1
+.names N_64.BLIF vcnt_4_.BLIF N_66
+11 1
+.names N_92_i.BLIF N_137_i.BLIF N_140_1
+11 1
+.names N_72.BLIF vcnt_8_.BLIF N_74
+11 1
+.names N_98.BLIF N_151.BLIF N_1036_1
+11 1
+.names N_70.BLIF vcnt_7_.BLIF N_72
+11 1
+.names N_84.BLIF orient_c.BLIF N_1035_1
+11 1
+.names N_140_i.BLIF vcnt_i_7__n.BLIF N_145
+11 1
+.names N_150.BLIF N_174.BLIF N_133_1
+11 1
+.names N_148_0.BLIF N_148
+0 1
+.names N_82.BLIF N_111.BLIF N_130_1
+11 1
+.names N_185.BLIF vcnt_i_9__n.BLIF N_186
+11 1
+.names N_83.BLIF N_87.BLIF N_129_1
+11 1
+.names N_185_0.BLIF N_185
+0 1
+.names N_462.BLIF hcnt_i_7__n.BLIF N_465_1
+11 1
+.names hcnt_i_2__n.BLIF hcnt_i_3__n.BLIF N_250
+11 1
+.names N_333_i.BLIF hcnt_4_.BLIF N_120_1
+11 1
+.names N_250.BLIF hcnt_i_4__n.BLIF N_252
+11 1
+.names N_155.BLIF hcnt_i_5__n.BLIF N_118_1
+11 1
+.names N_883_0.BLIF N_883
+0 1
+.names orient_c.BLIF vga_d_i_0_m2_1__un3_n
+0 1
+.names N_883.BLIF vcnt_i_3__n.BLIF N_884
+11 1
+.names un1_vcnt_8.BLIF orient_c.BLIF vga_d_i_0_m2_1__un1_n
+11 1
+.names N_893_0.BLIF N_893
+0 1
+.names un1_hcnt_8.BLIF vga_d_i_0_m2_1__un3_n.BLIF vga_d_i_0_m2_1__un0_n
+11 1
+.names N_97_i.BLIF N_97
+0 1
+.names N_93_0.BLIF N_93
+0 1
+.names vcnt12_i.BLIF vcnt12
+0 1
+.names N_509.BLIF hcnt_i_10__n.BLIF un1_hcnt_8
+11 1
+.names un1_vcnt_8_i.BLIF un1_vcnt_8
+0 1
+.names N_95_0.BLIF N_95
+0 1
+.names N_139_1.BLIF N_139_2.BLIF N_139
+11 1
+.names N_126_1.BLIF N_126_2.BLIF N_126
+11 1
+.names N_127_1.BLIF N_127_2.BLIF N_127
+11 1
+.names N_128_1.BLIF N_128_2.BLIF N_128
+11 1
+.names N_131_1.BLIF N_131_2.BLIF N_131
+11 1
+.names N_94_0.BLIF N_94
+0 1
+.names N_91_i.BLIF N_151.BLIF N_172
+11 1
+.names N_1030_i.BLIF N_1030
+0 1
+.names N_66.BLIF vcnt_5_.BLIF N_68
+11 1
+.names N_658.BLIF vcnt_i_4__n.BLIF N_923
+11 1
+.names N_854_i.BLIF N_854
+0 1
+.names N_98_i.BLIF vcnt_7_.BLIF N_149
+11 1
+.names N_81_i.BLIF N_81
+0 1
+.names N_77_i.BLIF N_77
+0 1
+.names N_739_i.BLIF N_739
+0 1
+.names N_75_i.BLIF N_75
+0 1
+.names N_817_i.BLIF N_817
+0 1
+.names N_103_i.BLIF N_848.BLIF N_851
+11 1
+.names N_848_0.BLIF N_848
+0 1
+.names N_702_0.BLIF N_702
+0 1
+.names N_68.BLIF vcnt_6_.BLIF N_70
+11 1
+.names un1_vcnt_2_i.BLIF un1_vcnt_2
+0 1
+.names N_60_i_0.BLIF vcnt_i_2__n.BLIF N_845
+11 1
+.names N_813.BLIF vcnt_i_5__n.BLIF N_814
+11 1
+.names N_813_0.BLIF N_813
+0 1
+.names N_735.BLIF vcnt_i_5__n.BLIF N_736
+11 1
+.names N_735_0.BLIF N_735
+0 1
+.names N_101_0.BLIF N_101
+0 1
+.names N_147_i.BLIF vcnt_i_5__n.BLIF N_699
+11 1
+.names N_509_0.BLIF N_509
+0 1
+.names N_505.BLIF hcnt_i_8__n.BLIF N_506
+11 1
+.names N_505_0.BLIF N_505
+0 1
+.names N_120_i.BLIF hcnt_i_6__n.BLIF N_502
+11 1
+.names N_101.BLIF vcnt_i_4__n.BLIF N_102
+11 1
+.names vcnt_3_.BLIF vcnt_i_3__n
+0 1
+.names vcnt_2_.BLIF vcnt_i_2__n
+0 1
+.names vcnt_4_.BLIF vcnt_i_4__n
+0 1
+.names vcnt_5_.BLIF vcnt_i_5__n
+0 1
+.names vcnt_8_.BLIF vcnt_i_8__n
+0 1
+.names vcnt_9_.BLIF vcnt_i_9__n
+0 1
+.names hcnt_6_.BLIF hcnt_i_6__n
+0 1
+.names N_120.BLIF N_120_i
+0 1
+.names hcnt_7_.BLIF hcnt_i_7__n
+0 1
+.names hcnt_8_.BLIF hcnt_i_8__n
+0 1
+.names hcnt_9_.BLIF hcnt_i_9__n
+0 1
+.names hcnt_10_.BLIF hcnt_i_10__n
+0 1
+.names N_147.BLIF N_147_i
+0 1
+.names vcnt_6_.BLIF vcnt_i_6__n
+0 1
+.names N_60.BLIF N_60_i_0
+0 1
+.names un1_vcnt_6.BLIF un1_vcnt_6_i
+0 1
+.names orient_c.BLIF orient_i
+0 1
+.names hcnt_4_.BLIF hcnt_i_4__n
+0 1
+.names hcnt_5_.BLIF hcnt_i_5__n
+0 1
+.names vcnt_1_.BLIF vcnt_i_1__n
+0 1
+.names vcnt_7_.BLIF vcnt_i_7__n
+0 1
+.names hcnt_2_.BLIF hcnt_i_2__n
+0 1
+.names hcnt_3_.BLIF hcnt_i_3__n
+0 1
+.names vcnt_0_.BLIF vcnt_i_0__n
+0 1
+.names N_140.BLIF N_140_i
+0 1
+.names N_62.BLIF N_62_i
+0 1
+.names N_592.BLIF N_592_i
+0 1
+.names hcnt_0_.BLIF hcnt_i_0__n
+0 1
+.names N_658.BLIF N_658_i
+0 1
+.names N_656.BLIF N_656_i
+0 1
+.names N_207.BLIF N_207_i
+0 1
+.names N_137.BLIF N_137_i
+0 1
+.names reset_c.BLIF reset_i
+0 1
+.names vcnt_2_.BLIF vcnt_3_.BLIF N_101_0
+11 1
+.names N_102.BLIF N_102_i
+0 1
+.names N_102_i.BLIF vcnt_5_.BLIF N_105_0
+11 1
+.names N_108.BLIF N_108_i
+0 1
+.names N_108_i.BLIF vcnt_8_.BLIF N_111_0
+11 1
+.names N_1030.BLIF vcnt_9_.BLIF un1_vcnt_8_i
+11 1
+.names N_502.BLIF N_502_i
+0 1
+.names N_502_i.BLIF hcnt_7_.BLIF N_505_0
+11 1
+.names N_506.BLIF N_506_i
+0 1
+.names N_506_i.BLIF hcnt_9_.BLIF N_509_0
+11 1
+.names N_81.BLIF vcnt_9_.BLIF vcnt12_i
+11 1
+.names N_699.BLIF N_699_i
+0 1
+.names N_699_i.BLIF vcnt_6_.BLIF N_702_0
+11 1
+.names N_101_0.BLIF vcnt_4_.BLIF N_735_0
+11 1
+.names N_736.BLIF N_736_i
+0 1
+.names N_736_i.BLIF vcnt_6_.BLIF N_739_i
+11 1
+.names N_77.BLIF vcnt_9_.BLIF un1_vcnt_1_i
+11 1
+.names vcnt_3_.BLIF vcnt_4_.BLIF N_813_0
+11 1
+.names N_814.BLIF N_814_i
+0 1
+.names N_814_i.BLIF vcnt_6_.BLIF N_817_i
+11 1
+.names N_75.BLIF vcnt_9_.BLIF un1_vcnt_2_i
+11 1
+.names N_845.BLIF N_845_i
+0 1
+.names N_845_i.BLIF vcnt_3_.BLIF N_848_0
+11 1
+.names N_851.BLIF N_851_i
+0 1
+.names N_851_i.BLIF vcnt_6_.BLIF N_854_i
+11 1
+.names N_91_i.BLIF N_817.BLIF N_75_i
+11 1
+.names N_91_i.BLIF N_739.BLIF N_77_i
+11 1
+.names N_1037.BLIF N_1037_i
+0 1
+.names N_91_i.BLIF N_1037_i.BLIF N_81_i
+11 1
+.names N_149.BLIF N_149_i
+0 1
+.names N_149_i.BLIF vcnt_i_8__n.BLIF N_82_0
+11 1
+.names N_82_0.BLIF vcnt_i_9__n.BLIF N_84_0
+11 1
+.names vcnt_i_7__n.BLIF vcnt_i_8__n.BLIF N_91_i
+11 1
+.names vcnt_5_.BLIF vcnt_6_.BLIF N_92_i
+11 1
+.names N_854.BLIF vcnt_i_7__n.BLIF N_94_0
+11 1
+.names N_9_i.BLIF vga_d_2_
+1 1
+0 0
+.names inst_hsyncintreg.BLIF vga_hs
+1 1
+0 0
+.names vga_vsDFFSHreg.BLIF vga_vs
+1 1
+0 0
+.names N_7_i.BLIF vga_d_1_
+1 1
+0 0
+.names N_5_i.BLIF vga_d_0_
+1 1
+0 0
+.names G_49.BLIF hcnt_6_.D
+1 1
+0 0
+.names clk_50m_c.BLIF hcnt_6_.C
+1 1
+0 0
+.names reset_i.BLIF hcnt_6_.AR
+1 1
+0 0
+.names G_51.BLIF hcnt_7_.D
+1 1
+0 0
+.names clk_50m_c.BLIF hcnt_7_.C
+1 1
+0 0
+.names reset_i.BLIF hcnt_7_.AR
+1 1
+0 0
+.names G_53.BLIF hcnt_8_.D
+1 1
+0 0
+.names clk_50m_c.BLIF hcnt_8_.C
+1 1
+0 0
+.names reset_i.BLIF hcnt_8_.AR
+1 1
+0 0
+.names G_55.BLIF hcnt_9_.D
+1 1
+0 0
+.names clk_50m_c.BLIF hcnt_9_.C
+1 1
+0 0
+.names reset_i.BLIF hcnt_9_.AR
+1 1
+0 0
+.names clk_50m_c.BLIF hcnt_10_.C
+1 1
+0 0
+.names reset_i.BLIF hcnt_10_.AR
+1 1
+0 0
+.names vcnt_i_0__n.BLIF vcnt_0_.D
+1 1
+0 0
+.names inst_hsyncintreg.BLIF vcnt_0_.C
+1 1
+0 0
+.names reset_i.BLIF vcnt_0_.AR
+1 1
+0 0
+.names inst_hsyncintreg.BLIF vcnt_1_.C
+1 1
+0 0
+.names reset_i.BLIF vcnt_1_.AR
+1 1
+0 0
+.names G_74.BLIF vcnt_2_.D
+1 1
+0 0
+.names inst_hsyncintreg.BLIF vcnt_2_.C
+1 1
+0 0
+.names reset_i.BLIF vcnt_2_.AR
+1 1
+0 0
+.names G_76.BLIF vcnt_3_.D
+1 1
+0 0
+.names inst_hsyncintreg.BLIF vcnt_3_.C
+1 1
+0 0
+.names reset_i.BLIF vcnt_3_.AR
+1 1
+0 0
+.names inst_hsyncintreg.BLIF vcnt_4_.C
+1 1
+0 0
+.names reset_i.BLIF vcnt_4_.AR
+1 1
+0 0
+.names inst_hsyncintreg.BLIF vcnt_5_.C
+1 1
+0 0
+.names reset_i.BLIF vcnt_5_.AR
+1 1
+0 0
+.names inst_hsyncintreg.BLIF vcnt_6_.C
+1 1
+0 0
+.names reset_i.BLIF vcnt_6_.AR
+1 1
+0 0
+.names G_84.BLIF vcnt_7_.D
+1 1
+0 0
+.names inst_hsyncintreg.BLIF vcnt_7_.C
+1 1
+0 0
+.names reset_i.BLIF vcnt_7_.AR
+1 1
+0 0
+.names G_86.BLIF vcnt_8_.D
+1 1
+0 0
+.names inst_hsyncintreg.BLIF vcnt_8_.C
+1 1
+0 0
+.names reset_i.BLIF vcnt_8_.AR
+1 1
+0 0
+.names inst_hsyncintreg.BLIF vcnt_9_.C
+1 1
+0 0
+.names reset_i.BLIF vcnt_9_.AR
+1 1
+0 0
+.names clk_50m_c.BLIF hcnt_0_.C
+1 1
+0 0
+.names reset_i.BLIF hcnt_0_.AR
+1 1
+0 0
+.names G_39.BLIF hcnt_1_.D
+1 1
+0 0
+.names clk_50m_c.BLIF hcnt_1_.C
+1 1
+0 0
+.names reset_i.BLIF hcnt_1_.AR
+1 1
+0 0
+.names G_41.BLIF hcnt_2_.D
+1 1
+0 0
+.names clk_50m_c.BLIF hcnt_2_.C
+1 1
+0 0
+.names reset_i.BLIF hcnt_2_.AR
+1 1
+0 0
+.names G_43.BLIF hcnt_3_.D
+1 1
+0 0
+.names clk_50m_c.BLIF hcnt_3_.C
+1 1
+0 0
+.names reset_i.BLIF hcnt_3_.AR
+1 1
+0 0
+.names G_45.BLIF hcnt_4_.D
+1 1
+0 0
+.names clk_50m_c.BLIF hcnt_4_.C
+1 1
+0 0
+.names reset_i.BLIF hcnt_4_.AR
+1 1
+0 0
+.names clk_50m_c.BLIF hcnt_5_.C
+1 1
+0 0
+.names reset_i.BLIF hcnt_5_.AR
+1 1
+0 0
+.names clk_50m_c.BLIF inst_hsyncintreg.C
+1 1
+0 0
+.names reset_i.BLIF inst_hsyncintreg.AP
+1 1
+0 0
+.names clk_50m_c.BLIF inst_enable.C
+1 1
+0 0
+.names reset_i.BLIF inst_enable.AR
+1 1
+0 0
+.names inst_hsyncintreg.BLIF vga_vsDFFSHreg.C
+1 1
+0 0
+.names reset_i.BLIF vga_vsDFFSHreg.AP
+1 1
+0 0
+.names clk_50m.BLIF clk_50m_c
+1 1
+0 0
+.names reset.BLIF reset_c
+1 1
+0 0
+.names orient.BLIF orient_c
+1 1
+0 0
+.names hcnt_0_.BLIF hcnt_1_.BLIF G_39
+01 1
+10 1
+11 0
+00 0
+.names hcnt_2_.BLIF N_36.BLIF G_41
+01 1
+10 1
+11 0
+00 0
+.names hcnt_3_.BLIF N_38.BLIF G_43
+01 1
+10 1
+11 0
+00 0
+.names hcnt_4_.BLIF N_40.BLIF G_45
+01 1
+10 1
+11 0
+00 0
+.names hcnt_6_.BLIF N_44.BLIF G_49
+01 1
+10 1
+11 0
+00 0
+.names hcnt_7_.BLIF N_46.BLIF G_51
+01 1
+10 1
+11 0
+00 0
+.names hcnt_8_.BLIF N_48.BLIF G_53
+01 1
+10 1
+11 0
+00 0
+.names hcnt_9_.BLIF N_50.BLIF G_55
+01 1
+10 1
+11 0
+00 0
+.names vcnt_2_.BLIF N_60.BLIF G_74
+01 1
+10 1
+11 0
+00 0
+.names vcnt_3_.BLIF N_62.BLIF G_76
+01 1
+10 1
+11 0
+00 0
+.names vcnt_7_.BLIF N_70.BLIF G_84
+01 1
+10 1
+11 0
+00 0
+.names vcnt_8_.BLIF N_72.BLIF G_86
+01 1
+10 1
+11 0
+00 0
+.names hcnt_5_.BLIF N_42.BLIF hcnt_3_i_x2_5_
+01 1
+10 1
+11 0
+00 0
+.names hcnt_10_.BLIF N_52.BLIF hcnt_3_i_x2_10_
+01 1
+10 1
+11 0
+00 0
+.names vcnt_9_.BLIF N_74.BLIF vcnt_3_i_x2_9_
+01 1
+10 1
+11 0
+00 0
+.names vcnt_0_.BLIF vcnt_1_.BLIF vcnt_3_i_x2_1_
+01 1
+10 1
+11 0
+00 0
+.names vcnt_4_.BLIF N_64.BLIF vcnt_3_i_x2_4_
+01 1
+10 1
+11 0
+00 0
+.names vcnt_6_.BLIF N_68.BLIF vcnt_3_i_x2_6_
+01 1
+10 1
+11 0
+00 0
+.names vcnt_5_.BLIF N_66.BLIF vcnt_3_i_x2_5_
+01 1
+10 1
+11 0
+00 0
+.end

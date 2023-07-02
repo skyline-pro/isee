@@ -1,0 +1,3 @@
+@W: CS263 :"E:\grade-3_2\isp_project\lab9\dynamicShow.v":8:79:8:79|Port-width mismatch for port en. Formal has width 1, Actual 32
+@W: CL156 :"E:\grade-3_2\isp_project\lab9\dynamicShow.v":8:66:8:70|*Input reset to expression [instance] has undriven bits that are tied to 0 -- simulation mismatch possible.
+

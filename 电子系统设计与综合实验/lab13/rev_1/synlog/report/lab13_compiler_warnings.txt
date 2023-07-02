@@ -1,0 +1,16 @@
+@W: CL169 :"E:\Grade-3_2\ISP_Project\lab13\lcd1602.v":52:4:52:9|Pruning register lcdRs 
+@W: CL169 :"E:\Grade-3_2\ISP_Project\lab13\lcd1602.v":52:4:52:9|Pruning register lcdRw 
+@W: CL169 :"E:\Grade-3_2\ISP_Project\lab13\lcd1602.v":52:4:52:9|Pruning register lcdD[7:0] 
+@W: CL169 :"E:\Grade-3_2\ISP_Project\lab13\lcd1602.v":52:4:52:9|Pruning register state[7:0] 
+@W: CL169 :"E:\Grade-3_2\ISP_Project\lab13\lcd1602.v":52:4:52:9|Pruning register dispCount[5:0] 
+@W: CL169 :"E:\Grade-3_2\ISP_Project\lab13\lcd1602.v":52:4:52:9|Pruning register dataInBuf[255:0] 
+@W: CL169 :"E:\Grade-3_2\ISP_Project\lab13\lcd1602.v":31:4:31:9|Pruning register cnt[19:0] 
+@W: CL169 :"E:\Grade-3_2\ISP_Project\lab13\lcd1602.v":31:4:31:9|Pruning register clkhz 
+@W: CL168 :"E:\Grade-3_2\ISP_Project\lab13\lab13.v":7:12:7:14|Pruning instance lcd -- not in use ...
+@W: CL168 :"E:\Grade-3_2\ISP_Project\lab13\lab13.v":6:11:6:16|Pruning instance button -- not in use ...
+@W: CL159 :"E:\Grade-3_2\ISP_Project\lab13\lab13.v":2:10:2:13|Input clkh is unused
+@W: CL159 :"E:\Grade-3_2\ISP_Project\lab13\lab13.v":2:15:2:18|Input clkl is unused
+@W: CL159 :"E:\Grade-3_2\ISP_Project\lab13\lab13.v":2:20:2:24|Input reset is unused
+@W: CL159 :"E:\Grade-3_2\ISP_Project\lab13\lcd1602.v":2:10:2:16|Input clk_50m is unused
+@W: CL159 :"E:\Grade-3_2\ISP_Project\lab13\lcd1602.v":3:10:3:14|Input reset is unused
+

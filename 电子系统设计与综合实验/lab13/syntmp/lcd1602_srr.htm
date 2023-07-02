@@ -1,0 +1,183 @@
+<html><body><samp><pre>
+<!@TC:1652403268>
+#Build: Synplify Pro I-2014.03LC , Build 063R, May 27 2014
+#install: D:\ispLEVER_Classic2_1\synpbase
+#OS: Windows 7 6.2
+#Hostname: SKYLINE
+
+#Implementation: lab13
+
+<a name=compilerReport1>$ Start of Compile</a>
+#Fri May 13 08:54:28 2022
+
+Synopsys Verilog Compiler, version comp201403rcp1, Build 060R, built May 27 2014
+@N: : <!@TM:1652403268> | Running in 64-bit mode 
+Copyright (C) 1994-2014 Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\umr_capim.v"
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\scemi_objects.v"
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\scemi_pipes.svh"
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\hypermods.v"
+@I::"D:\ispLEVER_Classic2_1\ispcpld\..\cae_library\synthesis\verilog\mach.v"
+@I::"E:\grade-3_2\isp_project\lab13\lab13.h"
+@I::"E:\grade-3_2\isp_project\lab13\lcd1602.v"
+<font color=#A52A2A>@W:<a href="@W:CG921:@XP_HELP">CG921</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:50:14:50:18:@W:CG921:@XP_MSG">lcd1602.v(50)</a><!@TM:1652403268> | lcdD is already declared in this scope.</font>
+Verilog syntax check successful!
+Selecting top level module lcd1602
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:1:7:1:14:@N:CG364:@XP_MSG">lcd1602.v(1)</a><!@TM:1652403268> | Synthesizing module lcd1602
+
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@A:CL282:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Feedback mux created for signal dataInBuf[255:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL189:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Register bit dataInBuf[0] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL189:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Register bit dataInBuf[1] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL189:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Register bit dataInBuf[2] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL189:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Register bit dataInBuf[3] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL189:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Register bit dataInBuf[4] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL189:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Register bit dataInBuf[6] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL189:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Register bit dataInBuf[7] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL190:@XP_HELP">CL190</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL190:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Optimizing register bit lcdRw to a constant 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL169:@XP_HELP">CL169</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL169:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Pruning register lcdRw </font>
+
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL279:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Pruning register bits 7 to 6 of dataInBuf[255:0] </font>
+
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL279:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Pruning register bits 4 to 0 of dataInBuf[255:0] </font>
+
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL189:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Register bit dataInBuf[8] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL189:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Register bit dataInBuf[9] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL189:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Register bit dataInBuf[10] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL189:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Register bit dataInBuf[11] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL189:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Register bit dataInBuf[12] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL189:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Register bit dataInBuf[14] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL189:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Register bit dataInBuf[15] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL279:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Pruning register bits 15 to 14 of dataInBuf[255:8] </font>
+
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL279:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Pruning register bits 12 to 8 of dataInBuf[255:8] </font>
+
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL189:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Register bit dataInBuf[16] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL189:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Register bit dataInBuf[17] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL189:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Register bit dataInBuf[18] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL189:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Register bit dataInBuf[19] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL189:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Register bit dataInBuf[20] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL189:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Register bit dataInBuf[22] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL189:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Register bit dataInBuf[23] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL279:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Pruning register bits 23 to 22 of dataInBuf[255:16] </font>
+
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL279:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Pruning register bits 20 to 16 of dataInBuf[255:16] </font>
+
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL189:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Register bit dataInBuf[24] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL189:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Register bit dataInBuf[25] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL189:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Register bit dataInBuf[26] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL189:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Register bit dataInBuf[27] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL189:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Register bit dataInBuf[28] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL189:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Register bit dataInBuf[30] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL189:@XP_HELP">CL189</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL189:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Register bit dataInBuf[31] is always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL279:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Pruning register bits 31 to 30 of dataInBuf[255:24] </font>
+
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL279:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Pruning register bits 28 to 24 of dataInBuf[255:24] </font>
+
+@N:<a href="@N:CL201:@XP_HELP">CL201</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@N:CL201:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Trying to extract state machine for register state
+Extracted state machine for register state
+State machine has 7 reachable states with original encodings of:
+   00000001
+   00000010
+   00000100
+   00001000
+   00010000
+   01000000
+   10000000
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL279:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Pruning register bits 39 to 38 of dataInBuf[255:32] </font>
+
+<font color=#A52A2A>@W:<a href="@W:CL279:@XP_HELP">CL279</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL279:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Pruning register bits 36 to 34 of dataInBuf[255:32] </font>
+
+<font color=#A52A2A>@W:<a href="@W:CL257:@XP_HELP">CL257</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL257:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Register bit 0 always 0, optimizing ...</font>
+<font color=#A52A2A>@W:<a href="@W:CL260:@XP_HELP">CL260</a> : <a href="E:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:CL260:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403268> | Pruning register bit 32 of dataInBuf[33:32] </font>
+
+@END
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 73MB peak: 77MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Fri May 13 08:54:28 2022
+
+###########################################################]
+Synopsys Netlist Linker, version comp201403rcp1, Build 060R, built May 27 2014
+@N: : <!@TM:1652403269> | Running in 64-bit mode 
+File E:\grade-3_2\isp_project\lab13\synwork\lcd1602_comp.srs changed - recompiling
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Fri May 13 08:54:29 2022
+
+###########################################################]
+Map & Optimize Report
+
+<a name=mapperReport2>Synopsys CPLD Technology Mapper, Version maplat, Build 923R, Built May  6 2014</a>
+Copyright (C) 1994-2013, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use or distribution of the software is strictly prohibited.
+Product Version I-2014.03LC 
+@N:<a href="@N:MF248:@XP_HELP">MF248</a> : <!@TM:1652403269> | Running in 64-bit mode. 
+Encoding state machine state[6:0] (view:work.lcd1602(verilog))
+original code -> new code
+   00000001 -> 0000000
+   00000010 -> 0000011
+   00000100 -> 0000101
+   00001000 -> 0001001
+   00010000 -> 0010001
+   01000000 -> 0100001
+   10000000 -> 1000001
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="e:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:BN132:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403269> | Removing instance dataInBuf[47],  because it is equivalent to instance dataInBuf[40]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="e:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:BN132:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403269> | Removing instance dataInBuf[44],  because it is equivalent to instance dataInBuf[40]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="e:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:BN132:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403269> | Removing instance dataInBuf[43],  because it is equivalent to instance dataInBuf[40]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="e:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:BN132:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403269> | Removing instance dataInBuf[46],  because it is equivalent to instance dataInBuf[42]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="e:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:BN132:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403269> | Removing instance dataInBuf[5],  because it is equivalent to instance dataInBuf[33]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="e:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:BN132:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403269> | Removing instance dataInBuf[42],  because it is equivalent to instance dataInBuf[13]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="e:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:BN132:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403269> | Removing instance dataInBuf[55],  because it is equivalent to instance dataInBuf[52]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="e:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:BN132:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403269> | Removing instance dataInBuf[52],  because it is equivalent to instance dataInBuf[51]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="e:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:BN132:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403269> | Removing instance dataInBuf[63],  because it is equivalent to instance dataInBuf[60]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="e:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:BN132:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403269> | Removing instance dataInBuf[60],  because it is equivalent to instance dataInBuf[59]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="e:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:BN132:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403269> | Removing instance dataInBuf[54],  because it is equivalent to instance dataInBuf[21]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="e:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:BN132:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403269> | Removing instance dataInBuf[50],  because it is equivalent to instance dataInBuf[21]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="e:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:BN132:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403269> | Removing instance dataInBuf[68],  because it is equivalent to instance dataInBuf[67]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="e:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:BN132:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403269> | Removing instance dataInBuf[71],  because it is equivalent to instance dataInBuf[67]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="e:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:BN132:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403269> | Removing instance dataInBuf[62],  because it is equivalent to instance dataInBuf[29]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="e:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:BN132:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403269> | Removing instance dataInBuf[79],  because it is equivalent to instance dataInBuf[76]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="e:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:BN132:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403269> | Removing instance dataInBuf[76],  because it is equivalent to instance dataInBuf[75]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="e:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:BN132:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403269> | Removing instance dataInBuf[84],  because it is equivalent to instance dataInBuf[83]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="e:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:BN132:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403269> | Removing instance dataInBuf[92],  because it is equivalent to instance dataInBuf[91]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="e:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:BN132:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403269> | Removing instance dataInBuf[99],  because it is equivalent to instance dataInBuf[100]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="e:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:BN132:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403269> | Removing instance dataInBuf[108],  because it is equivalent to instance dataInBuf[107]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="e:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:BN132:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403269> | Removing instance dataInBuf[116],  because it is equivalent to instance dataInBuf[115]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="e:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:BN132:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403269> | Removing instance dataInBuf[124],  because it is equivalent to instance dataInBuf[123]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="e:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:BN132:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403269> | Removing instance dataInBuf[132],  because it is equivalent to instance dataInBuf[131]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="e:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:BN132:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403269> | Removing instance dataInBuf[140],  because it is equivalent to instance dataInBuf[139]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="e:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:BN132:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403269> | Removing instance dataInBuf[148],  because it is equivalent to instance dataInBuf[147]</font>
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="e:\grade-3_2\isp_project\lab13\lcd1602.v:54:4:54:10:@W:BN132:@XP_MSG">lcd1602.v(54)</a><!@TM:1652403269> | Removing instance dataInBuf[156],  because it is equivalent to instance dataInBuf[155]</font>
+---------------------------------------
+<a name=resourceUsage3>Resource Usage Report</a>
+
+Simple gate primitives:
+DFFRH           13 uses
+DFFSH           1 use
+DFFC            195 uses
+DFFCRH          7 uses
+DFF             21 uses
+DFFCSH          1 use
+IBUF            2 uses
+OBUF            11 uses
+AND2            285 uses
+INV             161 uses
+XOR2            26 uses
+OR2             1 use
+
+
+@N:<a href="@N:FC100:@XP_HELP">FC100</a> : <!@TM:1652403269> | Timing Report not generated for this device, please use place and route tools for timing analysis. 
+I-2014.03LC 
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 40MB peak: 104MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Fri May 13 08:54:29 2022
+
+###########################################################]
+
+</pre></samp></body></html>

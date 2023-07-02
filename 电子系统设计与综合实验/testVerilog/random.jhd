@@ -1,0 +1,7 @@
+MODULE random DEFIN random.v
+	SUBMODULE counter_n
+		INSTANCE randGen2
+	SUBMODULE counter_n
+		INSTANCE clkGen
+	SUBMODULE counter_n
+		INSTANCE randGen

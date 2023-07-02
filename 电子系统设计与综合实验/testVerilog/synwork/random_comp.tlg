@@ -1,0 +1,5 @@
+Selecting top level module random
+@N: CG364 :"E:\grade-3_2\isp_project\testverilog\random.v":1:7:1:12|Synthesizing module random
+
+@E: CG478 :"E:\grade-3_2\isp_project\testverilog\random.v":7:16:7:23|Expression size is either 0 or could not be determined.
+@END

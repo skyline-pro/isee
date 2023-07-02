@@ -1,0 +1,14 @@
+\contentsline {section}{\numberline {一}有限状态机设计}{3}{}%
+\contentsline {subsection}{\numberline {1.}状态编码设计}{3}{}%
+\contentsline {subsection}{\numberline {2.}状态转换表}{4}{}%
+\contentsline {subsection}{\numberline {3.}FSM图}{4}{}%
+\contentsline {section}{\numberline {二}电路设计}{5}{}%
+\contentsline {section}{\numberline {三}Verilog实现}{5}{}%
+\contentsline {subsection}{\numberline {1.}信号含义详细阐释}{5}{}%
+\contentsline {subsection}{\numberline {2.}Verilog代码}{6}{}%
+\contentsline {subsection}{\numberline {3.}测试样例}{6}{}%
+\contentsline {subsection}{\numberline {4.}测试结果}{6}{}%
+\contentsline {section}{\numberline {四}心得体会}{6}{}%
+\contentsline {section}{\numberline {五}附录}{6}{}%
+\contentsline {subsection}{\numberline {1.}cache代码}{6}{}%
+\contentsline {subsection}{\numberline {2.}测试代码}{8}{}%

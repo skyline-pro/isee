@@ -1,0 +1,9 @@
+D:\ispLEVER_Classic2_1\synpbase\bin64\c_ver.exe  -osyn  E:\grade-3_2\isp_project\lab14\synwork\vga_comp.srs  -top  vga  -prodtype  synplify_pro  -nostructver -I e:\grade-3_2\isp_project\lab14\  -I D:\ispLEVER_Classic2_1\synpbase\lib  -v2001  -encrypt  -pro  -dmgen  E:\grade-3_2\isp_project\lab14\dm  -compiler_compatible -ui -fid2 -ram -sharing on -ll 2000 -autosm -lib work D:\ispLEVER_Classic2_1\ispcpld\..\cae_library\synthesis\verilog\mach.v -lib work E:\grade-3_2\isp_project\lab14\lab14.h -lib work E:\grade-3_2\isp_project\lab14\vga.v -loga  E:\grade-3_2\isp_project\lab14\vga.srr 
+rc:0 success:1
+E:\grade-3_2\isp_project\lab14\synwork\vga_comp.srs|o|1652409927|4029
+D:\ispLEVER_Classic2_1\ispcpld\..\cae_library\synthesis\verilog\mach.v|i|1336476608|12168
+E:\grade-3_2\isp_project\lab14\lab14.h|i|1652407421|0
+E:\grade-3_2\isp_project\lab14\vga.v|i|1652409891|3024
+E:\grade-3_2\isp_project\lab14\vga.srr|o|1652409927|1566
+D:\ispLEVER_Classic2_1\synpbase\bin\c_ver.exe|i|1401198650|2292224
+D:\ispLEVER_Classic2_1\synpbase\bin64\c_ver.exe|i|1401198850|5829632

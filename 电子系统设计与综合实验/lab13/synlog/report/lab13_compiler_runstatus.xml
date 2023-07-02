@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- *************************************************************************************
+FILE DESCRIPTION
+The file contains the job information from compiler to be displayed as part of the summary report.
+*******************************************************************************************-->
+
+<job_run_status name="compiler"> 
+  <report_link name="Detailed report">
+    <data>E:\Grade-3_2\ISP_Project\lab13\lab13.srr</data>
+    <title>Start of Compile</title>
+  </report_link> 
+  <job_status>
+    <data>Failed    </data>
+  </job_status>
+<job_info> 
+			<info name="Notes">
+  <data>1</data>
+  <report_link name="more"><data>E:\Grade-3_2\ISP_Project\lab13\synlog\report\lab13_compiler_notes.txt</data></report_link>
+  </info>
+			<info name="Warnings">
+  <data>0</data>
+  <report_link name="more"><data>E:\Grade-3_2\ISP_Project\lab13\synlog\report\lab13_compiler_warnings.txt</data></report_link>
+  </info>
+			<info name="Errors">
+  <data>1</data>
+  <report_link name="more"><data>E:\Grade-3_2\ISP_Project\lab13\synlog\report\lab13_compiler_errors.txt</data></report_link>
+  </info>
+			<info name="CPU Time">
+  <data>-</data>
+  </info>
+			<info name="Real Time">
+  <data>0h:00m:00s</data>
+  </info>
+			<info name="Peak Memory">
+  <data>-</data>
+  </info>
+			<info name="Date &amp;Time">
+  <data type="timestamp">1652402881</data>
+  </info>
+			</job_info>
+</job_run_status>

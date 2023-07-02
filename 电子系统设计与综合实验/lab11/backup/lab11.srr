@@ -1,0 +1,217 @@
+#Build: Synplify Pro I-2014.03LC , Build 063R, May 27 2014
+#install: D:\ispLEVER_Classic2_1\synpbase
+#OS: Windows 7 6.2
+#Hostname: SKYLINE
+
+#Implementation: lab11
+
+$ Start of Compile
+#Sun May 08 00:21:00 2016
+
+Synopsys Verilog Compiler, version comp201403rcp1, Build 060R, built May 27 2014
+@N|Running in 64-bit mode
+Copyright (C) 1994-2014 Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\umr_capim.v"
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\scemi_objects.v"
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\scemi_pipes.svh"
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\hypermods.v"
+@I::"D:\ispLEVER_Classic2_1\ispcpld\..\cae_library\synthesis\verilog\mach.v"
+@I::"E:\grade-3_2\isp_project\lab11\lab11.h"
+@I::"E:\grade-3_2\isp_project\lab11\decoder2to4.v"
+@I::"E:\grade-3_2\isp_project\lab11\decoderHex2Dec.v"
+@I::"E:\grade-3_2\isp_project\lab11\mux16to4.v"
+@I::"E:\grade-3_2\isp_project\lab11\counter_n.v"
+@I::"E:\grade-3_2\isp_project\lab11\dynamicShow.v"
+@I::"E:\grade-3_2\isp_project\lab11\i2c.v"
+@I::"E:\grade-3_2\isp_project\lab11\keyboard.v"
+@I::"E:\grade-3_2\isp_project\lab11\dffre.v"
+@I::"E:\grade-3_2\isp_project\lab11\button.v"
+@I::"E:\grade-3_2\isp_project\lab11\lab11.v"
+Verilog syntax check successful!
+Selecting top level module lab11
+@N: CG364 :"E:\grade-3_2\isp_project\lab11\dffre.v":14:7:14:11|Synthesizing module dffre
+
+@N: CG179 :"E:\grade-3_2\isp_project\lab11\dffre.v":25:13:25:13|Removing redundant assignment
+@N: CG364 :"E:\grade-3_2\isp_project\lab11\button.v":1:7:1:12|Synthesizing module button
+
+@W: CS263 :"E:\grade-3_2\isp_project\lab11\button.v":9:29:9:29|Port-width mismatch for port en. Formal has width 1, Actual 32
+@W: CS263 :"E:\grade-3_2\isp_project\lab11\button.v":9:37:9:37|Port-width mismatch for port r. Formal has width 1, Actual 32
+@W: CS263 :"E:\grade-3_2\isp_project\lab11\button.v":10:28:10:28|Port-width mismatch for port en. Formal has width 1, Actual 32
+@W: CS263 :"E:\grade-3_2\isp_project\lab11\button.v":10:36:10:36|Port-width mismatch for port r. Formal has width 1, Actual 32
+@W: CS263 :"E:\grade-3_2\isp_project\lab11\button.v":11:28:11:28|Port-width mismatch for port en. Formal has width 1, Actual 32
+@W: CS263 :"E:\grade-3_2\isp_project\lab11\button.v":11:36:11:36|Port-width mismatch for port r. Formal has width 1, Actual 32
+@N: CG364 :"E:\grade-3_2\isp_project\lab11\keyboard.v":1:7:1:14|Synthesizing module keyboard
+
+@W: CL169 :"E:\grade-3_2\isp_project\lab11\keyboard.v":75:4:75:9|Pruning register flag_Over 
+
+@W: CL169 :"E:\grade-3_2\isp_project\lab11\keyboard.v":75:4:75:9|Pruning register int_Data[9:0] 
+
+@W: CL169 :"E:\grade-3_2\isp_project\lab11\keyboard.v":75:4:75:9|Pruning register temp[9:0] 
+
+@A: CL282 :"E:\grade-3_2\isp_project\lab11\keyboard.v":58:4:58:9|Feedback mux created for signal time1Oms -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\grade-3_2\isp_project\lab11\keyboard.v":16:4:16:9|Feedback mux created for signal key_out[3:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@N: CG364 :"E:\grade-3_2\isp_project\lab11\i2c.v":1:7:1:9|Synthesizing module i2c
+
+@W: CL271 :"E:\grade-3_2\isp_project\lab11\i2c.v":66:4:66:9|Pruning bits 7 to 4 of RdData[7:0] -- not in use ...
+
+@A: CL282 :"E:\grade-3_2\isp_project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal sda_tem -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\grade-3_2\isp_project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal sda_buf -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\grade-3_2\isp_project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal scl_buf -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\grade-3_2\isp_project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal bit_state[5:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\grade-3_2\isp_project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal WrData[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\grade-3_2\isp_project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal Flag_WR -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\grade-3_2\isp_project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal RdData[0:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\grade-3_2\isp_project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal RdData[1:1] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\grade-3_2\isp_project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal RdData[2:2] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\grade-3_2\isp_project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal RdData[3:3] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\grade-3_2\isp_project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal DataLED[0:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\grade-3_2\isp_project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal DataLED[1:1] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\grade-3_2\isp_project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal DataLED[2:2] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\grade-3_2\isp_project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal DataLED[3:3] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@W: CL189 :"E:\grade-3_2\isp_project\lab11\i2c.v":66:4:66:9|Register bit WrData[4] is always 0, optimizing ...
+@W: CL189 :"E:\grade-3_2\isp_project\lab11\i2c.v":66:4:66:9|Register bit WrData[5] is always 0, optimizing ...
+@W: CL189 :"E:\grade-3_2\isp_project\lab11\i2c.v":66:4:66:9|Register bit WrData[6] is always 0, optimizing ...
+@W: CL189 :"E:\grade-3_2\isp_project\lab11\i2c.v":66:4:66:9|Register bit WrData[7] is always 0, optimizing ...
+@W: CL279 :"E:\grade-3_2\isp_project\lab11\i2c.v":66:4:66:9|Pruning register bits 7 to 4 of WrData[7:0] 
+
+@N: CG364 :"E:\grade-3_2\isp_project\lab11\counter_n.v":15:7:15:15|Synthesizing module counter_n
+
+	n=32'b00000000000000000000000000000100
+	counter_bits=32'b00000000000000000000000000000010
+   Generated name = counter_n_4s_2s
+
+@N: CG364 :"E:\grade-3_2\isp_project\lab11\mux16to4.v":1:7:1:14|Synthesizing module mux16to4
+
+@N: CG364 :"E:\grade-3_2\isp_project\lab11\decoderHex2Dec.v":1:7:1:20|Synthesizing module decoderHex2Dec
+
+@N: CG364 :"E:\grade-3_2\isp_project\lab11\decoder2to4.v":1:7:1:17|Synthesizing module decoder2to4
+
+@N: CG364 :"E:\grade-3_2\isp_project\lab11\dynamicShow.v":1:7:1:17|Synthesizing module dynamicshow
+
+@W: CS263 :"E:\grade-3_2\isp_project\lab11\dynamicShow.v":8:79:8:79|Port-width mismatch for port en. Formal has width 1, Actual 32
+@N: CG364 :"E:\grade-3_2\isp_project\lab11\lab11.v":1:7:1:11|Synthesizing module lab11
+
+@W: CG781 :"E:\grade-3_2\isp_project\lab11\lab11.v":24:8:24:10|Undriven input RST on instance i2c, tying to 0
+@W: CL156 :"E:\grade-3_2\isp_project\lab11\dynamicShow.v":8:66:8:70|*Input reset to expression [instance] has undriven bits that are tied to 0 -- simulation mismatch possible.
+@N: CL201 :"E:\grade-3_2\isp_project\lab11\i2c.v":66:4:66:9|Trying to extract state machine for register eeprom_state
+Extracted state machine for register eeprom_state
+State machine has 3 reachable states with original encodings of:
+   00
+   01
+   10
+@N: CL201 :"E:\grade-3_2\isp_project\lab11\i2c.v":66:4:66:9|Trying to extract state machine for register bit_state
+Extracted state machine for register bit_state
+State machine has 4 reachable states with original encodings of:
+   000000
+   000001
+   000010
+   000011
+@W: CL189 :"E:\grade-3_2\isp_project\lab11\i2c.v":66:4:66:9|Register bit RdData[0] is always 0, optimizing ...
+@W: CL189 :"E:\grade-3_2\isp_project\lab11\i2c.v":66:4:66:9|Register bit RdData[1] is always 0, optimizing ...
+@W: CL189 :"E:\grade-3_2\isp_project\lab11\i2c.v":66:4:66:9|Register bit RdData[2] is always 0, optimizing ...
+@W: CL189 :"E:\grade-3_2\isp_project\lab11\i2c.v":66:4:66:9|Register bit RdData[3] is always 0, optimizing ...
+@W: CL169 :"E:\grade-3_2\isp_project\lab11\i2c.v":66:4:66:9|Pruning register WrData[3:0] 
+
+@W: CL159 :"E:\grade-3_2\isp_project\lab11\i2c.v":4:16:4:22|Input DATA_IN is unused
+@N: CL201 :"E:\grade-3_2\isp_project\lab11\keyboard.v":75:4:75:9|Trying to extract state machine for register flag_Data
+Extracted state machine for register flag_Data
+State machine has 4 reachable states with original encodings of:
+   00
+   01
+   10
+   11
+@N: CL201 :"E:\grade-3_2\isp_project\lab11\keyboard.v":16:4:16:9|Trying to extract state machine for register scanvalue
+Extracted state machine for register scanvalue
+State machine has 4 reachable states with original encodings of:
+   0001
+   0010
+   0100
+   1000
+@END
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 71MB peak: 72MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sun May 08 00:21:01 2016
+
+###########################################################]
+Synopsys Netlist Linker, version comp201403rcp1, Build 060R, built May 27 2014
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 68MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sun May 08 00:21:02 2016
+
+###########################################################]
+Map & Optimize Report
+
+Synopsys CPLD Technology Mapper, Version maplat, Build 923R, Built May  6 2014
+Copyright (C) 1994-2013, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use or distribution of the software is strictly prohibited.
+Product Version I-2014.03LC 
+@N: MF248 |Running in 64-bit mode.
+@W: MO171 :"e:\grade-3_2\isp_project\lab11\i2c.v":20:4:20:9|Sequential instance i2c.phase0 reduced to a combinational gate by constant propagation 
+@W: MO171 :"e:\grade-3_2\isp_project\lab11\i2c.v":20:4:20:9|Sequential instance i2c.phase1 reduced to a combinational gate by constant propagation 
+@W: MO171 :"e:\grade-3_2\isp_project\lab11\i2c.v":20:4:20:9|Sequential instance i2c.phase2 reduced to a combinational gate by constant propagation 
+@W: MO171 :"e:\grade-3_2\isp_project\lab11\i2c.v":20:4:20:9|Sequential instance i2c.phase3 reduced to a combinational gate by constant propagation 
+@W: MO171 :"e:\grade-3_2\isp_project\lab11\i2c.v":66:4:66:9|Sequential instance i2c.start_delay reduced to a combinational gate by constant propagation 
+@W:"e:\grade-3_2\isp_project\lab11\i2c.v":75:16:75:19|Optimizing internal tristate to a wire based on don't care (X) analysis
+Encoding state machine flag_Data[3:0] (view:work.keyboard(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+   11 -> 11
+@N: MO225 :"e:\grade-3_2\isp_project\lab11\keyboard.v":75:4:75:9|No possible illegal states for state machine flag_Data[3:0],safe FSM implementation is disabled
+Encoding state machine scanvalue[3:0] (view:work.keyboard(verilog))
+original code -> new code
+   0001 -> 00
+   0010 -> 01
+   0100 -> 10
+   1000 -> 11
+@N: MO225 :"e:\grade-3_2\isp_project\lab11\keyboard.v":16:4:16:9|No possible illegal states for state machine scanvalue[3:0],safe FSM implementation is disabled
+@N:"e:\grade-3_2\isp_project\lab11\i2c.v":20:4:20:9|Found counter in view:work.i2c(verilog) inst clk_div[3:0]
+Encoding state machine bit_state[3:0] (view:work.i2c(verilog))
+original code -> new code
+   000000 -> 00
+   000001 -> 01
+   000010 -> 10
+   000011 -> 11
+@N: MO225 :"e:\grade-3_2\isp_project\lab11\i2c.v":66:4:66:9|No possible illegal states for state machine bit_state[3:0],safe FSM implementation is disabled
+Encoding state machine eeprom_state[2:0] (view:work.i2c(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+@W: BN132 :"e:\grade-3_2\isp_project\lab11\i2c.v":52:4:52:9|Removing instance i2c.key_delay[1],  because it is equivalent to instance i2c.key_delay[0]
+@W: BN132 :"e:\grade-3_2\isp_project\lab11\i2c.v":52:4:52:9|Removing instance i2c.key_delay[9],  because it is equivalent to instance i2c.key_delay[0]
+@N: MO106 :"e:\grade-3_2\isp_project\lab11\decoderhex2dec.v":6:8:6:11|Found ROM, 'decoder1.out_1[6:0]', 11 words by 7 bits 
+---------------------------------------
+Resource Usage Report
+
+Simple gate primitives:
+DFFRH           40 uses
+DFFCRH          16 uses
+DFFC            4 uses
+DFFSH           5 uses
+DFF             28 uses
+IBUF            9 uses
+OBUF            21 uses
+BUFTH           1 use
+AND2            232 uses
+INV             165 uses
+XOR2            29 uses
+OR2             9 uses
+
+
+@N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.
+I-2014.03LC 
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 40MB peak: 106MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sun May 08 00:21:02 2016
+
+###########################################################]

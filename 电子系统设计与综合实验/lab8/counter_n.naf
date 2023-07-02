@@ -1,0 +1,5 @@
+clk  i
+r  i
+en  i
+q[1]  o
+co  o

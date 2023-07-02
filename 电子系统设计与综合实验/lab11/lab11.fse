@@ -1,0 +1,116 @@
+
+fsm_encoding {12754753} sequential
+
+fsm_state_encoding {12754753} 00 {00}
+
+fsm_state_encoding {12754753} 01 {01}
+
+fsm_state_encoding {12754753} 10 {10}
+
+fsm_state_encoding {12754753} 11 {11}
+
+fsm_registers {12754753} {flag_Data[1]}  {flag_Data[0]} 
+
+fsm_encoding {12164164} sequential
+
+fsm_state_encoding {12164164} 0001 {00}
+
+fsm_state_encoding {12164164} 0010 {01}
+
+fsm_state_encoding {12164164} 0100 {10}
+
+fsm_state_encoding {12164164} 1000 {11}
+
+fsm_registers {12164164} {scanvalue[1]}  {scanvalue[0]} 
+
+fsm_encoding {11674672} gray
+
+fsm_state_encoding {11674672} 000000 {000000}
+
+fsm_state_encoding {11674672} 000001 {000001}
+
+fsm_state_encoding {11674672} 000010 {000011}
+
+fsm_state_encoding {11674672} 000011 {000010}
+
+fsm_state_encoding {11674672} 000100 {000110}
+
+fsm_state_encoding {11674672} 000101 {000111}
+
+fsm_state_encoding {11674672} 000110 {000101}
+
+fsm_state_encoding {11674672} 000111 {000100}
+
+fsm_state_encoding {11674672} 001000 {001100}
+
+fsm_state_encoding {11674672} 001001 {001101}
+
+fsm_state_encoding {11674672} 001010 {001111}
+
+fsm_state_encoding {11674672} 001011 {001110}
+
+fsm_state_encoding {11674672} 001100 {001010}
+
+fsm_state_encoding {11674672} 001101 {001011}
+
+fsm_state_encoding {11674672} 001110 {001001}
+
+fsm_state_encoding {11674672} 001111 {001000}
+
+fsm_state_encoding {11674672} 010000 {011000}
+
+fsm_state_encoding {11674672} 010001 {011001}
+
+fsm_state_encoding {11674672} 010010 {011011}
+
+fsm_state_encoding {11674672} 010011 {011010}
+
+fsm_state_encoding {11674672} 010100 {011110}
+
+fsm_state_encoding {11674672} 010101 {011111}
+
+fsm_state_encoding {11674672} 010110 {011101}
+
+fsm_state_encoding {11674672} 010111 {011100}
+
+fsm_state_encoding {11674672} 011000 {010100}
+
+fsm_state_encoding {11674672} 011001 {010101}
+
+fsm_state_encoding {11674672} 011010 {010111}
+
+fsm_state_encoding {11674672} 011011 {010110}
+
+fsm_state_encoding {11674672} 011100 {010010}
+
+fsm_state_encoding {11674672} 011101 {010011}
+
+fsm_state_encoding {11674672} 011110 {010001}
+
+fsm_state_encoding {11674672} 011111 {010000}
+
+fsm_state_encoding {11674672} 100000 {110000}
+
+fsm_state_encoding {11674672} 100001 {110001}
+
+fsm_state_encoding {11674672} 100010 {110011}
+
+fsm_state_encoding {11674672} 100011 {110010}
+
+fsm_state_encoding {11674672} 100100 {110110}
+
+fsm_state_encoding {11674672} 100101 {110111}
+
+fsm_state_encoding {11674672} 100110 {110101}
+
+fsm_registers {11674672} {bit_state[5]}  {bit_state[4]}  {bit_state[3]}  {bit_state[2]}  {bit_state[1]}  {bit_state[0]} 
+
+fsm_encoding {11674671} sequential
+
+fsm_state_encoding {11674671} 00 {00}
+
+fsm_state_encoding {11674671} 01 {01}
+
+fsm_state_encoding {11674671} 10 {10}
+
+fsm_registers {11674671} {eeprom_state[1]}  {eeprom_state[0]} 

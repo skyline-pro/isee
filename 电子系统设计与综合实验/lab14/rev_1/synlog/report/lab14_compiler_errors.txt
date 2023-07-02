@@ -1,0 +1,2 @@
+@E: CS153 :"E:\Grade-3_2\ISP_Project\lab14\vga.v":81:33:81:33|Can't mix blocking and non-blocking assignments to a variable
+

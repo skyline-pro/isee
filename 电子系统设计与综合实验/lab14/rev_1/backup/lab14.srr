@@ -1,0 +1,30 @@
+#Build: Synplify Pro I-2014.03LC , Build 063R, May 27 2014
+#install: D:\ispLEVER_Classic2_1\synpbase
+#OS: Windows 7 6.2
+#Hostname: SKYLINE
+
+#Implementation: rev_1
+
+$ Start of Compile
+#Fri May 13 10:05:14 2022
+
+Synopsys Verilog Compiler, version comp201403rcp1, Build 060R, built May 27 2014
+@N|Running in 64-bit mode
+Copyright (C) 1994-2014 Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+
+@N:: Running Verilog Compiler in System Verilog mode
+@N:: Running Verilog Compiler in Multiple File Compilation Unit mode
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\umr_capim.v"
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\scemi_objects.v"
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\scemi_pipes.svh"
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\hypermods.v"
+@I::"E:\Grade-3_2\ISP_Project\lab14\vga.v"
+@E: CG342 :"E:\Grade-3_2\ISP_Project\lab14\vga.v":39:12:39:19|Expecting target variable, found hsyncint -- possible misspelling
+@E: CS187 :"E:\Grade-3_2\ISP_Project\lab14\vga.v":49:18:49:18|Expecting =
+@E: CS187 :"E:\Grade-3_2\ISP_Project\lab14\vga.v":102:0:102:8|Expecting endmodule
+3 syntax errors
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Fri May 13 10:05:14 2022
+
+###########################################################]

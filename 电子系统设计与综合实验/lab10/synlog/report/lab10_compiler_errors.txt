@@ -1,0 +1,2 @@
+@E: CG426 :"E:\grade-3_2\isp_project\lab10\PS2Keyboard.v":17:12:17:19|Assignment target keyClock must be of type reg or genvar
+

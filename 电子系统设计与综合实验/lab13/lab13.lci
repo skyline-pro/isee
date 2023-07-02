@@ -1,0 +1,143 @@
+
+[Device]
+Family = lc4k;
+PartNumber = LC4256V-75T144I;
+Package = 144TQFP;
+PartType = LC4256V;
+Speed = -7.5;
+Operating_condition = IND;
+Status = Production;
+EN_PinGLB = yes;
+EN_PinMacrocell = yes;
+Default_Device_IO_Types = LVCMOS33, -;
+
+[Revision]
+Parent = lc4k256v.lci;
+DATE = 05/13/2022;
+TIME = 09:08:48;
+Source_Format = Pure_Verilog_HDL;
+Synthesis = LSE;
+
+[Ignore Assignments]
+
+[Clear Assignments]
+
+[Backannotate Assignments]
+
+[Global Constraints]
+
+[Location Assignments]
+layer = OFF;
+clk_50m = Pin, 128, -, -, -;
+reset = Pin, 68, -, J, 6;
+lcdRs = Pin, 98, -, M, 12;
+lcdRw = Pin, 100, -, N, 2;
+ledEN = Pin, 96, -, M, 8;
+lcdD_0_ = Pin, 86, -, L, 8;
+lcdD_1_ = Pin, 87, -, L, 6;
+lcdD_2_ = Pin, 84, -, L, 12;
+lcdD_3_ = Pin, 85, -, L, 10;
+lcdD_4_ = Pin, 81, -, K, 2;
+lcdD_5_ = Pin, 83, -, L, 14;
+lcdD_6_ = Pin, 79, -, K, 6;
+lcdD_7_ = Pin, 80, -, K, 4;
+
+[Group Assignments]
+layer = OFF;
+
+[Resource Reservations]
+layer = OFF;
+
+[Fitter Report Format]
+
+[Power]
+
+[Source Constraint Option]
+
+[Fast Bypass]
+
+[OSM Bypass]
+
+[Input Registers]
+
+[Netlist/Delay Format]
+NetList = VERILOG;
+
+[IO Types]
+layer = OFF;
+
+[Pullup]
+
+[Slewrate]
+
+[Region]
+
+[Timing Constraints]
+layer = OFF;
+
+[HSI Attributes]
+
+[Input Delay]
+
+[opt global constraints list]
+
+[Explorer User Settings]
+
+[Pin attributes list]
+
+[global constraints list]
+
+[Global Constraints Process Update]
+
+[pin lock limitation]
+
+[LOCATION ASSIGNMENTS LIST]
+
+[RESOURCE RESERVATIONS LIST]
+
+[individual constraints list]
+
+[Attributes list setting]
+
+[Timing Analyzer]
+
+[PLL Assignments]
+
+[Dual Function Macrocell]
+
+[Explorer Results]
+
+[VHDL synplify constraints]
+
+[VHDL spectrum constraints]
+
+[verilog synplify constraints]
+
+[verilog spectrum constraints]
+
+[VHDL synplify constraints list]
+
+[VHDL spectrum constraints list]
+
+[verilog synplify constraints list]
+
+[verilog spectrum constraints list]
+
+[ORP Bypass]
+
+[Register Powerup]
+
+[Constraint Version]
+version = 1.0;
+
+[ORP ASSIGNMENTS]
+layer = OFF;
+
+[Node attribute]
+layer = OFF;
+
+[SYMBOL/MODULE attribute]
+layer = OFF;
+
+[Nodal Constraints]
+layer = OFF;

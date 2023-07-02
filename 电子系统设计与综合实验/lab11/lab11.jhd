@@ -1,0 +1,17 @@
+MODULE lab11 DEFIN lab11.v
+	SUBMODULE dynamicshow
+		INSTANCE dynamicshow
+	SUBMODULE i2c
+		INSTANCE i2c
+	SUBMODULE keyboard
+		INSTANCE keyboard
+	SUBMODULE button
+		INSTANCE button4
+	SUBMODULE button
+		INSTANCE button3
+	SUBMODULE button
+		INSTANCE button2
+	SUBMODULE button
+		INSTANCE button1
+	SUBMODULE button
+		INSTANCE button0

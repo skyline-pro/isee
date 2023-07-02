@@ -1,0 +1,4 @@
+@W: CL169 :"E:\Grade-3_2\ISP_Project\lab11\keyboard.v":75:4:75:9|Pruning register flag_Over 
+@W: CL169 :"E:\Grade-3_2\ISP_Project\lab11\keyboard.v":75:4:75:9|Pruning register int_Data[9:0] 
+@W: CL169 :"E:\Grade-3_2\ISP_Project\lab11\keyboard.v":75:4:75:9|Pruning register temp[9:0] 
+

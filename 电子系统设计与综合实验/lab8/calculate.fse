@@ -1,0 +1,24 @@
+
+fsm_encoding {6774771} sequential
+
+fsm_state_encoding {6774771} 00 {00}
+
+fsm_state_encoding {6774771} 01 {01}
+
+fsm_state_encoding {6774771} 10 {10}
+
+fsm_state_encoding {6774771} 11 {11}
+
+fsm_registers {6774771} {flag_Data[1]}  {flag_Data[0]} 
+
+fsm_encoding {6184182} sequential
+
+fsm_state_encoding {6184182} 0001 {00}
+
+fsm_state_encoding {6184182} 0010 {01}
+
+fsm_state_encoding {6184182} 0100 {10}
+
+fsm_state_encoding {6184182} 1000 {11}
+
+fsm_registers {6184182} {scanvalue[1]}  {scanvalue[0]} 

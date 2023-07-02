@@ -1,0 +1,52 @@
+Selecting top level module lab8
+@N: CG364 :"E:\grade-3_2\isp_project\lab8\dffre.v":14:7:14:11|Synthesizing module dffre
+
+@N: CG179 :"E:\grade-3_2\isp_project\lab8\dffre.v":25:13:25:13|Removing redundant assignment
+@N: CG364 :"E:\grade-3_2\isp_project\lab8\button.v":1:7:1:12|Synthesizing module button
+
+@W: CS263 :"E:\grade-3_2\isp_project\lab8\button.v":9:29:9:29|Port-width mismatch for port en. Formal has width 1, Actual 32
+@W: CS263 :"E:\grade-3_2\isp_project\lab8\button.v":9:37:9:37|Port-width mismatch for port r. Formal has width 1, Actual 32
+@W: CS263 :"E:\grade-3_2\isp_project\lab8\button.v":10:28:10:28|Port-width mismatch for port en. Formal has width 1, Actual 32
+@W: CS263 :"E:\grade-3_2\isp_project\lab8\button.v":10:36:10:36|Port-width mismatch for port r. Formal has width 1, Actual 32
+@W: CS263 :"E:\grade-3_2\isp_project\lab8\button.v":11:28:11:28|Port-width mismatch for port en. Formal has width 1, Actual 32
+@W: CS263 :"E:\grade-3_2\isp_project\lab8\button.v":11:36:11:36|Port-width mismatch for port r. Formal has width 1, Actual 32
+@N: CG364 :"E:\grade-3_2\isp_project\lab8\calculate.v":1:7:1:15|Synthesizing module calculate
+
+@W: CG296 :"E:\grade-3_2\isp_project\lab8\calculate.v":340:13:340:27|Incomplete sensitivity list - assuming completeness
+@W: CG290 :"E:\grade-3_2\isp_project\lab8\calculate.v":347:19:347:26|Referenced variable int_Data is not in sensitivity list
+@W: CL169 :"E:\grade-3_2\isp_project\lab8\calculate.v":77:4:77:9|Pruning register flag_Over 
+
+@A: CL282 :"E:\grade-3_2\isp_project\lab8\calculate.v":60:4:60:9|Feedback mux created for signal time1Oms -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\grade-3_2\isp_project\lab8\calculate.v":18:4:18:9|Feedback mux created for signal key_out[3:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@N: CG364 :"E:\grade-3_2\isp_project\lab8\counter_n.v":15:7:15:15|Synthesizing module counter_n
+
+	n=32'b00000000000000000000000000000100
+	counter_bits=32'b00000000000000000000000000000010
+   Generated name = counter_n_4s_2s
+
+@N: CG364 :"E:\grade-3_2\isp_project\lab8\mux16to4.v":1:7:1:14|Synthesizing module mux16to4
+
+@N: CG364 :"E:\grade-3_2\isp_project\lab8\decoderHex2Dec.v":1:7:1:20|Synthesizing module decoderHex2Dec
+
+@N: CG364 :"E:\grade-3_2\isp_project\lab8\decoder2to4.v":1:7:1:17|Synthesizing module decoder2to4
+
+@N: CG364 :"E:\grade-3_2\isp_project\lab8\dynamicshow.v":1:7:1:17|Synthesizing module dynamicshow
+
+@W: CS263 :"E:\grade-3_2\isp_project\lab8\dynamicshow.v":8:79:8:79|Port-width mismatch for port en. Formal has width 1, Actual 32
+@N: CG364 :"E:\grade-3_2\isp_project\lab8\lab8.v":1:7:1:10|Synthesizing module lab8
+
+@W: CL156 :"E:\grade-3_2\isp_project\lab8\dynamicshow.v":8:66:8:70|*Input reset to expression [instance] has undriven bits that are tied to 0 -- simulation mismatch possible.
+@N: CL201 :"E:\grade-3_2\isp_project\lab8\calculate.v":77:4:77:9|Trying to extract state machine for register flag_Data
+Extracted state machine for register flag_Data
+State machine has 4 reachable states with original encodings of:
+   00
+   01
+   10
+   11
+@N: CL201 :"E:\grade-3_2\isp_project\lab8\calculate.v":18:4:18:9|Trying to extract state machine for register scanvalue
+Extracted state machine for register scanvalue
+State machine has 4 reachable states with original encodings of:
+   0001
+   0010
+   0100
+   1000

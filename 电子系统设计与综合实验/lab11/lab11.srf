@@ -1,0 +1,255 @@
+#Build: Synplify Pro I-2014.03LC , Build 063R, May 27 2014
+#install: D:\ispLEVER_Classic2_1\synpbase
+#OS: Windows 7 6.2
+#Hostname: SKYLINE
+
+#Implementation: lab11
+
+$ Start of Compile
+#Wed May 11 18:43:03 2022
+
+Synopsys Verilog Compiler, version comp201403rcp1, Build 060R, built May 27 2014
+@N|Running in 64-bit mode
+Copyright (C) 1994-2014 Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\umr_capim.v"
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\scemi_objects.v"
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\scemi_pipes.svh"
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\hypermods.v"
+@I::"D:\ispLEVER_Classic2_1\ispcpld\..\cae_library\synthesis\verilog\mach.v"
+@I::"E:\Grade-3_2\ISP_Project\lab11\lab11.h"
+@I::"E:\Grade-3_2\ISP_Project\lab11\decoder2to4.v"
+@I::"E:\Grade-3_2\ISP_Project\lab11\decoderHex2Dec.v"
+@I::"E:\Grade-3_2\ISP_Project\lab11\mux16to4.v"
+@I::"E:\Grade-3_2\ISP_Project\lab11\counter_n.v"
+@I::"E:\Grade-3_2\ISP_Project\lab11\dynamicShow.v"
+@I::"E:\Grade-3_2\ISP_Project\lab11\i2c.v"
+@I::"E:\Grade-3_2\ISP_Project\lab11\keyboard.v"
+@I::"E:\Grade-3_2\ISP_Project\lab11\dffre.v"
+@I::"E:\Grade-3_2\ISP_Project\lab11\button.v"
+@I::"E:\Grade-3_2\ISP_Project\lab11\lab11.v"
+Verilog syntax check successful!
+
+Compiler output is up to date.  No re-compile necessary
+
+Selecting top level module lab11
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab11\dffre.v":14:7:14:11|Synthesizing module dffre
+
+@N: CG179 :"E:\Grade-3_2\ISP_Project\lab11\dffre.v":25:13:25:13|Removing redundant assignment
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab11\button.v":1:7:1:12|Synthesizing module button
+
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab11\keyboard.v":1:7:1:14|Synthesizing module keyboard
+
+@W: CL169 :"E:\Grade-3_2\ISP_Project\lab11\keyboard.v":75:4:75:9|Pruning register flag_Over 
+
+@W: CL169 :"E:\Grade-3_2\ISP_Project\lab11\keyboard.v":75:4:75:9|Pruning register int_Data[9:0] 
+
+@W: CL169 :"E:\Grade-3_2\ISP_Project\lab11\keyboard.v":75:4:75:9|Pruning register temp[9:0] 
+
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\keyboard.v":58:4:58:9|Feedback mux created for signal time1Oms -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\keyboard.v":16:4:16:9|Feedback mux created for signal key_out[3:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":1:7:1:9|Synthesizing module i2c
+
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":67:4:67:9|Feedback mux created for signal sda_tem -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":67:4:67:9|Feedback mux created for signal sda_buf -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":67:4:67:9|Feedback mux created for signal scl_buf -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":67:4:67:9|Feedback mux created for signal bit_state[5:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":67:4:67:9|Feedback mux created for signal WrData[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":67:4:67:9|Feedback mux created for signal RdData[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":67:4:67:9|Feedback mux created for signal Flag_RW -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":67:4:67:9|Feedback mux created for signal DataLED2[3:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":67:4:67:9|Feedback mux created for signal DataLED[3:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab11\counter_n.v":15:7:15:15|Synthesizing module counter_n
+
+	n=32'b00000000000000000000000000000100
+	counter_bits=32'b00000000000000000000000000000010
+   Generated name = counter_n_4s_2s
+
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab11\mux16to4.v":1:7:1:14|Synthesizing module mux16to4
+
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab11\decoderHex2Dec.v":1:7:1:20|Synthesizing module decoderHex2Dec
+
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab11\decoder2to4.v":1:7:1:17|Synthesizing module decoder2to4
+
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab11\dynamicShow.v":1:7:1:17|Synthesizing module dynamicshow
+
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab11\lab11.v":1:7:1:11|Synthesizing module lab11
+
+@N: CL201 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":67:4:67:9|Trying to extract state machine for register eeprom_state
+Extracted state machine for register eeprom_state
+State machine has 3 reachable states with original encodings of:
+   00
+   01
+   10
+@N: CL201 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":67:4:67:9|Trying to extract state machine for register bit_state
+Extracted state machine for register bit_state
+State machine has 39 reachable states with original encodings of:
+   000000
+   000001
+   000010
+   000011
+   000100
+   000101
+   000110
+   000111
+   001000
+   001001
+   001010
+   001011
+   001100
+   001101
+   001110
+   001111
+   010000
+   010001
+   010010
+   010011
+   010100
+   010101
+   010110
+   010111
+   011000
+   011001
+   011010
+   011011
+   011100
+   011101
+   011110
+   011111
+   100000
+   100001
+   100010
+   100011
+   100100
+   100101
+   100110
+@N: CL201 :"E:\Grade-3_2\ISP_Project\lab11\keyboard.v":75:4:75:9|Trying to extract state machine for register flag_Data
+Extracted state machine for register flag_Data
+State machine has 4 reachable states with original encodings of:
+   00
+   01
+   10
+   11
+@N: CL201 :"E:\Grade-3_2\ISP_Project\lab11\keyboard.v":16:4:16:9|Trying to extract state machine for register scanvalue
+Extracted state machine for register scanvalue
+State machine has 4 reachable states with original encodings of:
+   0001
+   0010
+   0100
+   1000
+@END
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 68MB peak: 69MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed May 11 18:43:03 2022
+
+###########################################################]
+Synopsys Netlist Linker, version comp201403rcp1, Build 060R, built May 27 2014
+@N|Running in 64-bit mode
+
+Linker output is up to date. No re-linking necessary
+
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed May 11 18:43:03 2022
+
+###########################################################]
+Map & Optimize Report
+
+Synopsys CPLD Technology Mapper, Version maplat, Build 923R, Built May  6 2014
+Copyright (C) 1994-2013, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use or distribution of the software is strictly prohibited.
+Product Version I-2014.03LC 
+@N: MF248 |Running in 64-bit mode.
+Encoding state machine flag_Data[3:0] (view:work.keyboard(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+   11 -> 11
+@N: MO225 :"e:\grade-3_2\isp_project\lab11\keyboard.v":75:4:75:9|No possible illegal states for state machine flag_Data[3:0],safe FSM implementation is disabled
+Encoding state machine scanvalue[3:0] (view:work.keyboard(verilog))
+original code -> new code
+   0001 -> 00
+   0010 -> 01
+   0100 -> 10
+   1000 -> 11
+@N: MO225 :"e:\grade-3_2\isp_project\lab11\keyboard.v":16:4:16:9|No possible illegal states for state machine scanvalue[3:0],safe FSM implementation is disabled
+@N:"e:\grade-3_2\isp_project\lab11\i2c.v":21:4:21:9|Found counter in view:work.i2c(verilog) inst clk_div[3:0]
+Encoding state machine bit_state[38:0] (view:work.i2c(verilog))
+original code -> new code
+   000000 -> 000000
+   000001 -> 000001
+   000010 -> 000011
+   000011 -> 000010
+   000100 -> 000110
+   000101 -> 000111
+   000110 -> 000101
+   000111 -> 000100
+   001000 -> 001100
+   001001 -> 001101
+   001010 -> 001111
+   001011 -> 001110
+   001100 -> 001010
+   001101 -> 001011
+   001110 -> 001001
+   001111 -> 001000
+   010000 -> 011000
+   010001 -> 011001
+   010010 -> 011011
+   010011 -> 011010
+   010100 -> 011110
+   010101 -> 011111
+   010110 -> 011101
+   010111 -> 011100
+   011000 -> 010100
+   011001 -> 010101
+   011010 -> 010111
+   011011 -> 010110
+   011100 -> 010010
+   011101 -> 010011
+   011110 -> 010001
+   011111 -> 010000
+   100000 -> 110000
+   100001 -> 110001
+   100010 -> 110011
+   100011 -> 110010
+   100100 -> 110110
+   100101 -> 110111
+   100110 -> 110101
+Encoding state machine eeprom_state[2:0] (view:work.i2c(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+@N: MO106 :"e:\grade-3_2\isp_project\lab11\decoderhex2dec.v":6:8:6:11|Found ROM, 'decoder1.out_1[6:0]', 11 words by 7 bits 
+---------------------------------------
+Resource Usage Report
+
+Simple gate primitives:
+DFFRH           48 uses
+DFFCRH          17 uses
+DFFC            38 uses
+DFFSH           5 uses
+DFF             18 uses
+IBUF            9 uses
+OBUF            21 uses
+BI_DIR          1 use
+AND2            624 uses
+INV             358 uses
+XOR2            33 uses
+OR2             22 uses
+
+
+@N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.
+I-2014.03LC 
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 42MB peak: 113MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed May 11 18:43:04 2022
+
+###########################################################]

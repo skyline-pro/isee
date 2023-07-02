@@ -1,0 +1,102 @@
+#Build: Synplify Pro I-2014.03LC , Build 063R, May 27 2014
+#install: D:\ispLEVER_Classic2_1\synpbase
+#OS: Windows 7 6.2
+#Hostname: SKYLINE
+
+#Implementation: rev_1
+
+$ Start of Compile
+#Thu May 12 17:29:02 2022
+
+Synopsys Verilog Compiler, version comp201403rcp1, Build 060R, built May 27 2014
+@N|Running in 64-bit mode
+Copyright (C) 1994-2014 Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+
+@N:: Running Verilog Compiler in System Verilog mode
+@N:: Running Verilog Compiler in Multiple File Compilation Unit mode
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\umr_capim.v"
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\scemi_objects.v"
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\scemi_pipes.svh"
+@I::"D:\ispLEVER_Classic2_1\synpbase\lib\vlog\hypermods.v"
+@I::"E:\Grade-3_2\ISP_Project\lab13\button.v"
+@I::"E:\Grade-3_2\ISP_Project\lab13\dffre.v"
+@I::"E:\Grade-3_2\ISP_Project\lab13\lcd1602.v"
+@I::"E:\Grade-3_2\ISP_Project\lab13\lab13.v"
+Verilog syntax check successful!
+Selecting top level module lab13
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab13\dffre.v":14:7:14:11|Synthesizing module dffre
+
+@N: CG179 :"E:\Grade-3_2\ISP_Project\lab13\dffre.v":25:13:25:13|Removing redundant assignment
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab13\button.v":1:7:1:12|Synthesizing module button
+
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab13\lcd1602.v":1:7:1:13|Synthesizing module lcd1602
+
+@W: CL169 :"E:\Grade-3_2\ISP_Project\lab13\lcd1602.v":52:4:52:9|Pruning register lcdRs 
+
+@W: CL169 :"E:\Grade-3_2\ISP_Project\lab13\lcd1602.v":52:4:52:9|Pruning register lcdRw 
+
+@W: CL169 :"E:\Grade-3_2\ISP_Project\lab13\lcd1602.v":52:4:52:9|Pruning register lcdD[7:0] 
+
+@W: CL169 :"E:\Grade-3_2\ISP_Project\lab13\lcd1602.v":52:4:52:9|Pruning register state[7:0] 
+
+@W: CL169 :"E:\Grade-3_2\ISP_Project\lab13\lcd1602.v":52:4:52:9|Pruning register dispCount[5:0] 
+
+@W: CL169 :"E:\Grade-3_2\ISP_Project\lab13\lcd1602.v":52:4:52:9|Pruning register dataInBuf[255:0] 
+
+@W: CL169 :"E:\Grade-3_2\ISP_Project\lab13\lcd1602.v":31:4:31:9|Pruning register cnt[19:0] 
+
+@W: CL169 :"E:\Grade-3_2\ISP_Project\lab13\lcd1602.v":31:4:31:9|Pruning register clkhz 
+
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab13\lab13.v":1:7:1:11|Synthesizing module lab13
+
+@W: CL168 :"E:\Grade-3_2\ISP_Project\lab13\lab13.v":7:12:7:14|Pruning instance lcd -- not in use ...
+
+@W: CL168 :"E:\Grade-3_2\ISP_Project\lab13\lab13.v":6:11:6:16|Pruning instance button -- not in use ...
+
+@W: CL159 :"E:\Grade-3_2\ISP_Project\lab13\lab13.v":2:10:2:13|Input clkh is unused
+@W: CL159 :"E:\Grade-3_2\ISP_Project\lab13\lab13.v":2:15:2:18|Input clkl is unused
+@W: CL159 :"E:\Grade-3_2\ISP_Project\lab13\lab13.v":2:20:2:24|Input reset is unused
+@W: CL159 :"E:\Grade-3_2\ISP_Project\lab13\lcd1602.v":2:10:2:16|Input clk_50m is unused
+@W: CL159 :"E:\Grade-3_2\ISP_Project\lab13\lcd1602.v":3:10:3:14|Input reset is unused
+@END
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 69MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Thu May 12 17:29:02 2022
+
+###########################################################]
+Synopsys Netlist Linker, version comp201403rcp1, Build 060R, built May 27 2014
+@N|Running in 64-bit mode
+@N: NF107 :"E:\Grade-3_2\ISP_Project\lab13\lab13.v":1:7:1:11|Selected library: work cell: lab13 view verilog as top level
+@N: NF107 :"E:\Grade-3_2\ISP_Project\lab13\lab13.v":1:7:1:11|Selected library: work cell: lab13 view verilog as top level
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Thu May 12 17:29:04 2022
+
+###########################################################]
+Map & Optimize Report
+
+Synopsys CPLD Technology Mapper, Version maplat, Build 923R, Built May  6 2014
+Copyright (C) 1994-2013, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use or distribution of the software is strictly prohibited.
+Product Version I-2014.03LC 
+@N: MF248 |Running in 64-bit mode.
+---------------------------------------
+Resource Usage Report
+
+Simple gate primitives:
+IBUF            3 uses
+
+
+@N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.
+I-2014.03LC 
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 36MB peak: 101MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Thu May 12 17:29:04 2022
+
+###########################################################]

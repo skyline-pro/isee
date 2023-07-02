@@ -1,0 +1,9 @@
+D:\ispLEVER_Classic2_1\synpbase\bin64\m_cpld.exe  -prodtype  synplify_pro  -encrypt  -pro  -rundir  E:\Grade-3_2\ISP_Project\lab12\rev_1  -part LC4064V  -package T100C  -grade -2.5   -ispmach4s -RWCheckOnRam 1 -areadelay 0 -minc -summaryfile E:\Grade-3_2\ISP_Project\lab12\rev_1\synlog\report\lab12_fpga_mapper.xml -multisrs  -oedif  E:\Grade-3_2\ISP_Project\lab12\rev_1\lab12.edf  E:\Grade-3_2\ISP_Project\lab12\rev_1\synwork\lab12_mult.srs  -ologparam  E:\Grade-3_2\ISP_Project\lab12\rev_1\syntmp\lab12.plg  -osyn  E:\Grade-3_2\ISP_Project\lab12\rev_1\lab12.srm  -prjdir  E:\Grade-3_2\ISP_Project\lab12\  -prjname  lab12  -log  E:\Grade-3_2\ISP_Project\lab12\rev_1\synlog\lab12_fpga_mapper.srr 
+rc:0 success:1
+E:\Grade-3_2\ISP_Project\lab12\rev_1\lab12.edf|o|1652265873|171961
+E:\Grade-3_2\ISP_Project\lab12\rev_1\synwork\lab12_mult.srs|i|1652265873|2461
+E:\Grade-3_2\ISP_Project\lab12\rev_1\syntmp\lab12.plg|o|1652265873|0
+E:\Grade-3_2\ISP_Project\lab12\rev_1\lab12.srm|o|1652265873|57744
+E:\Grade-3_2\ISP_Project\lab12\rev_1\synlog\lab12_fpga_mapper.srr|o|1652265873|2256
+D:\ispLEVER_Classic2_1\synpbase\bin\m_cpld.exe|i|1399340484|7067648
+D:\ispLEVER_Classic2_1\synpbase\bin64\m_cpld.exe|i|1399343322|8049664

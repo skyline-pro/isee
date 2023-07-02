@@ -1,0 +1,13 @@
+Synopsys CPLD Technology Mapper, Version maplat, Build 923R, Built May  6 2014
+Copyright (C) 1994-2013, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use or distribution of the software is strictly prohibited.
+Product Version I-2014.03LC 
+@N: MF248 |Running in 64-bit mode.
+@A: BN321 |Found multiple drivers on net "innerreset" in work.top(verilog); if one driver is a constant (true or false), use Resolve Mixed Drivers option to connect the net to VCC or GND.
+@E: Net "innerreset" in work.top(verilog) has conflicting drivers, the connections are
+Connection 1: Direction is (Output ) pin:co inst:timeWin of work.counter_n_7s_4s(verilog)
+Connection 2: Direction is (Output ) pin:co inst:timeAll of work.counter_n_7s_4s(verilog)
+@E: BN314 :"e:\grade-3_2\isp_project\testverilog\top.v":1:7:1:9|Net "innerreset" in work.top(verilog) has multiple drivers 
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon Apr 11 23:14:30 2016
+
+###########################################################]

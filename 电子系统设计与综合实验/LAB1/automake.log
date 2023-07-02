@@ -1,0 +1,13 @@
+ispLEVER Auto-Make Log File
+---------------------------
+
+Updating: Constraint Editor
+Start to record tcl script...
+Finished recording TCL script.
+
+Starting: 'D:\ispLEVER_Classic2_1\ispcpld\bin\blifstat.exe -i lab1.bl5 -o lab1.sif'
+
+Done: completed successfully.
+
+Launching: 'D:\ispLEVER_Classic2_1\ispcpld\bin\lciedit.exe @lattice_cmd.rs2'
+

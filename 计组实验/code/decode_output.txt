@@ -1,0 +1,14 @@
+00003f37 : 0 1 0 0 x 0 1 0 0 xxxxxxxx xxxxxxxx
+Instruction  MemtoReg RegWrite MemWrite MemRead ALUCode ALUSrcA ALUSrcB Jump JALR IMM offset
+02000fe7 : 0 1 0 0 2 1 2 1 1 00003000 xxxxxxxx
+00001c63 : 0 0 0 0 0 0 1 0 0 xxxxxxxx 00000020
+042f0293 : 0 1 0 0 0 0 1 0 0 xxxxxxxx 00000018
+01f00333 : 0 1 0 0 0 0 0 0 0 00000042 xxxxxxxx
+406283b3 : 0 1 0 0 0 0 0 0 0 xxxxxxxx xxxxxxxx
+0053ee33 : 0 1 0 0 1 0 0 0 0 xxxxxxxx xxxxxxxx
+fc000ae3 : 0 0 0 0 5 0 1 0 0 xxxxxxxx xxxxxxxx
+001c2623 : 0 0 1 0 0 0 1 0 0 xxxxxxxx ffffffd4
+00432e83 : 1 1 0 1 0 0 1 0 0 0000000c xxxxxxxx
+002e9293 : 0 1 0 0 0 0 1 0 0 00000004 xxxxxxxx
+00733e33 : 0 1 0 0 6 0 0 0 0 00000002 xxxxxxxx
+00000f6f : 0 1 0 0 a 1 2 1 0 xxxxxxxx xxxxxxxx

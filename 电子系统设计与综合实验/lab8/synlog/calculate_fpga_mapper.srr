@@ -1,0 +1,47 @@
+Synopsys CPLD Technology Mapper, Version maplat, Build 923R, Built May  6 2014
+Copyright (C) 1994-2013, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use or distribution of the software is strictly prohibited.
+Product Version I-2014.03LC 
+@N: MF248 |Running in 64-bit mode.
+Encoding state machine flag_Data[3:0] (view:work.calculate(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+   11 -> 11
+@N: MO225 :"e:\grade-3_2\isp_project\lab8\calculate.v":77:4:77:9|No possible illegal states for state machine flag_Data[3:0],safe FSM implementation is disabled
+Encoding state machine scanvalue[3:0] (view:work.calculate(verilog))
+original code -> new code
+   0001 -> 00
+   0010 -> 01
+   0100 -> 10
+   1000 -> 11
+@N: MO225 :"e:\grade-3_2\isp_project\lab8\calculate.v":18:4:18:9|No possible illegal states for state machine scanvalue[3:0],safe FSM implementation is disabled
+@W: BN132 :"e:\grade-3_2\isp_project\lab8\calculate.v":77:4:77:9|Removing instance led_int_Data2[3],  because it is equivalent to instance led_int_Data2[1]
+---------------------------------------
+Resource Usage Report
+
+Simple gate primitives:
+DFFRH           28 uses
+DFFC            4 uses
+DFFCSH          3 uses
+DFFCRH          18 uses
+DFFSH           5 uses
+DFF             1 use
+IBUF            6 uses
+OBUF            22 uses
+AND2            477 uses
+XOR2            50 uses
+INV             288 uses
+OR2             12 uses
+
+
+@N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.
+I-2014.03LC 
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 40MB peak: 108MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat May 07 17:11:43 2016
+
+###########################################################]

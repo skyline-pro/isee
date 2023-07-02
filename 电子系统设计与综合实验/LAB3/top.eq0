@@ -1,0 +1,20 @@
+ispLEVER Classic 2.1.00.02.49.20 Linked Equations File
+Copyright(C), 1992-2020, Lattice Semiconductor Corp.
+All Rights Reserved.
+
+Design top created Mon Apr 11 21:56:08 2016
+
+Title: top.bls 
+
+ P-Terms   Fan-in  Fan-out  Type  Name (attributes)
+---------  ------  -------  ----  -----------------
+=========
+   0                 P-Term Total: 0
+                       Total Pins: 0
+                      Total Nodes: 0
+
+Equations:
+
+
+Reverse-Polarity Equations:
+

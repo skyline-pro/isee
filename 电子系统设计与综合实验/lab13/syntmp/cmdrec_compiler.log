@@ -1,0 +1,9 @@
+D:\ispLEVER_Classic2_1\synpbase\bin64\c_ver.exe  -osyn  E:\grade-3_2\isp_project\lab13\synwork\lcd1602_comp.srs  -top  lcd1602  -prodtype  synplify_pro  -nostructver -I e:\grade-3_2\isp_project\lab13\  -I D:\ispLEVER_Classic2_1\synpbase\lib  -v2001  -encrypt  -pro  -dmgen  E:\grade-3_2\isp_project\lab13\dm  -compiler_compatible -ui -fid2 -ram -sharing on -ll 2000 -autosm -lib work D:\ispLEVER_Classic2_1\ispcpld\..\cae_library\synthesis\verilog\mach.v -lib work E:\grade-3_2\isp_project\lab13\lab13.h -lib work E:\grade-3_2\isp_project\lab13\lcd1602.v -loga  E:\grade-3_2\isp_project\lab13\lcd1602.srr 
+rc:1 success:1
+E:\grade-3_2\isp_project\lab13\synwork\lcd1602_comp.srs|o|1652403268|4518
+D:\ispLEVER_Classic2_1\ispcpld\..\cae_library\synthesis\verilog\mach.v|i|1336476608|12168
+E:\grade-3_2\isp_project\lab13\lab13.h|i|1652347587|0
+E:\grade-3_2\isp_project\lab13\lcd1602.v|i|1652403243|4657
+E:\grade-3_2\isp_project\lab13\lcd1602.srr|o|1652403268|7125
+D:\ispLEVER_Classic2_1\synpbase\bin\c_ver.exe|i|1401198650|2292224
+D:\ispLEVER_Classic2_1\synpbase\bin64\c_ver.exe|i|1401198850|5829632

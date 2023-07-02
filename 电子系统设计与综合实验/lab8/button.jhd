@@ -1,0 +1,7 @@
+MODULE button DEFIN button.v
+	SUBMODULE dffre
+		INSTANCE d3
+	SUBMODULE dffre
+		INSTANCE d2
+	SUBMODULE dffre
+		INSTANCE d1

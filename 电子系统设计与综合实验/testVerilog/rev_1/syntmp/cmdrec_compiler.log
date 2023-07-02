@@ -1,0 +1,14 @@
+D:\ispLEVER_Classic2_1\synpbase\bin64\c_ver.exe  -osyn  E:\Grade-3_2\ISP_Project\testVerilog\rev_1\synwork\proj_1_comp.srs  -prodtype  synplify_pro  -nostructver -I E:\Grade-3_2\ISP_Project\testVerilog\  -I D:\ispLEVER_Classic2_1\synpbase\lib  -sysv  -encrypt  -pro  -dmgen  E:\Grade-3_2\ISP_Project\testVerilog\rev_1\dm  -ui -fid2 -ram -sharing on -ll 2000 -autosm -D_MULTIPLE_FILE_COMPILATION_UNIT_ -lib work E:\Grade-3_2\ISP_Project\testVerilog\counter_n.v -lib work E:\Grade-3_2\ISP_Project\testVerilog\adder.v -lib work E:\Grade-3_2\ISP_Project\testVerilog\key.v -lib work E:\Grade-3_2\ISP_Project\testVerilog\top.v -lib work E:\Grade-3_2\ISP_Project\testVerilog\random.v -lib work E:\Grade-3_2\ISP_Project\testVerilog\mux.v -lib work E:\Grade-3_2\ISP_Project\testVerilog\to4decode.v -lib work E:\Grade-3_2\ISP_Project\testVerilog\decode.v -loga  E:\Grade-3_2\ISP_Project\testVerilog\rev_1\proj_1.srr 
+rc:1 success:1
+E:\Grade-3_2\ISP_Project\testVerilog\rev_1\synwork\proj_1_comp.srs|o|1460387668|12400
+E:\Grade-3_2\ISP_Project\testVerilog\counter_n.v|i|1460379802|376
+E:\Grade-3_2\ISP_Project\testVerilog\adder.v|i|1649680428|648
+E:\Grade-3_2\ISP_Project\testVerilog\key.v|i|1460381571|225
+E:\Grade-3_2\ISP_Project\testVerilog\top.v|i|1460387666|1224
+E:\Grade-3_2\ISP_Project\testVerilog\random.v|i|1460387532|378
+E:\Grade-3_2\ISP_Project\testVerilog\mux.v|i|1460384957|306
+E:\Grade-3_2\ISP_Project\testVerilog\to4decode.v|i|1460387121|275
+E:\Grade-3_2\ISP_Project\testVerilog\decode.v|i|1460387481|541
+E:\Grade-3_2\ISP_Project\testVerilog\rev_1\proj_1.srr|o|1460387668|4034
+D:\ispLEVER_Classic2_1\synpbase\bin\c_ver.exe|i|1401198650|2292224
+D:\ispLEVER_Classic2_1\synpbase\bin64\c_ver.exe|i|1401198850|5829632

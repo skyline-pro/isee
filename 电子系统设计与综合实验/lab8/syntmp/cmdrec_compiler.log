@@ -1,0 +1,17 @@
+D:\ispLEVER_Classic2_1\synpbase\bin64\c_ver.exe  -osyn  E:\grade-3_2\isp_project\lab8\synwork\lab8_comp.srs  -top  lab8  -prodtype  synplify_pro  -nostructver -I e:\grade-3_2\isp_project\lab8\  -I D:\ispLEVER_Classic2_1\synpbase\lib  -v2001  -encrypt  -pro  -dmgen  E:\grade-3_2\isp_project\lab8\dm  -compiler_compatible -ui -fid2 -ram -sharing on -ll 2000 -autosm -lib work D:\ispLEVER_Classic2_1\ispcpld\..\cae_library\synthesis\verilog\mach.v -lib work E:\grade-3_2\isp_project\lab8\lab8.h -lib work E:\grade-3_2\isp_project\lab8\decoder2to4.v -lib work E:\grade-3_2\isp_project\lab8\decoderHex2Dec.v -lib work E:\grade-3_2\isp_project\lab8\mux16to4.v -lib work E:\grade-3_2\isp_project\lab8\counter_n.v -lib work E:\grade-3_2\isp_project\lab8\dynamicshow.v -lib work E:\grade-3_2\isp_project\lab8\calculate.v -lib work E:\grade-3_2\isp_project\lab8\dffre.v -lib work E:\grade-3_2\isp_project\lab8\button.v -lib work E:\grade-3_2\isp_project\lab8\lab8.v -loga  E:\grade-3_2\isp_project\lab8\lab8.srr 
+rc:1 success:1
+E:\grade-3_2\isp_project\lab8\synwork\lab8_comp.srs|o|1462614382|19266
+D:\ispLEVER_Classic2_1\ispcpld\..\cae_library\synthesis\verilog\mach.v|i|1336476608|12168
+E:\grade-3_2\isp_project\lab8\lab8.h|i|1462612068|0
+E:\grade-3_2\isp_project\lab8\decoder2to4.v|i|1462549485|310
+E:\grade-3_2\isp_project\lab8\decoderHex2Dec.v|i|1462548404|701
+E:\grade-3_2\isp_project\lab8\mux16to4.v|i|1462548317|386
+E:\grade-3_2\isp_project\lab8\counter_n.v|i|1460379863|821
+E:\grade-3_2\isp_project\lab8\dynamicshow.v|i|1462550574|518
+E:\grade-3_2\isp_project\lab8\calculate.v|i|1462551202|20087
+E:\grade-3_2\isp_project\lab8\dffre.v|i|1649680967|789
+E:\grade-3_2\isp_project\lab8\button.v|i|1462611603|359
+E:\grade-3_2\isp_project\lab8\lab8.v|i|1462614343|1052
+E:\grade-3_2\isp_project\lab8\lab8.srr|o|1462614382|5347
+D:\ispLEVER_Classic2_1\synpbase\bin\c_ver.exe|i|1401198650|2292224
+D:\ispLEVER_Classic2_1\synpbase\bin64\c_ver.exe|i|1401198850|5829632

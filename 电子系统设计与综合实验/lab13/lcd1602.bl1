@@ -1,0 +1,5150 @@
+#$ TOOL ispLEVER Classic 2.1.00.02.49.20
+#$ DATE Fri May 13 09:16:58 2022
+#$ MODULE lcd1602
+#$ PINS 13 clk_50m reset lcdD_7_ lcdRs lcdRw ledEN lcdD_6_ lcdD_5_ lcdD_4_ lcdD_3_ \
+#  lcdD_2_ lcdD_1_ lcdD_0_
+#$ NODES 1256 n3033 n5851 n1_adj_390 n3040 n6242 n1_adj_200 n2_adj_391 lcdRw_c n5113 \
+#  n5999 n5849 n2_adj_201 n6122 n5723 n5744 n32 n6241 n5783 clk_50m_c n14 n6239 n1_adj_203 \
+#  n6121 reset_c i32 n5848 n2_adj_204 lcdRs_53reg n3649 n5724 n1_adj_393 n6279 n6026 n6238 \
+#  n1_adj_206 n2_adj_394 clkhz_52reg n1 n5998 n6236 n2_adj_207 n6119 cnt_171__i19 n5740 \
+#  n5846 n5782 cnt_171__i18 n3006 n5996 n6235 n1_adj_209 n6118 cnt_171__i17 n6233 \
+#  n2_adj_210 n1_adj_395 cnt_171__i16 n31 n6232 n2_adj_396 cnt_171__i15 n5845 n1_adj_212 \
+#  n6116 cnt_171__i14 n6230 n2_adj_213 n5780 cnt_171__i13 n5995 n6229 n6115 cnt_171__i12 \
+#  n5843 n1_adj_215 n1_adj_397 cnt_171__i11 n6227 n2_adj_216 n2_adj_398 cnt_171__i10 \
+#  n1_adj_1 n5993 n6226 n1_adj_217 cnt_171__i9 n2 n5842 n2_adj_218 cnt_171__i8 i1_adj_40 \
+#  n6224 n6113 cnt_171__i7 n5743 n5992 n6223 n5815 n6112 cnt_171__i6 i223 n5990 n5176 n6110 \
+#  cnt_171__i5 i216 n5718 n1_adj_20 n1_adj_220 n5779 cnt_171__i4 i209 n5989 n2_adj_21 \
+#  n2_adj_221 n6109 cnt_171__i3 i202 n5987 n1_adj_22 n1_adj_400 cnt_171__i2 i195 n5986 \
+#  n2_adj_23 n1_adj_223 n2_adj_401 cnt_171__i1 dispCount_5_N_347_0 n2_adj_224 n6107 \
+#  cnt_171__i0 lcdRs_N_620 n5258 n1_adj_25 state_FSM_i1 lcdRs_N_619 n5840 n1_adj_226 \
+#  n6106 state_FSM_i2 lcdRs_N_618 n6282 n2_adj_227 n1_adj_403 state_FSM_i3 n5169 \
+#  n2_adj_404 state_FSM_i4 n5741 n5071 n1_adj_229 n6104 state_FSM_i5 n5839 n2_adj_230 \
+#  state_FSM_i6 n6025 n1845 n5162 state_FSM_i7 n6276 n5984 n1_adj_26 n1_adj_232 n1_adj_406 \
+#  lcdD_i0_i8reg n6273 n5983 n2_adj_27 n2_adj_233 n2_adj_407 lcdD_i0_i7reg n6270 n5981 \
+#  n6103 lcdD_i0_i6reg n6267 n30 n1_adj_29 n1_adj_235 n5777 lcdD_i0_i5reg n6264 n29 \
+#  n2_adj_30 n2_adj_236 n6101 lcdD_i0_i4reg n6261 n5980 n6221 n1_adj_237 lcdD_i0_i3reg \
+#  n6258 n28 n6220 n2_adj_238 n1_adj_409 lcdD_i0_i2reg n6023 n27 n6218 n2_adj_410 \
+#  lcdD_i0_i1reg n6255 n5978 n6217 n6181 n6100 dispCount_i0_i5 n6252 n5977 n1_adj_31 \
+#  n1_adj_240 n5776 dispCount_i0_i4 n6249 n26 n2_adj_32 n2_adj_241 n6098 dispCount_i0_i3 \
+#  n6246 n5837 dispCount_i0_i2 n6243 n1_adj_33 n1_adj_243 n1_adj_412 dispCount_i0_i1 \
+#  n6240 n5737 n2_adj_34 n2_adj_244 n2_adj_413 dispCount_i0_i0 n6237 n5735 n6215 n6097 \
+#  n5141 n6234 n7 n1_adj_35 n1_adj_246 dataInBuf_i0_i254 n6231 n5650 n2_adj_36 n2_adj_247 \
+#  n5774 dataInBuf_i0_i253 n6228 n5975 n1_adj_415 dataInBuf_i0_i252 n6225 n5974 n6214 \
+#  n1_adj_249 n2_adj_416 dataInBuf_i0_i251 n6222 n5972 n5836 n2_adj_250 n6095 \
+#  dataInBuf_i0_i250 n6219 n5971 n6212 n6094 dataInBuf_i0_i249 n6216 n5969 n1_adj_38 \
+#  n1_adj_252 n5773 dataInBuf_i0_i248 n6213 n5968 n2_adj_39 n2_adj_253 n1_adj_417 \
+#  dataInBuf_i0_i246 n6210 n5966 n2_adj_418 dataInBuf_i0_i245 n6207 n5965 n1_adj_41 \
+#  n1_adj_255 n6092 dataInBuf_i0_i244 n6204 n1_adj_7 n2_adj_42 n2_adj_256 \
+#  dataInBuf_i0_i243 n6201 n2_adj_8 n6211 n6179 dataInBuf_i0_i242 n6198 n5963 n1_adj_43 \
+#  n1_adj_257 n5148 dataInBuf_i0_i241 n6195 n5962 n2_adj_44 n2_adj_258 n6091 \
+#  dataInBuf_i0_i240 n6022 n5960 n5771 n6047 n6192 n5092 n1_adj_46 n5813 n6089 \
+#  dataInBuf_i0_i238 n6189 n24 n2_adj_47 n5812 n5770 dataInBuf_i0_i237 n6186 n1_adj_260 \
+#  n1_adj_420 dataInBuf_i0_i236 n6183 n5959 n1_adj_48 n2_adj_261 n2_adj_421 \
+#  dataInBuf_i0_i235 n6180 n5957 n2_adj_49 n5810 n6088 dataInBuf_i0_i234 n6177 n5956 \
+#  n1_adj_262 n5768 dataInBuf_i0_i233 n6174 n23 n5834 n2_adj_263 n6086 dataInBuf_i0_i232 \
+#  n6171 n5833 n6178 dataInBuf_i0_i230 n6168 n5954 n6209 n1_adj_264 n1_adj_423 \
+#  dataInBuf_i0_i229 n6165 n5953 n6208 n2_adj_265 n2_adj_424 dataInBuf_i0_i228 n6162 \
+#  n5951 n1_adj_51 n1_adj_266 n6085 dataInBuf_i0_i227 n6159 n5950 n2_adj_52 n2_adj_267 \
+#  n5767 dataInBuf_i0_i226 n6156 n5948 n6083 dataInBuf_i0_i225 n6153 n5947 n1_adj_54 \
+#  n1_adj_269 dataInBuf_i0_i224 n6020 n5945 n2_adj_55 n2_adj_270 n1_adj_426 \
+#  dataInBuf_i0_i222 n6150 n5944 n5831 n1_adj_271 n2_adj_427 dataInBuf_i0_i221 n6147 \
+#  n5942 n6206 n2_adj_272 n6082 dataInBuf_i0_i220 n6144 n22 n1_adj_56 n6176 n5765 \
+#  dataInBuf_i0_i219 n6141 n2_adj_57 n1_adj_273 n6080 dataInBuf_i0_i218 n6138 n21 \
+#  n1_adj_58 n2_adj_274 dataInBuf_i0_i217 n6135 n2_adj_59 dataInBuf_i0_i216 n6132 n5941 \
+#  n6175 n1_adj_429 dataInBuf_i0_i214 n6129 n5939 n1_adj_61 n6173 n2_adj_430 \
+#  dataInBuf_i0_i213 n6126 n5938 n2_adj_62 n5809 n6079 dataInBuf_i0_i212 n6123 n5936 \
+#  n1_adj_276 dataInBuf_i0_i211 n6120 n5085 n6205 n2_adj_277 n5764 dataInBuf_i0_i210 \
+#  n6117 n5935 n5830 n6077 dataInBuf_i0_i209 n6114 n5933 n6203 n1_adj_279 n1_adj_432 \
+#  dataInBuf_i0_i208 n6111 n5932 n6202 n2_adj_280 n2_adj_433 dataInBuf_i0_i206 n6108 \
+#  n5930 n1_adj_64 n5807 n6076 dataInBuf_i0_i205 n6105 n5929 n2_adj_65 n1_adj_281 \
+#  dataInBuf_i0_i204 n6102 n5927 n2_adj_282 n5762 dataInBuf_i0_i203 n6099 n5926 n1_adj_67 \
+#  n6172 n6074 dataInBuf_i0_i202 n6096 n5924 n2_adj_68 n1_adj_283 n1_adj_435 \
+#  dataInBuf_i0_i201 n6093 n5923 n6200 n2_adj_284 n2_adj_436 dataInBuf_i0_i200 n6090 \
+#  n5828 n6073 dataInBuf_i0_i198 n6087 n5921 n1_adj_286 n5761 dataInBuf_i0_i197 n6084 \
+#  n5920 n1_adj_69 n2_adj_287 n5759 dataInBuf_i0_i196 n6081 n5918 n2_adj_70 n1_adj_288 \
+#  n6071 dataInBuf_i0_i195 n6078 n5917 n5827 n2_adj_289 n1_adj_437 dataInBuf_i0_i194 \
+#  n6075 n1_adj_71 n1_adj_290 n2_adj_438 dataInBuf_i0_i193 n6072 n5915 n2_adj_72 \
+#  n2_adj_291 dataInBuf_i0_i192 n6069 n5914 dataInBuf_i0_i190 n6066 n5912 n1_adj_74 n6170 \
+#  n5064 dataInBuf_i0_i189 n6063 n4374 n2_adj_75 n1_adj_293 n5758 dataInBuf_i0_i188 n6060 \
+#  n2_adj_294 n6070 dataInBuf_i0_i187 n6057 n5911 n6199 n6169 dataInBuf_i0_i186 n6054 \
+#  n5909 n5194 n1_adj_295 n1_adj_440 dataInBuf_i0_i185 n6051 n5908 n5825 n2_adj_296 \
+#  n2_adj_441 dataInBuf_i0_i184 n6048 n5906 n1_adj_77 n3806 n6046 n6019 n5905 n2_adj_78 \
+#  n1_adj_298 n3805 dataInBuf_i0_i182 n6045 n5903 n1_adj_79 n2_adj_299 dataInBuf_i0_i181 \
+#  n6042 n5902 n2_adj_80 n5806 n3804 dataInBuf_i0_i180 n6039 n5900 n1_adj_300 n1_adj_443 \
+#  dataInBuf_i0_i179 n6036 n5899 n6197 n2_adj_301 n2_adj_444 dataInBuf_i0_i178 n6033 \
+#  n5897 n5824 n5756 dataInBuf_i0_i177 n6030 n5896 n1_adj_82 n1_adj_303 dataInBuf_i0_i176 \
+#  n6027 n5894 n2_adj_83 n2_adj_304 n6068 dataInBuf_i0_i174 n6024 n5893 n6167 n1_adj_446 \
+#  dataInBuf_i0_i173 n6021 n5891 n1_adj_85 n1_adj_305 n2_adj_447 dataInBuf_i0_i172 n6018 \
+#  n5890 n2_adj_86 n2_adj_306 n5755 dataInBuf_i0_i171 n6015 n5888 n1_adj_307 \
+#  dataInBuf_i0_i170 n6012 n5887 n1_adj_88 n2_adj_308 n1_adj_449 dataInBuf_i0_i169 n6009 \
+#  n3644 n2_adj_89 n2_adj_450 dataInBuf_i0_i168 n6006 n1_adj_9 n5804 n6067 \
+#  dataInBuf_i0_i166 n6003 n1_adj_91 n1_adj_310 n5753 dataInBuf_i0_i165 n6000 n5885 \
+#  n2_adj_92 n2_adj_311 dataInBuf_i0_i164 n5997 n1_adj_10 n6196 n5752 dataInBuf_i0_i163 \
+#  n5994 n5 n1_adj_93 n1_adj_313 n1_adj_452 dataInBuf_i0_i162 n5991 n5884 n2_adj_94 \
+#  n2_adj_314 n2_adj_453 dataInBuf_i0_i161 n5988 n5822 n6065 dataInBuf_i0_i160 n5985 \
+#  n1_adj_95 n1_adj_316 dataInBuf_i0_i158 n5982 n5882 n2_adj_96 n2_adj_317 n1_adj_455 \
+#  dataInBuf_i0_i157 n5979 n5881 n6194 n1_adj_318 n2_adj_456 dataInBuf_i0_i156 n5976 \
+#  n5879 n1_adj_97 n2_adj_319 n5750 dataInBuf_i0_i155 n5973 n5878 n2_adj_98 n6064 \
+#  dataInBuf_i0_i154 n5970 n5876 n1_adj_321 n6062 dataInBuf_i0_i153 n5967 n5875 n6193 \
+#  n2_adj_322 n1_adj_457 dataInBuf_i0_i152 n5964 n5873 n1_adj_100 n6166 n2_adj_458 \
+#  dataInBuf_i0_i150 n4376 n2_adj_101 n1_adj_323 n5749 dataInBuf_i0_i149 n5961 n5726 \
+#  n2_adj_324 dataInBuf_i0_i148 n5958 n6293 n1_adj_103 n5803 dataInBuf_i0_i147 n5955 \
+#  n1_adj_11 n2_adj_104 n1_adj_325 n5720 dataInBuf_i0_i146 n5952 n2_adj_12 n2_adj_326 \
+#  n5747 dataInBuf_i0_i145 n5949 n5872 n1_adj_106 n5734 dataInBuf_i0_i144 n5946 \
+#  n2_adj_107 n6164 dataInBuf_i0_i142 n5943 n5870 n5801 dataInBuf_i0_i141 n5940 n6285 \
+#  n1_adj_109 n6163 i2912 dataInBuf_i0_i140 n5937 n33 n2_adj_110 n1_adj_328 n1_adj_462 \
+#  dataInBuf_i0_i139 n5934 n6290 n2_adj_329 n2_adj_463 dataInBuf_i0_i138 n5931 n5869 \
+#  n1_adj_112 n6161 dataInBuf_i0_i137 n5928 n2_adj_113 n1_adj_330 dataInBuf_i0_i136 \
+#  n5925 n40 n2_adj_331 n6061 n6044 n5922 n5867 n1_adj_115 n1_adj_332 n5746 \
+#  dataInBuf_i0_i134 n5919 n6287 n2_adj_116 n2_adj_333 n1_adj_465 dataInBuf_i0_i133 \
+#  n5916 n44 n1_adj_117 n2_adj_466 dataInBuf_i0_i132 n5913 n3731 n2_adj_118 n1_adj_335 \
+#  n6059 dataInBuf_i0_i131 n5910 n6286 n2_adj_336 dataInBuf_i0_i130 n5907 n6191 n6058 \
+#  dataInBuf_i0_i129 n5904 n6190 n1_adj_338 n1_adj_468 dataInBuf_i0_i128 n5901 n5821 \
+#  n2_adj_339 n2_adj_469 dataInBuf_i0_i126 n5898 n5866 n1_adj_120 n1_adj_340 n6056 \
+#  dataInBuf_i0_i125 n5895 n6283 n2_adj_121 n2_adj_341 dataInBuf_i0_i124 n5892 n6160 \
+#  n6055 dataInBuf_i0_i123 n5889 n1_adj_123 n1_adj_342 n5729 dataInBuf_i0_i122 n5886 n60 \
+#  n2_adj_124 n2_adj_343 n1_adj_471 dataInBuf_i0_i121 n5883 n6280 n2_adj_472 \
+#  dataInBuf_i0_i120 n5880 n1_adj_126 n6158 n6053 dataInBuf_i0_i118 n5877 n2_adj_127 \
+#  n1_adj_345 dataInBuf_i0_i117 n5874 n2_adj_346 n6052 dataInBuf_i0_i116 n5871 \
+#  n1_adj_129 n1_adj_474 dataInBuf_i0_i115 n5868 n5739 n2_adj_130 n1_adj_348 n2_adj_475 \
+#  dataInBuf_i0_i114 n5865 i2357 n2_adj_349 n6050 dataInBuf_i0_i113 n5862 i2350 \
+#  n1_adj_132 n5800 n3800 dataInBuf_i0_i112 n5859 i2343 n2_adj_133 n1_adj_350 n5134 n5856 \
+#  i2336 n2_adj_351 dataInBuf_i0_i110 n5853 i2329 n1_adj_135 n1_adj_477 \
+#  dataInBuf_i0_i109 n5850 i2308 n2_adj_136 n1_adj_353 n2_adj_478 dataInBuf_i0_i108 \
+#  n5847 n2212 n1_adj_137 n2_adj_354 dataInBuf_i0_i107 n5844 i2301 n2_adj_138 \
+#  dataInBuf_i0_i106 n5841 i2315 n1_adj_356 n1_adj_479 dataInBuf_i0_i105 n5838 i2322 \
+#  n5819 n2_adj_357 n2_adj_480 dataInBuf_i0_i104 n5835 n3637 n6157 n6043 n5832 n1_adj_140 \
+#  n1_adj_358 dataInBuf_i0_i102 n5829 n6289 n2_adj_141 n2_adj_359 dataInBuf_i0_i101 \
+#  n5826 n6292 n1_adj_360 n6049 dataInBuf_i0_i100 n5823 n3729 n1_adj_143 n2_adj_361 \
+#  dataInBuf_i0_i99 n5820 n3100 n2_adj_144 dataInBuf_i0_i98 n5817 n5864 n6155 \
+#  dataInBuf_i0_i97 n6017 n2185 n1_adj_146 n5798 n1_adj_482 dataInBuf_i0_i96 n5814 \
+#  n2_adj_13 n2_adj_147 n6154 dataInBuf_i0_i94 n5811 n3012 n1_adj_363 dataInBuf_i0_i93 \
+#  n5808 i2294 n1_adj_149 n2_adj_364 dataInBuf_i0_i92 n5805 i2287 n2_adj_150 n5797 \
+#  dataInBuf_i0_i91 n5802 i2280 dataInBuf_i0_i90 n6016 n20 n1_adj_152 n6152 \
+#  dataInBuf_i0_i89 n5799 n2_adj_153 n5795 dataInBuf_i0_i88 n5796 n1_adj_365 \
+#  dataInBuf_i0_i86 n5793 n1_adj_155 n2_adj_366 dataInBuf_i0_i85 n5790 n2_adj_156 n6151 \
+#  dataInBuf_i0_i84 n5787 n6188 dataInBuf_i0_i83 n5784 n1_adj_157 dataInBuf_i0_i82 n5781 \
+#  n2_adj_158 n1_adj_368 dataInBuf_i0_i81 n5778 n3054 n2_adj_369 dataInBuf_i0_i80 n5106 \
+#  i2273 n6187 n6149 n6041 n5775 i2266 n5818 n5794 dataInBuf_i0_i78 n5772 n6185 n6148 \
+#  dataInBuf_i0_i77 n5769 n1_adj_160 dataInBuf_i0_i74 n5766 n2_adj_161 n1_adj_371 \
+#  dataInBuf_i0_i73 n5763 n2_adj_372 dataInBuf_i0_i72 n5760 n6277 n1_adj_163 n6146 \
+#  dataInBuf_i0_i70 n5721 n6275 n2_adj_164 n5792 dataInBuf_i0_i69 n5099 n5863 n6145 \
+#  dataInBuf_i0_i66 n5757 n5727 n1_adj_166 dataInBuf_i0_i65 n5754 n6274 n2_adj_167 \
+#  n1_adj_374 dataInBuf_i0_i64 n5751 n6272 n2_adj_375 dataInBuf_i0_i62 n6014 n1_adj_15 \
+#  n1_adj_169 n6143 dataInBuf_i0_i61 n5719 n2_adj_16 n2_adj_170 n5791 n5057 n6013 n6142 \
+#  n5127 n5748 n6271 n1_adj_172 n5789 dataInBuf_i0_i58 n36 n5861 n2_adj_173 n1_adj_376 \
+#  dataInBuf_i0_i57 n6269 n2_adj_377 dataInBuf_i0_i56 n6011 n6268 n1_adj_175 n6140 \
+#  dataInBuf_i0_i54 n5745 n6266 n2_adj_176 n5788 dataInBuf_i0_i53 n6010 n5860 n5816 n6139 \
+#  n5120 n5742 n6265 n1_adj_177 n6137 dataInBuf_i0_i50 n6008 n6263 n2_adj_178 n1_adj_378 \
+#  dataInBuf_i0_i49 n6007 n5728 n2_adj_379 dataInBuf_i0_i48 n6184 dataInBuf_i0_i46 n35 \
+#  n5858 n5155 dataInBuf_i0_i45 n1_adj_2 n5078 n1_adj_180 n6136 dataInBuf_i0_i42 n2_adj_3 \
+#  n5725 n2_adj_181 n6134 dataInBuf_i0_i41 i2259 n6262 n6133 dataInBuf_i0_i38 i2252 n6260 \
+#  n1_adj_183 n6131 dataInBuf_i0_i37 i2245 n6259 n2_adj_184 n1_adj_381 dataInBuf_i0_i34 \
+#  i2238 n6257 n2_adj_382 dataInBuf_i0_i33 i2231 n5857 n1_adj_186 n6130 n6040 n6256 \
+#  n2_adj_187 dataInBuf_i0_i29 n2_adj_4 n6254 n6038 n1_adj_5 n6253 n1_adj_189 n1_adj_384 \
+#  dataInBuf_i0_i21 lcdRs_N_617 n5855 n2_adj_190 n2_adj_385 n6037 n3117 n5854 n6128 n6035 \
+#  n34 n6251 n1_adj_192 n5786 dataInBuf_i0_i13 n14_adj_6 n6250 n2_adj_193 n6127 n6034 \
+#  n1_adj_18 dataInBuf_i0_i5 n2_adj_19 n1_adj_195 n1_adj_387 n6032 n6005 n6248 n2_adj_196 \
+#  n2_adj_388 n6031 n6247 n6182 n6125 n6029 n6004 n5852 n1_adj_197 n5785 n6028 n6002 n6245 \
+#  n2_adj_198 n6124 n3047 n6001 n6244
+.model lcd1602
+.inputs clk_50m.BLIF reset.BLIF n3033.BLIF n5851.BLIF n1_adj_390.BLIF \
+n3040.BLIF n6242.BLIF n1_adj_200.BLIF n2_adj_391.BLIF lcdRw_c.BLIF n5113.BLIF \
+n5999.BLIF n5849.BLIF n2_adj_201.BLIF n6122.BLIF n5723.BLIF n5744.BLIF \
+n32.BLIF n6241.BLIF n5783.BLIF clk_50m_c.BLIF n14.BLIF n6239.BLIF \
+n1_adj_203.BLIF n6121.BLIF reset_c.BLIF i32.BLIF n5848.BLIF n2_adj_204.BLIF \
+lcdRs_53reg.BLIF n3649.BLIF n5724.BLIF n1_adj_393.BLIF n6279.BLIF n6026.BLIF \
+n6238.BLIF n1_adj_206.BLIF n2_adj_394.BLIF clkhz_52reg.BLIF n1.BLIF n5998.BLIF \
+n6236.BLIF n2_adj_207.BLIF n6119.BLIF cnt_171__i19.BLIF n5740.BLIF n5846.BLIF \
+n5782.BLIF cnt_171__i18.BLIF n3006.BLIF n5996.BLIF n6235.BLIF n1_adj_209.BLIF \
+n6118.BLIF cnt_171__i17.BLIF n6233.BLIF n2_adj_210.BLIF n1_adj_395.BLIF \
+cnt_171__i16.BLIF n31.BLIF n6232.BLIF n2_adj_396.BLIF cnt_171__i15.BLIF \
+n5845.BLIF n1_adj_212.BLIF n6116.BLIF cnt_171__i14.BLIF n6230.BLIF \
+n2_adj_213.BLIF n5780.BLIF cnt_171__i13.BLIF n5995.BLIF n6229.BLIF n6115.BLIF \
+cnt_171__i12.BLIF n5843.BLIF n1_adj_215.BLIF n1_adj_397.BLIF cnt_171__i11.BLIF \
+n6227.BLIF n2_adj_216.BLIF n2_adj_398.BLIF cnt_171__i10.BLIF n1_adj_1.BLIF \
+n5993.BLIF n6226.BLIF n1_adj_217.BLIF cnt_171__i9.BLIF n2.BLIF n5842.BLIF \
+n2_adj_218.BLIF cnt_171__i8.BLIF i1_adj_40.BLIF n6224.BLIF n6113.BLIF \
+cnt_171__i7.BLIF n5743.BLIF n5992.BLIF n6223.BLIF n5815.BLIF n6112.BLIF \
+cnt_171__i6.BLIF i223.BLIF n5990.BLIF n5176.BLIF n6110.BLIF cnt_171__i5.BLIF \
+i216.BLIF n5718.BLIF n1_adj_20.BLIF n1_adj_220.BLIF n5779.BLIF \
+cnt_171__i4.BLIF i209.BLIF n5989.BLIF n2_adj_21.BLIF n2_adj_221.BLIF \
+n6109.BLIF cnt_171__i3.BLIF i202.BLIF n5987.BLIF n1_adj_22.BLIF \
+n1_adj_400.BLIF cnt_171__i2.BLIF i195.BLIF n5986.BLIF n2_adj_23.BLIF \
+n1_adj_223.BLIF n2_adj_401.BLIF cnt_171__i1.BLIF dispCount_5_N_347_0.BLIF \
+n2_adj_224.BLIF n6107.BLIF cnt_171__i0.BLIF lcdRs_N_620.BLIF n5258.BLIF \
+n1_adj_25.BLIF state_FSM_i1.BLIF lcdRs_N_619.BLIF n5840.BLIF n1_adj_226.BLIF \
+n6106.BLIF state_FSM_i2.BLIF lcdRs_N_618.BLIF n6282.BLIF n2_adj_227.BLIF \
+n1_adj_403.BLIF state_FSM_i3.BLIF n5169.BLIF n2_adj_404.BLIF state_FSM_i4.BLIF \
+n5741.BLIF n5071.BLIF n1_adj_229.BLIF n6104.BLIF state_FSM_i5.BLIF n5839.BLIF \
+n2_adj_230.BLIF state_FSM_i6.BLIF n6025.BLIF n1845.BLIF n5162.BLIF \
+state_FSM_i7.BLIF n6276.BLIF n5984.BLIF n1_adj_26.BLIF n1_adj_232.BLIF \
+n1_adj_406.BLIF lcdD_i0_i8reg.BLIF n6273.BLIF n5983.BLIF n2_adj_27.BLIF \
+n2_adj_233.BLIF n2_adj_407.BLIF lcdD_i0_i7reg.BLIF n6270.BLIF n5981.BLIF \
+n6103.BLIF lcdD_i0_i6reg.BLIF n6267.BLIF n30.BLIF n1_adj_29.BLIF \
+n1_adj_235.BLIF n5777.BLIF lcdD_i0_i5reg.BLIF n6264.BLIF n29.BLIF \
+n2_adj_30.BLIF n2_adj_236.BLIF n6101.BLIF lcdD_i0_i4reg.BLIF n6261.BLIF \
+n5980.BLIF n6221.BLIF n1_adj_237.BLIF lcdD_i0_i3reg.BLIF n6258.BLIF n28.BLIF \
+n6220.BLIF n2_adj_238.BLIF n1_adj_409.BLIF lcdD_i0_i2reg.BLIF n6023.BLIF \
+n27.BLIF n6218.BLIF n2_adj_410.BLIF lcdD_i0_i1reg.BLIF n6255.BLIF n5978.BLIF \
+n6217.BLIF n6181.BLIF n6100.BLIF dispCount_i0_i5.BLIF n6252.BLIF n5977.BLIF \
+n1_adj_31.BLIF n1_adj_240.BLIF n5776.BLIF dispCount_i0_i4.BLIF n6249.BLIF \
+n26.BLIF n2_adj_32.BLIF n2_adj_241.BLIF n6098.BLIF dispCount_i0_i3.BLIF \
+n6246.BLIF n5837.BLIF dispCount_i0_i2.BLIF n6243.BLIF n1_adj_33.BLIF \
+n1_adj_243.BLIF n1_adj_412.BLIF dispCount_i0_i1.BLIF n6240.BLIF n5737.BLIF \
+n2_adj_34.BLIF n2_adj_244.BLIF n2_adj_413.BLIF dispCount_i0_i0.BLIF n6237.BLIF \
+n5735.BLIF n6215.BLIF n6097.BLIF n5141.BLIF n6234.BLIF n7.BLIF n1_adj_35.BLIF \
+n1_adj_246.BLIF dataInBuf_i0_i254.BLIF n6231.BLIF n5650.BLIF n2_adj_36.BLIF \
+n2_adj_247.BLIF n5774.BLIF dataInBuf_i0_i253.BLIF n6228.BLIF n5975.BLIF \
+n1_adj_415.BLIF dataInBuf_i0_i252.BLIF n6225.BLIF n5974.BLIF n6214.BLIF \
+n1_adj_249.BLIF n2_adj_416.BLIF dataInBuf_i0_i251.BLIF n6222.BLIF n5972.BLIF \
+n5836.BLIF n2_adj_250.BLIF n6095.BLIF dataInBuf_i0_i250.BLIF n6219.BLIF \
+n5971.BLIF n6212.BLIF n6094.BLIF dataInBuf_i0_i249.BLIF n6216.BLIF n5969.BLIF \
+n1_adj_38.BLIF n1_adj_252.BLIF n5773.BLIF dataInBuf_i0_i248.BLIF n6213.BLIF \
+n5968.BLIF n2_adj_39.BLIF n2_adj_253.BLIF n1_adj_417.BLIF \
+dataInBuf_i0_i246.BLIF n6210.BLIF n5966.BLIF n2_adj_418.BLIF \
+dataInBuf_i0_i245.BLIF n6207.BLIF n5965.BLIF n1_adj_41.BLIF n1_adj_255.BLIF \
+n6092.BLIF dataInBuf_i0_i244.BLIF n6204.BLIF n1_adj_7.BLIF n2_adj_42.BLIF \
+n2_adj_256.BLIF dataInBuf_i0_i243.BLIF n6201.BLIF n2_adj_8.BLIF n6211.BLIF \
+n6179.BLIF dataInBuf_i0_i242.BLIF n6198.BLIF n5963.BLIF n1_adj_43.BLIF \
+n1_adj_257.BLIF n5148.BLIF dataInBuf_i0_i241.BLIF n6195.BLIF n5962.BLIF \
+n2_adj_44.BLIF n2_adj_258.BLIF n6091.BLIF dataInBuf_i0_i240.BLIF n6022.BLIF \
+n5960.BLIF n5771.BLIF n6047.BLIF n6192.BLIF n5092.BLIF n1_adj_46.BLIF \
+n5813.BLIF n6089.BLIF dataInBuf_i0_i238.BLIF n6189.BLIF n24.BLIF \
+n2_adj_47.BLIF n5812.BLIF n5770.BLIF dataInBuf_i0_i237.BLIF n6186.BLIF \
+n1_adj_260.BLIF n1_adj_420.BLIF dataInBuf_i0_i236.BLIF n6183.BLIF n5959.BLIF \
+n1_adj_48.BLIF n2_adj_261.BLIF n2_adj_421.BLIF dataInBuf_i0_i235.BLIF \
+n6180.BLIF n5957.BLIF n2_adj_49.BLIF n5810.BLIF n6088.BLIF \
+dataInBuf_i0_i234.BLIF n6177.BLIF n5956.BLIF n1_adj_262.BLIF n5768.BLIF \
+dataInBuf_i0_i233.BLIF n6174.BLIF n23.BLIF n5834.BLIF n2_adj_263.BLIF \
+n6086.BLIF dataInBuf_i0_i232.BLIF n6171.BLIF n5833.BLIF n6178.BLIF \
+dataInBuf_i0_i230.BLIF n6168.BLIF n5954.BLIF n6209.BLIF n1_adj_264.BLIF \
+n1_adj_423.BLIF dataInBuf_i0_i229.BLIF n6165.BLIF n5953.BLIF n6208.BLIF \
+n2_adj_265.BLIF n2_adj_424.BLIF dataInBuf_i0_i228.BLIF n6162.BLIF n5951.BLIF \
+n1_adj_51.BLIF n1_adj_266.BLIF n6085.BLIF dataInBuf_i0_i227.BLIF n6159.BLIF \
+n5950.BLIF n2_adj_52.BLIF n2_adj_267.BLIF n5767.BLIF dataInBuf_i0_i226.BLIF \
+n6156.BLIF n5948.BLIF n6083.BLIF dataInBuf_i0_i225.BLIF n6153.BLIF n5947.BLIF \
+n1_adj_54.BLIF n1_adj_269.BLIF dataInBuf_i0_i224.BLIF n6020.BLIF n5945.BLIF \
+n2_adj_55.BLIF n2_adj_270.BLIF n1_adj_426.BLIF dataInBuf_i0_i222.BLIF \
+n6150.BLIF n5944.BLIF n5831.BLIF n1_adj_271.BLIF n2_adj_427.BLIF \
+dataInBuf_i0_i221.BLIF n6147.BLIF n5942.BLIF n6206.BLIF n2_adj_272.BLIF \
+n6082.BLIF dataInBuf_i0_i220.BLIF n6144.BLIF n22.BLIF n1_adj_56.BLIF \
+n6176.BLIF n5765.BLIF dataInBuf_i0_i219.BLIF n6141.BLIF n2_adj_57.BLIF \
+n1_adj_273.BLIF n6080.BLIF dataInBuf_i0_i218.BLIF n6138.BLIF n21.BLIF \
+n1_adj_58.BLIF n2_adj_274.BLIF dataInBuf_i0_i217.BLIF n6135.BLIF \
+n2_adj_59.BLIF dataInBuf_i0_i216.BLIF n6132.BLIF n5941.BLIF n6175.BLIF \
+n1_adj_429.BLIF dataInBuf_i0_i214.BLIF n6129.BLIF n5939.BLIF n1_adj_61.BLIF \
+n6173.BLIF n2_adj_430.BLIF dataInBuf_i0_i213.BLIF n6126.BLIF n5938.BLIF \
+n2_adj_62.BLIF n5809.BLIF n6079.BLIF dataInBuf_i0_i212.BLIF n6123.BLIF \
+n5936.BLIF n1_adj_276.BLIF dataInBuf_i0_i211.BLIF n6120.BLIF n5085.BLIF \
+n6205.BLIF n2_adj_277.BLIF n5764.BLIF dataInBuf_i0_i210.BLIF n6117.BLIF \
+n5935.BLIF n5830.BLIF n6077.BLIF dataInBuf_i0_i209.BLIF n6114.BLIF n5933.BLIF \
+n6203.BLIF n1_adj_279.BLIF n1_adj_432.BLIF dataInBuf_i0_i208.BLIF n6111.BLIF \
+n5932.BLIF n6202.BLIF n2_adj_280.BLIF n2_adj_433.BLIF dataInBuf_i0_i206.BLIF \
+n6108.BLIF n5930.BLIF n1_adj_64.BLIF n5807.BLIF n6076.BLIF \
+dataInBuf_i0_i205.BLIF n6105.BLIF n5929.BLIF n2_adj_65.BLIF n1_adj_281.BLIF \
+dataInBuf_i0_i204.BLIF n6102.BLIF n5927.BLIF n2_adj_282.BLIF n5762.BLIF \
+dataInBuf_i0_i203.BLIF n6099.BLIF n5926.BLIF n1_adj_67.BLIF n6172.BLIF \
+n6074.BLIF dataInBuf_i0_i202.BLIF n6096.BLIF n5924.BLIF n2_adj_68.BLIF \
+n1_adj_283.BLIF n1_adj_435.BLIF dataInBuf_i0_i201.BLIF n6093.BLIF n5923.BLIF \
+n6200.BLIF n2_adj_284.BLIF n2_adj_436.BLIF dataInBuf_i0_i200.BLIF n6090.BLIF \
+n5828.BLIF n6073.BLIF dataInBuf_i0_i198.BLIF n6087.BLIF n5921.BLIF \
+n1_adj_286.BLIF n5761.BLIF dataInBuf_i0_i197.BLIF n6084.BLIF n5920.BLIF \
+n1_adj_69.BLIF n2_adj_287.BLIF n5759.BLIF dataInBuf_i0_i196.BLIF n6081.BLIF \
+n5918.BLIF n2_adj_70.BLIF n1_adj_288.BLIF n6071.BLIF dataInBuf_i0_i195.BLIF \
+n6078.BLIF n5917.BLIF n5827.BLIF n2_adj_289.BLIF n1_adj_437.BLIF \
+dataInBuf_i0_i194.BLIF n6075.BLIF n1_adj_71.BLIF n1_adj_290.BLIF \
+n2_adj_438.BLIF dataInBuf_i0_i193.BLIF n6072.BLIF n5915.BLIF n2_adj_72.BLIF \
+n2_adj_291.BLIF dataInBuf_i0_i192.BLIF n6069.BLIF n5914.BLIF \
+dataInBuf_i0_i190.BLIF n6066.BLIF n5912.BLIF n1_adj_74.BLIF n6170.BLIF \
+n5064.BLIF dataInBuf_i0_i189.BLIF n6063.BLIF n4374.BLIF n2_adj_75.BLIF \
+n1_adj_293.BLIF n5758.BLIF dataInBuf_i0_i188.BLIF n6060.BLIF n2_adj_294.BLIF \
+n6070.BLIF dataInBuf_i0_i187.BLIF n6057.BLIF n5911.BLIF n6199.BLIF n6169.BLIF \
+dataInBuf_i0_i186.BLIF n6054.BLIF n5909.BLIF n5194.BLIF n1_adj_295.BLIF \
+n1_adj_440.BLIF dataInBuf_i0_i185.BLIF n6051.BLIF n5908.BLIF n5825.BLIF \
+n2_adj_296.BLIF n2_adj_441.BLIF dataInBuf_i0_i184.BLIF n6048.BLIF n5906.BLIF \
+n1_adj_77.BLIF n3806.BLIF n6046.BLIF n6019.BLIF n5905.BLIF n2_adj_78.BLIF \
+n1_adj_298.BLIF n3805.BLIF dataInBuf_i0_i182.BLIF n6045.BLIF n5903.BLIF \
+n1_adj_79.BLIF n2_adj_299.BLIF dataInBuf_i0_i181.BLIF n6042.BLIF n5902.BLIF \
+n2_adj_80.BLIF n5806.BLIF n3804.BLIF dataInBuf_i0_i180.BLIF n6039.BLIF \
+n5900.BLIF n1_adj_300.BLIF n1_adj_443.BLIF dataInBuf_i0_i179.BLIF n6036.BLIF \
+n5899.BLIF n6197.BLIF n2_adj_301.BLIF n2_adj_444.BLIF dataInBuf_i0_i178.BLIF \
+n6033.BLIF n5897.BLIF n5824.BLIF n5756.BLIF dataInBuf_i0_i177.BLIF n6030.BLIF \
+n5896.BLIF n1_adj_82.BLIF n1_adj_303.BLIF dataInBuf_i0_i176.BLIF n6027.BLIF \
+n5894.BLIF n2_adj_83.BLIF n2_adj_304.BLIF n6068.BLIF dataInBuf_i0_i174.BLIF \
+n6024.BLIF n5893.BLIF n6167.BLIF n1_adj_446.BLIF dataInBuf_i0_i173.BLIF \
+n6021.BLIF n5891.BLIF n1_adj_85.BLIF n1_adj_305.BLIF n2_adj_447.BLIF \
+dataInBuf_i0_i172.BLIF n6018.BLIF n5890.BLIF n2_adj_86.BLIF n2_adj_306.BLIF \
+n5755.BLIF dataInBuf_i0_i171.BLIF n6015.BLIF n5888.BLIF n1_adj_307.BLIF \
+dataInBuf_i0_i170.BLIF n6012.BLIF n5887.BLIF n1_adj_88.BLIF n2_adj_308.BLIF \
+n1_adj_449.BLIF dataInBuf_i0_i169.BLIF n6009.BLIF n3644.BLIF n2_adj_89.BLIF \
+n2_adj_450.BLIF dataInBuf_i0_i168.BLIF n6006.BLIF n1_adj_9.BLIF n5804.BLIF \
+n6067.BLIF dataInBuf_i0_i166.BLIF n6003.BLIF n1_adj_91.BLIF n1_adj_310.BLIF \
+n5753.BLIF dataInBuf_i0_i165.BLIF n6000.BLIF n5885.BLIF n2_adj_92.BLIF \
+n2_adj_311.BLIF dataInBuf_i0_i164.BLIF n5997.BLIF n1_adj_10.BLIF n6196.BLIF \
+n5752.BLIF dataInBuf_i0_i163.BLIF n5994.BLIF n5.BLIF n1_adj_93.BLIF \
+n1_adj_313.BLIF n1_adj_452.BLIF dataInBuf_i0_i162.BLIF n5991.BLIF n5884.BLIF \
+n2_adj_94.BLIF n2_adj_314.BLIF n2_adj_453.BLIF dataInBuf_i0_i161.BLIF \
+n5988.BLIF n5822.BLIF n6065.BLIF dataInBuf_i0_i160.BLIF n5985.BLIF \
+n1_adj_95.BLIF n1_adj_316.BLIF dataInBuf_i0_i158.BLIF n5982.BLIF n5882.BLIF \
+n2_adj_96.BLIF n2_adj_317.BLIF n1_adj_455.BLIF dataInBuf_i0_i157.BLIF \
+n5979.BLIF n5881.BLIF n6194.BLIF n1_adj_318.BLIF n2_adj_456.BLIF \
+dataInBuf_i0_i156.BLIF n5976.BLIF n5879.BLIF n1_adj_97.BLIF n2_adj_319.BLIF \
+n5750.BLIF dataInBuf_i0_i155.BLIF n5973.BLIF n5878.BLIF n2_adj_98.BLIF \
+n6064.BLIF dataInBuf_i0_i154.BLIF n5970.BLIF n5876.BLIF n1_adj_321.BLIF \
+n6062.BLIF dataInBuf_i0_i153.BLIF n5967.BLIF n5875.BLIF n6193.BLIF \
+n2_adj_322.BLIF n1_adj_457.BLIF dataInBuf_i0_i152.BLIF n5964.BLIF n5873.BLIF \
+n1_adj_100.BLIF n6166.BLIF n2_adj_458.BLIF dataInBuf_i0_i150.BLIF n4376.BLIF \
+n2_adj_101.BLIF n1_adj_323.BLIF n5749.BLIF dataInBuf_i0_i149.BLIF n5961.BLIF \
+n5726.BLIF n2_adj_324.BLIF dataInBuf_i0_i148.BLIF n5958.BLIF n6293.BLIF \
+n1_adj_103.BLIF n5803.BLIF dataInBuf_i0_i147.BLIF n5955.BLIF n1_adj_11.BLIF \
+n2_adj_104.BLIF n1_adj_325.BLIF n5720.BLIF dataInBuf_i0_i146.BLIF n5952.BLIF \
+n2_adj_12.BLIF n2_adj_326.BLIF n5747.BLIF dataInBuf_i0_i145.BLIF n5949.BLIF \
+n5872.BLIF n1_adj_106.BLIF n5734.BLIF dataInBuf_i0_i144.BLIF n5946.BLIF \
+n2_adj_107.BLIF n6164.BLIF dataInBuf_i0_i142.BLIF n5943.BLIF n5870.BLIF \
+n5801.BLIF dataInBuf_i0_i141.BLIF n5940.BLIF n6285.BLIF n1_adj_109.BLIF \
+n6163.BLIF i2912.BLIF dataInBuf_i0_i140.BLIF n5937.BLIF n33.BLIF \
+n2_adj_110.BLIF n1_adj_328.BLIF n1_adj_462.BLIF dataInBuf_i0_i139.BLIF \
+n5934.BLIF n6290.BLIF n2_adj_329.BLIF n2_adj_463.BLIF dataInBuf_i0_i138.BLIF \
+n5931.BLIF n5869.BLIF n1_adj_112.BLIF n6161.BLIF dataInBuf_i0_i137.BLIF \
+n5928.BLIF n2_adj_113.BLIF n1_adj_330.BLIF dataInBuf_i0_i136.BLIF n5925.BLIF \
+n40.BLIF n2_adj_331.BLIF n6061.BLIF n6044.BLIF n5922.BLIF n5867.BLIF \
+n1_adj_115.BLIF n1_adj_332.BLIF n5746.BLIF dataInBuf_i0_i134.BLIF n5919.BLIF \
+n6287.BLIF n2_adj_116.BLIF n2_adj_333.BLIF n1_adj_465.BLIF \
+dataInBuf_i0_i133.BLIF n5916.BLIF n44.BLIF n1_adj_117.BLIF n2_adj_466.BLIF \
+dataInBuf_i0_i132.BLIF n5913.BLIF n3731.BLIF n2_adj_118.BLIF n1_adj_335.BLIF \
+n6059.BLIF dataInBuf_i0_i131.BLIF n5910.BLIF n6286.BLIF n2_adj_336.BLIF \
+dataInBuf_i0_i130.BLIF n5907.BLIF n6191.BLIF n6058.BLIF dataInBuf_i0_i129.BLIF \
+n5904.BLIF n6190.BLIF n1_adj_338.BLIF n1_adj_468.BLIF dataInBuf_i0_i128.BLIF \
+n5901.BLIF n5821.BLIF n2_adj_339.BLIF n2_adj_469.BLIF dataInBuf_i0_i126.BLIF \
+n5898.BLIF n5866.BLIF n1_adj_120.BLIF n1_adj_340.BLIF n6056.BLIF \
+dataInBuf_i0_i125.BLIF n5895.BLIF n6283.BLIF n2_adj_121.BLIF n2_adj_341.BLIF \
+dataInBuf_i0_i124.BLIF n5892.BLIF n6160.BLIF n6055.BLIF dataInBuf_i0_i123.BLIF \
+n5889.BLIF n1_adj_123.BLIF n1_adj_342.BLIF n5729.BLIF dataInBuf_i0_i122.BLIF \
+n5886.BLIF n60.BLIF n2_adj_124.BLIF n2_adj_343.BLIF n1_adj_471.BLIF \
+dataInBuf_i0_i121.BLIF n5883.BLIF n6280.BLIF n2_adj_472.BLIF \
+dataInBuf_i0_i120.BLIF n5880.BLIF n1_adj_126.BLIF n6158.BLIF n6053.BLIF \
+dataInBuf_i0_i118.BLIF n5877.BLIF n2_adj_127.BLIF n1_adj_345.BLIF \
+dataInBuf_i0_i117.BLIF n5874.BLIF n2_adj_346.BLIF n6052.BLIF \
+dataInBuf_i0_i116.BLIF n5871.BLIF n1_adj_129.BLIF n1_adj_474.BLIF \
+dataInBuf_i0_i115.BLIF n5868.BLIF n5739.BLIF n2_adj_130.BLIF n1_adj_348.BLIF \
+n2_adj_475.BLIF dataInBuf_i0_i114.BLIF n5865.BLIF i2357.BLIF n2_adj_349.BLIF \
+n6050.BLIF dataInBuf_i0_i113.BLIF n5862.BLIF i2350.BLIF n1_adj_132.BLIF \
+n5800.BLIF n3800.BLIF dataInBuf_i0_i112.BLIF n5859.BLIF i2343.BLIF \
+n2_adj_133.BLIF n1_adj_350.BLIF n5134.BLIF n5856.BLIF i2336.BLIF \
+n2_adj_351.BLIF dataInBuf_i0_i110.BLIF n5853.BLIF i2329.BLIF n1_adj_135.BLIF \
+n1_adj_477.BLIF dataInBuf_i0_i109.BLIF n5850.BLIF i2308.BLIF n2_adj_136.BLIF \
+n1_adj_353.BLIF n2_adj_478.BLIF dataInBuf_i0_i108.BLIF n5847.BLIF n2212.BLIF \
+n1_adj_137.BLIF n2_adj_354.BLIF dataInBuf_i0_i107.BLIF n5844.BLIF i2301.BLIF \
+n2_adj_138.BLIF dataInBuf_i0_i106.BLIF n5841.BLIF i2315.BLIF n1_adj_356.BLIF \
+n1_adj_479.BLIF dataInBuf_i0_i105.BLIF n5838.BLIF i2322.BLIF n5819.BLIF \
+n2_adj_357.BLIF n2_adj_480.BLIF dataInBuf_i0_i104.BLIF n5835.BLIF n3637.BLIF \
+n6157.BLIF n6043.BLIF n5832.BLIF n1_adj_140.BLIF n1_adj_358.BLIF \
+dataInBuf_i0_i102.BLIF n5829.BLIF n6289.BLIF n2_adj_141.BLIF n2_adj_359.BLIF \
+dataInBuf_i0_i101.BLIF n5826.BLIF n6292.BLIF n1_adj_360.BLIF n6049.BLIF \
+dataInBuf_i0_i100.BLIF n5823.BLIF n3729.BLIF n1_adj_143.BLIF n2_adj_361.BLIF \
+dataInBuf_i0_i99.BLIF n5820.BLIF n3100.BLIF n2_adj_144.BLIF \
+dataInBuf_i0_i98.BLIF n5817.BLIF n5864.BLIF n6155.BLIF dataInBuf_i0_i97.BLIF \
+n6017.BLIF n2185.BLIF n1_adj_146.BLIF n5798.BLIF n1_adj_482.BLIF \
+dataInBuf_i0_i96.BLIF n5814.BLIF n2_adj_13.BLIF n2_adj_147.BLIF n6154.BLIF \
+dataInBuf_i0_i94.BLIF n5811.BLIF n3012.BLIF n1_adj_363.BLIF \
+dataInBuf_i0_i93.BLIF n5808.BLIF i2294.BLIF n1_adj_149.BLIF n2_adj_364.BLIF \
+dataInBuf_i0_i92.BLIF n5805.BLIF i2287.BLIF n2_adj_150.BLIF n5797.BLIF \
+dataInBuf_i0_i91.BLIF n5802.BLIF i2280.BLIF dataInBuf_i0_i90.BLIF n6016.BLIF \
+n20.BLIF n1_adj_152.BLIF n6152.BLIF dataInBuf_i0_i89.BLIF n5799.BLIF \
+n2_adj_153.BLIF n5795.BLIF dataInBuf_i0_i88.BLIF n5796.BLIF n1_adj_365.BLIF \
+dataInBuf_i0_i86.BLIF n5793.BLIF n1_adj_155.BLIF n2_adj_366.BLIF \
+dataInBuf_i0_i85.BLIF n5790.BLIF n2_adj_156.BLIF n6151.BLIF \
+dataInBuf_i0_i84.BLIF n5787.BLIF n6188.BLIF dataInBuf_i0_i83.BLIF n5784.BLIF \
+n1_adj_157.BLIF dataInBuf_i0_i82.BLIF n5781.BLIF n2_adj_158.BLIF \
+n1_adj_368.BLIF dataInBuf_i0_i81.BLIF n5778.BLIF n3054.BLIF n2_adj_369.BLIF \
+dataInBuf_i0_i80.BLIF n5106.BLIF i2273.BLIF n6187.BLIF n6149.BLIF n6041.BLIF \
+n5775.BLIF i2266.BLIF n5818.BLIF n5794.BLIF dataInBuf_i0_i78.BLIF n5772.BLIF \
+n6185.BLIF n6148.BLIF dataInBuf_i0_i77.BLIF n5769.BLIF n1_adj_160.BLIF \
+dataInBuf_i0_i74.BLIF n5766.BLIF n2_adj_161.BLIF n1_adj_371.BLIF \
+dataInBuf_i0_i73.BLIF n5763.BLIF n2_adj_372.BLIF dataInBuf_i0_i72.BLIF \
+n5760.BLIF n6277.BLIF n1_adj_163.BLIF n6146.BLIF dataInBuf_i0_i70.BLIF \
+n5721.BLIF n6275.BLIF n2_adj_164.BLIF n5792.BLIF dataInBuf_i0_i69.BLIF \
+n5099.BLIF n5863.BLIF n6145.BLIF dataInBuf_i0_i66.BLIF n5757.BLIF n5727.BLIF \
+n1_adj_166.BLIF dataInBuf_i0_i65.BLIF n5754.BLIF n6274.BLIF n2_adj_167.BLIF \
+n1_adj_374.BLIF dataInBuf_i0_i64.BLIF n5751.BLIF n6272.BLIF n2_adj_375.BLIF \
+dataInBuf_i0_i62.BLIF n6014.BLIF n1_adj_15.BLIF n1_adj_169.BLIF n6143.BLIF \
+dataInBuf_i0_i61.BLIF n5719.BLIF n2_adj_16.BLIF n2_adj_170.BLIF n5791.BLIF \
+n5057.BLIF n6013.BLIF n6142.BLIF n5127.BLIF n5748.BLIF n6271.BLIF \
+n1_adj_172.BLIF n5789.BLIF dataInBuf_i0_i58.BLIF n36.BLIF n5861.BLIF \
+n2_adj_173.BLIF n1_adj_376.BLIF dataInBuf_i0_i57.BLIF n6269.BLIF \
+n2_adj_377.BLIF dataInBuf_i0_i56.BLIF n6011.BLIF n6268.BLIF n1_adj_175.BLIF \
+n6140.BLIF dataInBuf_i0_i54.BLIF n5745.BLIF n6266.BLIF n2_adj_176.BLIF \
+n5788.BLIF dataInBuf_i0_i53.BLIF n6010.BLIF n5860.BLIF n5816.BLIF n6139.BLIF \
+n5120.BLIF n5742.BLIF n6265.BLIF n1_adj_177.BLIF n6137.BLIF \
+dataInBuf_i0_i50.BLIF n6008.BLIF n6263.BLIF n2_adj_178.BLIF n1_adj_378.BLIF \
+dataInBuf_i0_i49.BLIF n6007.BLIF n5728.BLIF n2_adj_379.BLIF \
+dataInBuf_i0_i48.BLIF n6184.BLIF dataInBuf_i0_i46.BLIF n35.BLIF n5858.BLIF \
+n5155.BLIF dataInBuf_i0_i45.BLIF n1_adj_2.BLIF n5078.BLIF n1_adj_180.BLIF \
+n6136.BLIF dataInBuf_i0_i42.BLIF n2_adj_3.BLIF n5725.BLIF n2_adj_181.BLIF \
+n6134.BLIF dataInBuf_i0_i41.BLIF i2259.BLIF n6262.BLIF n6133.BLIF \
+dataInBuf_i0_i38.BLIF i2252.BLIF n6260.BLIF n1_adj_183.BLIF n6131.BLIF \
+dataInBuf_i0_i37.BLIF i2245.BLIF n6259.BLIF n2_adj_184.BLIF n1_adj_381.BLIF \
+dataInBuf_i0_i34.BLIF i2238.BLIF n6257.BLIF n2_adj_382.BLIF \
+dataInBuf_i0_i33.BLIF i2231.BLIF n5857.BLIF n1_adj_186.BLIF n6130.BLIF \
+n6040.BLIF n6256.BLIF n2_adj_187.BLIF dataInBuf_i0_i29.BLIF n2_adj_4.BLIF \
+n6254.BLIF n6038.BLIF n1_adj_5.BLIF n6253.BLIF n1_adj_189.BLIF n1_adj_384.BLIF \
+dataInBuf_i0_i21.BLIF lcdRs_N_617.BLIF n5855.BLIF n2_adj_190.BLIF \
+n2_adj_385.BLIF n6037.BLIF n3117.BLIF n5854.BLIF n6128.BLIF n6035.BLIF \
+n34.BLIF n6251.BLIF n1_adj_192.BLIF n5786.BLIF dataInBuf_i0_i13.BLIF \
+n14_adj_6.BLIF n6250.BLIF n2_adj_193.BLIF n6127.BLIF n6034.BLIF n1_adj_18.BLIF \
+dataInBuf_i0_i5.BLIF n2_adj_19.BLIF n1_adj_195.BLIF n1_adj_387.BLIF n6032.BLIF \
+n6005.BLIF n6248.BLIF n2_adj_196.BLIF n2_adj_388.BLIF n6031.BLIF n6247.BLIF \
+n6182.BLIF n6125.BLIF n6029.BLIF n6004.BLIF n5852.BLIF n1_adj_197.BLIF \
+n5785.BLIF n6028.BLIF n6002.BLIF n6245.BLIF n2_adj_198.BLIF n6124.BLIF \
+n3047.BLIF n6001.BLIF n6244.BLIF
+.outputs lcdD_7_ lcdRs lcdRw ledEN lcdD_6_ lcdD_5_ lcdD_4_ lcdD_3_ lcdD_2_ \
+lcdD_1_ lcdD_0_ dataInBuf_i0_i216.D dataInBuf_i0_i216.C dataInBuf_i0_i216.CE \
+dataInBuf_i0_i214.D dataInBuf_i0_i214.C dataInBuf_i0_i214.CE \
+dataInBuf_i0_i213.D dataInBuf_i0_i213.C dataInBuf_i0_i213.CE \
+dataInBuf_i0_i212.D dataInBuf_i0_i212.C dataInBuf_i0_i212.CE \
+dataInBuf_i0_i211.D dataInBuf_i0_i211.C dataInBuf_i0_i211.CE \
+dataInBuf_i0_i210.D dataInBuf_i0_i210.C dataInBuf_i0_i210.CE \
+dataInBuf_i0_i209.D dataInBuf_i0_i209.C dataInBuf_i0_i209.CE \
+dataInBuf_i0_i208.D dataInBuf_i0_i208.C dataInBuf_i0_i208.CE \
+dataInBuf_i0_i206.D dataInBuf_i0_i206.C dataInBuf_i0_i206.CE \
+dataInBuf_i0_i205.D dataInBuf_i0_i205.C dataInBuf_i0_i205.CE lcdRs_53reg.D \
+lcdRs_53reg.C lcdRs_53reg.AR dataInBuf_i0_i204.D dataInBuf_i0_i204.C \
+dataInBuf_i0_i204.CE dispCount_i0_i0.D dispCount_i0_i0.C dispCount_i0_i0.CE \
+dispCount_i0_i0.AR dataInBuf_i0_i203.D dataInBuf_i0_i203.C \
+dataInBuf_i0_i203.CE dataInBuf_i0_i202.D dataInBuf_i0_i202.C \
+dataInBuf_i0_i202.CE dataInBuf_i0_i201.D dataInBuf_i0_i201.C \
+dataInBuf_i0_i201.CE dataInBuf_i0_i200.D dataInBuf_i0_i200.C \
+dataInBuf_i0_i200.CE dataInBuf_i0_i198.D dataInBuf_i0_i198.C \
+dataInBuf_i0_i198.CE dataInBuf_i0_i197.D dataInBuf_i0_i197.C \
+dataInBuf_i0_i197.CE dataInBuf_i0_i196.D dataInBuf_i0_i196.C \
+dataInBuf_i0_i196.CE dataInBuf_i0_i195.D dataInBuf_i0_i195.C \
+dataInBuf_i0_i195.CE dataInBuf_i0_i194.D dataInBuf_i0_i194.C \
+dataInBuf_i0_i194.CE dataInBuf_i0_i193.D dataInBuf_i0_i193.C \
+dataInBuf_i0_i193.CE dataInBuf_i0_i192.D dataInBuf_i0_i192.C \
+dataInBuf_i0_i192.CE dataInBuf_i0_i190.D dataInBuf_i0_i190.C \
+dataInBuf_i0_i190.CE dataInBuf_i0_i189.D dataInBuf_i0_i189.C \
+dataInBuf_i0_i189.CE dataInBuf_i0_i188.D dataInBuf_i0_i188.C \
+dataInBuf_i0_i188.CE dataInBuf_i0_i187.D dataInBuf_i0_i187.C \
+dataInBuf_i0_i187.CE dataInBuf_i0_i186.D dataInBuf_i0_i186.C \
+dataInBuf_i0_i186.CE dataInBuf_i0_i185.D dataInBuf_i0_i185.C \
+dataInBuf_i0_i185.CE dataInBuf_i0_i184.D dataInBuf_i0_i184.C \
+dataInBuf_i0_i184.CE dataInBuf_i0_i182.D dataInBuf_i0_i182.C \
+dataInBuf_i0_i182.CE dataInBuf_i0_i181.D dataInBuf_i0_i181.C \
+dataInBuf_i0_i181.CE dataInBuf_i0_i180.D dataInBuf_i0_i180.C \
+dataInBuf_i0_i180.CE state_FSM_i1.D state_FSM_i1.C state_FSM_i1.AR \
+dataInBuf_i0_i179.D dataInBuf_i0_i179.C dataInBuf_i0_i179.CE cnt_171__i0.D \
+cnt_171__i0.C dataInBuf_i0_i178.D dataInBuf_i0_i178.C dataInBuf_i0_i178.CE \
+dataInBuf_i0_i177.D dataInBuf_i0_i177.C dataInBuf_i0_i177.CE \
+dataInBuf_i0_i176.D dataInBuf_i0_i176.C dataInBuf_i0_i176.CE \
+dataInBuf_i0_i174.D dataInBuf_i0_i174.C dataInBuf_i0_i174.CE \
+dataInBuf_i0_i173.D dataInBuf_i0_i173.C dataInBuf_i0_i173.CE \
+dataInBuf_i0_i172.D dataInBuf_i0_i172.C dataInBuf_i0_i172.CE \
+dataInBuf_i0_i171.D dataInBuf_i0_i171.C dataInBuf_i0_i171.CE \
+dataInBuf_i0_i170.D dataInBuf_i0_i170.C dataInBuf_i0_i170.CE \
+dataInBuf_i0_i169.D dataInBuf_i0_i169.C dataInBuf_i0_i169.CE \
+dataInBuf_i0_i168.D dataInBuf_i0_i168.C dataInBuf_i0_i168.CE \
+dataInBuf_i0_i166.D dataInBuf_i0_i166.C dataInBuf_i0_i166.CE \
+dataInBuf_i0_i165.D dataInBuf_i0_i165.C dataInBuf_i0_i165.CE \
+dataInBuf_i0_i164.D dataInBuf_i0_i164.C dataInBuf_i0_i164.CE \
+dataInBuf_i0_i163.D dataInBuf_i0_i163.C dataInBuf_i0_i163.CE \
+dataInBuf_i0_i162.D dataInBuf_i0_i162.C dataInBuf_i0_i162.CE \
+dataInBuf_i0_i161.D dataInBuf_i0_i161.C dataInBuf_i0_i161.CE \
+dataInBuf_i0_i160.D dataInBuf_i0_i160.C dataInBuf_i0_i160.CE \
+dataInBuf_i0_i158.D dataInBuf_i0_i158.C dataInBuf_i0_i158.CE \
+dataInBuf_i0_i157.D dataInBuf_i0_i157.C dataInBuf_i0_i157.CE \
+dataInBuf_i0_i156.D dataInBuf_i0_i156.C dataInBuf_i0_i156.CE \
+dataInBuf_i0_i155.D dataInBuf_i0_i155.C dataInBuf_i0_i155.CE \
+dataInBuf_i0_i154.D dataInBuf_i0_i154.C dataInBuf_i0_i154.CE \
+dataInBuf_i0_i153.D dataInBuf_i0_i153.C dataInBuf_i0_i153.CE \
+dataInBuf_i0_i152.D dataInBuf_i0_i152.C dataInBuf_i0_i152.CE \
+dataInBuf_i0_i150.D dataInBuf_i0_i150.C dataInBuf_i0_i150.CE \
+dataInBuf_i0_i149.D dataInBuf_i0_i149.C dataInBuf_i0_i149.CE \
+dataInBuf_i0_i148.D dataInBuf_i0_i148.C dataInBuf_i0_i148.CE \
+dataInBuf_i0_i147.D dataInBuf_i0_i147.C dataInBuf_i0_i147.CE \
+dataInBuf_i0_i146.D dataInBuf_i0_i146.C dataInBuf_i0_i146.CE \
+dataInBuf_i0_i145.D dataInBuf_i0_i145.C dataInBuf_i0_i145.CE \
+dataInBuf_i0_i144.D dataInBuf_i0_i144.C dataInBuf_i0_i144.CE \
+dataInBuf_i0_i142.D dataInBuf_i0_i142.C dataInBuf_i0_i142.CE \
+dataInBuf_i0_i141.D dataInBuf_i0_i141.C dataInBuf_i0_i141.CE \
+dataInBuf_i0_i140.D dataInBuf_i0_i140.C dataInBuf_i0_i140.CE \
+dataInBuf_i0_i139.D dataInBuf_i0_i139.C dataInBuf_i0_i139.CE \
+dataInBuf_i0_i138.D dataInBuf_i0_i138.C dataInBuf_i0_i138.CE \
+dataInBuf_i0_i137.D dataInBuf_i0_i137.C dataInBuf_i0_i137.CE \
+dataInBuf_i0_i136.D dataInBuf_i0_i136.C dataInBuf_i0_i136.CE \
+dataInBuf_i0_i134.D dataInBuf_i0_i134.C dataInBuf_i0_i134.CE \
+dataInBuf_i0_i133.D dataInBuf_i0_i133.C dataInBuf_i0_i133.CE \
+dataInBuf_i0_i132.D dataInBuf_i0_i132.C dataInBuf_i0_i132.CE \
+dataInBuf_i0_i131.D dataInBuf_i0_i131.C dataInBuf_i0_i131.CE \
+dataInBuf_i0_i130.D dataInBuf_i0_i130.C dataInBuf_i0_i130.CE \
+dataInBuf_i0_i129.D dataInBuf_i0_i129.C dataInBuf_i0_i129.CE \
+dataInBuf_i0_i128.D dataInBuf_i0_i128.C dataInBuf_i0_i128.CE \
+dataInBuf_i0_i126.D dataInBuf_i0_i126.C dataInBuf_i0_i126.CE \
+dataInBuf_i0_i125.D dataInBuf_i0_i125.C dataInBuf_i0_i125.CE \
+dataInBuf_i0_i124.D dataInBuf_i0_i124.C dataInBuf_i0_i124.CE \
+dataInBuf_i0_i123.D dataInBuf_i0_i123.C dataInBuf_i0_i123.CE \
+dataInBuf_i0_i122.D dataInBuf_i0_i122.C dataInBuf_i0_i122.CE \
+dataInBuf_i0_i121.D dataInBuf_i0_i121.C dataInBuf_i0_i121.CE \
+dataInBuf_i0_i120.D dataInBuf_i0_i120.C dataInBuf_i0_i120.CE \
+dataInBuf_i0_i118.D dataInBuf_i0_i118.C dataInBuf_i0_i118.CE \
+dataInBuf_i0_i117.D dataInBuf_i0_i117.C dataInBuf_i0_i117.CE \
+dataInBuf_i0_i116.D dataInBuf_i0_i116.C dataInBuf_i0_i116.CE \
+dataInBuf_i0_i115.D dataInBuf_i0_i115.C dataInBuf_i0_i115.CE \
+dataInBuf_i0_i114.D dataInBuf_i0_i114.C dataInBuf_i0_i114.CE \
+dataInBuf_i0_i113.D dataInBuf_i0_i113.C dataInBuf_i0_i113.CE \
+dataInBuf_i0_i112.D dataInBuf_i0_i112.C dataInBuf_i0_i112.CE \
+dataInBuf_i0_i110.D dataInBuf_i0_i110.C dataInBuf_i0_i110.CE \
+dataInBuf_i0_i109.D dataInBuf_i0_i109.C dataInBuf_i0_i109.CE \
+dataInBuf_i0_i108.D dataInBuf_i0_i108.C dataInBuf_i0_i108.CE \
+dataInBuf_i0_i107.D dataInBuf_i0_i107.C dataInBuf_i0_i107.CE \
+dataInBuf_i0_i106.D dataInBuf_i0_i106.C dataInBuf_i0_i106.CE \
+dataInBuf_i0_i105.D dataInBuf_i0_i105.C dataInBuf_i0_i105.CE \
+dataInBuf_i0_i104.D dataInBuf_i0_i104.C dataInBuf_i0_i104.CE \
+dataInBuf_i0_i102.D dataInBuf_i0_i102.C dataInBuf_i0_i102.CE \
+dataInBuf_i0_i101.D dataInBuf_i0_i101.C dataInBuf_i0_i101.CE \
+dataInBuf_i0_i100.D dataInBuf_i0_i100.C dataInBuf_i0_i100.CE \
+dataInBuf_i0_i99.D dataInBuf_i0_i99.C dataInBuf_i0_i99.CE dataInBuf_i0_i98.D \
+dataInBuf_i0_i98.C dataInBuf_i0_i98.CE dataInBuf_i0_i97.D dataInBuf_i0_i97.C \
+dataInBuf_i0_i97.CE dataInBuf_i0_i96.D dataInBuf_i0_i96.C dataInBuf_i0_i96.CE \
+dataInBuf_i0_i94.D dataInBuf_i0_i94.C dataInBuf_i0_i94.CE dataInBuf_i0_i93.D \
+dataInBuf_i0_i93.C dataInBuf_i0_i93.CE dataInBuf_i0_i92.D dataInBuf_i0_i92.C \
+dataInBuf_i0_i92.CE dataInBuf_i0_i91.D dataInBuf_i0_i91.C dataInBuf_i0_i91.CE \
+dataInBuf_i0_i90.D dataInBuf_i0_i90.C dataInBuf_i0_i90.CE dataInBuf_i0_i89.D \
+dataInBuf_i0_i89.C dataInBuf_i0_i89.CE dataInBuf_i0_i88.D dataInBuf_i0_i88.C \
+dataInBuf_i0_i88.CE dataInBuf_i0_i86.D dataInBuf_i0_i86.C dataInBuf_i0_i86.CE \
+dataInBuf_i0_i85.D dataInBuf_i0_i85.C dataInBuf_i0_i85.CE dataInBuf_i0_i84.D \
+dataInBuf_i0_i84.C dataInBuf_i0_i84.CE dataInBuf_i0_i83.D dataInBuf_i0_i83.C \
+dataInBuf_i0_i83.CE dataInBuf_i0_i82.D dataInBuf_i0_i82.C dataInBuf_i0_i82.CE \
+dataInBuf_i0_i81.D dataInBuf_i0_i81.C dataInBuf_i0_i81.CE dataInBuf_i0_i80.D \
+dataInBuf_i0_i80.C dataInBuf_i0_i80.CE dataInBuf_i0_i78.D dataInBuf_i0_i78.C \
+dataInBuf_i0_i78.CE dataInBuf_i0_i77.D dataInBuf_i0_i77.C dataInBuf_i0_i77.CE \
+dataInBuf_i0_i74.D dataInBuf_i0_i74.C dataInBuf_i0_i74.CE dataInBuf_i0_i73.D \
+dataInBuf_i0_i73.C dataInBuf_i0_i73.CE dataInBuf_i0_i72.D dataInBuf_i0_i72.C \
+dataInBuf_i0_i72.CE dataInBuf_i0_i70.D dataInBuf_i0_i70.C dataInBuf_i0_i70.CE \
+clkhz_52reg.D clkhz_52reg.C dataInBuf_i0_i69.D dataInBuf_i0_i69.C \
+dataInBuf_i0_i69.CE dataInBuf_i0_i66.D dataInBuf_i0_i66.C dataInBuf_i0_i66.CE \
+dataInBuf_i0_i65.D dataInBuf_i0_i65.C dataInBuf_i0_i65.CE dataInBuf_i0_i64.D \
+dataInBuf_i0_i64.C dataInBuf_i0_i64.CE dataInBuf_i0_i62.D dataInBuf_i0_i62.C \
+dataInBuf_i0_i62.CE dataInBuf_i0_i61.D dataInBuf_i0_i61.C dataInBuf_i0_i61.CE \
+dataInBuf_i0_i58.D dataInBuf_i0_i58.C dataInBuf_i0_i58.CE dataInBuf_i0_i57.D \
+dataInBuf_i0_i57.C dataInBuf_i0_i57.CE dataInBuf_i0_i56.D dataInBuf_i0_i56.C \
+dataInBuf_i0_i56.CE dataInBuf_i0_i54.D dataInBuf_i0_i54.C dataInBuf_i0_i54.CE \
+dataInBuf_i0_i53.D dataInBuf_i0_i53.C dataInBuf_i0_i53.CE dataInBuf_i0_i50.D \
+dataInBuf_i0_i50.C dataInBuf_i0_i50.CE dataInBuf_i0_i49.D dataInBuf_i0_i49.C \
+dataInBuf_i0_i49.CE dataInBuf_i0_i48.D dataInBuf_i0_i48.C dataInBuf_i0_i48.CE \
+dataInBuf_i0_i46.D dataInBuf_i0_i46.C dataInBuf_i0_i46.CE dataInBuf_i0_i45.D \
+dataInBuf_i0_i45.C dataInBuf_i0_i45.CE dataInBuf_i0_i42.D dataInBuf_i0_i42.C \
+dataInBuf_i0_i42.CE cnt_171__i19.D cnt_171__i19.C dataInBuf_i0_i41.D \
+dataInBuf_i0_i41.C dataInBuf_i0_i41.CE dataInBuf_i0_i38.D dataInBuf_i0_i38.C \
+dataInBuf_i0_i38.CE dataInBuf_i0_i37.D dataInBuf_i0_i37.C dataInBuf_i0_i37.CE \
+dataInBuf_i0_i34.D dataInBuf_i0_i34.C dataInBuf_i0_i34.CE dataInBuf_i0_i33.D \
+dataInBuf_i0_i33.C dataInBuf_i0_i33.CE dataInBuf_i0_i29.D dataInBuf_i0_i29.C \
+dataInBuf_i0_i29.CE dataInBuf_i0_i21.D dataInBuf_i0_i21.C dataInBuf_i0_i21.CE \
+state_FSM_i6.D state_FSM_i6.C state_FSM_i6.AR dataInBuf_i0_i13.D \
+dataInBuf_i0_i13.C dataInBuf_i0_i13.CE state_FSM_i5.D state_FSM_i5.C \
+state_FSM_i5.AR state_FSM_i4.D state_FSM_i4.C state_FSM_i4.AR state_FSM_i3.D \
+state_FSM_i3.C state_FSM_i3.AR state_FSM_i2.D state_FSM_i2.C state_FSM_i2.AR \
+dispCount_i0_i5.D dispCount_i0_i5.C dispCount_i0_i5.CE dispCount_i0_i5.AR \
+dataInBuf_i0_i5.D dataInBuf_i0_i5.C dataInBuf_i0_i5.CE dispCount_i0_i4.D \
+dispCount_i0_i4.C dispCount_i0_i4.CE dispCount_i0_i4.AR dispCount_i0_i3.D \
+dispCount_i0_i3.C dispCount_i0_i3.CE dispCount_i0_i3.AR dispCount_i0_i2.D \
+dispCount_i0_i2.C dispCount_i0_i2.CE dispCount_i0_i2.AR dispCount_i0_i1.D \
+dispCount_i0_i1.C dispCount_i0_i1.CE dispCount_i0_i1.AR lcdD_i0_i8reg.D \
+lcdD_i0_i8reg.C lcdD_i0_i8reg.CE lcdD_i0_i8reg.AR state_FSM_i7.D \
+state_FSM_i7.C state_FSM_i7.AP lcdD_i0_i7reg.D lcdD_i0_i7reg.C \
+lcdD_i0_i7reg.CE lcdD_i0_i7reg.AR lcdD_i0_i6reg.D lcdD_i0_i6reg.C \
+lcdD_i0_i6reg.CE lcdD_i0_i6reg.AR lcdD_i0_i5reg.D lcdD_i0_i5reg.C \
+lcdD_i0_i5reg.CE lcdD_i0_i5reg.AR lcdD_i0_i4reg.D lcdD_i0_i4reg.C \
+lcdD_i0_i4reg.CE lcdD_i0_i4reg.AR lcdD_i0_i3reg.D lcdD_i0_i3reg.C \
+lcdD_i0_i3reg.CE lcdD_i0_i3reg.AR lcdD_i0_i2reg.D lcdD_i0_i2reg.C \
+lcdD_i0_i2reg.CE lcdD_i0_i2reg.AR lcdD_i0_i1reg.D lcdD_i0_i1reg.C \
+lcdD_i0_i1reg.CE lcdD_i0_i1reg.AP cnt_171__i18.D cnt_171__i18.C cnt_171__i17.D \
+cnt_171__i17.C cnt_171__i16.D cnt_171__i16.C cnt_171__i15.D cnt_171__i15.C \
+cnt_171__i14.D cnt_171__i14.C cnt_171__i13.D cnt_171__i13.C cnt_171__i12.D \
+cnt_171__i12.C cnt_171__i11.D cnt_171__i11.C cnt_171__i10.D cnt_171__i10.C \
+cnt_171__i9.D cnt_171__i9.C cnt_171__i8.D cnt_171__i8.C cnt_171__i7.D \
+cnt_171__i7.C cnt_171__i6.D cnt_171__i6.C cnt_171__i5.D cnt_171__i5.C \
+cnt_171__i4.D cnt_171__i4.C cnt_171__i3.D cnt_171__i3.C cnt_171__i2.D \
+cnt_171__i2.C cnt_171__i1.D cnt_171__i1.C dataInBuf_i0_i254.D \
+dataInBuf_i0_i254.C dataInBuf_i0_i254.CE dataInBuf_i0_i253.D \
+dataInBuf_i0_i253.C dataInBuf_i0_i253.CE dataInBuf_i0_i252.D \
+dataInBuf_i0_i252.C dataInBuf_i0_i252.CE dataInBuf_i0_i251.D \
+dataInBuf_i0_i251.C dataInBuf_i0_i251.CE dataInBuf_i0_i250.D \
+dataInBuf_i0_i250.C dataInBuf_i0_i250.CE dataInBuf_i0_i249.D \
+dataInBuf_i0_i249.C dataInBuf_i0_i249.CE dataInBuf_i0_i248.D \
+dataInBuf_i0_i248.C dataInBuf_i0_i248.CE dataInBuf_i0_i246.D \
+dataInBuf_i0_i246.C dataInBuf_i0_i246.CE dataInBuf_i0_i245.D \
+dataInBuf_i0_i245.C dataInBuf_i0_i245.CE dataInBuf_i0_i244.D \
+dataInBuf_i0_i244.C dataInBuf_i0_i244.CE dataInBuf_i0_i243.D \
+dataInBuf_i0_i243.C dataInBuf_i0_i243.CE dataInBuf_i0_i242.D \
+dataInBuf_i0_i242.C dataInBuf_i0_i242.CE dataInBuf_i0_i241.D \
+dataInBuf_i0_i241.C dataInBuf_i0_i241.CE dataInBuf_i0_i240.D \
+dataInBuf_i0_i240.C dataInBuf_i0_i240.CE dataInBuf_i0_i238.D \
+dataInBuf_i0_i238.C dataInBuf_i0_i238.CE dataInBuf_i0_i237.D \
+dataInBuf_i0_i237.C dataInBuf_i0_i237.CE dataInBuf_i0_i236.D \
+dataInBuf_i0_i236.C dataInBuf_i0_i236.CE dataInBuf_i0_i235.D \
+dataInBuf_i0_i235.C dataInBuf_i0_i235.CE dataInBuf_i0_i234.D \
+dataInBuf_i0_i234.C dataInBuf_i0_i234.CE dataInBuf_i0_i233.D \
+dataInBuf_i0_i233.C dataInBuf_i0_i233.CE dataInBuf_i0_i232.D \
+dataInBuf_i0_i232.C dataInBuf_i0_i232.CE dataInBuf_i0_i230.D \
+dataInBuf_i0_i230.C dataInBuf_i0_i230.CE dataInBuf_i0_i229.D \
+dataInBuf_i0_i229.C dataInBuf_i0_i229.CE dataInBuf_i0_i228.D \
+dataInBuf_i0_i228.C dataInBuf_i0_i228.CE dataInBuf_i0_i227.D \
+dataInBuf_i0_i227.C dataInBuf_i0_i227.CE dataInBuf_i0_i226.D \
+dataInBuf_i0_i226.C dataInBuf_i0_i226.CE dataInBuf_i0_i225.D \
+dataInBuf_i0_i225.C dataInBuf_i0_i225.CE dataInBuf_i0_i224.D \
+dataInBuf_i0_i224.C dataInBuf_i0_i224.CE dataInBuf_i0_i222.D \
+dataInBuf_i0_i222.C dataInBuf_i0_i222.CE dataInBuf_i0_i221.D \
+dataInBuf_i0_i221.C dataInBuf_i0_i221.CE dataInBuf_i0_i220.D \
+dataInBuf_i0_i220.C dataInBuf_i0_i220.CE dataInBuf_i0_i219.D \
+dataInBuf_i0_i219.C dataInBuf_i0_i219.CE dataInBuf_i0_i218.D \
+dataInBuf_i0_i218.C dataInBuf_i0_i218.CE dataInBuf_i0_i217.D \
+dataInBuf_i0_i217.C dataInBuf_i0_i217.CE n3033 n5851 n1_adj_390 n3040 n6242 \
+n1_adj_200 n2_adj_391 lcdRw_c n5113 n5999 n5849 n2_adj_201 n6122 n5723 n5744 \
+n32 n6241 n5783 clk_50m_c n14 n6239 n1_adj_203 n6121 reset_c n5848 n2_adj_204 \
+n3649 n5724 n1_adj_393 n6279 n6026 n6238 n1_adj_206 n2_adj_394 n1 n5998 n6236 \
+n2_adj_207 n6119 n5740 n5846 n5782 n3006 n5996 n6235 n1_adj_209 n6118 n6233 \
+n2_adj_210 n1_adj_395 n31 n6232 n2_adj_396 n5845 n1_adj_212 n6116 n6230 \
+n2_adj_213 n5780 n5995 n6229 n6115 n5843 n1_adj_215 n1_adj_397 n6227 \
+n2_adj_216 n2_adj_398 n1_adj_1 n5993 n6226 n1_adj_217 n2 n5842 n2_adj_218 \
+n6224 n6113 n5743 n5992 n6223 n5815 n6112 n5990 n5176 n6110 n5718 n1_adj_20 \
+n1_adj_220 n5779 n5989 n2_adj_21 n2_adj_221 n6109 n5987 n1_adj_22 n1_adj_400 \
+n5986 n2_adj_23 n1_adj_223 n2_adj_401 dispCount_5_N_347_0 n2_adj_224 n6107 \
+lcdRs_N_620 n5258 n1_adj_25 lcdRs_N_619 n5840 n1_adj_226 n6106 lcdRs_N_618 \
+n6282 n2_adj_227 n1_adj_403 n5169 n2_adj_404 n5741 n5071 n1_adj_229 n6104 \
+n5839 n2_adj_230 n6025 n1845 n5162 n6276 n5984 n1_adj_26 n1_adj_232 n1_adj_406 \
+n6273 n5983 n2_adj_27 n2_adj_233 n2_adj_407 n6270 n5981 n6103 n6267 n30 \
+n1_adj_29 n1_adj_235 n5777 n6264 n29 n2_adj_30 n2_adj_236 n6101 n6261 n5980 \
+n6221 n1_adj_237 n6258 n28 n6220 n2_adj_238 n1_adj_409 n6023 n27 n6218 \
+n2_adj_410 n6255 n5978 n6217 n6181 n6100 n6252 n5977 n1_adj_31 n1_adj_240 \
+n5776 n6249 n26 n2_adj_32 n2_adj_241 n6098 n6246 n5837 n6243 n1_adj_33 \
+n1_adj_243 n1_adj_412 n6240 n5737 n2_adj_34 n2_adj_244 n2_adj_413 n6237 n5735 \
+n6215 n6097 n5141 n6234 n7 n1_adj_35 n1_adj_246 n6231 n5650 n2_adj_36 \
+n2_adj_247 n5774 n6228 n5975 n1_adj_415 n6225 n5974 n6214 n1_adj_249 \
+n2_adj_416 n6222 n5972 n5836 n2_adj_250 n6095 n6219 n5971 n6212 n6094 n6216 \
+n5969 n1_adj_38 n1_adj_252 n5773 n6213 n5968 n2_adj_39 n2_adj_253 n1_adj_417 \
+n6210 n5966 n2_adj_418 n6207 n5965 n1_adj_41 n1_adj_255 n6092 n6204 n1_adj_7 \
+n2_adj_42 n2_adj_256 n6201 n2_adj_8 n6211 n6179 n6198 n5963 n1_adj_43 \
+n1_adj_257 n5148 n6195 n5962 n2_adj_44 n2_adj_258 n6091 n6022 n5960 n5771 \
+n6047 n6192 n5092 n1_adj_46 n5813 n6089 n6189 n24 n2_adj_47 n5812 n5770 n6186 \
+n1_adj_260 n1_adj_420 n6183 n5959 n1_adj_48 n2_adj_261 n2_adj_421 n6180 n5957 \
+n2_adj_49 n5810 n6088 n6177 n5956 n1_adj_262 n5768 n6174 n23 n5834 n2_adj_263 \
+n6086 n6171 n5833 n6178 n6168 n5954 n6209 n1_adj_264 n1_adj_423 n6165 n5953 \
+n6208 n2_adj_265 n2_adj_424 n6162 n5951 n1_adj_51 n1_adj_266 n6085 n6159 n5950 \
+n2_adj_52 n2_adj_267 n5767 n6156 n5948 n6083 n6153 n5947 n1_adj_54 n1_adj_269 \
+n6020 n5945 n2_adj_55 n2_adj_270 n1_adj_426 n6150 n5944 n5831 n1_adj_271 \
+n2_adj_427 n6147 n5942 n6206 n2_adj_272 n6082 n6144 n22 n1_adj_56 n6176 n5765 \
+n6141 n2_adj_57 n1_adj_273 n6080 n6138 n21 n1_adj_58 n2_adj_274 n6135 \
+n2_adj_59 n6132 n5941 n6175 n1_adj_429 n6129 n5939 n1_adj_61 n6173 n2_adj_430 \
+n6126 n5938 n2_adj_62 n5809 n6079 n6123 n5936 n1_adj_276 n6120 n5085 n6205 \
+n2_adj_277 n5764 n6117 n5935 n5830 n6077 n6114 n5933 n6203 n1_adj_279 \
+n1_adj_432 n6111 n5932 n6202 n2_adj_280 n2_adj_433 n6108 n5930 n1_adj_64 n5807 \
+n6076 n6105 n5929 n2_adj_65 n1_adj_281 n6102 n5927 n2_adj_282 n5762 n6099 \
+n5926 n1_adj_67 n6172 n6074 n6096 n5924 n2_adj_68 n1_adj_283 n1_adj_435 n6093 \
+n5923 n6200 n2_adj_284 n2_adj_436 n6090 n5828 n6073 n6087 n5921 n1_adj_286 \
+n5761 n6084 n5920 n1_adj_69 n2_adj_287 n5759 n6081 n5918 n2_adj_70 n1_adj_288 \
+n6071 n6078 n5917 n5827 n2_adj_289 n1_adj_437 n6075 n1_adj_71 n1_adj_290 \
+n2_adj_438 n6072 n5915 n2_adj_72 n2_adj_291 n6069 n5914 n6066 n5912 n1_adj_74 \
+n6170 n5064 n6063 n4374 n2_adj_75 n1_adj_293 n5758 n6060 n2_adj_294 n6070 \
+n6057 n5911 n6199 n6169 n6054 n5909 n5194 n1_adj_295 n1_adj_440 n6051 n5908 \
+n5825 n2_adj_296 n2_adj_441 n6048 n5906 n1_adj_77 n3806 n6046 n6019 n5905 \
+n2_adj_78 n1_adj_298 n3805 n6045 n5903 n1_adj_79 n2_adj_299 n6042 n5902 \
+n2_adj_80 n5806 n3804 n6039 n5900 n1_adj_300 n1_adj_443 n6036 n5899 n6197 \
+n2_adj_301 n2_adj_444 n6033 n5897 n5824 n5756 n6030 n5896 n1_adj_82 n1_adj_303 \
+n6027 n5894 n2_adj_83 n2_adj_304 n6068 n6024 n5893 n6167 n1_adj_446 n6021 \
+n5891 n1_adj_85 n1_adj_305 n2_adj_447 n6018 n5890 n2_adj_86 n2_adj_306 n5755 \
+n6015 n5888 n1_adj_307 n6012 n5887 n1_adj_88 n2_adj_308 n1_adj_449 n6009 n3644 \
+n2_adj_89 n2_adj_450 n6006 n1_adj_9 n5804 n6067 n6003 n1_adj_91 n1_adj_310 \
+n5753 n6000 n5885 n2_adj_92 n2_adj_311 n5997 n1_adj_10 n6196 n5752 n5994 n5 \
+n1_adj_93 n1_adj_313 n1_adj_452 n5991 n5884 n2_adj_94 n2_adj_314 n2_adj_453 \
+n5988 n5822 n6065 n5985 n1_adj_95 n1_adj_316 n5982 n5882 n2_adj_96 n2_adj_317 \
+n1_adj_455 n5979 n5881 n6194 n1_adj_318 n2_adj_456 n5976 n5879 n1_adj_97 \
+n2_adj_319 n5750 n5973 n5878 n2_adj_98 n6064 n5970 n5876 n1_adj_321 n6062 \
+n5967 n5875 n6193 n2_adj_322 n1_adj_457 n5964 n5873 n1_adj_100 n6166 \
+n2_adj_458 n4376 n2_adj_101 n1_adj_323 n5749 n5961 n5726 n2_adj_324 n5958 \
+n6293 n1_adj_103 n5803 n5955 n1_adj_11 n2_adj_104 n1_adj_325 n5720 n5952 \
+n2_adj_12 n2_adj_326 n5747 n5949 n5872 n1_adj_106 n5734 n5946 n2_adj_107 n6164 \
+n5943 n5870 n5801 n5940 n6285 n1_adj_109 n6163 n5937 n33 n2_adj_110 n1_adj_328 \
+n1_adj_462 n5934 n6290 n2_adj_329 n2_adj_463 n5931 n5869 n1_adj_112 n6161 \
+n5928 n2_adj_113 n1_adj_330 n5925 n40 n2_adj_331 n6061 n6044 n5922 n5867 \
+n1_adj_115 n1_adj_332 n5746 n5919 n6287 n2_adj_116 n2_adj_333 n1_adj_465 n5916 \
+n44 n1_adj_117 n2_adj_466 n5913 n3731 n2_adj_118 n1_adj_335 n6059 n5910 n6286 \
+n2_adj_336 n5907 n6191 n6058 n5904 n6190 n1_adj_338 n1_adj_468 n5901 n5821 \
+n2_adj_339 n2_adj_469 n5898 n5866 n1_adj_120 n1_adj_340 n6056 n5895 n6283 \
+n2_adj_121 n2_adj_341 n5892 n6160 n6055 n5889 n1_adj_123 n1_adj_342 n5729 \
+n5886 n60 n2_adj_124 n2_adj_343 n1_adj_471 n5883 n6280 n2_adj_472 n5880 \
+n1_adj_126 n6158 n6053 n5877 n2_adj_127 n1_adj_345 n5874 n2_adj_346 n6052 \
+n5871 n1_adj_129 n1_adj_474 n5868 n5739 n2_adj_130 n1_adj_348 n2_adj_475 n5865 \
+n2_adj_349 n6050 n5862 n1_adj_132 n5800 n3800 n5859 n2_adj_133 n1_adj_350 \
+n5134 n5856 n2_adj_351 n5853 n1_adj_135 n1_adj_477 n5850 n2_adj_136 n1_adj_353 \
+n2_adj_478 n5847 n2212 n1_adj_137 n2_adj_354 n5844 n2_adj_138 n5841 n1_adj_356 \
+n1_adj_479 n5838 n5819 n2_adj_357 n2_adj_480 n5835 n3637 n6157 n6043 n5832 \
+n1_adj_140 n1_adj_358 n5829 n6289 n2_adj_141 n2_adj_359 n5826 n6292 n1_adj_360 \
+n6049 n5823 n3729 n1_adj_143 n2_adj_361 n5820 n3100 n2_adj_144 n5817 n5864 \
+n6155 n6017 n2185 n1_adj_146 n5798 n1_adj_482 n5814 n2_adj_13 n2_adj_147 n6154 \
+n5811 n3012 n1_adj_363 n5808 n1_adj_149 n2_adj_364 n5805 n2_adj_150 n5797 \
+n5802 n6016 n20 n1_adj_152 n6152 n5799 n2_adj_153 n5795 n5796 n1_adj_365 n5793 \
+n1_adj_155 n2_adj_366 n5790 n2_adj_156 n6151 n5787 n6188 n5784 n1_adj_157 \
+n5781 n2_adj_158 n1_adj_368 n5778 n3054 n2_adj_369 n5106 n6187 n6149 n6041 \
+n5775 n5818 n5794 n5772 n6185 n6148 n5769 n1_adj_160 n5766 n2_adj_161 \
+n1_adj_371 n5763 n2_adj_372 n5760 n6277 n1_adj_163 n6146 n5721 n6275 \
+n2_adj_164 n5792 n5099 n5863 n6145 n5757 n5727 n1_adj_166 n5754 n6274 \
+n2_adj_167 n1_adj_374 n5751 n6272 n2_adj_375 n6014 n1_adj_15 n1_adj_169 n6143 \
+n5719 n2_adj_16 n2_adj_170 n5791 n5057 n6013 n6142 n5127 n5748 n6271 \
+n1_adj_172 n5789 n36 n5861 n2_adj_173 n1_adj_376 n6269 n2_adj_377 n6011 n6268 \
+n1_adj_175 n6140 n5745 n6266 n2_adj_176 n5788 n6010 n5860 n5816 n6139 n5120 \
+n5742 n6265 n1_adj_177 n6137 n6008 n6263 n2_adj_178 n1_adj_378 n6007 n5728 \
+n2_adj_379 n6184 n35 n5858 n5155 n1_adj_2 n5078 n1_adj_180 n6136 n2_adj_3 \
+n5725 n2_adj_181 n6134 n6262 n6133 n6260 n1_adj_183 n6131 n6259 n2_adj_184 \
+n1_adj_381 n6257 n2_adj_382 n5857 n1_adj_186 n6130 n6040 n6256 n2_adj_187 \
+n2_adj_4 n6254 n6038 n1_adj_5 n6253 n1_adj_189 n1_adj_384 lcdRs_N_617 n5855 \
+n2_adj_190 n2_adj_385 n6037 n3117 n5854 n6128 n6035 n34 n6251 n1_adj_192 n5786 \
+n14_adj_6 n6250 n2_adj_193 n6127 n6034 n1_adj_18 n2_adj_19 n1_adj_195 \
+n1_adj_387 n6032 n6005 n6248 n2_adj_196 n2_adj_388 n6031 n6247 n6182 n6125 \
+n6029 n6004 n5852 n1_adj_197 n5785 n6028 n6002 n6245 n2_adj_198 n6124 n3047 \
+n6001 n6244 i32 i1_adj_40 i223 i216 i209 i202 i195 i2912 i2357 i2350 i2343 \
+i2336 i2329 i2308 i2301 i2315 i2322 i2294 i2287 i2280 i2273 i2266 i2259 i2252 \
+i2245 i2238 i2231
+.names n2_adj_382.BLIF n1_adj_381.BLIF dataInBuf_i0_i216.D
+1- 1
+-1 1
+.names n2_adj_379.BLIF n1_adj_378.BLIF dataInBuf_i0_i214.D
+1- 1
+-1 1
+.names n2_adj_377.BLIF n1_adj_376.BLIF state_FSM_i7.BLIF dataInBuf_i0_i213.D
+1-- 1
+-1- 1
+--1 1
+.names n1_adj_374.BLIF n2_adj_375.BLIF state_FSM_i7.BLIF dataInBuf_i0_i212.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_372.BLIF n1_adj_371.BLIF dataInBuf_i0_i211.D
+1- 1
+-1 1
+.names n2_adj_369.BLIF n1_adj_368.BLIF dataInBuf_i0_i210.D
+1- 1
+-1 1
+.names n2_adj_366.BLIF n1_adj_365.BLIF dataInBuf_i0_i209.D
+1- 1
+-1 1
+.names n1_adj_363.BLIF state_FSM_i7.BLIF n2_adj_364.BLIF dataInBuf_i0_i208.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_361.BLIF n1_adj_360.BLIF dataInBuf_i0_i206.D
+1- 1
+-1 1
+.names n1_adj_358.BLIF n2_adj_359.BLIF state_FSM_i7.BLIF dataInBuf_i0_i205.D
+1-- 1
+-1- 1
+--1 1
+.names state_FSM_i2.BLIF n1_adj_25.BLIF lcdRs_53reg.D
+1- 1
+-1 1
+.names reset_c.BLIF lcdRs_53reg.AR
+0 1
+.names n2_adj_357.BLIF n1_adj_356.BLIF state_FSM_i7.BLIF dataInBuf_i0_i204.D
+1-- 1
+-1- 1
+--1 1
+.names n2185.BLIF dispCount_5_N_347_0.BLIF dispCount_i0_i0.D
+11 1
+.names reset_c.BLIF dispCount_i0_i0.AR
+0 1
+.names n2_adj_354.BLIF n1_adj_353.BLIF dataInBuf_i0_i203.D
+1- 1
+-1 1
+.names n2_adj_351.BLIF n1_adj_350.BLIF dataInBuf_i0_i202.D
+1- 1
+-1 1
+.names n1_adj_348.BLIF n2_adj_349.BLIF state_FSM_i7.BLIF dataInBuf_i0_i201.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_346.BLIF n1_adj_345.BLIF dataInBuf_i0_i200.D
+1- 1
+-1 1
+.names n2_adj_343.BLIF n1_adj_342.BLIF dataInBuf_i0_i198.D
+1- 1
+-1 1
+.names n1_adj_340.BLIF state_FSM_i7.BLIF n2_adj_341.BLIF dataInBuf_i0_i197.D
+1-- 1
+-1- 1
+--1 1
+.names n1_adj_338.BLIF n2_adj_339.BLIF state_FSM_i7.BLIF dataInBuf_i0_i196.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_336.BLIF n1_adj_335.BLIF dataInBuf_i0_i195.D
+1- 1
+-1 1
+.names n2_adj_333.BLIF n1_adj_332.BLIF dataInBuf_i0_i194.D
+1- 1
+-1 1
+.names n2_adj_331.BLIF n1_adj_330.BLIF state_FSM_i7.BLIF dataInBuf_i0_i193.D
+1-- 1
+-1- 1
+--1 1
+.names n1_adj_328.BLIF n2_adj_329.BLIF state_FSM_i7.BLIF dataInBuf_i0_i192.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_326.BLIF n1_adj_325.BLIF dataInBuf_i0_i190.D
+1- 1
+-1 1
+.names n2_adj_324.BLIF n1_adj_323.BLIF state_FSM_i7.BLIF dataInBuf_i0_i189.D
+1-- 1
+-1- 1
+--1 1
+.names n1_adj_321.BLIF n2_adj_322.BLIF state_FSM_i7.BLIF dataInBuf_i0_i188.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_319.BLIF n1_adj_318.BLIF dataInBuf_i0_i187.D
+1- 1
+-1 1
+.names n1_adj_316.BLIF state_FSM_i7.BLIF n2_adj_317.BLIF dataInBuf_i0_i186.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_314.BLIF n1_adj_313.BLIF dataInBuf_i0_i185.D
+1- 1
+-1 1
+.names n2_adj_311.BLIF n1_adj_310.BLIF dataInBuf_i0_i184.D
+1- 1
+-1 1
+.names n2_adj_308.BLIF n1_adj_307.BLIF dataInBuf_i0_i182.D
+1- 1
+-1 1
+.names n1_adj_305.BLIF n2_adj_306.BLIF state_FSM_i7.BLIF dataInBuf_i0_i181.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_304.BLIF n1_adj_303.BLIF state_FSM_i7.BLIF dataInBuf_i0_i180.D
+1-- 1
+-1- 1
+--1 1
+.names state_FSM_i2.BLIF n5650.BLIF state_FSM_i3.BLIF state_FSM_i1.D
+1-- 1
+-1- 1
+--1 1
+.names reset_c.BLIF state_FSM_i1.AR
+0 1
+.names n2_adj_301.BLIF n1_adj_300.BLIF dataInBuf_i0_i179.D
+1- 1
+-1 1
+.names cnt_171__i0.BLIF cnt_171__i0.D
+0 1
+.names n1_adj_298.BLIF n2_adj_299.BLIF state_FSM_i7.BLIF dataInBuf_i0_i178.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_296.BLIF n1_adj_295.BLIF dataInBuf_i0_i177.D
+1- 1
+-1 1
+.names n1_adj_293.BLIF state_FSM_i7.BLIF n2_adj_294.BLIF dataInBuf_i0_i176.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_291.BLIF n1_adj_290.BLIF dataInBuf_i0_i174.D
+1- 1
+-1 1
+.names n2_adj_289.BLIF n1_adj_288.BLIF state_FSM_i7.BLIF dataInBuf_i0_i173.D
+1-- 1
+-1- 1
+--1 1
+.names n1_adj_286.BLIF n2_adj_287.BLIF state_FSM_i7.BLIF dataInBuf_i0_i172.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_284.BLIF n1_adj_283.BLIF dataInBuf_i0_i171.D
+1- 1
+-1 1
+.names n1_adj_281.BLIF state_FSM_i7.BLIF n2_adj_282.BLIF dataInBuf_i0_i170.D
+1-- 1
+-1- 1
+--1 1
+.names n1_adj_279.BLIF n2_adj_280.BLIF state_FSM_i7.BLIF dataInBuf_i0_i169.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_277.BLIF n1_adj_276.BLIF dataInBuf_i0_i168.D
+1- 1
+-1 1
+.names n2_adj_274.BLIF n1_adj_273.BLIF dataInBuf_i0_i166.D
+1- 1
+-1 1
+.names n2_adj_272.BLIF n1_adj_271.BLIF state_FSM_i7.BLIF dataInBuf_i0_i165.D
+1-- 1
+-1- 1
+--1 1
+.names n1_adj_269.BLIF n2_adj_270.BLIF state_FSM_i7.BLIF dataInBuf_i0_i164.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_267.BLIF n1_adj_266.BLIF dataInBuf_i0_i163.D
+1- 1
+-1 1
+.names n2_adj_265.BLIF n1_adj_264.BLIF state_FSM_i7.BLIF dataInBuf_i0_i162.D
+1-- 1
+-1- 1
+--1 1
+.names n1_adj_262.BLIF n2_adj_263.BLIF state_FSM_i7.BLIF dataInBuf_i0_i161.D
+1-- 1
+-1- 1
+--1 1
+.names n1_adj_260.BLIF state_FSM_i7.BLIF n2_adj_261.BLIF dataInBuf_i0_i160.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_258.BLIF n1_adj_257.BLIF dataInBuf_i0_i158.D
+1- 1
+-1 1
+.names n1_adj_255.BLIF n2_adj_256.BLIF state_FSM_i7.BLIF dataInBuf_i0_i157.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_253.BLIF n1_adj_252.BLIF dataInBuf_i0_i156.D
+1- 1
+-1 1
+.names n2_adj_250.BLIF n1_adj_249.BLIF dataInBuf_i0_i155.D
+1- 1
+-1 1
+.names n2_adj_247.BLIF n1_adj_246.BLIF dataInBuf_i0_i154.D
+1- 1
+-1 1
+.names n2_adj_244.BLIF n1_adj_243.BLIF dataInBuf_i0_i153.D
+1- 1
+-1 1
+.names n2_adj_241.BLIF n1_adj_240.BLIF dataInBuf_i0_i152.D
+1- 1
+-1 1
+.names n2_adj_238.BLIF n1_adj_237.BLIF dataInBuf_i0_i150.D
+1- 1
+-1 1
+.names n2_adj_236.BLIF n1_adj_235.BLIF state_FSM_i7.BLIF dataInBuf_i0_i149.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_233.BLIF n1_adj_232.BLIF dataInBuf_i0_i148.D
+1- 1
+-1 1
+.names n2_adj_230.BLIF n1_adj_229.BLIF dataInBuf_i0_i147.D
+1- 1
+-1 1
+.names n2_adj_227.BLIF n1_adj_226.BLIF dataInBuf_i0_i146.D
+1- 1
+-1 1
+.names n2_adj_224.BLIF n1_adj_223.BLIF dataInBuf_i0_i145.D
+1- 1
+-1 1
+.names n2_adj_221.BLIF n1_adj_220.BLIF dataInBuf_i0_i144.D
+1- 1
+-1 1
+.names n2_adj_218.BLIF n1_adj_217.BLIF dataInBuf_i0_i142.D
+1- 1
+-1 1
+.names n1_adj_215.BLIF n2_adj_216.BLIF state_FSM_i7.BLIF dataInBuf_i0_i141.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_213.BLIF n1_adj_212.BLIF dataInBuf_i0_i140.D
+1- 1
+-1 1
+.names n2_adj_210.BLIF n1_adj_209.BLIF dataInBuf_i0_i139.D
+1- 1
+-1 1
+.names n2_adj_207.BLIF n1_adj_206.BLIF dataInBuf_i0_i138.D
+1- 1
+-1 1
+.names n2_adj_204.BLIF n1_adj_203.BLIF dataInBuf_i0_i137.D
+1- 1
+-1 1
+.names n2_adj_201.BLIF n1_adj_200.BLIF dataInBuf_i0_i136.D
+1- 1
+-1 1
+.names n2_adj_198.BLIF n1_adj_197.BLIF dataInBuf_i0_i134.D
+1- 1
+-1 1
+.names n1_adj_195.BLIF state_FSM_i7.BLIF n2_adj_196.BLIF dataInBuf_i0_i133.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_193.BLIF n1_adj_192.BLIF dataInBuf_i0_i132.D
+1- 1
+-1 1
+.names n2_adj_190.BLIF n1_adj_189.BLIF dataInBuf_i0_i131.D
+1- 1
+-1 1
+.names n2_adj_187.BLIF n1_adj_186.BLIF dataInBuf_i0_i130.D
+1- 1
+-1 1
+.names n2_adj_184.BLIF n1_adj_183.BLIF dataInBuf_i0_i129.D
+1- 1
+-1 1
+.names n2_adj_181.BLIF n1_adj_180.BLIF dataInBuf_i0_i128.D
+1- 1
+-1 1
+.names n2_adj_178.BLIF n1_adj_177.BLIF dataInBuf_i0_i126.D
+1- 1
+-1 1
+.names n2_adj_176.BLIF n1_adj_175.BLIF state_FSM_i7.BLIF dataInBuf_i0_i125.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_173.BLIF n1_adj_172.BLIF dataInBuf_i0_i124.D
+1- 1
+-1 1
+.names n2_adj_170.BLIF n1_adj_169.BLIF dataInBuf_i0_i123.D
+1- 1
+-1 1
+.names n2_adj_167.BLIF n1_adj_166.BLIF dataInBuf_i0_i122.D
+1- 1
+-1 1
+.names n2_adj_164.BLIF n1_adj_163.BLIF dataInBuf_i0_i121.D
+1- 1
+-1 1
+.names n2_adj_161.BLIF n1_adj_160.BLIF dataInBuf_i0_i120.D
+1- 1
+-1 1
+.names n2_adj_158.BLIF n1_adj_157.BLIF dataInBuf_i0_i118.D
+1- 1
+-1 1
+.names n1_adj_155.BLIF n2_adj_156.BLIF state_FSM_i7.BLIF dataInBuf_i0_i117.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_153.BLIF n1_adj_152.BLIF dataInBuf_i0_i116.D
+1- 1
+-1 1
+.names n2_adj_150.BLIF n1_adj_149.BLIF dataInBuf_i0_i115.D
+1- 1
+-1 1
+.names n2_adj_147.BLIF n1_adj_146.BLIF dataInBuf_i0_i114.D
+1- 1
+-1 1
+.names n2_adj_144.BLIF n1_adj_143.BLIF dataInBuf_i0_i113.D
+1- 1
+-1 1
+.names n2_adj_141.BLIF n1_adj_140.BLIF dataInBuf_i0_i112.D
+1- 1
+-1 1
+.names n2_adj_138.BLIF n1_adj_137.BLIF dataInBuf_i0_i110.D
+1- 1
+-1 1
+.names n1_adj_135.BLIF state_FSM_i7.BLIF n2_adj_136.BLIF dataInBuf_i0_i109.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_133.BLIF n1_adj_132.BLIF dataInBuf_i0_i108.D
+1- 1
+-1 1
+.names n2_adj_130.BLIF n1_adj_129.BLIF dataInBuf_i0_i107.D
+1- 1
+-1 1
+.names n2_adj_127.BLIF n1_adj_126.BLIF dataInBuf_i0_i106.D
+1- 1
+-1 1
+.names n2_adj_124.BLIF n1_adj_123.BLIF dataInBuf_i0_i105.D
+1- 1
+-1 1
+.names n2_adj_121.BLIF n1_adj_120.BLIF dataInBuf_i0_i104.D
+1- 1
+-1 1
+.names n2_adj_118.BLIF n1_adj_117.BLIF dataInBuf_i0_i102.D
+1- 1
+-1 1
+.names n1_adj_115.BLIF n2_adj_116.BLIF state_FSM_i7.BLIF dataInBuf_i0_i101.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_113.BLIF n1_adj_112.BLIF dataInBuf_i0_i100.D
+1- 1
+-1 1
+.names n2_adj_110.BLIF n1_adj_109.BLIF dataInBuf_i0_i99.D
+1- 1
+-1 1
+.names n2_adj_107.BLIF n1_adj_106.BLIF dataInBuf_i0_i98.D
+1- 1
+-1 1
+.names n2_adj_104.BLIF n1_adj_103.BLIF dataInBuf_i0_i97.D
+1- 1
+-1 1
+.names n2_adj_101.BLIF n1_adj_100.BLIF dataInBuf_i0_i96.D
+1- 1
+-1 1
+.names n2_adj_98.BLIF n1_adj_97.BLIF dataInBuf_i0_i94.D
+1- 1
+-1 1
+.names n2_adj_96.BLIF n1_adj_95.BLIF state_FSM_i7.BLIF dataInBuf_i0_i93.D
+1-- 1
+-1- 1
+--1 1
+.names n1_adj_93.BLIF n2_adj_94.BLIF state_FSM_i7.BLIF dataInBuf_i0_i92.D
+1-- 1
+-1- 1
+--1 1
+.names n1_adj_91.BLIF state_FSM_i7.BLIF n2_adj_92.BLIF dataInBuf_i0_i91.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_89.BLIF n1_adj_88.BLIF dataInBuf_i0_i90.D
+1- 1
+-1 1
+.names n2_adj_86.BLIF n1_adj_85.BLIF dataInBuf_i0_i89.D
+1- 1
+-1 1
+.names n2_adj_83.BLIF n1_adj_82.BLIF dataInBuf_i0_i88.D
+1- 1
+-1 1
+.names n2_adj_80.BLIF n1_adj_79.BLIF dataInBuf_i0_i86.D
+1- 1
+-1 1
+.names n1_adj_77.BLIF n2_adj_78.BLIF state_FSM_i7.BLIF dataInBuf_i0_i85.D
+1-- 1
+-1- 1
+--1 1
+.names n5728.BLIF state_FSM_i7.BLIF dataInBuf_i0_i84.D
+1- 1
+-1 1
+.names state_FSM_i7.BLIF n5723.BLIF dataInBuf_i0_i83.D
+1- 1
+-1 1
+.names n2_adj_75.BLIF n1_adj_74.BLIF dataInBuf_i0_i82.D
+1- 1
+-1 1
+.names n2_adj_72.BLIF n1_adj_71.BLIF dataInBuf_i0_i81.D
+1- 1
+-1 1
+.names n2_adj_70.BLIF n1_adj_69.BLIF state_FSM_i7.BLIF dataInBuf_i0_i80.D
+1-- 1
+-1- 1
+--1 1
+.names n1_adj_67.BLIF n2_adj_68.BLIF state_FSM_i7.BLIF dataInBuf_i0_i78.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_65.BLIF n1_adj_64.BLIF dataInBuf_i0_i77.D
+1- 1
+-1 1
+.names n2_adj_62.BLIF n1_adj_61.BLIF dataInBuf_i0_i74.D
+1- 1
+-1 1
+.names n2_adj_59.BLIF n1_adj_58.BLIF dataInBuf_i0_i73.D
+1- 1
+-1 1
+.names n1_adj_56.BLIF state_FSM_i7.BLIF n2_adj_57.BLIF dataInBuf_i0_i72.D
+1-- 1
+-1- 1
+--1 1
+.names n1_adj_54.BLIF n2_adj_55.BLIF state_FSM_i7.BLIF dataInBuf_i0_i70.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_52.BLIF n1_adj_51.BLIF dataInBuf_i0_i69.D
+1- 1
+-1 1
+.names n2_adj_49.BLIF n1_adj_48.BLIF dataInBuf_i0_i66.D
+1- 1
+-1 1
+.names n2_adj_47.BLIF n1_adj_46.BLIF state_FSM_i7.BLIF dataInBuf_i0_i65.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_44.BLIF n1_adj_43.BLIF dataInBuf_i0_i64.D
+1- 1
+-1 1
+.names n1_adj_41.BLIF n2_adj_42.BLIF state_FSM_i7.BLIF dataInBuf_i0_i62.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_39.BLIF n1_adj_38.BLIF dataInBuf_i0_i61.D
+1- 1
+-1 1
+.names n2_adj_36.BLIF n1_adj_35.BLIF dataInBuf_i0_i58.D
+1- 1
+-1 1
+.names n2_adj_34.BLIF n1_adj_33.BLIF state_FSM_i7.BLIF dataInBuf_i0_i57.D
+1-- 1
+-1- 1
+--1 1
+.names n1_adj_31.BLIF n2_adj_32.BLIF state_FSM_i7.BLIF dataInBuf_i0_i56.D
+1-- 1
+-1- 1
+--1 1
+.names n1_adj_29.BLIF state_FSM_i7.BLIF n2_adj_30.BLIF dataInBuf_i0_i54.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_27.BLIF n1_adj_26.BLIF dataInBuf_i0_i53.D
+1- 1
+-1 1
+.names n1_adj_7.BLIF state_FSM_i7.BLIF n2_adj_8.BLIF dataInBuf_i0_i50.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_4.BLIF n1_adj_5.BLIF dataInBuf_i0_i49.D
+1- 1
+-1 1
+.names n5726.BLIF state_FSM_i7.BLIF dataInBuf_i0_i48.D
+1- 1
+-1 1
+.names n1_adj_20.BLIF n2_adj_21.BLIF state_FSM_i7.BLIF dataInBuf_i0_i46.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_23.BLIF n1_adj_22.BLIF dataInBuf_i0_i45.D
+1- 1
+-1 1
+.names n1_adj_2.BLIF n2_adj_3.BLIF state_FSM_i7.BLIF dataInBuf_i0_i42.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_13.BLIF n1_adj_9.BLIF dataInBuf_i0_i41.D
+1- 1
+-1 1
+.names state_FSM_i7.BLIF n5725.BLIF dataInBuf_i0_i38.D
+1- 1
+-1 1
+.names n2_adj_16.BLIF n1_adj_15.BLIF dataInBuf_i0_i37.D
+1- 1
+-1 1
+.names n5721.BLIF state_FSM_i7.BLIF dataInBuf_i0_i34.D
+1- 1
+-1 1
+.names state_FSM_i7.BLIF n5727.BLIF dataInBuf_i0_i33.D
+1- 1
+-1 1
+.names n1_adj_1.BLIF state_FSM_i7.BLIF n2.BLIF dataInBuf_i0_i29.D
+1-- 1
+-1- 1
+--1 1
+.names n1_adj_11.BLIF n2_adj_12.BLIF state_FSM_i7.BLIF dataInBuf_i0_i21.D
+1-- 1
+-1- 1
+--1 1
+.names reset_c.BLIF state_FSM_i6.AR
+0 1
+.names n2_adj_19.BLIF n1_adj_18.BLIF state_FSM_i7.BLIF dataInBuf_i0_i13.D
+1-- 1
+-1- 1
+--1 1
+.names reset_c.BLIF state_FSM_i5.AR
+0 1
+.names reset_c.BLIF state_FSM_i4.AR
+0 1
+.names reset_c.BLIF state_FSM_i3.AR
+0 1
+.names reset_c.BLIF state_FSM_i2.AR
+0 1
+.names n2185.BLIF i223.BLIF dispCount_i0_i5.D
+11 1
+.names reset_c.BLIF dispCount_i0_i5.AR
+0 1
+.names state_FSM_i7.BLIF n5724.BLIF dataInBuf_i0_i5.D
+1- 1
+-1 1
+.names n2185.BLIF i216.BLIF dispCount_i0_i4.D
+11 1
+.names reset_c.BLIF dispCount_i0_i4.AR
+0 1
+.names n2185.BLIF i209.BLIF dispCount_i0_i3.D
+11 1
+.names reset_c.BLIF dispCount_i0_i3.AR
+0 1
+.names n2185.BLIF i202.BLIF dispCount_i0_i2.D
+11 1
+.names reset_c.BLIF dispCount_i0_i2.AR
+0 1
+.names n2185.BLIF i195.BLIF dispCount_i0_i1.D
+11 1
+.names reset_c.BLIF dispCount_i0_i1.AR
+0 1
+.names n4374.BLIF n3637.BLIF lcdD_i0_i8reg.D
+11 1
+.names reset_c.BLIF lcdD_i0_i8reg.AR
+0 1
+.names reset_c.BLIF state_FSM_i7.AP
+0 1
+.names n40.BLIF n33.BLIF lcdD_i0_i7reg.D
+11 1
+.names reset_c.BLIF lcdD_i0_i7reg.AR
+0 1
+.names n6287.BLIF n6286.BLIF lcdD_i0_i6reg.D
+1- 1
+-1 1
+.names reset_c.BLIF lcdD_i0_i6reg.AR
+0 1
+.names n6290.BLIF n6289.BLIF lcdD_i0_i5reg.D
+1- 1
+-1 1
+.names reset_c.BLIF lcdD_i0_i5reg.AR
+0 1
+.names n6293.BLIF n6292.BLIF lcdD_i0_i4reg.D
+1- 1
+-1 1
+.names reset_c.BLIF lcdD_i0_i4reg.AR
+0 1
+.names n6277.BLIF n6276.BLIF lcdD_i0_i3reg.D
+1- 1
+-1 1
+.names reset_c.BLIF lcdD_i0_i3reg.AR
+0 1
+.names n6280.BLIF n6279.BLIF lcdD_i0_i2reg.D
+1- 1
+-1 1
+.names reset_c.BLIF lcdD_i0_i2reg.AR
+0 1
+.names n6283.BLIF n6282.BLIF lcdD_i0_i1reg.D
+1- 1
+-1 1
+.names reset_c.BLIF lcdD_i0_i1reg.AP
+0 1
+.names n2_adj_480.BLIF n1_adj_479.BLIF dataInBuf_i0_i254.D
+1- 1
+-1 1
+.names n1_adj_477.BLIF n2_adj_478.BLIF state_FSM_i7.BLIF dataInBuf_i0_i253.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_475.BLIF n1_adj_474.BLIF dataInBuf_i0_i252.D
+1- 1
+-1 1
+.names n2_adj_472.BLIF n1_adj_471.BLIF dataInBuf_i0_i251.D
+1- 1
+-1 1
+.names n2_adj_469.BLIF n1_adj_468.BLIF dataInBuf_i0_i250.D
+1- 1
+-1 1
+.names n2_adj_466.BLIF n1_adj_465.BLIF dataInBuf_i0_i249.D
+1- 1
+-1 1
+.names n2_adj_463.BLIF n1_adj_462.BLIF dataInBuf_i0_i248.D
+1- 1
+-1 1
+.names n2_adj_458.BLIF n1_adj_457.BLIF dataInBuf_i0_i246.D
+1- 1
+-1 1
+.names n2_adj_456.BLIF n1_adj_455.BLIF state_FSM_i7.BLIF dataInBuf_i0_i245.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_453.BLIF n1_adj_452.BLIF dataInBuf_i0_i244.D
+1- 1
+-1 1
+.names n2_adj_450.BLIF n1_adj_449.BLIF dataInBuf_i0_i243.D
+1- 1
+-1 1
+.names n2_adj_447.BLIF n1_adj_446.BLIF dataInBuf_i0_i242.D
+1- 1
+-1 1
+.names n2_adj_444.BLIF n1_adj_443.BLIF dataInBuf_i0_i241.D
+1- 1
+-1 1
+.names n2_adj_441.BLIF n1_adj_440.BLIF dataInBuf_i0_i240.D
+1- 1
+-1 1
+.names n2_adj_438.BLIF n1_adj_437.BLIF dataInBuf_i0_i238.D
+1- 1
+-1 1
+.names n1_adj_435.BLIF n2_adj_436.BLIF state_FSM_i7.BLIF dataInBuf_i0_i237.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_433.BLIF n1_adj_432.BLIF dataInBuf_i0_i236.D
+1- 1
+-1 1
+.names n2_adj_430.BLIF n1_adj_429.BLIF dataInBuf_i0_i235.D
+1- 1
+-1 1
+.names n2_adj_427.BLIF n1_adj_426.BLIF dataInBuf_i0_i234.D
+1- 1
+-1 1
+.names n2_adj_424.BLIF n1_adj_423.BLIF dataInBuf_i0_i233.D
+1- 1
+-1 1
+.names n2_adj_421.BLIF n1_adj_420.BLIF dataInBuf_i0_i232.D
+1- 1
+-1 1
+.names n2_adj_418.BLIF n1_adj_417.BLIF dataInBuf_i0_i230.D
+1- 1
+-1 1
+.names n1_adj_415.BLIF n2_adj_416.BLIF state_FSM_i7.BLIF dataInBuf_i0_i229.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_413.BLIF n1_adj_412.BLIF dataInBuf_i0_i228.D
+1- 1
+-1 1
+.names n2_adj_410.BLIF n1_adj_409.BLIF dataInBuf_i0_i227.D
+1- 1
+-1 1
+.names n2_adj_407.BLIF n1_adj_406.BLIF dataInBuf_i0_i226.D
+1- 1
+-1 1
+.names n2_adj_404.BLIF n1_adj_403.BLIF dataInBuf_i0_i225.D
+1- 1
+-1 1
+.names n2_adj_401.BLIF n1_adj_400.BLIF dataInBuf_i0_i224.D
+1- 1
+-1 1
+.names n2_adj_398.BLIF n1_adj_397.BLIF dataInBuf_i0_i222.D
+1- 1
+-1 1
+.names n2_adj_396.BLIF n1_adj_395.BLIF state_FSM_i7.BLIF dataInBuf_i0_i221.D
+1-- 1
+-1- 1
+--1 1
+.names n1_adj_393.BLIF n2_adj_394.BLIF state_FSM_i7.BLIF dataInBuf_i0_i220.D
+1-- 1
+-1- 1
+--1 1
+.names n2_adj_391.BLIF n1_adj_390.BLIF dataInBuf_i0_i219.D
+1- 1
+-1 1
+.names n2_adj_388.BLIF n1_adj_387.BLIF dataInBuf_i0_i218.D
+1- 1
+-1 1
+.names n2_adj_385.BLIF n1_adj_384.BLIF dataInBuf_i0_i217.D
+1- 1
+-1 1
+.names dispCount_i0_i0.BLIF dispCount_i0_i1.BLIF n3033
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i93.BLIF n5851
+11 1
+.names state_FSM_i1.BLIF n6182.BLIF n1_adj_390
+11 1
+.names n3033.BLIF dispCount_i0_i2.BLIF n3040
+11 1
+.names n6241.BLIF n6240.BLIF n6242
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n5963.BLIF n1_adj_200
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i211.BLIF n2_adj_391
+11 1
+.names lcdRw_c
+.names n5106.BLIF cnt_171__i9.BLIF n5113
+11 1
+.names n5998.BLIF n5997.BLIF n5999
+1- 1
+-1 1
+.names n5848.BLIF n5847.BLIF n5849
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i128.BLIF n2_adj_201
+11 1
+.names n6121.BLIF n6120.BLIF n6122
+1- 1
+-1 1
+.names n5720.BLIF dataInBuf_i0_i83.BLIF n5723
+11 1
+.names n5743.BLIF n5742.BLIF n5744
+1- 1
+-1 1
+.names n24.BLIF n23.BLIF n32
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i242.BLIF n6241
+11 1
+.names n5782.BLIF n5781.BLIF n5783
+1- 1
+-1 1
+.names n3731.BLIF n1.BLIF n14
+1- 1
+-1 1
+.names n6238.BLIF n6237.BLIF n6239
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n5966.BLIF n1_adj_203
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i196.BLIF n6121
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i92.BLIF n5848
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i129.BLIF n2_adj_204
+11 1
+.names n1_adj_482.BLIF state_FSM_i7.BLIF n3649
+1- 1
+-1 1
+.names n5720.BLIF dataInBuf_i0_i5.BLIF n5724
+11 1
+.names state_FSM_i1.BLIF n6185.BLIF n1_adj_393
+11 1
+.names n4376.BLIF n4374.BLIF state_FSM_i3.BLIF n6279
+111 1
+.names n6025.BLIF n6024.BLIF n6026
+1- 1
+-1 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i241.BLIF n6238
+11 1
+.names state_FSM_i1.BLIF n5969.BLIF n1_adj_206
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i212.BLIF n2_adj_394
+11 1
+.names state_FSM_i1.BLIF n1
+0 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i149.BLIF n5998
+11 1
+.names n6235.BLIF n6234.BLIF n6236
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i130.BLIF n2_adj_207
+11 1
+.names n6118.BLIF n6117.BLIF n6119
+1- 1
+-1 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i13.BLIF n5740
+11 1
+.names n5845.BLIF n5844.BLIF n5846
+1- 1
+-1 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i58.BLIF n5782
+11 1
+.names n14.BLIF n3006
+0 1
+.names n5995.BLIF n5994.BLIF n5996
+1- 1
+-1 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i240.BLIF n6235
+11 1
+.names state_FSM_i1.BLIF n5972.BLIF n1_adj_209
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i195.BLIF n6118
+11 1
+.names n6232.BLIF n6231.BLIF n6233
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i131.BLIF n2_adj_210
+11 1
+.names state_FSM_i1.BLIF n6188.BLIF n1_adj_395
+11 1
+.names n22.BLIF n21.BLIF n31
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i238.BLIF n6232
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i213.BLIF n2_adj_396
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i91.BLIF n5845
+11 1
+.names state_FSM_i1.BLIF n5975.BLIF n1_adj_212
+11 1
+.names n6115.BLIF n6114.BLIF n6116
+1- 1
+-1 1
+.names n6229.BLIF n6228.BLIF n6230
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i132.BLIF n2_adj_213
+11 1
+.names n5779.BLIF n5778.BLIF n5780
+1- 1
+-1 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i148.BLIF n5995
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i237.BLIF n6229
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i194.BLIF n6115
+11 1
+.names n5842.BLIF n5841.BLIF n5843
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n5978.BLIF n1_adj_215
+11 1
+.names state_FSM_i1.BLIF n6191.BLIF n1_adj_397
+11 1
+.names n6226.BLIF n6225.BLIF n6227
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i133.BLIF n2_adj_216
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i214.BLIF n2_adj_398
+11 1
+.names state_FSM_i1.BLIF n5747.BLIF n1_adj_1
+11 1
+.names n5992.BLIF n5991.BLIF n5993
+1- 1
+-1 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i236.BLIF n6226
+11 1
+.names state_FSM_i1.BLIF n5981.BLIF n1_adj_217
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i21.BLIF n2
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i90.BLIF n5842
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i134.BLIF n2_adj_218
+11 1
+.names n6223.BLIF n6222.BLIF n6224
+1- 1
+-1 1
+.names n6112.BLIF n6111.BLIF n6113
+1- 1
+-1 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i21.BLIF n5743
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i147.BLIF n5992
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i235.BLIF n6223
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i77.BLIF n5815
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i193.BLIF n6112
+11 1
+.names n5989.BLIF n5988.BLIF n5990
+1- 1
+-1 1
+.names n5169.BLIF cnt_171__i18.BLIF n5176
+11 1
+.names n6109.BLIF n6108.BLIF n6110
+1- 1
+-1 1
+.names n5729.BLIF n5718
+0 1
+.names state_FSM_i1.BLIF n5762.BLIF n1_adj_20
+11 1
+.names state_FSM_i1.BLIF n5984.BLIF n1_adj_220
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i57.BLIF n5779
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i146.BLIF n5989
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i38.BLIF n2_adj_21
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i136.BLIF n2_adj_221
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i192.BLIF n6109
+11 1
+.names n5986.BLIF n5985.BLIF n5987
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n5759.BLIF n1_adj_22
+11 1
+.names state_FSM_i1.BLIF n6194.BLIF n1_adj_400
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i145.BLIF n5986
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i37.BLIF n2_adj_23
+11 1
+.names state_FSM_i1.BLIF n5987.BLIF n1_adj_223
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i216.BLIF n2_adj_401
+11 1
+.names dispCount_i0_i0.BLIF dispCount_5_N_347_0
+0 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i137.BLIF n2_adj_224
+11 1
+.names n6106.BLIF n6105.BLIF n6107
+1- 1
+-1 1
+.names n1845.BLIF lcdRs_N_620
+0 1
+.names n3012.BLIF state_FSM_i3.BLIF n20.BLIF state_FSM_i6.BLIF n5258
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names state_FSM_i1.BLIF lcdRs_N_617.BLIF n1_adj_25
+11 1
+.names lcdRs_N_618.BLIF lcdRs_N_619
+0 1
+.names n5839.BLIF n5838.BLIF n5840
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n5990.BLIF n1_adj_226
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i190.BLIF n6106
+11 1
+.names dispCount_i0_i5.BLIF n3800.BLIF n5.BLIF lcdRs_N_618
+1-- 1
+-1- 1
+--1 1
+.names n4374.BLIF n3100.BLIF n6282
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i138.BLIF n2_adj_227
+11 1
+.names state_FSM_i1.BLIF n6197.BLIF n1_adj_403
+11 1
+.names n5162.BLIF cnt_171__i17.BLIF n5169
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i217.BLIF n2_adj_404
+11 1
+.names n5740.BLIF n5739.BLIF n5741
+1- 1
+-1 1
+.names n5064.BLIF cnt_171__i3.BLIF n5071
+11 1
+.names state_FSM_i1.BLIF n5993.BLIF n1_adj_229
+11 1
+.names n6103.BLIF n6102.BLIF n6104
+1- 1
+-1 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i89.BLIF n5839
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i139.BLIF n2_adj_230
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i160.BLIF n6025
+11 1
+.names n1_adj_10.BLIF n3800.BLIF dispCount_i0_i4.BLIF n1845
+1-- 1
+-1- 1
+--1 1
+.names n5155.BLIF cnt_171__i16.BLIF n5162
+11 1
+.names n4376.BLIF n4374.BLIF n3117.BLIF n6276
+111 1
+.names n5983.BLIF n5982.BLIF n5984
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n5771.BLIF n1_adj_26
+11 1
+.names state_FSM_i1.BLIF n5996.BLIF n1_adj_232
+11 1
+.names state_FSM_i1.BLIF n6200.BLIF n1_adj_406
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i246.BLIF n6273
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i144.BLIF n5983
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i45.BLIF n2_adj_27
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i140.BLIF n2_adj_233
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i218.BLIF n2_adj_407
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i245.BLIF n6270
+11 1
+.names n5980.BLIF n5979.BLIF n5981
+1- 1
+-1 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i189.BLIF n6103
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i244.BLIF n6267
+11 1
+.names cnt_171__i11.BLIF cnt_171__i2.BLIF n30
+11 1
+.names state_FSM_i1.BLIF n5774.BLIF n1_adj_29
+11 1
+.names state_FSM_i1.BLIF n5999.BLIF n1_adj_235
+11 1
+.names n5776.BLIF n5775.BLIF n5777
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i243.BLIF n6264
+11 1
+.names cnt_171__i15.BLIF cnt_171__i12.BLIF n29
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i46.BLIF n2_adj_30
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i141.BLIF n2_adj_236
+11 1
+.names n6100.BLIF n6099.BLIF n6101
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i242.BLIF n6261
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i142.BLIF n5980
+11 1
+.names n6220.BLIF n6219.BLIF n6221
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n6002.BLIF n1_adj_237
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i241.BLIF n6258
+11 1
+.names cnt_171__i4.BLIF cnt_171__i19.BLIF n28
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i234.BLIF n6220
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i142.BLIF n2_adj_238
+11 1
+.names state_FSM_i1.BLIF n6203.BLIF n1_adj_409
+11 1
+.names n6022.BLIF n6021.BLIF n6023
+1- 1
+-1 1
+.names cnt_171__i10.BLIF cnt_171__i5.BLIF n27
+11 1
+.names n6217.BLIF n6216.BLIF n6218
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i219.BLIF n2_adj_410
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i240.BLIF n6255
+11 1
+.names n5977.BLIF n5976.BLIF n5978
+1- 1
+-1 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i233.BLIF n6217
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i219.BLIF n6181
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i188.BLIF n6100
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i238.BLIF n6252
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i141.BLIF n5977
+11 1
+.names state_FSM_i1.BLIF n5777.BLIF n1_adj_31
+11 1
+.names state_FSM_i1.BLIF n6005.BLIF n1_adj_240
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i56.BLIF n5776
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i237.BLIF n6249
+11 1
+.names cnt_171__i1.BLIF cnt_171__i17.BLIF n26
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i48.BLIF n2_adj_32
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i144.BLIF n2_adj_241
+11 1
+.names n6097.BLIF n6096.BLIF n6098
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i236.BLIF n6246
+11 1
+.names n5836.BLIF n5835.BLIF n5837
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i235.BLIF n6243
+11 1
+.names state_FSM_i1.BLIF n5780.BLIF n1_adj_33
+11 1
+.names state_FSM_i1.BLIF n6008.BLIF n1_adj_243
+11 1
+.names state_FSM_i1.BLIF n6206.BLIF n1_adj_412
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i234.BLIF n6240
+11 1
+.names n3644.BLIF n5737
+0 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i49.BLIF n2_adj_34
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i145.BLIF n2_adj_244
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i220.BLIF n2_adj_413
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i233.BLIF n6237
+11 1
+.names n2212.BLIF n5735
+0 1
+.names n6214.BLIF n6213.BLIF n6215
+1- 1
+-1 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i187.BLIF n6097
+11 1
+.names n5134.BLIF cnt_171__i13.BLIF n5141
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i232.BLIF n6234
+11 1
+.names n5734.BLIF n3800.BLIF n7
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n5783.BLIF n1_adj_35
+11 1
+.names state_FSM_i1.BLIF n6011.BLIF n1_adj_246
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i230.BLIF n6231
+11 1
+.names n7.BLIF state_FSM_i1.BLIF n5650
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i50.BLIF n2_adj_36
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i146.BLIF n2_adj_247
+11 1
+.names n5773.BLIF n5772.BLIF n5774
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i229.BLIF n6228
+11 1
+.names n5974.BLIF n5973.BLIF n5975
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n6209.BLIF n1_adj_415
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i228.BLIF n6225
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i140.BLIF n5974
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i232.BLIF n6214
+11 1
+.names state_FSM_i1.BLIF n6014.BLIF n1_adj_249
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i221.BLIF n2_adj_416
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i227.BLIF n6222
+11 1
+.names n5971.BLIF n5970.BLIF n5972
+1- 1
+-1 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i88.BLIF n5836
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i147.BLIF n2_adj_250
+11 1
+.names n6094.BLIF n6093.BLIF n6095
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i226.BLIF n6219
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i139.BLIF n5971
+11 1
+.names n6211.BLIF n6210.BLIF n6212
+1- 1
+-1 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i186.BLIF n6094
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i225.BLIF n6216
+11 1
+.names n5968.BLIF n5967.BLIF n5969
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n5786.BLIF n1_adj_38
+11 1
+.names state_FSM_i1.BLIF n6017.BLIF n1_adj_252
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i54.BLIF n5773
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i224.BLIF n6213
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i138.BLIF n5968
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i53.BLIF n2_adj_39
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i148.BLIF n2_adj_253
+11 1
+.names state_FSM_i1.BLIF n6212.BLIF n1_adj_417
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i222.BLIF n6210
+11 1
+.names n5965.BLIF n5964.BLIF n5966
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i222.BLIF n2_adj_418
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i221.BLIF n6207
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i137.BLIF n5965
+11 1
+.names state_FSM_i1.BLIF n5789.BLIF n1_adj_41
+11 1
+.names state_FSM_i1.BLIF n6020.BLIF n1_adj_255
+11 1
+.names n6091.BLIF n6090.BLIF n6092
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i220.BLIF n6204
+11 1
+.names state_FSM_i1.BLIF n5768.BLIF n1_adj_7
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i54.BLIF n2_adj_42
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i149.BLIF n2_adj_256
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i219.BLIF n6201
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i42.BLIF n2_adj_8
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i230.BLIF n6211
+11 1
+.names n6178.BLIF n6177.BLIF n6179
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i218.BLIF n6198
+11 1
+.names n5962.BLIF n5961.BLIF n5963
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n5792.BLIF n1_adj_43
+11 1
+.names state_FSM_i1.BLIF n6023.BLIF n1_adj_257
+11 1
+.names n5141.BLIF cnt_171__i14.BLIF n5148
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i217.BLIF n6195
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i136.BLIF n5962
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i56.BLIF n2_adj_44
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i150.BLIF n2_adj_258
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i185.BLIF n6091
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i158.BLIF n6022
+11 1
+.names n5959.BLIF n5958.BLIF n5960
+1- 1
+-1 1
+.names n5770.BLIF n5769.BLIF n5771
+1- 1
+-1 1
+.names n6046.BLIF n6045.BLIF n6047
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i216.BLIF n6192
+11 1
+.names n5085.BLIF cnt_171__i6.BLIF n5092
+11 1
+.names state_FSM_i1.BLIF n5795.BLIF n1_adj_46
+11 1
+.names n5812.BLIF n5811.BLIF n5813
+1- 1
+-1 1
+.names n6088.BLIF n6087.BLIF n6089
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i214.BLIF n6189
+11 1
+.names cnt_171__i14.BLIF cnt_171__i9.BLIF n24
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i57.BLIF n2_adj_47
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i74.BLIF n5812
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i53.BLIF n5770
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i213.BLIF n6186
+11 1
+.names state_FSM_i1.BLIF n6026.BLIF n1_adj_260
+11 1
+.names state_FSM_i1.BLIF n6215.BLIF n1_adj_420
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i212.BLIF n6183
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i134.BLIF n5959
+11 1
+.names state_FSM_i1.BLIF n5798.BLIF n1_adj_48
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i152.BLIF n2_adj_261
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i224.BLIF n2_adj_421
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i211.BLIF n6180
+11 1
+.names n5956.BLIF n5955.BLIF n5957
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i58.BLIF n2_adj_49
+11 1
+.names n5809.BLIF n5808.BLIF n5810
+1- 1
+-1 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i184.BLIF n6088
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i210.BLIF n6177
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i133.BLIF n5956
+11 1
+.names state_FSM_i1.BLIF n6029.BLIF n1_adj_262
+11 1
+.names n5767.BLIF n5766.BLIF n5768
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i209.BLIF n6174
+11 1
+.names cnt_171__i0.BLIF cnt_171__i6.BLIF n23
+11 1
+.names n5833.BLIF n5832.BLIF n5834
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i153.BLIF n2_adj_263
+11 1
+.names n6085.BLIF n6084.BLIF n6086
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i208.BLIF n6171
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i86.BLIF n5833
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i218.BLIF n6178
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i206.BLIF n6168
+11 1
+.names n5953.BLIF n5952.BLIF n5954
+1- 1
+-1 1
+.names n6208.BLIF n6207.BLIF n6209
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n6032.BLIF n1_adj_264
+11 1
+.names state_FSM_i1.BLIF n6218.BLIF n1_adj_423
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i205.BLIF n6165
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i132.BLIF n5953
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i229.BLIF n6208
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i154.BLIF n2_adj_265
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i225.BLIF n2_adj_424
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i204.BLIF n6162
+11 1
+.names n5950.BLIF n5949.BLIF n5951
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n5801.BLIF n1_adj_51
+11 1
+.names state_FSM_i1.BLIF n6035.BLIF n1_adj_266
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i182.BLIF n6085
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i203.BLIF n6159
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i131.BLIF n5950
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i61.BLIF n2_adj_52
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i155.BLIF n2_adj_267
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i50.BLIF n5767
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i202.BLIF n6156
+11 1
+.names n5947.BLIF n5946.BLIF n5948
+1- 1
+-1 1
+.names n6082.BLIF n6081.BLIF n6083
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i201.BLIF n6153
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i130.BLIF n5947
+11 1
+.names state_FSM_i1.BLIF n5804.BLIF n1_adj_54
+11 1
+.names state_FSM_i1.BLIF n6038.BLIF n1_adj_269
+11 1
+.names n6019.BLIF n6018.BLIF n6020
+1- 1
+-1 1
+.names n5944.BLIF n5943.BLIF n5945
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i62.BLIF n2_adj_55
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i156.BLIF n2_adj_270
+11 1
+.names state_FSM_i1.BLIF n6221.BLIF n1_adj_426
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i200.BLIF n6150
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i129.BLIF n5944
+11 1
+.names n5830.BLIF n5829.BLIF n5831
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n6041.BLIF n1_adj_271
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i226.BLIF n2_adj_427
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i198.BLIF n6147
+11 1
+.names n5941.BLIF n5940.BLIF n5942
+1- 1
+-1 1
+.names n6205.BLIF n6204.BLIF n6206
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i157.BLIF n2_adj_272
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i181.BLIF n6082
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i197.BLIF n6144
+11 1
+.names cnt_171__i3.BLIF cnt_171__i16.BLIF n22
+11 1
+.names state_FSM_i1.BLIF n5807.BLIF n1_adj_56
+11 1
+.names n6175.BLIF n6174.BLIF n6176
+1- 1
+-1 1
+.names n5764.BLIF n5763.BLIF n5765
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i196.BLIF n6141
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i64.BLIF n2_adj_57
+11 1
+.names state_FSM_i1.BLIF n6044.BLIF n1_adj_273
+11 1
+.names n6079.BLIF n6078.BLIF n6080
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i195.BLIF n6138
+11 1
+.names cnt_171__i18.BLIF cnt_171__i7.BLIF n21
+11 1
+.names state_FSM_i1.BLIF n5810.BLIF n1_adj_58
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i158.BLIF n2_adj_274
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i194.BLIF n6135
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i65.BLIF n2_adj_59
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i193.BLIF n6132
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i128.BLIF n5941
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i217.BLIF n6175
+11 1
+.names state_FSM_i1.BLIF n6224.BLIF n1_adj_429
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i192.BLIF n6129
+11 1
+.names n5938.BLIF n5937.BLIF n5939
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n5813.BLIF n1_adj_61
+11 1
+.names n6172.BLIF n6171.BLIF n6173
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i227.BLIF n2_adj_430
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i190.BLIF n6126
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i126.BLIF n5938
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i66.BLIF n2_adj_62
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i73.BLIF n5809
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i180.BLIF n6079
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i189.BLIF n6123
+11 1
+.names n5935.BLIF n5934.BLIF n5936
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n6047.BLIF n1_adj_276
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i188.BLIF n6120
+11 1
+.names n5078.BLIF cnt_171__i5.BLIF n5085
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i228.BLIF n6205
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i160.BLIF n2_adj_277
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i49.BLIF n5764
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i187.BLIF n6117
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i125.BLIF n5935
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i85.BLIF n5830
+11 1
+.names n6076.BLIF n6075.BLIF n6077
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i186.BLIF n6114
+11 1
+.names n5932.BLIF n5931.BLIF n5933
+1- 1
+-1 1
+.names n6202.BLIF n6201.BLIF n6203
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n6050.BLIF n1_adj_279
+11 1
+.names state_FSM_i1.BLIF n6227.BLIF n1_adj_432
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i185.BLIF n6111
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i124.BLIF n5932
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i227.BLIF n6202
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i161.BLIF n2_adj_280
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i228.BLIF n2_adj_433
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i184.BLIF n6108
+11 1
+.names n5929.BLIF n5928.BLIF n5930
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n5816.BLIF n1_adj_64
+11 1
+.names n5806.BLIF n5805.BLIF n5807
+1- 1
+-1 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i179.BLIF n6076
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i182.BLIF n6105
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i123.BLIF n5929
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i69.BLIF n2_adj_65
+11 1
+.names state_FSM_i1.BLIF n6053.BLIF n1_adj_281
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i181.BLIF n6102
+11 1
+.names n5926.BLIF n5925.BLIF n5927
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i162.BLIF n2_adj_282
+11 1
+.names n5761.BLIF n5760.BLIF n5762
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i180.BLIF n6099
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i122.BLIF n5926
+11 1
+.names state_FSM_i1.BLIF n5819.BLIF n1_adj_67
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i216.BLIF n6172
+11 1
+.names n6073.BLIF n6072.BLIF n6074
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i179.BLIF n6096
+11 1
+.names n5923.BLIF n5922.BLIF n5924
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i70.BLIF n2_adj_68
+11 1
+.names state_FSM_i1.BLIF n6056.BLIF n1_adj_283
+11 1
+.names state_FSM_i1.BLIF n6230.BLIF n1_adj_435
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i178.BLIF n6093
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i121.BLIF n5923
+11 1
+.names n6199.BLIF n6198.BLIF n6200
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i163.BLIF n2_adj_284
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i229.BLIF n2_adj_436
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i177.BLIF n6090
+11 1
+.names n5827.BLIF n5826.BLIF n5828
+1- 1
+-1 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i178.BLIF n6073
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i176.BLIF n6087
+11 1
+.names n5920.BLIF n5919.BLIF n5921
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n6059.BLIF n1_adj_286
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i46.BLIF n5761
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i174.BLIF n6084
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i120.BLIF n5920
+11 1
+.names state_FSM_i1.BLIF n5822.BLIF n1_adj_69
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i164.BLIF n2_adj_287
+11 1
+.names n5758.BLIF n5757.BLIF n5759
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i173.BLIF n6081
+11 1
+.names n5917.BLIF n5916.BLIF n5918
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i72.BLIF n2_adj_70
+11 1
+.names state_FSM_i1.BLIF n6062.BLIF n1_adj_288
+11 1
+.names n6070.BLIF n6069.BLIF n6071
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i172.BLIF n6078
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i118.BLIF n5917
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i82.BLIF n5827
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i165.BLIF n2_adj_289
+11 1
+.names state_FSM_i1.BLIF n6233.BLIF n1_adj_437
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i171.BLIF n6075
+11 1
+.names state_FSM_i1.BLIF n5825.BLIF n1_adj_71
+11 1
+.names state_FSM_i1.BLIF n6065.BLIF n1_adj_290
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i230.BLIF n2_adj_438
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i170.BLIF n6072
+11 1
+.names n5914.BLIF n5913.BLIF n5915
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i73.BLIF n2_adj_72
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i166.BLIF n2_adj_291
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i169.BLIF n6069
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i117.BLIF n5914
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i168.BLIF n6066
+11 1
+.names n5911.BLIF n5910.BLIF n5912
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n5828.BLIF n1_adj_74
+11 1
+.names n6169.BLIF n6168.BLIF n6170
+1- 1
+-1 1
+.names n5057.BLIF cnt_171__i2.BLIF n5064
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i166.BLIF n6063
+11 1
+.names n2185.BLIF n4374
+0 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i74.BLIF n2_adj_75
+11 1
+.names state_FSM_i1.BLIF n6068.BLIF n1_adj_293
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i45.BLIF n5758
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i165.BLIF n6060
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i168.BLIF n2_adj_294
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i177.BLIF n6070
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i164.BLIF n6057
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i116.BLIF n5911
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i226.BLIF n6199
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i214.BLIF n6169
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i163.BLIF n6054
+11 1
+.names n5908.BLIF n5907.BLIF n5909
+1- 1
+-1 1
+.names n36.BLIF cnt_171__i13.BLIF n26.BLIF n34.BLIF n35.BLIF cnt_171__i8.BLIF \
+n5194
+111111 1
+.names state_FSM_i1.BLIF n6071.BLIF n1_adj_295
+11 1
+.names state_FSM_i1.BLIF n6236.BLIF n1_adj_440
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i162.BLIF n6051
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i115.BLIF n5908
+11 1
+.names n5824.BLIF n5823.BLIF n5825
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i169.BLIF n2_adj_296
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i232.BLIF n2_adj_441
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i161.BLIF n6048
+11 1
+.names n5905.BLIF n5904.BLIF n5906
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n5831.BLIF n1_adj_77
+11 1
+.names n2212.BLIF n3806
+0 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i168.BLIF n6046
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i157.BLIF n6019
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i114.BLIF n5905
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i77.BLIF n2_adj_78
+11 1
+.names state_FSM_i1.BLIF n6074.BLIF n1_adj_298
+11 1
+.names reset_c.BLIF n3649.BLIF n5735.BLIF n3805
+111 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i160.BLIF n6045
+11 1
+.names n5902.BLIF n5901.BLIF n5903
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n5834.BLIF n1_adj_79
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i170.BLIF n2_adj_299
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i158.BLIF n6042
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i113.BLIF n5902
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i78.BLIF n2_adj_80
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i72.BLIF n5806
+11 1
+.names n5737.BLIF n1_adj_482.BLIF n3804
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i157.BLIF n6039
+11 1
+.names n5899.BLIF n5898.BLIF n5900
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n6077.BLIF n1_adj_300
+11 1
+.names state_FSM_i1.BLIF n6239.BLIF n1_adj_443
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i156.BLIF n6036
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i112.BLIF n5899
+11 1
+.names n6196.BLIF n6195.BLIF n6197
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i171.BLIF n2_adj_301
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i233.BLIF n2_adj_444
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i155.BLIF n6033
+11 1
+.names n5896.BLIF n5895.BLIF n5897
+1- 1
+-1 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i81.BLIF n5824
+11 1
+.names n5755.BLIF n5754.BLIF n5756
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i154.BLIF n6030
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i110.BLIF n5896
+11 1
+.names state_FSM_i1.BLIF n5837.BLIF n1_adj_82
+11 1
+.names state_FSM_i1.BLIF n6080.BLIF n1_adj_303
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i153.BLIF n6027
+11 1
+.names n5893.BLIF n5892.BLIF n5894
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i80.BLIF n2_adj_83
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i172.BLIF n2_adj_304
+11 1
+.names n6067.BLIF n6066.BLIF n6068
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i152.BLIF n6024
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i109.BLIF n5893
+11 1
+.names n6166.BLIF n6165.BLIF n6167
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n6242.BLIF n1_adj_446
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i150.BLIF n6021
+11 1
+.names n5890.BLIF n5889.BLIF n5891
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n5840.BLIF n1_adj_85
+11 1
+.names state_FSM_i1.BLIF n6083.BLIF n1_adj_305
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i234.BLIF n2_adj_447
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i149.BLIF n6018
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i108.BLIF n5890
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i81.BLIF n2_adj_86
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i173.BLIF n2_adj_306
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i42.BLIF n5755
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i148.BLIF n6015
+11 1
+.names n5887.BLIF n5886.BLIF n5888
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n6086.BLIF n1_adj_307
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i147.BLIF n6012
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i107.BLIF n5887
+11 1
+.names state_FSM_i1.BLIF n5843.BLIF n1_adj_88
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i174.BLIF n2_adj_308
+11 1
+.names state_FSM_i1.BLIF n6245.BLIF n1_adj_449
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i146.BLIF n6009
+11 1
+.names n5720.BLIF n1845.BLIF n3644
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i82.BLIF n2_adj_89
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i235.BLIF n2_adj_450
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i145.BLIF n6006
+11 1
+.names state_FSM_i1.BLIF n5753.BLIF n1_adj_9
+11 1
+.names n5803.BLIF n5802.BLIF n5804
+1- 1
+-1 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i176.BLIF n6067
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i144.BLIF n6003
+11 1
+.names state_FSM_i1.BLIF n5846.BLIF n1_adj_91
+11 1
+.names state_FSM_i1.BLIF n6089.BLIF n1_adj_310
+11 1
+.names n5752.BLIF n5751.BLIF n5753
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i142.BLIF n6000
+11 1
+.names n5884.BLIF n5883.BLIF n5885
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i83.BLIF n2_adj_92
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i176.BLIF n2_adj_311
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i141.BLIF n5997
+11 1
+.names dispCount_i0_i5.BLIF n1_adj_10
+0 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i225.BLIF n6196
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i41.BLIF n5752
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i140.BLIF n5994
+11 1
+.names dispCount_i0_i4.BLIF n5
+0 1
+.names state_FSM_i1.BLIF n5849.BLIF n1_adj_93
+11 1
+.names state_FSM_i1.BLIF n6092.BLIF n1_adj_313
+11 1
+.names state_FSM_i1.BLIF n6248.BLIF n1_adj_452
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i139.BLIF n5991
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i106.BLIF n5884
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i84.BLIF n2_adj_94
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i177.BLIF n2_adj_314
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i236.BLIF n2_adj_453
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i138.BLIF n5988
+11 1
+.names n5821.BLIF n5820.BLIF n5822
+1- 1
+-1 1
+.names n6064.BLIF n6063.BLIF n6065
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i137.BLIF n5985
+11 1
+.names state_FSM_i1.BLIF n5852.BLIF n1_adj_95
+11 1
+.names state_FSM_i1.BLIF n6095.BLIF n1_adj_316
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i136.BLIF n5982
+11 1
+.names n5881.BLIF n5880.BLIF n5882
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i85.BLIF n2_adj_96
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i178.BLIF n2_adj_317
+11 1
+.names state_FSM_i1.BLIF n6251.BLIF n1_adj_455
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i134.BLIF n5979
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i105.BLIF n5881
+11 1
+.names n6193.BLIF n6192.BLIF n6194
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n6098.BLIF n1_adj_318
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i237.BLIF n2_adj_456
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i133.BLIF n5976
+11 1
+.names n5878.BLIF n5877.BLIF n5879
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n5855.BLIF n1_adj_97
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i179.BLIF n2_adj_319
+11 1
+.names n5749.BLIF n5748.BLIF n5750
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i132.BLIF n5973
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i104.BLIF n5878
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i86.BLIF n2_adj_98
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i174.BLIF n6064
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i131.BLIF n5970
+11 1
+.names n5875.BLIF n5874.BLIF n5876
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n6101.BLIF n1_adj_321
+11 1
+.names n6061.BLIF n6060.BLIF n6062
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i130.BLIF n5967
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i102.BLIF n5875
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i224.BLIF n6193
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i180.BLIF n2_adj_322
+11 1
+.names state_FSM_i1.BLIF n6254.BLIF n1_adj_457
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i129.BLIF n5964
+11 1
+.names n5872.BLIF n5871.BLIF n5873
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n5858.BLIF n1_adj_100
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i213.BLIF n6166
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i238.BLIF n2_adj_458
+11 1
+.names n3012.BLIF n4376
+0 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i88.BLIF n2_adj_101
+11 1
+.names state_FSM_i1.BLIF n6104.BLIF n1_adj_323
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i37.BLIF n5749
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i128.BLIF n5961
+11 1
+.names n5720.BLIF dataInBuf_i0_i48.BLIF n5726
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i181.BLIF n2_adj_324
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i126.BLIF n5958
+11 1
+.names n2185.BLIF n60.BLIF dataInBuf_i0_i251.BLIF n6293
+111 1
+.names state_FSM_i1.BLIF n5861.BLIF n1_adj_103
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i70.BLIF n5803
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i125.BLIF n5955
+11 1
+.names state_FSM_i1.BLIF n5744.BLIF n1_adj_11
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i89.BLIF n2_adj_104
+11 1
+.names state_FSM_i1.BLIF n6107.BLIF n1_adj_325
+11 1
+.names lcdRs_N_619.BLIF state_FSM_i1.BLIF n5720
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i124.BLIF n5952
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i13.BLIF n2_adj_12
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i182.BLIF n2_adj_326
+11 1
+.names n5746.BLIF n5745.BLIF n5747
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i123.BLIF n5949
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i101.BLIF n5872
+11 1
+.names state_FSM_i1.BLIF n5864.BLIF n1_adj_106
+11 1
+.names i2912.BLIF n5734
+0 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i122.BLIF n5946
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i90.BLIF n2_adj_107
+11 1
+.names n6163.BLIF n6162.BLIF n6164
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i121.BLIF n5943
+11 1
+.names n5869.BLIF n5868.BLIF n5870
+1- 1
+-1 1
+.names n5800.BLIF n5799.BLIF n5801
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i120.BLIF n5940
+11 1
+.names n60.BLIF n6285
+0 1
+.names state_FSM_i1.BLIF n5867.BLIF n1_adj_109
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i212.BLIF n6163
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i118.BLIF n5937
+11 1
+.names n4374.BLIF dataInBuf_i0_i254.BLIF n33
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i91.BLIF n2_adj_110
+11 1
+.names state_FSM_i1.BLIF n6110.BLIF n1_adj_328
+11 1
+.names state_FSM_i1.BLIF n6257.BLIF n1_adj_462
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i117.BLIF n5934
+11 1
+.names n2185.BLIF n60.BLIF dataInBuf_i0_i252.BLIF n6290
+111 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i184.BLIF n2_adj_329
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i240.BLIF n2_adj_463
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i116.BLIF n5931
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i100.BLIF n5869
+11 1
+.names state_FSM_i1.BLIF n5870.BLIF n1_adj_112
+11 1
+.names n6160.BLIF n6159.BLIF n6161
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i115.BLIF n5928
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i92.BLIF n2_adj_113
+11 1
+.names state_FSM_i1.BLIF n6113.BLIF n1_adj_330
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i114.BLIF n5925
+11 1
+.names n2185.BLIF n3012.BLIF n40
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i185.BLIF n2_adj_331
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i173.BLIF n6061
+11 1
+.names n6043.BLIF n6042.BLIF n6044
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i113.BLIF n5922
+11 1
+.names n5866.BLIF n5865.BLIF n5867
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n5873.BLIF n1_adj_115
+11 1
+.names state_FSM_i1.BLIF n6116.BLIF n1_adj_332
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i29.BLIF n5746
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i112.BLIF n5919
+11 1
+.names n2185.BLIF n60.BLIF dataInBuf_i0_i253.BLIF n6287
+111 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i93.BLIF n2_adj_116
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i186.BLIF n2_adj_333
+11 1
+.names state_FSM_i1.BLIF n6260.BLIF n1_adj_465
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i110.BLIF n5916
+11 1
+.names state_FSM_i5.BLIF n14_adj_6.BLIF n44
+11 1
+.names state_FSM_i1.BLIF n5876.BLIF n1_adj_117
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i241.BLIF n2_adj_466
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i109.BLIF n5913
+11 1
+.names i32.BLIF n3729.BLIF n3731
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i94.BLIF n2_adj_118
+11 1
+.names state_FSM_i1.BLIF n6119.BLIF n1_adj_335
+11 1
+.names n6058.BLIF n6057.BLIF n6059
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i108.BLIF n5910
+11 1
+.names n6285.BLIF n44.BLIF n6286
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i187.BLIF n2_adj_336
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i107.BLIF n5907
+11 1
+.names n6190.BLIF n6189.BLIF n6191
+1- 1
+-1 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i172.BLIF n6058
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i106.BLIF n5904
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i222.BLIF n6190
+11 1
+.names state_FSM_i1.BLIF n6122.BLIF n1_adj_338
+11 1
+.names state_FSM_i1.BLIF n6263.BLIF n1_adj_468
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i105.BLIF n5901
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i80.BLIF n5821
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i188.BLIF n2_adj_339
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i242.BLIF n2_adj_469
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i104.BLIF n5898
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i99.BLIF n5866
+11 1
+.names state_FSM_i1.BLIF n5879.BLIF n1_adj_120
+11 1
+.names state_FSM_i1.BLIF n6125.BLIF n1_adj_340
+11 1
+.names n6055.BLIF n6054.BLIF n6056
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i102.BLIF n5895
+11 1
+.names n2185.BLIF dataInBuf_i0_i248.BLIF n6283
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i96.BLIF n2_adj_121
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i189.BLIF n2_adj_341
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i101.BLIF n5892
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i211.BLIF n6160
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i171.BLIF n6055
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i100.BLIF n5889
+11 1
+.names state_FSM_i1.BLIF n5882.BLIF n1_adj_123
+11 1
+.names state_FSM_i1.BLIF n6128.BLIF n1_adj_342
+11 1
+.names state_FSM_i3.BLIF n20.BLIF n5729
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i99.BLIF n5886
+11 1
+.names n40.BLIF state_FSM_i3.BLIF n60
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i97.BLIF n2_adj_124
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i190.BLIF n2_adj_343
+11 1
+.names state_FSM_i1.BLIF n6266.BLIF n1_adj_471
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i98.BLIF n5883
+11 1
+.names n2185.BLIF dataInBuf_i0_i249.BLIF n6280
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i243.BLIF n2_adj_472
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i97.BLIF n5880
+11 1
+.names state_FSM_i1.BLIF n5885.BLIF n1_adj_126
+11 1
+.names n6157.BLIF n6156.BLIF n6158
+1- 1
+-1 1
+.names n6052.BLIF n6051.BLIF n6053
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i96.BLIF n5877
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i98.BLIF n2_adj_127
+11 1
+.names state_FSM_i1.BLIF n6131.BLIF n1_adj_345
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i94.BLIF n5874
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i192.BLIF n2_adj_346
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i170.BLIF n6052
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i93.BLIF n5871
+11 1
+.names state_FSM_i1.BLIF n5888.BLIF n1_adj_129
+11 1
+.names state_FSM_i1.BLIF n6269.BLIF n1_adj_474
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i92.BLIF n5868
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i5.BLIF n5739
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i99.BLIF n2_adj_130
+11 1
+.names state_FSM_i1.BLIF n6134.BLIF n1_adj_348
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i244.BLIF n2_adj_475
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i91.BLIF n5865
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i193.BLIF n2_adj_349
+11 1
+.names n6049.BLIF n6048.BLIF n6050
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i90.BLIF n5862
+11 1
+.names state_FSM_i1.BLIF n5891.BLIF n1_adj_132
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i69.BLIF n5800
+11 1
+.names dispCount_i0_i1.BLIF dispCount_i0_i2.BLIF dispCount_i0_i0.BLIF \
+dispCount_i0_i3.BLIF n3800
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i89.BLIF n5859
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i100.BLIF n2_adj_133
+11 1
+.names state_FSM_i1.BLIF n6137.BLIF n1_adj_350
+11 1
+.names n5127.BLIF cnt_171__i12.BLIF n5134
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i88.BLIF n5856
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i194.BLIF n2_adj_351
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i86.BLIF n5853
+11 1
+.names state_FSM_i1.BLIF n5894.BLIF n1_adj_135
+11 1
+.names state_FSM_i1.BLIF n6272.BLIF n1_adj_477
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i85.BLIF n5850
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i101.BLIF n2_adj_136
+11 1
+.names state_FSM_i1.BLIF n6140.BLIF n1_adj_353
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i245.BLIF n2_adj_478
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i84.BLIF n5847
+11 1
+.names lcdRs_N_620.BLIF state_FSM_i1.BLIF n2212
+11 1
+.names state_FSM_i1.BLIF n5897.BLIF n1_adj_137
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i195.BLIF n2_adj_354
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i83.BLIF n5844
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i102.BLIF n2_adj_138
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i82.BLIF n5841
+11 1
+.names state_FSM_i1.BLIF n6143.BLIF n1_adj_356
+11 1
+.names state_FSM_i1.BLIF n6275.BLIF n1_adj_479
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i81.BLIF n5838
+11 1
+.names n5818.BLIF n5817.BLIF n5819
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i196.BLIF n2_adj_357
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i246.BLIF n2_adj_480
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i80.BLIF n5835
+11 1
+.names n3012.BLIF n5719.BLIF n3637
+1- 1
+-1 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i210.BLIF n6157
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i166.BLIF n6043
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i78.BLIF n5832
+11 1
+.names state_FSM_i1.BLIF n5900.BLIF n1_adj_140
+11 1
+.names state_FSM_i1.BLIF n6146.BLIF n1_adj_358
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i77.BLIF n5829
+11 1
+.names n6285.BLIF n44.BLIF n6289
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i104.BLIF n2_adj_141
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i197.BLIF n2_adj_359
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i74.BLIF n5826
+11 1
+.names n6285.BLIF n20.BLIF n6292
+11 1
+.names state_FSM_i1.BLIF n6149.BLIF n1_adj_360
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i169.BLIF n6049
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i73.BLIF n5823
+11 1
+.names n3800.BLIF n3729
+0 1
+.names state_FSM_i1.BLIF n5903.BLIF n1_adj_143
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i198.BLIF n2_adj_361
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i72.BLIF n5820
+11 1
+.names n5258.BLIF n3100
+0 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i105.BLIF n2_adj_144
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i70.BLIF n5817
+11 1
+.names n5863.BLIF n5862.BLIF n5864
+1- 1
+-1 1
+.names n6154.BLIF n6153.BLIF n6155
+1- 1
+-1 1
+.names n6016.BLIF n6015.BLIF n6017
+1- 1
+-1 1
+.names n3006.BLIF state_FSM_i2.BLIF n2185
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n5906.BLIF n1_adj_146
+11 1
+.names n5797.BLIF n5796.BLIF n5798
+1- 1
+-1 1
+.names state_FSM_i2.BLIF state_FSM_i1.BLIF n1_adj_482
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i69.BLIF n5814
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i33.BLIF n2_adj_13
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i106.BLIF n2_adj_147
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i209.BLIF n6154
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i66.BLIF n5811
+11 1
+.names n3729.BLIF n1_adj_10.BLIF state_FSM_i1.BLIF dispCount_i0_i4.BLIF n3012
+1111 1
+.names state_FSM_i1.BLIF n6152.BLIF n1_adj_363
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i65.BLIF n5808
+11 1
+.names state_FSM_i1.BLIF n5909.BLIF n1_adj_149
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i200.BLIF n2_adj_364
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i64.BLIF n5805
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i107.BLIF n2_adj_150
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i66.BLIF n5797
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i62.BLIF n5802
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i156.BLIF n6016
+11 1
+.names state_FSM_i4.BLIF state_FSM_i5.BLIF n20
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n5912.BLIF n1_adj_152
+11 1
+.names n6151.BLIF n6150.BLIF n6152
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i61.BLIF n5799
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i108.BLIF n2_adj_153
+11 1
+.names n5794.BLIF n5793.BLIF n5795
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i58.BLIF n5796
+11 1
+.names state_FSM_i1.BLIF n6155.BLIF n1_adj_365
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i57.BLIF n5793
+11 1
+.names state_FSM_i1.BLIF n5915.BLIF n1_adj_155
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i201.BLIF n2_adj_366
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i56.BLIF n5790
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i109.BLIF n2_adj_156
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i208.BLIF n6151
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i54.BLIF n5787
+11 1
+.names n6187.BLIF n6186.BLIF n6188
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i53.BLIF n5784
+11 1
+.names state_FSM_i1.BLIF n5918.BLIF n1_adj_157
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i50.BLIF n5781
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i110.BLIF n2_adj_158
+11 1
+.names state_FSM_i1.BLIF n6158.BLIF n1_adj_368
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i49.BLIF n5778
+11 1
+.names n3047.BLIF dispCount_i0_i4.BLIF n3054
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i202.BLIF n2_adj_369
+11 1
+.names n5099.BLIF cnt_171__i8.BLIF n5106
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i221.BLIF n6187
+11 1
+.names n6148.BLIF n6147.BLIF n6149
+1- 1
+-1 1
+.names n6040.BLIF n6039.BLIF n6041
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i48.BLIF n5775
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i78.BLIF n5818
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i65.BLIF n5794
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i46.BLIF n5772
+11 1
+.names n6184.BLIF n6183.BLIF n6185
+1- 1
+-1 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i206.BLIF n6148
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i45.BLIF n5769
+11 1
+.names state_FSM_i1.BLIF n5921.BLIF n1_adj_160
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i42.BLIF n5766
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i112.BLIF n2_adj_161
+11 1
+.names state_FSM_i1.BLIF n6161.BLIF n1_adj_371
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i41.BLIF n5763
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i203.BLIF n2_adj_372
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i38.BLIF n5760
+11 1
+.names n2185.BLIF dataInBuf_i0_i250.BLIF n6277
+11 1
+.names state_FSM_i1.BLIF n5924.BLIF n1_adj_163
+11 1
+.names n6145.BLIF n6144.BLIF n6146
+1- 1
+-1 1
+.names n5720.BLIF dataInBuf_i0_i34.BLIF n5721
+11 1
+.names n6274.BLIF n6273.BLIF n6275
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i113.BLIF n2_adj_164
+11 1
+.names n5791.BLIF n5790.BLIF n5792
+1- 1
+-1 1
+.names n5092.BLIF cnt_171__i7.BLIF n5099
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i98.BLIF n5863
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i205.BLIF n6145
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i37.BLIF n5757
+11 1
+.names n5720.BLIF dataInBuf_i0_i33.BLIF n5727
+11 1
+.names state_FSM_i1.BLIF n5927.BLIF n1_adj_166
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i34.BLIF n5754
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i254.BLIF n6274
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i114.BLIF n2_adj_167
+11 1
+.names state_FSM_i1.BLIF n6164.BLIF n1_adj_374
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i33.BLIF n5751
+11 1
+.names n6271.BLIF n6270.BLIF n6272
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i204.BLIF n2_adj_375
+11 1
+.names n6013.BLIF n6012.BLIF n6014
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n5750.BLIF n1_adj_15
+11 1
+.names state_FSM_i1.BLIF n5930.BLIF n1_adj_169
+11 1
+.names n6142.BLIF n6141.BLIF n6143
+1- 1
+-1 1
+.names n5718.BLIF state_FSM_i6.BLIF n5719
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i29.BLIF n2_adj_16
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i115.BLIF n2_adj_170
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i64.BLIF n5791
+11 1
+.names cnt_171__i0.BLIF cnt_171__i1.BLIF n5057
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i155.BLIF n6013
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i204.BLIF n6142
+11 1
+.names n5120.BLIF cnt_171__i11.BLIF n5127
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i29.BLIF n5748
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i253.BLIF n6271
+11 1
+.names state_FSM_i1.BLIF n5933.BLIF n1_adj_172
+11 1
+.names n5788.BLIF n5787.BLIF n5789
+1- 1
+-1 1
+.names n32.BLIF n31.BLIF n36
+11 1
+.names n5860.BLIF n5859.BLIF n5861
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i116.BLIF n2_adj_173
+11 1
+.names state_FSM_i1.BLIF n6167.BLIF n1_adj_376
+11 1
+.names n6268.BLIF n6267.BLIF n6269
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i205.BLIF n2_adj_377
+11 1
+.names n6010.BLIF n6009.BLIF n6011
+1- 1
+-1 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i252.BLIF n6268
+11 1
+.names state_FSM_i1.BLIF n5936.BLIF n1_adj_175
+11 1
+.names n6139.BLIF n6138.BLIF n6140
+1- 1
+-1 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i21.BLIF n5745
+11 1
+.names n6265.BLIF n6264.BLIF n6266
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i117.BLIF n2_adj_176
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i62.BLIF n5788
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i154.BLIF n6010
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i97.BLIF n5860
+11 1
+.names n5815.BLIF n5814.BLIF n5816
+1- 1
+-1 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i203.BLIF n6139
+11 1
+.names n5113.BLIF cnt_171__i10.BLIF n5120
+11 1
+.names lcdRs_N_618.BLIF dataInBuf_i0_i13.BLIF n5742
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i251.BLIF n6265
+11 1
+.names state_FSM_i1.BLIF n5939.BLIF n1_adj_177
+11 1
+.names n6136.BLIF n6135.BLIF n6137
+1- 1
+-1 1
+.names n6007.BLIF n6006.BLIF n6008
+1- 1
+-1 1
+.names n6262.BLIF n6261.BLIF n6263
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i118.BLIF n2_adj_178
+11 1
+.names state_FSM_i1.BLIF n6170.BLIF n1_adj_378
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i153.BLIF n6007
+11 1
+.names n5720.BLIF dataInBuf_i0_i84.BLIF n5728
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i206.BLIF n2_adj_379
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i220.BLIF n6184
+11 1
+.names n30.BLIF n29.BLIF n35
+11 1
+.names n5857.BLIF n5856.BLIF n5858
+1- 1
+-1 1
+.names n5148.BLIF cnt_171__i15.BLIF n5155
+11 1
+.names state_FSM_i1.BLIF n5756.BLIF n1_adj_2
+11 1
+.names n5071.BLIF cnt_171__i4.BLIF n5078
+11 1
+.names state_FSM_i1.BLIF n5942.BLIF n1_adj_180
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i202.BLIF n6136
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i34.BLIF n2_adj_3
+11 1
+.names n5720.BLIF dataInBuf_i0_i38.BLIF n5725
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i120.BLIF n2_adj_181
+11 1
+.names n6133.BLIF n6132.BLIF n6134
+1- 1
+-1 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i250.BLIF n6262
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i201.BLIF n6133
+11 1
+.names n6259.BLIF n6258.BLIF n6260
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n5945.BLIF n1_adj_183
+11 1
+.names n6130.BLIF n6129.BLIF n6131
+1- 1
+-1 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i249.BLIF n6259
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i121.BLIF n2_adj_184
+11 1
+.names state_FSM_i1.BLIF n6173.BLIF n1_adj_381
+11 1
+.names n6256.BLIF n6255.BLIF n6257
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i208.BLIF n2_adj_382
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i96.BLIF n5857
+11 1
+.names state_FSM_i1.BLIF n5948.BLIF n1_adj_186
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i200.BLIF n6130
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i165.BLIF n6040
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i248.BLIF n6256
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i122.BLIF n2_adj_187
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i41.BLIF n2_adj_4
+11 1
+.names n6253.BLIF n6252.BLIF n6254
+1- 1
+-1 1
+.names n6037.BLIF n6036.BLIF n6038
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n5765.BLIF n1_adj_5
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i246.BLIF n6253
+11 1
+.names state_FSM_i1.BLIF n5951.BLIF n1_adj_189
+11 1
+.names state_FSM_i1.BLIF n6176.BLIF n1_adj_384
+11 1
+.names lcdRs_N_620.BLIF lcdRs_N_618.BLIF lcdRs_N_617
+1- 1
+-1 1
+.names n5854.BLIF n5853.BLIF n5855
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i123.BLIF n2_adj_190
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i209.BLIF n2_adj_385
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i164.BLIF n6037
+11 1
+.names state_FSM_i3.BLIF state_FSM_i4.BLIF n3117
+1- 1
+-1 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i94.BLIF n5854
+11 1
+.names n6127.BLIF n6126.BLIF n6128
+1- 1
+-1 1
+.names n6034.BLIF n6033.BLIF n6035
+1- 1
+-1 1
+.names n28.BLIF n27.BLIF n34
+11 1
+.names n6250.BLIF n6249.BLIF n6251
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n5954.BLIF n1_adj_192
+11 1
+.names n5785.BLIF n5784.BLIF n5786
+1- 1
+-1 1
+.names state_FSM_i4.BLIF n14_adj_6
+0 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i245.BLIF n6250
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i124.BLIF n2_adj_193
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i198.BLIF n6127
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i163.BLIF n6034
+11 1
+.names state_FSM_i1.BLIF n5741.BLIF n1_adj_18
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i5.BLIF n2_adj_19
+11 1
+.names state_FSM_i1.BLIF n5957.BLIF n1_adj_195
+11 1
+.names state_FSM_i1.BLIF n6179.BLIF n1_adj_387
+11 1
+.names n6031.BLIF n6030.BLIF n6032
+1- 1
+-1 1
+.names n6004.BLIF n6003.BLIF n6005
+1- 1
+-1 1
+.names n6247.BLIF n6246.BLIF n6248
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i125.BLIF n2_adj_196
+11 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i210.BLIF n2_adj_388
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i162.BLIF n6031
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i244.BLIF n6247
+11 1
+.names n6181.BLIF n6180.BLIF n6182
+1- 1
+-1 1
+.names n6124.BLIF n6123.BLIF n6125
+1- 1
+-1 1
+.names n6028.BLIF n6027.BLIF n6029
+1- 1
+-1 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i152.BLIF n6004
+11 1
+.names n5851.BLIF n5850.BLIF n5852
+1- 1
+-1 1
+.names state_FSM_i1.BLIF n5960.BLIF n1_adj_197
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i61.BLIF n5785
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i161.BLIF n6028
+11 1
+.names n6001.BLIF n6000.BLIF n6002
+1- 1
+-1 1
+.names n6244.BLIF n6243.BLIF n6245
+1- 1
+-1 1
+.names state_FSM_i2.BLIF dataInBuf_i0_i126.BLIF n2_adj_198
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i197.BLIF n6124
+11 1
+.names n3040.BLIF dispCount_i0_i3.BLIF n3047
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i150.BLIF n6001
+11 1
+.names lcdRs_N_619.BLIF dataInBuf_i0_i243.BLIF n6244
+11 1
+.names lcdD_i0_i8reg.BLIF lcdD_7_
+1 1
+0 0
+.names lcdRs_53reg.BLIF lcdRs
+1 1
+0 0
+.names lcdRw_c.BLIF lcdRw
+1 1
+0 0
+.names clkhz_52reg.BLIF ledEN
+1 1
+0 0
+.names lcdD_i0_i7reg.BLIF lcdD_6_
+1 1
+0 0
+.names lcdD_i0_i6reg.BLIF lcdD_5_
+1 1
+0 0
+.names lcdD_i0_i5reg.BLIF lcdD_4_
+1 1
+0 0
+.names lcdD_i0_i4reg.BLIF lcdD_3_
+1 1
+0 0
+.names lcdD_i0_i3reg.BLIF lcdD_2_
+1 1
+0 0
+.names lcdD_i0_i2reg.BLIF lcdD_1_
+1 1
+0 0
+.names lcdD_i0_i1reg.BLIF lcdD_0_
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i216.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i216.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i214.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i214.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i213.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i213.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i212.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i212.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i211.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i211.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i210.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i210.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i209.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i209.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i208.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i208.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i206.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i206.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i205.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i205.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF lcdRs_53reg.C
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i204.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i204.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dispCount_i0_i0.C
+1 1
+0 0
+.names n3804.BLIF dispCount_i0_i0.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i203.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i203.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i202.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i202.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i201.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i201.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i200.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i200.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i198.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i198.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i197.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i197.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i196.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i196.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i195.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i195.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i194.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i194.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i193.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i193.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i192.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i192.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i190.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i190.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i189.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i189.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i188.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i188.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i187.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i187.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i186.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i186.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i185.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i185.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i184.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i184.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i182.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i182.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i181.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i181.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i180.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i180.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF state_FSM_i1.C
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i179.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i179.CE
+1 1
+0 0
+.names clk_50m_c.BLIF cnt_171__i0.C
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i178.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i178.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i177.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i177.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i176.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i176.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i174.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i174.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i173.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i173.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i172.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i172.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i171.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i171.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i170.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i170.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i169.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i169.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i168.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i168.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i166.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i166.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i165.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i165.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i164.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i164.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i163.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i163.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i162.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i162.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i161.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i161.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i160.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i160.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i158.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i158.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i157.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i157.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i156.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i156.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i155.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i155.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i154.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i154.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i153.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i153.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i152.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i152.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i150.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i150.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i149.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i149.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i148.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i148.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i147.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i147.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i146.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i146.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i145.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i145.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i144.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i144.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i142.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i142.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i141.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i141.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i140.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i140.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i139.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i139.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i138.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i138.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i137.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i137.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i136.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i136.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i134.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i134.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i133.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i133.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i132.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i132.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i131.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i131.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i130.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i130.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i129.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i129.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i128.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i128.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i126.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i126.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i125.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i125.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i124.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i124.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i123.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i123.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i122.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i122.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i121.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i121.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i120.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i120.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i118.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i118.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i117.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i117.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i116.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i116.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i115.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i115.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i114.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i114.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i113.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i113.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i112.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i112.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i110.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i110.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i109.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i109.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i108.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i108.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i107.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i107.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i106.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i106.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i105.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i105.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i104.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i104.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i102.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i102.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i101.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i101.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i100.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i100.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i99.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i99.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i98.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i98.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i97.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i97.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i96.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i96.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i94.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i94.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i93.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i93.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i92.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i92.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i91.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i91.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i90.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i90.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i89.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i89.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i88.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i88.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i86.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i86.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i85.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i85.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i84.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i84.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i83.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i83.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i82.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i82.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i81.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i81.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i80.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i80.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i78.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i78.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i77.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i77.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i74.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i74.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i73.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i73.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i72.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i72.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i70.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i70.CE
+1 1
+0 0
+.names i1_adj_40.BLIF clkhz_52reg.D
+1 1
+0 0
+.names clk_50m_c.BLIF clkhz_52reg.C
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i69.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i69.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i66.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i66.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i65.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i65.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i64.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i64.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i62.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i62.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i61.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i61.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i58.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i58.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i57.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i57.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i56.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i56.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i54.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i54.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i53.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i53.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i50.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i50.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i49.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i49.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i48.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i48.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i46.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i46.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i45.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i45.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i42.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i42.CE
+1 1
+0 0
+.names i2357.BLIF cnt_171__i19.D
+1 1
+0 0
+.names clk_50m_c.BLIF cnt_171__i19.C
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i41.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i41.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i38.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i38.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i37.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i37.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i34.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i34.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i33.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i33.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i29.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i29.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i21.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i21.CE
+1 1
+0 0
+.names state_FSM_i7.BLIF state_FSM_i6.D
+1 1
+0 0
+.names clkhz_52reg.BLIF state_FSM_i6.C
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i13.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i13.CE
+1 1
+0 0
+.names state_FSM_i6.BLIF state_FSM_i5.D
+1 1
+0 0
+.names clkhz_52reg.BLIF state_FSM_i5.C
+1 1
+0 0
+.names state_FSM_i5.BLIF state_FSM_i4.D
+1 1
+0 0
+.names clkhz_52reg.BLIF state_FSM_i4.C
+1 1
+0 0
+.names state_FSM_i4.BLIF state_FSM_i3.D
+1 1
+0 0
+.names clkhz_52reg.BLIF state_FSM_i3.C
+1 1
+0 0
+.names n3644.BLIF state_FSM_i2.D
+1 1
+0 0
+.names clkhz_52reg.BLIF state_FSM_i2.C
+1 1
+0 0
+.names clkhz_52reg.BLIF dispCount_i0_i5.C
+1 1
+0 0
+.names n3804.BLIF dispCount_i0_i5.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i5.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i5.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dispCount_i0_i4.C
+1 1
+0 0
+.names n3804.BLIF dispCount_i0_i4.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dispCount_i0_i3.C
+1 1
+0 0
+.names n3804.BLIF dispCount_i0_i3.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dispCount_i0_i2.C
+1 1
+0 0
+.names n3804.BLIF dispCount_i0_i2.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dispCount_i0_i1.C
+1 1
+0 0
+.names n3804.BLIF dispCount_i0_i1.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF lcdD_i0_i8reg.C
+1 1
+0 0
+.names n3806.BLIF lcdD_i0_i8reg.CE
+1 1
+0 0
+.names n2212.BLIF state_FSM_i7.D
+1 1
+0 0
+.names clkhz_52reg.BLIF state_FSM_i7.C
+1 1
+0 0
+.names clkhz_52reg.BLIF lcdD_i0_i7reg.C
+1 1
+0 0
+.names n3806.BLIF lcdD_i0_i7reg.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF lcdD_i0_i6reg.C
+1 1
+0 0
+.names n3806.BLIF lcdD_i0_i6reg.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF lcdD_i0_i5reg.C
+1 1
+0 0
+.names n3806.BLIF lcdD_i0_i5reg.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF lcdD_i0_i4reg.C
+1 1
+0 0
+.names n3806.BLIF lcdD_i0_i4reg.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF lcdD_i0_i3reg.C
+1 1
+0 0
+.names n3806.BLIF lcdD_i0_i3reg.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF lcdD_i0_i2reg.C
+1 1
+0 0
+.names n3806.BLIF lcdD_i0_i2reg.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF lcdD_i0_i1reg.C
+1 1
+0 0
+.names n3806.BLIF lcdD_i0_i1reg.CE
+1 1
+0 0
+.names i2350.BLIF cnt_171__i18.D
+1 1
+0 0
+.names clk_50m_c.BLIF cnt_171__i18.C
+1 1
+0 0
+.names i2343.BLIF cnt_171__i17.D
+1 1
+0 0
+.names clk_50m_c.BLIF cnt_171__i17.C
+1 1
+0 0
+.names i2336.BLIF cnt_171__i16.D
+1 1
+0 0
+.names clk_50m_c.BLIF cnt_171__i16.C
+1 1
+0 0
+.names i2329.BLIF cnt_171__i15.D
+1 1
+0 0
+.names clk_50m_c.BLIF cnt_171__i15.C
+1 1
+0 0
+.names i2322.BLIF cnt_171__i14.D
+1 1
+0 0
+.names clk_50m_c.BLIF cnt_171__i14.C
+1 1
+0 0
+.names i2315.BLIF cnt_171__i13.D
+1 1
+0 0
+.names clk_50m_c.BLIF cnt_171__i13.C
+1 1
+0 0
+.names i2308.BLIF cnt_171__i12.D
+1 1
+0 0
+.names clk_50m_c.BLIF cnt_171__i12.C
+1 1
+0 0
+.names i2301.BLIF cnt_171__i11.D
+1 1
+0 0
+.names clk_50m_c.BLIF cnt_171__i11.C
+1 1
+0 0
+.names i2294.BLIF cnt_171__i10.D
+1 1
+0 0
+.names clk_50m_c.BLIF cnt_171__i10.C
+1 1
+0 0
+.names i2287.BLIF cnt_171__i9.D
+1 1
+0 0
+.names clk_50m_c.BLIF cnt_171__i9.C
+1 1
+0 0
+.names i2280.BLIF cnt_171__i8.D
+1 1
+0 0
+.names clk_50m_c.BLIF cnt_171__i8.C
+1 1
+0 0
+.names i2273.BLIF cnt_171__i7.D
+1 1
+0 0
+.names clk_50m_c.BLIF cnt_171__i7.C
+1 1
+0 0
+.names i2266.BLIF cnt_171__i6.D
+1 1
+0 0
+.names clk_50m_c.BLIF cnt_171__i6.C
+1 1
+0 0
+.names i2259.BLIF cnt_171__i5.D
+1 1
+0 0
+.names clk_50m_c.BLIF cnt_171__i5.C
+1 1
+0 0
+.names i2252.BLIF cnt_171__i4.D
+1 1
+0 0
+.names clk_50m_c.BLIF cnt_171__i4.C
+1 1
+0 0
+.names i2245.BLIF cnt_171__i3.D
+1 1
+0 0
+.names clk_50m_c.BLIF cnt_171__i3.C
+1 1
+0 0
+.names i2238.BLIF cnt_171__i2.D
+1 1
+0 0
+.names clk_50m_c.BLIF cnt_171__i2.C
+1 1
+0 0
+.names i2231.BLIF cnt_171__i1.D
+1 1
+0 0
+.names clk_50m_c.BLIF cnt_171__i1.C
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i254.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i254.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i253.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i253.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i252.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i252.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i251.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i251.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i250.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i250.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i249.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i249.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i248.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i248.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i246.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i246.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i245.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i245.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i244.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i244.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i243.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i243.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i242.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i242.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i241.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i241.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i240.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i240.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i238.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i238.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i237.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i237.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i236.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i236.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i235.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i235.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i234.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i234.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i233.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i233.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i232.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i232.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i230.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i230.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i229.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i229.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i228.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i228.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i227.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i227.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i226.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i226.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i225.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i225.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i224.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i224.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i222.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i222.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i221.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i221.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i220.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i220.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i219.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i219.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i218.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i218.CE
+1 1
+0 0
+.names clkhz_52reg.BLIF dataInBuf_i0_i217.C
+1 1
+0 0
+.names n3805.BLIF dataInBuf_i0_i217.CE
+1 1
+0 0
+.names clk_50m.BLIF clk_50m_c
+1 1
+0 0
+.names reset.BLIF reset_c
+1 1
+0 0
+.names dispCount_i0_i5.BLIF dispCount_i0_i4.BLIF i32
+01 1
+10 1
+11 0
+00 0
+.names clkhz_52reg.BLIF n5194.BLIF i1_adj_40
+01 1
+10 1
+11 0
+00 0
+.names dispCount_i0_i5.BLIF n3054.BLIF i223
+01 1
+10 1
+11 0
+00 0
+.names dispCount_i0_i4.BLIF n3047.BLIF i216
+01 1
+10 1
+11 0
+00 0
+.names n3040.BLIF dispCount_i0_i3.BLIF i209
+01 1
+10 1
+11 0
+00 0
+.names n3033.BLIF dispCount_i0_i2.BLIF i202
+01 1
+10 1
+11 0
+00 0
+.names dispCount_i0_i1.BLIF dispCount_i0_i0.BLIF i195
+01 1
+10 1
+11 0
+00 0
+.names dispCount_i0_i5.BLIF dispCount_i0_i4.BLIF i2912
+01 1
+10 1
+11 0
+00 0
+.names cnt_171__i19.BLIF n5176.BLIF i2357
+01 1
+10 1
+11 0
+00 0
+.names cnt_171__i18.BLIF n5169.BLIF i2350
+01 1
+10 1
+11 0
+00 0
+.names cnt_171__i17.BLIF n5162.BLIF i2343
+01 1
+10 1
+11 0
+00 0
+.names cnt_171__i16.BLIF n5155.BLIF i2336
+01 1
+10 1
+11 0
+00 0
+.names cnt_171__i15.BLIF n5148.BLIF i2329
+01 1
+10 1
+11 0
+00 0
+.names cnt_171__i12.BLIF n5127.BLIF i2308
+01 1
+10 1
+11 0
+00 0
+.names cnt_171__i11.BLIF n5120.BLIF i2301
+01 1
+10 1
+11 0
+00 0
+.names cnt_171__i13.BLIF n5134.BLIF i2315
+01 1
+10 1
+11 0
+00 0
+.names cnt_171__i14.BLIF n5141.BLIF i2322
+01 1
+10 1
+11 0
+00 0
+.names n5113.BLIF cnt_171__i10.BLIF i2294
+01 1
+10 1
+11 0
+00 0
+.names cnt_171__i9.BLIF n5106.BLIF i2287
+01 1
+10 1
+11 0
+00 0
+.names cnt_171__i8.BLIF n5099.BLIF i2280
+01 1
+10 1
+11 0
+00 0
+.names cnt_171__i7.BLIF n5092.BLIF i2273
+01 1
+10 1
+11 0
+00 0
+.names cnt_171__i6.BLIF n5085.BLIF i2266
+01 1
+10 1
+11 0
+00 0
+.names cnt_171__i5.BLIF n5078.BLIF i2259
+01 1
+10 1
+11 0
+00 0
+.names cnt_171__i4.BLIF n5071.BLIF i2252
+01 1
+10 1
+11 0
+00 0
+.names cnt_171__i3.BLIF n5064.BLIF i2245
+01 1
+10 1
+11 0
+00 0
+.names cnt_171__i2.BLIF n5057.BLIF i2238
+01 1
+10 1
+11 0
+00 0
+.names cnt_171__i1.BLIF cnt_171__i0.BLIF i2231
+01 1
+10 1
+11 0
+00 0
+.end

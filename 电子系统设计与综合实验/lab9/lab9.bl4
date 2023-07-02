@@ -1,0 +1,4068 @@
+#$ TOOL ispLEVER Classic 2.1.00.02.49.20
+#$ DATE Sun May 08 09:52:55 2016
+#$ MODULE lab9
+#$ PINS 30 keyIn_1_ keyIn_0_ keyIn_3_ LEDVCC_3_ LEDVCC_2_ show_6_ LEDVCC_1_ clkh \
+#  LEDVCC_0_ clkl show_5_ reset show_4_ send show_3_ Rx show_2_ show_1_ show_0_ keyIn_2_ \
+#  led_3_ led_2_ led_4_ led_1_ led_0_ keyOut_3_ keyOut_2_ keyOut_1_ keyOut_0_ Tx
+#$ NODES 131 keyboard_timecnt_2_ keyboard_timecnt_3_ keyboard_timecnt_5_ \
+#  keyboard_timecnt_8_ keyboard_timecnt_10_ keyboard_timecnt_12_ \
+#  keyboard_timecnt_13_ keyboard_timecnt_14_ keyboard_led_int_Data1_0_ \
+#  keyboard_led_int_Data1_1_ keyboard_led_int_Data1_2_ keyboard_led_int_Data1_3_ \
+#  keyboard_led_int_Data0_0_ keyboard_flag_Data_0_ keyboard_led_int_Data0_1_ \
+#  keyboard_led_int_Data0_2_ keyboard_led_int_Data0_3_ keyboard_scanvalue_0_ \
+#  serial_Data1_0_ keyboard_scanvalue_1_ serial_Data1_1_ serial_Data1_2_ \
+#  serial_Data1_3_ serial_Data2_0_ serial_Data2_1_ serial_Data2_2_ serial_Data2_3_ \
+#  button5_d1_q_0_ button5_d2_q_0_ button5_d3_q_0_ keyboard_flag_Data_1_ \
+#  button4_d1_q_0_ button4_d2_q_0_ button4_d3_q_0_ button3_d1_q_0_ button3_d2_q_0_ \
+#  button3_d3_q_0_ button2_d1_q_0_ button2_d2_q_0_ button2_d3_q_0_ button1_d1_q_0_ \
+#  button1_d2_q_0_ button1_d3_q_0_ button0_d1_q_0_ button0_d2_q_0_ button0_d3_q_0_ \
+#  dynamicshow_counter4_q_1_ dynamicshow_counter4_q_2_ serial_m_0_ serial_m_1_ \
+#  serial_m_2_ serial_m_3_ serial_m_4_ serial_m_5_ serial_m_6_ serial_m_7_ \
+#  serial_ClockCount_0_ serial_ClockCount_Rx_0_ serial_ClockCount_10_ \
+#  serial_ClockCount_1_ serial_ClockCount_7_ serial_ClockCount_8_ \
+#  serial_ClockCount_2_ serial_ClockCount_3_ serial_ClockCount_Rx_3_ \
+#  serial_ClockCount_Rx_6_ serial_ClockCount_Rx_4_ serial_Send_over serial_Rx_Valid \
+#  serial_Rx_Data_0_ serial_Rx_Data_1_ serial_Rx_Data_2_ \
+#  dynamicshow_mux_dataout_3_0__un1_n serial_Rx_Data_3_ \
+#  dynamicshow_mux_dataout_3_0__un0_n serial_Rx_Data_4_ serial_Rx_Data_5_ \
+#  serial_Rx_Data_6_ serial_Rx_Data_7_ serial_send_en_3_n serial_Send_count_0_ \
+#  serial_Send_count_1_ serial_Send_count_2_ dynamicshow_mux_dataout_3_3__un1_n \
+#  serial_Send_count_3_ dynamicshow_out_2__n dynamicshow_mux_dataout_3_3__un0_n \
+#  serial_ClockCount_Rx_1_ serial_ClockCount_Rx_2_ serial_ClockCount_Rx_5_ \
+#  dynamicshow_out_1__n serial_Send_en serial_Send_data_1_ serial_Send_data_2_ \
+#  serial_Send_data_3_ serial_Send_data_4_ serial_Send_data_5_ serial_Send_data_6_ \
+#  serial_Send_data_7_ serial_Send_data_8_ serial_Clock16 serial_ClockCount_4_ \
+#  serial_ClockCount_5_ serial_ClockCount_6_ serial_ClockCount_9_ serial_Clock9600 \
+#  keyboard_combvalue_4_ keyboard_combvalue_5_ keyboard_combvalue_6_ \
+#  keyboard_combvalue_7_ keyboard_timecnt_4_ keyboard_timecnt_6_ keyboard_timecnt_7_ \
+#  keyboard_timecnt_9_ keyboard_timecnt_15_ keyboard_timecnt_11_ keyboard_time1Oms \
+#  keyboard_int_Data0_3_ keyboard_int_Data1_0_ keyboard_int_Data1_1_ \
+#  keyboard_int_Data1_2_ keyboard_int_Data1_3_ keyboard_int_Data0_0_ \
+#  keyboard_int_Data0_1_ keyboard_int_Data0_2_ keyboard_combvalue_0_ \
+#  keyboard_combvalue_1_ keyboard_combvalue_2_ keyboard_combvalue_3_ \
+#  keyboard_timecnt_0_ keyboard_timecnt_1_
+.model lab9
+.inputs keyIn_3_.BLIF clkh.BLIF clkl.BLIF reset.BLIF send.BLIF Rx.BLIF \
+keyIn_2_.BLIF keyIn_1_.BLIF keyIn_0_.BLIF keyboard_timecnt_2_.Q \
+keyboard_timecnt_3_.Q keyboard_timecnt_5_.Q keyboard_timecnt_8_.Q \
+keyboard_timecnt_10_.Q keyboard_timecnt_12_.Q keyboard_timecnt_13_.Q \
+keyboard_timecnt_14_.Q keyboard_led_int_Data1_0_.Q keyboard_led_int_Data1_1_.Q \
+keyboard_led_int_Data1_2_.Q keyboard_led_int_Data1_3_.Q \
+keyboard_led_int_Data0_0_.Q keyboard_flag_Data_0_.Q \
+keyboard_led_int_Data0_1_.Q keyboard_led_int_Data0_2_.Q \
+keyboard_led_int_Data0_3_.Q keyboard_scanvalue_0_.Q serial_Data1_0_.Q \
+keyboard_scanvalue_1_.Q serial_Data1_1_.Q serial_Data1_2_.Q serial_Data1_3_.Q \
+serial_Data2_0_.Q serial_Data2_1_.Q serial_Data2_2_.Q serial_Data2_3_.Q \
+button5_d1_q_0_.Q button5_d2_q_0_.Q button5_d3_q_0_.Q keyboard_flag_Data_1_.Q \
+button4_d1_q_0_.Q button4_d2_q_0_.Q button4_d3_q_0_.Q button3_d1_q_0_.Q \
+button3_d2_q_0_.Q button3_d3_q_0_.Q button2_d1_q_0_.Q button2_d2_q_0_.Q \
+button2_d3_q_0_.Q button1_d1_q_0_.Q button1_d2_q_0_.Q button1_d3_q_0_.Q \
+button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_2_.Q serial_m_0_.Q \
+serial_m_1_.Q serial_m_2_.Q serial_m_3_.Q serial_m_4_.Q serial_m_5_.Q \
+serial_m_6_.Q serial_m_7_.Q serial_ClockCount_0_.Q serial_ClockCount_Rx_0_.Q \
+serial_ClockCount_10_.Q serial_ClockCount_1_.Q serial_ClockCount_7_.Q \
+serial_ClockCount_8_.Q serial_ClockCount_2_.Q serial_ClockCount_3_.Q \
+serial_ClockCount_Rx_3_.Q serial_ClockCount_Rx_6_.Q serial_ClockCount_Rx_4_.Q \
+serial_Send_over.Q serial_Rx_Valid.Q serial_Rx_Data_0_.Q serial_Rx_Data_1_.Q \
+serial_Rx_Data_2_.Q dynamicshow_mux_dataout_3_0__un1_n.BLIF \
+serial_Rx_Data_3_.Q dynamicshow_mux_dataout_3_0__un0_n.BLIF \
+serial_Rx_Data_4_.Q serial_Rx_Data_5_.Q serial_Rx_Data_6_.Q \
+serial_Rx_Data_7_.Q serial_send_en_3_n.BLIF serial_Send_count_0_.Q \
+serial_Send_count_1_.Q serial_Send_count_2_.Q \
+dynamicshow_mux_dataout_3_3__un1_n.BLIF serial_Send_count_3_.Q \
+dynamicshow_out_2__n.BLIF dynamicshow_mux_dataout_3_3__un0_n.BLIF \
+serial_ClockCount_Rx_1_.Q serial_ClockCount_Rx_2_.Q serial_ClockCount_Rx_5_.Q \
+dynamicshow_out_1__n.BLIF serial_Send_en.Q serial_Send_data_1_.Q \
+serial_Send_data_2_.Q serial_Send_data_3_.Q serial_Send_data_4_.Q \
+serial_Send_data_5_.Q serial_Send_data_6_.Q serial_Send_data_7_.Q \
+serial_Send_data_8_.Q serial_Clock16.Q serial_ClockCount_4_.Q \
+serial_ClockCount_5_.Q serial_ClockCount_6_.Q serial_ClockCount_9_.Q \
+serial_Clock9600.Q keyboard_combvalue_4_.Q keyboard_combvalue_5_.Q \
+keyboard_combvalue_6_.Q keyboard_combvalue_7_.Q keyboard_timecnt_4_.Q \
+keyboard_timecnt_6_.Q keyboard_timecnt_7_.Q keyboard_timecnt_9_.Q \
+keyboard_timecnt_15_.Q keyboard_timecnt_11_.Q keyboard_time1Oms.Q \
+keyboard_int_Data0_3_.Q keyboard_int_Data1_0_.Q keyboard_int_Data1_1_.Q \
+keyboard_int_Data1_2_.Q keyboard_int_Data1_3_.Q keyboard_int_Data0_0_.Q \
+keyboard_int_Data0_1_.Q keyboard_int_Data0_2_.Q keyOut_0_.Q \
+keyboard_combvalue_0_.Q keyboard_combvalue_1_.Q keyOut_1_.Q \
+keyboard_combvalue_2_.Q keyboard_combvalue_3_.Q keyOut_2_.Q \
+keyboard_timecnt_0_.Q keyboard_timecnt_1_.Q keyOut_3_.Q
+.outputs LEDVCC_3_ LEDVCC_2_ LEDVCC_1_ LEDVCC_0_ show_5_ show_4_ show_2_ \
+show_1_ show_0_ keyboard_scanvalue_0_.C keyboard_scanvalue_0_.AR \
+keyboard_scanvalue_1_.C keyboard_scanvalue_1_.AR keyboard_flag_Data_0_.C \
+keyboard_flag_Data_0_.AR keyboard_flag_Data_1_.C keyboard_flag_Data_1_.AR \
+keyboard_led_int_Data1_2_.CE keyboard_led_int_Data1_2_.C \
+keyboard_led_int_Data1_2_.AR keyboard_led_int_Data1_3_.CE \
+keyboard_led_int_Data1_3_.C keyboard_led_int_Data1_3_.AR \
+keyboard_int_Data1_0_.CE keyboard_int_Data1_0_.C keyboard_int_Data1_0_.AR \
+keyboard_int_Data1_1_.CE keyboard_int_Data1_1_.C keyboard_int_Data1_1_.AR \
+keyboard_int_Data1_2_.CE keyboard_int_Data1_2_.C keyboard_int_Data1_2_.AR \
+keyboard_int_Data1_3_.CE keyboard_int_Data1_3_.C keyboard_int_Data1_3_.AR \
+keyboard_int_Data0_0_.CE keyboard_int_Data0_0_.C keyboard_int_Data0_0_.AR \
+keyboard_int_Data0_1_.CE keyboard_int_Data0_1_.C keyboard_int_Data0_1_.AR \
+keyboard_int_Data0_2_.CE keyboard_int_Data0_2_.C keyboard_int_Data0_2_.AR \
+keyboard_int_Data0_3_.CE keyboard_int_Data0_3_.C keyboard_int_Data0_3_.AR \
+keyOut_0_.CE keyOut_0_.C keyOut_1_.CE keyOut_1_.C keyOut_2_.CE keyOut_2_.C \
+keyOut_3_.CE keyOut_3_.C keyboard_timecnt_12_.C keyboard_timecnt_12_.AR \
+keyboard_timecnt_13_.C keyboard_timecnt_13_.AR keyboard_timecnt_14_.C \
+keyboard_timecnt_14_.AR keyboard_timecnt_15_.C keyboard_timecnt_15_.AR \
+led_0_.C led_0_.AP led_1_.C led_1_.AP led_2_.C led_2_.AP led_3_.C led_3_.AP \
+led_4_.C led_4_.AP keyboard_led_int_Data0_0_.CE keyboard_led_int_Data0_0_.C \
+keyboard_led_int_Data0_0_.AR keyboard_led_int_Data0_1_.CE \
+keyboard_led_int_Data0_1_.C keyboard_led_int_Data0_1_.AR \
+keyboard_led_int_Data0_2_.CE keyboard_led_int_Data0_2_.C \
+keyboard_led_int_Data0_2_.AR keyboard_led_int_Data0_3_.CE \
+keyboard_led_int_Data0_3_.C keyboard_led_int_Data0_3_.AR \
+keyboard_led_int_Data1_0_.CE keyboard_led_int_Data1_0_.C \
+keyboard_led_int_Data1_0_.AR keyboard_led_int_Data1_1_.CE \
+keyboard_led_int_Data1_1_.C keyboard_led_int_Data1_1_.AR \
+keyboard_combvalue_5_.C keyboard_combvalue_5_.AR keyboard_combvalue_6_.C \
+keyboard_combvalue_6_.AR keyboard_combvalue_7_.C keyboard_combvalue_7_.AR \
+keyboard_timecnt_0_.C keyboard_timecnt_0_.AR keyboard_timecnt_1_.C \
+keyboard_timecnt_1_.AR keyboard_timecnt_2_.C keyboard_timecnt_2_.AR \
+keyboard_timecnt_3_.C keyboard_timecnt_3_.AR keyboard_timecnt_4_.C \
+keyboard_timecnt_4_.AR keyboard_timecnt_5_.C keyboard_timecnt_5_.AR \
+keyboard_timecnt_6_.C keyboard_timecnt_6_.AR keyboard_timecnt_7_.C \
+keyboard_timecnt_7_.AR keyboard_timecnt_8_.C keyboard_timecnt_8_.AR \
+keyboard_timecnt_9_.C keyboard_timecnt_9_.AR keyboard_timecnt_10_.C \
+keyboard_timecnt_10_.AR keyboard_timecnt_11_.C keyboard_timecnt_11_.AR \
+keyboard_combvalue_0_.C keyboard_combvalue_0_.AR keyboard_combvalue_1_.C \
+keyboard_combvalue_1_.AR keyboard_combvalue_2_.C keyboard_combvalue_2_.AR \
+keyboard_combvalue_3_.C keyboard_combvalue_3_.AR keyboard_combvalue_4_.C \
+keyboard_combvalue_4_.AR keyboard_time1Oms.C serial_ClockCount_Rx_1_.CE \
+serial_ClockCount_Rx_1_.C serial_ClockCount_Rx_2_.CE serial_ClockCount_Rx_2_.C \
+serial_ClockCount_Rx_3_.CE serial_ClockCount_Rx_3_.C \
+serial_ClockCount_Rx_4_.CE serial_ClockCount_Rx_4_.C \
+serial_ClockCount_Rx_5_.CE serial_ClockCount_Rx_5_.C \
+serial_ClockCount_Rx_6_.CE serial_ClockCount_Rx_6_.C serial_Rx_Data_2_.CE \
+serial_Rx_Data_2_.C serial_Rx_Data_3_.CE serial_Rx_Data_3_.C \
+serial_Rx_Data_4_.CE serial_Rx_Data_4_.C serial_Rx_Data_5_.CE \
+serial_Rx_Data_5_.C serial_Rx_Data_6_.CE serial_Rx_Data_6_.C \
+serial_Rx_Data_7_.CE serial_Rx_Data_7_.C serial_ClockCount_Rx_0_.CE \
+serial_ClockCount_Rx_0_.C serial_ClockCount_9_.CE serial_ClockCount_9_.C \
+serial_ClockCount_10_.CE serial_ClockCount_10_.C serial_Rx_Data_0_.CE \
+serial_Rx_Data_0_.C serial_Rx_Data_1_.CE serial_Rx_Data_1_.C serial_m_2_.C \
+serial_m_2_.AR serial_m_3_.C serial_m_3_.AR serial_m_4_.C serial_m_4_.AR \
+serial_m_5_.C serial_m_5_.AR serial_m_6_.C serial_m_6_.AR serial_m_7_.C \
+serial_m_7_.AR serial_ClockCount_0_.CE serial_ClockCount_0_.C \
+serial_ClockCount_1_.CE serial_ClockCount_1_.C serial_ClockCount_2_.CE \
+serial_ClockCount_2_.C serial_ClockCount_3_.CE serial_ClockCount_3_.C \
+serial_ClockCount_4_.CE serial_ClockCount_4_.C serial_ClockCount_5_.CE \
+serial_ClockCount_5_.C serial_ClockCount_6_.CE serial_ClockCount_6_.C \
+serial_ClockCount_7_.CE serial_ClockCount_7_.C serial_ClockCount_8_.CE \
+serial_ClockCount_8_.C serial_Data2_3_.C serial_Data2_3_.AR \
+serial_Send_data_1_.C serial_Send_data_1_.AR serial_Send_data_2_.C \
+serial_Send_data_2_.AR serial_Send_data_3_.C serial_Send_data_3_.AR \
+serial_Send_data_4_.C serial_Send_data_4_.AR serial_Send_data_5_.C \
+serial_Send_data_5_.AR serial_Send_data_6_.C serial_Send_data_6_.AR \
+serial_Send_data_7_.C serial_Send_data_7_.AR serial_Send_data_8_.C \
+serial_Send_data_8_.AR serial_Send_count_0_.C serial_Send_count_0_.AR \
+serial_Send_count_1_.C serial_Send_count_1_.AR serial_Send_count_2_.C \
+serial_Send_count_2_.AR serial_Send_count_3_.C serial_Send_count_3_.AR \
+serial_m_0_.C serial_m_0_.AR serial_m_1_.C serial_m_1_.AR serial_Data1_0_.C \
+serial_Data1_0_.AR serial_Data1_1_.C serial_Data1_1_.AR serial_Data1_2_.C \
+serial_Data1_2_.AR serial_Data1_3_.C serial_Data1_3_.AR serial_Data2_0_.C \
+serial_Data2_0_.AR serial_Data2_1_.C serial_Data2_1_.AR serial_Data2_2_.C \
+serial_Data2_2_.AR Tx.C Tx.AP serial_Rx_Valid.CE serial_Rx_Valid.C \
+serial_Rx_Valid.AR serial_Send_over.C serial_Send_over.AP serial_Clock9600.CE \
+serial_Clock9600.C serial_Clock16.CE serial_Clock16.C serial_Send_en.C \
+serial_Send_en.AP dynamicshow_counter4_q_1_.C dynamicshow_counter4_q_2_.C \
+button4_d1_q_0_.C button4_d2_q_0_.C button4_d3_q_0_.C button5_d1_q_0_.C \
+button5_d2_q_0_.C button5_d3_q_0_.C button0_d1_q_0_.C button0_d2_q_0_.C \
+button0_d3_q_0_.C button1_d1_q_0_.C button1_d2_q_0_.C button1_d3_q_0_.C \
+button2_d1_q_0_.C button2_d2_q_0_.C button2_d3_q_0_.C button3_d1_q_0_.C \
+button3_d2_q_0_.C button3_d3_q_0_.C dynamicshow_mux_dataout_3_0__un1_n \
+dynamicshow_mux_dataout_3_0__un0_n serial_send_en_3_n \
+dynamicshow_mux_dataout_3_3__un1_n dynamicshow_out_2__n \
+dynamicshow_mux_dataout_3_3__un0_n dynamicshow_out_1__n show_6_.X1 show_6_.X2 \
+show_3_.X1 show_3_.X2 keyboard_led_int_Data0_3_.D.X1 \
+keyboard_led_int_Data0_3_.D.X2 keyboard_int_Data1_1_.D.X1 \
+keyboard_int_Data1_1_.D.X2 keyboard_int_Data0_1_.D.X1 \
+keyboard_int_Data0_1_.D.X2 keyboard_timecnt_2_.D keyboard_timecnt_3_.D \
+keyboard_timecnt_5_.T keyboard_timecnt_8_.T keyboard_timecnt_10_.T \
+keyboard_timecnt_12_.T keyboard_timecnt_13_.T keyboard_timecnt_14_.T \
+keyboard_led_int_Data1_0_.D keyboard_led_int_Data1_1_.D \
+keyboard_led_int_Data1_2_.D keyboard_led_int_Data1_3_.D \
+keyboard_led_int_Data0_0_.D keyboard_flag_Data_0_.T \
+keyboard_led_int_Data0_1_.D keyboard_led_int_Data0_2_.D \
+keyboard_scanvalue_0_.D serial_Data1_0_.D keyboard_scanvalue_1_.D \
+serial_Data1_1_.D serial_Data1_2_.D serial_Data1_3_.D Tx.D serial_Data2_0_.D \
+serial_Data2_1_.D serial_Data2_2_.D serial_Data2_3_.D button5_d1_q_0_.D \
+button5_d2_q_0_.D button5_d3_q_0_.D keyboard_flag_Data_1_.T button4_d1_q_0_.D \
+button4_d2_q_0_.D button4_d3_q_0_.D button3_d1_q_0_.D button3_d2_q_0_.D \
+button3_d3_q_0_.D button2_d1_q_0_.D button2_d2_q_0_.D button2_d3_q_0_.D \
+button1_d1_q_0_.D button1_d2_q_0_.D button1_d3_q_0_.D button0_d1_q_0_.D \
+button0_d2_q_0_.D button0_d3_q_0_.D dynamicshow_counter4_q_1_.D \
+dynamicshow_counter4_q_2_.D serial_m_0_.D serial_m_1_.D serial_m_2_.D \
+serial_m_3_.D serial_m_4_.D serial_m_5_.T serial_m_6_.T serial_m_7_.T \
+serial_ClockCount_0_.D serial_ClockCount_Rx_0_.D serial_ClockCount_10_.T \
+serial_ClockCount_1_.D serial_ClockCount_7_.T serial_ClockCount_8_.T \
+serial_ClockCount_2_.D serial_ClockCount_3_.D serial_ClockCount_Rx_3_.D \
+serial_ClockCount_Rx_6_.T serial_ClockCount_Rx_4_.D serial_Send_over.D \
+serial_Rx_Valid.D serial_Rx_Data_0_.D serial_Rx_Data_1_.D serial_Rx_Data_2_.D \
+serial_Rx_Data_3_.D serial_Rx_Data_4_.D serial_Rx_Data_5_.D \
+serial_Rx_Data_6_.D serial_Rx_Data_7_.D serial_Send_count_0_.D \
+serial_Send_count_1_.D serial_Send_count_2_.D serial_Send_count_3_.D \
+serial_ClockCount_Rx_1_.D serial_ClockCount_Rx_2_.D serial_ClockCount_Rx_5_.T \
+serial_Send_en.D serial_Send_data_1_.D serial_Send_data_2_.D \
+serial_Send_data_3_.D serial_Send_data_4_.D serial_Send_data_5_.D \
+serial_Send_data_6_.D serial_Send_data_7_.D serial_Send_data_8_.D \
+serial_Clock16.D serial_ClockCount_4_.T serial_ClockCount_5_.T \
+serial_ClockCount_6_.T serial_ClockCount_9_.T serial_Clock9600.D \
+keyboard_combvalue_4_.D keyboard_combvalue_5_.D keyboard_combvalue_6_.D \
+keyboard_combvalue_7_.D keyboard_timecnt_4_.T keyboard_timecnt_6_.T \
+keyboard_timecnt_7_.T keyboard_timecnt_9_.T keyboard_timecnt_15_.T led_0_.D \
+keyboard_timecnt_11_.T keyboard_time1Oms.T led_1_.D keyboard_int_Data0_3_.D \
+keyboard_int_Data1_0_.D led_2_.D keyboard_int_Data1_2_.D led_3_.D \
+keyboard_int_Data1_3_.D keyboard_int_Data0_0_.D led_4_.D \
+keyboard_int_Data0_2_.D keyOut_0_.D keyboard_combvalue_0_.D \
+keyboard_combvalue_1_.D keyOut_1_.D keyboard_combvalue_2_.D \
+keyboard_combvalue_3_.D keyOut_2_.D keyboard_timecnt_0_.D \
+keyboard_timecnt_1_.D keyOut_3_.D
+.names dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_2_.Q LEDVCC_3_
+11 1
+0- 0
+-0 0
+.names dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_2_.Q LEDVCC_2_
+01 1
+1- 0
+-0 0
+.names dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_2_.Q LEDVCC_1_
+10 1
+0- 0
+-1 0
+.names dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_2_.Q LEDVCC_0_
+00 1
+1- 0
+-1 0
+.names dynamicshow_mux_dataout_3_0__un1_n.BLIF \
+dynamicshow_mux_dataout_3_0__un0_n.BLIF \
+dynamicshow_mux_dataout_3_3__un1_n.BLIF dynamicshow_out_2__n.BLIF \
+dynamicshow_mux_dataout_3_3__un0_n.BLIF dynamicshow_out_1__n.BLIF show_5_
+00-1-1 1
+-1-1-0 1
+1--1-0 1
+---11- 1
+--11-- 1
+----11 1
+--1--1 1
+000-00 0
+-10-01 0
+1-0-01 0
+--000- 0
+---0-0 0
+.names dynamicshow_mux_dataout_3_0__un1_n.BLIF \
+dynamicshow_mux_dataout_3_0__un0_n.BLIF \
+dynamicshow_mux_dataout_3_3__un1_n.BLIF dynamicshow_out_2__n.BLIF \
+dynamicshow_mux_dataout_3_3__un0_n.BLIF dynamicshow_out_1__n.BLIF show_4_
+00-0-1 1
+---11- 1
+--11-- 1
+----11 1
+--1--1 1
+--010- 0
+-10-0- 0
+1-0-0- 0
+---0-0 0
+.names dynamicshow_mux_dataout_3_0__un1_n.BLIF \
+dynamicshow_mux_dataout_3_0__un0_n.BLIF \
+dynamicshow_mux_dataout_3_3__un1_n.BLIF dynamicshow_out_2__n.BLIF \
+dynamicshow_mux_dataout_3_3__un0_n.BLIF dynamicshow_out_1__n.BLIF show_2_
+---1-0 1
+-1---- 1
+1----- 1
+----11 1
+--1--1 1
+000-01 0
+00-0-0 0
+.names dynamicshow_mux_dataout_3_0__un1_n.BLIF \
+dynamicshow_mux_dataout_3_0__un0_n.BLIF \
+dynamicshow_mux_dataout_3_3__un1_n.BLIF dynamicshow_out_2__n.BLIF \
+dynamicshow_mux_dataout_3_3__un0_n.BLIF dynamicshow_out_1__n.BLIF show_1_
+-1000- 1
+1-000- 1
+---11- 1
+--11-- 1
+-1---1 1
+1----1 1
+---0-1 1
+00-0-0 0
+00010- 0
+--0100 0
+---010 0
+--10-0 0
+.names dynamicshow_mux_dataout_3_0__un1_n.BLIF \
+dynamicshow_mux_dataout_3_0__un0_n.BLIF \
+dynamicshow_mux_dataout_3_3__un1_n.BLIF dynamicshow_out_2__n.BLIF \
+dynamicshow_mux_dataout_3_3__un0_n.BLIF dynamicshow_out_1__n.BLIF show_0_
+--0000 1
+---11- 1
+--11-- 1
+-1--11 1
+1---11 1
+-11--1 1
+1-1--1 1
+-1-1-1 1
+1--1-1 1
+000-01 0
+00-0-1 0
+--0100 0
+--0001 0
+---010 0
+--10-0 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_scanvalue_0_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_scanvalue_1_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_flag_Data_0_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_flag_Data_1_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_flag_Data_0_.Q keyboard_flag_Data_1_.Q button4_d1_q_0_.Q \
+button4_d2_q_0_.Q button4_d3_q_0_.Q button3_d1_q_0_.Q button3_d2_q_0_.Q \
+button3_d3_q_0_.Q button2_d1_q_0_.Q button2_d2_q_0_.Q button2_d3_q_0_.Q \
+button1_d1_q_0_.Q button1_d2_q_0_.Q button1_d3_q_0_.Q keyboard_int_Data0_3_.Q \
+keyboard_int_Data0_1_.Q keyboard_int_Data0_2_.Q keyOut_0_.Q keyOut_1_.Q \
+keyOut_2_.Q keyboard_led_int_Data1_2_.CE
+10--1000000000-00000 1
+10-1-000000000-00000 1
+101--000000000-00000 1
+10--10000000000--000 1
+10-1-0000000000--000 1
+101--0000000000--000 1
+--000--------------- 0
+--------------1-1--- 0
+--------------11---- 0
+------------------1- 0
+-----------------1-- 0
+-------------1------ 0
+------------1------- 0
+-----------1-------- 0
+----------1--------- 0
+---------1---------- 0
+--------1----------- 0
+-------1------------ 0
+------1------------- 0
+-----1-------------- 0
+-1------------------ 0
+0------------------- 0
+-------------------1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_led_int_Data1_2_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_flag_Data_0_.Q keyboard_flag_Data_1_.Q button4_d1_q_0_.Q \
+button4_d2_q_0_.Q button4_d3_q_0_.Q button3_d1_q_0_.Q button3_d2_q_0_.Q \
+button3_d3_q_0_.Q button2_d1_q_0_.Q button2_d2_q_0_.Q button2_d3_q_0_.Q \
+button1_d1_q_0_.Q button1_d2_q_0_.Q button1_d3_q_0_.Q keyboard_int_Data0_3_.Q \
+keyboard_int_Data0_1_.Q keyboard_int_Data0_2_.Q keyOut_0_.Q keyOut_1_.Q \
+keyOut_2_.Q keyboard_led_int_Data1_3_.CE
+10--1000000000-00000 1
+10-1-000000000-00000 1
+101--000000000-00000 1
+10--10000000000--000 1
+10-1-0000000000--000 1
+101--0000000000--000 1
+--000--------------- 0
+--------------1-1--- 0
+--------------11---- 0
+------------------1- 0
+-----------------1-- 0
+-------------1------ 0
+------------1------- 0
+-----------1-------- 0
+----------1--------- 0
+---------1---------- 0
+--------1----------- 0
+-------1------------ 0
+------1------------- 0
+-----1-------------- 0
+-1------------------ 0
+0------------------- 0
+-------------------1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_led_int_Data1_3_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_flag_Data_0_.Q keyboard_flag_Data_1_.Q button4_d1_q_0_.Q \
+button4_d2_q_0_.Q button4_d3_q_0_.Q button3_d1_q_0_.Q button3_d2_q_0_.Q \
+button3_d3_q_0_.Q button2_d1_q_0_.Q button2_d2_q_0_.Q button2_d3_q_0_.Q \
+button1_d1_q_0_.Q button1_d2_q_0_.Q button1_d3_q_0_.Q keyOut_0_.Q keyOut_1_.Q \
+keyOut_2_.Q keyOut_3_.Q keyboard_int_Data1_0_.CE
+01000000000--1000- 1
+01000000000-1-000- 1
+010000000001--000- 1
+01000--1000000-000 1
+01000-1-000000-000 1
+010001--000000-000 1
+01000000--1000-000 1
+01000000-1-000-000 1
+010000001--000-000 1
+01000--10000000-00 1
+01000-1-0000000-00 1
+010001--0000000-00 1
+01000000--10000-00 1
+01000000-1-0000-00 1
+010000001--0000-00 1
+01000--100000000-0 1
+01000-1-00000000-0 1
+010001--00000000-0 1
+01000000--100000-0 1
+01000000-1-00000-0 1
+010000001--00000-0 1
+01000000000--1-000 1
+01000000000-1--000 1
+010000000001---000 1
+01000000000--10-00 1
+01000000000-1-0-00 1
+010000000001--0-00 1
+01000000000--100-0 1
+01000000000-1-00-0 1
+010000000001--00-0 1
+-----------000---1 0
+-----000000000---- 0
+---------------11- 0
+--------------1-1- 0
+--------------11-- 0
+----------1--1---- 0
+---------1---1---- 0
+--------1----1---- 0
+-------1-----1---- 0
+------1------1---- 0
+-----1-------1---- 0
+----------1-1----- 0
+---------1--1----- 0
+--------1---1----- 0
+-------1----1----- 0
+------1-----1----- 0
+-----1------1----- 0
+----------11------ 0
+---------1-1------ 0
+--------1--1------ 0
+-------1---1------ 0
+------1----1------ 0
+-----1-----1------ 0
+-------1--1------- 0
+------1---1------- 0
+-----1----1------- 0
+-------1-1-------- 0
+------1--1-------- 0
+-----1---1-------- 0
+-------11--------- 0
+------1-1--------- 0
+-----1--1--------- 0
+----1------------- 0
+---1-------------- 0
+--1--------------- 0
+-0---------------- 0
+1----------------- 0
+----------------11 0
+---------------1-1 0
+--------------1--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_int_Data1_0_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_flag_Data_0_.Q keyboard_flag_Data_1_.Q button4_d1_q_0_.Q \
+button4_d2_q_0_.Q button4_d3_q_0_.Q button3_d1_q_0_.Q button3_d2_q_0_.Q \
+button3_d3_q_0_.Q button2_d1_q_0_.Q button2_d2_q_0_.Q button2_d3_q_0_.Q \
+button1_d1_q_0_.Q button1_d2_q_0_.Q button1_d3_q_0_.Q keyOut_0_.Q keyOut_1_.Q \
+keyOut_2_.Q keyOut_3_.Q keyboard_int_Data1_1_.CE
+01000000000--1000- 1
+01000000000-1-000- 1
+010000000001--000- 1
+01000--1000000-000 1
+01000-1-000000-000 1
+010001--000000-000 1
+01000000--1000-000 1
+01000000-1-000-000 1
+010000001--000-000 1
+01000--10000000-00 1
+01000-1-0000000-00 1
+010001--0000000-00 1
+01000000--10000-00 1
+01000000-1-0000-00 1
+010000001--0000-00 1
+01000--100000000-0 1
+01000-1-00000000-0 1
+010001--00000000-0 1
+01000000--100000-0 1
+01000000-1-00000-0 1
+010000001--00000-0 1
+01000000000--1-000 1
+01000000000-1--000 1
+010000000001---000 1
+01000000000--10-00 1
+01000000000-1-0-00 1
+010000000001--0-00 1
+01000000000--100-0 1
+01000000000-1-00-0 1
+010000000001--00-0 1
+-----------000---1 0
+-----000000000---- 0
+---------------11- 0
+--------------1-1- 0
+--------------11-- 0
+----------1--1---- 0
+---------1---1---- 0
+--------1----1---- 0
+-------1-----1---- 0
+------1------1---- 0
+-----1-------1---- 0
+----------1-1----- 0
+---------1--1----- 0
+--------1---1----- 0
+-------1----1----- 0
+------1-----1----- 0
+-----1------1----- 0
+----------11------ 0
+---------1-1------ 0
+--------1--1------ 0
+-------1---1------ 0
+------1----1------ 0
+-----1-----1------ 0
+-------1--1------- 0
+------1---1------- 0
+-----1----1------- 0
+-------1-1-------- 0
+------1--1-------- 0
+-----1---1-------- 0
+-------11--------- 0
+------1-1--------- 0
+-----1--1--------- 0
+----1------------- 0
+---1-------------- 0
+--1--------------- 0
+-0---------------- 0
+1----------------- 0
+----------------11 0
+---------------1-1 0
+--------------1--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_int_Data1_1_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_flag_Data_0_.Q keyboard_flag_Data_1_.Q button4_d1_q_0_.Q \
+button4_d2_q_0_.Q button4_d3_q_0_.Q button3_d1_q_0_.Q button3_d2_q_0_.Q \
+button3_d3_q_0_.Q button2_d1_q_0_.Q button2_d2_q_0_.Q button2_d3_q_0_.Q \
+button1_d1_q_0_.Q button1_d2_q_0_.Q button1_d3_q_0_.Q keyOut_0_.Q keyOut_1_.Q \
+keyOut_2_.Q keyOut_3_.Q keyboard_int_Data1_2_.CE
+01000000000--1000- 1
+01000000000-1-000- 1
+010000000001--000- 1
+01000--1000000-000 1
+01000-1-000000-000 1
+010001--000000-000 1
+01000000--1000-000 1
+01000000-1-000-000 1
+010000001--000-000 1
+01000--10000000-00 1
+01000-1-0000000-00 1
+010001--0000000-00 1
+01000000--10000-00 1
+01000000-1-0000-00 1
+010000001--0000-00 1
+01000--100000000-0 1
+01000-1-00000000-0 1
+010001--00000000-0 1
+01000000--100000-0 1
+01000000-1-00000-0 1
+010000001--00000-0 1
+01000000000--1-000 1
+01000000000-1--000 1
+010000000001---000 1
+01000000000--10-00 1
+01000000000-1-0-00 1
+010000000001--0-00 1
+01000000000--100-0 1
+01000000000-1-00-0 1
+010000000001--00-0 1
+-----------000---1 0
+-----000000000---- 0
+---------------11- 0
+--------------1-1- 0
+--------------11-- 0
+----------1--1---- 0
+---------1---1---- 0
+--------1----1---- 0
+-------1-----1---- 0
+------1------1---- 0
+-----1-------1---- 0
+----------1-1----- 0
+---------1--1----- 0
+--------1---1----- 0
+-------1----1----- 0
+------1-----1----- 0
+-----1------1----- 0
+----------11------ 0
+---------1-1------ 0
+--------1--1------ 0
+-------1---1------ 0
+------1----1------ 0
+-----1-----1------ 0
+-------1--1------- 0
+------1---1------- 0
+-----1----1------- 0
+-------1-1-------- 0
+------1--1-------- 0
+-----1---1-------- 0
+-------11--------- 0
+------1-1--------- 0
+-----1--1--------- 0
+----1------------- 0
+---1-------------- 0
+--1--------------- 0
+-0---------------- 0
+1----------------- 0
+----------------11 0
+---------------1-1 0
+--------------1--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_int_Data1_2_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_flag_Data_0_.Q keyboard_flag_Data_1_.Q button4_d1_q_0_.Q \
+button4_d2_q_0_.Q button4_d3_q_0_.Q button3_d1_q_0_.Q button3_d2_q_0_.Q \
+button3_d3_q_0_.Q button2_d1_q_0_.Q button2_d2_q_0_.Q button2_d3_q_0_.Q \
+button1_d1_q_0_.Q button1_d2_q_0_.Q button1_d3_q_0_.Q keyOut_0_.Q keyOut_1_.Q \
+keyOut_2_.Q keyOut_3_.Q keyboard_int_Data1_3_.CE
+01000000000--1000- 1
+01000000000-1-000- 1
+010000000001--000- 1
+01000--1000000-000 1
+01000-1-000000-000 1
+010001--000000-000 1
+01000000--1000-000 1
+01000000-1-000-000 1
+010000001--000-000 1
+01000--10000000-00 1
+01000-1-0000000-00 1
+010001--0000000-00 1
+01000000--10000-00 1
+01000000-1-0000-00 1
+010000001--0000-00 1
+01000--100000000-0 1
+01000-1-00000000-0 1
+010001--00000000-0 1
+01000000--100000-0 1
+01000000-1-00000-0 1
+010000001--00000-0 1
+01000000000--1-000 1
+01000000000-1--000 1
+010000000001---000 1
+01000000000--10-00 1
+01000000000-1-0-00 1
+010000000001--0-00 1
+01000000000--100-0 1
+01000000000-1-00-0 1
+010000000001--00-0 1
+-----------000---1 0
+-----000000000---- 0
+---------------11- 0
+--------------1-1- 0
+--------------11-- 0
+----------1--1---- 0
+---------1---1---- 0
+--------1----1---- 0
+-------1-----1---- 0
+------1------1---- 0
+-----1-------1---- 0
+----------1-1----- 0
+---------1--1----- 0
+--------1---1----- 0
+-------1----1----- 0
+------1-----1----- 0
+-----1------1----- 0
+----------11------ 0
+---------1-1------ 0
+--------1--1------ 0
+-------1---1------ 0
+------1----1------ 0
+-----1-----1------ 0
+-------1--1------- 0
+------1---1------- 0
+-----1----1------- 0
+-------1-1-------- 0
+------1--1-------- 0
+-----1---1-------- 0
+-------11--------- 0
+------1-1--------- 0
+-----1--1--------- 0
+----1------------- 0
+---1-------------- 0
+--1--------------- 0
+-0---------------- 0
+1----------------- 0
+----------------11 0
+---------------1-1 0
+--------------1--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_int_Data1_3_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_flag_Data_0_.Q keyboard_flag_Data_1_.Q button4_d1_q_0_.Q \
+button4_d2_q_0_.Q button4_d3_q_0_.Q button3_d1_q_0_.Q button3_d2_q_0_.Q \
+button3_d3_q_0_.Q button2_d1_q_0_.Q button2_d2_q_0_.Q button2_d3_q_0_.Q \
+button1_d1_q_0_.Q button1_d2_q_0_.Q button1_d3_q_0_.Q keyOut_0_.Q keyOut_1_.Q \
+keyOut_2_.Q keyOut_3_.Q keyboard_int_Data0_0_.CE
+00000000000--1000- 1
+00000000000-1-000- 1
+000000000001--000- 1
+00000--1000000-000 1
+00000-1-000000-000 1
+000001--000000-000 1
+00000000--1000-000 1
+00000000-1-000-000 1
+000000001--000-000 1
+00000--10000000-00 1
+00000-1-0000000-00 1
+000001--0000000-00 1
+00000000--10000-00 1
+00000000-1-0000-00 1
+000000001--0000-00 1
+00000--100000000-0 1
+00000-1-00000000-0 1
+000001--00000000-0 1
+00000000--100000-0 1
+00000000-1-00000-0 1
+000000001--00000-0 1
+00000000000--1-000 1
+00000000000-1--000 1
+000000000001---000 1
+00000000000--10-00 1
+00000000000-1-0-00 1
+000000000001--0-00 1
+00000000000--100-0 1
+00000000000-1-00-0 1
+000000000001--00-0 1
+-----------000---1 0
+-----000000000---- 0
+---------------11- 0
+--------------1-1- 0
+--------------11-- 0
+----------1--1---- 0
+---------1---1---- 0
+--------1----1---- 0
+-------1-----1---- 0
+------1------1---- 0
+-----1-------1---- 0
+----------1-1----- 0
+---------1--1----- 0
+--------1---1----- 0
+-------1----1----- 0
+------1-----1----- 0
+-----1------1----- 0
+----------11------ 0
+---------1-1------ 0
+--------1--1------ 0
+-------1---1------ 0
+------1----1------ 0
+-----1-----1------ 0
+-------1--1------- 0
+------1---1------- 0
+-----1----1------- 0
+-------1-1-------- 0
+------1--1-------- 0
+-----1---1-------- 0
+-------11--------- 0
+------1-1--------- 0
+-----1--1--------- 0
+----1------------- 0
+---1-------------- 0
+--1--------------- 0
+-1---------------- 0
+1----------------- 0
+----------------11 0
+---------------1-1 0
+--------------1--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_int_Data0_0_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_flag_Data_0_.Q keyboard_flag_Data_1_.Q button4_d1_q_0_.Q \
+button4_d2_q_0_.Q button4_d3_q_0_.Q button3_d1_q_0_.Q button3_d2_q_0_.Q \
+button3_d3_q_0_.Q button2_d1_q_0_.Q button2_d2_q_0_.Q button2_d3_q_0_.Q \
+button1_d1_q_0_.Q button1_d2_q_0_.Q button1_d3_q_0_.Q keyOut_0_.Q keyOut_1_.Q \
+keyOut_2_.Q keyOut_3_.Q keyboard_int_Data0_1_.CE
+00000000000--1000- 1
+00000000000-1-000- 1
+000000000001--000- 1
+00000--1000000-000 1
+00000-1-000000-000 1
+000001--000000-000 1
+00000000--1000-000 1
+00000000-1-000-000 1
+000000001--000-000 1
+00000--10000000-00 1
+00000-1-0000000-00 1
+000001--0000000-00 1
+00000000--10000-00 1
+00000000-1-0000-00 1
+000000001--0000-00 1
+00000--100000000-0 1
+00000-1-00000000-0 1
+000001--00000000-0 1
+00000000--100000-0 1
+00000000-1-00000-0 1
+000000001--00000-0 1
+00000000000--1-000 1
+00000000000-1--000 1
+000000000001---000 1
+00000000000--10-00 1
+00000000000-1-0-00 1
+000000000001--0-00 1
+00000000000--100-0 1
+00000000000-1-00-0 1
+000000000001--00-0 1
+-----------000---1 0
+-----000000000---- 0
+---------------11- 0
+--------------1-1- 0
+--------------11-- 0
+----------1--1---- 0
+---------1---1---- 0
+--------1----1---- 0
+-------1-----1---- 0
+------1------1---- 0
+-----1-------1---- 0
+----------1-1----- 0
+---------1--1----- 0
+--------1---1----- 0
+-------1----1----- 0
+------1-----1----- 0
+-----1------1----- 0
+----------11------ 0
+---------1-1------ 0
+--------1--1------ 0
+-------1---1------ 0
+------1----1------ 0
+-----1-----1------ 0
+-------1--1------- 0
+------1---1------- 0
+-----1----1------- 0
+-------1-1-------- 0
+------1--1-------- 0
+-----1---1-------- 0
+-------11--------- 0
+------1-1--------- 0
+-----1--1--------- 0
+----1------------- 0
+---1-------------- 0
+--1--------------- 0
+-1---------------- 0
+1----------------- 0
+----------------11 0
+---------------1-1 0
+--------------1--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_int_Data0_1_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_flag_Data_0_.Q keyboard_flag_Data_1_.Q button4_d1_q_0_.Q \
+button4_d2_q_0_.Q button4_d3_q_0_.Q button3_d1_q_0_.Q button3_d2_q_0_.Q \
+button3_d3_q_0_.Q button2_d1_q_0_.Q button2_d2_q_0_.Q button2_d3_q_0_.Q \
+button1_d1_q_0_.Q button1_d2_q_0_.Q button1_d3_q_0_.Q keyOut_0_.Q keyOut_1_.Q \
+keyOut_2_.Q keyOut_3_.Q keyboard_int_Data0_2_.CE
+00000000000--1000- 1
+00000000000-1-000- 1
+000000000001--000- 1
+00000--1000000-000 1
+00000-1-000000-000 1
+000001--000000-000 1
+00000000--1000-000 1
+00000000-1-000-000 1
+000000001--000-000 1
+00000--10000000-00 1
+00000-1-0000000-00 1
+000001--0000000-00 1
+00000000--10000-00 1
+00000000-1-0000-00 1
+000000001--0000-00 1
+00000--100000000-0 1
+00000-1-00000000-0 1
+000001--00000000-0 1
+00000000--100000-0 1
+00000000-1-00000-0 1
+000000001--00000-0 1
+00000000000--1-000 1
+00000000000-1--000 1
+000000000001---000 1
+00000000000--10-00 1
+00000000000-1-0-00 1
+000000000001--0-00 1
+00000000000--100-0 1
+00000000000-1-00-0 1
+000000000001--00-0 1
+-----------000---1 0
+-----000000000---- 0
+---------------11- 0
+--------------1-1- 0
+--------------11-- 0
+----------1--1---- 0
+---------1---1---- 0
+--------1----1---- 0
+-------1-----1---- 0
+------1------1---- 0
+-----1-------1---- 0
+----------1-1----- 0
+---------1--1----- 0
+--------1---1----- 0
+-------1----1----- 0
+------1-----1----- 0
+-----1------1----- 0
+----------11------ 0
+---------1-1------ 0
+--------1--1------ 0
+-------1---1------ 0
+------1----1------ 0
+-----1-----1------ 0
+-------1--1------- 0
+------1---1------- 0
+-----1----1------- 0
+-------1-1-------- 0
+------1--1-------- 0
+-----1---1-------- 0
+-------11--------- 0
+------1-1--------- 0
+-----1--1--------- 0
+----1------------- 0
+---1-------------- 0
+--1--------------- 0
+-1---------------- 0
+1----------------- 0
+----------------11 0
+---------------1-1 0
+--------------1--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_int_Data0_2_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_flag_Data_0_.Q keyboard_flag_Data_1_.Q button4_d1_q_0_.Q \
+button4_d2_q_0_.Q button4_d3_q_0_.Q button3_d1_q_0_.Q button3_d2_q_0_.Q \
+button3_d3_q_0_.Q button2_d1_q_0_.Q button2_d2_q_0_.Q button2_d3_q_0_.Q \
+button1_d1_q_0_.Q button1_d2_q_0_.Q button1_d3_q_0_.Q keyOut_0_.Q keyOut_1_.Q \
+keyOut_2_.Q keyOut_3_.Q keyboard_int_Data0_3_.CE
+00000000000--1000- 1
+00000000000-1-000- 1
+000000000001--000- 1
+00000--1000000-000 1
+00000-1-000000-000 1
+000001--000000-000 1
+00000000--1000-000 1
+00000000-1-000-000 1
+000000001--000-000 1
+00000--10000000-00 1
+00000-1-0000000-00 1
+000001--0000000-00 1
+00000000--10000-00 1
+00000000-1-0000-00 1
+000000001--0000-00 1
+00000--100000000-0 1
+00000-1-00000000-0 1
+000001--00000000-0 1
+00000000--100000-0 1
+00000000-1-00000-0 1
+000000001--00000-0 1
+00000000000--1-000 1
+00000000000-1--000 1
+000000000001---000 1
+00000000000--10-00 1
+00000000000-1-0-00 1
+000000000001--0-00 1
+00000000000--100-0 1
+00000000000-1-00-0 1
+000000000001--00-0 1
+-----------000---1 0
+-----000000000---- 0
+---------------11- 0
+--------------1-1- 0
+--------------11-- 0
+----------1--1---- 0
+---------1---1---- 0
+--------1----1---- 0
+-------1-----1---- 0
+------1------1---- 0
+-----1-------1---- 0
+----------1-1----- 0
+---------1--1----- 0
+--------1---1----- 0
+-------1----1----- 0
+------1-----1----- 0
+-----1------1----- 0
+----------11------ 0
+---------1-1------ 0
+--------1--1------ 0
+-------1---1------ 0
+------1----1------ 0
+-----1-----1------ 0
+-------1--1------- 0
+------1---1------- 0
+-----1----1------- 0
+-------1-1-------- 0
+------1--1-------- 0
+-----1---1-------- 0
+-------11--------- 0
+------1-1--------- 0
+-----1--1--------- 0
+----1------------- 0
+---1-------------- 0
+--1--------------- 0
+-1---------------- 0
+1----------------- 0
+----------------11 0
+---------------1-1 0
+--------------1--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_int_Data0_3_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q keyOut_0_.CE
+-1- 1
+1-- 1
+--1 1
+000 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q keyOut_1_.CE
+-1- 1
+1-- 1
+--1 1
+000 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q keyOut_2_.CE
+-1- 1
+1-- 1
+--1 1
+000 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q keyOut_3_.CE
+-1- 1
+1-- 1
+--1 1
+000 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_timecnt_12_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_timecnt_13_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_timecnt_14_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_timecnt_15_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q led_0_.AP
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q led_1_.AP
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q led_2_.AP
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q led_3_.AP
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q led_4_.AP
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_flag_Data_0_.Q keyboard_flag_Data_1_.Q button4_d1_q_0_.Q \
+button4_d2_q_0_.Q button4_d3_q_0_.Q button3_d1_q_0_.Q button3_d2_q_0_.Q \
+button3_d3_q_0_.Q button2_d1_q_0_.Q button2_d2_q_0_.Q button2_d3_q_0_.Q \
+button1_d1_q_0_.Q button1_d2_q_0_.Q button1_d3_q_0_.Q keyboard_int_Data1_1_.Q \
+keyboard_int_Data1_2_.Q keyboard_int_Data1_3_.Q keyOut_0_.Q keyOut_1_.Q \
+keyOut_2_.Q keyOut_3_.Q keyboard_led_int_Data0_0_.CE
+1---100000000000-000- 1
+1--1-00000000000-000- 1
+1-1--00000000000-000- 1
+1---1000000000--0000- 1
+1--1-000000000--0000- 1
+1-1--000000000--0000- 1
+10--1000000000---000- 1
+10-1-000000000---000- 1
+101--000000000---000- 1
+0-000000000--1---000- 1
+0-000000000-1----000- 1
+0-0000000001-----000- 1
+0-000--1000000----000 1
+0-000-1-000000----000 1
+0-0001--000000----000 1
+0-000000--1000----000 1
+0-000000-1-000----000 1
+0-0000001--000----000 1
+0-000--1000000---0-00 1
+0-000-1-000000---0-00 1
+0-0001--000000---0-00 1
+0-000000--1000---0-00 1
+0-000000-1-000---0-00 1
+0-0000001--000---0-00 1
+0-000--1000000---00-0 1
+0-000-1-000000---00-0 1
+0-0001--000000---00-0 1
+0-000000--1000---00-0 1
+0-000000-1-000---00-0 1
+0-0000001--000---00-0 1
+0-000000000--1----000 1
+0-000000000-1-----000 1
+0-0000000001------000 1
+0-000000000--1---0-00 1
+0-000000000-1----0-00 1
+0-0000000001-----0-00 1
+0-000000000--1---00-0 1
+0-000000000-1----00-0 1
+0-0000000001-----00-0 1
+11------------1-1---- 0
+11-------------11---- 0
+--000000000000------- 0
+0----------000------1 0
+1----------1--------- 0
+1----1--------------- 0
+1-------1------------ 0
+1-----------1-------- 0
+1-----1-------------- 0
+1--------1----------- 0
+1------------1------- 0
+1------1------------- 0
+1---------1---------- 0
+0-1------------------ 0
+1----------------1--- 0
+1-----------------1-- 0
+1------------------1- 0
+0--1----------------- 0
+0---1---------------- 0
+------------------11- 0
+-----------------1-1- 0
+-----------------11-- 0
+----------1--1------- 0
+---------1---1------- 0
+--------1----1------- 0
+-------1-----1------- 0
+------1------1------- 0
+-----1-------1------- 0
+----------1-1-------- 0
+---------1--1-------- 0
+--------1---1-------- 0
+-------1----1-------- 0
+------1-----1-------- 0
+-----1------1-------- 0
+----------11--------- 0
+---------1-1--------- 0
+--------1--1--------- 0
+-------1---1--------- 0
+------1----1--------- 0
+-----1-----1--------- 0
+-------1--1---------- 0
+------1---1---------- 0
+-----1----1---------- 0
+-------1-1----------- 0
+------1--1----------- 0
+-----1---1----------- 0
+-------11------------ 0
+------1-1------------ 0
+-----1--1------------ 0
+-------------------11 0
+------------------1-1 0
+-----------------1--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_led_int_Data0_0_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_flag_Data_0_.Q keyboard_flag_Data_1_.Q button4_d1_q_0_.Q \
+button4_d2_q_0_.Q button4_d3_q_0_.Q button3_d1_q_0_.Q button3_d2_q_0_.Q \
+button3_d3_q_0_.Q button2_d1_q_0_.Q button2_d2_q_0_.Q button2_d3_q_0_.Q \
+button1_d1_q_0_.Q button1_d2_q_0_.Q button1_d3_q_0_.Q keyboard_int_Data1_1_.Q \
+keyboard_int_Data1_2_.Q keyboard_int_Data1_3_.Q keyOut_0_.Q keyOut_1_.Q \
+keyOut_2_.Q keyOut_3_.Q keyboard_led_int_Data0_1_.CE
+1---100000000000-000- 1
+1--1-00000000000-000- 1
+1-1--00000000000-000- 1
+1---1000000000--0000- 1
+1--1-000000000--0000- 1
+1-1--000000000--0000- 1
+10--1000000000---000- 1
+10-1-000000000---000- 1
+101--000000000---000- 1
+0-000000000--1---000- 1
+0-000000000-1----000- 1
+0-0000000001-----000- 1
+0-000--1000000----000 1
+0-000-1-000000----000 1
+0-0001--000000----000 1
+0-000000--1000----000 1
+0-000000-1-000----000 1
+0-0000001--000----000 1
+0-000--1000000---0-00 1
+0-000-1-000000---0-00 1
+0-0001--000000---0-00 1
+0-000000--1000---0-00 1
+0-000000-1-000---0-00 1
+0-0000001--000---0-00 1
+0-000--1000000---00-0 1
+0-000-1-000000---00-0 1
+0-0001--000000---00-0 1
+0-000000--1000---00-0 1
+0-000000-1-000---00-0 1
+0-0000001--000---00-0 1
+0-000000000--1----000 1
+0-000000000-1-----000 1
+0-0000000001------000 1
+0-000000000--1---0-00 1
+0-000000000-1----0-00 1
+0-0000000001-----0-00 1
+0-000000000--1---00-0 1
+0-000000000-1----00-0 1
+0-0000000001-----00-0 1
+11------------1-1---- 0
+11-------------11---- 0
+--000000000000------- 0
+0----------000------1 0
+1----------1--------- 0
+1----1--------------- 0
+1-------1------------ 0
+1-----------1-------- 0
+1-----1-------------- 0
+1--------1----------- 0
+1------------1------- 0
+1------1------------- 0
+1---------1---------- 0
+0-1------------------ 0
+1----------------1--- 0
+1-----------------1-- 0
+1------------------1- 0
+0--1----------------- 0
+0---1---------------- 0
+------------------11- 0
+-----------------1-1- 0
+-----------------11-- 0
+----------1--1------- 0
+---------1---1------- 0
+--------1----1------- 0
+-------1-----1------- 0
+------1------1------- 0
+-----1-------1------- 0
+----------1-1-------- 0
+---------1--1-------- 0
+--------1---1-------- 0
+-------1----1-------- 0
+------1-----1-------- 0
+-----1------1-------- 0
+----------11--------- 0
+---------1-1--------- 0
+--------1--1--------- 0
+-------1---1--------- 0
+------1----1--------- 0
+-----1-----1--------- 0
+-------1--1---------- 0
+------1---1---------- 0
+-----1----1---------- 0
+-------1-1----------- 0
+------1--1----------- 0
+-----1---1----------- 0
+-------11------------ 0
+------1-1------------ 0
+-----1--1------------ 0
+-------------------11 0
+------------------1-1 0
+-----------------1--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_led_int_Data0_1_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_flag_Data_0_.Q keyboard_flag_Data_1_.Q button4_d1_q_0_.Q \
+button4_d2_q_0_.Q button4_d3_q_0_.Q button3_d1_q_0_.Q button3_d2_q_0_.Q \
+button3_d3_q_0_.Q button2_d1_q_0_.Q button2_d2_q_0_.Q button2_d3_q_0_.Q \
+button1_d1_q_0_.Q button1_d2_q_0_.Q button1_d3_q_0_.Q keyboard_int_Data1_1_.Q \
+keyboard_int_Data1_2_.Q keyboard_int_Data1_3_.Q keyOut_0_.Q keyOut_1_.Q \
+keyOut_2_.Q keyOut_3_.Q keyboard_led_int_Data0_2_.CE
+1---100000000000-000- 1
+1--1-00000000000-000- 1
+1-1--00000000000-000- 1
+1---1000000000--0000- 1
+1--1-000000000--0000- 1
+1-1--000000000--0000- 1
+10--1000000000---000- 1
+10-1-000000000---000- 1
+101--000000000---000- 1
+0-000000000--1---000- 1
+0-000000000-1----000- 1
+0-0000000001-----000- 1
+0-000--1000000----000 1
+0-000-1-000000----000 1
+0-0001--000000----000 1
+0-000000--1000----000 1
+0-000000-1-000----000 1
+0-0000001--000----000 1
+0-000--1000000---0-00 1
+0-000-1-000000---0-00 1
+0-0001--000000---0-00 1
+0-000000--1000---0-00 1
+0-000000-1-000---0-00 1
+0-0000001--000---0-00 1
+0-000--1000000---00-0 1
+0-000-1-000000---00-0 1
+0-0001--000000---00-0 1
+0-000000--1000---00-0 1
+0-000000-1-000---00-0 1
+0-0000001--000---00-0 1
+0-000000000--1----000 1
+0-000000000-1-----000 1
+0-0000000001------000 1
+0-000000000--1---0-00 1
+0-000000000-1----0-00 1
+0-0000000001-----0-00 1
+0-000000000--1---00-0 1
+0-000000000-1----00-0 1
+0-0000000001-----00-0 1
+11------------1-1---- 0
+11-------------11---- 0
+--000000000000------- 0
+0----------000------1 0
+1----------1--------- 0
+1----1--------------- 0
+1-------1------------ 0
+1-----------1-------- 0
+1-----1-------------- 0
+1--------1----------- 0
+1------------1------- 0
+1------1------------- 0
+1---------1---------- 0
+0-1------------------ 0
+1----------------1--- 0
+1-----------------1-- 0
+1------------------1- 0
+0--1----------------- 0
+0---1---------------- 0
+------------------11- 0
+-----------------1-1- 0
+-----------------11-- 0
+----------1--1------- 0
+---------1---1------- 0
+--------1----1------- 0
+-------1-----1------- 0
+------1------1------- 0
+-----1-------1------- 0
+----------1-1-------- 0
+---------1--1-------- 0
+--------1---1-------- 0
+-------1----1-------- 0
+------1-----1-------- 0
+-----1------1-------- 0
+----------11--------- 0
+---------1-1--------- 0
+--------1--1--------- 0
+-------1---1--------- 0
+------1----1--------- 0
+-----1-----1--------- 0
+-------1--1---------- 0
+------1---1---------- 0
+-----1----1---------- 0
+-------1-1----------- 0
+------1--1----------- 0
+-----1---1----------- 0
+-------11------------ 0
+------1-1------------ 0
+-----1--1------------ 0
+-------------------11 0
+------------------1-1 0
+-----------------1--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_led_int_Data0_2_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_flag_Data_0_.Q keyboard_flag_Data_1_.Q button4_d1_q_0_.Q \
+button4_d2_q_0_.Q button4_d3_q_0_.Q button3_d1_q_0_.Q button3_d2_q_0_.Q \
+button3_d3_q_0_.Q button2_d1_q_0_.Q button2_d2_q_0_.Q button2_d3_q_0_.Q \
+button1_d1_q_0_.Q button1_d2_q_0_.Q button1_d3_q_0_.Q keyboard_int_Data1_1_.Q \
+keyboard_int_Data1_2_.Q keyboard_int_Data1_3_.Q keyOut_0_.Q keyOut_1_.Q \
+keyOut_2_.Q keyOut_3_.Q keyboard_led_int_Data0_3_.CE
+1---100000000000-000- 1
+1--1-00000000000-000- 1
+1-1--00000000000-000- 1
+1---1000000000--0000- 1
+1--1-000000000--0000- 1
+1-1--000000000--0000- 1
+10--1000000000---000- 1
+10-1-000000000---000- 1
+101--000000000---000- 1
+0-000000000--1---000- 1
+0-000000000-1----000- 1
+0-0000000001-----000- 1
+0-000--1000000----000 1
+0-000-1-000000----000 1
+0-0001--000000----000 1
+0-000000--1000----000 1
+0-000000-1-000----000 1
+0-0000001--000----000 1
+0-000--1000000---0-00 1
+0-000-1-000000---0-00 1
+0-0001--000000---0-00 1
+0-000000--1000---0-00 1
+0-000000-1-000---0-00 1
+0-0000001--000---0-00 1
+0-000--1000000---00-0 1
+0-000-1-000000---00-0 1
+0-0001--000000---00-0 1
+0-000000--1000---00-0 1
+0-000000-1-000---00-0 1
+0-0000001--000---00-0 1
+0-000000000--1----000 1
+0-000000000-1-----000 1
+0-0000000001------000 1
+0-000000000--1---0-00 1
+0-000000000-1----0-00 1
+0-0000000001-----0-00 1
+0-000000000--1---00-0 1
+0-000000000-1----00-0 1
+0-0000000001-----00-0 1
+11------------1-1---- 0
+11-------------11---- 0
+--000000000000------- 0
+0----------000------1 0
+1----------1--------- 0
+1----1--------------- 0
+1-------1------------ 0
+1-----------1-------- 0
+1-----1-------------- 0
+1--------1----------- 0
+1------------1------- 0
+1------1------------- 0
+1---------1---------- 0
+0-1------------------ 0
+1----------------1--- 0
+1-----------------1-- 0
+1------------------1- 0
+0--1----------------- 0
+0---1---------------- 0
+------------------11- 0
+-----------------1-1- 0
+-----------------11-- 0
+----------1--1------- 0
+---------1---1------- 0
+--------1----1------- 0
+-------1-----1------- 0
+------1------1------- 0
+-----1-------1------- 0
+----------1-1-------- 0
+---------1--1-------- 0
+--------1---1-------- 0
+-------1----1-------- 0
+------1-----1-------- 0
+-----1------1-------- 0
+----------11--------- 0
+---------1-1--------- 0
+--------1--1--------- 0
+-------1---1--------- 0
+------1----1--------- 0
+-----1-----1--------- 0
+-------1--1---------- 0
+------1---1---------- 0
+-----1----1---------- 0
+-------1-1----------- 0
+------1--1----------- 0
+-----1---1----------- 0
+-------11------------ 0
+------1-1------------ 0
+-----1--1------------ 0
+-------------------11 0
+------------------1-1 0
+-----------------1--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_led_int_Data0_3_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_flag_Data_0_.Q keyboard_flag_Data_1_.Q button4_d1_q_0_.Q \
+button4_d2_q_0_.Q button4_d3_q_0_.Q button3_d1_q_0_.Q button3_d2_q_0_.Q \
+button3_d3_q_0_.Q button2_d1_q_0_.Q button2_d2_q_0_.Q button2_d3_q_0_.Q \
+button1_d1_q_0_.Q button1_d2_q_0_.Q button1_d3_q_0_.Q keyboard_int_Data0_3_.Q \
+keyboard_int_Data0_1_.Q keyboard_int_Data0_2_.Q keyOut_0_.Q keyOut_1_.Q \
+keyOut_2_.Q keyboard_led_int_Data1_0_.CE
+10--1000000000-00000 1
+10-1-000000000-00000 1
+101--000000000-00000 1
+10--10000000000--000 1
+10-1-0000000000--000 1
+101--0000000000--000 1
+--000--------------- 0
+--------------1-1--- 0
+--------------11---- 0
+------------------1- 0
+-----------------1-- 0
+-------------1------ 0
+------------1------- 0
+-----------1-------- 0
+----------1--------- 0
+---------1---------- 0
+--------1----------- 0
+-------1------------ 0
+------1------------- 0
+-----1-------------- 0
+-1------------------ 0
+0------------------- 0
+-------------------1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_led_int_Data1_0_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names keyboard_flag_Data_0_.Q keyboard_flag_Data_1_.Q button4_d1_q_0_.Q \
+button4_d2_q_0_.Q button4_d3_q_0_.Q button3_d1_q_0_.Q button3_d2_q_0_.Q \
+button3_d3_q_0_.Q button2_d1_q_0_.Q button2_d2_q_0_.Q button2_d3_q_0_.Q \
+button1_d1_q_0_.Q button1_d2_q_0_.Q button1_d3_q_0_.Q keyboard_int_Data0_3_.Q \
+keyboard_int_Data0_1_.Q keyboard_int_Data0_2_.Q keyOut_0_.Q keyOut_1_.Q \
+keyOut_2_.Q keyboard_led_int_Data1_1_.CE
+10--1000000000-00000 1
+10-1-000000000-00000 1
+101--000000000-00000 1
+10--10000000000--000 1
+10-1-0000000000--000 1
+101--0000000000--000 1
+--000--------------- 0
+--------------1-1--- 0
+--------------11---- 0
+------------------1- 0
+-----------------1-- 0
+-------------1------ 0
+------------1------- 0
+-----------1-------- 0
+----------1--------- 0
+---------1---------- 0
+--------1----------- 0
+-------1------------ 0
+------1------------- 0
+-----1-------------- 0
+-1------------------ 0
+0------------------- 0
+-------------------1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_led_int_Data1_1_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_combvalue_5_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_combvalue_6_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_combvalue_7_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_timecnt_0_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_timecnt_1_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_timecnt_2_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_timecnt_3_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_timecnt_4_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_timecnt_5_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_timecnt_6_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_timecnt_7_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_timecnt_8_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_timecnt_9_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_timecnt_10_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_timecnt_11_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_combvalue_0_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_combvalue_1_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_combvalue_2_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_combvalue_3_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+keyboard_combvalue_4_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+serial_ClockCount_Rx_1_.CE
+-1- 1
+1-- 1
+--1 1
+000 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+serial_ClockCount_Rx_2_.CE
+-1- 1
+1-- 1
+--1 1
+000 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+serial_ClockCount_Rx_3_.CE
+-1- 1
+1-- 1
+--1 1
+000 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+serial_ClockCount_Rx_4_.CE
+-1- 1
+1-- 1
+--1 1
+000 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+serial_ClockCount_Rx_5_.CE
+-1- 1
+1-- 1
+--1 1
+000 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+serial_ClockCount_Rx_6_.CE
+-1- 1
+1-- 1
+--1 1
+000 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q serial_m_0_.Q \
+serial_m_1_.Q serial_m_2_.Q serial_m_3_.Q serial_m_4_.Q serial_m_5_.Q \
+serial_m_6_.Q serial_m_7_.Q serial_Rx_Data_2_.CE
+--100010001 1
+-1-00010001 1
+1--00010001 1
+--10001-1-0 1
+-1-0001-1-0 1
+1--0001-1-0 1
+--10001--10 1
+-1-0001--10 1
+1--0001--10 1
+--100011--0 1
+-1-00011--0 1
+1--00011--0 1
+-------0000 0
+000-------- 0
+------0---- 0
+-----1----- 0
+----1------ 0
+---1------- 0
+---------11 0
+--------1-1 0
+-------1--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q serial_m_0_.Q \
+serial_m_1_.Q serial_m_2_.Q serial_m_3_.Q serial_m_4_.Q serial_m_5_.Q \
+serial_m_6_.Q serial_m_7_.Q serial_Rx_Data_3_.CE
+--100010001 1
+-1-00010001 1
+1--00010001 1
+--10001-1-0 1
+-1-0001-1-0 1
+1--0001-1-0 1
+--10001--10 1
+-1-0001--10 1
+1--0001--10 1
+--100011--0 1
+-1-00011--0 1
+1--00011--0 1
+-------0000 0
+000-------- 0
+------0---- 0
+-----1----- 0
+----1------ 0
+---1------- 0
+---------11 0
+--------1-1 0
+-------1--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q serial_m_0_.Q \
+serial_m_1_.Q serial_m_2_.Q serial_m_3_.Q serial_m_4_.Q serial_m_5_.Q \
+serial_m_6_.Q serial_m_7_.Q serial_Rx_Data_4_.CE
+--100010001 1
+-1-00010001 1
+1--00010001 1
+--10001-1-0 1
+-1-0001-1-0 1
+1--0001-1-0 1
+--10001--10 1
+-1-0001--10 1
+1--0001--10 1
+--100011--0 1
+-1-00011--0 1
+1--00011--0 1
+-------0000 0
+000-------- 0
+------0---- 0
+-----1----- 0
+----1------ 0
+---1------- 0
+---------11 0
+--------1-1 0
+-------1--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q serial_m_0_.Q \
+serial_m_1_.Q serial_m_2_.Q serial_m_3_.Q serial_m_4_.Q serial_m_5_.Q \
+serial_m_6_.Q serial_m_7_.Q serial_Rx_Data_5_.CE
+--100010001 1
+-1-00010001 1
+1--00010001 1
+--10001-1-0 1
+-1-0001-1-0 1
+1--0001-1-0 1
+--10001--10 1
+-1-0001--10 1
+1--0001--10 1
+--100011--0 1
+-1-00011--0 1
+1--00011--0 1
+-------0000 0
+000-------- 0
+------0---- 0
+-----1----- 0
+----1------ 0
+---1------- 0
+---------11 0
+--------1-1 0
+-------1--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q serial_m_0_.Q \
+serial_m_1_.Q serial_m_2_.Q serial_m_3_.Q serial_m_4_.Q serial_m_5_.Q \
+serial_m_6_.Q serial_m_7_.Q serial_Rx_Data_6_.CE
+--100010001 1
+-1-00010001 1
+1--00010001 1
+--10001-1-0 1
+-1-0001-1-0 1
+1--0001-1-0 1
+--10001--10 1
+-1-0001--10 1
+1--0001--10 1
+--100011--0 1
+-1-00011--0 1
+1--00011--0 1
+-------0000 0
+000-------- 0
+------0---- 0
+-----1----- 0
+----1------ 0
+---1------- 0
+---------11 0
+--------1-1 0
+-------1--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q serial_m_0_.Q \
+serial_m_1_.Q serial_m_2_.Q serial_m_3_.Q serial_m_4_.Q serial_m_5_.Q \
+serial_m_6_.Q serial_m_7_.Q serial_Rx_Data_7_.CE
+--100010001 1
+-1-00010001 1
+1--00010001 1
+--10001-1-0 1
+-1-0001-1-0 1
+1--0001-1-0 1
+--10001--10 1
+-1-0001--10 1
+1--0001--10 1
+--100011--0 1
+-1-00011--0 1
+1--00011--0 1
+-------0000 0
+000-------- 0
+------0---- 0
+-----1----- 0
+----1------ 0
+---1------- 0
+---------11 0
+--------1-1 0
+-------1--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+serial_ClockCount_Rx_0_.CE
+-1- 1
+1-- 1
+--1 1
+000 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+serial_ClockCount_9_.CE
+-1- 1
+1-- 1
+--1 1
+000 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+serial_ClockCount_10_.CE
+-1- 1
+1-- 1
+--1 1
+000 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q serial_m_0_.Q \
+serial_m_1_.Q serial_m_2_.Q serial_m_3_.Q serial_m_4_.Q serial_m_5_.Q \
+serial_m_6_.Q serial_m_7_.Q serial_Rx_Data_0_.CE
+--100010001 1
+-1-00010001 1
+1--00010001 1
+--10001-1-0 1
+-1-0001-1-0 1
+1--0001-1-0 1
+--10001--10 1
+-1-0001--10 1
+1--0001--10 1
+--100011--0 1
+-1-00011--0 1
+1--00011--0 1
+-------0000 0
+000-------- 0
+------0---- 0
+-----1----- 0
+----1------ 0
+---1------- 0
+---------11 0
+--------1-1 0
+-------1--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q serial_m_0_.Q \
+serial_m_1_.Q serial_m_2_.Q serial_m_3_.Q serial_m_4_.Q serial_m_5_.Q \
+serial_m_6_.Q serial_m_7_.Q serial_Rx_Data_1_.CE
+--100010001 1
+-1-00010001 1
+1--00010001 1
+--10001-1-0 1
+-1-0001-1-0 1
+1--0001-1-0 1
+--10001--10 1
+-1-0001--10 1
+1--0001--10 1
+--100011--0 1
+-1-00011--0 1
+1--00011--0 1
+-------0000 0
+000-------- 0
+------0---- 0
+-----1----- 0
+----1------ 0
+---1------- 0
+---------11 0
+--------1-1 0
+-------1--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q serial_m_2_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q serial_m_3_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q serial_m_4_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q serial_m_5_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q serial_m_6_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q serial_m_7_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+serial_ClockCount_0_.CE
+-1- 1
+1-- 1
+--1 1
+000 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+serial_ClockCount_1_.CE
+-1- 1
+1-- 1
+--1 1
+000 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+serial_ClockCount_2_.CE
+-1- 1
+1-- 1
+--1 1
+000 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+serial_ClockCount_3_.CE
+-1- 1
+1-- 1
+--1 1
+000 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+serial_ClockCount_4_.CE
+-1- 1
+1-- 1
+--1 1
+000 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+serial_ClockCount_5_.CE
+-1- 1
+1-- 1
+--1 1
+000 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+serial_ClockCount_6_.CE
+-1- 1
+1-- 1
+--1 1
+000 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+serial_ClockCount_7_.CE
+-1- 1
+1-- 1
+--1 1
+000 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+serial_ClockCount_8_.CE
+-1- 1
+1-- 1
+--1 1
+000 0
+.names serial_Rx_Valid.Q serial_Data2_3_.C
+0 1
+1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+serial_Data2_3_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button5_d1_q_0_.Q button5_d2_q_0_.Q button5_d3_q_0_.Q \
+serial_Send_data_1_.C
+-1- 1
+1-- 1
+--1 1
+000 0
+.names button5_d1_q_0_.Q button5_d2_q_0_.Q button5_d3_q_0_.Q \
+serial_Send_data_2_.C
+-1- 1
+1-- 1
+--1 1
+000 0
+.names button5_d1_q_0_.Q button5_d2_q_0_.Q button5_d3_q_0_.Q \
+serial_Send_data_3_.C
+-1- 1
+1-- 1
+--1 1
+000 0
+.names button5_d1_q_0_.Q button5_d2_q_0_.Q button5_d3_q_0_.Q \
+serial_Send_data_4_.C
+-1- 1
+1-- 1
+--1 1
+000 0
+.names button5_d1_q_0_.Q button5_d2_q_0_.Q button5_d3_q_0_.Q \
+serial_Send_data_5_.C
+-1- 1
+1-- 1
+--1 1
+000 0
+.names button5_d1_q_0_.Q button5_d2_q_0_.Q button5_d3_q_0_.Q \
+serial_Send_data_6_.C
+-1- 1
+1-- 1
+--1 1
+000 0
+.names button5_d1_q_0_.Q button5_d2_q_0_.Q button5_d3_q_0_.Q \
+serial_Send_data_7_.C
+-1- 1
+1-- 1
+--1 1
+000 0
+.names button5_d1_q_0_.Q button5_d2_q_0_.Q button5_d3_q_0_.Q \
+serial_Send_data_8_.C
+-1- 1
+1-- 1
+--1 1
+000 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q serial_m_0_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q serial_m_1_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names serial_Rx_Valid.Q serial_Data1_0_.C
+0 1
+1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+serial_Data1_0_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names serial_Rx_Valid.Q serial_Data1_1_.C
+0 1
+1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+serial_Data1_1_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names serial_Rx_Valid.Q serial_Data1_2_.C
+0 1
+1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+serial_Data1_2_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names serial_Rx_Valid.Q serial_Data1_3_.C
+0 1
+1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+serial_Data1_3_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names serial_Rx_Valid.Q serial_Data2_0_.C
+0 1
+1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+serial_Data2_0_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names serial_Rx_Valid.Q serial_Data2_1_.C
+0 1
+1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+serial_Data2_1_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names serial_Rx_Valid.Q serial_Data2_2_.C
+0 1
+1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+serial_Data2_2_.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names Rx.BLIF serial_m_0_.Q serial_m_1_.Q serial_m_2_.Q serial_m_3_.Q \
+serial_m_4_.Q serial_m_5_.Q serial_m_6_.Q serial_m_7_.Q serial_Rx_Valid.CE
+100000000 1
+-00011001 1
+--0010101 1
+0-------0 0
+-----1--0 0
+----100-- 0
+------1-0 0
+----0---1 0
+-1----0-- 0
+-----11-- 0
+-------1- 0
+---1----- 0
+--1------ 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+serial_Rx_Valid.AR
+000 1
+-1- 0
+1-- 0
+--1 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+serial_Clock9600.CE
+-1- 1
+1-- 1
+--1 1
+000 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q serial_Clock16.CE
+-1- 1
+1-- 1
+--1 1
+000 0
+.names button5_d1_q_0_.Q button5_d2_q_0_.Q button5_d3_q_0_.Q serial_Send_en.C
+-1- 1
+1-- 1
+--1 1
+000 0
+.names keyboard_led_int_Data1_0_.Q serial_Data2_0_.Q \
+dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_2_.Q \
+dynamicshow_mux_dataout_3_0__un1_n
+-110 1
+1-11 1
+-0-0 0
+0--1 0
+--0- 0
+.names keyboard_led_int_Data0_0_.Q serial_Data1_0_.Q \
+dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_2_.Q \
+dynamicshow_mux_dataout_3_0__un0_n
+-100 1
+1-01 1
+-0-0 0
+0--1 0
+--1- 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.Q button0_d3_q_0_.Q \
+serial_Send_over.Q serial_send_en_3_n
+000- 1
+---0 1
+--11 0
+-1-1 0
+1--1 0
+.names keyboard_led_int_Data1_3_.Q serial_Data2_3_.Q \
+dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_2_.Q \
+dynamicshow_mux_dataout_3_3__un1_n
+-110 1
+1-11 1
+-0-0 0
+0--1 0
+--0- 0
+.names keyboard_led_int_Data1_2_.Q keyboard_led_int_Data0_2_.Q \
+serial_Data1_2_.Q serial_Data2_2_.Q dynamicshow_counter4_q_1_.Q \
+dynamicshow_counter4_q_2_.Q dynamicshow_out_2__n
+--1-00 1
+---110 1
+-1--01 1
+1---11 1
+--0-00 0
+---010 0
+-0--01 0
+0---11 0
+.names keyboard_led_int_Data0_3_.Q serial_Data1_3_.Q \
+dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_2_.Q \
+dynamicshow_mux_dataout_3_3__un0_n
+-100 1
+1-01 1
+-0-0 0
+0--1 0
+--1- 0
+.names keyboard_led_int_Data1_1_.Q keyboard_led_int_Data0_1_.Q \
+serial_Data1_1_.Q serial_Data2_1_.Q dynamicshow_counter4_q_1_.Q \
+dynamicshow_counter4_q_2_.Q dynamicshow_out_1__n
+--1-00 1
+---110 1
+-1--01 1
+1---11 1
+--0-00 0
+---010 0
+-0--01 0
+0---11 0
+.names dynamicshow_out_2__n.BLIF dynamicshow_out_1__n.BLIF show_6_.X1
+00 1
+1- 0
+-1 0
+.names dynamicshow_mux_dataout_3_0__un1_n.BLIF \
+dynamicshow_mux_dataout_3_0__un0_n.BLIF \
+dynamicshow_mux_dataout_3_3__un1_n.BLIF dynamicshow_out_2__n.BLIF \
+dynamicshow_mux_dataout_3_3__un0_n.BLIF dynamicshow_out_1__n.BLIF show_6_.X2
+--1--- 1
+----1- 1
+00---0 1
+1-0-0- 0
+-10-0- 0
+--0-01 0
+.names dynamicshow_out_2__n.BLIF dynamicshow_out_1__n.BLIF show_3_.X1
+00 1
+1- 0
+-1 0
+.names dynamicshow_mux_dataout_3_0__un1_n.BLIF \
+dynamicshow_mux_dataout_3_0__un0_n.BLIF \
+dynamicshow_mux_dataout_3_3__un1_n.BLIF dynamicshow_out_2__n.BLIF \
+dynamicshow_mux_dataout_3_3__un0_n.BLIF dynamicshow_out_1__n.BLIF show_3_.X2
+--1--- 1
+----1- 1
+00---0 1
+1--1-1 1
+-1-1-1 1
+--0001 0
+1-0-00 0
+-10-00 0
+000-01 0
+.names button1_d1_q_0_.Q keyOut_0_.Q keyOut_1_.Q \
+keyboard_led_int_Data0_3_.D.X1
+000 1
+1-- 0
+-1- 0
+--1 0
+.names keyboard_flag_Data_1_.Q button3_d1_q_0_.Q button3_d2_q_0_.Q \
+button3_d3_q_0_.Q button2_d1_q_0_.Q button2_d2_q_0_.Q button2_d3_q_0_.Q \
+button1_d1_q_0_.Q button1_d2_q_0_.Q button1_d3_q_0_.Q keyboard_int_Data1_3_.Q \
+keyOut_0_.Q keyOut_1_.Q keyboard_led_int_Data0_3_.D.X2
+-------01--00 1
+-------0-1-00 1
+00000000---00 1
+-0000000--000 1
+-------1----- 0
+-----------1- 0
+------------1 0
+-1------00--- 0
+--1-----00--- 0
+---1----00--- 0
+----1---00--- 0
+-----1--00--- 0
+------1-00--- 0
+1-------001-- 0
+.names keyOut_2_.Q keyboard_int_Data1_1_.D.X1
+0 1
+1 0
+.names button3_d1_q_0_.Q button3_d2_q_0_.Q button3_d3_q_0_.Q button2_d1_q_0_.Q \
+button2_d2_q_0_.Q button2_d3_q_0_.Q keyOut_1_.Q keyOut_2_.Q \
+keyboard_int_Data1_1_.D.X2
+000---10 1
+000000-- 1
+1------- 0
+-1------ 0
+--1----- 0
+---1--0- 0
+----1-0- 0
+-----10- 0
+---1---1 0
+----1--1 0
+-----1-1 0
+.names keyOut_2_.Q keyboard_int_Data0_1_.D.X1
+0 1
+1 0
+.names button3_d1_q_0_.Q button3_d2_q_0_.Q button3_d3_q_0_.Q button2_d1_q_0_.Q \
+button2_d2_q_0_.Q button2_d3_q_0_.Q keyOut_1_.Q keyOut_2_.Q \
+keyboard_int_Data0_1_.D.X2
+000---10 1
+000000-- 1
+1------- 0
+-1------ 0
+--1----- 0
+---1--0- 0
+----1-0- 0
+-----10- 0
+---1---1 0
+----1--1 0
+-----1-1 0
+.names keyboard_time1Oms.Q keyboard_scanvalue_0_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q keyboard_scanvalue_1_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q keyboard_flag_Data_0_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q keyboard_flag_Data_1_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q keyboard_led_int_Data1_2_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q keyboard_led_int_Data1_3_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q keyboard_int_Data1_0_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q keyboard_int_Data1_1_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q keyboard_int_Data1_2_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q keyboard_int_Data1_3_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q keyboard_int_Data0_0_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q keyboard_int_Data0_1_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q keyboard_int_Data0_2_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q keyboard_int_Data0_3_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q keyOut_0_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q keyOut_1_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q keyOut_2_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q keyOut_3_.C
+1 1
+0 0
+.names clkh.BLIF keyboard_timecnt_12_.C
+1 1
+0 0
+.names clkh.BLIF keyboard_timecnt_13_.C
+1 1
+0 0
+.names clkh.BLIF keyboard_timecnt_14_.C
+1 1
+0 0
+.names clkh.BLIF keyboard_timecnt_15_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q led_0_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q led_1_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q led_2_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q led_3_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q led_4_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q keyboard_led_int_Data0_0_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q keyboard_led_int_Data0_1_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q keyboard_led_int_Data0_2_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q keyboard_led_int_Data0_3_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q keyboard_led_int_Data1_0_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q keyboard_led_int_Data1_1_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q keyboard_combvalue_5_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q keyboard_combvalue_6_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q keyboard_combvalue_7_.C
+1 1
+0 0
+.names clkh.BLIF keyboard_timecnt_0_.C
+1 1
+0 0
+.names clkh.BLIF keyboard_timecnt_1_.C
+1 1
+0 0
+.names clkh.BLIF keyboard_timecnt_2_.C
+1 1
+0 0
+.names clkh.BLIF keyboard_timecnt_3_.C
+1 1
+0 0
+.names clkh.BLIF keyboard_timecnt_4_.C
+1 1
+0 0
+.names clkh.BLIF keyboard_timecnt_5_.C
+1 1
+0 0
+.names clkh.BLIF keyboard_timecnt_6_.C
+1 1
+0 0
+.names clkh.BLIF keyboard_timecnt_7_.C
+1 1
+0 0
+.names clkh.BLIF keyboard_timecnt_8_.C
+1 1
+0 0
+.names clkh.BLIF keyboard_timecnt_9_.C
+1 1
+0 0
+.names clkh.BLIF keyboard_timecnt_10_.C
+1 1
+0 0
+.names clkh.BLIF keyboard_timecnt_11_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q keyboard_combvalue_0_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q keyboard_combvalue_1_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q keyboard_combvalue_2_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q keyboard_combvalue_3_.C
+1 1
+0 0
+.names keyboard_time1Oms.Q keyboard_combvalue_4_.C
+1 1
+0 0
+.names clkh.BLIF keyboard_time1Oms.C
+1 1
+0 0
+.names clkh.BLIF serial_ClockCount_Rx_1_.C
+1 1
+0 0
+.names clkh.BLIF serial_ClockCount_Rx_2_.C
+1 1
+0 0
+.names clkh.BLIF serial_ClockCount_Rx_3_.C
+1 1
+0 0
+.names clkh.BLIF serial_ClockCount_Rx_4_.C
+1 1
+0 0
+.names clkh.BLIF serial_ClockCount_Rx_5_.C
+1 1
+0 0
+.names clkh.BLIF serial_ClockCount_Rx_6_.C
+1 1
+0 0
+.names serial_Clock16.Q serial_Rx_Data_2_.C
+1 1
+0 0
+.names serial_Clock16.Q serial_Rx_Data_3_.C
+1 1
+0 0
+.names serial_Clock16.Q serial_Rx_Data_4_.C
+1 1
+0 0
+.names serial_Clock16.Q serial_Rx_Data_5_.C
+1 1
+0 0
+.names serial_Clock16.Q serial_Rx_Data_6_.C
+1 1
+0 0
+.names serial_Clock16.Q serial_Rx_Data_7_.C
+1 1
+0 0
+.names clkh.BLIF serial_ClockCount_Rx_0_.C
+1 1
+0 0
+.names clkh.BLIF serial_ClockCount_9_.C
+1 1
+0 0
+.names clkh.BLIF serial_ClockCount_10_.C
+1 1
+0 0
+.names serial_Clock16.Q serial_Rx_Data_0_.C
+1 1
+0 0
+.names serial_Clock16.Q serial_Rx_Data_1_.C
+1 1
+0 0
+.names serial_Clock16.Q serial_m_2_.C
+1 1
+0 0
+.names serial_Clock16.Q serial_m_3_.C
+1 1
+0 0
+.names serial_Clock16.Q serial_m_4_.C
+1 1
+0 0
+.names serial_Clock16.Q serial_m_5_.C
+1 1
+0 0
+.names serial_Clock16.Q serial_m_6_.C
+1 1
+0 0
+.names serial_Clock16.Q serial_m_7_.C
+1 1
+0 0
+.names clkh.BLIF serial_ClockCount_0_.C
+1 1
+0 0
+.names clkh.BLIF serial_ClockCount_1_.C
+1 1
+0 0
+.names clkh.BLIF serial_ClockCount_2_.C
+1 1
+0 0
+.names clkh.BLIF serial_ClockCount_3_.C
+1 1
+0 0
+.names clkh.BLIF serial_ClockCount_4_.C
+1 1
+0 0
+.names clkh.BLIF serial_ClockCount_5_.C
+1 1
+0 0
+.names clkh.BLIF serial_ClockCount_6_.C
+1 1
+0 0
+.names clkh.BLIF serial_ClockCount_7_.C
+1 1
+0 0
+.names clkh.BLIF serial_ClockCount_8_.C
+1 1
+0 0
+.names serial_send_en_3_n.BLIF serial_Send_data_1_.AR
+1 1
+0 0
+.names serial_send_en_3_n.BLIF serial_Send_data_2_.AR
+1 1
+0 0
+.names serial_send_en_3_n.BLIF serial_Send_data_3_.AR
+1 1
+0 0
+.names serial_send_en_3_n.BLIF serial_Send_data_4_.AR
+1 1
+0 0
+.names serial_send_en_3_n.BLIF serial_Send_data_5_.AR
+1 1
+0 0
+.names serial_send_en_3_n.BLIF serial_Send_data_6_.AR
+1 1
+0 0
+.names serial_send_en_3_n.BLIF serial_Send_data_7_.AR
+1 1
+0 0
+.names serial_send_en_3_n.BLIF serial_Send_data_8_.AR
+1 1
+0 0
+.names serial_Clock9600.Q serial_Send_count_0_.C
+1 1
+0 0
+.names serial_Send_en.Q serial_Send_count_0_.AR
+1 1
+0 0
+.names serial_Clock9600.Q serial_Send_count_1_.C
+1 1
+0 0
+.names serial_Send_en.Q serial_Send_count_1_.AR
+1 1
+0 0
+.names serial_Clock9600.Q serial_Send_count_2_.C
+1 1
+0 0
+.names serial_Send_en.Q serial_Send_count_2_.AR
+1 1
+0 0
+.names serial_Clock9600.Q serial_Send_count_3_.C
+1 1
+0 0
+.names serial_Send_en.Q serial_Send_count_3_.AR
+1 1
+0 0
+.names serial_Clock16.Q serial_m_0_.C
+1 1
+0 0
+.names serial_Clock16.Q serial_m_1_.C
+1 1
+0 0
+.names serial_Clock9600.Q Tx.C
+1 1
+0 0
+.names serial_Send_en.Q Tx.AP
+1 1
+0 0
+.names serial_Clock16.Q serial_Rx_Valid.C
+1 1
+0 0
+.names serial_Clock9600.Q serial_Send_over.C
+1 1
+0 0
+.names serial_Send_en.Q serial_Send_over.AP
+1 1
+0 0
+.names clkh.BLIF serial_Clock9600.C
+1 1
+0 0
+.names clkh.BLIF serial_Clock16.C
+1 1
+0 0
+.names serial_send_en_3_n.BLIF serial_Send_en.AP
+1 1
+0 0
+.names clkl.BLIF dynamicshow_counter4_q_1_.C
+1 1
+0 0
+.names clkl.BLIF dynamicshow_counter4_q_2_.C
+1 1
+0 0
+.names clkl.BLIF button4_d1_q_0_.C
+1 1
+0 0
+.names clkl.BLIF button4_d2_q_0_.C
+1 1
+0 0
+.names clkl.BLIF button4_d3_q_0_.C
+1 1
+0 0
+.names clkl.BLIF button5_d1_q_0_.C
+1 1
+0 0
+.names clkl.BLIF button5_d2_q_0_.C
+1 1
+0 0
+.names clkl.BLIF button5_d3_q_0_.C
+1 1
+0 0
+.names clkl.BLIF button0_d1_q_0_.C
+1 1
+0 0
+.names clkl.BLIF button0_d2_q_0_.C
+1 1
+0 0
+.names clkl.BLIF button0_d3_q_0_.C
+1 1
+0 0
+.names clkl.BLIF button1_d1_q_0_.C
+1 1
+0 0
+.names clkl.BLIF button1_d2_q_0_.C
+1 1
+0 0
+.names clkl.BLIF button1_d3_q_0_.C
+1 1
+0 0
+.names clkl.BLIF button2_d1_q_0_.C
+1 1
+0 0
+.names clkl.BLIF button2_d2_q_0_.C
+1 1
+0 0
+.names clkl.BLIF button2_d3_q_0_.C
+1 1
+0 0
+.names clkl.BLIF button3_d1_q_0_.C
+1 1
+0 0
+.names clkl.BLIF button3_d2_q_0_.C
+1 1
+0 0
+.names clkl.BLIF button3_d3_q_0_.C
+1 1
+0 0
+.names keyboard_timecnt_2_.Q keyboard_timecnt_0_.Q keyboard_timecnt_1_.Q \
+keyboard_timecnt_2_.D
+011 1
+10- 1
+1-0 1
+111 0
+00- 0
+0-0 0
+.names keyboard_timecnt_2_.Q keyboard_timecnt_3_.Q keyboard_timecnt_0_.Q \
+keyboard_timecnt_1_.Q keyboard_timecnt_3_.D
+1011 1
+-10- 1
+01-- 1
+-1-0 1
+1111 0
+-00- 0
+00-- 0
+-0-0 0
+.names keyboard_timecnt_2_.Q keyboard_timecnt_3_.Q keyboard_timecnt_5_.Q \
+keyboard_timecnt_8_.Q keyboard_timecnt_10_.Q keyboard_timecnt_12_.Q \
+keyboard_timecnt_13_.Q keyboard_timecnt_14_.Q keyboard_timecnt_4_.Q \
+keyboard_timecnt_6_.Q keyboard_timecnt_7_.Q keyboard_timecnt_9_.Q \
+keyboard_timecnt_15_.Q keyboard_timecnt_11_.Q keyboard_timecnt_0_.Q \
+keyboard_timecnt_1_.Q keyboard_timecnt_5_.T
+11111111-0000011 1
+11------1-----11 1
+--------0----1-- 0
+--------0---1--- 0
+--------0--1---- 0
+--------0-1----- 0
+--------01------ 0
+-------00------- 0
+------0-0------- 0
+-----0--0------- 0
+----0---0------- 0
+---0----0------- 0
+--0-----0------- 0
+--------------0- 0
+-0-------------- 0
+0--------------- 0
+---------------0 0
+.names keyboard_timecnt_2_.Q keyboard_timecnt_3_.Q keyboard_timecnt_5_.Q \
+keyboard_timecnt_8_.Q keyboard_timecnt_10_.Q keyboard_timecnt_12_.Q \
+keyboard_timecnt_13_.Q keyboard_timecnt_14_.Q keyboard_timecnt_4_.Q \
+keyboard_timecnt_6_.Q keyboard_timecnt_7_.Q keyboard_timecnt_9_.Q \
+keyboard_timecnt_15_.Q keyboard_timecnt_11_.Q keyboard_timecnt_0_.Q \
+keyboard_timecnt_1_.Q keyboard_timecnt_8_.T
+1111111100000011 1
+111-----111---11 1
+---0-----0------ 0
+----0----0------ 0
+-----0---0------ 0
+------0--0------ 0
+-------0-0------ 0
+--------01------ 0
+--------0--1---- 0
+--------0---1--- 0
+--------1-0----- 0
+---------01----- 0
+--------0----1-- 0
+--------------0- 0
+--0------------- 0
+-0-------------- 0
+0--------------- 0
+---------------0 0
+.names keyboard_timecnt_2_.Q keyboard_timecnt_3_.Q keyboard_timecnt_5_.Q \
+keyboard_timecnt_8_.Q keyboard_timecnt_10_.Q keyboard_timecnt_12_.Q \
+keyboard_timecnt_13_.Q keyboard_timecnt_14_.Q keyboard_timecnt_4_.Q \
+keyboard_timecnt_6_.Q keyboard_timecnt_7_.Q keyboard_timecnt_9_.Q \
+keyboard_timecnt_15_.Q keyboard_timecnt_11_.Q keyboard_timecnt_0_.Q \
+keyboard_timecnt_1_.Q keyboard_timecnt_10_.T
+1111111100000011 1
+1111----1111--11 1
+----0----0------ 0
+-----0---0------ 0
+------0--0------ 0
+-------0-0------ 0
+---------01----- 0
+---------0--1--- 0
+--------1--0---- 0
+----------01---- 0
+--------01------ 0
+---------0---1-- 0
+--------------0- 0
+---0------------ 0
+--0------------- 0
+-0-------------- 0
+0--------------- 0
+---------------0 0
+.names keyboard_timecnt_2_.Q keyboard_timecnt_3_.Q keyboard_timecnt_5_.Q \
+keyboard_timecnt_8_.Q keyboard_timecnt_10_.Q keyboard_timecnt_12_.Q \
+keyboard_timecnt_13_.Q keyboard_timecnt_14_.Q keyboard_timecnt_4_.Q \
+keyboard_timecnt_6_.Q keyboard_timecnt_7_.Q keyboard_timecnt_9_.Q \
+keyboard_timecnt_15_.Q keyboard_timecnt_11_.Q keyboard_timecnt_0_.Q \
+keyboard_timecnt_1_.Q keyboard_timecnt_12_.T
+1111111100000011 1
+11111---1111-111 1
+-----0-----0---- 0
+------0----0---- 0
+-------0---0---- 0
+--------0-1----- 0
+--------1----0-- 0
+-----------0-1-- 0
+---------0-1---- 0
+---------10----- 0
+--------0---1--- 0
+--------------0- 0
+----0----------- 0
+---0------------ 0
+--0------------- 0
+-0-------------- 0
+0--------------- 0
+---------------0 0
+.names keyboard_timecnt_2_.Q keyboard_timecnt_3_.Q keyboard_timecnt_5_.Q \
+keyboard_timecnt_8_.Q keyboard_timecnt_10_.Q keyboard_timecnt_12_.Q \
+keyboard_timecnt_13_.Q keyboard_timecnt_14_.Q keyboard_timecnt_4_.Q \
+keyboard_timecnt_6_.Q keyboard_timecnt_7_.Q keyboard_timecnt_9_.Q \
+keyboard_timecnt_15_.Q keyboard_timecnt_11_.Q keyboard_timecnt_0_.Q \
+keyboard_timecnt_1_.Q keyboard_timecnt_13_.T
+1111111100000011 1
+111111--1111-111 1
+------0----0---- 0
+-------0---0---- 0
+--------0-1----- 0
+--------1----0-- 0
+-----------0-1-- 0
+---------0-1---- 0
+---------10----- 0
+--------0---1--- 0
+--------------0- 0
+-----0---------- 0
+----0----------- 0
+---0------------ 0
+--0------------- 0
+-0-------------- 0
+0--------------- 0
+---------------0 0
+.names keyboard_timecnt_2_.Q keyboard_timecnt_3_.Q keyboard_timecnt_5_.Q \
+keyboard_timecnt_8_.Q keyboard_timecnt_10_.Q keyboard_timecnt_12_.Q \
+keyboard_timecnt_13_.Q keyboard_timecnt_14_.Q keyboard_timecnt_4_.Q \
+keyboard_timecnt_6_.Q keyboard_timecnt_7_.Q keyboard_timecnt_9_.Q \
+keyboard_timecnt_15_.Q keyboard_timecnt_11_.Q keyboard_timecnt_0_.Q \
+keyboard_timecnt_1_.Q keyboard_timecnt_14_.T
+1111111100000011 1
+1111111-1111-111 1
+-------0---0---- 0
+--------0-1----- 0
+--------1----0-- 0
+-----------0-1-- 0
+---------0-1---- 0
+---------10----- 0
+--------0---1--- 0
+--------------0- 0
+------0--------- 0
+-----0---------- 0
+----0----------- 0
+---0------------ 0
+--0------------- 0
+-0-------------- 0
+0--------------- 0
+---------------0 0
+.names keyboard_int_Data0_0_.Q keyboard_led_int_Data1_0_.D
+1 1
+0 0
+.names keyboard_int_Data0_1_.Q keyboard_led_int_Data1_1_.D
+1 1
+0 0
+.names keyboard_int_Data0_2_.Q keyboard_led_int_Data1_2_.D
+1 1
+0 0
+.names keyboard_int_Data0_3_.Q keyboard_led_int_Data1_3_.D
+1 1
+0 0
+.names keyboard_flag_Data_1_.Q button3_d1_q_0_.Q button3_d2_q_0_.Q \
+button3_d3_q_0_.Q button2_d1_q_0_.Q button2_d2_q_0_.Q button2_d3_q_0_.Q \
+button1_d1_q_0_.Q button1_d2_q_0_.Q button1_d3_q_0_.Q keyboard_int_Data1_0_.Q \
+keyOut_0_.Q keyOut_1_.Q keyOut_2_.Q keyOut_3_.Q keyboard_led_int_Data0_0_.D
+10000000001---- 1
+------1----0-0- 1
+-----1-----0-0- 1
+----1------0-0- 1
+---1--------0-- 1
+--1---------0-- 1
+-1----------0-- 1
+---------1--0-0 1
+--------1---0-0 1
+-------1----0-0 1
+-0001------1--1 0
+-0001--------11 0
+-000-1-----1--1 0
+-000--1----1--1 0
+-000-1-------11 0
+-000--1------11 0
+----1------11-- 0
+----1-------11- 0
+-----1-----11-- 0
+------1----11-- 0
+-----1------11- 0
+------1-----11- 0
+-0000000000---- 0
+0000000000----- 0
+-000--1000---1- 0
+-000-1-000---1- 0
+-0001--000---1- 0
+-000--1000-1--- 0
+-000-1-000-1--- 0
+-0001--000-1--- 0
+-000000--1----1 0
+-000000-1-----1 0
+-0000001------1 0
+---1000-----1-- 0
+--1-000-----1-- 0
+-1--000-----1-- 0
+----000--1--1-- 0
+----000-1---1-- 0
+----0001----1-- 0
+.names keyboard_flag_Data_0_.Q button4_d1_q_0_.Q button4_d2_q_0_.Q \
+button4_d3_q_0_.Q button3_d1_q_0_.Q button3_d2_q_0_.Q button3_d3_q_0_.Q \
+button2_d1_q_0_.Q button2_d2_q_0_.Q button2_d3_q_0_.Q button1_d1_q_0_.Q \
+button1_d2_q_0_.Q button1_d3_q_0_.Q keyOut_0_.Q keyOut_1_.Q keyOut_2_.Q \
+keyOut_3_.Q keyboard_flag_Data_0_.T
+1--1000000000000- 1
+1-1-000000000000- 1
+11--000000000000- 1
+0000000000--1000- 1
+0000000000-1-000- 1
+00000000001--000- 1
+0000--1000000-000 1
+0000-1-000000-000 1
+00001--000000-000 1
+0000000--1000-000 1
+0000000-1-000-000 1
+00000001--000-000 1
+0000--10000000-00 1
+0000-1-0000000-00 1
+00001--0000000-00 1
+0000000--10000-00 1
+0000000-1-0000-00 1
+00000001--0000-00 1
+0000--100000000-0 1
+0000-1-00000000-0 1
+00001--00000000-0 1
+0000000--100000-0 1
+0000000-1-00000-0 1
+00000001--00000-0 1
+0000000000--1-000 1
+0000000000-1--000 1
+00000000001---000 1
+0000000000--10-00 1
+0000000000-1-0-00 1
+00000000001--0-00 1
+0000000000--100-0 1
+0000000000-1-00-0 1
+00000000001--00-0 1
+-000000000000---- 0
+0---------000---1 0
+1---------1------ 0
+1---1------------ 0
+1------1--------- 0
+1----------1----- 0
+1----1----------- 0
+1-------1-------- 0
+1-----------1---- 0
+1-----1---------- 0
+1--------1------- 0
+01--------------- 0
+1------------1--- 0
+1-------------1-- 0
+1--------------1- 0
+0-1-------------- 0
+0--1------------- 0
+--------------11- 0
+-------------1-1- 0
+-------------11-- 0
+---------1--1---- 0
+--------1---1---- 0
+-------1----1---- 0
+------1-----1---- 0
+-----1------1---- 0
+----1-------1---- 0
+---------1-1----- 0
+--------1--1----- 0
+-------1---1----- 0
+------1----1----- 0
+-----1-----1----- 0
+----1------1----- 0
+---------11------ 0
+--------1-1------ 0
+-------1--1------ 0
+------1---1------ 0
+-----1----1------ 0
+----1-----1------ 0
+------1--1------- 0
+-----1---1------- 0
+----1----1------- 0
+------1-1-------- 0
+-----1--1-------- 0
+----1---1-------- 0
+------11--------- 0
+-----1-1--------- 0
+----1--1--------- 0
+---------------11 0
+--------------1-1 0
+-------------1--1 0
+.names keyboard_flag_Data_1_.Q button4_d1_q_0_.Q button4_d2_q_0_.Q \
+button4_d3_q_0_.Q button2_d1_q_0_.Q button2_d2_q_0_.Q button2_d3_q_0_.Q \
+button1_d1_q_0_.Q button1_d2_q_0_.Q button1_d3_q_0_.Q keyboard_int_Data1_1_.Q \
+keyOut_0_.Q keyOut_1_.Q keyOut_2_.Q keyOut_3_.Q keyboard_led_int_Data0_1_.D
+-000000000---0- 1
+1---0000001--0- 1
+-000---000--00- 1
+1------0001-00- 1
+-000-----1-00-0 1
+-000----1--00-0 1
+-000---1---00-0 1
+1--------1100-0 1
+1-------1-100-0 1
+1------1--100-0 1
+-------000---1- 0
+---------1-1--- 0
+--------1--1--- 0
+-------1---1--- 0
+---1------0---- 0
+--1-------0---- 0
+-1--------0---- 0
+0--1----------- 0
+0-1------------ 0
+01------------- 0
+------1-----1-- 0
+-----1------1-- 0
+----1-------1-- 0
+---------1--1-- 0
+--------1---1-- 0
+-------1----1-- 0
+---------1----1 0
+--------1-----1 0
+-------1------1 0
+.names keyboard_flag_Data_1_.Q button4_d1_q_0_.Q button4_d2_q_0_.Q \
+button4_d3_q_0_.Q button1_d1_q_0_.Q button1_d2_q_0_.Q button1_d3_q_0_.Q \
+keyboard_int_Data1_2_.Q keyOut_0_.Q keyOut_2_.Q keyOut_3_.Q \
+keyboard_led_int_Data0_2_.D
+-000000-00- 1
+1---000100- 1
+-000--1-0-0 1
+-000-1--0-0 1
+-0001---0-0 1
+1-----110-0 1
+1----1-10-0 1
+1---1--10-0 1
+----000--1- 0
+---1---0--- 0
+--1----0--- 0
+-1-----0--- 0
+0--1------- 0
+0-1-------- 0
+01--------- 0
+--------1-- 0
+------1---1 0
+-----1----1 0
+----1-----1 0
+.names keyboard_scanvalue_0_.Q keyboard_scanvalue_0_.D
+0 1
+1 0
+.names serial_Rx_Data_0_.Q serial_Data1_0_.D
+1 1
+0 0
+.names keyboard_scanvalue_0_.Q keyboard_scanvalue_1_.Q keyboard_scanvalue_1_.D
+10 1
+01 1
+00 0
+11 0
+.names serial_Rx_Data_1_.Q serial_Data1_1_.D
+1 1
+0 0
+.names serial_Rx_Data_2_.Q serial_Data1_2_.D
+1 1
+0 0
+.names serial_Rx_Data_3_.Q serial_Data1_3_.D
+1 1
+0 0
+.names serial_Send_count_0_.Q serial_Send_count_1_.Q serial_Send_count_2_.Q \
+serial_Send_count_3_.Q serial_Send_data_1_.Q serial_Send_data_2_.Q \
+serial_Send_data_3_.Q serial_Send_data_4_.Q serial_Send_data_5_.Q \
+serial_Send_data_6_.Q serial_Send_data_7_.Q serial_Send_data_8_.Q Tx.D
+0110-----1-- 1
+0010---1---- 1
+0100-1------ 1
+1110------1- 1
+1010----1--- 1
+1100--1----- 1
+100-1------- 1
+1001-------- 1
+-001-------1 1
+0--1-------0 0
+001----0---- 0
+010--0------ 0
+-0000------- 0
+101-----0--- 0
+110---0----- 0
+111-------0- 0
+0000-------- 0
+011------0-- 0
+--11-------- 0
+-1-1-------- 0
+.names serial_Rx_Data_4_.Q serial_Data2_0_.D
+1 1
+0 0
+.names serial_Rx_Data_5_.Q serial_Data2_1_.D
+1 1
+0 0
+.names serial_Rx_Data_6_.Q serial_Data2_2_.D
+1 1
+0 0
+.names serial_Rx_Data_7_.Q serial_Data2_3_.D
+1 1
+0 0
+.names send.BLIF button5_d1_q_0_.D
+1 1
+0 0
+.names button5_d1_q_0_.Q button5_d2_q_0_.D
+1 1
+0 0
+.names button5_d2_q_0_.Q button5_d3_q_0_.D
+1 1
+0 0
+.names keyboard_flag_Data_0_.Q button4_d1_q_0_.Q button4_d2_q_0_.Q \
+button4_d3_q_0_.Q button3_d1_q_0_.Q button3_d2_q_0_.Q button3_d3_q_0_.Q \
+button2_d1_q_0_.Q button2_d2_q_0_.Q button2_d3_q_0_.Q button1_d1_q_0_.Q \
+button1_d2_q_0_.Q button1_d3_q_0_.Q keyOut_0_.Q keyOut_1_.Q keyOut_2_.Q \
+keyboard_flag_Data_1_.T
+1--1000000000000 1
+1-1-000000000000 1
+11--000000000000 1
+-000------------ 0
+--------------1- 0
+-------------1-- 0
+------------1--- 0
+-----------1---- 0
+----------1----- 0
+---------1------ 0
+--------1------- 0
+-------1-------- 0
+------1--------- 0
+-----1---------- 0
+----1----------- 0
+0--------------- 0
+---------------1 0
+.names keyIn_3_.BLIF button4_d1_q_0_.D
+1 1
+0 0
+.names button4_d1_q_0_.Q button4_d2_q_0_.D
+1 1
+0 0
+.names button4_d2_q_0_.Q button4_d3_q_0_.D
+1 1
+0 0
+.names keyIn_2_.BLIF button3_d1_q_0_.D
+1 1
+0 0
+.names button3_d1_q_0_.Q button3_d2_q_0_.D
+1 1
+0 0
+.names button3_d2_q_0_.Q button3_d3_q_0_.D
+1 1
+0 0
+.names keyIn_1_.BLIF button2_d1_q_0_.D
+1 1
+0 0
+.names button2_d1_q_0_.Q button2_d2_q_0_.D
+1 1
+0 0
+.names button2_d2_q_0_.Q button2_d3_q_0_.D
+1 1
+0 0
+.names keyIn_0_.BLIF button1_d1_q_0_.D
+1 1
+0 0
+.names button1_d1_q_0_.Q button1_d2_q_0_.D
+1 1
+0 0
+.names button1_d2_q_0_.Q button1_d3_q_0_.D
+1 1
+0 0
+.names reset.BLIF button0_d1_q_0_.D
+1 1
+0 0
+.names button0_d1_q_0_.Q button0_d2_q_0_.D
+1 1
+0 0
+.names button0_d2_q_0_.Q button0_d3_q_0_.D
+1 1
+0 0
+.names dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_1_.D
+0 1
+1 0
+.names dynamicshow_counter4_q_1_.Q dynamicshow_counter4_q_2_.Q \
+dynamicshow_counter4_q_2_.D
+10 1
+01 1
+00 0
+11 0
+.names Rx.BLIF serial_m_0_.Q serial_m_1_.Q serial_m_2_.Q serial_m_3_.Q \
+serial_m_4_.Q serial_m_5_.Q serial_m_6_.Q serial_m_7_.Q serial_m_0_.D
+00----0-- 1
+-0--1---0 1
+-0----0-1 1
+-0--0-1-- 1
+-0-----1- 1
+-0---1--- 1
+-0-1----- 1
+-01------ 1
+1-0000000 0
+--0010101 0
+-1------- 0
+.names serial_m_0_.Q serial_m_1_.Q serial_m_1_.D
+10 1
+01 1
+00 0
+11 0
+.names serial_m_0_.Q serial_m_1_.Q serial_m_2_.Q serial_m_2_.D
+110 1
+-01 1
+0-1 1
+111 0
+-00 0
+0-0 0
+.names serial_m_0_.Q serial_m_1_.Q serial_m_2_.Q serial_m_3_.Q serial_m_4_.Q \
+serial_m_5_.Q serial_m_6_.Q serial_m_7_.Q serial_m_3_.D
+-0-11--- 1
+01-1---- 1
+-0-1-0-- 1
+-0-1--1- 1
+-0-1---0 1
+1110---- 1
+-101---- 1
+-011---- 1
+-00-0101 0
+1111---- 0
+0--0---- 0
+--00---- 0
+-0-0---- 0
+.names serial_m_0_.Q serial_m_1_.Q serial_m_2_.Q serial_m_3_.Q serial_m_4_.Q \
+serial_m_4_.D
+11110 1
+---01 1
+--0-1 1
+-0--1 1
+0---1 1
+11111 0
+---00 0
+--0-0 0
+-0--0 0
+0---0 0
+.names serial_m_0_.Q serial_m_1_.Q serial_m_2_.Q serial_m_3_.Q serial_m_4_.Q \
+serial_m_5_.Q serial_m_6_.Q serial_m_7_.Q serial_m_5_.T
+-0010101 1
+11111--- 1
+-0---0-- 0
+01------ 0
+-0----1- 0
+-0-----0 0
+--1-0--- 0
+-0--1--- 0
+-10----- 0
+---0---- 0
+.names serial_m_0_.Q serial_m_1_.Q serial_m_2_.Q serial_m_3_.Q serial_m_4_.Q \
+serial_m_5_.Q serial_m_6_.T
+111111 1
+----0- 0
+---0-- 0
+--0--- 0
+-0---- 0
+0----- 0
+-----0 0
+.names serial_m_0_.Q serial_m_1_.Q serial_m_2_.Q serial_m_3_.Q serial_m_4_.Q \
+serial_m_5_.Q serial_m_6_.Q serial_m_7_.Q serial_m_7_.T
+-0010101 1
+1111111- 1
+0-----1- 0
+-01----- 0
+-0-----0 0
+-1----0- 0
+----0-1- 0
+--0-1--- 0
+-----0-- 0
+---0---- 0
+.names serial_ClockCount_0_.Q serial_ClockCount_10_.Q serial_ClockCount_1_.Q \
+serial_ClockCount_7_.Q serial_ClockCount_8_.Q serial_ClockCount_2_.Q \
+serial_ClockCount_3_.Q serial_ClockCount_4_.Q serial_ClockCount_5_.Q \
+serial_ClockCount_6_.Q serial_ClockCount_9_.Q serial_ClockCount_0_.D
+0--------0- 1
+0-------0-- 1
+0------0--- 1
+0-----1---- 1
+0----1----- 1
+0---1------ 1
+0--1------- 1
+0-1-------- 1
+01--------- 1
+0---------0 1
+-0000001111 0
+1---------- 0
+.names serial_ClockCount_Rx_0_.Q serial_ClockCount_Rx_3_.Q \
+serial_ClockCount_Rx_6_.Q serial_ClockCount_Rx_4_.Q serial_ClockCount_Rx_1_.Q \
+serial_ClockCount_Rx_2_.Q serial_ClockCount_Rx_5_.Q serial_ClockCount_Rx_0_.D
+0----0- 1
+0---0-- 1
+0--1--- 1
+0-1---- 1
+01----- 1
+0-----0 1
+-000111 0
+1------ 0
+.names serial_ClockCount_0_.Q serial_ClockCount_1_.Q serial_ClockCount_7_.Q \
+serial_ClockCount_8_.Q serial_ClockCount_2_.Q serial_ClockCount_3_.Q \
+serial_ClockCount_4_.Q serial_ClockCount_5_.Q serial_ClockCount_6_.Q \
+serial_ClockCount_9_.Q serial_ClockCount_10_.T
+1111111111 1
+--------0- 0
+-------0-- 0
+------0--- 0
+-----0---- 0
+----0----- 0
+---0------ 0
+--0------- 0
+-0-------- 0
+0--------- 0
+---------0 0
+.names serial_ClockCount_0_.Q serial_ClockCount_1_.Q serial_ClockCount_1_.D
+10 1
+01 1
+00 0
+11 0
+.names serial_ClockCount_0_.Q serial_ClockCount_1_.Q serial_ClockCount_2_.Q \
+serial_ClockCount_3_.Q serial_ClockCount_4_.Q serial_ClockCount_5_.Q \
+serial_ClockCount_6_.Q serial_ClockCount_7_.T
+1111111 1
+-----0- 0
+----0-- 0
+---0--- 0
+--0---- 0
+-0----- 0
+0------ 0
+------0 0
+.names serial_ClockCount_0_.Q serial_ClockCount_1_.Q serial_ClockCount_7_.Q \
+serial_ClockCount_2_.Q serial_ClockCount_3_.Q serial_ClockCount_4_.Q \
+serial_ClockCount_5_.Q serial_ClockCount_6_.Q serial_ClockCount_8_.T
+11111111 1
+------0- 0
+-----0-- 0
+----0--- 0
+---0---- 0
+--0----- 0
+-0------ 0
+0------- 0
+-------0 0
+.names serial_ClockCount_0_.Q serial_ClockCount_1_.Q serial_ClockCount_2_.Q \
+serial_ClockCount_2_.D
+110 1
+-01 1
+0-1 1
+111 0
+-00 0
+0-0 0
+.names serial_ClockCount_0_.Q serial_ClockCount_1_.Q serial_ClockCount_2_.Q \
+serial_ClockCount_3_.Q serial_ClockCount_3_.D
+1110 1
+--01 1
+-0-1 1
+0--1 1
+1111 0
+--00 0
+-0-0 0
+0--0 0
+.names serial_ClockCount_Rx_0_.Q serial_ClockCount_Rx_3_.Q \
+serial_ClockCount_Rx_1_.Q serial_ClockCount_Rx_2_.Q serial_ClockCount_Rx_3_.D
+1011 1
+-10- 1
+01-- 1
+-1-0 1
+1111 0
+-00- 0
+00-- 0
+-0-0 0
+.names serial_ClockCount_Rx_0_.Q serial_ClockCount_Rx_3_.Q \
+serial_ClockCount_Rx_4_.Q serial_ClockCount_Rx_1_.Q serial_ClockCount_Rx_2_.Q \
+serial_ClockCount_Rx_5_.Q serial_ClockCount_Rx_6_.T
+111111 1
+----0- 0
+---0-- 0
+--0--- 0
+-0---- 0
+0----- 0
+-----0 0
+.names serial_ClockCount_Rx_0_.Q serial_ClockCount_Rx_3_.Q \
+serial_ClockCount_Rx_4_.Q serial_ClockCount_Rx_1_.Q serial_ClockCount_Rx_2_.Q \
+serial_ClockCount_Rx_4_.D
+11011 1
+--10- 1
+-01-- 1
+0-1-- 1
+--1-0 1
+11111 0
+--00- 0
+-00-- 0
+0-0-- 0
+--0-0 0
+.names serial_Send_over.Q serial_Send_count_0_.Q serial_Send_count_1_.Q \
+serial_Send_count_2_.Q serial_Send_count_3_.Q serial_Send_over.D
+1--1- 1
+1-1-- 1
+10--- 1
+1---0 1
+-1001 0
+0---- 0
+.names serial_m_4_.Q serial_Rx_Valid.D
+1 1
+0 0
+.names Rx.BLIF serial_m_4_.Q serial_m_5_.Q serial_m_6_.Q serial_Rx_Data_0_.Q \
+serial_Rx_Data_0_.D
+1100- 1
+---11 1
+--1-1 1
+-0--1 1
+0100- 0
+---10 0
+--1-0 0
+-0--0 0
+.names Rx.BLIF serial_m_4_.Q serial_m_5_.Q serial_m_6_.Q serial_Rx_Data_1_.Q \
+serial_Rx_Data_1_.D
+1010- 1
+---11 1
+--0-1 1
+-1--1 1
+0010- 0
+---10 0
+--0-0 0
+-1--0 0
+.names Rx.BLIF serial_m_4_.Q serial_m_5_.Q serial_m_6_.Q serial_Rx_Data_2_.Q \
+serial_Rx_Data_2_.D
+1110- 1
+---11 1
+--0-1 1
+-0--1 1
+0110- 0
+---10 0
+--0-0 0
+-0--0 0
+.names Rx.BLIF serial_m_4_.Q serial_m_5_.Q serial_m_6_.Q serial_Rx_Data_3_.Q \
+serial_Rx_Data_3_.D
+1001- 1
+---01 1
+--1-1 1
+-1--1 1
+0001- 0
+---00 0
+--1-0 0
+-1--0 0
+.names Rx.BLIF serial_m_4_.Q serial_m_5_.Q serial_m_6_.Q serial_Rx_Data_4_.Q \
+serial_Rx_Data_4_.D
+1101- 1
+---01 1
+--1-1 1
+-0--1 1
+0101- 0
+---00 0
+--1-0 0
+-0--0 0
+.names Rx.BLIF serial_m_4_.Q serial_m_5_.Q serial_m_6_.Q serial_Rx_Data_5_.Q \
+serial_Rx_Data_5_.D
+1011- 1
+---01 1
+--0-1 1
+-1--1 1
+0011- 0
+---00 0
+--0-0 0
+-1--0 0
+.names Rx.BLIF serial_m_4_.Q serial_m_5_.Q serial_m_6_.Q serial_Rx_Data_6_.Q \
+serial_Rx_Data_6_.D
+1111- 1
+---01 1
+--0-1 1
+-0--1 1
+0111- 0
+---00 0
+--0-0 0
+-0--0 0
+.names Rx.BLIF serial_m_7_.Q serial_Rx_Data_7_.Q serial_Rx_Data_7_.D
+11- 1
+-01 1
+01- 0
+-00 0
+.names serial_Send_count_0_.Q serial_Send_count_1_.Q serial_Send_count_2_.Q \
+serial_Send_count_3_.Q serial_Send_count_0_.D
+-001 1
+0--- 1
+1-1- 0
+11-- 0
+1--0 0
+.names serial_Send_count_0_.Q serial_Send_count_1_.Q serial_Send_count_2_.Q \
+serial_Send_count_3_.Q serial_Send_count_1_.D
+101- 1
+10-0 1
+01-- 1
+-001 0
+11-- 0
+00-- 0
+.names serial_Send_count_0_.Q serial_Send_count_1_.Q serial_Send_count_2_.Q \
+serial_Send_count_2_.D
+110 1
+-01 1
+0-1 1
+111 0
+-00 0
+0-0 0
+.names serial_Send_count_0_.Q serial_Send_count_1_.Q serial_Send_count_2_.Q \
+serial_Send_count_3_.Q serial_Send_count_3_.D
+1110 1
+--01 1
+-0-1 1
+0--1 1
+1111 0
+--00 0
+-0-0 0
+0--0 0
+.names serial_ClockCount_Rx_0_.Q serial_ClockCount_Rx_3_.Q \
+serial_ClockCount_Rx_6_.Q serial_ClockCount_Rx_4_.Q serial_ClockCount_Rx_1_.Q \
+serial_ClockCount_Rx_2_.Q serial_ClockCount_Rx_5_.Q serial_ClockCount_Rx_1_.D
+1---0-- 1
+0---10- 1
+0--11-- 1
+0-1-1-- 1
+01--1-- 1
+0---1-0 1
+-000111 0
+0---0-- 0
+1---1-- 0
+.names serial_ClockCount_Rx_0_.Q serial_ClockCount_Rx_3_.Q \
+serial_ClockCount_Rx_6_.Q serial_ClockCount_Rx_4_.Q serial_ClockCount_Rx_1_.Q \
+serial_ClockCount_Rx_2_.Q serial_ClockCount_Rx_5_.Q serial_ClockCount_Rx_2_.D
+1---10- 1
+0--1-1- 1
+0-1--1- 1
+01---1- 1
+----01- 1
+0----10 1
+-000111 0
+1---11- 0
+----00- 0
+0----0- 0
+.names serial_ClockCount_Rx_0_.Q serial_ClockCount_Rx_3_.Q \
+serial_ClockCount_Rx_6_.Q serial_ClockCount_Rx_4_.Q serial_ClockCount_Rx_1_.Q \
+serial_ClockCount_Rx_2_.Q serial_ClockCount_Rx_5_.Q serial_ClockCount_Rx_5_.T
+0000111 1
+11-111- 1
+01----- 0
+0-1---- 0
+1--0--- 0
+-0-1--- 0
+0-----0 0
+-----0- 0
+----0-- 0
+.names serial_Send_en.D
+.names keyboard_led_int_Data0_0_.Q serial_Send_data_1_.D
+1 1
+0 0
+.names keyboard_led_int_Data0_1_.Q serial_Send_data_2_.D
+1 1
+0 0
+.names keyboard_led_int_Data0_2_.Q serial_Send_data_3_.D
+1 1
+0 0
+.names keyboard_led_int_Data0_3_.Q serial_Send_data_4_.D
+1 1
+0 0
+.names keyboard_led_int_Data1_0_.Q serial_Send_data_5_.D
+1 1
+0 0
+.names keyboard_led_int_Data1_1_.Q serial_Send_data_6_.D
+1 1
+0 0
+.names keyboard_led_int_Data1_2_.Q serial_Send_data_7_.D
+1 1
+0 0
+.names keyboard_led_int_Data1_3_.Q serial_Send_data_8_.D
+1 1
+0 0
+.names serial_ClockCount_Rx_0_.Q serial_ClockCount_Rx_3_.Q \
+serial_ClockCount_Rx_6_.Q serial_ClockCount_Rx_4_.Q serial_ClockCount_Rx_1_.Q \
+serial_ClockCount_Rx_2_.Q serial_ClockCount_Rx_5_.Q serial_Clock16.D
+0000111 1
+-----0- 0
+----0-- 0
+---1--- 0
+--1---- 0
+-1----- 0
+1------ 0
+------0 0
+.names serial_ClockCount_0_.Q serial_ClockCount_10_.Q serial_ClockCount_1_.Q \
+serial_ClockCount_7_.Q serial_ClockCount_8_.Q serial_ClockCount_2_.Q \
+serial_ClockCount_3_.Q serial_ClockCount_4_.Q serial_ClockCount_5_.Q \
+serial_ClockCount_6_.Q serial_ClockCount_9_.Q serial_ClockCount_4_.T
+00000001111 1
+1-1--11---- 1
+1-----0---- 0
+-1----0---- 0
+---1--0---- 0
+----1-0---- 0
+------00--- 0
+------0-0-- 0
+-----01---- 0
+--0--1----- 0
+0-1-------- 0
+------0--0- 0
+------0---0 0
+.names serial_ClockCount_0_.Q serial_ClockCount_10_.Q serial_ClockCount_1_.Q \
+serial_ClockCount_7_.Q serial_ClockCount_8_.Q serial_ClockCount_2_.Q \
+serial_ClockCount_3_.Q serial_ClockCount_4_.Q serial_ClockCount_5_.Q \
+serial_ClockCount_6_.Q serial_ClockCount_9_.Q serial_ClockCount_5_.T
+00000001111 1
+1-1--111--- 1
+1-----0---- 0
+-1----0---- 0
+---1--0---- 0
+----1-0---- 0
+------0-0-- 0
+-----01---- 0
+--0--1----- 0
+0-1-------- 0
+------0--0- 0
+------0---0 0
+-------0--- 0
+.names serial_ClockCount_0_.Q serial_ClockCount_10_.Q serial_ClockCount_1_.Q \
+serial_ClockCount_7_.Q serial_ClockCount_8_.Q serial_ClockCount_2_.Q \
+serial_ClockCount_3_.Q serial_ClockCount_4_.Q serial_ClockCount_5_.Q \
+serial_ClockCount_6_.Q serial_ClockCount_9_.Q serial_ClockCount_6_.T
+00000001111 1
+1-1--1111-- 1
+1-----0---- 0
+-1----0---- 0
+---1--0---- 0
+----1-0---- 0
+-----01---- 0
+--0--1----- 0
+0-1-------- 0
+------0--0- 0
+------0---0 0
+--------0-- 0
+-------0--- 0
+.names serial_ClockCount_0_.Q serial_ClockCount_10_.Q serial_ClockCount_1_.Q \
+serial_ClockCount_7_.Q serial_ClockCount_8_.Q serial_ClockCount_2_.Q \
+serial_ClockCount_3_.Q serial_ClockCount_4_.Q serial_ClockCount_5_.Q \
+serial_ClockCount_6_.Q serial_ClockCount_9_.Q serial_ClockCount_9_.T
+00000001111 1
+1-11111111- 1
+-1--0------ 0
+---1--0---- 0
+-----01---- 0
+----01----- 0
+0---1------ 0
+--10------- 0
+1-0-------- 0
+------0---0 0
+---------0- 0
+--------0-- 0
+-------0--- 0
+.names serial_ClockCount_0_.Q serial_ClockCount_10_.Q serial_ClockCount_1_.Q \
+serial_ClockCount_7_.Q serial_ClockCount_8_.Q serial_ClockCount_2_.Q \
+serial_ClockCount_3_.Q serial_ClockCount_4_.Q serial_ClockCount_5_.Q \
+serial_ClockCount_6_.Q serial_ClockCount_9_.Q serial_Clock9600.D
+00000001111 1
+---------0- 0
+--------0-- 0
+-------0--- 0
+------1---- 0
+-----1----- 0
+----1------ 0
+---1------- 0
+--1-------- 0
+-1--------- 0
+1---------- 0
+----------0 0
+.names button1_d1_q_0_.Q button1_d2_q_0_.Q button1_d3_q_0_.Q \
+keyboard_combvalue_4_.D
+-1- 1
+1-- 1
+--1 1
+000 0
+.names button2_d1_q_0_.Q button2_d2_q_0_.Q button2_d3_q_0_.Q \
+keyboard_combvalue_5_.D
+-1- 1
+1-- 1
+--1 1
+000 0
+.names button3_d1_q_0_.Q button3_d2_q_0_.Q button3_d3_q_0_.Q \
+keyboard_combvalue_6_.D
+-1- 1
+1-- 1
+--1 1
+000 0
+.names button4_d1_q_0_.Q button4_d2_q_0_.Q button4_d3_q_0_.Q \
+keyboard_combvalue_7_.D
+-1- 1
+1-- 1
+--1 1
+000 0
+.names keyboard_timecnt_2_.Q keyboard_timecnt_3_.Q keyboard_timecnt_5_.Q \
+keyboard_timecnt_8_.Q keyboard_timecnt_10_.Q keyboard_timecnt_12_.Q \
+keyboard_timecnt_13_.Q keyboard_timecnt_14_.Q keyboard_timecnt_4_.Q \
+keyboard_timecnt_6_.Q keyboard_timecnt_7_.Q keyboard_timecnt_9_.Q \
+keyboard_timecnt_15_.Q keyboard_timecnt_11_.Q keyboard_timecnt_0_.Q \
+keyboard_timecnt_1_.Q keyboard_timecnt_4_.T
+11-----------111 1
+11----------1-11 1
+11---------1--11 1
+11--------1---11 1
+11-------1----11 1
+11------1-----11 1
+11-----0------11 1
+11----0-------11 1
+11---0--------11 1
+11--0---------11 1
+11-0----------11 1
+110-----------11 1
+--111111000000-- 0
+--------------0- 0
+-0-------------- 0
+0--------------- 0
+---------------0 0
+.names keyboard_timecnt_2_.Q keyboard_timecnt_3_.Q keyboard_timecnt_5_.Q \
+keyboard_timecnt_4_.Q keyboard_timecnt_0_.Q keyboard_timecnt_1_.Q \
+keyboard_timecnt_6_.T
+111111 1
+----0- 0
+---0-- 0
+--0--- 0
+-0---- 0
+0----- 0
+-----0 0
+.names keyboard_timecnt_2_.Q keyboard_timecnt_3_.Q keyboard_timecnt_5_.Q \
+keyboard_timecnt_4_.Q keyboard_timecnt_6_.Q keyboard_timecnt_0_.Q \
+keyboard_timecnt_1_.Q keyboard_timecnt_7_.T
+1111111 1
+-----0- 0
+----0-- 0
+---0--- 0
+--0---- 0
+-0----- 0
+0------ 0
+------0 0
+.names keyboard_timecnt_2_.Q keyboard_timecnt_3_.Q keyboard_timecnt_5_.Q \
+keyboard_timecnt_8_.Q keyboard_timecnt_4_.Q keyboard_timecnt_6_.Q \
+keyboard_timecnt_7_.Q keyboard_timecnt_0_.Q keyboard_timecnt_1_.Q \
+keyboard_timecnt_9_.T
+111111111 1
+-------0- 0
+------0-- 0
+-----0--- 0
+----0---- 0
+---0----- 0
+--0------ 0
+-0------- 0
+0-------- 0
+--------0 0
+.names keyboard_timecnt_2_.Q keyboard_timecnt_3_.Q keyboard_timecnt_5_.Q \
+keyboard_timecnt_8_.Q keyboard_timecnt_10_.Q keyboard_timecnt_12_.Q \
+keyboard_timecnt_13_.Q keyboard_timecnt_14_.Q keyboard_timecnt_4_.Q \
+keyboard_timecnt_6_.Q keyboard_timecnt_7_.Q keyboard_timecnt_9_.Q \
+keyboard_timecnt_11_.Q keyboard_timecnt_0_.Q keyboard_timecnt_1_.Q \
+keyboard_timecnt_15_.T
+111111111111111 1
+-------------0- 0
+------------0-- 0
+-----------0--- 0
+----------0---- 0
+---------0----- 0
+--------0------ 0
+-------0------- 0
+------0-------- 0
+-----0--------- 0
+----0---------- 0
+---0----------- 0
+--0------------ 0
+-0------------- 0
+0-------------- 0
+--------------0 0
+.names keyboard_combvalue_4_.Q keyboard_combvalue_5_.Q keyboard_combvalue_6_.Q \
+keyboard_combvalue_7_.Q keyboard_combvalue_0_.Q keyboard_combvalue_1_.Q \
+keyboard_combvalue_2_.Q keyboard_combvalue_3_.Q led_0_.D
+----0000 1
+0-0----- 1
+1-1----- 1
+---1---- 1
+-1------ 1
+1000--1- 0
+0010--1- 0
+1000-1-- 0
+0010-1-- 0
+10001--- 0
+00101--- 0
+1000---1 0
+0010---1 0
+.names keyboard_timecnt_2_.Q keyboard_timecnt_3_.Q keyboard_timecnt_5_.Q \
+keyboard_timecnt_8_.Q keyboard_timecnt_10_.Q keyboard_timecnt_4_.Q \
+keyboard_timecnt_6_.Q keyboard_timecnt_7_.Q keyboard_timecnt_9_.Q \
+keyboard_timecnt_0_.Q keyboard_timecnt_1_.Q keyboard_timecnt_11_.T
+11111111111 1
+---------0- 0
+--------0-- 0
+-------0--- 0
+------0---- 0
+-----0----- 0
+----0------ 0
+---0------- 0
+--0-------- 0
+-0--------- 0
+0---------- 0
+----------0 0
+.names keyboard_timecnt_2_.Q keyboard_timecnt_3_.Q keyboard_timecnt_5_.Q \
+keyboard_timecnt_8_.Q keyboard_timecnt_10_.Q keyboard_timecnt_12_.Q \
+keyboard_timecnt_13_.Q keyboard_timecnt_14_.Q button0_d1_q_0_.Q \
+button0_d2_q_0_.Q button0_d3_q_0_.Q keyboard_timecnt_4_.Q \
+keyboard_timecnt_6_.Q keyboard_timecnt_7_.Q keyboard_timecnt_9_.Q \
+keyboard_timecnt_15_.Q keyboard_timecnt_11_.Q keyboard_timecnt_0_.Q \
+keyboard_timecnt_1_.Q keyboard_time1Oms.T
+11111111--100000011 1
+11111111-1-00000011 1
+111111111--00000011 1
+--------000-------- 0
+-----------------0- 0
+----------------1-- 0
+---------------1--- 0
+--------------1---- 0
+-------------1----- 0
+------------1------ 0
+-----------1------- 0
+-------0----------- 0
+------0------------ 0
+-----0------------- 0
+----0-------------- 0
+---0--------------- 0
+--0---------------- 0
+-0----------------- 0
+0------------------ 0
+------------------0 0
+.names keyboard_combvalue_4_.Q keyboard_combvalue_5_.Q keyboard_combvalue_6_.Q \
+keyboard_combvalue_7_.Q keyboard_combvalue_0_.Q keyboard_combvalue_1_.Q \
+keyboard_combvalue_2_.Q keyboard_combvalue_3_.Q led_1_.D
+----0000 1
+-00----- 1
+-11----- 1
+---1---- 1
+1------- 1
+0100--1- 0
+0010--1- 0
+0100-1-- 0
+0010-1-- 0
+01001--- 0
+00101--- 0
+0100---1 0
+0010---1 0
+.names button1_d1_q_0_.Q button1_d2_q_0_.Q button1_d3_q_0_.Q keyOut_2_.Q \
+keyboard_int_Data0_3_.D
+0001 1
+--1- 0
+-1-- 0
+1--- 0
+---0 0
+.names button2_d1_q_0_.Q button2_d2_q_0_.Q button2_d3_q_0_.Q keyOut_1_.Q \
+keyOut_3_.Q keyboard_int_Data1_0_.D
+00000 1
+--110 1
+-1-10 1
+1--10 1
+0001- 0
+--10- 0
+-1-0- 0
+1--0- 0
+----1 0
+.names keyboard_combvalue_4_.Q keyboard_combvalue_5_.Q keyboard_combvalue_6_.Q \
+keyboard_combvalue_7_.Q keyboard_combvalue_0_.Q keyboard_combvalue_1_.Q \
+keyboard_combvalue_2_.Q keyboard_combvalue_3_.Q led_2_.D
+---10-0- 1
+---0-0-0 1
+0000---- 1
+-11----- 1
+1-1----- 1
+11------ 1
+--11---- 1
+-1-1---- 1
+1--1---- 1
+1000-1-- 0
+0100-1-- 0
+0010-1-- 0
+0001--1- 0
+00011--- 0
+1000---1 0
+0100---1 0
+0010---1 0
+.names button1_d1_q_0_.Q button1_d2_q_0_.Q button1_d3_q_0_.Q keyOut_1_.Q \
+keyOut_2_.Q keyboard_int_Data1_2_.D
+---1- 1
+--1-1 1
+-1--1 1
+1---1 1
+0000- 0
+---00 0
+.names keyboard_combvalue_4_.Q keyboard_combvalue_5_.Q keyboard_combvalue_6_.Q \
+keyboard_combvalue_7_.Q keyboard_combvalue_1_.Q keyboard_combvalue_2_.Q \
+keyboard_combvalue_3_.Q led_3_.D
+---100- 1
+---0-00 1
+0000--- 1
+-11---- 1
+1-1---- 1
+11----- 1
+--11--- 1
+-1-1--- 1
+1--1--- 1
+1000-1- 0
+0100-1- 0
+0010-1- 0
+00011-- 0
+0001-1- 0
+1000--1 0
+0100--1 0
+0010--1 0
+.names button1_d1_q_0_.Q button1_d2_q_0_.Q button1_d3_q_0_.Q keyOut_2_.Q \
+keyboard_int_Data1_3_.D
+0001 1
+--1- 0
+-1-- 0
+1--- 0
+---0 0
+.names button2_d1_q_0_.Q button2_d2_q_0_.Q button2_d3_q_0_.Q keyOut_1_.Q \
+keyOut_3_.Q keyboard_int_Data0_0_.D
+00000 1
+--110 1
+-1-10 1
+1--10 1
+0001- 0
+--10- 0
+-1-0- 0
+1--0- 0
+----1 0
+.names keyboard_combvalue_4_.Q keyboard_combvalue_5_.Q keyboard_combvalue_6_.Q \
+keyboard_combvalue_7_.Q keyboard_combvalue_3_.Q led_4_.D
+---0- 1
+--1-- 1
+-1--- 1
+1---- 1
+----0 1
+00011 0
+.names button1_d1_q_0_.Q button1_d2_q_0_.Q button1_d3_q_0_.Q keyOut_1_.Q \
+keyOut_2_.Q keyboard_int_Data0_2_.D
+---1- 1
+--1-1 1
+-1--1 1
+1---1 1
+0000- 0
+---00 0
+.names keyboard_scanvalue_0_.Q keyboard_scanvalue_1_.Q keyOut_0_.D
+00 1
+1- 0
+-1 0
+.names keyOut_0_.Q keyboard_combvalue_0_.D
+1 1
+0 0
+.names keyOut_1_.Q keyboard_combvalue_1_.D
+1 1
+0 0
+.names keyboard_scanvalue_0_.Q keyboard_scanvalue_1_.Q keyOut_1_.D
+10 1
+0- 0
+-1 0
+.names keyOut_2_.Q keyboard_combvalue_2_.D
+1 1
+0 0
+.names keyOut_3_.Q keyboard_combvalue_3_.D
+1 1
+0 0
+.names keyboard_scanvalue_0_.Q keyboard_scanvalue_1_.Q keyOut_2_.D
+01 1
+1- 0
+-0 0
+.names keyboard_timecnt_0_.Q keyboard_timecnt_0_.D
+0 1
+1 0
+.names keyboard_timecnt_0_.Q keyboard_timecnt_1_.Q keyboard_timecnt_1_.D
+10 1
+01 1
+00 0
+11 0
+.names keyboard_scanvalue_0_.Q keyboard_scanvalue_1_.Q keyOut_3_.D
+11 1
+0- 0
+-0 0
+.end

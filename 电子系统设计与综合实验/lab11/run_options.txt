@@ -1,0 +1,75 @@
+#--  Synopsys, Inc.
+#--  Version I-2014.03LC 
+#--  Project file E:\Grade-3_2\ISP_Project\lab11\run_options.txt
+#--  Written on Wed May 11 18:43:03 2022
+
+
+#project files
+add_file -verilog "D:/ispLEVER_Classic2_1/ispcpld/../cae_library/synthesis/verilog/mach.v"
+add_file -verilog "./lab11.h"
+add_file -verilog "./decoder2to4.v"
+add_file -verilog "./decoderHex2Dec.v"
+add_file -verilog "./mux16to4.v"
+add_file -verilog "./counter_n.v"
+add_file -verilog "./dynamicShow.v"
+add_file -verilog "./i2c.v"
+add_file -verilog "./keyboard.v"
+add_file -verilog "./dffre.v"
+add_file -verilog "./button.v"
+add_file -verilog "./lab11.v"
+
+
+
+#implementation: "lab11"
+impl -add lab11 -type fpga
+
+#
+#implementation attributes
+
+set_option -vlog_std v2001
+set_option -num_critical_paths 3
+set_option -num_startend_points 0
+
+#device options
+set_option -technology ispmach4000b
+set_option -part LC4064B
+set_option -package T44C
+set_option -speed_grade -2.5
+set_option -part_companion ""
+
+#compilation/mapping options
+set_option -top_module "lab11"
+
+# mapper_options
+set_option -frequency 200
+set_option -auto_constrain_io 1
+set_option -write_verilog 0
+set_option -write_vhdl 0
+set_option -srs_instrumentation 1
+
+# Lattice ispMACH4000
+set_option -maxfanin 20
+set_option -RWCheckOnRam 1
+set_option -maxterms 16
+set_option -areadelay 0
+set_option -disable_io_insertion 0
+
+# sequential_optimization_options
+set_option -symbolic_fsm_compiler 1
+
+# Compiler Options
+set_option -compiler_compatible 1
+set_option -resource_sharing 1
+
+# Compiler Options
+set_option -auto_infer_blackbox 0
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "./lab11.edi"
+
+#set log file 
+set_option log_file "E:/Grade-3_2/ISP_Project/lab11/lab11.srf" 
+impl -active "lab11"

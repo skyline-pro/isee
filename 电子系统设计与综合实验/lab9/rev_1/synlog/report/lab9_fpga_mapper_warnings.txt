@@ -1,0 +1,7 @@
+@W: MO111 :"e:\grade-3_2\isp_project\lab9\button.v":4:11:4:16|Tristate driver keyout on net keyout has its enable tied to GND (module button) 
+@W: FC103 :|Internal tri state resetButton converted to mux. Simulation mismatch can happen 
+@W: FC103 :|Internal tri state keyInButton[0] converted to mux. Simulation mismatch can happen 
+@W: FC103 :|Internal tri state keyInButton[1] converted to mux. Simulation mismatch can happen 
+@W: FC103 :|Internal tri state keyInButton[2] converted to mux. Simulation mismatch can happen 
+@W: FC103 :|Internal tri state keyInButton[3] converted to mux. Simulation mismatch can happen 
+@W: FC103 :|Internal tri state sendButton converted to mux. Simulation mismatch can happen 

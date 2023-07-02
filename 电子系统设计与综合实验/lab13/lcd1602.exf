@@ -1,0 +1,43 @@
+Section Type   Array Num   Name                     Real Name          Base     Number     Increment
+// ------------------------------------------------------------------------------------------
+      Port          1      lcdD[7:0]                     lcdD                  7          8            -1
+End
+Section Member   Rename                   Array-Notation          Array Number     Index
+// -------------------------------------------------------------------------------------
+        Port      lcdD_7_                     lcdD[7]                       1            0            
+        Port      lcdD_6_                     lcdD[6]                       1            1            
+        Port      lcdD_5_                     lcdD[5]                       1            2            
+        Port      lcdD_4_                     lcdD[4]                       1            3            
+        Port      lcdD_3_                     lcdD[3]                       1            4            
+        Port      lcdD_2_                     lcdD[2]                       1            5            
+        Port      lcdD_1_                     lcdD[1]                       1            6            
+        Port      lcdD_0_                     lcdD[0]                       1            7            
+End
+Section Cross Reference File
+Design 'lcd1602' created Fri May 13 09:16:58 2022
+   Type              New Name                               Original Name
+// ----------------------------------------------------------------------
+   Net               lcdd_2__n                                   lcdD[2]
+   Net               lcdd_1__n                                   lcdD[1]
+   Net               lcdd_0__n                                   lcdD[0]
+   Net               lcdd_6__n                                   lcdD[6]
+   Net               lcdd_5__n                                   lcdD[5]
+   Net               lcdd_4__n                                   lcdD[4]
+   Net               lcdd_3__n                                   lcdD[3]
+End
+Section Type      Name
+// ----------------------------------------------------------------------
+        Input     clk_50m
+        Input     reset
+        Output     lcdD_7_
+        Output     lcdRs
+        Output     lcdRw
+        Output     ledEN
+        Output     lcdD_6_
+        Output     lcdD_5_
+        Output     lcdD_4_
+        Output     lcdD_3_
+        Output     lcdD_2_
+        Output     lcdD_1_
+        Output     lcdD_0_
+End

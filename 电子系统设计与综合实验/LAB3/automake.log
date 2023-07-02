@@ -1,0 +1,14 @@
+ispLEVER Auto-Make Log File
+---------------------------
+
+Updating: Hierarchy
+Start to record tcl script...
+Finished recording TCL script.
+
+Starting: 'D:\ispLEVER_Classic2_1\ispcpld\bin\sch2jhd.exe top.sch -gui'
+
+Done: completed successfully.
+
+Starting: 'D:\ispLEVER_Classic2_1\ispcpld\bin\vlog2jhd.exe ..\testverilog\adder.v -p "D:\ispLEVER_Classic2_1\ispcpld/generic" -predefine lab3.h'
+
+Done: completed successfully.

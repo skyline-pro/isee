@@ -1,0 +1,16 @@
+#OPTIONS:"|-top|lab13|-prodtype|synplify_pro|-nostructver|-I|E:\\Grade-3_2\\ISP_Project\\lab13\\|-I|D:\\ispLEVER_Classic2_1\\synpbase\\lib|-v2001|-encrypt|-pro|-compiler_compatible|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-lib|work"
+#CUR:"D:\\ispLEVER_Classic2_1\\synpbase\\bin64\\c_ver.exe":1401198850
+#CUR:"D:\\ispLEVER_Classic2_1\\synpbase\\lib\\vlog\\umr_capim.v":1401198770
+#CUR:"D:\\ispLEVER_Classic2_1\\synpbase\\lib\\vlog\\scemi_objects.v":1401198522
+#CUR:"D:\\ispLEVER_Classic2_1\\synpbase\\lib\\vlog\\scemi_pipes.svh":1401198522
+#CUR:"D:\\ispLEVER_Classic2_1\\synpbase\\lib\\vlog\\hypermods.v":1401198522
+#CUR:"E:\\Grade-3_2\\ISP_Project\\lab13\\lcd1602.v":1652402875
+#numinternalfiles:4
+#defaultlanguage:verilog
+0			"E:\Grade-3_2\ISP_Project\lab13\lcd1602.v" verilog
+#Dependency Lists(Uses List)
+0 -1
+#Dependency Lists(Users Of)
+0 -1
+#Design Unit to File Association
+module work lcd1602 0

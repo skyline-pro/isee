@@ -1,0 +1,25 @@
+JDF B
+// Created by Version 2.1 
+PROJECT testVerilog
+DESIGN testverilog Normal
+DEVKIT LC4256ZC-75T100I
+ENTRY Pure Verilog HDL
+MODULE adder.v
+MODSTYLE adder Normal
+MODULE counter_n.v
+MODSTYLE counter_n Normal
+MODULE decode.v
+MODSTYLE decode Normal
+MODULE top.v
+MODSTYLE top Normal
+MODULE key.v
+MODSTYLE key Normal
+MODULE mux.v
+MODSTYLE mux Normal
+MODULE random.v
+MODSTYLE random Normal
+MODULE to4decode.v
+MODSTYLE to4decode Normal
+SYNTHESIS_TOOL Synplify
+SIMULATOR_TOOL ModelSim
+TOPMODULE top

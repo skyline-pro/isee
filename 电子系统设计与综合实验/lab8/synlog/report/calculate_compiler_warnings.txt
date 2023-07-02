@@ -1,0 +1,4 @@
+@W: CG296 :"E:\grade-3_2\isp_project\lab8\calculate.v":340:13:340:27|Incomplete sensitivity list - assuming completeness
+@W: CG290 :"E:\grade-3_2\isp_project\lab8\calculate.v":347:19:347:26|Referenced variable int_Data is not in sensitivity list
+@W: CL169 :"E:\grade-3_2\isp_project\lab8\calculate.v":77:4:77:9|Pruning register flag_Over 
+

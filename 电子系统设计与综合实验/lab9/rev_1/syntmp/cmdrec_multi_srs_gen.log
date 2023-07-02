@@ -1,0 +1,7 @@
+D:\ispLEVER_Classic2_1\synpbase\bin64\syn_nfilter.exe  -link  -multisrs  E:\Grade-3_2\ISP_Project\lab9\rev_1\synwork\lab9_comp.srs  -osyn  E:\Grade-3_2\ISP_Project\lab9\rev_1\synwork\lab9_mult.srs  -log  E:\Grade-3_2\ISP_Project\lab9\rev_1\synlog\lab9_multi_srs_gen.srr 
+rc:0 success:1
+E:\Grade-3_2\ISP_Project\lab9\rev_1\synwork\lab9_comp.srs|i|1462618253|15602
+E:\Grade-3_2\ISP_Project\lab9\rev_1\synwork\lab9_mult.srs|o|1462618255|4226
+E:\Grade-3_2\ISP_Project\lab9\rev_1\synlog\lab9_multi_srs_gen.srr|o|1462618255|616
+D:\ispLEVER_Classic2_1\synpbase\bin\syn_nfilter.exe|i|1401198736|2741760
+D:\ispLEVER_Classic2_1\synpbase\bin64\syn_nfilter.exe|i|1401198932|6337536

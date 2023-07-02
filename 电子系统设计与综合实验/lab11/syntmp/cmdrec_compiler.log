@@ -1,0 +1,18 @@
+D:\ispLEVER_Classic2_1\synpbase\bin64\c_ver.exe  -osyn  E:\Grade-3_2\ISP_Project\lab11\synwork\lab11_comp.srs  -top  lab11  -prodtype  synplify_pro  -nostructver -I E:\Grade-3_2\ISP_Project\lab11\  -I D:\ispLEVER_Classic2_1\synpbase\lib  -v2001  -encrypt  -pro  -dmgen  E:\Grade-3_2\ISP_Project\lab11\dm  -compiler_compatible -ui -fid2 -ram -sharing on -ll 2000 -autosm -lib work D:\ispLEVER_Classic2_1\ispcpld\..\cae_library\synthesis\verilog\mach.v -lib work E:\Grade-3_2\ISP_Project\lab11\lab11.h -lib work E:\Grade-3_2\ISP_Project\lab11\decoder2to4.v -lib work E:\Grade-3_2\ISP_Project\lab11\decoderHex2Dec.v -lib work E:\Grade-3_2\ISP_Project\lab11\mux16to4.v -lib work E:\Grade-3_2\ISP_Project\lab11\counter_n.v -lib work E:\Grade-3_2\ISP_Project\lab11\dynamicShow.v -lib work E:\Grade-3_2\ISP_Project\lab11\i2c.v -lib work E:\Grade-3_2\ISP_Project\lab11\keyboard.v -lib work E:\Grade-3_2\ISP_Project\lab11\dffre.v -lib work E:\Grade-3_2\ISP_Project\lab11\button.v -lib work E:\Grade-3_2\ISP_Project\lab11\lab11.v -loga  E:\Grade-3_2\ISP_Project\lab11\lab11.srr 
+rc:0 success:1
+E:\Grade-3_2\ISP_Project\lab11\synwork\lab11_comp.srs|o|1651983948|21516
+D:\ispLEVER_Classic2_1\ispcpld\..\cae_library\synthesis\verilog\mach.v|i|1336476608|12168
+E:\Grade-3_2\ISP_Project\lab11\lab11.h|i|1462637701|0
+E:\Grade-3_2\ISP_Project\lab11\decoder2to4.v|i|1462549498|308
+E:\Grade-3_2\ISP_Project\lab11\decoderHex2Dec.v|i|1462548404|701
+E:\Grade-3_2\ISP_Project\lab11\mux16to4.v|i|1462548317|386
+E:\Grade-3_2\ISP_Project\lab11\counter_n.v|i|1460379863|821
+E:\Grade-3_2\ISP_Project\lab11\dynamicShow.v|i|1462639077|518
+E:\Grade-3_2\ISP_Project\lab11\i2c.v|i|1462678345|20421
+E:\Grade-3_2\ISP_Project\lab11\keyboard.v|i|1462622436|10547
+E:\Grade-3_2\ISP_Project\lab11\dffre.v|i|1649680967|789
+E:\Grade-3_2\ISP_Project\lab11\button.v|i|1462639008|375
+E:\Grade-3_2\ISP_Project\lab11\lab11.v|i|1462678354|1220
+E:\Grade-3_2\ISP_Project\lab11\lab11.srr|o|1652265783|7199
+D:\ispLEVER_Classic2_1\synpbase\bin\c_ver.exe|i|1401198650|2292224
+D:\ispLEVER_Classic2_1\synpbase\bin64\c_ver.exe|i|1401198850|5829632

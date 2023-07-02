@@ -1,0 +1,904 @@
+#$ DATE Sun May 08 13:33:06 2016
+#$ TOOL EDIF2BLIF version IspLever 1.0 
+#$ MODULE lab10
+#$ PINS 16 LEDVCC_3_ show_6_ clkh clkl reset keyClock keyData LEDVCC_2_ LEDVCC_1_ LEDVCC_0_ show_5_ show_4_ show_3_ show_2_ show_1_ show_0_
+#$ NODES 305 ps_psdata27_1_n ps_psdata27_2_n ps_psdata26_1_n resetButton ps_psdata26_2_n ps_psData_0_ ps_psdata26_3_n ps_psData_1_ ps_psdata26_4_n ps_psData_2_ \
+#  ps_psdata25_1_n ps_psData_3_ ps_psdata25_2_n button0_d1_q_0_ ps_leden8_1_n button0_d2_q_0_ ps_leden8_2_n button0_d3_q_0_ ps_leden8_3_n dynamicshow_counter4_q_1_ \
+#  ps_leden8_4_n dynamicshow_counter4_q_2_ ps_leden8_5_n ps_psdata34_1_n ps_keyClock_r1 ps_psdata33_1_n ps_RxEn ps_psdata32_1_0_n ps_lastRxData_0_ ps_psdata32_2_n \
+#  ps_lastRxData_1_ ps_psdata31_1_n ps_lastRxData_2_ ps_psdata31_2_n ps_lastRxData_3_ ps_psdata30_1_0_n ps_lastRxData_4_ ps_psdata30_2_n ps_lastRxData_5_ ps_psdata30_5_1_n \
+#  ps_lastRxData_6_ ps_un1_psdata34_1_1_n ps_lastRxData_7_ ps_un1_psdata34_1_2_n ps_ledEn ps_un1_psdata34_1_3_n ps_keyClock_r0 ps_un1_psdata34_1_4_n ps_psdata38_n ps_un1_psdata34_1_5_n \
+#  ps_neg_keyclock_n ps_un1_psdata34_1_6_n ps_keyClock_r2 ps_un1_psdata34_1_7_n ps_counter_0_ ps_un1_psdata34_1_8_n ps_counter_1_ ps_n_46_i_1_n ps_counter_2_ ps_n_43_i_1_n \
+#  ps_counter_3_ ps_psdata34_6_1_n ps_rxdata_0_sqmuxa_n ps_un1_rxdata_1_8__n ps_un1_rxdata_1_6__n ps_RxData_1_ ps_un1_rxdata_2_6__n ps_RxData_2_ ps_un1_rxdata_1_5__n ps_RxData_3_ \
+#  ps_un1_rxdata_1_4__n ps_RxData_4_ ps_un1_rxdata_1_2__n ps_RxData_5_ ps_un1_rxdata_1_1__n ps_RxData_6_ resetButton_i_1 ps_RxData_7_ dynamicshow_n_54_1_n ps_RxData_8_ \
+#  dynamicshow_n_61_1_n ps_save_0_ dynamicshow_n_59_1_n ps_save_1_ dynamicshow_n_47_i_1_n ps_save_2_ ps_rxdata_2_8__un3_n ps_save_3_ ps_rxdata_2_8__un1_n ps_psdata_3_0__n \
+#  ps_rxdata_2_8__un0_n ps_psdata_3_1__n ps_rxdata_2_7__un3_n ps_psdata_3_2__n ps_rxdata_2_7__un1_n ps_psdata_3_3__n ps_rxdata_2_7__un0_n ps_psdata29_n ps_rxdata_2_6__un3_n ps_psdata29_6_n \
+#  ps_rxdata_2_6__un1_n ps_psdata32_1_n ps_rxdata_2_6__un0_n ps_psdata32_3_n ps_rxdata_2_5__un3_n ps_psdata28_n ps_rxdata_2_5__un1_n ps_psdata30_1_n ps_rxdata_2_5__un0_n ps_psdata27_n \
+#  ps_rxdata_2_4__un3_n ps_psdata33_5_n ps_rxdata_2_4__un1_n ps_psdata30_4_n ps_rxdata_2_4__un0_n ps_n_54_1_n ps_rxdata_2_3__un3_n ps_psdata26_n ps_rxdata_2_3__un1_n ps_psdata25_n \
+#  ps_rxdata_2_3__un0_n ps_psdata34_6_n ps_rxdata_2_2__un3_n ps_n_51_1_n ps_rxdata_2_2__un1_n ps_psdata34_n ps_rxdata_2_2__un0_n ps_psdata34_2_n ps_rxdata_2_1__un3_n ps_psdata33_n \
+#  ps_rxdata_2_1__un1_n ps_psdata32_n ps_rxdata_2_1__un0_n ps_psdata31_n ps_psdata_3_3__un3_n ps_n_55_1_n ps_psdata_3_3__un1_n ps_psdata30_n ps_psdata_3_3__un0_n ps_psdata30_5_n \
+#  ps_psdata_3_2__un3_n ps_un1_psdata34_1_n ps_psdata_3_2__un1_n ps_n_54_n ps_psdata_3_2__un0_n ps_n_51_n ps_psdata_3_1__un3_n ps_n_57_n ps_psdata_3_1__un1_n ps_n_50_n \
+#  ps_psdata_3_1__un0_n ps_n_55_n ps_psdata_3_0__un3_n ps_psdata_cnst_3__n ps_psdata_3_0__un1_n ps_psdata_cnst_1__n ps_psdata_3_0__un0_n ps_n_48_n ps_n_53_n ps_n_52_n \
+#  ps_n_49_n ps_psdata34_3_n ps_counter_n2 ps_counter_n3 ps_counter_n0 ps_counter_n1 ps_rxen_2_n ps_un1_rxdata_2_8__n ps_un1_rxdata_7__n ps_n_24_n \
+#  ps_un1_rxdata_2_7__n ps_n_21_n ps_n_18_n ps_n_20_n ps_un1_rxdata_8__n ps_counter_c1_n ps_un1_rxdata_6__n ps_un1_rxdata_5__n ps_un1_rxdata_2_5__n ps_un1_rxdata_4__n \
+#  ps_un1_rxdata_3__n ps_un1_rxdata_2_3__n ps_un1_rxdata_2__n ps_un1_rxdata_1__n dynamicshow_n_54_n dynamicshow_n_49_n dynamicshow_n_61_n dynamicshow_n_59_n dynamicshow_n_63_n dynamicshow_n_60_n \
+#  dynamicshow_n_62_n dynamicshow_n_66_n dynamicshow_n_58_n dynamicshow_n_57_n dynamicshow_n_55_n dynamicshow_n_56_n dynamicshow_n_67_n dynamicshow_n_65_n dynamicshow_n_64_n dynamicshow_out_2__n \
+#  dynamicshow_out_3__n dynamicshow_n_50_n dynamicshow_n_47_n ledvcc_i_0__n ledvcc_i_3__n dynamicshow_sel_i_0__n dynamicshow_sel_i_1__n data_i_1__n data_i_2__n data_i_0_0__n \
+#  ps_counter_i_3__n ps_counter_i_1__n ps_counter_i_2__n ps_counter_i_0__n ps_keyclock_r1_i_n ps_leden_i_n ps_lastrxdata_i_5__n ps_lastrxdata_i_7__n ps_lastrxdata_i_3__n ps_lastrxdata_i_4__n \
+#  ps_lastrxdata_i_0__n ps_lastrxdata_i_1__n ps_psdata25_i_n ps_psdata26_i_n ps_psdata27_i_n ps_psdata28_i_n ps_psdata30_i_n ps_psdata29_i_n ps_psdata31_i_n ps_psdata32_i_n \
+#  ps_psdata33_i_n ps_psdata34_i_n ps_lastrxdata_i_2__n ps_lastrxdata_i_6__n ps_rxen_i_n clkh_c clkl_c ledvcc_c_0__n ledvcc_c_1__n ledvcc_c_2__n \
+#  ledvcc_c_3__n show_c_0__n show_c_1__n show_c_2__n show_c_3__n show_c_4__n show_c_5__n show_c_6__n keyData_c dynamicshow_n_59_i_n \
+#  show_c_0_3__n dynamicshow_n_60_i_n dynamicshow_n_61_i_n show_c_0_4__n dynamicshow_n_47_i_n data_i_3__n dynamicshow_n_49_i_n dynamicshow_n_50_i_n dynamicshow_out_i_3__n dynamicshow_out_0_2__n \
+#  dynamicshow_n_64_i_n dynamicshow_n_65_i_n show_c_i_6__n dynamicshow_n_55_i_n dynamicshow_n_54_i_n dynamicshow_n_67_i_n show_c_0_0__n dynamicshow_n_56_i_n dynamicshow_n_57_i_n show_c_0_1__n \
+#  dynamicshow_n_66_i_n dynamicshow_n_58_i_n show_c_0_2__n dynamicshow_n_62_i_n dynamicshow_n_63_i_n show_c_0_5__n button0_out3_i_n resetButton_i button0_out1_i_n button0_out2_i_n \
+#  ps_un1_rxdata_2_i_8__n ps_rxen_2_i_n ps_n_49_i_n ps_n_43_i_n ps_n_52_i_n ps_n_53_i_n ps_psdata_cnst_0_1__n ps_n_46_i_n ps_n_57_i_n ps_psdata34_2_i_n \
+#  ps_psdata_cnst_0_3__n ps_n_48_i_n ps_n_55_i_n ps_n_54_i_n ps_n_51_i_n ps_n_50_i_n show_c_0_1_5__n show_c_0_1_2__n show_c_0_2_2__n show_c_0_1_1__n \
+#  show_c_0_1_0__n show_c_i_1_6__n ps_psdata29_1_n ps_psdata28_1_n ps_psdata28_2_n 
+.model lab10
+.inputs clkh.BLIF clkl.BLIF reset.BLIF keyClock.BLIF keyData.BLIF ps_psdata27_1_n.BLIF ps_psdata27_2_n.BLIF ps_psdata26_1_n.BLIF resetButton.BLIF \
+  ps_psdata26_2_n.BLIF ps_psData_0_.BLIF ps_psdata26_3_n.BLIF ps_psData_1_.BLIF ps_psdata26_4_n.BLIF ps_psData_2_.BLIF ps_psdata25_1_n.BLIF ps_psData_3_.BLIF ps_psdata25_2_n.BLIF \
+  button0_d1_q_0_.BLIF ps_leden8_1_n.BLIF button0_d2_q_0_.BLIF ps_leden8_2_n.BLIF button0_d3_q_0_.BLIF ps_leden8_3_n.BLIF dynamicshow_counter4_q_1_.BLIF ps_leden8_4_n.BLIF dynamicshow_counter4_q_2_.BLIF \
+  ps_leden8_5_n.BLIF ps_psdata34_1_n.BLIF ps_keyClock_r1.BLIF ps_psdata33_1_n.BLIF ps_RxEn.BLIF ps_psdata32_1_0_n.BLIF ps_lastRxData_0_.BLIF ps_psdata32_2_n.BLIF ps_lastRxData_1_.BLIF \
+  ps_psdata31_1_n.BLIF ps_lastRxData_2_.BLIF ps_psdata31_2_n.BLIF ps_lastRxData_3_.BLIF ps_psdata30_1_0_n.BLIF ps_lastRxData_4_.BLIF ps_psdata30_2_n.BLIF ps_lastRxData_5_.BLIF ps_psdata30_5_1_n.BLIF \
+  ps_lastRxData_6_.BLIF ps_un1_psdata34_1_1_n.BLIF ps_lastRxData_7_.BLIF ps_un1_psdata34_1_2_n.BLIF ps_ledEn.BLIF ps_un1_psdata34_1_3_n.BLIF ps_keyClock_r0.BLIF ps_un1_psdata34_1_4_n.BLIF ps_psdata38_n.BLIF \
+  ps_un1_psdata34_1_5_n.BLIF ps_neg_keyclock_n.BLIF ps_un1_psdata34_1_6_n.BLIF ps_keyClock_r2.BLIF ps_un1_psdata34_1_7_n.BLIF ps_counter_0_.BLIF ps_un1_psdata34_1_8_n.BLIF ps_counter_1_.BLIF ps_n_46_i_1_n.BLIF \
+  ps_counter_2_.BLIF ps_n_43_i_1_n.BLIF ps_counter_3_.BLIF ps_psdata34_6_1_n.BLIF ps_rxdata_0_sqmuxa_n.BLIF ps_un1_rxdata_1_8__n.BLIF ps_un1_rxdata_1_6__n.BLIF ps_RxData_1_.BLIF ps_un1_rxdata_2_6__n.BLIF \
+  ps_RxData_2_.BLIF ps_un1_rxdata_1_5__n.BLIF ps_RxData_3_.BLIF ps_un1_rxdata_1_4__n.BLIF ps_RxData_4_.BLIF ps_un1_rxdata_1_2__n.BLIF ps_RxData_5_.BLIF ps_un1_rxdata_1_1__n.BLIF ps_RxData_6_.BLIF \
+  resetButton_i_1.BLIF ps_RxData_7_.BLIF dynamicshow_n_54_1_n.BLIF ps_RxData_8_.BLIF dynamicshow_n_61_1_n.BLIF ps_save_0_.BLIF dynamicshow_n_59_1_n.BLIF ps_save_1_.BLIF dynamicshow_n_47_i_1_n.BLIF \
+  ps_save_2_.BLIF ps_rxdata_2_8__un3_n.BLIF ps_save_3_.BLIF ps_rxdata_2_8__un1_n.BLIF ps_psdata_3_0__n.BLIF ps_rxdata_2_8__un0_n.BLIF ps_psdata_3_1__n.BLIF ps_rxdata_2_7__un3_n.BLIF ps_psdata_3_2__n.BLIF \
+  ps_rxdata_2_7__un1_n.BLIF ps_psdata_3_3__n.BLIF ps_rxdata_2_7__un0_n.BLIF ps_psdata29_n.BLIF ps_rxdata_2_6__un3_n.BLIF ps_psdata29_6_n.BLIF ps_rxdata_2_6__un1_n.BLIF ps_psdata32_1_n.BLIF ps_rxdata_2_6__un0_n.BLIF \
+  ps_psdata32_3_n.BLIF ps_rxdata_2_5__un3_n.BLIF ps_psdata28_n.BLIF ps_rxdata_2_5__un1_n.BLIF ps_psdata30_1_n.BLIF ps_rxdata_2_5__un0_n.BLIF ps_psdata27_n.BLIF ps_rxdata_2_4__un3_n.BLIF ps_psdata33_5_n.BLIF \
+  ps_rxdata_2_4__un1_n.BLIF ps_psdata30_4_n.BLIF ps_rxdata_2_4__un0_n.BLIF ps_n_54_1_n.BLIF ps_rxdata_2_3__un3_n.BLIF ps_psdata26_n.BLIF ps_rxdata_2_3__un1_n.BLIF ps_psdata25_n.BLIF ps_rxdata_2_3__un0_n.BLIF \
+  ps_psdata34_6_n.BLIF ps_rxdata_2_2__un3_n.BLIF ps_n_51_1_n.BLIF ps_rxdata_2_2__un1_n.BLIF ps_psdata34_n.BLIF ps_rxdata_2_2__un0_n.BLIF ps_psdata34_2_n.BLIF ps_rxdata_2_1__un3_n.BLIF ps_psdata33_n.BLIF \
+  ps_rxdata_2_1__un1_n.BLIF ps_psdata32_n.BLIF ps_rxdata_2_1__un0_n.BLIF ps_psdata31_n.BLIF ps_psdata_3_3__un3_n.BLIF ps_n_55_1_n.BLIF ps_psdata_3_3__un1_n.BLIF ps_psdata30_n.BLIF ps_psdata_3_3__un0_n.BLIF \
+  ps_psdata30_5_n.BLIF ps_psdata_3_2__un3_n.BLIF ps_un1_psdata34_1_n.BLIF ps_psdata_3_2__un1_n.BLIF ps_n_54_n.BLIF ps_psdata_3_2__un0_n.BLIF ps_n_51_n.BLIF ps_psdata_3_1__un3_n.BLIF ps_n_57_n.BLIF \
+  ps_psdata_3_1__un1_n.BLIF ps_n_50_n.BLIF ps_psdata_3_1__un0_n.BLIF ps_n_55_n.BLIF ps_psdata_3_0__un3_n.BLIF ps_psdata_cnst_3__n.BLIF ps_psdata_3_0__un1_n.BLIF ps_psdata_cnst_1__n.BLIF ps_psdata_3_0__un0_n.BLIF \
+  ps_n_48_n.BLIF ps_n_53_n.BLIF ps_n_52_n.BLIF ps_n_49_n.BLIF ps_psdata34_3_n.BLIF ps_counter_n2.BLIF ps_counter_n3.BLIF ps_counter_n0.BLIF ps_counter_n1.BLIF \
+  ps_rxen_2_n.BLIF ps_un1_rxdata_2_8__n.BLIF ps_un1_rxdata_7__n.BLIF ps_n_24_n.BLIF ps_un1_rxdata_2_7__n.BLIF ps_n_21_n.BLIF ps_n_18_n.BLIF ps_n_20_n.BLIF ps_un1_rxdata_8__n.BLIF \
+  ps_counter_c1_n.BLIF ps_un1_rxdata_6__n.BLIF ps_un1_rxdata_5__n.BLIF ps_un1_rxdata_2_5__n.BLIF ps_un1_rxdata_4__n.BLIF ps_un1_rxdata_3__n.BLIF ps_un1_rxdata_2_3__n.BLIF ps_un1_rxdata_2__n.BLIF ps_un1_rxdata_1__n.BLIF \
+  dynamicshow_n_54_n.BLIF dynamicshow_n_49_n.BLIF dynamicshow_n_61_n.BLIF dynamicshow_n_59_n.BLIF dynamicshow_n_63_n.BLIF dynamicshow_n_60_n.BLIF dynamicshow_n_62_n.BLIF dynamicshow_n_66_n.BLIF dynamicshow_n_58_n.BLIF \
+  dynamicshow_n_57_n.BLIF dynamicshow_n_55_n.BLIF dynamicshow_n_56_n.BLIF dynamicshow_n_67_n.BLIF dynamicshow_n_65_n.BLIF dynamicshow_n_64_n.BLIF dynamicshow_out_2__n.BLIF dynamicshow_out_3__n.BLIF dynamicshow_n_50_n.BLIF \
+  dynamicshow_n_47_n.BLIF ledvcc_i_0__n.BLIF ledvcc_i_3__n.BLIF dynamicshow_sel_i_0__n.BLIF dynamicshow_sel_i_1__n.BLIF data_i_1__n.BLIF data_i_2__n.BLIF data_i_0_0__n.BLIF ps_counter_i_3__n.BLIF \
+  ps_counter_i_1__n.BLIF ps_counter_i_2__n.BLIF ps_counter_i_0__n.BLIF ps_keyclock_r1_i_n.BLIF ps_leden_i_n.BLIF ps_lastrxdata_i_5__n.BLIF ps_lastrxdata_i_7__n.BLIF ps_lastrxdata_i_3__n.BLIF ps_lastrxdata_i_4__n.BLIF \
+  ps_lastrxdata_i_0__n.BLIF ps_lastrxdata_i_1__n.BLIF ps_psdata25_i_n.BLIF ps_psdata26_i_n.BLIF ps_psdata27_i_n.BLIF ps_psdata28_i_n.BLIF ps_psdata30_i_n.BLIF ps_psdata29_i_n.BLIF ps_psdata31_i_n.BLIF \
+  ps_psdata32_i_n.BLIF ps_psdata33_i_n.BLIF ps_psdata34_i_n.BLIF ps_lastrxdata_i_2__n.BLIF ps_lastrxdata_i_6__n.BLIF ps_rxen_i_n.BLIF clkh_c.BLIF clkl_c.BLIF ledvcc_c_0__n.BLIF \
+  ledvcc_c_1__n.BLIF ledvcc_c_2__n.BLIF ledvcc_c_3__n.BLIF show_c_0__n.BLIF show_c_1__n.BLIF show_c_2__n.BLIF show_c_3__n.BLIF show_c_4__n.BLIF show_c_5__n.BLIF \
+  show_c_6__n.BLIF keyData_c.BLIF dynamicshow_n_59_i_n.BLIF show_c_0_3__n.BLIF dynamicshow_n_60_i_n.BLIF dynamicshow_n_61_i_n.BLIF show_c_0_4__n.BLIF dynamicshow_n_47_i_n.BLIF data_i_3__n.BLIF \
+  dynamicshow_n_49_i_n.BLIF dynamicshow_n_50_i_n.BLIF dynamicshow_out_i_3__n.BLIF dynamicshow_out_0_2__n.BLIF dynamicshow_n_64_i_n.BLIF dynamicshow_n_65_i_n.BLIF show_c_i_6__n.BLIF dynamicshow_n_55_i_n.BLIF dynamicshow_n_54_i_n.BLIF \
+  dynamicshow_n_67_i_n.BLIF show_c_0_0__n.BLIF dynamicshow_n_56_i_n.BLIF dynamicshow_n_57_i_n.BLIF show_c_0_1__n.BLIF dynamicshow_n_66_i_n.BLIF dynamicshow_n_58_i_n.BLIF show_c_0_2__n.BLIF dynamicshow_n_62_i_n.BLIF \
+  dynamicshow_n_63_i_n.BLIF show_c_0_5__n.BLIF button0_out3_i_n.BLIF resetButton_i.BLIF button0_out1_i_n.BLIF button0_out2_i_n.BLIF ps_un1_rxdata_2_i_8__n.BLIF ps_rxen_2_i_n.BLIF ps_n_49_i_n.BLIF \
+  ps_n_43_i_n.BLIF ps_n_52_i_n.BLIF ps_n_53_i_n.BLIF ps_psdata_cnst_0_1__n.BLIF ps_n_46_i_n.BLIF ps_n_57_i_n.BLIF ps_psdata34_2_i_n.BLIF ps_psdata_cnst_0_3__n.BLIF ps_n_48_i_n.BLIF \
+  ps_n_55_i_n.BLIF ps_n_54_i_n.BLIF ps_n_51_i_n.BLIF ps_n_50_i_n.BLIF show_c_0_1_5__n.BLIF show_c_0_1_2__n.BLIF show_c_0_2_2__n.BLIF show_c_0_1_1__n.BLIF show_c_0_1_0__n.BLIF \
+  show_c_i_1_6__n.BLIF ps_psdata29_1_n.BLIF ps_psdata28_1_n.BLIF ps_psdata28_2_n.BLIF  
+.outputs LEDVCC_3_ show_6_ LEDVCC_2_ LEDVCC_1_ LEDVCC_0_ show_5_ show_4_ show_3_ show_2_ show_1_ show_0_ \
+  ps_RxData_5_.D ps_RxData_5_.CE ps_RxData_5_.C ps_RxData_6_.D ps_RxData_6_.CE ps_RxData_6_.C ps_RxData_7_.D ps_RxData_7_.CE ps_RxData_7_.C ps_RxData_8_.D ps_RxData_8_.CE \
+  ps_RxData_8_.C ps_lastRxData_5_.D ps_lastRxData_5_.C ps_lastRxData_5_.AR ps_lastRxData_6_.D ps_lastRxData_6_.C ps_lastRxData_6_.AP ps_lastRxData_7_.D ps_lastRxData_7_.C ps_lastRxData_7_.AR ps_RxData_1_.D \
+  ps_RxData_1_.CE ps_RxData_1_.C ps_RxData_2_.D ps_RxData_2_.CE ps_RxData_2_.C ps_RxData_3_.D ps_RxData_3_.CE ps_RxData_3_.C ps_RxData_4_.D ps_RxData_4_.CE ps_RxData_4_.C \
+  ps_counter_2_.D ps_counter_2_.CE ps_counter_2_.C ps_counter_2_.AR ps_counter_3_.D ps_counter_3_.CE ps_counter_3_.C ps_counter_3_.AR ps_lastRxData_0_.D ps_lastRxData_0_.C ps_lastRxData_0_.AP \
+  ps_lastRxData_1_.D ps_lastRxData_1_.C ps_lastRxData_1_.AR ps_lastRxData_2_.D ps_lastRxData_2_.C ps_lastRxData_2_.AP ps_lastRxData_3_.D ps_lastRxData_3_.C ps_lastRxData_3_.AR ps_lastRxData_4_.D ps_lastRxData_4_.C \
+  ps_lastRxData_4_.AR ps_counter_0_.D ps_counter_0_.CE ps_counter_0_.C ps_counter_0_.AR ps_counter_1_.D ps_counter_1_.CE ps_counter_1_.C ps_counter_1_.AR ps_ledEn.D ps_ledEn.C \
+  ps_ledEn.AR ps_RxEn.D ps_RxEn.CE ps_RxEn.C ps_RxEn.AP ps_keyClock_r0.D ps_keyClock_r0.C ps_keyClock_r0.AR ps_keyClock_r1.D ps_keyClock_r1.C ps_keyClock_r1.AR \
+  ps_keyClock_r2.D ps_keyClock_r2.C ps_keyClock_r2.AR dynamicshow_counter4_q_1_.D dynamicshow_counter4_q_1_.C dynamicshow_counter4_q_2_.D dynamicshow_counter4_q_2_.C button0_d1_q_0_.D button0_d1_q_0_.C button0_d2_q_0_.D button0_d2_q_0_.C \
+  button0_d3_q_0_.D button0_d3_q_0_.C ps_save_0_.D ps_save_0_.LH ps_save_1_.D ps_save_1_.LH ps_save_2_.D ps_save_2_.LH ps_save_3_.D ps_save_3_.LH ps_psData_0_.D \
+  ps_psData_0_.LH ps_psData_0_.AR ps_psData_1_.D ps_psData_1_.LH ps_psData_1_.AR ps_psData_2_.D ps_psData_2_.LH ps_psData_2_.AR ps_psData_3_.D ps_psData_3_.LH ps_psData_3_.AR \
+  ps_counter_n1.X1 ps_counter_n1.X2 ps_counter_n3.X1 ps_counter_n3.X2 ps_counter_n2.X1 ps_counter_n2.X2 ps_counter_n0.X1 ps_counter_n0.X2 ps_psdata27_1_n ps_psdata27_2_n ps_psdata26_1_n \
+  resetButton ps_psdata26_2_n ps_psdata26_3_n ps_psdata26_4_n ps_psdata25_1_n ps_psdata25_2_n ps_leden8_1_n ps_leden8_2_n ps_leden8_3_n ps_leden8_4_n ps_leden8_5_n \
+  ps_psdata34_1_n ps_psdata33_1_n ps_psdata32_1_0_n ps_psdata32_2_n ps_psdata31_1_n ps_psdata31_2_n ps_psdata30_1_0_n ps_psdata30_2_n ps_psdata30_5_1_n ps_un1_psdata34_1_1_n ps_un1_psdata34_1_2_n \
+  ps_un1_psdata34_1_3_n ps_un1_psdata34_1_4_n ps_psdata38_n ps_un1_psdata34_1_5_n ps_neg_keyclock_n ps_un1_psdata34_1_6_n ps_un1_psdata34_1_7_n ps_un1_psdata34_1_8_n ps_n_46_i_1_n ps_n_43_i_1_n ps_psdata34_6_1_n \
+  ps_rxdata_0_sqmuxa_n ps_un1_rxdata_1_8__n ps_un1_rxdata_1_6__n ps_un1_rxdata_2_6__n ps_un1_rxdata_1_5__n ps_un1_rxdata_1_4__n ps_un1_rxdata_1_2__n ps_un1_rxdata_1_1__n resetButton_i_1 dynamicshow_n_54_1_n dynamicshow_n_61_1_n \
+  dynamicshow_n_59_1_n dynamicshow_n_47_i_1_n ps_rxdata_2_8__un3_n ps_rxdata_2_8__un1_n ps_psdata_3_0__n ps_rxdata_2_8__un0_n ps_psdata_3_1__n ps_rxdata_2_7__un3_n ps_psdata_3_2__n ps_rxdata_2_7__un1_n ps_psdata_3_3__n \
+  ps_rxdata_2_7__un0_n ps_psdata29_n ps_rxdata_2_6__un3_n ps_psdata29_6_n ps_rxdata_2_6__un1_n ps_psdata32_1_n ps_rxdata_2_6__un0_n ps_psdata32_3_n ps_rxdata_2_5__un3_n ps_psdata28_n ps_rxdata_2_5__un1_n \
+  ps_psdata30_1_n ps_rxdata_2_5__un0_n ps_psdata27_n ps_rxdata_2_4__un3_n ps_psdata33_5_n ps_rxdata_2_4__un1_n ps_psdata30_4_n ps_rxdata_2_4__un0_n ps_n_54_1_n ps_rxdata_2_3__un3_n ps_psdata26_n \
+  ps_rxdata_2_3__un1_n ps_psdata25_n ps_rxdata_2_3__un0_n ps_psdata34_6_n ps_rxdata_2_2__un3_n ps_n_51_1_n ps_rxdata_2_2__un1_n ps_psdata34_n ps_rxdata_2_2__un0_n ps_psdata34_2_n ps_rxdata_2_1__un3_n \
+  ps_psdata33_n ps_rxdata_2_1__un1_n ps_psdata32_n ps_rxdata_2_1__un0_n ps_psdata31_n ps_psdata_3_3__un3_n ps_n_55_1_n ps_psdata_3_3__un1_n ps_psdata30_n ps_psdata_3_3__un0_n ps_psdata30_5_n \
+  ps_psdata_3_2__un3_n ps_un1_psdata34_1_n ps_psdata_3_2__un1_n ps_n_54_n ps_psdata_3_2__un0_n ps_n_51_n ps_psdata_3_1__un3_n ps_n_57_n ps_psdata_3_1__un1_n ps_n_50_n ps_psdata_3_1__un0_n \
+  ps_n_55_n ps_psdata_3_0__un3_n ps_psdata_cnst_3__n ps_psdata_3_0__un1_n ps_psdata_cnst_1__n ps_psdata_3_0__un0_n ps_n_48_n ps_n_53_n ps_n_52_n ps_n_49_n ps_psdata34_3_n \
+  ps_rxen_2_n ps_un1_rxdata_2_8__n ps_un1_rxdata_7__n ps_n_24_n ps_un1_rxdata_2_7__n ps_n_21_n ps_n_18_n ps_n_20_n ps_un1_rxdata_8__n ps_counter_c1_n ps_un1_rxdata_6__n \
+  ps_un1_rxdata_5__n ps_un1_rxdata_2_5__n ps_un1_rxdata_4__n ps_un1_rxdata_3__n ps_un1_rxdata_2_3__n ps_un1_rxdata_2__n ps_un1_rxdata_1__n dynamicshow_n_54_n dynamicshow_n_49_n dynamicshow_n_61_n dynamicshow_n_59_n \
+  dynamicshow_n_63_n dynamicshow_n_60_n dynamicshow_n_62_n dynamicshow_n_66_n dynamicshow_n_58_n dynamicshow_n_57_n dynamicshow_n_55_n dynamicshow_n_56_n dynamicshow_n_67_n dynamicshow_n_65_n dynamicshow_n_64_n \
+  dynamicshow_out_2__n dynamicshow_out_3__n dynamicshow_n_50_n dynamicshow_n_47_n ledvcc_i_0__n ledvcc_i_3__n dynamicshow_sel_i_0__n dynamicshow_sel_i_1__n data_i_1__n data_i_2__n data_i_0_0__n \
+  ps_counter_i_3__n ps_counter_i_1__n ps_counter_i_2__n ps_counter_i_0__n ps_keyclock_r1_i_n ps_leden_i_n ps_lastrxdata_i_5__n ps_lastrxdata_i_7__n ps_lastrxdata_i_3__n ps_lastrxdata_i_4__n ps_lastrxdata_i_0__n \
+  ps_lastrxdata_i_1__n ps_psdata25_i_n ps_psdata26_i_n ps_psdata27_i_n ps_psdata28_i_n ps_psdata30_i_n ps_psdata29_i_n ps_psdata31_i_n ps_psdata32_i_n ps_psdata33_i_n ps_psdata34_i_n \
+  ps_lastrxdata_i_2__n ps_lastrxdata_i_6__n ps_rxen_i_n clkh_c clkl_c ledvcc_c_0__n ledvcc_c_1__n ledvcc_c_2__n ledvcc_c_3__n show_c_0__n show_c_1__n \
+  show_c_2__n show_c_3__n show_c_4__n show_c_5__n show_c_6__n keyData_c dynamicshow_n_59_i_n show_c_0_3__n dynamicshow_n_60_i_n dynamicshow_n_61_i_n show_c_0_4__n \
+  dynamicshow_n_47_i_n data_i_3__n dynamicshow_n_49_i_n dynamicshow_n_50_i_n dynamicshow_out_i_3__n dynamicshow_out_0_2__n dynamicshow_n_64_i_n dynamicshow_n_65_i_n show_c_i_6__n dynamicshow_n_55_i_n dynamicshow_n_54_i_n \
+  dynamicshow_n_67_i_n show_c_0_0__n dynamicshow_n_56_i_n dynamicshow_n_57_i_n show_c_0_1__n dynamicshow_n_66_i_n dynamicshow_n_58_i_n show_c_0_2__n dynamicshow_n_62_i_n dynamicshow_n_63_i_n show_c_0_5__n \
+  button0_out3_i_n resetButton_i button0_out1_i_n button0_out2_i_n ps_un1_rxdata_2_i_8__n ps_rxen_2_i_n ps_n_49_i_n ps_n_43_i_n ps_n_52_i_n ps_n_53_i_n ps_psdata_cnst_0_1__n \
+  ps_n_46_i_n ps_n_57_i_n ps_psdata34_2_i_n ps_psdata_cnst_0_3__n ps_n_48_i_n ps_n_55_i_n ps_n_54_i_n ps_n_51_i_n ps_n_50_i_n show_c_0_1_5__n show_c_0_1_2__n \
+  show_c_0_2_2__n show_c_0_1_1__n show_c_0_1_0__n show_c_i_1_6__n ps_psdata29_1_n ps_psdata28_1_n ps_psdata28_2_n
+.names  ps_counter_c1_n.BLIF ps_un1_rxdata_2_7__n.BLIF ps_un1_rxdata_7__n
+11 1
+.names  clkh_c.BLIF ps_keyClock_r2.C
+1 1
+.names  ps_counter_2_.BLIF ps_counter_i_3__n.BLIF ps_un1_rxdata_2_7__n
+11 1
+.names  ps_counter_i_1__n.BLIF ps_counter_i_3__n.BLIF ps_un1_rxdata_2_5__n
+11 1
+.names  resetButton_i.BLIF ps_keyClock_r2.AR
+1 1
+.names  ps_counter_c1_n.BLIF ps_un1_rxdata_2_3__n.BLIF ps_un1_rxdata_3__n
+11 1
+.names  ps_counter_0_.BLIF ps_counter_i_0__n
+0 1
+.names  ps_counter_2_.BLIF ps_counter_i_2__n
+0 1
+.names  dynamicshow_sel_i_0__n.BLIF dynamicshow_counter4_q_1_.D
+1 1
+.names  ps_counter_i_2__n.BLIF ps_counter_i_3__n.BLIF ps_un1_rxdata_2_3__n
+11 1
+.names  ps_counter_1_.BLIF ps_counter_i_1__n
+0 1
+.names  clkl_c.BLIF dynamicshow_counter4_q_1_.C
+1 1
+.names  ps_counter_3_.BLIF ps_un1_rxdata_2_8__n.BLIF ps_n_24_n
+11 1
+.names  ps_counter_3_.BLIF ps_counter_i_3__n
+0 1
+.names  ps_n_55_1_n.BLIF ps_lastrxdata_i_4__n.BLIF ps_n_55_n
+11 1
+.names  ps_lastRxData_0_.BLIF ps_lastrxdata_i_0__n
+0 1
+.names  clkl_c.BLIF dynamicshow_counter4_q_2_.C
+1 1
+.names  ps_lastrxdata_i_0__n.BLIF ps_lastrxdata_i_3__n.BLIF ps_n_55_1_n
+11 1
+.names  ps_lastRxData_3_.BLIF ps_lastrxdata_i_3__n
+0 1
+.names  ps_lastRxData_4_.BLIF ps_lastrxdata_i_4__n
+0 1
+.names  ps_lastrxdata_i_3__n.BLIF ps_lastrxdata_i_4__n.BLIF ps_psdata34_3_n
+11 1
+.names  clkl_c.BLIF button0_d1_q_0_.C
+1 1
+.names  ps_lastRxData_5_.BLIF ps_lastrxdata_i_5__n
+0 1
+.names  ps_lastRxData_7_.BLIF ps_lastrxdata_i_7__n
+0 1
+.names  ps_psdata30_4_n.BLIF ps_psdata34_3_n.BLIF ps_psdata29_6_n
+11 1
+.names  button0_d1_q_0_.BLIF button0_d2_q_0_.D
+1 1
+.names  ps_ledEn.BLIF ps_leden_i_n
+0 1
+.names  ps_leden_i_n.BLIF resetButton.BLIF ps_psdata38_n
+11 1
+.names  clkl_c.BLIF button0_d2_q_0_.C
+1 1
+.names  ps_keyClock_r1.BLIF ps_keyclock_r1_i_n
+0 1
+.names  ps_keyclock_r1_i_n.BLIF ps_keyClock_r2.BLIF ps_neg_keyclock_n
+11 1
+.names  ps_neg_keyclock_n.BLIF resetButton.BLIF ps_rxdata_0_sqmuxa_n
+11 1
+.names  button0_d2_q_0_.BLIF button0_d3_q_0_.D
+1 1
+.names  ps_counter_i_1__n.BLIF ps_counter_i_2__n.BLIF ps_un1_rxdata_2_8__n
+11 1
+.names  ps_n_54_1_n.BLIF ps_lastrxdata_i_0__n.BLIF ps_n_54_n
+11 1
+.names  clkl_c.BLIF button0_d3_q_0_.C
+1 1
+.names  ps_n_51_1_n.BLIF ps_lastrxdata_i_0__n.BLIF ps_n_51_n
+11 1
+.names  ps_lastRxData_4_.BLIF ps_psdata30_5_n.BLIF ps_n_57_n
+11 1
+.names  ps_un1_psdata34_1_n.BLIF ps_psdata_3_3__un3_n
+0 1
+.names  ps_psdata_3_0__n.BLIF ps_save_0_.D
+1 1
+.names  ps_save_3_.BLIF ps_un1_psdata34_1_n.BLIF ps_psdata_3_3__un1_n
+11 1
+.names  ps_psdata_cnst_3__n.BLIF ps_psdata_3_3__un3_n.BLIF ps_psdata_3_3__un0_n
+11 1
+.names  ps_psdata38_n.BLIF ps_save_0_.LH
+1 1
+.names  ps_psdata_3_3__un1_n.BLIF ps_psdata_3_3__un0_n.BLIF ps_psdata_3_3__n
+1- 1
+-1 1
+.names  ps_un1_psdata34_1_n.BLIF ps_psdata_3_2__un3_n
+0 1
+.names  ps_save_2_.BLIF ps_un1_psdata34_1_n.BLIF ps_psdata_3_2__un1_n
+11 1
+.names  ps_psdata_3_1__n.BLIF ps_save_1_.D
+1 1
+.names  ps_n_46_i_n.BLIF ps_psdata_3_2__un3_n.BLIF ps_psdata_3_2__un0_n
+11 1
+.names  ps_psdata_3_2__un1_n.BLIF ps_psdata_3_2__un0_n.BLIF ps_psdata_3_2__n
+1- 1
+-1 1
+.names  ps_psdata38_n.BLIF ps_save_1_.LH
+1 1
+.names  ps_un1_psdata34_1_n.BLIF ps_psdata_3_1__un3_n
+0 1
+.names  ps_save_1_.BLIF ps_un1_psdata34_1_n.BLIF ps_psdata_3_1__un1_n
+11 1
+.names  ps_psdata_cnst_1__n.BLIF ps_psdata_3_1__un3_n.BLIF ps_psdata_3_1__un0_n
+11 1
+.names  ps_psdata_3_2__n.BLIF ps_save_2_.D
+1 1
+.names  clkh.BLIF clkh_c
+1 1
+.names  ps_psdata_3_1__un1_n.BLIF ps_psdata_3_1__un0_n.BLIF ps_psdata_3_1__n
+1- 1
+-1 1
+.names  clkl.BLIF clkl_c
+1 1
+.names  ps_un1_psdata34_1_n.BLIF ps_psdata_3_0__un3_n
+0 1
+.names  ps_psdata38_n.BLIF ps_save_2_.LH
+1 1
+.names  reset.BLIF button0_d1_q_0_.D
+1 1
+.names  ps_save_0_.BLIF ps_un1_psdata34_1_n.BLIF ps_psdata_3_0__un1_n
+11 1
+.names  ledvcc_c_0__n.BLIF LEDVCC_0_
+1 1
+.names  ps_n_43_i_n.BLIF ps_psdata_3_0__un3_n.BLIF ps_psdata_3_0__un0_n
+11 1
+.names  ledvcc_c_1__n.BLIF LEDVCC_1_
+1 1
+.names  ps_psdata_3_0__un1_n.BLIF ps_psdata_3_0__un0_n.BLIF ps_psdata_3_0__n
+1- 1
+-1 1
+.names  ps_psdata_3_3__n.BLIF ps_save_3_.D
+1 1
+.names  ledvcc_c_2__n.BLIF LEDVCC_2_
+1 1
+.names  ps_lastRxData_1_.BLIF ps_lastrxdata_i_1__n
+0 1
+.names  ledvcc_c_3__n.BLIF LEDVCC_3_
+1 1
+.names  ps_lastRxData_1_.BLIF ps_lastRxData_5_.BLIF ps_n_48_i_n
+11 1
+.names  ps_psdata38_n.BLIF ps_save_3_.LH
+1 1
+.names  show_c_0__n.BLIF show_0_
+1 1
+.names  ps_n_57_i_n.BLIF ps_psdata34_2_i_n.BLIF ps_psdata_cnst_0_3__n
+11 1
+.names  show_c_1__n.BLIF show_1_
+1 1
+.names  ps_n_52_i_n.BLIF ps_n_53_i_n.BLIF ps_psdata_cnst_0_1__n
+11 1
+.names  show_c_2__n.BLIF show_2_
+1 1
+.names  ps_n_48_i_n.BLIF ps_lastrxdata_i_3__n.BLIF ps_n_53_n
+11 1
+.names  ps_psdata_3_0__n.BLIF ps_psData_0_.D
+1 1
+.names  show_c_3__n.BLIF show_3_
+1 1
+.names  ps_n_48_n.BLIF ps_lastRxData_3_.BLIF ps_n_52_n
+11 1
+.names  show_c_4__n.BLIF show_4_
+1 1
+.names  ps_lastRxData_0_.BLIF ps_lastrxdata_i_4__n.BLIF ps_n_50_n
+11 1
+.names  ps_leden_i_n.BLIF ps_psData_0_.LH
+1 1
+.names  show_c_5__n.BLIF show_5_
+1 1
+.names  ps_lastRxData_3_.BLIF ps_lastrxdata_i_5__n.BLIF ps_n_49_n
+11 1
+.names  show_c_6__n.BLIF show_6_
+1 1
+.names  ps_lastRxData_1_.BLIF ps_lastRxData_2_.BLIF ps_psdata30_1_n
+11 1
+.names  resetButton_i.BLIF ps_psData_0_.AR
+1 1
+.names  keyClock.BLIF ps_keyClock_r0.D
+1 1
+.names  ps_lastRxData_0_.BLIF ps_lastRxData_2_.BLIF ps_psdata32_1_n
+11 1
+.names  keyData.BLIF keyData_c
+1 1
+.names  ps_lastRxData_2_.BLIF ps_lastrxdata_i_2__n
+0 1
+.names  dynamicshow_n_49_n.BLIF ps_psData_0_.BLIF dynamicshow_n_54_1_n
+11 1
+.names  ps_lastRxData_4_.BLIF ps_lastRxData_5_.BLIF ps_n_51_1_n
+11 1
+.names  ps_psdata_3_1__n.BLIF ps_psData_1_.D
+1 1
+.names  dynamicshow_n_54_1_n.BLIF ps_psData_1_.BLIF dynamicshow_n_54_n
+11 1
+.names  ps_lastRxData_6_.BLIF ps_lastrxdata_i_0__n.BLIF ps_psdata34_2_n
+11 1
+.names  data_i_0_0__n.BLIF ps_psData_1_.BLIF dynamicshow_n_61_1_n
+11 1
+.names  ps_psdata33_n.BLIF ps_psdata33_i_n
+0 1
+.names  ps_leden_i_n.BLIF ps_psData_1_.LH
+1 1
+.names  dynamicshow_n_61_1_n.BLIF data_i_2__n.BLIF dynamicshow_n_61_n
+11 1
+.names  ps_psdata34_n.BLIF ps_psdata34_i_n
+0 1
+.names  ps_psData_2_.BLIF ps_psData_0_.BLIF dynamicshow_n_59_1_n
+11 1
+.names  ps_psdata31_n.BLIF ps_psdata31_i_n
+0 1
+.names  resetButton_i.BLIF ps_psData_1_.AR
+1 1
+.names  dynamicshow_n_59_1_n.BLIF ps_psData_1_.BLIF dynamicshow_n_59_n
+11 1
+.names  ps_psdata32_n.BLIF ps_psdata32_i_n
+0 1
+.names  data_i_2__n.BLIF ledvcc_c_0__n.BLIF dynamicshow_n_47_i_1_n
+11 1
+.names  ps_psdata30_n.BLIF ps_psdata30_i_n
+0 1
+.names  dynamicshow_n_47_i_1_n.BLIF data_i_1__n.BLIF dynamicshow_n_47_i_n
+11 1
+.names  ps_psdata29_n.BLIF ps_psdata29_i_n
+0 1
+.names  ps_psdata_3_2__n.BLIF ps_psData_2_.D
+1 1
+.names  ps_counter_3_.BLIF ps_counter_i_0__n.BLIF ps_un1_rxdata_1_8__n
+11 1
+.names  ps_psdata27_n.BLIF ps_psdata27_i_n
+0 1
+.names  ps_un1_rxdata_1_8__n.BLIF ps_un1_rxdata_2_8__n.BLIF ps_un1_rxdata_8__n
+11 1
+.names  ps_psdata28_n.BLIF ps_psdata28_i_n
+0 1
+.names  ps_leden_i_n.BLIF ps_psData_2_.LH
+1 1
+.names  ps_counter_1_.BLIF ps_counter_2_.BLIF ps_un1_rxdata_1_6__n
+11 1
+.names  ps_psdata25_n.BLIF ps_psdata25_i_n
+0 1
+.names  ps_counter_i_0__n.BLIF ps_counter_i_3__n.BLIF ps_un1_rxdata_2_6__n
+11 1
+.names  ps_psdata26_n.BLIF ps_psdata26_i_n
+0 1
+.names  resetButton_i.BLIF ps_psData_2_.AR
+1 1
+.names  ps_un1_rxdata_1_6__n.BLIF ps_un1_rxdata_2_6__n.BLIF ps_un1_rxdata_6__n
+11 1
+.names  ps_lastRxData_5_.BLIF ps_lastrxdata_i_1__n.BLIF ps_psdata32_3_n
+11 1
+.names  ps_counter_0_.BLIF ps_counter_2_.BLIF ps_un1_rxdata_1_5__n
+11 1
+.names  ps_n_54_1_n.BLIF ps_psdata30_1_n.BLIF ps_psdata33_5_n
+11 1
+.names  ps_un1_rxdata_1_5__n.BLIF ps_un1_rxdata_2_5__n.BLIF ps_un1_rxdata_5__n
+11 1
+.names  ps_lastRxData_3_.BLIF ps_lastRxData_4_.BLIF ps_n_54_1_n
+11 1
+.names  ps_psdata_3_3__n.BLIF ps_psData_3_.D
+1 1
+.names  ps_counter_2_.BLIF ps_counter_i_0__n.BLIF ps_un1_rxdata_1_4__n
+11 1
+.names  ps_lastRxData_6_.BLIF ps_lastrxdata_i_6__n
+0 1
+.names  ps_un1_rxdata_1_4__n.BLIF ps_un1_rxdata_2_5__n.BLIF ps_un1_rxdata_4__n
+11 1
+.names  ps_lastrxdata_i_6__n.BLIF ps_lastrxdata_i_7__n.BLIF ps_psdata30_4_n
+11 1
+.names  ps_leden_i_n.BLIF ps_psData_3_.LH
+1 1
+.names  ps_counter_1_.BLIF ps_counter_i_0__n.BLIF ps_un1_rxdata_1_2__n
+11 1
+.names  ps_counter_n0.BLIF ps_counter_0_.D
+0 1
+.names  ps_un1_rxdata_1_2__n.BLIF ps_un1_rxdata_2_3__n.BLIF ps_un1_rxdata_2__n
+11 1
+.names  ps_RxEn.BLIF ps_rxen_i_n
+0 1
+.names  resetButton_i.BLIF ps_psData_3_.AR
+1 1
+.names  ps_counter_0_.BLIF ps_counter_i_1__n.BLIF ps_un1_rxdata_1_1__n
+11 1
+.names  ps_un1_rxdata_1_1__n.BLIF ps_un1_rxdata_2_3__n.BLIF ps_un1_rxdata_1__n
+11 1
+.names  button0_out3_i_n.BLIF button0_out1_i_n.BLIF resetButton_i_1
+11 1
+.names  ps_n_18_n.BLIF ps_counter_n1.X1
+1 1
+.names  resetButton_i_1.BLIF button0_out2_i_n.BLIF resetButton_i
+11 1
+.names  ps_psdata33_i_n.BLIF ps_psdata34_i_n.BLIF ps_un1_psdata34_1_1_n
+11 1
+.names  ps_n_20_n.BLIF ps_counter_n1.X2
+1 1
+.names  ps_psdata25_i_n.BLIF ps_psdata26_i_n.BLIF ps_un1_psdata34_1_2_n
+11 1
+.names  ps_psdata27_i_n.BLIF ps_psdata28_i_n.BLIF ps_un1_psdata34_1_3_n
+11 1
+.names  ps_psdata29_i_n.BLIF ps_psdata30_i_n.BLIF ps_un1_psdata34_1_4_n
+11 1
+.names  ps_n_24_n.BLIF ps_counter_n3.X1
+1 1
+.names  ps_psdata31_i_n.BLIF ps_psdata32_i_n.BLIF ps_un1_psdata34_1_5_n
+11 1
+.names  ps_un1_psdata34_1_1_n.BLIF ps_un1_psdata34_1_2_n.BLIF ps_un1_psdata34_1_6_n
+11 1
+.names  ps_un1_rxdata_7__n.BLIF ps_counter_n3.X2
+1 1
+.names  ps_un1_psdata34_1_3_n.BLIF ps_un1_psdata34_1_4_n.BLIF ps_un1_psdata34_1_7_n
+11 1
+.names  ps_un1_psdata34_1_6_n.BLIF ps_un1_psdata34_1_7_n.BLIF ps_un1_psdata34_1_8_n
+11 1
+.names  ps_un1_psdata34_1_8_n.BLIF ps_un1_psdata34_1_5_n.BLIF ps_un1_psdata34_1_n
+11 1
+.names  ps_n_21_n.BLIF ps_counter_n2.X1
+1 1
+.names  ps_n_54_i_n.BLIF ps_n_55_i_n.BLIF ps_n_46_i_1_n
+11 1
+.names  ps_n_46_i_1_n.BLIF ps_lastRxData_5_.BLIF ps_n_46_i_n
+11 1
+.names  ps_un1_rxdata_2_7__n.BLIF ps_counter_n2.X2
+1 1
+.names  ps_n_49_i_n.BLIF ps_n_50_i_n.BLIF ps_n_43_i_1_n
+11 1
+.names  ps_n_43_i_1_n.BLIF ps_n_51_i_n.BLIF ps_n_43_i_n
+11 1
+.names  ps_psdata34_3_n.BLIF ps_lastrxdata_i_5__n.BLIF ps_psdata34_6_1_n
+11 1
+.names  ps_n_18_n.BLIF ps_counter_n0.X1
+1 1
+.names  ps_psdata34_6_1_n.BLIF ps_lastrxdata_i_7__n.BLIF ps_psdata34_6_n
+11 1
+.names  ps_rxdata_0_sqmuxa_n.BLIF ps_RxData_5_.CE
+1 1
+.names  ps_psdata30_1_n.BLIF ps_psdata34_2_n.BLIF ps_psdata34_1_n
+11 1
+.names  ps_rxen_2_i_n.BLIF ps_counter_n0.X2
+1 1
+.names  ps_psdata34_1_n.BLIF ps_psdata34_6_n.BLIF ps_psdata34_n
+11 1
+.names  clkh_c.BLIF ps_RxData_5_.C
+1 1
+.names  ps_lastrxdata_i_0__n.BLIF ps_psdata30_4_n.BLIF ps_psdata33_1_n
+11 1
+.names  ps_psdata33_1_n.BLIF ps_psdata33_5_n.BLIF ps_psdata33_n
+11 1
+.names  ps_counter_n2.BLIF ps_counter_2_.D
+1 1
+.names  ps_n_54_1_n.BLIF ps_psdata30_4_n.BLIF ps_psdata32_1_0_n
+11 1
+.names  ps_counter_n3.BLIF ps_counter_3_.D
+1 1
+.names  ps_psdata32_1_n.BLIF ps_psdata32_3_n.BLIF ps_psdata32_2_n
+11 1
+.names  ps_rxdata_0_sqmuxa_n.BLIF ps_RxData_6_.CE
+1 1
+.names  ps_counter_n1.BLIF ps_counter_1_.D
+1 1
+.names  ps_psdata32_1_0_n.BLIF ps_psdata32_2_n.BLIF ps_psdata32_n
+11 1
+.names  ps_keyClock_r0.BLIF ps_keyClock_r1.D
+1 1
+.names  ps_n_51_1_n.BLIF ps_n_55_1_n.BLIF ps_psdata31_1_n
+11 1
+.names  clkh_c.BLIF ps_RxData_6_.C
+1 1
+.names  ps_psdata30_1_n.BLIF ps_psdata30_4_n.BLIF ps_psdata31_2_n
+11 1
+.names  ps_psdata31_1_n.BLIF ps_psdata31_2_n.BLIF ps_psdata31_n
+11 1
+.names  ps_lastrxdata_i_0__n.BLIF ps_lastrxdata_i_4__n.BLIF ps_psdata30_1_0_n
+11 1
+.names  ps_psdata30_4_n.BLIF ps_psdata30_5_n.BLIF ps_psdata30_2_n
+11 1
+.names  ps_rxdata_0_sqmuxa_n.BLIF ps_RxData_7_.CE
+1 1
+.names  ps_psdata30_1_0_n.BLIF ps_psdata30_2_n.BLIF ps_psdata30_n
+11 1
+.names  ps_psdata30_1_n.BLIF ps_lastRxData_3_.BLIF ps_psdata30_5_1_n
+11 1
+.names  clkh_c.BLIF ps_RxData_7_.C
+1 1
+.names  ps_psdata30_5_1_n.BLIF ps_lastRxData_5_.BLIF ps_psdata30_5_n
+11 1
+.names  ps_psdata27_1_n.BLIF ps_psdata27_2_n.BLIF ps_psdata27_n
+11 1
+.names  ps_psdata30_1_n.BLIF ps_psdata30_4_n.BLIF ps_psdata26_1_n
+11 1
+.names  ps_lastRxData_4_.BLIF ps_lastrxdata_i_0__n.BLIF ps_psdata26_2_n
+11 1
+.names  ps_rxdata_0_sqmuxa_n.BLIF ps_RxData_8_.CE
+1 1
+.names  ps_lastrxdata_i_3__n.BLIF ps_lastrxdata_i_5__n.BLIF ps_psdata26_3_n
+11 1
+.names  ps_psdata26_1_n.BLIF ps_psdata26_2_n.BLIF ps_psdata26_4_n
+11 1
+.names  clkh_c.BLIF ps_RxData_8_.C
+1 1
+.names  ps_psdata26_4_n.BLIF ps_psdata26_3_n.BLIF ps_psdata26_n
+11 1
+.names  ps_lastRxData_6_.BLIF ps_lastrxdata_i_1__n.BLIF ps_psdata25_1_n
+11 1
+.names  ps_psdata32_1_n.BLIF ps_psdata34_6_n.BLIF ps_psdata25_2_n
+11 1
+.names  ps_RxData_6_.BLIF ps_lastRxData_5_.D
+1 1
+.names  ps_psdata25_1_n.BLIF ps_psdata25_2_n.BLIF ps_psdata25_n
+11 1
+.names  ps_n_51_1_n.BLIF ps_lastRxData_6_.BLIF ps_leden8_1_n
+11 1
+.names  ps_rxen_i_n.BLIF ps_lastRxData_5_.C
+1 1
+.names  ps_lastRxData_7_.BLIF ps_lastrxdata_i_0__n.BLIF ps_leden8_2_n
+11 1
+.names  ps_lastrxdata_i_3__n.BLIF ps_lastrxdata_i_1__n.BLIF ps_leden8_3_n
+11 1
+.names  resetButton_i.BLIF ps_lastRxData_5_.AR
+1 1
+.names  ps_leden8_1_n.BLIF ps_leden8_2_n.BLIF ps_leden8_4_n
+11 1
+.names  ps_leden8_3_n.BLIF ps_lastrxdata_i_2__n.BLIF ps_leden8_5_n
+11 1
+.names  ps_leden8_4_n.BLIF ps_leden8_5_n.BLIF ps_ledEn.D
+11 1
+.names  ps_RxData_7_.BLIF ps_lastRxData_6_.D
+1 1
+.names  dynamicshow_n_58_i_n.BLIF dynamicshow_n_66_i_n.BLIF show_c_0_2_2__n
+11 1
+.names  show_c_0_1_2__n.BLIF show_c_0_2_2__n.BLIF show_c_0_2__n
+11 1
+.names  ps_rxen_i_n.BLIF ps_lastRxData_6_.C
+1 1
+.names  dynamicshow_n_57_i_n.BLIF dynamicshow_n_55_i_n.BLIF show_c_0_1_1__n
+11 1
+.names  show_c_0_1_1__n.BLIF dynamicshow_n_56_i_n.BLIF show_c_0_1__n
+11 1
+.names  resetButton_i.BLIF ps_lastRxData_6_.AP
+1 1
+.names  dynamicshow_n_67_i_n.BLIF dynamicshow_n_54_i_n.BLIF show_c_0_1_0__n
+11 1
+.names  show_c_0_1_0__n.BLIF dynamicshow_n_55_i_n.BLIF show_c_0_0__n
+11 1
+.names  dynamicshow_n_65_i_n.BLIF dynamicshow_n_60_i_n.BLIF show_c_i_1_6__n
+11 1
+.names  ps_RxData_8_.BLIF ps_lastRxData_7_.D
+1 1
+.names  show_c_i_1_6__n.BLIF dynamicshow_n_64_i_n.BLIF show_c_i_6__n
+11 1
+.names  ps_psdata29_6_n.BLIF ps_psdata32_1_n.BLIF ps_psdata29_1_n
+11 1
+.names  ps_rxen_i_n.BLIF ps_lastRxData_7_.C
+1 1
+.names  ps_psdata29_1_n.BLIF ps_psdata32_3_n.BLIF ps_psdata29_n
+11 1
+.names  ps_lastRxData_5_.BLIF ps_lastrxdata_i_0__n.BLIF ps_psdata28_1_n
+11 1
+.names  resetButton_i.BLIF ps_lastRxData_7_.AR
+1 1
+.names  ps_psdata29_6_n.BLIF ps_psdata30_1_n.BLIF ps_psdata28_2_n
+11 1
+.names  ps_psdata28_1_n.BLIF ps_psdata28_2_n.BLIF ps_psdata28_n
+11 1
+.names  ps_lastrxdata_i_0__n.BLIF ps_lastrxdata_i_5__n.BLIF ps_psdata27_1_n
+11 1
+.names  ps_psdata30_4_n.BLIF ps_psdata33_5_n.BLIF ps_psdata27_2_n
+11 1
+.names  ps_rxdata_0_sqmuxa_n.BLIF ps_RxData_1_.CE
+1 1
+.names  ps_n_49_n.BLIF ps_n_49_i_n
+0 1
+.names  ps_n_52_n.BLIF ps_n_52_i_n
+0 1
+.names  clkh_c.BLIF ps_RxData_1_.C
+1 1
+.names  ps_n_53_n.BLIF ps_n_53_i_n
+0 1
+.names  ps_psdata_cnst_0_1__n.BLIF ps_psdata_cnst_1__n
+0 1
+.names  ps_n_57_n.BLIF ps_n_57_i_n
+0 1
+.names  ps_psdata34_2_n.BLIF ps_psdata34_2_i_n
+0 1
+.names  ps_rxdata_0_sqmuxa_n.BLIF ps_RxData_2_.CE
+1 1
+.names  ps_psdata_cnst_0_3__n.BLIF ps_psdata_cnst_3__n
+0 1
+.names  ps_n_48_i_n.BLIF ps_n_48_n
+0 1
+.names  clkh_c.BLIF ps_RxData_2_.C
+1 1
+.names  ps_n_55_n.BLIF ps_n_55_i_n
+0 1
+.names  ps_n_54_n.BLIF ps_n_54_i_n
+0 1
+.names  ps_n_51_n.BLIF ps_n_51_i_n
+0 1
+.names  ps_n_50_n.BLIF ps_n_50_i_n
+0 1
+.names  ps_rxdata_0_sqmuxa_n.BLIF ps_RxData_3_.CE
+1 1
+.names  dynamicshow_n_63_i_n.BLIF dynamicshow_n_60_i_n.BLIF show_c_0_1_5__n
+11 1
+.names  show_c_0_1_5__n.BLIF dynamicshow_n_62_i_n.BLIF show_c_0_5__n
+11 1
+.names  clkh_c.BLIF ps_RxData_3_.C
+1 1
+.names  ledvcc_c_0__n.BLIF data_i_0_0__n.BLIF show_c_0_1_2__n
+11 1
+.names  dynamicshow_n_56_n.BLIF dynamicshow_n_56_i_n
+0 1
+.names  dynamicshow_n_57_n.BLIF dynamicshow_n_57_i_n
+0 1
+.names  show_c_0_1__n.BLIF show_c_1__n
+0 1
+.names  ps_rxdata_0_sqmuxa_n.BLIF ps_RxData_4_.CE
+1 1
+.names  dynamicshow_n_66_n.BLIF dynamicshow_n_66_i_n
+0 1
+.names  dynamicshow_n_58_n.BLIF dynamicshow_n_58_i_n
+0 1
+.names  clkh_c.BLIF ps_RxData_4_.C
+1 1
+.names  show_c_0_2__n.BLIF show_c_2__n
+0 1
+.names  dynamicshow_n_62_n.BLIF dynamicshow_n_62_i_n
+0 1
+.names  dynamicshow_n_63_n.BLIF dynamicshow_n_63_i_n
+0 1
+.names  show_c_0_5__n.BLIF show_c_5__n
+0 1
+.names  ps_neg_keyclock_n.BLIF ps_counter_2_.CE
+1 1
+.names  button0_d3_q_0_.BLIF button0_out3_i_n
+0 1
+.names  resetButton_i.BLIF resetButton
+0 1
+.names  clkh_c.BLIF ps_counter_2_.C
+1 1
+.names  button0_d1_q_0_.BLIF button0_out1_i_n
+0 1
+.names  button0_d2_q_0_.BLIF button0_out2_i_n
+0 1
+.names  resetButton_i.BLIF ps_counter_2_.AR
+1 1
+.names  ps_un1_rxdata_2_8__n.BLIF ps_un1_rxdata_2_i_8__n
+0 1
+.names  ps_rxen_2_i_n.BLIF ps_rxen_2_n
+0 1
+.names  dynamicshow_n_61_n.BLIF dynamicshow_n_61_i_n
+0 1
+.names  show_c_0_4__n.BLIF show_c_4__n
+0 1
+.names  ps_neg_keyclock_n.BLIF ps_counter_3_.CE
+1 1
+.names  dynamicshow_n_47_i_n.BLIF dynamicshow_n_47_n
+0 1
+.names  ps_psData_3_.BLIF data_i_3__n
+0 1
+.names  clkh_c.BLIF ps_counter_3_.C
+1 1
+.names  dynamicshow_n_49_i_n.BLIF dynamicshow_n_49_n
+0 1
+.names  dynamicshow_n_50_i_n.BLIF dynamicshow_n_50_n
+0 1
+.names  resetButton_i.BLIF ps_counter_3_.AR
+1 1
+.names  dynamicshow_out_i_3__n.BLIF dynamicshow_out_3__n
+0 1
+.names  dynamicshow_out_0_2__n.BLIF dynamicshow_out_2__n
+0 1
+.names  dynamicshow_n_64_n.BLIF dynamicshow_n_64_i_n
+0 1
+.names  ps_RxData_1_.BLIF ps_lastRxData_0_.D
+1 1
+.names  dynamicshow_n_65_n.BLIF dynamicshow_n_65_i_n
+0 1
+.names  show_c_i_6__n.BLIF show_c_6__n
+0 1
+.names  ps_rxen_i_n.BLIF ps_lastRxData_0_.C
+1 1
+.names  dynamicshow_n_55_n.BLIF dynamicshow_n_55_i_n
+0 1
+.names  dynamicshow_n_54_n.BLIF dynamicshow_n_54_i_n
+0 1
+.names  resetButton_i.BLIF ps_lastRxData_0_.AP
+1 1
+.names  dynamicshow_n_67_n.BLIF dynamicshow_n_67_i_n
+0 1
+.names  show_c_0_0__n.BLIF show_c_0__n
+0 1
+.names  dynamicshow_n_59_n.BLIF dynamicshow_n_59_i_n
+0 1
+.names  ps_RxData_2_.BLIF ps_lastRxData_1_.D
+1 1
+.names  show_c_0_3__n.BLIF show_c_3__n
+0 1
+.names  dynamicshow_n_60_n.BLIF dynamicshow_n_60_i_n
+0 1
+.names  ps_rxen_i_n.BLIF ps_lastRxData_1_.C
+1 1
+.names  ps_psData_1_.BLIF dynamicshow_n_50_n.BLIF dynamicshow_n_56_n
+11 1
+.names  dynamicshow_out_2__n.BLIF dynamicshow_out_3__n.BLIF dynamicshow_n_55_n
+11 1
+.names  resetButton_i.BLIF ps_lastRxData_1_.AR
+1 1
+.names  dynamicshow_counter4_q_2_.BLIF dynamicshow_sel_i_0__n.BLIF ledvcc_c_2__n
+11 1
+.names  dynamicshow_counter4_q_1_.BLIF dynamicshow_sel_i_1__n.BLIF ledvcc_c_1__n
+11 1
+.names  dynamicshow_counter4_q_1_.BLIF dynamicshow_sel_i_0__n
+0 1
+.names  ps_RxData_3_.BLIF ps_lastRxData_2_.D
+1 1
+.names  dynamicshow_counter4_q_2_.BLIF dynamicshow_sel_i_1__n
+0 1
+.names  dynamicshow_sel_i_0__n.BLIF dynamicshow_sel_i_1__n.BLIF ledvcc_c_0__n
+11 1
+.names  ps_rxen_i_n.BLIF ps_lastRxData_2_.C
+1 1
+.names  ledvcc_c_0__n.BLIF ledvcc_i_0__n
+0 1
+.names  ledvcc_c_3__n.BLIF ledvcc_i_3__n
+0 1
+.names  resetButton_i.BLIF ps_lastRxData_2_.AP
+1 1
+.names  ledvcc_i_0__n.BLIF ledvcc_i_3__n.BLIF dynamicshow_counter4_q_2_.D
+11 1
+.names  dynamicshow_counter4_q_1_.BLIF dynamicshow_counter4_q_2_.BLIF ledvcc_c_3__n
+11 1
+.names  ps_psData_2_.BLIF data_i_2__n
+0 1
+.names  ps_RxData_4_.BLIF ps_lastRxData_3_.D
+1 1
+.names  ps_psData_2_.BLIF data_i_0_0__n.BLIF dynamicshow_n_50_i_n
+11 1
+.names  data_i_2__n.BLIF data_i_3__n.BLIF dynamicshow_n_49_i_n
+11 1
+.names  ps_rxen_i_n.BLIF ps_lastRxData_3_.C
+1 1
+.names  dynamicshow_n_60_i_n.BLIF dynamicshow_n_61_i_n.BLIF show_c_0_4__n
+11 1
+.names  dynamicshow_n_59_i_n.BLIF show_c_i_6__n.BLIF show_c_0_3__n
+11 1
+.names  resetButton_i.BLIF ps_lastRxData_3_.AR
+1 1
+.names  dynamicshow_n_47_i_n.BLIF dynamicshow_out_i_3__n.BLIF dynamicshow_n_67_n
+11 1
+.names  ps_psData_2_.BLIF data_i_1__n.BLIF dynamicshow_n_66_n
+11 1
+.names  ps_psData_0_.BLIF dynamicshow_n_67_n.BLIF dynamicshow_n_65_n
+11 1
+.names  ps_RxData_5_.BLIF ps_lastRxData_4_.D
+1 1
+.names  ps_psData_1_.BLIF data_i_1__n
+0 1
+.names  data_i_1__n.BLIF dynamicshow_n_50_i_n.BLIF dynamicshow_n_64_n
+11 1
+.names  ps_rxen_i_n.BLIF ps_lastRxData_4_.C
+1 1
+.names  ps_psData_1_.BLIF dynamicshow_n_50_i_n.BLIF dynamicshow_n_63_n
+11 1
+.names  ps_psData_0_.BLIF dynamicshow_n_66_n.BLIF dynamicshow_n_62_n
+11 1
+.names  resetButton_i.BLIF ps_lastRxData_4_.AR
+1 1
+.names  dynamicshow_n_47_n.BLIF dynamicshow_out_3__n.BLIF dynamicshow_n_60_n
+11 1
+.names  ps_psData_1_.BLIF ps_psData_3_.BLIF dynamicshow_n_58_n
+11 1
+.names  ps_psData_0_.BLIF dynamicshow_n_49_i_n.BLIF dynamicshow_n_57_n
+11 1
+.names  ps_counter_1_.BLIF ps_counter_i_3__n.BLIF ps_n_20_n
+11 1
+.names  ps_neg_keyclock_n.BLIF ps_counter_0_.CE
+1 1
+.names  ps_rxen_2_n.BLIF ps_counter_0_.BLIF ps_n_18_n
+11 1
+.names  ps_rxen_2_n.BLIF ps_counter_c1_n.BLIF ps_n_21_n
+11 1
+.names  clkh_c.BLIF ps_counter_0_.C
+1 1
+.names  ps_counter_0_.BLIF ps_counter_1_.BLIF ps_counter_c1_n
+11 1
+.names  ps_un1_rxdata_8__n.BLIF ps_rxdata_2_8__un3_n
+0 1
+.names  resetButton_i.BLIF ps_counter_0_.AR
+1 1
+.names  keyData_c.BLIF ps_un1_rxdata_8__n.BLIF ps_rxdata_2_8__un1_n
+11 1
+.names  ps_RxData_8_.BLIF ps_rxdata_2_8__un3_n.BLIF ps_rxdata_2_8__un0_n
+11 1
+.names  ps_rxdata_2_8__un1_n.BLIF ps_rxdata_2_8__un0_n.BLIF ps_RxData_8_.D
+1- 1
+-1 1
+.names  ps_un1_rxdata_7__n.BLIF ps_rxdata_2_7__un3_n
+0 1
+.names  ps_neg_keyclock_n.BLIF ps_counter_1_.CE
+1 1
+.names  keyData_c.BLIF ps_un1_rxdata_7__n.BLIF ps_rxdata_2_7__un1_n
+11 1
+.names  ps_RxData_7_.BLIF ps_rxdata_2_7__un3_n.BLIF ps_rxdata_2_7__un0_n
+11 1
+.names  clkh_c.BLIF ps_counter_1_.C
+1 1
+.names  ps_rxdata_2_7__un1_n.BLIF ps_rxdata_2_7__un0_n.BLIF ps_RxData_7_.D
+1- 1
+-1 1
+.names  ps_un1_rxdata_6__n.BLIF ps_rxdata_2_6__un3_n
+0 1
+.names  resetButton_i.BLIF ps_counter_1_.AR
+1 1
+.names  keyData_c.BLIF ps_un1_rxdata_6__n.BLIF ps_rxdata_2_6__un1_n
+11 1
+.names  ps_RxData_6_.BLIF ps_rxdata_2_6__un3_n.BLIF ps_rxdata_2_6__un0_n
+11 1
+.names  ps_rxdata_2_6__un1_n.BLIF ps_rxdata_2_6__un0_n.BLIF ps_RxData_6_.D
+1- 1
+-1 1
+.names  ps_un1_rxdata_5__n.BLIF ps_rxdata_2_5__un3_n
+0 1
+.names  ps_rxen_i_n.BLIF ps_ledEn.C
+1 1
+.names  keyData_c.BLIF ps_un1_rxdata_5__n.BLIF ps_rxdata_2_5__un1_n
+11 1
+.names  ps_RxData_5_.BLIF ps_rxdata_2_5__un3_n.BLIF ps_rxdata_2_5__un0_n
+11 1
+.names  resetButton_i.BLIF ps_ledEn.AR
+1 1
+.names  ps_rxdata_2_5__un1_n.BLIF ps_rxdata_2_5__un0_n.BLIF ps_RxData_5_.D
+1- 1
+-1 1
+.names  ps_un1_rxdata_4__n.BLIF ps_rxdata_2_4__un3_n
+0 1
+.names  keyData_c.BLIF ps_un1_rxdata_4__n.BLIF ps_rxdata_2_4__un1_n
+11 1
+.names  ps_rxen_2_n.BLIF ps_RxEn.D
+1 1
+.names  ps_RxData_4_.BLIF ps_rxdata_2_4__un3_n.BLIF ps_rxdata_2_4__un0_n
+11 1
+.names  ps_rxdata_2_4__un1_n.BLIF ps_rxdata_2_4__un0_n.BLIF ps_RxData_4_.D
+1- 1
+-1 1
+.names  ps_neg_keyclock_n.BLIF ps_RxEn.CE
+1 1
+.names  ps_un1_rxdata_3__n.BLIF ps_rxdata_2_3__un3_n
+0 1
+.names  keyData_c.BLIF ps_un1_rxdata_3__n.BLIF ps_rxdata_2_3__un1_n
+11 1
+.names  clkh_c.BLIF ps_RxEn.C
+1 1
+.names  ps_RxData_3_.BLIF ps_rxdata_2_3__un3_n.BLIF ps_rxdata_2_3__un0_n
+11 1
+.names  ps_rxdata_2_3__un1_n.BLIF ps_rxdata_2_3__un0_n.BLIF ps_RxData_3_.D
+1- 1
+-1 1
+.names  resetButton_i.BLIF ps_RxEn.AP
+1 1
+.names  ps_un1_rxdata_2__n.BLIF ps_rxdata_2_2__un3_n
+0 1
+.names  keyData_c.BLIF ps_un1_rxdata_2__n.BLIF ps_rxdata_2_2__un1_n
+11 1
+.names  ps_RxData_2_.BLIF ps_rxdata_2_2__un3_n.BLIF ps_rxdata_2_2__un0_n
+11 1
+.names  ps_rxdata_2_2__un1_n.BLIF ps_rxdata_2_2__un0_n.BLIF ps_RxData_2_.D
+1- 1
+-1 1
+.names  clkh_c.BLIF ps_keyClock_r0.C
+1 1
+.names  ps_un1_rxdata_1__n.BLIF ps_rxdata_2_1__un3_n
+0 1
+.names  keyData_c.BLIF ps_un1_rxdata_1__n.BLIF ps_rxdata_2_1__un1_n
+11 1
+.names  resetButton_i.BLIF ps_keyClock_r0.AR
+1 1
+.names  ps_RxData_1_.BLIF ps_rxdata_2_1__un3_n.BLIF ps_rxdata_2_1__un0_n
+11 1
+.names  ps_rxdata_2_1__un1_n.BLIF ps_rxdata_2_1__un0_n.BLIF ps_RxData_1_.D
+1- 1
+-1 1
+.names  ps_psData_0_.BLIF data_i_0_0__n
+0 1
+.names  ledvcc_c_0__n.BLIF data_i_2__n.BLIF dynamicshow_out_0_2__n
+11 1
+.names  clkh_c.BLIF ps_keyClock_r1.C
+1 1
+.names  ledvcc_c_0__n.BLIF data_i_3__n.BLIF dynamicshow_out_i_3__n
+11 1
+.names  ps_counter_3_.BLIF ps_un1_rxdata_2_i_8__n.BLIF ps_rxen_2_i_n
+11 1
+.names  resetButton_i.BLIF ps_keyClock_r1.AR
+1 1
+.names  ps_keyClock_r1.BLIF ps_keyClock_r2.D
+1 1
+.end

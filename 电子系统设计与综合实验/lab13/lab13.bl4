@@ -1,0 +1,6612 @@
+#$ TOOL ispLEVER Classic 2.1.00.02.49.20
+#$ DATE Fri May 13 09:16:58 2022
+#$ MODULE lab13
+#$ PINS 13 clk_50m reset lcdRw lcdD_7_ lcdRs ledEN lcdD_6_ lcdD_5_ lcdD_4_ lcdD_3_ \
+#  lcdD_2_ lcdD_1_ lcdD_0_
+#$ NODES 225 cnt_171__i19 cnt_171__i18 cnt_171__i17 cnt_171__i16 cnt_171__i15 \
+#  cnt_171__i14 cnt_171__i13 cnt_171__i12 cnt_171__i11 cnt_171__i10 cnt_171__i9 \
+#  cnt_171__i8 cnt_171__i7 cnt_171__i6 cnt_171__i5 cnt_171__i4 cnt_171__i3 cnt_171__i2 \
+#  cnt_171__i1 cnt_171__i0 state_FSM_i1 state_FSM_i2 lcdRs_N_618 state_FSM_i3 \
+#  state_FSM_i4 state_FSM_i5 state_FSM_i6 state_FSM_i7 dispCount_i0_i5 dispCount_i0_i4 \
+#  dispCount_i0_i3 dispCount_i0_i2 dispCount_i0_i1 dispCount_i0_i0 dataInBuf_i0_i254 \
+#  dataInBuf_i0_i253 dataInBuf_i0_i252 dataInBuf_i0_i251 dataInBuf_i0_i250 \
+#  dataInBuf_i0_i249 dataInBuf_i0_i248 dataInBuf_i0_i246 dataInBuf_i0_i245 \
+#  dataInBuf_i0_i244 dataInBuf_i0_i243 dataInBuf_i0_i242 n5148 dataInBuf_i0_i241 \
+#  dataInBuf_i0_i240 dataInBuf_i0_i238 dataInBuf_i0_i237 dataInBuf_i0_i236 \
+#  dataInBuf_i0_i235 dataInBuf_i0_i234 dataInBuf_i0_i233 dataInBuf_i0_i232 \
+#  dataInBuf_i0_i230 dataInBuf_i0_i229 dataInBuf_i0_i228 dataInBuf_i0_i227 \
+#  dataInBuf_i0_i226 dataInBuf_i0_i225 dataInBuf_i0_i224 dataInBuf_i0_i222 \
+#  dataInBuf_i0_i221 dataInBuf_i0_i220 dataInBuf_i0_i219 dataInBuf_i0_i218 \
+#  dataInBuf_i0_i217 dataInBuf_i0_i216 dataInBuf_i0_i214 dataInBuf_i0_i213 \
+#  dataInBuf_i0_i212 dataInBuf_i0_i211 n5085 dataInBuf_i0_i210 dataInBuf_i0_i209 \
+#  dataInBuf_i0_i208 dataInBuf_i0_i206 dataInBuf_i0_i205 dataInBuf_i0_i204 \
+#  dataInBuf_i0_i203 dataInBuf_i0_i202 dataInBuf_i0_i201 dataInBuf_i0_i200 \
+#  dataInBuf_i0_i198 dataInBuf_i0_i197 dataInBuf_i0_i196 dataInBuf_i0_i195 \
+#  dataInBuf_i0_i194 dataInBuf_i0_i193 dataInBuf_i0_i192 dataInBuf_i0_i190 \
+#  dataInBuf_i0_i189 dataInBuf_i0_i188 dataInBuf_i0_i187 dataInBuf_i0_i186 n5194 \
+#  dataInBuf_i0_i185 dataInBuf_i0_i184 dataInBuf_i0_i182 dataInBuf_i0_i181 \
+#  dataInBuf_i0_i180 dataInBuf_i0_i179 dataInBuf_i0_i178 dataInBuf_i0_i177 \
+#  dataInBuf_i0_i176 dataInBuf_i0_i174 dataInBuf_i0_i173 dataInBuf_i0_i172 \
+#  dataInBuf_i0_i171 dataInBuf_i0_i170 dataInBuf_i0_i169 dataInBuf_i0_i168 \
+#  dataInBuf_i0_i166 dataInBuf_i0_i165 dataInBuf_i0_i164 dataInBuf_i0_i163 \
+#  dataInBuf_i0_i162 dataInBuf_i0_i161 dataInBuf_i0_i160 dataInBuf_i0_i158 \
+#  dataInBuf_i0_i157 dataInBuf_i0_i156 dataInBuf_i0_i155 dataInBuf_i0_i154 \
+#  dataInBuf_i0_i153 dataInBuf_i0_i152 dataInBuf_i0_i150 dataInBuf_i0_i149 \
+#  dataInBuf_i0_i148 dataInBuf_i0_i147 dataInBuf_i0_i146 dataInBuf_i0_i145 \
+#  dataInBuf_i0_i144 dataInBuf_i0_i142 dataInBuf_i0_i141 dataInBuf_i0_i140 \
+#  dataInBuf_i0_i139 dataInBuf_i0_i138 dataInBuf_i0_i137 dataInBuf_i0_i136 \
+#  dataInBuf_i0_i134 dataInBuf_i0_i133 dataInBuf_i0_i132 dataInBuf_i0_i131 \
+#  dataInBuf_i0_i130 dataInBuf_i0_i129 dataInBuf_i0_i128 dataInBuf_i0_i126 \
+#  dataInBuf_i0_i125 dataInBuf_i0_i124 dataInBuf_i0_i123 dataInBuf_i0_i122 \
+#  dataInBuf_i0_i121 dataInBuf_i0_i120 dataInBuf_i0_i118 dataInBuf_i0_i117 \
+#  dataInBuf_i0_i116 dataInBuf_i0_i115 dataInBuf_i0_i114 dataInBuf_i0_i113 \
+#  dataInBuf_i0_i112 n5134 dataInBuf_i0_i110 dataInBuf_i0_i109 dataInBuf_i0_i108 \
+#  dataInBuf_i0_i107 dataInBuf_i0_i106 dataInBuf_i0_i105 dataInBuf_i0_i104 \
+#  dataInBuf_i0_i102 dataInBuf_i0_i101 dataInBuf_i0_i100 dataInBuf_i0_i99 \
+#  dataInBuf_i0_i98 dataInBuf_i0_i97 dataInBuf_i0_i96 dataInBuf_i0_i94 \
+#  dataInBuf_i0_i93 dataInBuf_i0_i92 dataInBuf_i0_i91 dataInBuf_i0_i90 \
+#  dataInBuf_i0_i89 dataInBuf_i0_i88 dataInBuf_i0_i86 dataInBuf_i0_i85 \
+#  dataInBuf_i0_i84 dataInBuf_i0_i83 dataInBuf_i0_i82 dataInBuf_i0_i81 \
+#  dataInBuf_i0_i80 n5106 dataInBuf_i0_i78 dataInBuf_i0_i77 dataInBuf_i0_i74 \
+#  dataInBuf_i0_i73 dataInBuf_i0_i72 dataInBuf_i0_i70 dataInBuf_i0_i69 \
+#  dataInBuf_i0_i66 dataInBuf_i0_i65 dataInBuf_i0_i64 dataInBuf_i0_i62 \
+#  dataInBuf_i0_i61 dataInBuf_i0_i58 dataInBuf_i0_i57 dataInBuf_i0_i56 \
+#  dataInBuf_i0_i54 dataInBuf_i0_i53 dataInBuf_i0_i50 dataInBuf_i0_i49 \
+#  dataInBuf_i0_i48 dataInBuf_i0_i46 dataInBuf_i0_i45 dataInBuf_i0_i42 \
+#  dataInBuf_i0_i41 dataInBuf_i0_i38 dataInBuf_i0_i37 dataInBuf_i0_i34 \
+#  dataInBuf_i0_i33 dataInBuf_i0_i29 dataInBuf_i0_i21 dataInBuf_i0_i13 \
+#  dataInBuf_i0_i5
+.model lcd1602
+.inputs clk_50m.BLIF reset.BLIF ledEN.Q cnt_171__i19.Q cnt_171__i18.Q \
+cnt_171__i17.Q cnt_171__i16.Q cnt_171__i15.Q cnt_171__i14.Q cnt_171__i13.Q \
+cnt_171__i12.Q cnt_171__i11.Q cnt_171__i10.Q cnt_171__i9.Q cnt_171__i8.Q \
+cnt_171__i7.Q cnt_171__i6.Q cnt_171__i5.Q cnt_171__i4.Q cnt_171__i3.Q \
+cnt_171__i2.Q cnt_171__i1.Q cnt_171__i0.Q state_FSM_i1.Q state_FSM_i2.Q \
+lcdRs_N_618.BLIF state_FSM_i3.Q state_FSM_i4.Q state_FSM_i5.Q state_FSM_i6.Q \
+state_FSM_i7.Q dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q \
+dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i254.Q \
+dataInBuf_i0_i253.Q dataInBuf_i0_i252.Q dataInBuf_i0_i251.Q \
+dataInBuf_i0_i250.Q dataInBuf_i0_i249.Q dataInBuf_i0_i248.Q \
+dataInBuf_i0_i246.Q dataInBuf_i0_i245.Q dataInBuf_i0_i244.Q \
+dataInBuf_i0_i243.Q dataInBuf_i0_i242.Q n5148.BLIF dataInBuf_i0_i241.Q \
+dataInBuf_i0_i240.Q dataInBuf_i0_i238.Q dataInBuf_i0_i237.Q \
+dataInBuf_i0_i236.Q dataInBuf_i0_i235.Q dataInBuf_i0_i234.Q \
+dataInBuf_i0_i233.Q dataInBuf_i0_i232.Q dataInBuf_i0_i230.Q \
+dataInBuf_i0_i229.Q dataInBuf_i0_i228.Q dataInBuf_i0_i227.Q \
+dataInBuf_i0_i226.Q dataInBuf_i0_i225.Q dataInBuf_i0_i224.Q \
+dataInBuf_i0_i222.Q dataInBuf_i0_i221.Q dataInBuf_i0_i220.Q \
+dataInBuf_i0_i219.Q dataInBuf_i0_i218.Q dataInBuf_i0_i217.Q \
+dataInBuf_i0_i216.Q dataInBuf_i0_i214.Q dataInBuf_i0_i213.Q \
+dataInBuf_i0_i212.Q dataInBuf_i0_i211.Q n5085.BLIF dataInBuf_i0_i210.Q \
+dataInBuf_i0_i209.Q dataInBuf_i0_i208.Q dataInBuf_i0_i206.Q \
+dataInBuf_i0_i205.Q dataInBuf_i0_i204.Q dataInBuf_i0_i203.Q \
+dataInBuf_i0_i202.Q dataInBuf_i0_i201.Q dataInBuf_i0_i200.Q \
+dataInBuf_i0_i198.Q dataInBuf_i0_i197.Q dataInBuf_i0_i196.Q \
+dataInBuf_i0_i195.Q dataInBuf_i0_i194.Q dataInBuf_i0_i193.Q \
+dataInBuf_i0_i192.Q dataInBuf_i0_i190.Q dataInBuf_i0_i189.Q \
+dataInBuf_i0_i188.Q dataInBuf_i0_i187.Q dataInBuf_i0_i186.Q n5194.BLIF \
+dataInBuf_i0_i185.Q dataInBuf_i0_i184.Q dataInBuf_i0_i182.Q \
+dataInBuf_i0_i181.Q dataInBuf_i0_i180.Q dataInBuf_i0_i179.Q \
+dataInBuf_i0_i178.Q dataInBuf_i0_i177.Q dataInBuf_i0_i176.Q \
+dataInBuf_i0_i174.Q dataInBuf_i0_i173.Q dataInBuf_i0_i172.Q \
+dataInBuf_i0_i171.Q dataInBuf_i0_i170.Q dataInBuf_i0_i169.Q \
+dataInBuf_i0_i168.Q dataInBuf_i0_i166.Q dataInBuf_i0_i165.Q \
+dataInBuf_i0_i164.Q dataInBuf_i0_i163.Q dataInBuf_i0_i162.Q \
+dataInBuf_i0_i161.Q dataInBuf_i0_i160.Q dataInBuf_i0_i158.Q \
+dataInBuf_i0_i157.Q dataInBuf_i0_i156.Q dataInBuf_i0_i155.Q \
+dataInBuf_i0_i154.Q dataInBuf_i0_i153.Q dataInBuf_i0_i152.Q \
+dataInBuf_i0_i150.Q dataInBuf_i0_i149.Q dataInBuf_i0_i148.Q \
+dataInBuf_i0_i147.Q dataInBuf_i0_i146.Q dataInBuf_i0_i145.Q \
+dataInBuf_i0_i144.Q dataInBuf_i0_i142.Q dataInBuf_i0_i141.Q \
+dataInBuf_i0_i140.Q dataInBuf_i0_i139.Q dataInBuf_i0_i138.Q \
+dataInBuf_i0_i137.Q dataInBuf_i0_i136.Q dataInBuf_i0_i134.Q \
+dataInBuf_i0_i133.Q dataInBuf_i0_i132.Q dataInBuf_i0_i131.Q \
+dataInBuf_i0_i130.Q dataInBuf_i0_i129.Q dataInBuf_i0_i128.Q \
+dataInBuf_i0_i126.Q dataInBuf_i0_i125.Q dataInBuf_i0_i124.Q \
+dataInBuf_i0_i123.Q dataInBuf_i0_i122.Q dataInBuf_i0_i121.Q \
+dataInBuf_i0_i120.Q dataInBuf_i0_i118.Q dataInBuf_i0_i117.Q \
+dataInBuf_i0_i116.Q dataInBuf_i0_i115.Q dataInBuf_i0_i114.Q \
+dataInBuf_i0_i113.Q dataInBuf_i0_i112.Q n5134.BLIF dataInBuf_i0_i110.Q \
+dataInBuf_i0_i109.Q dataInBuf_i0_i108.Q dataInBuf_i0_i107.Q \
+dataInBuf_i0_i106.Q dataInBuf_i0_i105.Q dataInBuf_i0_i104.Q \
+dataInBuf_i0_i102.Q dataInBuf_i0_i101.Q dataInBuf_i0_i100.Q dataInBuf_i0_i99.Q \
+dataInBuf_i0_i98.Q dataInBuf_i0_i97.Q dataInBuf_i0_i96.Q dataInBuf_i0_i94.Q \
+dataInBuf_i0_i93.Q dataInBuf_i0_i92.Q dataInBuf_i0_i91.Q dataInBuf_i0_i90.Q \
+dataInBuf_i0_i89.Q dataInBuf_i0_i88.Q dataInBuf_i0_i86.Q dataInBuf_i0_i85.Q \
+dataInBuf_i0_i84.Q dataInBuf_i0_i83.Q dataInBuf_i0_i82.Q dataInBuf_i0_i81.Q \
+dataInBuf_i0_i80.Q n5106.BLIF dataInBuf_i0_i78.Q dataInBuf_i0_i77.Q \
+dataInBuf_i0_i74.Q dataInBuf_i0_i73.Q dataInBuf_i0_i72.Q dataInBuf_i0_i70.Q \
+dataInBuf_i0_i69.Q dataInBuf_i0_i66.Q dataInBuf_i0_i65.Q dataInBuf_i0_i64.Q \
+dataInBuf_i0_i62.Q dataInBuf_i0_i61.Q dataInBuf_i0_i58.Q dataInBuf_i0_i57.Q \
+dataInBuf_i0_i56.Q dataInBuf_i0_i54.Q dataInBuf_i0_i53.Q dataInBuf_i0_i50.Q \
+dataInBuf_i0_i49.Q dataInBuf_i0_i48.Q dataInBuf_i0_i46.Q dataInBuf_i0_i45.Q \
+dataInBuf_i0_i42.Q dataInBuf_i0_i41.Q dataInBuf_i0_i38.Q dataInBuf_i0_i37.Q \
+dataInBuf_i0_i34.Q dataInBuf_i0_i33.Q dataInBuf_i0_i29.Q dataInBuf_i0_i21.Q \
+dataInBuf_i0_i13.Q dataInBuf_i0_i5.Q
+.outputs lcdRw dataInBuf_i0_i216.C dataInBuf_i0_i216.CE dataInBuf_i0_i214.C \
+dataInBuf_i0_i214.CE dataInBuf_i0_i213.C dataInBuf_i0_i213.CE \
+dataInBuf_i0_i212.C dataInBuf_i0_i212.CE dataInBuf_i0_i211.C \
+dataInBuf_i0_i211.CE dataInBuf_i0_i210.C dataInBuf_i0_i210.CE \
+dataInBuf_i0_i209.C dataInBuf_i0_i209.CE dataInBuf_i0_i208.C \
+dataInBuf_i0_i208.CE dataInBuf_i0_i206.C dataInBuf_i0_i206.CE \
+dataInBuf_i0_i205.C dataInBuf_i0_i205.CE lcdRs.C lcdRs.AR dataInBuf_i0_i204.C \
+dataInBuf_i0_i204.CE dispCount_i0_i0.C dispCount_i0_i0.CE dispCount_i0_i0.AR \
+dataInBuf_i0_i203.C dataInBuf_i0_i203.CE dataInBuf_i0_i202.C \
+dataInBuf_i0_i202.CE dataInBuf_i0_i201.C dataInBuf_i0_i201.CE \
+dataInBuf_i0_i200.C dataInBuf_i0_i200.CE dataInBuf_i0_i198.C \
+dataInBuf_i0_i198.CE dataInBuf_i0_i197.C dataInBuf_i0_i197.CE \
+dataInBuf_i0_i196.C dataInBuf_i0_i196.CE dataInBuf_i0_i195.C \
+dataInBuf_i0_i195.CE dataInBuf_i0_i194.C dataInBuf_i0_i194.CE \
+dataInBuf_i0_i193.C dataInBuf_i0_i193.CE dataInBuf_i0_i192.C \
+dataInBuf_i0_i192.CE dataInBuf_i0_i190.C dataInBuf_i0_i190.CE \
+dataInBuf_i0_i189.C dataInBuf_i0_i189.CE dataInBuf_i0_i188.C \
+dataInBuf_i0_i188.CE dataInBuf_i0_i187.C dataInBuf_i0_i187.CE \
+dataInBuf_i0_i186.C dataInBuf_i0_i186.CE dataInBuf_i0_i185.C \
+dataInBuf_i0_i185.CE dataInBuf_i0_i184.C dataInBuf_i0_i184.CE \
+dataInBuf_i0_i182.C dataInBuf_i0_i182.CE dataInBuf_i0_i181.C \
+dataInBuf_i0_i181.CE dataInBuf_i0_i180.C dataInBuf_i0_i180.CE state_FSM_i1.C \
+state_FSM_i1.AR dataInBuf_i0_i179.C dataInBuf_i0_i179.CE cnt_171__i0.C \
+dataInBuf_i0_i178.C dataInBuf_i0_i178.CE dataInBuf_i0_i177.C \
+dataInBuf_i0_i177.CE dataInBuf_i0_i176.C dataInBuf_i0_i176.CE \
+dataInBuf_i0_i174.C dataInBuf_i0_i174.CE dataInBuf_i0_i173.C \
+dataInBuf_i0_i173.CE dataInBuf_i0_i172.C dataInBuf_i0_i172.CE \
+dataInBuf_i0_i171.C dataInBuf_i0_i171.CE dataInBuf_i0_i170.C \
+dataInBuf_i0_i170.CE dataInBuf_i0_i169.C dataInBuf_i0_i169.CE \
+dataInBuf_i0_i168.C dataInBuf_i0_i168.CE dataInBuf_i0_i166.C \
+dataInBuf_i0_i166.CE dataInBuf_i0_i165.C dataInBuf_i0_i165.CE \
+dataInBuf_i0_i164.C dataInBuf_i0_i164.CE dataInBuf_i0_i163.C \
+dataInBuf_i0_i163.CE dataInBuf_i0_i162.C dataInBuf_i0_i162.CE \
+dataInBuf_i0_i161.C dataInBuf_i0_i161.CE dataInBuf_i0_i160.C \
+dataInBuf_i0_i160.CE dataInBuf_i0_i158.C dataInBuf_i0_i158.CE \
+dataInBuf_i0_i157.C dataInBuf_i0_i157.CE dataInBuf_i0_i156.C \
+dataInBuf_i0_i156.CE dataInBuf_i0_i155.C dataInBuf_i0_i155.CE \
+dataInBuf_i0_i154.C dataInBuf_i0_i154.CE dataInBuf_i0_i153.C \
+dataInBuf_i0_i153.CE dataInBuf_i0_i152.C dataInBuf_i0_i152.CE \
+dataInBuf_i0_i150.C dataInBuf_i0_i150.CE dataInBuf_i0_i149.C \
+dataInBuf_i0_i149.CE dataInBuf_i0_i148.C dataInBuf_i0_i148.CE \
+dataInBuf_i0_i147.C dataInBuf_i0_i147.CE dataInBuf_i0_i146.C \
+dataInBuf_i0_i146.CE dataInBuf_i0_i145.C dataInBuf_i0_i145.CE \
+dataInBuf_i0_i144.C dataInBuf_i0_i144.CE dataInBuf_i0_i142.C \
+dataInBuf_i0_i142.CE dataInBuf_i0_i141.C dataInBuf_i0_i141.CE \
+dataInBuf_i0_i140.C dataInBuf_i0_i140.CE dataInBuf_i0_i139.C \
+dataInBuf_i0_i139.CE dataInBuf_i0_i138.C dataInBuf_i0_i138.CE \
+dataInBuf_i0_i137.C dataInBuf_i0_i137.CE dataInBuf_i0_i136.C \
+dataInBuf_i0_i136.CE dataInBuf_i0_i134.C dataInBuf_i0_i134.CE \
+dataInBuf_i0_i133.C dataInBuf_i0_i133.CE dataInBuf_i0_i132.C \
+dataInBuf_i0_i132.CE dataInBuf_i0_i131.C dataInBuf_i0_i131.CE \
+dataInBuf_i0_i130.C dataInBuf_i0_i130.CE dataInBuf_i0_i129.C \
+dataInBuf_i0_i129.CE dataInBuf_i0_i128.C dataInBuf_i0_i128.CE \
+dataInBuf_i0_i126.C dataInBuf_i0_i126.CE dataInBuf_i0_i125.C \
+dataInBuf_i0_i125.CE dataInBuf_i0_i124.C dataInBuf_i0_i124.CE \
+dataInBuf_i0_i123.C dataInBuf_i0_i123.CE dataInBuf_i0_i122.C \
+dataInBuf_i0_i122.CE dataInBuf_i0_i121.C dataInBuf_i0_i121.CE \
+dataInBuf_i0_i120.C dataInBuf_i0_i120.CE dataInBuf_i0_i118.C \
+dataInBuf_i0_i118.CE dataInBuf_i0_i117.C dataInBuf_i0_i117.CE \
+dataInBuf_i0_i116.C dataInBuf_i0_i116.CE dataInBuf_i0_i115.C \
+dataInBuf_i0_i115.CE dataInBuf_i0_i114.C dataInBuf_i0_i114.CE \
+dataInBuf_i0_i113.C dataInBuf_i0_i113.CE dataInBuf_i0_i112.C \
+dataInBuf_i0_i112.CE dataInBuf_i0_i110.C dataInBuf_i0_i110.CE \
+dataInBuf_i0_i109.C dataInBuf_i0_i109.CE dataInBuf_i0_i108.C \
+dataInBuf_i0_i108.CE dataInBuf_i0_i107.C dataInBuf_i0_i107.CE \
+dataInBuf_i0_i106.C dataInBuf_i0_i106.CE dataInBuf_i0_i105.C \
+dataInBuf_i0_i105.CE dataInBuf_i0_i104.C dataInBuf_i0_i104.CE \
+dataInBuf_i0_i102.C dataInBuf_i0_i102.CE dataInBuf_i0_i101.C \
+dataInBuf_i0_i101.CE dataInBuf_i0_i100.C dataInBuf_i0_i100.CE \
+dataInBuf_i0_i99.C dataInBuf_i0_i99.CE dataInBuf_i0_i98.C dataInBuf_i0_i98.CE \
+dataInBuf_i0_i97.C dataInBuf_i0_i97.CE dataInBuf_i0_i96.C dataInBuf_i0_i96.CE \
+dataInBuf_i0_i94.C dataInBuf_i0_i94.CE dataInBuf_i0_i93.C dataInBuf_i0_i93.CE \
+dataInBuf_i0_i92.C dataInBuf_i0_i92.CE dataInBuf_i0_i91.C dataInBuf_i0_i91.CE \
+dataInBuf_i0_i90.C dataInBuf_i0_i90.CE dataInBuf_i0_i89.C dataInBuf_i0_i89.CE \
+dataInBuf_i0_i88.C dataInBuf_i0_i88.CE dataInBuf_i0_i86.C dataInBuf_i0_i86.CE \
+dataInBuf_i0_i85.C dataInBuf_i0_i85.CE dataInBuf_i0_i84.C dataInBuf_i0_i84.CE \
+dataInBuf_i0_i83.C dataInBuf_i0_i83.CE dataInBuf_i0_i82.C dataInBuf_i0_i82.CE \
+dataInBuf_i0_i81.C dataInBuf_i0_i81.CE dataInBuf_i0_i80.C dataInBuf_i0_i80.CE \
+dataInBuf_i0_i78.C dataInBuf_i0_i78.CE dataInBuf_i0_i77.C dataInBuf_i0_i77.CE \
+dataInBuf_i0_i74.C dataInBuf_i0_i74.CE dataInBuf_i0_i73.C dataInBuf_i0_i73.CE \
+dataInBuf_i0_i72.C dataInBuf_i0_i72.CE dataInBuf_i0_i70.C dataInBuf_i0_i70.CE \
+ledEN.C dataInBuf_i0_i69.C dataInBuf_i0_i69.CE dataInBuf_i0_i66.C \
+dataInBuf_i0_i66.CE dataInBuf_i0_i65.C dataInBuf_i0_i65.CE dataInBuf_i0_i64.C \
+dataInBuf_i0_i64.CE dataInBuf_i0_i62.C dataInBuf_i0_i62.CE dataInBuf_i0_i61.C \
+dataInBuf_i0_i61.CE dataInBuf_i0_i58.C dataInBuf_i0_i58.CE dataInBuf_i0_i57.C \
+dataInBuf_i0_i57.CE dataInBuf_i0_i56.C dataInBuf_i0_i56.CE dataInBuf_i0_i54.C \
+dataInBuf_i0_i54.CE dataInBuf_i0_i53.C dataInBuf_i0_i53.CE dataInBuf_i0_i50.C \
+dataInBuf_i0_i50.CE dataInBuf_i0_i49.C dataInBuf_i0_i49.CE dataInBuf_i0_i48.C \
+dataInBuf_i0_i48.CE dataInBuf_i0_i46.C dataInBuf_i0_i46.CE dataInBuf_i0_i45.C \
+dataInBuf_i0_i45.CE dataInBuf_i0_i42.C dataInBuf_i0_i42.CE cnt_171__i19.C \
+dataInBuf_i0_i41.C dataInBuf_i0_i41.CE dataInBuf_i0_i38.C dataInBuf_i0_i38.CE \
+dataInBuf_i0_i37.C dataInBuf_i0_i37.CE dataInBuf_i0_i34.C dataInBuf_i0_i34.CE \
+dataInBuf_i0_i33.C dataInBuf_i0_i33.CE dataInBuf_i0_i29.C dataInBuf_i0_i29.CE \
+dataInBuf_i0_i21.C dataInBuf_i0_i21.CE state_FSM_i6.C state_FSM_i6.AR \
+dataInBuf_i0_i13.C dataInBuf_i0_i13.CE state_FSM_i5.C state_FSM_i5.AR \
+state_FSM_i4.C state_FSM_i4.AR state_FSM_i3.C state_FSM_i3.AR state_FSM_i2.C \
+state_FSM_i2.AR dispCount_i0_i5.C dispCount_i0_i5.CE dispCount_i0_i5.AR \
+dataInBuf_i0_i5.C dataInBuf_i0_i5.CE dispCount_i0_i4.C dispCount_i0_i4.CE \
+dispCount_i0_i4.AR dispCount_i0_i3.C dispCount_i0_i3.CE dispCount_i0_i3.AR \
+dispCount_i0_i2.C dispCount_i0_i2.CE dispCount_i0_i2.AR dispCount_i0_i1.C \
+dispCount_i0_i1.CE dispCount_i0_i1.AR lcdD_7_.C lcdD_7_.CE lcdD_7_.AR \
+state_FSM_i7.C state_FSM_i7.AP lcdD_6_.C lcdD_6_.CE lcdD_6_.AR lcdD_5_.C \
+lcdD_5_.CE lcdD_5_.AR lcdD_4_.C lcdD_4_.CE lcdD_4_.AR lcdD_3_.C lcdD_3_.CE \
+lcdD_3_.AR lcdD_2_.C lcdD_2_.CE lcdD_2_.AR lcdD_1_.C lcdD_1_.CE lcdD_1_.AR \
+lcdD_0_.C lcdD_0_.CE lcdD_0_.AP cnt_171__i18.C cnt_171__i17.C cnt_171__i16.C \
+cnt_171__i15.C cnt_171__i14.C cnt_171__i13.C cnt_171__i12.C cnt_171__i11.C \
+cnt_171__i10.C cnt_171__i9.C cnt_171__i8.C cnt_171__i7.C cnt_171__i6.C \
+cnt_171__i5.C cnt_171__i4.C cnt_171__i3.C cnt_171__i2.C cnt_171__i1.C \
+dataInBuf_i0_i254.C dataInBuf_i0_i254.CE dataInBuf_i0_i253.C \
+dataInBuf_i0_i253.CE dataInBuf_i0_i252.C dataInBuf_i0_i252.CE \
+dataInBuf_i0_i251.C dataInBuf_i0_i251.CE dataInBuf_i0_i250.C \
+dataInBuf_i0_i250.CE dataInBuf_i0_i249.C dataInBuf_i0_i249.CE \
+dataInBuf_i0_i248.C dataInBuf_i0_i248.CE dataInBuf_i0_i246.C \
+dataInBuf_i0_i246.CE dataInBuf_i0_i245.C dataInBuf_i0_i245.CE \
+dataInBuf_i0_i244.C dataInBuf_i0_i244.CE dataInBuf_i0_i243.C \
+dataInBuf_i0_i243.CE dataInBuf_i0_i242.C dataInBuf_i0_i242.CE \
+dataInBuf_i0_i241.C dataInBuf_i0_i241.CE dataInBuf_i0_i240.C \
+dataInBuf_i0_i240.CE dataInBuf_i0_i238.C dataInBuf_i0_i238.CE \
+dataInBuf_i0_i237.C dataInBuf_i0_i237.CE dataInBuf_i0_i236.C \
+dataInBuf_i0_i236.CE dataInBuf_i0_i235.C dataInBuf_i0_i235.CE \
+dataInBuf_i0_i234.C dataInBuf_i0_i234.CE dataInBuf_i0_i233.C \
+dataInBuf_i0_i233.CE dataInBuf_i0_i232.C dataInBuf_i0_i232.CE \
+dataInBuf_i0_i230.C dataInBuf_i0_i230.CE dataInBuf_i0_i229.C \
+dataInBuf_i0_i229.CE dataInBuf_i0_i228.C dataInBuf_i0_i228.CE \
+dataInBuf_i0_i227.C dataInBuf_i0_i227.CE dataInBuf_i0_i226.C \
+dataInBuf_i0_i226.CE dataInBuf_i0_i225.C dataInBuf_i0_i225.CE \
+dataInBuf_i0_i224.C dataInBuf_i0_i224.CE dataInBuf_i0_i222.C \
+dataInBuf_i0_i222.CE dataInBuf_i0_i221.C dataInBuf_i0_i221.CE \
+dataInBuf_i0_i220.C dataInBuf_i0_i220.CE dataInBuf_i0_i219.C \
+dataInBuf_i0_i219.CE dataInBuf_i0_i218.C dataInBuf_i0_i218.CE \
+dataInBuf_i0_i217.C dataInBuf_i0_i217.CE lcdRs_N_618 n5148 n5085 n5194 n5134 \
+n5106 lcdD_6_.D.X1 lcdD_6_.D.X2 lcdD_3_.D.X1 lcdD_3_.D.X2 \
+dataInBuf_i0_i99.D.X1 dataInBuf_i0_i99.D.X2 dataInBuf_i0_i98.D.X1 \
+dataInBuf_i0_i98.D.X2 dataInBuf_i0_i97.D.X1 dataInBuf_i0_i97.D.X2 \
+dataInBuf_i0_i96.D.X1 dataInBuf_i0_i96.D.X2 dataInBuf_i0_i94.D.X1 \
+dataInBuf_i0_i94.D.X2 dataInBuf_i0_i90.D.X1 dataInBuf_i0_i90.D.X2 \
+dataInBuf_i0_i89.D.X1 dataInBuf_i0_i89.D.X2 dataInBuf_i0_i88.D.X1 \
+dataInBuf_i0_i88.D.X2 dataInBuf_i0_i86.D.X1 dataInBuf_i0_i86.D.X2 \
+dataInBuf_i0_i82.D.X1 dataInBuf_i0_i82.D.X2 dataInBuf_i0_i81.D.X1 \
+dataInBuf_i0_i81.D.X2 dataInBuf_i0_i77.D.X1 dataInBuf_i0_i77.D.X2 \
+dataInBuf_i0_i74.D.X1 dataInBuf_i0_i74.D.X2 dataInBuf_i0_i73.D.X1 \
+dataInBuf_i0_i73.D.X2 lcdRs.D ledEN.D cnt_171__i19.T cnt_171__i18.D \
+cnt_171__i17.D cnt_171__i16.D cnt_171__i15.D cnt_171__i14.D cnt_171__i13.D \
+cnt_171__i12.D cnt_171__i11.D cnt_171__i10.D cnt_171__i9.D cnt_171__i8.D \
+cnt_171__i7.D cnt_171__i6.D cnt_171__i5.T cnt_171__i4.D cnt_171__i3.D \
+cnt_171__i2.D cnt_171__i1.D cnt_171__i0.D state_FSM_i1.D state_FSM_i2.D \
+state_FSM_i3.D state_FSM_i4.D state_FSM_i5.D state_FSM_i6.D state_FSM_i7.D \
+lcdD_7_.D lcdD_5_.D lcdD_4_.D lcdD_2_.D lcdD_1_.D lcdD_0_.D dispCount_i0_i5.T \
+dispCount_i0_i4.T dispCount_i0_i3.D dispCount_i0_i2.D dispCount_i0_i1.D \
+dispCount_i0_i0.D dataInBuf_i0_i254.D dataInBuf_i0_i253.D dataInBuf_i0_i252.D \
+dataInBuf_i0_i251.D dataInBuf_i0_i250.D dataInBuf_i0_i249.D \
+dataInBuf_i0_i248.D dataInBuf_i0_i246.D dataInBuf_i0_i245.D \
+dataInBuf_i0_i244.D dataInBuf_i0_i243.D dataInBuf_i0_i242.D \
+dataInBuf_i0_i241.D dataInBuf_i0_i240.D dataInBuf_i0_i238.D \
+dataInBuf_i0_i237.D dataInBuf_i0_i236.D dataInBuf_i0_i235.D \
+dataInBuf_i0_i234.D dataInBuf_i0_i233.D dataInBuf_i0_i232.D \
+dataInBuf_i0_i230.D dataInBuf_i0_i229.D dataInBuf_i0_i228.D \
+dataInBuf_i0_i227.D dataInBuf_i0_i226.D dataInBuf_i0_i225.D \
+dataInBuf_i0_i224.D dataInBuf_i0_i222.D dataInBuf_i0_i221.D \
+dataInBuf_i0_i220.D dataInBuf_i0_i219.D dataInBuf_i0_i218.D \
+dataInBuf_i0_i217.D dataInBuf_i0_i216.D dataInBuf_i0_i214.D \
+dataInBuf_i0_i213.D dataInBuf_i0_i212.D dataInBuf_i0_i211.D \
+dataInBuf_i0_i210.D dataInBuf_i0_i209.D dataInBuf_i0_i208.D \
+dataInBuf_i0_i206.D dataInBuf_i0_i205.D dataInBuf_i0_i204.D \
+dataInBuf_i0_i203.D dataInBuf_i0_i202.D dataInBuf_i0_i201.D \
+dataInBuf_i0_i200.D dataInBuf_i0_i198.D dataInBuf_i0_i197.D \
+dataInBuf_i0_i196.D dataInBuf_i0_i195.D dataInBuf_i0_i194.D \
+dataInBuf_i0_i193.D dataInBuf_i0_i192.D dataInBuf_i0_i190.D \
+dataInBuf_i0_i189.D dataInBuf_i0_i188.D dataInBuf_i0_i187.D \
+dataInBuf_i0_i186.D dataInBuf_i0_i185.D dataInBuf_i0_i184.D \
+dataInBuf_i0_i182.D dataInBuf_i0_i181.D dataInBuf_i0_i180.D \
+dataInBuf_i0_i179.D dataInBuf_i0_i178.D dataInBuf_i0_i177.D \
+dataInBuf_i0_i176.D dataInBuf_i0_i174.D dataInBuf_i0_i173.D \
+dataInBuf_i0_i172.D dataInBuf_i0_i171.D dataInBuf_i0_i170.D \
+dataInBuf_i0_i169.D dataInBuf_i0_i168.D dataInBuf_i0_i166.D \
+dataInBuf_i0_i165.D dataInBuf_i0_i164.D dataInBuf_i0_i163.D \
+dataInBuf_i0_i162.D dataInBuf_i0_i161.D dataInBuf_i0_i160.D \
+dataInBuf_i0_i158.D dataInBuf_i0_i157.D dataInBuf_i0_i156.D \
+dataInBuf_i0_i155.D dataInBuf_i0_i154.D dataInBuf_i0_i153.D \
+dataInBuf_i0_i152.D dataInBuf_i0_i150.D dataInBuf_i0_i149.D \
+dataInBuf_i0_i148.D dataInBuf_i0_i147.D dataInBuf_i0_i146.D \
+dataInBuf_i0_i145.D dataInBuf_i0_i144.D dataInBuf_i0_i142.D \
+dataInBuf_i0_i141.D dataInBuf_i0_i140.D dataInBuf_i0_i139.D \
+dataInBuf_i0_i138.D dataInBuf_i0_i137.D dataInBuf_i0_i136.D \
+dataInBuf_i0_i134.D dataInBuf_i0_i133.D dataInBuf_i0_i132.D \
+dataInBuf_i0_i131.D dataInBuf_i0_i130.D dataInBuf_i0_i129.D \
+dataInBuf_i0_i128.D dataInBuf_i0_i126.D dataInBuf_i0_i125.D \
+dataInBuf_i0_i124.D dataInBuf_i0_i123.D dataInBuf_i0_i122.D \
+dataInBuf_i0_i121.D dataInBuf_i0_i120.D dataInBuf_i0_i118.D \
+dataInBuf_i0_i117.D dataInBuf_i0_i116.D dataInBuf_i0_i115.D \
+dataInBuf_i0_i114.D dataInBuf_i0_i113.D dataInBuf_i0_i112.D \
+dataInBuf_i0_i110.D dataInBuf_i0_i109.D dataInBuf_i0_i108.D \
+dataInBuf_i0_i107.D dataInBuf_i0_i106.D dataInBuf_i0_i105.D \
+dataInBuf_i0_i104.D dataInBuf_i0_i102.D dataInBuf_i0_i101.D \
+dataInBuf_i0_i100.D dataInBuf_i0_i93.D dataInBuf_i0_i92.D dataInBuf_i0_i91.D \
+dataInBuf_i0_i85.D dataInBuf_i0_i84.D dataInBuf_i0_i83.D dataInBuf_i0_i80.D \
+dataInBuf_i0_i78.D dataInBuf_i0_i72.D dataInBuf_i0_i70.D dataInBuf_i0_i69.D \
+dataInBuf_i0_i66.D dataInBuf_i0_i65.D dataInBuf_i0_i64.D dataInBuf_i0_i62.D \
+dataInBuf_i0_i61.D dataInBuf_i0_i58.D dataInBuf_i0_i57.D dataInBuf_i0_i56.D \
+dataInBuf_i0_i54.D dataInBuf_i0_i53.D dataInBuf_i0_i50.D dataInBuf_i0_i49.D \
+dataInBuf_i0_i48.D dataInBuf_i0_i46.D dataInBuf_i0_i45.D dataInBuf_i0_i42.D \
+dataInBuf_i0_i41.D dataInBuf_i0_i38.D dataInBuf_i0_i37.D dataInBuf_i0_i34.D \
+dataInBuf_i0_i33.D dataInBuf_i0_i29.D dataInBuf_i0_i21.D dataInBuf_i0_i13.D \
+dataInBuf_i0_i5.D
+.names lcdRw
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i216.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i214.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i213.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i212.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i211.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i210.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i209.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i208.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i206.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i205.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF lcdRs.AR
+0 1
+1 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i204.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names state_FSM_i1.Q state_FSM_i2.Q dispCount_i0_i5.Q dispCount_i0_i4.Q \
+dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+dispCount_i0_i0.CE
+01------ 1
+1-----1- 1
+1----1-- 1
+1---1--- 1
+1--0---- 1
+1-1----- 1
+1------1 1
+1-010000 0
+00------ 0
+.names reset.BLIF dispCount_i0_i0.AR
+0 1
+1 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i203.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i202.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i201.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i200.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i198.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i197.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i196.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i195.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i194.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i193.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i192.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i190.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i189.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i188.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i187.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i186.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i185.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i184.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i182.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i181.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i180.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.AR
+0 1
+1 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i179.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i178.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i177.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i176.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i174.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i173.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i172.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i171.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i170.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i169.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i168.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i166.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i165.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i164.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i163.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i162.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i161.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i160.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i158.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i157.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i156.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i155.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i154.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i153.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i152.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i150.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i149.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i148.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i147.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i146.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i145.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i144.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i142.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i141.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i140.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i139.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i138.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i137.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i136.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i134.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i133.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i132.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i131.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i130.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i129.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i128.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i126.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i125.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i124.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i123.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i122.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i121.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i120.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i118.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i117.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i116.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i115.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i114.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i113.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i112.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i110.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i109.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i108.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i107.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i106.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i105.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i104.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i102.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i101.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i100.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i99.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i98.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i97.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i96.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i94.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i93.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i92.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i91.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i90.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i89.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i88.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i86.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i85.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i84.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i83.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i82.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i81.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i80.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i78.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i77.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i74.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i73.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i72.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i70.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i69.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i66.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i65.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i64.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i62.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i61.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i58.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i57.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i56.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i54.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i53.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i50.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i49.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i48.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i46.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i45.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i42.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i41.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i38.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i37.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i34.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i33.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i29.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i21.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i6.AR
+0 1
+1 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i13.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i5.AR
+0 1
+1 0
+.names reset.BLIF state_FSM_i4.AR
+0 1
+1 0
+.names reset.BLIF state_FSM_i3.AR
+0 1
+1 0
+.names reset.BLIF state_FSM_i2.AR
+0 1
+1 0
+.names state_FSM_i1.Q state_FSM_i2.Q dispCount_i0_i5.Q dispCount_i0_i4.Q \
+dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+dispCount_i0_i5.CE
+01------ 1
+1-----1- 1
+1----1-- 1
+1---1--- 1
+1--0---- 1
+1-1----- 1
+1------1 1
+1-010000 0
+00------ 0
+.names reset.BLIF dispCount_i0_i5.AR
+0 1
+1 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i5.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names state_FSM_i1.Q state_FSM_i2.Q dispCount_i0_i5.Q dispCount_i0_i4.Q \
+dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+dispCount_i0_i4.CE
+01------ 1
+1-----1- 1
+1----1-- 1
+1---1--- 1
+1--0---- 1
+1-1----- 1
+1------1 1
+1-010000 0
+00------ 0
+.names reset.BLIF dispCount_i0_i4.AR
+0 1
+1 0
+.names state_FSM_i1.Q state_FSM_i2.Q dispCount_i0_i5.Q dispCount_i0_i4.Q \
+dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+dispCount_i0_i3.CE
+01------ 1
+1-----1- 1
+1----1-- 1
+1---1--- 1
+1--0---- 1
+1-1----- 1
+1------1 1
+1-010000 0
+00------ 0
+.names reset.BLIF dispCount_i0_i3.AR
+0 1
+1 0
+.names state_FSM_i1.Q state_FSM_i2.Q dispCount_i0_i5.Q dispCount_i0_i4.Q \
+dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+dispCount_i0_i2.CE
+01------ 1
+1-----1- 1
+1----1-- 1
+1---1--- 1
+1--0---- 1
+1-1----- 1
+1------1 1
+1-010000 0
+00------ 0
+.names reset.BLIF dispCount_i0_i2.AR
+0 1
+1 0
+.names state_FSM_i1.Q state_FSM_i2.Q dispCount_i0_i5.Q dispCount_i0_i4.Q \
+dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+dispCount_i0_i1.CE
+01------ 1
+1-----1- 1
+1----1-- 1
+1---1--- 1
+1--0---- 1
+1-1----- 1
+1------1 1
+1-010000 0
+00------ 0
+.names reset.BLIF dispCount_i0_i1.AR
+0 1
+1 0
+.names state_FSM_i1.Q dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q \
+dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q lcdD_7_.CE
+-----1- 1
+----1-- 1
+---1--- 1
+--1---- 1
+-0----- 1
+0------ 1
+------1 1
+1100000 0
+.names reset.BLIF lcdD_7_.AR
+0 1
+1 0
+.names reset.BLIF state_FSM_i7.AP
+0 1
+1 0
+.names state_FSM_i1.Q dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q \
+dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q lcdD_6_.CE
+-----1- 1
+----1-- 1
+---1--- 1
+--1---- 1
+-0----- 1
+0------ 1
+------1 1
+1100000 0
+.names reset.BLIF lcdD_6_.AR
+0 1
+1 0
+.names state_FSM_i1.Q dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q \
+dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q lcdD_5_.CE
+-----1- 1
+----1-- 1
+---1--- 1
+--1---- 1
+-0----- 1
+0------ 1
+------1 1
+1100000 0
+.names reset.BLIF lcdD_5_.AR
+0 1
+1 0
+.names state_FSM_i1.Q dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q \
+dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q lcdD_4_.CE
+-----1- 1
+----1-- 1
+---1--- 1
+--1---- 1
+-0----- 1
+0------ 1
+------1 1
+1100000 0
+.names reset.BLIF lcdD_4_.AR
+0 1
+1 0
+.names state_FSM_i1.Q dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q \
+dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q lcdD_3_.CE
+-----1- 1
+----1-- 1
+---1--- 1
+--1---- 1
+-0----- 1
+0------ 1
+------1 1
+1100000 0
+.names reset.BLIF lcdD_3_.AR
+0 1
+1 0
+.names state_FSM_i1.Q dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q \
+dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q lcdD_2_.CE
+-----1- 1
+----1-- 1
+---1--- 1
+--1---- 1
+-0----- 1
+0------ 1
+------1 1
+1100000 0
+.names reset.BLIF lcdD_2_.AR
+0 1
+1 0
+.names state_FSM_i1.Q dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q \
+dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q lcdD_1_.CE
+-----1- 1
+----1-- 1
+---1--- 1
+--1---- 1
+-0----- 1
+0------ 1
+------1 1
+1100000 0
+.names reset.BLIF lcdD_1_.AR
+0 1
+1 0
+.names state_FSM_i1.Q dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q \
+dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q lcdD_0_.CE
+-----1- 1
+----1-- 1
+---1--- 1
+--1---- 1
+-0----- 1
+0------ 1
+------1 1
+1100000 0
+.names reset.BLIF lcdD_0_.AP
+0 1
+1 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i254.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i253.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i252.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i251.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i250.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i249.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i248.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i246.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i245.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i244.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i243.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i242.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i241.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i240.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i238.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i237.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i236.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i235.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i234.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i233.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i232.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i230.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i229.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i228.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i227.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i226.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i225.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i224.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i222.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i221.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i220.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i219.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i218.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names reset.BLIF state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i217.CE
+11------1- 1
+11-----1-- 1
+11----1--- 1
+11---1---- 1
+11--0----- 1
+10-1------ 1
+101------- 1
+11-------1 1
+-1--100000 0
+-000------ 0
+0--------- 0
+.names dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q lcdRs_N_618
+----1- 1
+---1-- 1
+--1--- 1
+-0---- 1
+1----- 1
+-----1 1
+010000 0
+.names cnt_171__i14.Q cnt_171__i13.Q cnt_171__i12.Q cnt_171__i11.Q \
+cnt_171__i10.Q cnt_171__i9.Q cnt_171__i8.Q cnt_171__i7.Q cnt_171__i6.Q \
+cnt_171__i5.Q cnt_171__i4.Q cnt_171__i3.Q cnt_171__i2.Q cnt_171__i1.Q \
+cnt_171__i0.Q n5148
+111111111111111 1
+-------------0- 0
+------------0-- 0
+-----------0--- 0
+----------0---- 0
+---------0----- 0
+--------0------ 0
+-------0------- 0
+------0-------- 0
+-----0--------- 0
+----0---------- 0
+---0----------- 0
+--0------------ 0
+-0------------- 0
+0-------------- 0
+--------------0 0
+.names cnt_171__i5.Q cnt_171__i4.Q cnt_171__i3.Q cnt_171__i2.Q cnt_171__i1.Q \
+cnt_171__i0.Q n5085
+111111 1
+----0- 0
+---0-- 0
+--0--- 0
+-0---- 0
+0----- 0
+-----0 0
+.names cnt_171__i19.Q cnt_171__i18.Q cnt_171__i17.Q cnt_171__i16.Q \
+cnt_171__i15.Q cnt_171__i14.Q cnt_171__i13.Q cnt_171__i12.Q cnt_171__i11.Q \
+cnt_171__i10.Q cnt_171__i9.Q cnt_171__i8.Q cnt_171__i7.Q cnt_171__i6.Q \
+cnt_171__i5.Q cnt_171__i4.Q cnt_171__i3.Q cnt_171__i2.Q cnt_171__i1.Q \
+cnt_171__i0.Q n5194
+11111111111111111111 1
+------------------0- 0
+-----------------0-- 0
+----------------0--- 0
+---------------0---- 0
+--------------0----- 0
+-------------0------ 0
+------------0------- 0
+-----------0-------- 0
+----------0--------- 0
+---------0---------- 0
+--------0----------- 0
+-------0------------ 0
+------0------------- 0
+-----0-------------- 0
+----0--------------- 0
+---0---------------- 0
+--0----------------- 0
+-0------------------ 0
+0------------------- 0
+-------------------0 0
+.names cnt_171__i12.Q cnt_171__i11.Q cnt_171__i10.Q cnt_171__i9.Q \
+cnt_171__i8.Q cnt_171__i7.Q cnt_171__i6.Q cnt_171__i5.Q cnt_171__i4.Q \
+cnt_171__i3.Q cnt_171__i2.Q cnt_171__i1.Q cnt_171__i0.Q n5134
+1111111111111 1
+-----------0- 0
+----------0-- 0
+---------0--- 0
+--------0---- 0
+-------0----- 0
+------0------ 0
+-----0------- 0
+----0-------- 0
+---0--------- 0
+--0---------- 0
+-0----------- 0
+0------------ 0
+------------0 0
+.names cnt_171__i8.Q cnt_171__i7.Q cnt_171__i6.Q cnt_171__i5.Q cnt_171__i4.Q \
+cnt_171__i3.Q cnt_171__i2.Q cnt_171__i1.Q cnt_171__i0.Q n5106
+111111111 1
+-------0- 0
+------0-- 0
+-----0--- 0
+----0---- 0
+---0----- 0
+--0------ 0
+-0------- 0
+0-------- 0
+--------0 0
+.names state_FSM_i1.Q dataInBuf_i0_i254.Q lcdD_6_.D.X1
+11 1
+0- 0
+-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q dispCount_i0_i5.Q dispCount_i0_i4.Q \
+dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+dataInBuf_i0_i254.Q lcdD_6_.D.X2
+01------1 1
+100100000 1
+101000001 1
+11------- 0
+00------- 0
+1---1---- 0
+1----1--- 0
+1-----1-- 0
+1------1- 0
+0-------0 0
+--1-----0 0
+1-11----- 0
+1-00----- 0
+1-0-----1 0
+.names state_FSM_i1.Q state_FSM_i2.Q dataInBuf_i0_i251.Q lcdD_3_.D.X1
+101 1
+0-- 0
+-1- 0
+--0 0
+.names state_FSM_i1.Q state_FSM_i2.Q state_FSM_i3.Q state_FSM_i4.Q \
+state_FSM_i5.Q dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q \
+dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i251.Q \
+lcdD_3_.D.X2
+0001-------- 1
+000-1------- 1
+-001-1000000 1
+-00-11000000 1
+1----0100001 1
+1-1--1000001 1
+1--001000001 1
+-1---------1 1
+-1---------0 0
+--1--------0 0
+001--------- 0
+10-----1---- 0
+10------1--- 0
+10-------1-- 0
+10--------1- 0
+---00------0 0
+1----0-----0 0
+1-----1----0 0
+1------1---0 0
+1-------1--0 0
+1--------1-0 0
+1---------10 0
+00-00------- 0
+10---11----- 0
+10---00----- 0
+1001-1-----1 0
+100-11-----1 0
+.names state_FSM_i1.Q dataInBuf_i0_i91.Q dataInBuf_i0_i99.D.X1
+11 1
+0- 0
+-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q dispCount_i0_i5.Q dispCount_i0_i4.Q \
+dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+dataInBuf_i0_i99.Q dataInBuf_i0_i91.Q dataInBuf_i0_i99.D.X2
+01-------1 1
+1001000001 1
+1-01000010 1
+00-------- 0
+1-1------- 0
+1--0------ 0
+1---1----- 0
+1----1---- 0
+1-----1--- 0
+1------1-- 0
+0--------0 0
+--------00 0
+11------0- 0
+1-------11 0
+.names state_FSM_i1.Q dataInBuf_i0_i90.Q dataInBuf_i0_i98.D.X1
+11 1
+0- 0
+-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q dispCount_i0_i5.Q dispCount_i0_i4.Q \
+dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+dataInBuf_i0_i98.Q dataInBuf_i0_i90.Q dataInBuf_i0_i98.D.X2
+01-------1 1
+1001000001 1
+1-01000010 1
+00-------- 0
+1-1------- 0
+1--0------ 0
+1---1----- 0
+1----1---- 0
+1-----1--- 0
+1------1-- 0
+0--------0 0
+--------00 0
+11------0- 0
+1-------11 0
+.names state_FSM_i1.Q dataInBuf_i0_i89.Q dataInBuf_i0_i97.D.X1
+11 1
+0- 0
+-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q dispCount_i0_i5.Q dispCount_i0_i4.Q \
+dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+dataInBuf_i0_i97.Q dataInBuf_i0_i89.Q dataInBuf_i0_i97.D.X2
+01-------1 1
+1001000001 1
+1-01000010 1
+00-------- 0
+1-1------- 0
+1--0------ 0
+1---1----- 0
+1----1---- 0
+1-----1--- 0
+1------1-- 0
+0--------0 0
+--------00 0
+11------0- 0
+1-------11 0
+.names state_FSM_i1.Q dataInBuf_i0_i88.Q dataInBuf_i0_i96.D.X1
+11 1
+0- 0
+-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q dispCount_i0_i5.Q dispCount_i0_i4.Q \
+dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+dataInBuf_i0_i96.Q dataInBuf_i0_i88.Q dataInBuf_i0_i96.D.X2
+01-------1 1
+1001000001 1
+1-01000010 1
+00-------- 0
+1-1------- 0
+1--0------ 0
+1---1----- 0
+1----1---- 0
+1-----1--- 0
+1------1-- 0
+0--------0 0
+--------00 0
+11------0- 0
+1-------11 0
+.names state_FSM_i1.Q dataInBuf_i0_i86.Q dataInBuf_i0_i94.D.X1
+11 1
+0- 0
+-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q dispCount_i0_i5.Q dispCount_i0_i4.Q \
+dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+dataInBuf_i0_i94.Q dataInBuf_i0_i86.Q dataInBuf_i0_i94.D.X2
+01-------1 1
+1001000001 1
+1-01000010 1
+00-------- 0
+1-1------- 0
+1--0------ 0
+1---1----- 0
+1----1---- 0
+1-----1--- 0
+1------1-- 0
+0--------0 0
+--------00 0
+11------0- 0
+1-------11 0
+.names state_FSM_i1.Q dataInBuf_i0_i82.Q dataInBuf_i0_i90.D.X1
+11 1
+0- 0
+-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q dispCount_i0_i5.Q dispCount_i0_i4.Q \
+dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+dataInBuf_i0_i90.Q dataInBuf_i0_i82.Q dataInBuf_i0_i90.D.X2
+01-------1 1
+1001000001 1
+1-01000010 1
+00-------- 0
+1-1------- 0
+1--0------ 0
+1---1----- 0
+1----1---- 0
+1-----1--- 0
+1------1-- 0
+0--------0 0
+--------00 0
+11------0- 0
+1-------11 0
+.names state_FSM_i1.Q dataInBuf_i0_i81.Q dataInBuf_i0_i89.D.X1
+11 1
+0- 0
+-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q dispCount_i0_i5.Q dispCount_i0_i4.Q \
+dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+dataInBuf_i0_i89.Q dataInBuf_i0_i81.Q dataInBuf_i0_i89.D.X2
+01-------1 1
+1001000001 1
+1-01000010 1
+00-------- 0
+1-1------- 0
+1--0------ 0
+1---1----- 0
+1----1---- 0
+1-----1--- 0
+1------1-- 0
+0--------0 0
+--------00 0
+11------0- 0
+1-------11 0
+.names state_FSM_i1.Q dataInBuf_i0_i80.Q dataInBuf_i0_i88.D.X1
+11 1
+0- 0
+-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q dispCount_i0_i5.Q dispCount_i0_i4.Q \
+dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+dataInBuf_i0_i88.Q dataInBuf_i0_i80.Q dataInBuf_i0_i88.D.X2
+01-------1 1
+1001000001 1
+1-01000010 1
+00-------- 0
+1-1------- 0
+1--0------ 0
+1---1----- 0
+1----1---- 0
+1-----1--- 0
+1------1-- 0
+0--------0 0
+--------00 0
+11------0- 0
+1-------11 0
+.names state_FSM_i1.Q dataInBuf_i0_i78.Q dataInBuf_i0_i86.D.X1
+11 1
+0- 0
+-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q dispCount_i0_i5.Q dispCount_i0_i4.Q \
+dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+dataInBuf_i0_i86.Q dataInBuf_i0_i78.Q dataInBuf_i0_i86.D.X2
+01-------1 1
+1001000001 1
+1-01000010 1
+00-------- 0
+1-1------- 0
+1--0------ 0
+1---1----- 0
+1----1---- 0
+1-----1--- 0
+1------1-- 0
+0--------0 0
+--------00 0
+11------0- 0
+1-------11 0
+.names state_FSM_i1.Q dataInBuf_i0_i74.Q dataInBuf_i0_i82.D.X1
+11 1
+0- 0
+-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q dispCount_i0_i5.Q dispCount_i0_i4.Q \
+dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+dataInBuf_i0_i82.Q dataInBuf_i0_i74.Q dataInBuf_i0_i82.D.X2
+01-------1 1
+1001000001 1
+1-01000010 1
+00-------- 0
+1-1------- 0
+1--0------ 0
+1---1----- 0
+1----1---- 0
+1-----1--- 0
+1------1-- 0
+0--------0 0
+--------00 0
+11------0- 0
+1-------11 0
+.names state_FSM_i1.Q dataInBuf_i0_i73.Q dataInBuf_i0_i81.D.X1
+11 1
+0- 0
+-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q dispCount_i0_i5.Q dispCount_i0_i4.Q \
+dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+dataInBuf_i0_i81.Q dataInBuf_i0_i73.Q dataInBuf_i0_i81.D.X2
+01-------1 1
+1001000001 1
+1-01000010 1
+00-------- 0
+1-1------- 0
+1--0------ 0
+1---1----- 0
+1----1---- 0
+1-----1--- 0
+1------1-- 0
+0--------0 0
+--------00 0
+11------0- 0
+1-------11 0
+.names state_FSM_i1.Q dataInBuf_i0_i69.Q dataInBuf_i0_i77.D.X1
+11 1
+0- 0
+-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q dispCount_i0_i5.Q dispCount_i0_i4.Q \
+dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+dataInBuf_i0_i77.Q dataInBuf_i0_i69.Q dataInBuf_i0_i77.D.X2
+01-------1 1
+1001000001 1
+1-01000010 1
+00-------- 0
+1-1------- 0
+1--0------ 0
+1---1----- 0
+1----1---- 0
+1-----1--- 0
+1------1-- 0
+0--------0 0
+--------00 0
+11------0- 0
+1-------11 0
+.names state_FSM_i1.Q dataInBuf_i0_i66.Q dataInBuf_i0_i74.D.X1
+11 1
+0- 0
+-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q dispCount_i0_i5.Q dispCount_i0_i4.Q \
+dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+dataInBuf_i0_i74.Q dataInBuf_i0_i66.Q dataInBuf_i0_i74.D.X2
+01-------1 1
+1001000001 1
+1-01000010 1
+00-------- 0
+1-1------- 0
+1--0------ 0
+1---1----- 0
+1----1---- 0
+1-----1--- 0
+1------1-- 0
+0--------0 0
+--------00 0
+11------0- 0
+1-------11 0
+.names state_FSM_i1.Q dataInBuf_i0_i65.Q dataInBuf_i0_i73.D.X1
+11 1
+0- 0
+-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q dispCount_i0_i5.Q dispCount_i0_i4.Q \
+dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+dataInBuf_i0_i73.Q dataInBuf_i0_i65.Q dataInBuf_i0_i73.D.X2
+01-------1 1
+1001000001 1
+1-01000010 1
+00-------- 0
+1-1------- 0
+1--0------ 0
+1---1----- 0
+1----1---- 0
+1-----1--- 0
+1------1-- 0
+0--------0 0
+--------00 0
+11------0- 0
+1-------11 0
+.names ledEN.Q dataInBuf_i0_i216.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i214.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i213.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i212.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i211.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i210.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i209.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i208.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i206.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i205.C
+1 1
+0 0
+.names ledEN.Q lcdRs.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i204.C
+1 1
+0 0
+.names ledEN.Q dispCount_i0_i0.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i203.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i202.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i201.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i200.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i198.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i197.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i196.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i195.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i194.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i193.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i192.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i190.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i189.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i188.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i187.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i186.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i185.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i184.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i182.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i181.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i180.C
+1 1
+0 0
+.names ledEN.Q state_FSM_i1.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i179.C
+1 1
+0 0
+.names clk_50m.BLIF cnt_171__i0.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i178.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i177.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i176.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i174.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i173.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i172.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i171.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i170.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i169.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i168.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i166.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i165.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i164.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i163.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i162.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i161.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i160.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i158.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i157.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i156.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i155.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i154.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i153.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i152.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i150.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i149.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i148.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i147.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i146.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i145.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i144.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i142.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i141.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i140.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i139.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i138.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i137.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i136.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i134.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i133.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i132.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i131.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i130.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i129.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i128.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i126.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i125.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i124.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i123.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i122.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i121.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i120.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i118.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i117.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i116.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i115.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i114.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i113.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i112.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i110.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i109.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i108.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i107.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i106.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i105.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i104.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i102.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i101.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i100.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i99.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i98.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i97.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i96.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i94.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i93.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i92.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i91.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i90.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i89.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i88.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i86.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i85.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i84.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i83.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i82.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i81.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i80.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i78.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i77.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i74.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i73.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i72.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i70.C
+1 1
+0 0
+.names clk_50m.BLIF ledEN.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i69.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i66.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i65.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i64.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i62.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i61.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i58.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i57.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i56.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i54.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i53.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i50.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i49.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i48.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i46.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i45.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i42.C
+1 1
+0 0
+.names clk_50m.BLIF cnt_171__i19.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i41.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i38.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i37.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i34.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i33.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i29.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i21.C
+1 1
+0 0
+.names ledEN.Q state_FSM_i6.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i13.C
+1 1
+0 0
+.names ledEN.Q state_FSM_i5.C
+1 1
+0 0
+.names ledEN.Q state_FSM_i4.C
+1 1
+0 0
+.names ledEN.Q state_FSM_i3.C
+1 1
+0 0
+.names ledEN.Q state_FSM_i2.C
+1 1
+0 0
+.names ledEN.Q dispCount_i0_i5.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i5.C
+1 1
+0 0
+.names ledEN.Q dispCount_i0_i4.C
+1 1
+0 0
+.names ledEN.Q dispCount_i0_i3.C
+1 1
+0 0
+.names ledEN.Q dispCount_i0_i2.C
+1 1
+0 0
+.names ledEN.Q dispCount_i0_i1.C
+1 1
+0 0
+.names ledEN.Q lcdD_7_.C
+1 1
+0 0
+.names ledEN.Q state_FSM_i7.C
+1 1
+0 0
+.names ledEN.Q lcdD_6_.C
+1 1
+0 0
+.names ledEN.Q lcdD_5_.C
+1 1
+0 0
+.names ledEN.Q lcdD_4_.C
+1 1
+0 0
+.names ledEN.Q lcdD_3_.C
+1 1
+0 0
+.names ledEN.Q lcdD_2_.C
+1 1
+0 0
+.names ledEN.Q lcdD_1_.C
+1 1
+0 0
+.names ledEN.Q lcdD_0_.C
+1 1
+0 0
+.names clk_50m.BLIF cnt_171__i18.C
+1 1
+0 0
+.names clk_50m.BLIF cnt_171__i17.C
+1 1
+0 0
+.names clk_50m.BLIF cnt_171__i16.C
+1 1
+0 0
+.names clk_50m.BLIF cnt_171__i15.C
+1 1
+0 0
+.names clk_50m.BLIF cnt_171__i14.C
+1 1
+0 0
+.names clk_50m.BLIF cnt_171__i13.C
+1 1
+0 0
+.names clk_50m.BLIF cnt_171__i12.C
+1 1
+0 0
+.names clk_50m.BLIF cnt_171__i11.C
+1 1
+0 0
+.names clk_50m.BLIF cnt_171__i10.C
+1 1
+0 0
+.names clk_50m.BLIF cnt_171__i9.C
+1 1
+0 0
+.names clk_50m.BLIF cnt_171__i8.C
+1 1
+0 0
+.names clk_50m.BLIF cnt_171__i7.C
+1 1
+0 0
+.names clk_50m.BLIF cnt_171__i6.C
+1 1
+0 0
+.names clk_50m.BLIF cnt_171__i5.C
+1 1
+0 0
+.names clk_50m.BLIF cnt_171__i4.C
+1 1
+0 0
+.names clk_50m.BLIF cnt_171__i3.C
+1 1
+0 0
+.names clk_50m.BLIF cnt_171__i2.C
+1 1
+0 0
+.names clk_50m.BLIF cnt_171__i1.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i254.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i253.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i252.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i251.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i250.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i249.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i248.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i246.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i245.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i244.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i243.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i242.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i241.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i240.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i238.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i237.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i236.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i235.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i234.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i233.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i232.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i230.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i229.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i228.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i227.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i226.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i225.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i224.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i222.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i221.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i220.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i219.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i218.C
+1 1
+0 0
+.names ledEN.Q dataInBuf_i0_i217.C
+1 1
+0 0
+.names state_FSM_i1.Q state_FSM_i2.Q dispCount_i0_i5.Q dispCount_i0_i4.Q \
+dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+lcdRs.D
+-1------ 1
+1-----1- 1
+1----1-- 1
+1---1--- 1
+1--0---- 1
+1-1----- 1
+1------1 1
+-0010000 0
+00------ 0
+.names ledEN.Q n5194.BLIF ledEN.D
+10 1
+01 1
+00 0
+11 0
+.names cnt_171__i18.Q cnt_171__i17.Q cnt_171__i16.Q cnt_171__i15.Q n5148.BLIF \
+cnt_171__i19.T
+11111 1
+---0- 0
+--0-- 0
+-0--- 0
+0---- 0
+----0 0
+.names cnt_171__i18.Q cnt_171__i17.Q cnt_171__i16.Q cnt_171__i15.Q n5148.BLIF \
+cnt_171__i18.D
+01111 1
+1--0- 1
+1-0-- 1
+10--- 1
+1---0 1
+11111 0
+0--0- 0
+0-0-- 0
+00--- 0
+0---0 0
+.names cnt_171__i17.Q cnt_171__i16.Q cnt_171__i15.Q n5148.BLIF cnt_171__i17.D
+0111 1
+1-0- 1
+10-- 1
+1--0 1
+1111 0
+0-0- 0
+00-- 0
+0--0 0
+.names cnt_171__i16.Q cnt_171__i15.Q n5148.BLIF cnt_171__i16.D
+011 1
+10- 1
+1-0 1
+111 0
+00- 0
+0-0 0
+.names cnt_171__i15.Q n5148.BLIF cnt_171__i15.D
+10 1
+01 1
+00 0
+11 0
+.names cnt_171__i14.Q cnt_171__i13.Q n5134.BLIF cnt_171__i14.D
+011 1
+10- 1
+1-0 1
+111 0
+00- 0
+0-0 0
+.names cnt_171__i13.Q n5134.BLIF cnt_171__i13.D
+10 1
+01 1
+00 0
+11 0
+.names cnt_171__i12.Q cnt_171__i11.Q cnt_171__i10.Q cnt_171__i9.Q n5106.BLIF \
+cnt_171__i12.D
+01111 1
+1--0- 1
+1-0-- 1
+10--- 1
+1---0 1
+11111 0
+0--0- 0
+0-0-- 0
+00--- 0
+0---0 0
+.names cnt_171__i11.Q cnt_171__i10.Q cnt_171__i9.Q n5106.BLIF cnt_171__i11.D
+0111 1
+1-0- 1
+10-- 1
+1--0 1
+1111 0
+0-0- 0
+00-- 0
+0--0 0
+.names cnt_171__i10.Q cnt_171__i9.Q n5106.BLIF cnt_171__i10.D
+011 1
+10- 1
+1-0 1
+111 0
+00- 0
+0-0 0
+.names cnt_171__i9.Q n5106.BLIF cnt_171__i9.D
+10 1
+01 1
+00 0
+11 0
+.names cnt_171__i8.Q cnt_171__i7.Q cnt_171__i6.Q n5085.BLIF cnt_171__i8.D
+0111 1
+1-0- 1
+10-- 1
+1--0 1
+1111 0
+0-0- 0
+00-- 0
+0--0 0
+.names cnt_171__i7.Q cnt_171__i6.Q n5085.BLIF cnt_171__i7.D
+011 1
+10- 1
+1-0 1
+111 0
+00- 0
+0-0 0
+.names cnt_171__i6.Q n5085.BLIF cnt_171__i6.D
+10 1
+01 1
+00 0
+11 0
+.names cnt_171__i4.Q cnt_171__i3.Q cnt_171__i2.Q cnt_171__i1.Q cnt_171__i0.Q \
+cnt_171__i5.T
+11111 1
+---0- 0
+--0-- 0
+-0--- 0
+0---- 0
+----0 0
+.names cnt_171__i4.Q cnt_171__i3.Q cnt_171__i2.Q cnt_171__i1.Q cnt_171__i0.Q \
+cnt_171__i4.D
+01111 1
+1--0- 1
+1-0-- 1
+10--- 1
+1---0 1
+11111 0
+0--0- 0
+0-0-- 0
+00--- 0
+0---0 0
+.names cnt_171__i3.Q cnt_171__i2.Q cnt_171__i1.Q cnt_171__i0.Q cnt_171__i3.D
+0111 1
+1-0- 1
+10-- 1
+1--0 1
+1111 0
+0-0- 0
+00-- 0
+0--0 0
+.names cnt_171__i2.Q cnt_171__i1.Q cnt_171__i0.Q cnt_171__i2.D
+011 1
+10- 1
+1-0 1
+111 0
+00- 0
+0-0 0
+.names cnt_171__i1.Q cnt_171__i0.Q cnt_171__i1.D
+10 1
+01 1
+00 0
+11 0
+.names cnt_171__i0.Q cnt_171__i0.D
+0 1
+1 0
+.names state_FSM_i1.Q state_FSM_i2.Q state_FSM_i3.Q dispCount_i0_i5.Q \
+dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q \
+dispCount_i0_i0.Q state_FSM_i1.D
+1--00---- 1
+1--11---- 1
+1------1- 1
+1-----1-- 1
+1----1--- 1
+--1------ 1
+-1------- 1
+1-------1 1
+-00100000 0
+-00010000 0
+000------ 0
+.names state_FSM_i1.Q dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q \
+dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q state_FSM_i2.D
+1010000 1
+-----1- 0
+----1-- 0
+---1--- 0
+--0---- 0
+-1----- 0
+0------ 0
+------1 0
+.names state_FSM_i4.Q state_FSM_i3.D
+1 1
+0 0
+.names state_FSM_i5.Q state_FSM_i4.D
+1 1
+0 0
+.names state_FSM_i6.Q state_FSM_i5.D
+1 1
+0 0
+.names state_FSM_i7.Q state_FSM_i6.D
+1 1
+0 0
+.names state_FSM_i1.Q dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q \
+dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q state_FSM_i7.D
+1100000 1
+-----1- 0
+----1-- 0
+---1--- 0
+--1---- 0
+-0----- 0
+0------ 0
+------1 0
+.names state_FSM_i1.Q state_FSM_i2.Q state_FSM_i3.Q state_FSM_i4.Q \
+state_FSM_i5.Q state_FSM_i6.Q dispCount_i0_i5.Q dispCount_i0_i4.Q \
+dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+lcdD_7_.D
+-00001100000 1
+10----010000 1
+000001------ 1
+--1----0---- 0
+---1---0---- 0
+----1--0---- 0
+-----0-0---- 0
+1-----11---- 0
+1-----00---- 0
+1---------1- 0
+1--------1-- 0
+1-------1--- 0
+0----0------ 0
+0---1------- 0
+0--1-------- 0
+0-1--------- 0
+-1---------- 0
+1----------1 0
+.names state_FSM_i1.Q state_FSM_i2.Q state_FSM_i3.Q state_FSM_i4.Q \
+state_FSM_i5.Q dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q \
+dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i253.Q \
+lcdD_5_.D
+-0001100000- 1
+00001------- 1
+1----00----1 1
+1----11----1 1
+1---------11 1
+1--------1-1 1
+1-------1--1 1
+1------1---1 1
+-1---------1 1
+-0--0100000- 0
+-0-1-100000- 0
+-01--100000- 0
+10---010000- 0
+00--0------- 0
+00-1-------- 0
+001--------- 0
+1---------10 0
+1--------1-0 0
+1-------1--0 0
+1------1---0 0
+1-----1----0 0
+1----0-----0 0
+-1---------0 0
+.names state_FSM_i1.Q state_FSM_i2.Q state_FSM_i3.Q state_FSM_i4.Q \
+state_FSM_i5.Q dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q \
+dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i252.Q \
+lcdD_4_.D
+-0001100000- 1
+00001------- 1
+1----00----1 1
+1----11----1 1
+1---------11 1
+1--------1-1 1
+1-------1--1 1
+1------1---1 1
+-1---------1 1
+-0--0100000- 0
+-0-1-100000- 0
+-01--100000- 0
+10---010000- 0
+00--0------- 0
+00-1-------- 0
+001--------- 0
+1---------10 0
+1--------1-0 0
+1-------1--0 0
+1------1---0 0
+1-----1----0 0
+1----0-----0 0
+-1---------0 0
+.names state_FSM_i1.Q state_FSM_i2.Q state_FSM_i3.Q state_FSM_i4.Q \
+dispCount_i0_i5.Q dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dataInBuf_i0_i250.Q lcdD_2_.D
+-0-1100000- 1
+-01-100000- 1
+1---00----1 1
+1---11----1 1
+00-1------- 1
+001-------- 1
+1--------11 1
+1-------1-1 1
+1------1--1 1
+1-----1---1 1
+-1--------1 1
+-000100000- 0
+10--010000- 0
+0000------- 0
+1--------10 0
+1-------1-0 0
+1------1--0 0
+1-----1---0 0
+1----1----0 0
+1---0-----0 0
+-1--------0 0
+.names state_FSM_i1.Q state_FSM_i2.Q state_FSM_i3.Q dispCount_i0_i5.Q \
+dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q \
+dispCount_i0_i0.Q dataInBuf_i0_i249.Q lcdD_1_.D
+-01100000- 1
+001------- 1
+1--00----1 1
+1--11----1 1
+1-------11 1
+1------1-1 1
+1-----1--1 1
+1----1---1 1
+-1-------1 1
+-00100000- 0
+10-010000- 0
+000------- 0
+1-------10 0
+1------1-0 0
+1-----1--0 0
+1----1---0 0
+1---1----0 0
+1--0-----0 0
+-1-------0 0
+.names state_FSM_i1.Q state_FSM_i2.Q state_FSM_i3.Q state_FSM_i4.Q \
+state_FSM_i5.Q state_FSM_i6.Q dispCount_i0_i5.Q dispCount_i0_i4.Q \
+dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+dataInBuf_i0_i248.Q lcdD_0_.D
+-00000100000- 1
+000000------- 1
+1-----00----1 1
+1-----11----1 1
+1----------11 1
+1---------1-1 1
+1--------1--1 1
+1-------1---1 1
+-1----------1 1
+10----010000- 0
+-0---1100000- 0
+-0--1-100000- 0
+-0-1--100000- 0
+-01---100000- 0
+00---1------- 0
+00--1-------- 0
+00-1--------- 0
+001---------- 0
+1----------10 0
+1---------1-0 0
+1--------1--0 0
+1-------1---0 0
+1------1----0 0
+1-----0-----0 0
+-1----------0 0
+.names state_FSM_i1.Q state_FSM_i2.Q dispCount_i0_i5.Q dispCount_i0_i4.Q \
+dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+dispCount_i0_i5.T
+-0100000 1
+-1-11111 1
+1--11111 1
+001----- 1
+--0--0-- 0
+1-----10 0
+1--0---1 0
+1----10- 0
+1---10-- 0
+1--10--- 0
+000----- 0
+-1-0---- 0
+-1----0- 0
+-1--0--- 0
+-1---0-- 0
+-1-----0 0
+.names state_FSM_i1.Q state_FSM_i2.Q dispCount_i0_i5.Q dispCount_i0_i4.Q \
+dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+dispCount_i0_i4.T
+-0010000 1
+-1--1111 1
+1---1111 1
+00-1---- 1
+---00--- 0
+1-1-0--- 0
+1---1--0 0
+1-----01 0
+1----01- 0
+1---01-- 0
+00-0---- 0
+-1----0- 0
+-1---0-- 0
+-1--0--- 0
+-1-----0 0
+.names state_FSM_i1.Q state_FSM_i2.Q dispCount_i0_i3.Q dispCount_i0_i2.Q \
+dispCount_i0_i1.Q dispCount_i0_i0.Q dispCount_i0_i3.D
+-10111 1
+1-0111 1
+-11-0- 1
+1-1-0- 1
+-110-- 1
+1-10-- 1
+-11--0 1
+1-1--0 1
+--1111 0
+00---- 0
+--0-0- 0
+--00-- 0
+--0--0 0
+.names state_FSM_i1.Q state_FSM_i2.Q dispCount_i0_i2.Q dispCount_i0_i1.Q \
+dispCount_i0_i0.Q dispCount_i0_i2.D
+-1011 1
+1-011 1
+-110- 1
+1-10- 1
+-11-0 1
+1-1-0 1
+--111 0
+00--- 0
+--00- 0
+--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+dispCount_i0_i1.D
+-110 1
+1-10 1
+-101 1
+1-01 1
+00-- 0
+--00 0
+--11 0
+.names state_FSM_i1.Q state_FSM_i2.Q dispCount_i0_i5.Q dispCount_i0_i4.Q \
+dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+dispCount_i0_i0.D
+1-00---0 1
+1-11---0 1
+1-----10 1
+1----1-0 1
+1---1--0 1
+-1-----0 1
+-010000- 0
+-001000- 0
+00------ 0
+-------1 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i254.Q \
+dataInBuf_i0_i246.Q dataInBuf_i0_i254.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i253.Q dataInBuf_i0_i245.Q dataInBuf_i0_i253.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i252.Q \
+dataInBuf_i0_i244.Q dataInBuf_i0_i252.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i251.Q \
+dataInBuf_i0_i243.Q dataInBuf_i0_i251.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i250.Q \
+dataInBuf_i0_i242.Q dataInBuf_i0_i250.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i249.Q \
+dataInBuf_i0_i241.Q dataInBuf_i0_i249.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i248.Q \
+dataInBuf_i0_i240.Q dataInBuf_i0_i248.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i246.Q \
+dataInBuf_i0_i238.Q dataInBuf_i0_i246.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i245.Q dataInBuf_i0_i237.Q dataInBuf_i0_i245.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i244.Q \
+dataInBuf_i0_i236.Q dataInBuf_i0_i244.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i243.Q \
+dataInBuf_i0_i235.Q dataInBuf_i0_i243.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i242.Q \
+dataInBuf_i0_i234.Q dataInBuf_i0_i242.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i241.Q \
+dataInBuf_i0_i233.Q dataInBuf_i0_i241.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i240.Q \
+dataInBuf_i0_i232.Q dataInBuf_i0_i240.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i238.Q \
+dataInBuf_i0_i230.Q dataInBuf_i0_i238.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i237.Q dataInBuf_i0_i229.Q dataInBuf_i0_i237.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i236.Q \
+dataInBuf_i0_i228.Q dataInBuf_i0_i236.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i235.Q \
+dataInBuf_i0_i227.Q dataInBuf_i0_i235.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i234.Q \
+dataInBuf_i0_i226.Q dataInBuf_i0_i234.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i233.Q \
+dataInBuf_i0_i225.Q dataInBuf_i0_i233.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i232.Q \
+dataInBuf_i0_i224.Q dataInBuf_i0_i232.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i230.Q \
+dataInBuf_i0_i222.Q dataInBuf_i0_i230.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i229.Q dataInBuf_i0_i221.Q dataInBuf_i0_i229.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i228.Q \
+dataInBuf_i0_i220.Q dataInBuf_i0_i228.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i227.Q \
+dataInBuf_i0_i219.Q dataInBuf_i0_i227.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i226.Q \
+dataInBuf_i0_i218.Q dataInBuf_i0_i226.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i225.Q \
+dataInBuf_i0_i217.Q dataInBuf_i0_i225.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i224.Q \
+dataInBuf_i0_i216.Q dataInBuf_i0_i224.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i222.Q \
+dataInBuf_i0_i214.Q dataInBuf_i0_i222.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i221.Q dataInBuf_i0_i213.Q dataInBuf_i0_i221.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i220.Q dataInBuf_i0_i212.Q dataInBuf_i0_i220.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i219.Q \
+dataInBuf_i0_i211.Q dataInBuf_i0_i219.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i218.Q \
+dataInBuf_i0_i210.Q dataInBuf_i0_i218.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i217.Q \
+dataInBuf_i0_i209.Q dataInBuf_i0_i217.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i216.Q \
+dataInBuf_i0_i208.Q dataInBuf_i0_i216.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i214.Q \
+dataInBuf_i0_i206.Q dataInBuf_i0_i214.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i213.Q dataInBuf_i0_i205.Q dataInBuf_i0_i213.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i212.Q dataInBuf_i0_i204.Q dataInBuf_i0_i212.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i211.Q \
+dataInBuf_i0_i203.Q dataInBuf_i0_i211.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i210.Q \
+dataInBuf_i0_i202.Q dataInBuf_i0_i210.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i209.Q \
+dataInBuf_i0_i201.Q dataInBuf_i0_i209.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i208.Q dataInBuf_i0_i200.Q dataInBuf_i0_i208.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i206.Q \
+dataInBuf_i0_i198.Q dataInBuf_i0_i206.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i205.Q dataInBuf_i0_i197.Q dataInBuf_i0_i205.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i204.Q dataInBuf_i0_i196.Q dataInBuf_i0_i204.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i203.Q \
+dataInBuf_i0_i195.Q dataInBuf_i0_i203.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i202.Q \
+dataInBuf_i0_i194.Q dataInBuf_i0_i202.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i201.Q dataInBuf_i0_i193.Q dataInBuf_i0_i201.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i200.Q \
+dataInBuf_i0_i192.Q dataInBuf_i0_i200.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i198.Q \
+dataInBuf_i0_i190.Q dataInBuf_i0_i198.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i197.Q dataInBuf_i0_i189.Q dataInBuf_i0_i197.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i196.Q dataInBuf_i0_i188.Q dataInBuf_i0_i196.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i195.Q \
+dataInBuf_i0_i187.Q dataInBuf_i0_i195.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i194.Q \
+dataInBuf_i0_i186.Q dataInBuf_i0_i194.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i193.Q dataInBuf_i0_i185.Q dataInBuf_i0_i193.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i192.Q dataInBuf_i0_i184.Q dataInBuf_i0_i192.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i190.Q \
+dataInBuf_i0_i182.Q dataInBuf_i0_i190.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i189.Q dataInBuf_i0_i181.Q dataInBuf_i0_i189.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i188.Q dataInBuf_i0_i180.Q dataInBuf_i0_i188.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i187.Q \
+dataInBuf_i0_i179.Q dataInBuf_i0_i187.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i186.Q dataInBuf_i0_i178.Q dataInBuf_i0_i186.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i185.Q \
+dataInBuf_i0_i177.Q dataInBuf_i0_i185.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i184.Q \
+dataInBuf_i0_i176.Q dataInBuf_i0_i184.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i182.Q \
+dataInBuf_i0_i174.Q dataInBuf_i0_i182.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i181.Q dataInBuf_i0_i173.Q dataInBuf_i0_i181.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i180.Q dataInBuf_i0_i172.Q dataInBuf_i0_i180.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i179.Q \
+dataInBuf_i0_i171.Q dataInBuf_i0_i179.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i178.Q dataInBuf_i0_i170.Q dataInBuf_i0_i178.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i177.Q \
+dataInBuf_i0_i169.Q dataInBuf_i0_i177.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i176.Q dataInBuf_i0_i168.Q dataInBuf_i0_i176.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i174.Q \
+dataInBuf_i0_i166.Q dataInBuf_i0_i174.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i173.Q dataInBuf_i0_i165.Q dataInBuf_i0_i173.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i172.Q dataInBuf_i0_i164.Q dataInBuf_i0_i172.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i171.Q \
+dataInBuf_i0_i163.Q dataInBuf_i0_i171.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i170.Q dataInBuf_i0_i162.Q dataInBuf_i0_i170.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i169.Q dataInBuf_i0_i161.Q dataInBuf_i0_i169.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i168.Q \
+dataInBuf_i0_i160.Q dataInBuf_i0_i168.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i166.Q \
+dataInBuf_i0_i158.Q dataInBuf_i0_i166.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i165.Q dataInBuf_i0_i157.Q dataInBuf_i0_i165.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i164.Q dataInBuf_i0_i156.Q dataInBuf_i0_i164.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i163.Q \
+dataInBuf_i0_i155.Q dataInBuf_i0_i163.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i162.Q dataInBuf_i0_i154.Q dataInBuf_i0_i162.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i161.Q dataInBuf_i0_i153.Q dataInBuf_i0_i161.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i160.Q dataInBuf_i0_i152.Q dataInBuf_i0_i160.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i158.Q \
+dataInBuf_i0_i150.Q dataInBuf_i0_i158.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i157.Q dataInBuf_i0_i149.Q dataInBuf_i0_i157.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i156.Q \
+dataInBuf_i0_i148.Q dataInBuf_i0_i156.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i155.Q \
+dataInBuf_i0_i147.Q dataInBuf_i0_i155.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i154.Q \
+dataInBuf_i0_i146.Q dataInBuf_i0_i154.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i153.Q \
+dataInBuf_i0_i145.Q dataInBuf_i0_i153.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i152.Q \
+dataInBuf_i0_i144.Q dataInBuf_i0_i152.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i150.Q \
+dataInBuf_i0_i142.Q dataInBuf_i0_i150.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i149.Q dataInBuf_i0_i141.Q dataInBuf_i0_i149.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i148.Q \
+dataInBuf_i0_i140.Q dataInBuf_i0_i148.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i147.Q \
+dataInBuf_i0_i139.Q dataInBuf_i0_i147.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i146.Q \
+dataInBuf_i0_i138.Q dataInBuf_i0_i146.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i145.Q \
+dataInBuf_i0_i137.Q dataInBuf_i0_i145.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i144.Q \
+dataInBuf_i0_i136.Q dataInBuf_i0_i144.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i142.Q \
+dataInBuf_i0_i134.Q dataInBuf_i0_i142.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i141.Q dataInBuf_i0_i133.Q dataInBuf_i0_i141.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i140.Q \
+dataInBuf_i0_i132.Q dataInBuf_i0_i140.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i139.Q \
+dataInBuf_i0_i131.Q dataInBuf_i0_i139.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i138.Q \
+dataInBuf_i0_i130.Q dataInBuf_i0_i138.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i137.Q \
+dataInBuf_i0_i129.Q dataInBuf_i0_i137.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i136.Q \
+dataInBuf_i0_i128.Q dataInBuf_i0_i136.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i134.Q \
+dataInBuf_i0_i126.Q dataInBuf_i0_i134.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i133.Q dataInBuf_i0_i125.Q dataInBuf_i0_i133.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i132.Q \
+dataInBuf_i0_i124.Q dataInBuf_i0_i132.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i131.Q \
+dataInBuf_i0_i123.Q dataInBuf_i0_i131.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i130.Q \
+dataInBuf_i0_i122.Q dataInBuf_i0_i130.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i129.Q \
+dataInBuf_i0_i121.Q dataInBuf_i0_i129.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i128.Q \
+dataInBuf_i0_i120.Q dataInBuf_i0_i128.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i126.Q \
+dataInBuf_i0_i118.Q dataInBuf_i0_i126.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i125.Q dataInBuf_i0_i117.Q dataInBuf_i0_i125.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i124.Q \
+dataInBuf_i0_i116.Q dataInBuf_i0_i124.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i123.Q \
+dataInBuf_i0_i115.Q dataInBuf_i0_i123.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i122.Q \
+dataInBuf_i0_i114.Q dataInBuf_i0_i122.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i121.Q \
+dataInBuf_i0_i113.Q dataInBuf_i0_i121.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i120.Q \
+dataInBuf_i0_i112.Q dataInBuf_i0_i120.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i118.Q \
+dataInBuf_i0_i110.Q dataInBuf_i0_i118.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i117.Q dataInBuf_i0_i109.Q dataInBuf_i0_i117.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i116.Q \
+dataInBuf_i0_i108.Q dataInBuf_i0_i116.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i115.Q \
+dataInBuf_i0_i107.Q dataInBuf_i0_i115.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i114.Q \
+dataInBuf_i0_i106.Q dataInBuf_i0_i114.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i113.Q \
+dataInBuf_i0_i105.Q dataInBuf_i0_i113.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i112.Q \
+dataInBuf_i0_i104.Q dataInBuf_i0_i112.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i110.Q \
+dataInBuf_i0_i102.Q dataInBuf_i0_i110.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i109.Q dataInBuf_i0_i101.Q dataInBuf_i0_i109.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i108.Q \
+dataInBuf_i0_i100.Q dataInBuf_i0_i108.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i107.Q \
+dataInBuf_i0_i99.Q dataInBuf_i0_i107.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i106.Q \
+dataInBuf_i0_i98.Q dataInBuf_i0_i106.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i105.Q \
+dataInBuf_i0_i97.Q dataInBuf_i0_i105.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i104.Q \
+dataInBuf_i0_i96.Q dataInBuf_i0_i104.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i102.Q \
+dataInBuf_i0_i94.Q dataInBuf_i0_i102.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i101.Q dataInBuf_i0_i93.Q dataInBuf_i0_i101.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i100.Q \
+dataInBuf_i0_i92.Q dataInBuf_i0_i100.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q dispCount_i0_i5.Q \
+dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q \
+dispCount_i0_i0.Q dataInBuf_i0_i93.Q dataInBuf_i0_i85.Q dataInBuf_i0_i93.D
+1--0100001- 1
+--1-------- 1
+1-------1-1 1
+1------1--1 1
+1-----1---1 1
+1----1----1 1
+1---0-----1 1
+1--1------1 1
+-1--------1 1
+-000100000- 0
+000-------- 0
+--0-----1-0 0
+--0----1--0 0
+--0---1---0 0
+--0--1----0 0
+--0-0-----0 0
+--01------0 0
+--0------00 0
+0-0-------0 0
+.names state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q dispCount_i0_i5.Q \
+dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q \
+dispCount_i0_i0.Q dataInBuf_i0_i92.Q dataInBuf_i0_i84.Q dataInBuf_i0_i92.D
+1--0100001- 1
+--1-------- 1
+1-------1-1 1
+1------1--1 1
+1-----1---1 1
+1----1----1 1
+1---0-----1 1
+1--1------1 1
+-1--------1 1
+-000100000- 0
+000-------- 0
+--0-----1-0 0
+--0----1--0 0
+--0---1---0 0
+--0--1----0 0
+--0-0-----0 0
+--01------0 0
+--0------00 0
+0-0-------0 0
+.names state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q dispCount_i0_i5.Q \
+dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q \
+dispCount_i0_i0.Q dataInBuf_i0_i91.Q dataInBuf_i0_i83.Q dataInBuf_i0_i91.D
+1--0100001- 1
+--1-------- 1
+1-------1-1 1
+1------1--1 1
+1-----1---1 1
+1----1----1 1
+1---0-----1 1
+1--1------1 1
+-1--------1 1
+-000100000- 0
+000-------- 0
+--0-----1-0 0
+--0----1--0 0
+--0---1---0 0
+--0--1----0 0
+--0-0-----0 0
+--01------0 0
+--0------00 0
+0-0-------0 0
+.names state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q dispCount_i0_i5.Q \
+dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q \
+dispCount_i0_i0.Q dataInBuf_i0_i85.Q dataInBuf_i0_i77.Q dataInBuf_i0_i85.D
+1--0100001- 1
+--1-------- 1
+1-------1-1 1
+1------1--1 1
+1-----1---1 1
+1----1----1 1
+1---0-----1 1
+1--1------1 1
+-1--------1 1
+-000100000- 0
+000-------- 0
+--0-----1-0 0
+--0----1--0 0
+--0---1---0 0
+--0--1----0 0
+--0-0-----0 0
+--01------0 0
+--0------00 0
+0-0-------0 0
+.names state_FSM_i1.Q state_FSM_i7.Q dispCount_i0_i5.Q dispCount_i0_i4.Q \
+dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+dataInBuf_i0_i84.Q dataInBuf_i0_i84.D
+1-0100001 1
+-1------- 1
+-0-----1- 0
+-0----1-- 0
+-0---1--- 0
+-0--1---- 0
+-0-0----- 0
+-01------ 0
+00------- 0
+-0------0 0
+.names state_FSM_i1.Q state_FSM_i7.Q dispCount_i0_i5.Q dispCount_i0_i4.Q \
+dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+dataInBuf_i0_i83.Q dataInBuf_i0_i83.D
+1-0100001 1
+-1------- 1
+-0-----1- 0
+-0----1-- 0
+-0---1--- 0
+-0--1---- 0
+-0-0----- 0
+-01------ 0
+00------- 0
+-0------0 0
+.names state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q dispCount_i0_i5.Q \
+dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q \
+dispCount_i0_i0.Q dataInBuf_i0_i80.Q dataInBuf_i0_i72.Q dataInBuf_i0_i80.D
+1--0100001- 1
+--1-------- 1
+1-------1-1 1
+1------1--1 1
+1-----1---1 1
+1----1----1 1
+1---0-----1 1
+1--1------1 1
+-1--------1 1
+-000100000- 0
+000-------- 0
+--0-----1-0 0
+--0----1--0 0
+--0---1---0 0
+--0--1----0 0
+--0-0-----0 0
+--01------0 0
+--0------00 0
+0-0-------0 0
+.names state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q dispCount_i0_i5.Q \
+dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q \
+dispCount_i0_i0.Q dataInBuf_i0_i78.Q dataInBuf_i0_i70.Q dataInBuf_i0_i78.D
+1--0100001- 1
+--1-------- 1
+1-------1-1 1
+1------1--1 1
+1-----1---1 1
+1----1----1 1
+1---0-----1 1
+1--1------1 1
+-1--------1 1
+-000100000- 0
+000-------- 0
+--0-----1-0 0
+--0----1--0 0
+--0---1---0 0
+--0--1----0 0
+--0-0-----0 0
+--01------0 0
+--0------00 0
+0-0-------0 0
+.names state_FSM_i1.Q state_FSM_i2.Q state_FSM_i7.Q dispCount_i0_i5.Q \
+dispCount_i0_i4.Q dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q \
+dispCount_i0_i0.Q dataInBuf_i0_i72.Q dataInBuf_i0_i64.Q dataInBuf_i0_i72.D
+1--0100001- 1
+--1-------- 1
+1-------1-1 1
+1------1--1 1
+1-----1---1 1
+1----1----1 1
+1---0-----1 1
+1--1------1 1
+-1--------1 1
+-000100000- 0
+000-------- 0
+--0-----1-0 0
+--0----1--0 0
+--0---1---0 0
+--0--1----0 0
+--0-0-----0 0
+--01------0 0
+--0------00 0
+0-0-------0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i70.Q dataInBuf_i0_i62.Q dataInBuf_i0_i70.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i69.Q \
+dataInBuf_i0_i61.Q dataInBuf_i0_i69.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i66.Q \
+dataInBuf_i0_i58.Q dataInBuf_i0_i66.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i65.Q dataInBuf_i0_i57.Q dataInBuf_i0_i65.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i64.Q \
+dataInBuf_i0_i56.Q dataInBuf_i0_i64.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i62.Q dataInBuf_i0_i54.Q dataInBuf_i0_i62.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i61.Q \
+dataInBuf_i0_i53.Q dataInBuf_i0_i61.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i58.Q \
+dataInBuf_i0_i50.Q dataInBuf_i0_i58.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i57.Q dataInBuf_i0_i49.Q dataInBuf_i0_i57.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i56.Q dataInBuf_i0_i48.Q dataInBuf_i0_i56.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i54.Q dataInBuf_i0_i46.Q dataInBuf_i0_i54.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i53.Q \
+dataInBuf_i0_i45.Q dataInBuf_i0_i53.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i50.Q dataInBuf_i0_i42.Q dataInBuf_i0_i50.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i49.Q \
+dataInBuf_i0_i41.Q dataInBuf_i0_i49.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i7.Q dispCount_i0_i5.Q dispCount_i0_i4.Q \
+dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+dataInBuf_i0_i48.Q dataInBuf_i0_i48.D
+1-0100001 1
+-1------- 1
+-0-----1- 0
+-0----1-- 0
+-0---1--- 0
+-0--1---- 0
+-0-0----- 0
+-01------ 0
+00------- 0
+-0------0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i46.Q dataInBuf_i0_i38.Q dataInBuf_i0_i46.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i45.Q \
+dataInBuf_i0_i37.Q dataInBuf_i0_i45.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i42.Q dataInBuf_i0_i34.Q dataInBuf_i0_i42.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i41.Q \
+dataInBuf_i0_i33.Q dataInBuf_i0_i41.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i7.Q dispCount_i0_i5.Q dispCount_i0_i4.Q \
+dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+dataInBuf_i0_i38.Q dataInBuf_i0_i38.D
+1-0100001 1
+-1------- 1
+-0-----1- 0
+-0----1-- 0
+-0---1--- 0
+-0--1---- 0
+-0-0----- 0
+-01------ 0
+00------- 0
+-0------0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF dataInBuf_i0_i37.Q \
+dataInBuf_i0_i29.Q dataInBuf_i0_i37.D
+1-01- 1
+1-1-1 1
+-1--1 1
+-000- 0
+00--- 0
+--1-0 0
+---00 0
+0---0 0
+.names state_FSM_i1.Q state_FSM_i7.Q dispCount_i0_i5.Q dispCount_i0_i4.Q \
+dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+dataInBuf_i0_i34.Q dataInBuf_i0_i34.D
+1-0100001 1
+-1------- 1
+-0-----1- 0
+-0----1-- 0
+-0---1--- 0
+-0--1---- 0
+-0-0----- 0
+-01------ 0
+00------- 0
+-0------0 0
+.names state_FSM_i1.Q state_FSM_i7.Q dispCount_i0_i5.Q dispCount_i0_i4.Q \
+dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+dataInBuf_i0_i33.Q dataInBuf_i0_i33.D
+1-0100001 1
+-1------- 1
+-0-----1- 0
+-0----1-- 0
+-0---1--- 0
+-0--1---- 0
+-0-0----- 0
+-01------ 0
+00------- 0
+-0------0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i29.Q dataInBuf_i0_i21.Q dataInBuf_i0_i29.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i21.Q dataInBuf_i0_i13.Q dataInBuf_i0_i21.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i2.Q lcdRs_N_618.BLIF state_FSM_i7.Q \
+dataInBuf_i0_i13.Q dataInBuf_i0_i5.Q dataInBuf_i0_i13.D
+1-0-1- 1
+1-1--1 1
+---1-- 1
+-1---1 1
+-0000- 0
+00-0-- 0
+--10-0 0
+---000 0
+0--0-0 0
+.names state_FSM_i1.Q state_FSM_i7.Q dispCount_i0_i5.Q dispCount_i0_i4.Q \
+dispCount_i0_i3.Q dispCount_i0_i2.Q dispCount_i0_i1.Q dispCount_i0_i0.Q \
+dataInBuf_i0_i5.Q dataInBuf_i0_i5.D
+1-0100001 1
+-1------- 1
+-0-----1- 0
+-0----1-- 0
+-0---1--- 0
+-0--1---- 0
+-0-0----- 0
+-01------ 0
+00------- 0
+-0------0 0
+.end

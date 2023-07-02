@@ -1,0 +1,18 @@
+D:\ispLEVER_Classic2_1\synpbase\bin64\c_ver.exe  -osyn  E:\grade-3_2\isp_project\lab9\synwork\lab9_comp.srs  -top  lab9  -prodtype  synplify_pro  -nostructver -I e:\grade-3_2\isp_project\lab9\  -I D:\ispLEVER_Classic2_1\synpbase\lib  -v2001  -encrypt  -pro  -dmgen  E:\grade-3_2\isp_project\lab9\dm  -compiler_compatible -ui -fid2 -ram -sharing on -ll 2000 -autosm -lib work D:\ispLEVER_Classic2_1\ispcpld\..\cae_library\synthesis\verilog\mach.v -lib work E:\grade-3_2\isp_project\lab9\lab9.h -lib work E:\grade-3_2\isp_project\lab9\decoder2to4.v -lib work E:\grade-3_2\isp_project\lab9\decoderHex2Dec.v -lib work E:\grade-3_2\isp_project\lab9\mux16to4.v -lib work E:\grade-3_2\isp_project\lab9\counter_n.v -lib work E:\grade-3_2\isp_project\lab9\dynamicShow.v -lib work E:\grade-3_2\isp_project\lab9\serial.v -lib work E:\grade-3_2\isp_project\lab9\keyboard.v -lib work E:\grade-3_2\isp_project\lab9\dffre.v -lib work E:\grade-3_2\isp_project\lab9\button.v -lib work E:\grade-3_2\isp_project\lab9\lab9.v -loga  E:\grade-3_2\isp_project\lab9\lab9.srr 
+rc:0 success:1
+E:\grade-3_2\isp_project\lab9\synwork\lab9_comp.srs|o|1462672050|16582
+D:\ispLEVER_Classic2_1\ispcpld\..\cae_library\synthesis\verilog\mach.v|i|1336476608|12168
+E:\grade-3_2\isp_project\lab9\lab9.h|i|1462617987|0
+E:\grade-3_2\isp_project\lab9\decoder2to4.v|i|1462549498|308
+E:\grade-3_2\isp_project\lab9\decoderHex2Dec.v|i|1462548404|701
+E:\grade-3_2\isp_project\lab9\mux16to4.v|i|1462548317|386
+E:\grade-3_2\isp_project\lab9\counter_n.v|i|1460379863|821
+E:\grade-3_2\isp_project\lab9\dynamicShow.v|i|1462618487|516
+E:\grade-3_2\isp_project\lab9\serial.v|i|1462616724|3457
+E:\grade-3_2\isp_project\lab9\keyboard.v|i|1462622436|10547
+E:\grade-3_2\isp_project\lab9\dffre.v|i|1649680967|789
+E:\grade-3_2\isp_project\lab9\button.v|i|1462619235|357
+E:\grade-3_2\isp_project\lab9\lab9.v|i|1462619043|1279
+E:\grade-3_2\isp_project\lab9\lab9.srr|o|1462672369|6820
+D:\ispLEVER_Classic2_1\synpbase\bin\c_ver.exe|i|1401198650|2292224
+D:\ispLEVER_Classic2_1\synpbase\bin64\c_ver.exe|i|1401198850|5829632

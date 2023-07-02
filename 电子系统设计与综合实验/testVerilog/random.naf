@@ -1,0 +1,11 @@
+key  i
+clk  i
+r  i
+rand1[3]  o
+rand1[2]  o
+rand1[1]  o
+rand1[0]  o
+rand2[3]  o
+rand2[2]  o
+rand2[1]  o
+rand2[0]  o

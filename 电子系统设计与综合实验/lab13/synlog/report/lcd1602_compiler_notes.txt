@@ -1,0 +1,4 @@
+@N|Running in 64-bit mode
+@N: CG364 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":1:7:1:13|Synthesizing module lcd1602
+@N: CL201 :"E:\grade-3_2\isp_project\lab13\lcd1602.v":54:4:54:9|Trying to extract state machine for register state
+

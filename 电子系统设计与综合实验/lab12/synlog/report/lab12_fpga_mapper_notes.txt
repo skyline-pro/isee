@@ -1,0 +1,10 @@
+@N: MF248 |Running in 64-bit mode.
+@N: MO106 :"e:\grade-3_2\isp_project\lab12\leddotmatrix.v":41:8:41:11|Found ROM, 'col4[5:0]', 16 words by 6 bits 
+@N: MO106 :"e:\grade-3_2\isp_project\lab12\leddotmatrix.v":41:8:41:11|Found ROM, 'col3[5:0]', 16 words by 6 bits 
+@N: MO106 :"e:\grade-3_2\isp_project\lab12\leddotmatrix.v":41:8:41:11|Found ROM, 'col6[3]', 16 words by 1 bits 
+@N: MO106 :"e:\grade-3_2\isp_project\lab12\leddotmatrix.v":41:8:41:11|Found ROM, 'col5[3]', 16 words by 1 bits 
+@N: MO106 :"e:\grade-3_2\isp_project\lab12\leddotmatrix.v":41:8:41:11|Found ROM, 'col2[3]', 16 words by 1 bits 
+@N: MO106 :"e:\grade-3_2\isp_project\lab12\leddotmatrix.v":41:8:41:11|Found ROM, 'col1[3:0]', 16 words by 4 bits 
+@N: MO106 :"e:\grade-3_2\isp_project\lab12\leddotmatrix.v":41:8:41:11|Found ROM, 'col7[1]', 16 words by 1 bits 
+@N: MO106 :"e:\grade-3_2\isp_project\lab12\leddotmatrix.v":41:8:41:11|Found ROM, 'col5[0]', 16 words by 1 bits 
+@N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.

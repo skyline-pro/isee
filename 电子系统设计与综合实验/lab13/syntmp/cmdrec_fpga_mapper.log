@@ -1,0 +1,9 @@
+D:\ispLEVER_Classic2_1\synpbase\bin64\m_cpld.exe  -prodtype  synplify_pro  -encrypt  -pro  -rundir  E:\grade-3_2\isp_project\lab13  -part LC4064B  -package T44C  -grade -2.5   -ispmach4s -RWCheckOnRam 1 -areadelay 0 -minc -auto_constrain_io -summaryfile E:\grade-3_2\isp_project\lab13\synlog\report\lcd1602_fpga_mapper.xml -top_level_module  lcd1602  -multisrs  -ta_num_paths 3  -ta_num_points 0  -oedif  E:\grade-3_2\isp_project\lab13\lcd1602.edi  -freq 200.000  E:\grade-3_2\isp_project\lab13\synwork\lcd1602_mult.srs  -ologparam  E:\grade-3_2\isp_project\lab13\syntmp\lcd1602.plg  -osyn  E:\grade-3_2\isp_project\lab13\lcd1602.srm  -prjdir  e:\grade-3_2\isp_project\lab13\  -prjname  lcd1602  -log  E:\grade-3_2\isp_project\lab13\synlog\lcd1602_fpga_mapper.srr 
+rc:1 success:1
+E:\grade-3_2\isp_project\lab13\lcd1602.edi|o|1652403269|262913
+E:\grade-3_2\isp_project\lab13\synwork\lcd1602_mult.srs|i|1652403269|5235
+E:\grade-3_2\isp_project\lab13\syntmp\lcd1602.plg|o|1652403269|0
+E:\grade-3_2\isp_project\lab13\lcd1602.srm|o|1652403269|106041
+E:\grade-3_2\isp_project\lab13\synlog\lcd1602_fpga_mapper.srr|o|1652403269|5588
+D:\ispLEVER_Classic2_1\synpbase\bin\m_cpld.exe|i|1399340484|7067648
+D:\ispLEVER_Classic2_1\synpbase\bin64\m_cpld.exe|i|1399343322|8049664

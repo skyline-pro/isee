@@ -1,0 +1,19 @@
+JDF B
+// Created by Version 2.1 
+PROJECT lab12
+DESIGN lab12 Normal
+DEVKIT LC4256V-75T144I
+ENTRY Pure Verilog HDL
+MODULE dffre.v
+MODSTYLE dffre Normal
+MODULE counter_n.v
+MODSTYLE counter_n Normal
+MODULE ledDotMatrix.v
+MODSTYLE ledDotMatrix Normal
+MODULE button.v
+MODSTYLE button Normal
+MODULE lab12.v
+MODSTYLE lab12 Normal
+SYNTHESIS_TOOL Synplify
+SIMULATOR_TOOL ModelSim
+TOPMODULE lab12

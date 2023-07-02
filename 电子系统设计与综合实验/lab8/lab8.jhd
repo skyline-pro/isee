@@ -1,0 +1,15 @@
+MODULE lab8 DEFIN lab8.v
+	SUBMODULE dynamicshow
+		INSTANCE dynamicshow
+	SUBMODULE calculate
+		INSTANCE calculate
+	SUBMODULE button
+		INSTANCE button4
+	SUBMODULE button
+		INSTANCE button3
+	SUBMODULE button
+		INSTANCE button2
+	SUBMODULE button
+		INSTANCE button1
+	SUBMODULE button
+		INSTANCE button0

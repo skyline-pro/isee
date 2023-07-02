@@ -1,0 +1,9 @@
+D:\ispLEVER_Classic2_1\synpbase\bin64\m_cpld.exe  -prodtype  synplify_pro  -encrypt  -pro  -rundir  E:\grade-3_2\isp_project\testverilog  -part LC4064B  -package T44C  -grade -2.5   -ispmach4s -RWCheckOnRam 1 -areadelay 0 -minc -auto_constrain_io -summaryfile E:\grade-3_2\isp_project\testverilog\synlog\report\top_fpga_mapper.xml -top_level_module  top  -multisrs  -ta_num_paths 3  -ta_num_points 0  -oedif  E:\grade-3_2\isp_project\testverilog\top.edi  -freq 200.000  E:\grade-3_2\isp_project\testverilog\synwork\top_mult.srs  -ologparam  E:\grade-3_2\isp_project\testverilog\syntmp\top.plg  -osyn  E:\grade-3_2\isp_project\testverilog\top.srm  -prjdir  e:\grade-3_2\isp_project\testverilog\  -prjname  top  -log  E:\grade-3_2\isp_project\testverilog\synlog\top_fpga_mapper.srr 
+rc:2 success:0
+E:\grade-3_2\isp_project\testverilog\top.edi|o|0|0
+E:\grade-3_2\isp_project\testverilog\synwork\top_mult.srs|i|1460388357|4974
+E:\grade-3_2\isp_project\testverilog\syntmp\top.plg|o|1460388357|0
+E:\grade-3_2\isp_project\testverilog\top.srm|o|0|0
+E:\grade-3_2\isp_project\testverilog\synlog\top_fpga_mapper.srr|o|1460388357|1195
+D:\ispLEVER_Classic2_1\synpbase\bin\m_cpld.exe|i|1399340484|7067648
+D:\ispLEVER_Classic2_1\synpbase\bin64\m_cpld.exe|i|1399343322|8049664

@@ -1,0 +1,101 @@
+Selecting top level module lab11
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab11\dffre.v":14:7:14:11|Synthesizing module dffre
+
+@N: CG179 :"E:\Grade-3_2\ISP_Project\lab11\dffre.v":25:13:25:13|Removing redundant assignment
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab11\button.v":1:7:1:12|Synthesizing module button
+
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab11\keyboard.v":1:7:1:14|Synthesizing module keyboard
+
+@W: CL169 :"E:\Grade-3_2\ISP_Project\lab11\keyboard.v":75:4:75:9|Pruning register flag_Over 
+
+@W: CL169 :"E:\Grade-3_2\ISP_Project\lab11\keyboard.v":75:4:75:9|Pruning register int_Data[9:0] 
+
+@W: CL169 :"E:\Grade-3_2\ISP_Project\lab11\keyboard.v":75:4:75:9|Pruning register temp[9:0] 
+
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\keyboard.v":58:4:58:9|Feedback mux created for signal time1Oms -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\keyboard.v":16:4:16:9|Feedback mux created for signal key_out[3:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":1:7:1:9|Synthesizing module i2c
+
+@W: CL271 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Pruning bits 7 to 4 of RdData[7:0] -- not in use ...
+
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal sda_tem -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal sda_buf -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal scl_buf -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal bit_state[5:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal WrData[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal Flag_WR -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal RdData_cl[0:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal RdData[0:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal DataLED_cl[0:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal DataLED[0:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal RdData_cl[0:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal RdData[1:1] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal DataLED_cl[0:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal DataLED[1:1] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal RdData_cl[0:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal RdData[2:2] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal DataLED_cl[0:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal DataLED[2:2] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal RdData_cl[0:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal RdData[3:3] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal DataLED_cl[0:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Feedback mux created for signal DataLED[3:3] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@W: CL189 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Register bit WrData[4] is always 0, optimizing ...
+@W: CL189 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Register bit WrData[5] is always 0, optimizing ...
+@W: CL189 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Register bit WrData[6] is always 0, optimizing ...
+@W: CL189 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Register bit WrData[7] is always 0, optimizing ...
+@W: CL279 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Pruning register bits 7 to 4 of WrData[7:0] 
+
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab11\counter_n.v":15:7:15:15|Synthesizing module counter_n
+
+	n=32'b00000000000000000000000000000100
+	counter_bits=32'b00000000000000000000000000000010
+   Generated name = counter_n_4s_2s
+
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab11\mux16to4.v":1:7:1:14|Synthesizing module mux16to4
+
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab11\decoderHex2Dec.v":1:7:1:20|Synthesizing module decoderHex2Dec
+
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab11\decoder2to4.v":1:7:1:17|Synthesizing module decoder2to4
+
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab11\dynamicShow.v":1:7:1:17|Synthesizing module dynamicshow
+
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab11\lab11.v":1:7:1:11|Synthesizing module lab11
+
+@W: CG781 :"E:\Grade-3_2\ISP_Project\lab11\lab11.v":24:8:24:10|Undriven input RST on instance i2c, tying to 0
+@W: CL156 :"E:\Grade-3_2\ISP_Project\lab11\dynamicShow.v":8:66:8:70|*Input reset to expression [instance] has undriven bits that are tied to 0 -- simulation mismatch possible.
+@N: CL201 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Trying to extract state machine for register eeprom_state
+Extracted state machine for register eeprom_state
+State machine has 3 reachable states with original encodings of:
+   00
+   01
+   10
+@N: CL201 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Trying to extract state machine for register bit_state
+Extracted state machine for register bit_state
+State machine has 4 reachable states with original encodings of:
+   000000
+   000001
+   000010
+   000011
+@W: CL189 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Register bit RdData[0] is always 0, optimizing ...
+@W: CL189 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Register bit RdData_cl[0] is always 1, optimizing ...
+@W: CL189 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Register bit RdData[1] is always 0, optimizing ...
+@W: CL189 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Register bit RdData[2] is always 0, optimizing ...
+@W: CL189 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Register bit RdData[3] is always 0, optimizing ...
+@W: CL169 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Pruning register WrData[3:0] 
+
+@W: CL159 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":4:16:4:22|Input DATA_IN is unused
+@N: CL201 :"E:\Grade-3_2\ISP_Project\lab11\keyboard.v":75:4:75:9|Trying to extract state machine for register flag_Data
+Extracted state machine for register flag_Data
+State machine has 4 reachable states with original encodings of:
+   00
+   01
+   10
+   11
+@N: CL201 :"E:\Grade-3_2\ISP_Project\lab11\keyboard.v":16:4:16:9|Trying to extract state machine for register scanvalue
+Extracted state machine for register scanvalue
+State machine has 4 reachable states with original encodings of:
+   0001
+   0010
+   0100
+   1000

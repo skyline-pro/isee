@@ -1,0 +1,16 @@
+D:\ispLEVER_Classic2_1\synpbase\bin64\c_ver.exe  -osyn  E:\grade-3_2\isp_project\testverilog\synwork\top_comp.srs  -top  top  -prodtype  synplify_pro  -nostructver -I e:\grade-3_2\isp_project\testverilog\  -I D:\ispLEVER_Classic2_1\synpbase\lib  -v2001  -encrypt  -pro  -dmgen  E:\grade-3_2\isp_project\testverilog\dm  -compiler_compatible -ui -fid2 -ram -sharing on -ll 2000 -autosm -lib work D:\ispLEVER_Classic2_1\ispcpld\..\cae_library\synthesis\verilog\mach.v -lib work E:\grade-3_2\isp_project\testverilog\testverilog.h -lib work E:\grade-3_2\isp_project\testverilog\to4decode.v -lib work E:\grade-3_2\isp_project\testverilog\decode.v -lib work E:\grade-3_2\isp_project\testverilog\mux.v -lib work E:\grade-3_2\isp_project\testverilog\counter_n.v -lib work E:\grade-3_2\isp_project\testverilog\adder.v -lib work E:\grade-3_2\isp_project\testverilog\random.v -lib work E:\grade-3_2\isp_project\testverilog\key.v -lib work E:\grade-3_2\isp_project\testverilog\top.v -loga  E:\grade-3_2\isp_project\testverilog\top.srr 
+rc:1 success:1
+E:\grade-3_2\isp_project\testverilog\synwork\top_comp.srs|o|1460388356|12493
+D:\ispLEVER_Classic2_1\ispcpld\..\cae_library\synthesis\verilog\mach.v|i|1336476608|12168
+E:\grade-3_2\isp_project\testverilog\testverilog.h|i|1460377089|0
+E:\grade-3_2\isp_project\testverilog\to4decode.v|i|1460387121|275
+E:\grade-3_2\isp_project\testverilog\decode.v|i|1460387481|541
+E:\grade-3_2\isp_project\testverilog\mux.v|i|1460384957|306
+E:\grade-3_2\isp_project\testverilog\counter_n.v|i|1460379802|376
+E:\grade-3_2\isp_project\testverilog\adder.v|i|1649680428|648
+E:\grade-3_2\isp_project\testverilog\random.v|i|1460388328|381
+E:\grade-3_2\isp_project\testverilog\key.v|i|1460387908|222
+E:\grade-3_2\isp_project\testverilog\top.v|i|1460388309|1236
+E:\grade-3_2\isp_project\testverilog\top.srr|o|1460388356|4169
+D:\ispLEVER_Classic2_1\synpbase\bin\c_ver.exe|i|1401198650|2292224
+D:\ispLEVER_Classic2_1\synpbase\bin64\c_ver.exe|i|1401198850|5829632

@@ -1,0 +1,10 @@
+D:\ispLEVER_Classic2_1\synpbase\bin64\c_ver.exe  -osyn  E:\Grade-3_2\ISP_Project\lab12\rev_1\synwork\lab12_comp.srs  -prodtype  synplify_pro  -nostructver -I E:\Grade-3_2\ISP_Project\lab12\  -I D:\ispLEVER_Classic2_1\synpbase\lib  -sysv  -encrypt  -pro  -dmgen  E:\Grade-3_2\ISP_Project\lab12\rev_1\dm  -ui -fid2 -ram -sharing on -ll 2000 -autosm -D_MULTIPLE_FILE_COMPILATION_UNIT_ -lib work E:\Grade-3_2\ISP_Project\lab12\ledDotMatrix.v -lib work E:\Grade-3_2\ISP_Project\lab12\lab12.v -lib work E:\Grade-3_2\ISP_Project\lab12\button.v -lib work E:\Grade-3_2\ISP_Project\lab12\dffre.v -loga  E:\Grade-3_2\ISP_Project\lab12\rev_1\lab12.srr 
+rc:1 success:1
+E:\Grade-3_2\ISP_Project\lab12\rev_1\synwork\lab12_comp.srs|o|1652265871|5397
+E:\Grade-3_2\ISP_Project\lab12\ledDotMatrix.v|i|1652265868|6766
+E:\Grade-3_2\ISP_Project\lab12\lab12.v|i|1652146588|281
+E:\Grade-3_2\ISP_Project\lab12\button.v|i|1462619260|357
+E:\Grade-3_2\ISP_Project\lab12\dffre.v|i|1649680967|789
+E:\Grade-3_2\ISP_Project\lab12\rev_1\lab12.srr|o|1652265871|3173
+D:\ispLEVER_Classic2_1\synpbase\bin\c_ver.exe|i|1401198650|2292224
+D:\ispLEVER_Classic2_1\synpbase\bin64\c_ver.exe|i|1401198850|5829632

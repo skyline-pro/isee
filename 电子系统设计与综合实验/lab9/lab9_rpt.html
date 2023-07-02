@@ -1,0 +1,2572 @@
+<HTML>
+<HEAD><TITLE>HTML_REPORT_FILE</TITLE>
+<STYLE TYPE="text/css">
+<!--
+.blink {text-decoration:blink}
+.ms  {font-size: 10pt; font-family: monospace; font-weight: normal}
+.msb {font-size: 10pt; font-family: monospace; font-weight: bold  }
+-->
+</STYLE>
+</HEAD>
+<PRE>
+<A name="Top"></A><H2 align=center> ispLEVER Classic 2.1.00.02.49.20 Fitter Report File </H2>
+<H2 align=center>Copyright(C), 1992-2012, Lattice Semiconductor Corporation</H2>
+<H2 align=center>All Rights Reserved</H2>
+
+
+The Basic/Detailed Report Format can be selected in the dialog box
+Tools->Fitter Report File Format...
+
+<A name="Project_Summary"></A><FONT COLOR=maroon><U><B><big>Project_Summary</big></B></U></FONT>
+<BR>
+Project Name         :  lab9
+Project Path         :  E:\Grade-3_2\ISP_Project\lab9
+Project Fitted on    :  Sun May 08 09:53:01 2016
+
+Device               :  M4256_64
+Package              :  100
+GLB Input Mux Size   :  33
+Available Blocks     :  16
+Speed                :  -7.5
+Part Number          :  LC4256V-75T100I
+Source Format        :  Pure_Verilog_HDL
+
+
+<font color=green size=4><span class=blink><strong><B>Project 'lab9' Fit Successfully!</B></strong></span></font>
+
+
+<A name="Compilation_Times"></A><FONT COLOR=maroon><U><B><big>Compilation_Times</big></B></U></FONT>
+<BR>
+Prefit Time                     0 secs
+Load Design Time                0.05 secs
+Partition Time                  0.11 secs
+Place Time                      0.00 secs
+Route Time                      0.00 secs
+Total Fit Time                  00:00:01
+
+
+<A name="Design_Summary"></A><FONT COLOR=maroon><U><B><big>Design_Summary</big></B></U></FONT>
+<BR>
+Total Input Pins                9
+Total Logic Functions           158
+  Total Output Pins             21
+  Total Bidir I/O Pins          0
+  Total Buried Nodes            137
+Total Flip-Flops                134
+  Total D Flip-Flops            107
+  Total T Flip-Flops            27
+  Total Latches                 0
+Total Product Terms             752
+
+Total Reserved Pins             0
+Total Locked Pins               30
+Total Locked Nodes              0
+
+Total Unique Output Enables     0
+Total Unique Clocks             7
+Total Unique Clock Enables      7
+Total Unique Resets             3
+Total Unique Presets            3
+
+Fmax Logic Levels               2
+
+
+<A name="Device_Resource_Summary"></A><FONT COLOR=maroon><U><B><big>Device_Resource_Summary</big></B></U></FONT>
+<BR>
+<B>                                 Device
+                                 Total    Used   Not Used   Utilization
+-----------------------------------------------------------------------
+</B>Dedicated Pins
+  Clock/Input Pins                  4        2      2    -->    50
+  Input-Only Pins                   6        0      6    -->     0
+  I/O / Enable Pins                 2        0      2    -->     0
+I/O Pins                           62       28     34    -->    45
+Logic Functions                   256      158     98    -->    61
+  Input Registers                  64        0     64    -->     0
+
+GLB Inputs                        576      384    192    -->    66
+Logical Product Terms            1280      574    706    -->    44
+Occupied GLBs                      16       16      0    -->   100
+Macrocells                        256      158     98    -->    61
+
+Control Product Terms:
+  GLB Clock/Clock Enables          16       13      3    -->    81
+  GLB Reset/Presets                16        0     16    -->     0
+  Macrocell Clocks                256       16    240    -->     6
+  Macrocell Clock Enables         256       31    225    -->    12
+  Macrocell Enables               256        0    256    -->     0
+  Macrocell Resets                256        7    249    -->     2
+  Macrocell Presets               256        3    253    -->     1
+
+Global Routing Pool               324      148    176    -->    45
+  GRP from IFB                     ..        7     ..    -->    ..
+    (from input signals)           ..        7     ..    -->    ..
+    (from output signals)          ..        0     ..    -->    ..
+    (from bidir signals)           ..        0     ..    -->    ..
+  GRP from MFB                     ..      141     ..    -->    ..
+----------------------------------------------------------------------
+
+&lt;Note&gt; 1 : The available PT is the product term that has not been used.
+&lt;Note&gt; 2 : IFB is I/O feedback.
+&lt;Note&gt; 3 : MFB is macrocell feedback.
+
+
+<A name="GLB_Resource_Summary"></A><FONT COLOR=maroon><U><B><big>GLB_Resource_Summary</big></B></U></FONT>
+<BR>
+<B>                                                                                     # of PT
+               ---  Fanin  ---    I/O    Input  Macrocells       Macrocells   Logic  clusters
+             Unique Shared Total  Pins    Regs Used Inaccessible  available    PTs   used
+-------------------------------------------------------------------------------------------
+Maximum
+  GLB                      36      *(1)     8   --     --             16       80       16
+</B>-------------------------------------------------------------------------------------------
+  GLB    A      6    22    28      0/4      0   12      0              4       49       12
+  GLB    B     10     6    16      2/4      0    7      0              9       25        8
+  GLB    C     17     2    19      0/4      0    4      3              9       33        9
+  GLB    D     21     1    22      4/4      0    3      4              9       41        9
+-------------------------------------------------------------------------------------------
+  GLB    E      5    24    29      0/4      0   14      0              2       45       14
+  GLB    F      5    24    29      2/4      0   14      0              2       32       14
+  GLB    G      7    16    23      2/4      0   11      4              1       50       15
+  GLB    H      0    19    19      3/4      0    9      0              7       38       10
+-------------------------------------------------------------------------------------------
+  GLB    I      3    25    28      2/4      0    9      0              7       25        9
+  GLB    J      1    30    31      2/4      0   13      0              3       27       13
+  GLB    K      8    21    29      3/4      0   14      0              2       29       14
+  GLB    L      0    20    20      3/4      0    7      0              9       22        8
+-------------------------------------------------------------------------------------------
+  GLB    M      0    23    23      3/4      0    9      0              7       31        9
+  GLB    N      4    25    29      1/4      0   10      3              3       51       14
+  GLB    O      3    17    20      1/4      0   12      0              4       32       12
+  GLB    P      0    19    19      0/4      0   10      0              6       44       12
+-------------------------------------------------------------------------------------------
+TOTALS:        90   294   384     28/64     0  158     14             84      574      182
+
+&lt;Note&gt; 1 : For ispMACH 4000 devices, the number of IOs depends on the GLB.
+&lt;Note&gt; 2 : Four rightmost columns above reflect last status of the placement process.
+
+
+<A name="GLB_Control_Summary"></A><FONT COLOR=maroon><U><B><big>GLB_Control_Summary</big></B></U></FONT>
+<BR>
+<B>           Shared Shared | Mcell  Mcell  Mcell  Mcell  Mcell 
+           Clk/CE Rst/Pr | Clock  CE     Enable Reset  Preset
+------------------------------------------------------------------------------
+Maximum
+  GLB        1      1        16     16     16     16     16  
+==============================================================================
+</B>  GLB    A   1      0         0      4      0      0      0
+  GLB    B   1      0         0      0      0      0      0
+  GLB    C   0      0         0      0      0      0      0
+  GLB    D   0      0         0      0      0      0      0
+------------------------------------------------------------------------------
+  GLB    E   1      0         3      8      0      3      0
+  GLB    F   1      0         2      4      0      0      0
+  GLB    G   1      0         0      2      0      0      0
+  GLB    H   1      0         3      0      0      0      3
+------------------------------------------------------------------------------
+  GLB    I   1      0         0      0      0      0      0
+  GLB    J   1      0         0      0      0      4      0
+  GLB    K   0      0         0      0      0      0      0
+  GLB    L   1      0         0      0      0      0      0
+------------------------------------------------------------------------------
+  GLB    M   1      0         2      2      0      0      0
+  GLB    N   1      0         0      4      0      0      0
+  GLB    O   1      0         2      3      0      0      0
+  GLB    P   1      0         4      4      0      0      0
+------------------------------------------------------------------------------
+
+&lt;Note&gt; 1 : For ispMACH 4000 devices, the number of output enables depends on the GLB.
+
+
+<A name="Optimizer_and_Fitter_Options"></A><FONT COLOR=maroon><U><B><big>Optimizer_and_Fitter_Options</big></B></U></FONT>
+<BR>
+Pin Assignment :                       Yes
+Group Assignment :                     No
+Pin Reservation :                      No
+
+@Ignore_Project_Constraints :
+  Pin Assignments :                    No
+      Keep Block Assignment            --
+      Keep Segment Assignment          --
+  Group Assignments :                  No
+  Macrocell Assignment :               No
+      Keep Block Assignment            --
+      Keep Segment Assignment          --
+
+@Backannotate_Project_Constraints
+  Pin Assignments :                    No
+  Pin And Block Assignments :          No
+  Pin, Macrocell and Block :           No
+
+@Timing_Constraints :                  No
+
+@Global_Project_Optimization :
+  Balanced Partitioning :              Yes
+  Spread Placement :                   Yes
+
+  Note :
+    Pack Design :
+       Balanced Partitioning = No
+       Spread Placement      = No
+    Spread Design :
+       Balanced Partitioning = Yes
+       Spread Placement      = Yes
+
+
+@Logic_Synthesis :
+  Logic Reduction :                    Yes
+  Node Collapsing :                    FMAX
+  Fmax_Logic_Level :                   1
+  D/T Synthesis :                      Yes
+  XOR Synthesis :                      Yes
+  Max. P-Term for Collapsing :         16
+  Max. P-Term for Splitting :          80
+  Max Symbols :                        24
+
+@Utilization_options
+  Max. % of Macrocells used :          100
+@Usercode                               (HEX)
+@IO_Types                              Default = LVCMOS18 (2)
+@Output_Slew_Rate                      Default = FAST (2)
+@Power                                 Default = HIGH (2)
+@Pull                                  Default = PULLUP_UP (2)
+@Fast_Bypass                           Default = None (2)
+@ORP_Bypass                            Default = None
+@Input_Registers                       Default = None (2)
+@Register_Powerup                      Default = None
+
+Device Options:
+&lt;Note&gt; 1 : Reserved unused I/Os can be independently driven to Low or High, and does not
+           follow the drive level set for the Global Configure Unused I/O Option.
+&lt;Note&gt; 2 : For user-specified constraints on individual signals, refer to the Output,
+           Bidir and Buried Signal Lists.
+
+
+<A name="Pinout_Listing"></A><FONT COLOR=maroon><U><B><big>Pinout_Listing</big></B></U></FONT>
+<BR>
+<B>      | Pin   | Bank |GLB |Assigned|                 | Signal|
+Pin No| Type  |Number|Pad |Pin     |     I/O Type    | Type  | Signal name
+</B>-------------------------------------------------------------------------------------------------
+1     | GND   |   -  |    |        |                 |       |
+2     | TDI   |   -  |    |        |                 |       |
+3     |  I_O  |   0  |C12 |        |                 |       |
+4     |  I_O  |   0  |C10 |        |                 |       |
+5     |  I_O  |   0  |C6  |        |                 |       |
+6     |  I_O  |   0  |C2  |        |                 |       |
+7     |GNDIO0 |   -  |    |        |                 |       |
+8     |  I_O  |   0  |D12 |    *   |LVCMOS18         | Input |<A href=#7>keyIn_0_</A>
+9     |  I_O  |   0  |D10 |    *   |LVCMOS18         | Input |<A href=#6>keyIn_1_</A>
+10    |  I_O  |   0  |D6  |    *   |LVCMOS18         | Input |<A href=#25>keyIn_2_</A>
+11    |  I_O  |   0  |D4  |    *   |LVCMOS18         | Input |<A href=#8>keyIn_3_</A>
+12    | IN0   |   0  |    |        |                 |       |
+13    |VCCIO0 |   -  |    |        |                 |       |
+14    |  I_O  |   0  |E4  |        |                 |       |
+15    |  I_O  |   0  |E6  |        |                 |       |
+16    |  I_O  |   0  |E10 |        |                 |       |
+17    |  I_O  |   0  |E12 |        |                 |       |
+18    |GNDIO0 |   -  |    |        |                 |       |
+19    |  I_O  |   0  |F2  |        |                 |       |
+20    |  I_O  |   0  |F6  |        |                 |       |
+21    |  I_O  |   0  |F10 |    *   |LVCMOS18         | Output|<A href=#34>keyOut_0_</A>
+22    |  I_O  |   0  |F12 |    *   |LVCMOS18         | Output|<A href=#33>keyOut_1_</A>
+23    | IN1   |   0  |    |        |                 |       |
+24    | TCK   |   -  |    |        |                 |       |
+25    | VCC   |   -  |    |        |                 |       |
+26    | GND   |   -  |    |        |                 |       |
+27    | IN2   |   0  |    |        |                 |       |
+28    |  I_O  |   0  |G12 |    *   |LVCMOS18         | Output|<A href=#32>keyOut_2_</A>
+29    |  I_O  |   0  |G10 |    *   |LVCMOS18         | Output|<A href=#31>keyOut_3_</A>
+30    |  I_O  |   0  |G6  |        |                 |       |
+31    |  I_O  |   0  |G2  |        |                 |       |
+32    |GNDIO0 |   -  |    |        |                 |       |
+33    |VCCIO0 |   -  |    |        |                 |       |
+34    |  I_O  |   0  |H12 |        |                 |       |
+35    |  I_O  |   0  |H10 |    *   |LVCMOS18         | Output|<A href=#30>led_0_</A>
+36    |  I_O  |   0  |H6  |    *   |LVCMOS18         | Output|<A href=#29>led_1_</A>
+37    |  I_O  |   0  |H2  |    *   |LVCMOS18         | Output|<A href=#27>led_2_</A>
+38    |INCLK1 |   0  |    |        |                 |       |
+39    |INCLK2 |   1  |    |    *   |LVCMOS18         | Input |<A href=#15>clkl</A>
+40    | VCC   |   -  |    |        |                 |       |
+41    |  I_O  |   1  |I2  |    *   |LVCMOS18         | Output|<A href=#26>led_3_</A>
+42    |  I_O  |   1  |I6  |    *   |LVCMOS18         | Output|<A href=#28>led_4_</A>
+43    |  I_O  |   1  |I10 |        |                 |       |
+44    |  I_O  |   1  |I12 |        |                 |       |
+45    |VCCIO1 |   -  |    |        |                 |       |
+46    |GNDIO1 |   -  |    |        |                 |       |
+47    |  I_O  |   1  |J2  |        |                 |       |
+48    |  I_O  |   1  |J6  |    *   |LVCMOS18         | Input |<A href=#17>reset</A>
+49    |  I_O  |   1  |J10 |    *   |LVCMOS18         | Input |<A href=#19>send</A>
+50    |  I_O  |   1  |J12 |        |                 |       |
+51    | GND   |   -  |    |        |                 |       |
+52    | TMS   |   -  |    |        |                 |       |
+53    |  I_O  |   1  |K12 |        |                 |       |
+54    |  I_O  |   1  |K10 |    *   |LVCMOS18         | Output|<A href=#14>LEDVCC_0_</A>
+55    |  I_O  |   1  |K6  |    *   |LVCMOS18         | Output|<A href=#12>LEDVCC_1_</A>
+56    |  I_O  |   1  |K2  |    *   |LVCMOS18         | Output|<A href=#16>show_5_</A>
+57    |GNDIO1 |   -  |    |        |                 |       |
+58    |  I_O  |   1  |L12 |    *   |LVCMOS18         | Output|<A href=#24>show_0_</A>
+59    |  I_O  |   1  |L10 |        |                 |       |
+60    |  I_O  |   1  |L6  |    *   |LVCMOS18         | Output|<A href=#23>show_1_</A>
+61    |  I_O  |   1  |L4  |    *   |LVCMOS18         | Output|<A href=#11>show_6_</A>
+62    | IN3   |   1  |    |        |                 |       |
+63    |VCCIO1 |   -  |    |        |                 |       |
+64    |  I_O  |   1  |M4  |    *   |LVCMOS18         | Output|<A href=#20>show_3_</A>
+65    |  I_O  |   1  |M6  |    *   |LVCMOS18         | Output|<A href=#22>show_2_</A>
+66    |  I_O  |   1  |M10 |    *   |LVCMOS18         | Output|<A href=#18>show_4_</A>
+67    |  I_O  |   1  |M12 |        |                 |       |
+68    |GNDIO1 |   -  |    |        |                 |       |
+69    |  I_O  |   1  |N2  |        |                 |       |
+70    |  I_O  |   1  |N6  |        |                 |       |
+71    |  I_O  |   1  |N10 |        |                 |       |
+72    |  I_O  |   1  |N12 |    *   |LVCMOS18         | Output|<A href=#9>LEDVCC_3_</A>
+73    | IN4   |   1  |    |        |                 |       |
+74    | TDO   |   -  |    |        |                 |       |
+75    | VCC   |   -  |    |        |                 |       |
+76    | GND   |   -  |    |        |                 |       |
+77    | IN5   |   1  |    |        |                 |       |
+78    |  I_O  |   1  |O12 |    *   |LVCMOS18         | Output|<A href=#10>LEDVCC_2_</A>
+79    |  I_O  |   1  |O10 |        |                 |       |
+80    |  I_O  |   1  |O6  |        |                 |       |
+81    |  I_O  |   1  |O2  |        |                 |       |
+82    |GNDIO1 |   -  |    |        |                 |       |
+83    |VCCIO1 |   -  |    |        |                 |       |
+84    |  I_O  |   1  |P12 |        |                 |       |
+85    |  I_O  |   1  |P10 |        |                 |       |
+86    |  I_O  |   1  |P6  |        |                 |       |
+87    | I_O/OE|   1  |P2  |        |                 |       |
+88    |INCLK3 |   1  |    |    *   |LVCMOS18         | Input |<A href=#13>clkh</A>
+89    |INCLK0 |   0  |    |        |                 |       |
+90    | VCC   |   -  |    |        |                 |       |
+91    | I_O/OE|   0  |A2  |        |                 |       |
+92    |  I_O  |   0  |A6  |        |                 |       |
+93    |  I_O  |   0  |A10 |        |                 |       |
+94    |  I_O  |   0  |A12 |        |                 |       |
+95    |VCCIO0 |   -  |    |        |                 |       |
+96    |GNDIO0 |   -  |    |        |                 |       |
+97    |  I_O  |   0  |B2  |    *   |LVCMOS18         | Output|<A href=#35>Tx</A>
+98    |  I_O  |   0  |B6  |    *   |LVCMOS18         | Input |<A href=#21>Rx</A>
+99    |  I_O  |   0  |B10 |        |                 |       |
+100   |  I_O  |   0  |B12 |        |                 |       |
+-------------------------------------------------------------------------------------------------
+
+&lt;Note&gt; GLB Pad : This notation refers to the GLB I/O pad number in the device.
+&lt;Note&gt; Assigned Pin : user or dedicated input assignment (E.g. Clock pins).
+&lt;Note&gt; Pin Type : 
+          ClkIn : Dedicated input or clock pin 
+           CLK  : Dedicated clock pin
+           I_O  : Input/Output pin
+           INP  : Dedicated input pin
+           JTAG : JTAG Control and test pin
+           NC   : No connected
+
+
+<A name="Input_Signal_List"></A><FONT COLOR=maroon><U><B><big>Input_Signal_List</big></B></U></FONT>
+<BR>
+<B>                Input
+         Pin    Fanout
+ Pin GLB Type                       Pullup Signal
+</B>---------------------------------------------------
+  98   B  I/O   3  ------------M-OP      Up <A name=21>Rx</A>
+  88  -- INCLK     ----------------      Up <A name=13>clkh</A>
+  39  -- INCLK     ----------------      Up <A name=15>clkl</A>
+   8   D  I/O   1  A---------------      Up <A name=7>keyIn_0_</A>
+   9   D  I/O   1  --------I-------      Up <A name=6>keyIn_1_</A>
+  10   D  I/O   1  -B--------------      Up <A name=25>keyIn_2_</A>
+  11   D  I/O   1  ---D------------      Up <A name=8>keyIn_3_</A>
+  48   J  I/O   1  ---------J------      Up <A name=17>reset</A>
+  49   J  I/O   1  --C-------------      Up <A name=19>send</A>
+---------------------------------------------------
+
+
+<A name="Output_Signal_List"></A><FONT COLOR=maroon><U><B><big>Output_Signal_List</big></B></U></FONT>
+<BR>
+<B>          I         C      P R P       O Output
+          N         L Mc   R E U C O F B Fanout
+ Pin GLB  P LL PTs  S Type E S P E E P P                     Slew Pullup Signal
+</B>----------------------------------------------------------------------------------
+  54   K  2  -   1  1 COM                   ----------------  Fast     Up <A href=#14>LEDVCC_0_</A>
+  55   K  2  -   1  1 COM                   ----------------  Fast     Up <A href=#12>LEDVCC_1_</A>
+  78   O  2  -   1  1 COM                   ----------------  Fast     Up <A href=#10>LEDVCC_2_</A>
+  72   N  2  -   1  1 COM                   ----------------  Fast     Up <A href=#9>LEDVCC_3_</A>
+  97   B 14  1   9  2 DFF  *   S            ----------------  Fast     Up <A href=#35>Tx</A>
+  21   F  6  1   4  1 DFF      R *       5  A-CD--G------N--  Fast     Up <A href=#34>keyOut_0_</A>
+  22   F  6  1   4  1 DFF      R *       6  A-CDE-G------N--  Fast     Up <A href=#33>keyOut_1_</A>
+  28   G  6  1   3  2 DFF      R *       6  A-CDE-G------N--  Fast     Up <A href=#32>keyOut_2_</A>
+  29   G  6  1   3  1 DFF      R *       6  A-CDE-G------N--  Fast     Up <A href=#31>keyOut_3_</A>
+  35   H 12  1   7  2 DFF  *   S            ----------------  Fast     Up <A href=#30>led_0_</A>
+  36   H 12  1   7  2 DFF  *   S            ----------------  Fast     Up <A href=#29>led_1_</A>
+  37   H 12  1  10  3 DFF  *   S            ----------------  Fast     Up <A href=#27>led_2_</A>
+  41   I 11  1   8  2 DFF  *   S            ----------------  Fast     Up <A href=#26>led_3_</A>
+  42   I  9  1   1  1 DFF  *   S            ----------------  Fast     Up <A href=#28>led_4_</A>
+  58   L  6  -   6  2 COM                   ----------------  Fast     Up <A href=#24>show_0_</A>
+  60   L  6  -   5  1 COM                   ----------------  Fast     Up <A href=#23>show_1_</A>
+  65   M  6  -   2  1 COM                   ----------------  Fast     Up <A href=#22>show_2_</A>
+  64   M  6  -   6  2 COM                   ----------------  Fast     Up <A href=#20>show_3_</A>
+  66   M  6  -   4  1 COM                   ----------------  Fast     Up <A href=#18>show_4_</A>
+  56   K  6  -   5  1 COM                   ----------------  Fast     Up <A href=#16>show_5_</A>
+  61   L  6  -   4  1 COM                   ----------------  Fast     Up <A href=#11>show_6_</A>
+----------------------------------------------------------------------------------
+
+&lt;Note&gt; CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+<A name="Bidir_Signal_List"></A><FONT COLOR=maroon><U><B><big>Bidir_Signal_List</big></B></U></FONT>
+<BR>
+<B>          I         C      P R P       O Bidir
+          N         L Mc   R E U C O F B Fanout
+ Pin GLB  P LL PTs  S Type E S P E E P P                     Slew Pullup Signal
+</B>-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+&lt;Note&gt; CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+<A name="Buried_Signal_List"></A><FONT COLOR=maroon><U><B><big>Buried_Signal_List</big></B></U></FONT>
+<BR>
+<B>        I         C      P R P       Node
+        N         L Mc   R E U C I F Fanout
+Mc GLB  P LL PTs  S Type E S P E R P                     Signal
+</B>-------------------------------------------------------------------------------------------
+ 9   J  1  -   1  1 DFF      R       13 A---EFGHIJKLMNOP  <A href=#79>button0_d1_q_0_</A>
+ 4   K  1  1   2  1 DFF      R       13 A---EFGHIJKLMNOP  <A href=#80>button0_d2_q_0_</A>
+13   N  1  1   2  1 DFF      R       13 A---EFGHIJKLMNOP  <A href=#81>button0_d3_q_0_</A>
+ 2   A  1  -   2  1 DFF      R       6  A-CDE-G------N--  <A href=#76>button1_d1_q_0_</A>
+ 5   A  1  1   2  1 DFF      R       6  A-CDE-G------N--  <A href=#77>button1_d2_q_0_</A>
+12   C  1  1   1  1 DFF      R       6  A-CDE-G------N--  <A href=#78>button1_d3_q_0_</A>
+ 3   I  1  -   2  1 DFF      R       6  A-CDE-G------N--  <A href=#73>button2_d1_q_0_</A>
+12   N  1  1   2  1 DFF      R       6  A-CDE-G------N--  <A href=#74>button2_d2_q_0_</A>
+ 8   G  1  1   2  2 DFF      R       6  A-CDE-G------N--  <A href=#75>button2_d3_q_0_</A>
+ 7   B  1  -   2  1 DFF      R       6  A-CDE-G------N--  <A href=#70>button3_d1_q_0_</A>
+ 9   C  1  1   1  1 DFF      R       6  A-CDE-G------N--  <A href=#71>button3_d2_q_0_</A>
+11   D  1  1   1  1 DFF      R       6  A-CDE-G------N--  <A href=#72>button3_d3_q_0_</A>
+ 8   D  1  -   1  1 DFF      R       5  A-CD--G------N--  <A href=#67>button4_d1_q_0_</A>
+ 0   A  1  1   2  1 DFF      R       5  A-CD--G------N--  <A href=#68>button4_d2_q_0_</A>
+ 7   G  1  1   2  2 DFF      R       5  A-CD--G------N--  <A href=#69>button4_d3_q_0_</A>
+ 7   C  1  -   1  1 DFF      R       2  ----EF----------  <A href=#63>button5_d1_q_0_</A>
+10   E  1  1   2  1 DFF      R       2  ----EF----------  <A href=#64>button5_d2_q_0_</A>
+11   E  1  1   2  1 DFF      R       2  ----EF----------  <A href=#65>button5_d3_q_0_</A>
+ 5   K  1  1   2  1 DFF      R       5  ----EF----K--NO-  <A href=#82>dynamicshow_counter4_q_1_</A>
+ 3   K  2  1   3  1 DFF      R       5  ----EF----K--NO-  <A href=#83>dynamicshow_counter4_q_2_</A>
+ 6   F  4  -   2  1 COM              3  ----------KLM---  <A href=#110>dynamicshow_mux_dataout_3_0__un0_n</A>
+ 9   K  4  -   2  1 COM              3  ----------KLM---  <A href=#108>dynamicshow_mux_dataout_3_0__un1_n</A>
+ 8   F  4  -   2  1 COM              3  ----------KLM---  <A href=#122>dynamicshow_mux_dataout_3_3__un0_n</A>
+ 7   F  4  -   2  1 COM              3  ----------KLM---  <A href=#119>dynamicshow_mux_dataout_3_3__un1_n</A>
+ 5   F  6  -   4  1 COM              3  ----------KLM---  <A href=#126>dynamicshow_out_1__n</A>
+ 4   E  6  -   4  1 COM              3  ----------KLM---  <A href=#121>dynamicshow_out_2__n</A>
+10   A  5  1   1  1 DFF    * R       1  -------H--------  <A href=#161>keyboard_combvalue_0_</A>
+13   G  5  1   1  1 DFF    * R       2  -------HI-------  <A href=#162>keyboard_combvalue_1_</A>
+14   G  5  1   1  1 DFF    * R       2  -------HI-------  <A href=#163>keyboard_combvalue_2_</A>
+12   A  5  1   1  1 DFF    * R       2  -------HI-------  <A href=#164>keyboard_combvalue_3_</A>
+10   G  7  1   1  1 DFF    * R       2  -------HI-------  <A href=#142>keyboard_combvalue_4_</A>
+ 7   A  7  1   1  1 DFF    * R       2  -------HI-------  <A href=#143>keyboard_combvalue_5_</A>
+12   G  7  1   1  1 DFF    * R       2  -------HI-------  <A href=#144>keyboard_combvalue_6_</A>
+ 8   A  7  1   1  1 DFF    * R       2  -------HI-------  <A href=#145>keyboard_combvalue_7_</A>
+ 6   G 21  1  33  7 TFF    * R       4  --CD--G------N--  <A href=#49>keyboard_flag_Data_0_</A>
+ 6   N 20  1   3  1 TFF    * R       4  A-CD---------N--  <A href=#66>keyboard_flag_Data_1_</A>
+ 1   E 10  1   5  1 DFF    * R *     1  -------------N--  <A href=#158>keyboard_int_Data0_0_</A>
+ 3   E 13  1   4  1 DFF    * R *     1  -------------N--  <A href=#159>keyboard_int_Data0_1_</A>
+ 9   E 10  1   3  1 DFF    * R *     1  -------------N--  <A href=#160>keyboard_int_Data0_2_</A>
+12   E  9  1   2  1 DFF    * R *     1  -------------N--  <A href=#153>keyboard_int_Data0_3_</A>
+ 5   C 18  -  30  6 COM              1  ----E-----------  <A href=#171>keyboard_int_Data0_3__0</A>
+ 0   E 10  1   5  1 DFF    * R *     1  A---------------  <A href=#154>keyboard_int_Data1_0_</A>
+ 5   N 18  -  30  6 COM              1  ----E-----------  <A href=#172>keyboard_int_Data1_0__0</A>
+ 2   E 13  1   4  1 DFF    * R *     2  A--D------------  <A href=#155>keyboard_int_Data1_1_</A>
+ 8   E 10  1   3  1 DFF    * R *     2  A--D------------  <A href=#156>keyboard_int_Data1_2_</A>
+13   E  9  1   2  1 DFF    * R *     2  A--D------------  <A href=#157>keyboard_int_Data1_3_</A>
+ 1   A 20  1  11  3 DFF    * R *     1  -----F----------  <A href=#48>keyboard_led_int_Data0_0_</A>
+ 6   D 21  -  39  8 COM              1  A---------------  <A href=#168>keyboard_led_int_Data0_0__0</A>
+ 3   A 20  1  11  3 DFF    * R *     1  -----F----------  <A href=#50>keyboard_led_int_Data0_1_</A>
+ 6   A 16  1   9  3 DFF    * R *     1  ----E-----------  <A href=#51>keyboard_led_int_Data0_2_</A>
+ 4   A 18  1   6  2 DFF    * R *     1  -----F----------  <A href=#52>keyboard_led_int_Data0_3_</A>
+ 7   N  6  1   2  1 DFF    * R *     2  ----E-----K-----  <A href=#44>keyboard_led_int_Data1_0_</A>
+ 8   N 20  -   5  1 COM              1  -------------N--  <A href=#167>keyboard_led_int_Data1_0__0</A>
+ 9   N  6  1   2  1 DFF    * R *     1  -----F----------  <A href=#45>keyboard_led_int_Data1_1_</A>
+10   N  6  1   2  1 DFF    * R *     1  ----E-----------  <A href=#46>keyboard_led_int_Data1_2_</A>
+11   N  6  1   2  1 DFF    * R *     1  -----F----------  <A href=#47>keyboard_led_int_Data1_3_</A>
+ 9   G  5  1   1  1 DFF    * R       2  -----FG---------  <A href=#53>keyboard_scanvalue_0_</A>
+11   G  6  1   2  1 DFF    * R       2  -----FG---------  <A href=#55>keyboard_scanvalue_1_</A>
+ 1   K 19  1   4  1 TFF      R       7  A---EFGHI----N--  <A href=#152>keyboard_time1Oms</A>
+13   K  4  1   1  1 DFF    * R       3  --------IJK-----  <A href=#165>keyboard_timecnt_0_</A>
+ 7   K 19  1   2  1 TFF    * R       3  --------IJK-----  <A href=#40>keyboard_timecnt_10_</A>
+ 5   J 14  1   2  1 TFF    * R       3  --------IJK-----  <A href=#151>keyboard_timecnt_11_</A>
+ 9   I 19  1   2  1 TFF    * R       3  --------IJK-----  <A href=#41>keyboard_timecnt_12_</A>
+ 2   J 19  1   3  1 TFF    * R       3  --------IJK-----  <A href=#42>keyboard_timecnt_13_</A>
+ 8   K 19  1   2  1 TFF    * R       3  --------IJK-----  <A href=#43>keyboard_timecnt_14_</A>
+12   I 18  1   1  1 TFF    * R       3  --------IJK-----  <A href=#150>keyboard_timecnt_15_</A>
+10   K  5  1   2  1 DFF    * R       3  --------IJK-----  <A href=#166>keyboard_timecnt_1_</A>
+ 1   I  6  1   3  1 DFF    * R       3  --------IJK-----  <A href=#36>keyboard_timecnt_2_</A>
+ 0   I  7  1   4  1 DFF    * R       3  --------IJK-----  <A href=#37>keyboard_timecnt_3_</A>
+ 1   J 19  1   3  1 TFF    * R       3  --------IJK-----  <A href=#146>keyboard_timecnt_4_</A>
+ 4   I 19  1   2  1 TFF    * R       3  --------IJK-----  <A href=#38>keyboard_timecnt_5_</A>
+ 4   J  9  1   2  1 TFF    * R       3  --------IJK-----  <A href=#147>keyboard_timecnt_6_</A>
+11   K 10  1   1  1 TFF    * R       3  --------IJK-----  <A href=#148>keyboard_timecnt_7_</A>
+ 5   I 19  1   2  1 TFF    * R       3  --------IJK-----  <A href=#39>keyboard_timecnt_8_</A>
+12   K 12  1   1  1 TFF    * R       3  --------IJK-----  <A href=#149>keyboard_timecnt_9_</A>
+ 4   H 10  1   1  1 DFF      R *     3  ------------M-OP  <A href=#136>serial_Clock16</A>
+12   L 14  1   1  1 DFF      R *     1  -B--------------  <A href=#141>serial_Clock9600</A>
+ 0   L 14  1   2  1 DFF      R *     2  ---------J-L----  <A href=#92>serial_ClockCount_0_</A>
+10   J 13  1   1  1 TFF      R *     2  ---------J-L----  <A href=#94>serial_ClockCount_10_</A>
+ 6   J  5  1   2  1 DFF      R *     2  ---------J-L----  <A href=#95>serial_ClockCount_1_</A>
+ 3   J  6  1   3  1 DFF      R *     2  ---------J-L----  <A href=#98>serial_ClockCount_2_</A>
+ 0   J  7  1   4  1 DFF      R *     2  ---------J-L----  <A href=#99>serial_ClockCount_3_</A>
+ 3   L 14  1   2  1 TFF      R *     2  ---------J-L----  <A href=#137>serial_ClockCount_4_</A>
+ 7   J 14  1   2  1 TFF      R *     2  ---------J-L----  <A href=#138>serial_ClockCount_5_</A>
+ 8   J 14  1   2  1 TFF      R *     2  ---------J-L----  <A href=#139>serial_ClockCount_6_</A>
+11   J 10  1   1  1 TFF      R *     2  ---------J-L----  <A href=#96>serial_ClockCount_7_</A>
+13   J 11  1   1  1 TFF      R *     2  ---------J-L----  <A href=#97>serial_ClockCount_8_</A>
+ 9   L 14  1   2  1 TFF      R *     2  ---------J-L----  <A href=#140>serial_ClockCount_9_</A>
+ 4   F 10  1   4  1 DFF      R *     2  -----F-H--------  <A href=#93>serial_ClockCount_Rx_0_</A>
+ 3   F 10  1   5  1 DFF      R *     2  -----F-H--------  <A href=#123>serial_ClockCount_Rx_1_</A>
+ 5   H 10  1   4  1 DFF      R *     2  -----F-H--------  <A href=#124>serial_ClockCount_Rx_2_</A>
+ 0   H  7  1   4  1 DFF      R *     2  -----F-H--------  <A href=#100>serial_ClockCount_Rx_3_</A>
+ 9   H  8  1   2  1 DFF      R *     2  -----F-H--------  <A href=#102>serial_ClockCount_Rx_4_</A>
+12   H 10  1   2  1 TFF      R *     2  -----F-H--------  <A href=#125>serial_ClockCount_Rx_5_</A>
+ 3   H  9  1   1  1 TFF      R *     2  -----F-H--------  <A href=#101>serial_ClockCount_Rx_6_</A>
+ 2   P  5  1   2  2 DFF    * R       1  -----F----------  <A href=#54>serial_Data1_0_</A>
+ 6   O  5  1   2  1 DFF    * R       1  -----F----------  <A href=#56>serial_Data1_1_</A>
+ 4   P  5  1   2  2 DFF    * R       1  ----E-----------  <A href=#57>serial_Data1_2_</A>
+ 3   M  5  1   2  1 DFF    * R       1  -----F----------  <A href=#58>serial_Data1_3_</A>
+ 6   P  5  1   2  2 DFF    * R       1  ----------K-----  <A href=#59>serial_Data2_0_</A>
+ 7   O  5  1   2  1 DFF    * R       1  -----F----------  <A href=#60>serial_Data2_1_</A>
+12   P  5  1   2  1 DFF    * R       1  ----E-----------  <A href=#61>serial_Data2_2_</A>
+ 5   M  5  1   2  1 DFF    * R       1  -----F----------  <A href=#62>serial_Data2_3_</A>
+ 3   P  7  1   6  2 DFF      R *     1  ---------------P  <A href=#105>serial_Rx_Data_0_</A>
+ 1   P 11  -   9  2 COM              3  ------------M-OP  <A href=#170>serial_Rx_Data_0__0</A>
+ 1   O  7  1   6  2 DFF      R *     1  --------------O-  <A href=#106>serial_Rx_Data_1_</A>
+ 5   P  7  1   6  2 DFF      R *     1  ---------------P  <A href=#107>serial_Rx_Data_2_</A>
+ 1   M  7  1   6  2 DFF      R *     1  ------------M---  <A href=#109>serial_Rx_Data_3_</A>
+ 7   P  7  1   6  2 DFF      R *     1  ---------------P  <A href=#111>serial_Rx_Data_4_</A>
+ 2   O  7  1   6  2 DFF      R *     1  --------------O-  <A href=#112>serial_Rx_Data_5_</A>
+ 9   P  7  1   6  2 DFF      R *     1  ---------------P  <A href=#113>serial_Rx_Data_6_</A>
+ 2   M  5  1   4  2 DFF      R *     1  ------------M---  <A href=#114>serial_Rx_Data_7_</A>
+ 8   O  6  1   2  1 DFF    * R *     3  ------------M-OP  <A href=#104>serial_Rx_Valid</A>
+ 5   O  9  -   3  1 COM              1  --------------O-  <A href=#169>serial_Rx_Valid_0</A>
+12   B  6  1   2  1 DFF    * R       1  -B--------------  <A href=#116>serial_Send_count_0_</A>
+ 1   B  6  1   3  1 DFF    * R       1  -B--------------  <A href=#117>serial_Send_count_1_</A>
+ 5   B  5  1   3  1 DFF    * R       1  -B--------------  <A href=#118>serial_Send_count_2_</A>
+ 0   B  6  1   4  1 DFF    * R       1  -B--------------  <A href=#120>serial_Send_count_3_</A>
+ 9   F  5  1   1  1 DFF    * R       1  -B--------------  <A href=#128>serial_Send_data_1_</A>
+10   F  5  1   1  1 DFF    * R       1  -B--------------  <A href=#129>serial_Send_data_2_</A>
+ 5   E  5  1   3  1 DFF    * R       1  -B--------------  <A href=#130>serial_Send_data_3_</A>
+11   F  5  1   1  1 DFF    * R       1  -B--------------  <A href=#131>serial_Send_data_4_</A>
+ 6   E  5  1   3  1 DFF    * R       1  -B--------------  <A href=#132>serial_Send_data_5_</A>
+12   F  5  1   1  1 DFF    * R       1  -B--------------  <A href=#133>serial_Send_data_6_</A>
+ 7   E  5  1   3  1 DFF    * R       1  -B--------------  <A href=#134>serial_Send_data_7_</A>
+13   F  5  1   1  1 DFF    * R       1  -B--------------  <A href=#135>serial_Send_data_8_</A>
+ 2   F  4  -   0  1 DFF  *   S       1  -B--------------  <A href=#127>serial_Send_en</A>
+ 9   B  7  1   2  1 DFF  *   S       2  AB--------------  <A href=#103>serial_Send_over</A>
+ 9   M 13  1   3  1 DFF    * R       3  ------------M-OP  <A href=#84>serial_m_0_</A>
+ 9   O  6  1   2  1 DFF    * R       3  ------------M-OP  <A href=#85>serial_m_1_</A>
+ 4   O  7  1   3  1 DFF    * R       3  ------------M-OP  <A href=#86>serial_m_2_</A>
+ 0   P 12  1   3  1 DFF    * R       3  ------------M-OP  <A href=#87>serial_m_3_</A>
+12   M  9  1   2  1 DFF    * R       3  ------------M-OP  <A href=#88>serial_m_4_</A>
+10   O 12  1   2  1 TFF    * R       3  ------------M-OP  <A href=#89>serial_m_5_</A>
+ 3   O 10  1   1  1 TFF    * R       3  ------------M-OP  <A href=#90>serial_m_6_</A>
+12   O 12  1   2  1 TFF    * R       3  ------------M-OP  <A href=#91>serial_m_7_</A>
+ 9   A  4  -   2  1 COM              2  ----EF----------  <A href=#115>serial_send_en_3_n</A>
+-------------------------------------------------------------------------------------------
+
+&lt;Note&gt; CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        IR = Input register
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+<A name="PostFit_Equations"></A><FONT COLOR=maroon><U><B><big>PostFit_Equations</big></B></U></FONT>
+<BR>
+<A name=14>LEDVCC_0_</A> = !<A href=#82>dynamicshow_counter4_q_1_.Q</A> & !<A href=#83>dynamicshow_counter4_q_2_.Q</A> ; (1 pterm, 2 signals)
+
+<A name=12>LEDVCC_1_</A> = <A href=#82>dynamicshow_counter4_q_1_.Q</A> & !<A href=#83>dynamicshow_counter4_q_2_.Q</A> ; (1 pterm, 2 signals)
+
+<A name=10>LEDVCC_2_</A> = !<A href=#82>dynamicshow_counter4_q_1_.Q</A> & <A href=#83>dynamicshow_counter4_q_2_.Q</A> ; (1 pterm, 2 signals)
+
+<A name=9>LEDVCC_3_</A> = <A href=#82>dynamicshow_counter4_q_1_.Q</A> & <A href=#83>dynamicshow_counter4_q_2_.Q</A> ; (1 pterm, 2 signals)
+
+<A name=35>Tx.D</A> = !<A href=#116>serial_Send_count_0_.Q</A> & <A href=#117>serial_Send_count_1_.Q</A>
+       & <A href=#118>serial_Send_count_2_.Q</A> & !<A href=#120>serial_Send_count_3_.Q</A>
+       & <A href=#133>serial_Send_data_6_.Q</A>
+    # !serial_Send_count_0_.Q & !serial_Send_count_1_.Q
+       & serial_Send_count_2_.Q & !serial_Send_count_3_.Q
+       & <A href=#131>serial_Send_data_4_.Q</A>
+    # !serial_Send_count_0_.Q & serial_Send_count_1_.Q
+       & !serial_Send_count_2_.Q & !serial_Send_count_3_.Q
+       & <A href=#129>serial_Send_data_2_.Q</A>
+    # serial_Send_count_0_.Q & serial_Send_count_1_.Q & serial_Send_count_2_.Q
+       & !serial_Send_count_3_.Q & <A href=#134>serial_Send_data_7_.Q</A>
+    # serial_Send_count_0_.Q & !serial_Send_count_1_.Q
+       & serial_Send_count_2_.Q & !serial_Send_count_3_.Q
+       & <A href=#132>serial_Send_data_5_.Q</A>
+    # serial_Send_count_0_.Q & serial_Send_count_1_.Q
+       & !serial_Send_count_2_.Q & !serial_Send_count_3_.Q
+       & <A href=#130>serial_Send_data_3_.Q</A>
+    # serial_Send_count_0_.Q & !serial_Send_count_1_.Q
+       & !serial_Send_count_2_.Q & <A href=#128>serial_Send_data_1_.Q</A>
+    # serial_Send_count_0_.Q & !serial_Send_count_1_.Q
+       & !serial_Send_count_2_.Q & serial_Send_count_3_.Q
+    # !serial_Send_count_1_.Q & !serial_Send_count_2_.Q
+       & serial_Send_count_3_.Q & <A href=#135>serial_Send_data_8_.Q</A> ; (9 pterms, 12 signals)
+Tx.C = <A href=#141>serial_Clock9600.Q</A> ; (1 pterm, 1 signal)
+Tx.AP = <A href=#127>serial_Send_en.Q</A> ; (1 pterm, 1 signal)
+
+<A name=79>button0_d1_q_0_.D</A> = <A href=#17>reset</A> ; (1 pterm, 1 signal)
+button0_d1_q_0_.C = <A href=#15>clkl</A> ; (1 pterm, 1 signal)
+
+<A name=80>button0_d2_q_0_.D</A> = <A href=#79>button0_d1_q_0_.Q</A> ; (1 pterm, 1 signal)
+button0_d2_q_0_.C = <A href=#15>clkl</A> ; (1 pterm, 1 signal)
+
+<A name=81>button0_d3_q_0_.D</A> = <A href=#80>button0_d2_q_0_.Q</A> ; (1 pterm, 1 signal)
+button0_d3_q_0_.C = <A href=#15>clkl</A> ; (1 pterm, 1 signal)
+
+<A name=76>button1_d1_q_0_.D</A> = <A href=#7>keyIn_0_</A> ; (1 pterm, 1 signal)
+button1_d1_q_0_.C = <A href=#15>clkl</A> ; (1 pterm, 1 signal)
+
+<A name=77>button1_d2_q_0_.D</A> = <A href=#76>button1_d1_q_0_.Q</A> ; (1 pterm, 1 signal)
+button1_d2_q_0_.C = <A href=#15>clkl</A> ; (1 pterm, 1 signal)
+
+<A name=78>button1_d3_q_0_.D</A> = <A href=#77>button1_d2_q_0_.Q</A> ; (1 pterm, 1 signal)
+button1_d3_q_0_.C = <A href=#15>clkl</A> ; (1 pterm, 1 signal)
+
+<A name=73>button2_d1_q_0_.D</A> = <A href=#6>keyIn_1_</A> ; (1 pterm, 1 signal)
+button2_d1_q_0_.C = <A href=#15>clkl</A> ; (1 pterm, 1 signal)
+
+<A name=74>button2_d2_q_0_.D</A> = <A href=#73>button2_d1_q_0_.Q</A> ; (1 pterm, 1 signal)
+button2_d2_q_0_.C = <A href=#15>clkl</A> ; (1 pterm, 1 signal)
+
+<A name=75>button2_d3_q_0_.D</A> = <A href=#74>button2_d2_q_0_.Q</A> ; (1 pterm, 1 signal)
+button2_d3_q_0_.C = <A href=#15>clkl</A> ; (1 pterm, 1 signal)
+
+<A name=70>button3_d1_q_0_.D</A> = <A href=#25>keyIn_2_</A> ; (1 pterm, 1 signal)
+button3_d1_q_0_.C = <A href=#15>clkl</A> ; (1 pterm, 1 signal)
+
+<A name=71>button3_d2_q_0_.D</A> = <A href=#70>button3_d1_q_0_.Q</A> ; (1 pterm, 1 signal)
+button3_d2_q_0_.C = <A href=#15>clkl</A> ; (1 pterm, 1 signal)
+
+<A name=72>button3_d3_q_0_.D</A> = <A href=#71>button3_d2_q_0_.Q</A> ; (1 pterm, 1 signal)
+button3_d3_q_0_.C = <A href=#15>clkl</A> ; (1 pterm, 1 signal)
+
+<A name=67>button4_d1_q_0_.D</A> = <A href=#8>keyIn_3_</A> ; (1 pterm, 1 signal)
+button4_d1_q_0_.C = <A href=#15>clkl</A> ; (1 pterm, 1 signal)
+
+<A name=68>button4_d2_q_0_.D</A> = <A href=#67>button4_d1_q_0_.Q</A> ; (1 pterm, 1 signal)
+button4_d2_q_0_.C = <A href=#15>clkl</A> ; (1 pterm, 1 signal)
+
+<A name=69>button4_d3_q_0_.D</A> = <A href=#68>button4_d2_q_0_.Q</A> ; (1 pterm, 1 signal)
+button4_d3_q_0_.C = <A href=#15>clkl</A> ; (1 pterm, 1 signal)
+
+<A name=63>button5_d1_q_0_.D</A> = <A href=#19>send</A> ; (1 pterm, 1 signal)
+button5_d1_q_0_.C = <A href=#15>clkl</A> ; (1 pterm, 1 signal)
+
+<A name=64>button5_d2_q_0_.D</A> = <A href=#63>button5_d1_q_0_.Q</A> ; (1 pterm, 1 signal)
+button5_d2_q_0_.C = <A href=#15>clkl</A> ; (1 pterm, 1 signal)
+
+<A name=65>button5_d3_q_0_.D</A> = <A href=#64>button5_d2_q_0_.Q</A> ; (1 pterm, 1 signal)
+button5_d3_q_0_.C = <A href=#15>clkl</A> ; (1 pterm, 1 signal)
+
+<A name=82>dynamicshow_counter4_q_1_.D</A> = !<A href=#82>dynamicshow_counter4_q_1_.Q</A> ; (1 pterm, 1 signal)
+dynamicshow_counter4_q_1_.C = <A href=#15>clkl</A> ; (1 pterm, 1 signal)
+
+<A name=83>dynamicshow_counter4_q_2_.D</A> = <A href=#82>dynamicshow_counter4_q_1_.Q</A>
+       & !<A href=#83>dynamicshow_counter4_q_2_.Q</A>
+    # !dynamicshow_counter4_q_1_.Q & dynamicshow_counter4_q_2_.Q ; (2 pterms, 2 signals)
+dynamicshow_counter4_q_2_.C = <A href=#15>clkl</A> ; (1 pterm, 1 signal)
+
+<A name=110>dynamicshow_mux_dataout_3_0__un0_n</A> = <A href=#54>serial_Data1_0_.Q</A>
+       & !<A href=#82>dynamicshow_counter4_q_1_.Q</A> & !<A href=#83>dynamicshow_counter4_q_2_.Q</A>
+    # <A href=#48>keyboard_led_int_Data0_0_.Q</A> & !dynamicshow_counter4_q_1_.Q
+       & dynamicshow_counter4_q_2_.Q ; (2 pterms, 4 signals)
+
+<A name=108>dynamicshow_mux_dataout_3_0__un1_n</A> = <A href=#59>serial_Data2_0_.Q</A>
+       & <A href=#82>dynamicshow_counter4_q_1_.Q</A> & !<A href=#83>dynamicshow_counter4_q_2_.Q</A>
+    # <A href=#44>keyboard_led_int_Data1_0_.Q</A> & dynamicshow_counter4_q_1_.Q
+       & dynamicshow_counter4_q_2_.Q ; (2 pterms, 4 signals)
+
+<A name=122>dynamicshow_mux_dataout_3_3__un0_n</A> = <A href=#58>serial_Data1_3_.Q</A>
+       & !<A href=#82>dynamicshow_counter4_q_1_.Q</A> & !<A href=#83>dynamicshow_counter4_q_2_.Q</A>
+    # <A href=#52>keyboard_led_int_Data0_3_.Q</A> & !dynamicshow_counter4_q_1_.Q
+       & dynamicshow_counter4_q_2_.Q ; (2 pterms, 4 signals)
+
+<A name=119>dynamicshow_mux_dataout_3_3__un1_n</A> = <A href=#62>serial_Data2_3_.Q</A>
+       & <A href=#82>dynamicshow_counter4_q_1_.Q</A> & !<A href=#83>dynamicshow_counter4_q_2_.Q</A>
+    # <A href=#47>keyboard_led_int_Data1_3_.Q</A> & dynamicshow_counter4_q_1_.Q
+       & dynamicshow_counter4_q_2_.Q ; (2 pterms, 4 signals)
+
+<A name=126>dynamicshow_out_1__n</A> = <A href=#56>serial_Data1_1_.Q</A> & !<A href=#82>dynamicshow_counter4_q_1_.Q</A>
+       & !<A href=#83>dynamicshow_counter4_q_2_.Q</A>
+    # <A href=#60>serial_Data2_1_.Q</A> & dynamicshow_counter4_q_1_.Q
+       & !dynamicshow_counter4_q_2_.Q
+    # <A href=#50>keyboard_led_int_Data0_1_.Q</A> & !dynamicshow_counter4_q_1_.Q
+       & dynamicshow_counter4_q_2_.Q
+    # <A href=#45>keyboard_led_int_Data1_1_.Q</A> & dynamicshow_counter4_q_1_.Q
+       & dynamicshow_counter4_q_2_.Q ; (4 pterms, 6 signals)
+
+<A name=121>dynamicshow_out_2__n</A> = <A href=#57>serial_Data1_2_.Q</A> & !<A href=#82>dynamicshow_counter4_q_1_.Q</A>
+       & !<A href=#83>dynamicshow_counter4_q_2_.Q</A>
+    # <A href=#61>serial_Data2_2_.Q</A> & dynamicshow_counter4_q_1_.Q
+       & !dynamicshow_counter4_q_2_.Q
+    # <A href=#51>keyboard_led_int_Data0_2_.Q</A> & !dynamicshow_counter4_q_1_.Q
+       & dynamicshow_counter4_q_2_.Q
+    # <A href=#46>keyboard_led_int_Data1_2_.Q</A> & dynamicshow_counter4_q_1_.Q
+       & dynamicshow_counter4_q_2_.Q ; (4 pterms, 6 signals)
+
+<A name=34>keyOut_0_.D</A> = !<A href=#53>keyboard_scanvalue_0_.Q</A> & !<A href=#55>keyboard_scanvalue_1_.Q</A> ; (1 pterm, 2 signals)
+keyOut_0_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+keyOut_0_.CE = !( !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A> & !<A href=#81>button0_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+
+<A name=33>keyOut_1_.D</A> = <A href=#53>keyboard_scanvalue_0_.Q</A> & !<A href=#55>keyboard_scanvalue_1_.Q</A> ; (1 pterm, 2 signals)
+keyOut_1_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+keyOut_1_.CE = !( !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A> & !<A href=#81>button0_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+
+<A name=32>keyOut_2_.D</A> = !<A href=#53>keyboard_scanvalue_0_.Q</A> & <A href=#55>keyboard_scanvalue_1_.Q</A> ; (1 pterm, 2 signals)
+keyOut_2_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+keyOut_2_.CE = !( !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A> & !<A href=#81>button0_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+
+<A name=31>keyOut_3_.D</A> = <A href=#53>keyboard_scanvalue_0_.Q</A> & <A href=#55>keyboard_scanvalue_1_.Q</A> ; (1 pterm, 2 signals)
+keyOut_3_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+keyOut_3_.CE = !( !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A> & !<A href=#81>button0_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+
+<A name=161>keyboard_combvalue_0_.D</A> = <A href=#34>keyOut_0_.Q</A> ; (1 pterm, 1 signal)
+keyboard_combvalue_0_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+keyboard_combvalue_0_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=162>keyboard_combvalue_1_.D</A> = <A href=#33>keyOut_1_.Q</A> ; (1 pterm, 1 signal)
+keyboard_combvalue_1_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+keyboard_combvalue_1_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=163>keyboard_combvalue_2_.D</A> = <A href=#32>keyOut_2_.Q</A> ; (1 pterm, 1 signal)
+keyboard_combvalue_2_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+keyboard_combvalue_2_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=164>keyboard_combvalue_3_.D</A> = <A href=#31>keyOut_3_.Q</A> ; (1 pterm, 1 signal)
+keyboard_combvalue_3_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+keyboard_combvalue_3_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=142>keyboard_combvalue_4_.D</A> = !( !<A href=#76>button1_d1_q_0_.Q</A> & !<A href=#77>button1_d2_q_0_.Q</A>
+       & !<A href=#78>button1_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+keyboard_combvalue_4_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+keyboard_combvalue_4_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=143>keyboard_combvalue_5_.D</A> = !( !<A href=#73>button2_d1_q_0_.Q</A> & !<A href=#74>button2_d2_q_0_.Q</A>
+       & !<A href=#75>button2_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+keyboard_combvalue_5_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+keyboard_combvalue_5_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=144>keyboard_combvalue_6_.D</A> = !( !<A href=#70>button3_d1_q_0_.Q</A> & !<A href=#71>button3_d2_q_0_.Q</A>
+       & !<A href=#72>button3_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+keyboard_combvalue_6_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+keyboard_combvalue_6_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=145>keyboard_combvalue_7_.D</A> = !( !<A href=#67>button4_d1_q_0_.Q</A> & !<A href=#68>button4_d2_q_0_.Q</A>
+       & !<A href=#69>button4_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+keyboard_combvalue_7_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+keyboard_combvalue_7_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=49>keyboard_flag_Data_0_.T</A> = !<A href=#32>keyOut_2_.Q</A> & !<A href=#33>keyOut_1_.Q</A> & !<A href=#34>keyOut_0_.Q</A>
+       & <A href=#49>keyboard_flag_Data_0_.Q</A> & <A href=#69>button4_d3_q_0_.Q</A> & !<A href=#70>button3_d1_q_0_.Q</A>
+       & !<A href=#71>button3_d2_q_0_.Q</A> & !<A href=#72>button3_d3_q_0_.Q</A> & !<A href=#73>button2_d1_q_0_.Q</A>
+       & !<A href=#74>button2_d2_q_0_.Q</A> & !<A href=#75>button2_d3_q_0_.Q</A> & !<A href=#76>button1_d1_q_0_.Q</A>
+       & !<A href=#77>button1_d2_q_0_.Q</A> & !<A href=#78>button1_d3_q_0_.Q</A>
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & keyboard_flag_Data_0_.Q
+       & <A href=#68>button4_d2_q_0_.Q</A> & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & keyboard_flag_Data_0_.Q
+       & <A href=#67>button4_d1_q_0_.Q</A> & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & button1_d3_q_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & button1_d2_q_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & button1_d1_q_0_.Q
+    # !<A href=#31>keyOut_3_.Q</A> & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & button3_d2_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & button3_d1_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & button2_d2_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & button2_d1_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & button3_d2_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & button3_d1_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & button2_d2_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & button2_d1_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & button3_d2_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & button3_d1_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & button2_d2_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & button2_d1_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & button1_d2_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & button1_d1_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & button1_d2_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & button1_d1_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & button1_d2_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & button1_d1_q_0_.Q ; (33 pterms, 17 signals)
+keyboard_flag_Data_0_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+keyboard_flag_Data_0_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=66>keyboard_flag_Data_1_.T</A> = !<A href=#32>keyOut_2_.Q</A> & !<A href=#33>keyOut_1_.Q</A> & !<A href=#34>keyOut_0_.Q</A>
+       & <A href=#49>keyboard_flag_Data_0_.Q</A> & <A href=#69>button4_d3_q_0_.Q</A> & !<A href=#70>button3_d1_q_0_.Q</A>
+       & !<A href=#71>button3_d2_q_0_.Q</A> & !<A href=#72>button3_d3_q_0_.Q</A> & !<A href=#73>button2_d1_q_0_.Q</A>
+       & !<A href=#74>button2_d2_q_0_.Q</A> & !<A href=#75>button2_d3_q_0_.Q</A> & !<A href=#76>button1_d1_q_0_.Q</A>
+       & !<A href=#77>button1_d2_q_0_.Q</A> & !<A href=#78>button1_d3_q_0_.Q</A>
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & keyboard_flag_Data_0_.Q
+       & <A href=#68>button4_d2_q_0_.Q</A> & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & keyboard_flag_Data_0_.Q
+       & <A href=#67>button4_d1_q_0_.Q</A> & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q ; (3 pterms, 16 signals)
+keyboard_flag_Data_1_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+keyboard_flag_Data_1_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=158>keyboard_int_Data0_0_.D</A> = !<A href=#31>keyOut_3_.Q</A> & !<A href=#33>keyOut_1_.Q</A> & !<A href=#73>button2_d1_q_0_.Q</A>
+       & !<A href=#74>button2_d2_q_0_.Q</A> & !<A href=#75>button2_d3_q_0_.Q</A>
+    # !keyOut_3_.Q & keyOut_1_.Q & button2_d3_q_0_.Q
+    # !keyOut_3_.Q & keyOut_1_.Q & button2_d2_q_0_.Q
+    # !keyOut_3_.Q & keyOut_1_.Q & button2_d1_q_0_.Q ; (4 pterms, 5 signals)
+keyboard_int_Data0_0_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+keyboard_int_Data0_0_.CE = <A href=#171>keyboard_int_Data0_3__0</A> ; (1 pterm, 1 signal)
+keyboard_int_Data0_0_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=159>keyboard_int_Data0_1_.D.X1</A> = !<A href=#32>keyOut_2_.Q</A> & <A href=#33>keyOut_1_.Q</A> & !<A href=#70>button3_d1_q_0_.Q</A>
+       & !<A href=#71>button3_d2_q_0_.Q</A> & !<A href=#72>button3_d3_q_0_.Q</A>
+    # !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !<A href=#73>button2_d1_q_0_.Q</A> & !<A href=#74>button2_d2_q_0_.Q</A> & !<A href=#75>button2_d3_q_0_.Q</A> ; (2 pterms, 8 signals)
+keyboard_int_Data0_1_.D.X2 = !<A href=#32>keyOut_2_.Q</A> ; (1 pterm, 1 signal)
+keyboard_int_Data0_1_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+keyboard_int_Data0_1_.CE = <A href=#171>keyboard_int_Data0_3__0</A> ; (1 pterm, 1 signal)
+keyboard_int_Data0_1_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=160>keyboard_int_Data0_2_.D</A> = !( !<A href=#33>keyOut_1_.Q</A> & !<A href=#76>button1_d1_q_0_.Q</A>
+       & !<A href=#77>button1_d2_q_0_.Q</A> & !<A href=#78>button1_d3_q_0_.Q</A>
+    # !<A href=#32>keyOut_2_.Q</A> & !keyOut_1_.Q ) ; (2 pterms, 5 signals)
+keyboard_int_Data0_2_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+keyboard_int_Data0_2_.CE = <A href=#171>keyboard_int_Data0_3__0</A> ; (1 pterm, 1 signal)
+keyboard_int_Data0_2_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=153>keyboard_int_Data0_3_.D</A> = <A href=#32>keyOut_2_.Q</A> & !<A href=#76>button1_d1_q_0_.Q</A>
+       & !<A href=#77>button1_d2_q_0_.Q</A> & !<A href=#78>button1_d3_q_0_.Q</A> ; (1 pterm, 4 signals)
+keyboard_int_Data0_3_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+keyboard_int_Data0_3_.CE = <A href=#171>keyboard_int_Data0_3__0</A> ; (1 pterm, 1 signal)
+keyboard_int_Data0_3_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=171>keyboard_int_Data0_3__0</A> = !<A href=#32>keyOut_2_.Q</A> & !<A href=#33>keyOut_1_.Q</A> & !<A href=#34>keyOut_0_.Q</A>
+       & !<A href=#49>keyboard_flag_Data_0_.Q</A> & !<A href=#66>keyboard_flag_Data_1_.Q</A>
+       & !<A href=#67>button4_d1_q_0_.Q</A> & !<A href=#68>button4_d2_q_0_.Q</A> & !<A href=#69>button4_d3_q_0_.Q</A>
+       & !<A href=#70>button3_d1_q_0_.Q</A> & !<A href=#71>button3_d2_q_0_.Q</A> & !<A href=#72>button3_d3_q_0_.Q</A>
+       & !<A href=#73>button2_d1_q_0_.Q</A> & !<A href=#74>button2_d2_q_0_.Q</A> & !<A href=#75>button2_d3_q_0_.Q</A>
+       & <A href=#78>button1_d3_q_0_.Q</A>
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & <A href=#77>button1_d2_q_0_.Q</A>
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & <A href=#76>button1_d1_q_0_.Q</A>
+    # !<A href=#31>keyOut_3_.Q</A> & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & button3_d2_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & button3_d1_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & button2_d2_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & button2_d1_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & button3_d2_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & button3_d1_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & button2_d2_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & button2_d1_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & button3_d2_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & button3_d1_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & button2_d2_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & button2_d1_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & button1_d2_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & button1_d1_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & button1_d2_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & button1_d1_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & button1_d2_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & button1_d1_q_0_.Q ; (30 pterms, 18 signals)
+
+<A name=154>keyboard_int_Data1_0_.D</A> = !<A href=#31>keyOut_3_.Q</A> & !<A href=#33>keyOut_1_.Q</A> & !<A href=#73>button2_d1_q_0_.Q</A>
+       & !<A href=#74>button2_d2_q_0_.Q</A> & !<A href=#75>button2_d3_q_0_.Q</A>
+    # !keyOut_3_.Q & keyOut_1_.Q & button2_d3_q_0_.Q
+    # !keyOut_3_.Q & keyOut_1_.Q & button2_d2_q_0_.Q
+    # !keyOut_3_.Q & keyOut_1_.Q & button2_d1_q_0_.Q ; (4 pterms, 5 signals)
+keyboard_int_Data1_0_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+keyboard_int_Data1_0_.CE = <A href=#172>keyboard_int_Data1_0__0</A> ; (1 pterm, 1 signal)
+keyboard_int_Data1_0_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=172>keyboard_int_Data1_0__0</A> = !<A href=#32>keyOut_2_.Q</A> & !<A href=#33>keyOut_1_.Q</A> & !<A href=#34>keyOut_0_.Q</A>
+       & !<A href=#49>keyboard_flag_Data_0_.Q</A> & <A href=#66>keyboard_flag_Data_1_.Q</A>
+       & !<A href=#67>button4_d1_q_0_.Q</A> & !<A href=#68>button4_d2_q_0_.Q</A> & !<A href=#69>button4_d3_q_0_.Q</A>
+       & !<A href=#70>button3_d1_q_0_.Q</A> & !<A href=#71>button3_d2_q_0_.Q</A> & !<A href=#72>button3_d3_q_0_.Q</A>
+       & !<A href=#73>button2_d1_q_0_.Q</A> & !<A href=#74>button2_d2_q_0_.Q</A> & !<A href=#75>button2_d3_q_0_.Q</A>
+       & <A href=#78>button1_d3_q_0_.Q</A>
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & <A href=#77>button1_d2_q_0_.Q</A>
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & <A href=#76>button1_d1_q_0_.Q</A>
+    # !<A href=#31>keyOut_3_.Q</A> & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & button3_d2_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & button3_d1_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & button2_d2_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & button2_d1_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & button3_d2_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & button3_d1_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & button2_d2_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & button2_d1_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & button3_d2_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & button3_d1_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & button2_d2_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & button2_d1_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & button1_d2_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & button1_d1_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & button1_d2_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & button1_d1_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & button1_d2_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & keyboard_flag_Data_1_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & button1_d1_q_0_.Q ; (30 pterms, 18 signals)
+
+<A name=155>keyboard_int_Data1_1_.D.X1</A> = !<A href=#32>keyOut_2_.Q</A> & <A href=#33>keyOut_1_.Q</A> & !<A href=#70>button3_d1_q_0_.Q</A>
+       & !<A href=#71>button3_d2_q_0_.Q</A> & !<A href=#72>button3_d3_q_0_.Q</A>
+    # !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !<A href=#73>button2_d1_q_0_.Q</A> & !<A href=#74>button2_d2_q_0_.Q</A> & !<A href=#75>button2_d3_q_0_.Q</A> ; (2 pterms, 8 signals)
+keyboard_int_Data1_1_.D.X2 = !<A href=#32>keyOut_2_.Q</A> ; (1 pterm, 1 signal)
+keyboard_int_Data1_1_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+keyboard_int_Data1_1_.CE = <A href=#172>keyboard_int_Data1_0__0</A> ; (1 pterm, 1 signal)
+keyboard_int_Data1_1_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=156>keyboard_int_Data1_2_.D</A> = !( !<A href=#33>keyOut_1_.Q</A> & !<A href=#76>button1_d1_q_0_.Q</A>
+       & !<A href=#77>button1_d2_q_0_.Q</A> & !<A href=#78>button1_d3_q_0_.Q</A>
+    # !<A href=#32>keyOut_2_.Q</A> & !keyOut_1_.Q ) ; (2 pterms, 5 signals)
+keyboard_int_Data1_2_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+keyboard_int_Data1_2_.CE = <A href=#172>keyboard_int_Data1_0__0</A> ; (1 pterm, 1 signal)
+keyboard_int_Data1_2_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=157>keyboard_int_Data1_3_.D</A> = <A href=#32>keyOut_2_.Q</A> & !<A href=#76>button1_d1_q_0_.Q</A>
+       & !<A href=#77>button1_d2_q_0_.Q</A> & !<A href=#78>button1_d3_q_0_.Q</A> ; (1 pterm, 4 signals)
+keyboard_int_Data1_3_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+keyboard_int_Data1_3_.CE = <A href=#172>keyboard_int_Data1_0__0</A> ; (1 pterm, 1 signal)
+keyboard_int_Data1_3_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=48>keyboard_led_int_Data0_0_.D</A> = <A href=#66>keyboard_flag_Data_1_.Q</A> & !<A href=#70>button3_d1_q_0_.Q</A>
+       & !<A href=#71>button3_d2_q_0_.Q</A> & !<A href=#72>button3_d3_q_0_.Q</A> & !<A href=#73>button2_d1_q_0_.Q</A>
+       & !<A href=#74>button2_d2_q_0_.Q</A> & !<A href=#75>button2_d3_q_0_.Q</A> & !<A href=#76>button1_d1_q_0_.Q</A>
+       & !<A href=#77>button1_d2_q_0_.Q</A> & !<A href=#78>button1_d3_q_0_.Q</A> & <A href=#154>keyboard_int_Data1_0_.Q</A>
+    # !<A href=#32>keyOut_2_.Q</A> & !<A href=#34>keyOut_0_.Q</A> & button2_d3_q_0_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & button2_d2_q_0_.Q
+    # !keyOut_2_.Q & !keyOut_0_.Q & button2_d1_q_0_.Q
+    # !<A href=#33>keyOut_1_.Q</A> & button3_d3_q_0_.Q
+    # !keyOut_1_.Q & button3_d2_q_0_.Q
+    # !keyOut_1_.Q & button3_d1_q_0_.Q
+    # !<A href=#31>keyOut_3_.Q</A> & !keyOut_1_.Q & button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & button1_d2_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & button1_d1_q_0_.Q ; (10 pterms, 15 signals)
+keyboard_led_int_Data0_0_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+keyboard_led_int_Data0_0_.CE = <A href=#168>keyboard_led_int_Data0_0__0</A> ; (1 pterm, 1 signal)
+keyboard_led_int_Data0_0_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=168>keyboard_led_int_Data0_0__0</A> = !<A href=#32>keyOut_2_.Q</A> & !<A href=#33>keyOut_1_.Q</A> & !<A href=#34>keyOut_0_.Q</A>
+       & <A href=#49>keyboard_flag_Data_0_.Q</A> & <A href=#69>button4_d3_q_0_.Q</A> & !<A href=#70>button3_d1_q_0_.Q</A>
+       & !<A href=#71>button3_d2_q_0_.Q</A> & !<A href=#72>button3_d3_q_0_.Q</A> & !<A href=#73>button2_d1_q_0_.Q</A>
+       & !<A href=#74>button2_d2_q_0_.Q</A> & !<A href=#75>button2_d3_q_0_.Q</A> & !<A href=#76>button1_d1_q_0_.Q</A>
+       & !<A href=#77>button1_d2_q_0_.Q</A> & !<A href=#78>button1_d3_q_0_.Q</A> & !<A href=#155>keyboard_int_Data1_1_.Q</A>
+       & !<A href=#156>keyboard_int_Data1_2_.Q</A>
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & keyboard_flag_Data_0_.Q
+       & <A href=#68>button4_d2_q_0_.Q</A> & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & !keyboard_int_Data1_1_.Q
+       & !keyboard_int_Data1_2_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & keyboard_flag_Data_0_.Q
+       & <A href=#67>button4_d1_q_0_.Q</A> & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & !keyboard_int_Data1_1_.Q
+       & !keyboard_int_Data1_2_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & keyboard_flag_Data_0_.Q
+       & button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & !<A href=#157>keyboard_int_Data1_3_.Q</A>
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & keyboard_flag_Data_0_.Q
+       & button4_d2_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & !keyboard_int_Data1_3_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & keyboard_flag_Data_0_.Q
+       & button4_d1_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & !keyboard_int_Data1_3_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & keyboard_flag_Data_0_.Q
+       & !<A href=#66>keyboard_flag_Data_1_.Q</A> & button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q & button4_d2_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q & button4_d1_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & button1_d3_q_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & button1_d2_q_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & button1_d1_q_0_.Q
+    # !<A href=#31>keyOut_3_.Q</A> & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & button3_d2_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & button3_d1_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & button2_d2_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & button2_d1_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & button3_d2_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & button3_d1_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & button2_d2_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & button2_d1_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & button3_d2_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & button3_d1_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & button2_d2_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & button2_d1_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & button1_d2_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & button1_d1_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & button1_d2_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & button1_d1_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & button1_d2_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !keyboard_flag_Data_0_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & button1_d1_q_0_.Q ; (39 pterms, 21 signals)
+
+<A name=50>keyboard_led_int_Data0_1_.D</A> = !<A href=#32>keyOut_2_.Q</A> & !<A href=#67>button4_d1_q_0_.Q</A>
+       & !<A href=#68>button4_d2_q_0_.Q</A> & !<A href=#69>button4_d3_q_0_.Q</A> & !<A href=#73>button2_d1_q_0_.Q</A>
+       & !<A href=#74>button2_d2_q_0_.Q</A> & !<A href=#75>button2_d3_q_0_.Q</A> & !<A href=#76>button1_d1_q_0_.Q</A>
+       & !<A href=#77>button1_d2_q_0_.Q</A> & !<A href=#78>button1_d3_q_0_.Q</A>
+    # !keyOut_2_.Q & <A href=#66>keyboard_flag_Data_1_.Q</A> & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q & <A href=#155>keyboard_int_Data1_1_.Q</A>
+    # !keyOut_2_.Q & !<A href=#33>keyOut_1_.Q</A> & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & keyboard_flag_Data_1_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & keyboard_int_Data1_1_.Q
+    # !<A href=#31>keyOut_3_.Q</A> & !keyOut_1_.Q & !<A href=#34>keyOut_0_.Q</A> & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button1_d2_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button1_d1_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & keyboard_flag_Data_1_.Q
+       & button1_d3_q_0_.Q & keyboard_int_Data1_1_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & keyboard_flag_Data_1_.Q
+       & button1_d2_q_0_.Q & keyboard_int_Data1_1_.Q
+    # !keyOut_3_.Q & !keyOut_1_.Q & !keyOut_0_.Q & keyboard_flag_Data_1_.Q
+       & button1_d1_q_0_.Q & keyboard_int_Data1_1_.Q ; (10 pterms, 15 signals)
+keyboard_led_int_Data0_1_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+keyboard_led_int_Data0_1_.CE = <A href=#168>keyboard_led_int_Data0_0__0</A> ; (1 pterm, 1 signal)
+keyboard_led_int_Data0_1_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=51>keyboard_led_int_Data0_2_.D</A> = !<A href=#32>keyOut_2_.Q</A> & !<A href=#34>keyOut_0_.Q</A> & !<A href=#67>button4_d1_q_0_.Q</A>
+       & !<A href=#68>button4_d2_q_0_.Q</A> & !<A href=#69>button4_d3_q_0_.Q</A> & !<A href=#76>button1_d1_q_0_.Q</A>
+       & !<A href=#77>button1_d2_q_0_.Q</A> & !<A href=#78>button1_d3_q_0_.Q</A>
+    # !keyOut_2_.Q & !keyOut_0_.Q & <A href=#66>keyboard_flag_Data_1_.Q</A>
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & <A href=#156>keyboard_int_Data1_2_.Q</A>
+    # !<A href=#31>keyOut_3_.Q</A> & !keyOut_0_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_0_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & button1_d2_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_0_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q & button1_d1_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_0_.Q & keyboard_flag_Data_1_.Q
+       & button1_d3_q_0_.Q & keyboard_int_Data1_2_.Q
+    # !keyOut_3_.Q & !keyOut_0_.Q & keyboard_flag_Data_1_.Q
+       & button1_d2_q_0_.Q & keyboard_int_Data1_2_.Q
+    # !keyOut_3_.Q & !keyOut_0_.Q & keyboard_flag_Data_1_.Q
+       & button1_d1_q_0_.Q & keyboard_int_Data1_2_.Q ; (8 pterms, 11 signals)
+keyboard_led_int_Data0_2_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+keyboard_led_int_Data0_2_.CE = <A href=#168>keyboard_led_int_Data0_0__0</A> ; (1 pterm, 1 signal)
+keyboard_led_int_Data0_2_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=52>keyboard_led_int_Data0_3_.D.X1</A> = !<A href=#33>keyOut_1_.Q</A> & !<A href=#34>keyOut_0_.Q</A>
+       & !<A href=#76>button1_d1_q_0_.Q</A> & <A href=#77>button1_d2_q_0_.Q</A>
+    # !keyOut_1_.Q & !keyOut_0_.Q & !button1_d1_q_0_.Q & <A href=#78>button1_d3_q_0_.Q</A>
+    # !keyOut_1_.Q & !keyOut_0_.Q & !<A href=#66>keyboard_flag_Data_1_.Q</A>
+       & !<A href=#70>button3_d1_q_0_.Q</A> & !<A href=#71>button3_d2_q_0_.Q</A> & !<A href=#72>button3_d3_q_0_.Q</A>
+       & !<A href=#73>button2_d1_q_0_.Q</A> & !<A href=#74>button2_d2_q_0_.Q</A> & !<A href=#75>button2_d3_q_0_.Q</A>
+       & !button1_d1_q_0_.Q
+    # !keyOut_1_.Q & !keyOut_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !<A href=#157>keyboard_int_Data1_3_.Q</A> ; (4 pterms, 13 signals)
+keyboard_led_int_Data0_3_.D.X2 = !<A href=#33>keyOut_1_.Q</A> & !<A href=#34>keyOut_0_.Q</A>
+       & !<A href=#76>button1_d1_q_0_.Q</A> ; (1 pterm, 3 signals)
+keyboard_led_int_Data0_3_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+keyboard_led_int_Data0_3_.CE = <A href=#168>keyboard_led_int_Data0_0__0</A> ; (1 pterm, 1 signal)
+keyboard_led_int_Data0_3_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=44>keyboard_led_int_Data1_0_.D</A> = <A href=#158>keyboard_int_Data0_0_.Q</A> ; (1 pterm, 1 signal)
+keyboard_led_int_Data1_0_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+keyboard_led_int_Data1_0_.CE = <A href=#167>keyboard_led_int_Data1_0__0</A> ; (1 pterm, 1 signal)
+keyboard_led_int_Data1_0_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=167>keyboard_led_int_Data1_0__0.X1</A> = !<A href=#32>keyOut_2_.Q</A> & !<A href=#33>keyOut_1_.Q</A> & !<A href=#34>keyOut_0_.Q</A>
+       & <A href=#49>keyboard_flag_Data_0_.Q</A> & !<A href=#66>keyboard_flag_Data_1_.Q</A>
+       & <A href=#69>button4_d3_q_0_.Q</A> & !<A href=#70>button3_d1_q_0_.Q</A> & !<A href=#71>button3_d2_q_0_.Q</A>
+       & !<A href=#72>button3_d3_q_0_.Q</A> & !<A href=#73>button2_d1_q_0_.Q</A> & !<A href=#74>button2_d2_q_0_.Q</A>
+       & !<A href=#75>button2_d3_q_0_.Q</A> & !<A href=#76>button1_d1_q_0_.Q</A> & !<A href=#77>button1_d2_q_0_.Q</A>
+       & !<A href=#78>button1_d3_q_0_.Q</A> & !<A href=#153>keyboard_int_Data0_3_.Q</A>
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q & <A href=#68>button4_d2_q_0_.Q</A> & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q & !keyboard_int_Data0_3_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q & <A href=#67>button4_d1_q_0_.Q</A> & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q & !keyboard_int_Data0_3_.Q
+    # !keyOut_2_.Q & !keyOut_1_.Q & !keyOut_0_.Q & keyboard_flag_Data_0_.Q
+       & !keyboard_flag_Data_1_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & keyboard_int_Data0_3_.Q
+       & !<A href=#159>keyboard_int_Data0_1_.Q</A> & !<A href=#160>keyboard_int_Data0_2_.Q</A> ; (4 pterms, 20 signals)
+keyboard_led_int_Data1_0__0.X2 = !<A href=#32>keyOut_2_.Q</A> & !<A href=#33>keyOut_1_.Q</A> & !<A href=#34>keyOut_0_.Q</A>
+       & <A href=#49>keyboard_flag_Data_0_.Q</A> & !<A href=#66>keyboard_flag_Data_1_.Q</A>
+       & !<A href=#67>button4_d1_q_0_.Q</A> & !<A href=#68>button4_d2_q_0_.Q</A> & !<A href=#69>button4_d3_q_0_.Q</A>
+       & !<A href=#70>button3_d1_q_0_.Q</A> & !<A href=#71>button3_d2_q_0_.Q</A> & !<A href=#72>button3_d3_q_0_.Q</A>
+       & !<A href=#73>button2_d1_q_0_.Q</A> & !<A href=#74>button2_d2_q_0_.Q</A> & !<A href=#75>button2_d3_q_0_.Q</A>
+       & !<A href=#76>button1_d1_q_0_.Q</A> & !<A href=#77>button1_d2_q_0_.Q</A> & !<A href=#78>button1_d3_q_0_.Q</A>
+       & <A href=#153>keyboard_int_Data0_3_.Q</A> & !<A href=#159>keyboard_int_Data0_1_.Q</A>
+       & !<A href=#160>keyboard_int_Data0_2_.Q</A> ; (1 pterm, 20 signals)
+
+<A name=45>keyboard_led_int_Data1_1_.D</A> = <A href=#159>keyboard_int_Data0_1_.Q</A> ; (1 pterm, 1 signal)
+keyboard_led_int_Data1_1_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+keyboard_led_int_Data1_1_.CE = <A href=#167>keyboard_led_int_Data1_0__0</A> ; (1 pterm, 1 signal)
+keyboard_led_int_Data1_1_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=46>keyboard_led_int_Data1_2_.D</A> = <A href=#160>keyboard_int_Data0_2_.Q</A> ; (1 pterm, 1 signal)
+keyboard_led_int_Data1_2_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+keyboard_led_int_Data1_2_.CE = <A href=#167>keyboard_led_int_Data1_0__0</A> ; (1 pterm, 1 signal)
+keyboard_led_int_Data1_2_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=47>keyboard_led_int_Data1_3_.D</A> = <A href=#153>keyboard_int_Data0_3_.Q</A> ; (1 pterm, 1 signal)
+keyboard_led_int_Data1_3_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+keyboard_led_int_Data1_3_.CE = <A href=#167>keyboard_led_int_Data1_0__0</A> ; (1 pterm, 1 signal)
+keyboard_led_int_Data1_3_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=53>keyboard_scanvalue_0_.D</A> = !<A href=#53>keyboard_scanvalue_0_.Q</A> ; (1 pterm, 1 signal)
+keyboard_scanvalue_0_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+keyboard_scanvalue_0_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=55>keyboard_scanvalue_1_.D</A> = <A href=#53>keyboard_scanvalue_0_.Q</A> & !<A href=#55>keyboard_scanvalue_1_.Q</A>
+    # !keyboard_scanvalue_0_.Q & keyboard_scanvalue_1_.Q ; (2 pterms, 2 signals)
+keyboard_scanvalue_1_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+keyboard_scanvalue_1_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=152>keyboard_time1Oms.T</A> = <A href=#36>keyboard_timecnt_2_.Q</A> & <A href=#37>keyboard_timecnt_3_.Q</A>
+       & <A href=#38>keyboard_timecnt_5_.Q</A> & <A href=#39>keyboard_timecnt_8_.Q</A>
+       & <A href=#40>keyboard_timecnt_10_.Q</A> & <A href=#41>keyboard_timecnt_12_.Q</A>
+       & <A href=#42>keyboard_timecnt_13_.Q</A> & <A href=#43>keyboard_timecnt_14_.Q</A> & <A href=#81>button0_d3_q_0_.Q</A>
+       & !<A href=#146>keyboard_timecnt_4_.Q</A> & !<A href=#147>keyboard_timecnt_6_.Q</A>
+       & !<A href=#148>keyboard_timecnt_7_.Q</A> & !<A href=#149>keyboard_timecnt_9_.Q</A>
+       & !<A href=#150>keyboard_timecnt_15_.Q</A> & !<A href=#151>keyboard_timecnt_11_.Q</A>
+       & <A href=#165>keyboard_timecnt_0_.Q</A> & <A href=#166>keyboard_timecnt_1_.Q</A>
+    # keyboard_timecnt_2_.Q & keyboard_timecnt_3_.Q & keyboard_timecnt_5_.Q
+       & keyboard_timecnt_8_.Q & keyboard_timecnt_10_.Q
+       & keyboard_timecnt_12_.Q & keyboard_timecnt_13_.Q
+       & keyboard_timecnt_14_.Q & <A href=#80>button0_d2_q_0_.Q</A> & !keyboard_timecnt_4_.Q
+       & !keyboard_timecnt_6_.Q & !keyboard_timecnt_7_.Q
+       & !keyboard_timecnt_9_.Q & !keyboard_timecnt_15_.Q
+       & !keyboard_timecnt_11_.Q & keyboard_timecnt_0_.Q
+       & keyboard_timecnt_1_.Q
+    # keyboard_timecnt_2_.Q & keyboard_timecnt_3_.Q & keyboard_timecnt_5_.Q
+       & keyboard_timecnt_8_.Q & keyboard_timecnt_10_.Q
+       & keyboard_timecnt_12_.Q & keyboard_timecnt_13_.Q
+       & keyboard_timecnt_14_.Q & <A href=#79>button0_d1_q_0_.Q</A> & !keyboard_timecnt_4_.Q
+       & !keyboard_timecnt_6_.Q & !keyboard_timecnt_7_.Q
+       & !keyboard_timecnt_9_.Q & !keyboard_timecnt_15_.Q
+       & !keyboard_timecnt_11_.Q & keyboard_timecnt_0_.Q
+       & keyboard_timecnt_1_.Q ; (3 pterms, 19 signals)
+keyboard_time1Oms.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+
+<A name=165>keyboard_timecnt_0_.D</A> = !<A href=#165>keyboard_timecnt_0_.Q</A> ; (1 pterm, 1 signal)
+keyboard_timecnt_0_.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+keyboard_timecnt_0_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=40>keyboard_timecnt_10_.T</A> = <A href=#36>keyboard_timecnt_2_.Q</A> & <A href=#37>keyboard_timecnt_3_.Q</A>
+       & <A href=#38>keyboard_timecnt_5_.Q</A> & <A href=#39>keyboard_timecnt_8_.Q</A>
+       & <A href=#40>keyboard_timecnt_10_.Q</A> & <A href=#41>keyboard_timecnt_12_.Q</A>
+       & <A href=#42>keyboard_timecnt_13_.Q</A> & <A href=#43>keyboard_timecnt_14_.Q</A>
+       & !<A href=#146>keyboard_timecnt_4_.Q</A> & !<A href=#147>keyboard_timecnt_6_.Q</A>
+       & !<A href=#148>keyboard_timecnt_7_.Q</A> & !<A href=#149>keyboard_timecnt_9_.Q</A>
+       & !<A href=#150>keyboard_timecnt_15_.Q</A> & !<A href=#151>keyboard_timecnt_11_.Q</A>
+       & <A href=#165>keyboard_timecnt_0_.Q</A> & <A href=#166>keyboard_timecnt_1_.Q</A>
+    # keyboard_timecnt_2_.Q & keyboard_timecnt_3_.Q & keyboard_timecnt_5_.Q
+       & keyboard_timecnt_8_.Q & keyboard_timecnt_4_.Q & keyboard_timecnt_6_.Q
+       & keyboard_timecnt_7_.Q & keyboard_timecnt_9_.Q & keyboard_timecnt_0_.Q
+       & keyboard_timecnt_1_.Q ; (2 pterms, 16 signals)
+keyboard_timecnt_10_.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+keyboard_timecnt_10_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=151>keyboard_timecnt_11_.T</A> = <A href=#36>keyboard_timecnt_2_.Q</A> & <A href=#37>keyboard_timecnt_3_.Q</A>
+       & <A href=#38>keyboard_timecnt_5_.Q</A> & <A href=#39>keyboard_timecnt_8_.Q</A>
+       & <A href=#40>keyboard_timecnt_10_.Q</A> & <A href=#146>keyboard_timecnt_4_.Q</A>
+       & <A href=#147>keyboard_timecnt_6_.Q</A> & <A href=#148>keyboard_timecnt_7_.Q</A> & <A href=#149>keyboard_timecnt_9_.Q</A>
+       & <A href=#165>keyboard_timecnt_0_.Q</A> & <A href=#166>keyboard_timecnt_1_.Q</A> ; (1 pterm, 11 signals)
+keyboard_timecnt_11_.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+keyboard_timecnt_11_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=41>keyboard_timecnt_12_.T</A> = <A href=#36>keyboard_timecnt_2_.Q</A> & <A href=#37>keyboard_timecnt_3_.Q</A>
+       & <A href=#38>keyboard_timecnt_5_.Q</A> & <A href=#39>keyboard_timecnt_8_.Q</A>
+       & <A href=#40>keyboard_timecnt_10_.Q</A> & <A href=#41>keyboard_timecnt_12_.Q</A>
+       & <A href=#42>keyboard_timecnt_13_.Q</A> & <A href=#43>keyboard_timecnt_14_.Q</A>
+       & !<A href=#146>keyboard_timecnt_4_.Q</A> & !<A href=#147>keyboard_timecnt_6_.Q</A>
+       & !<A href=#148>keyboard_timecnt_7_.Q</A> & !<A href=#149>keyboard_timecnt_9_.Q</A>
+       & !<A href=#150>keyboard_timecnt_15_.Q</A> & !<A href=#151>keyboard_timecnt_11_.Q</A>
+       & <A href=#165>keyboard_timecnt_0_.Q</A> & <A href=#166>keyboard_timecnt_1_.Q</A>
+    # keyboard_timecnt_2_.Q & keyboard_timecnt_3_.Q & keyboard_timecnt_5_.Q
+       & keyboard_timecnt_8_.Q & keyboard_timecnt_10_.Q
+       & keyboard_timecnt_4_.Q & keyboard_timecnt_6_.Q & keyboard_timecnt_7_.Q
+       & keyboard_timecnt_9_.Q & keyboard_timecnt_11_.Q
+       & keyboard_timecnt_0_.Q & keyboard_timecnt_1_.Q ; (2 pterms, 16 signals)
+keyboard_timecnt_12_.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+keyboard_timecnt_12_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=42>keyboard_timecnt_13_.T</A> = <A href=#36>keyboard_timecnt_2_.Q</A> & <A href=#37>keyboard_timecnt_3_.Q</A>
+       & <A href=#38>keyboard_timecnt_5_.Q</A> & <A href=#39>keyboard_timecnt_8_.Q</A>
+       & <A href=#40>keyboard_timecnt_10_.Q</A> & <A href=#41>keyboard_timecnt_12_.Q</A>
+       & <A href=#42>keyboard_timecnt_13_.Q</A> & <A href=#43>keyboard_timecnt_14_.Q</A>
+       & !<A href=#146>keyboard_timecnt_4_.Q</A> & !<A href=#147>keyboard_timecnt_6_.Q</A>
+       & !<A href=#148>keyboard_timecnt_7_.Q</A> & !<A href=#149>keyboard_timecnt_9_.Q</A>
+       & !<A href=#150>keyboard_timecnt_15_.Q</A> & !<A href=#151>keyboard_timecnt_11_.Q</A>
+       & <A href=#165>keyboard_timecnt_0_.Q</A> & <A href=#166>keyboard_timecnt_1_.Q</A>
+    # keyboard_timecnt_2_.Q & keyboard_timecnt_3_.Q & keyboard_timecnt_5_.Q
+       & keyboard_timecnt_8_.Q & keyboard_timecnt_10_.Q
+       & keyboard_timecnt_12_.Q & keyboard_timecnt_4_.Q
+       & keyboard_timecnt_6_.Q & keyboard_timecnt_7_.Q & keyboard_timecnt_9_.Q
+       & keyboard_timecnt_11_.Q & keyboard_timecnt_0_.Q
+       & keyboard_timecnt_1_.Q ; (2 pterms, 16 signals)
+keyboard_timecnt_13_.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+keyboard_timecnt_13_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=43>keyboard_timecnt_14_.T</A> = <A href=#36>keyboard_timecnt_2_.Q</A> & <A href=#37>keyboard_timecnt_3_.Q</A>
+       & <A href=#38>keyboard_timecnt_5_.Q</A> & <A href=#39>keyboard_timecnt_8_.Q</A>
+       & <A href=#40>keyboard_timecnt_10_.Q</A> & <A href=#41>keyboard_timecnt_12_.Q</A>
+       & <A href=#42>keyboard_timecnt_13_.Q</A> & <A href=#43>keyboard_timecnt_14_.Q</A>
+       & !<A href=#146>keyboard_timecnt_4_.Q</A> & !<A href=#147>keyboard_timecnt_6_.Q</A>
+       & !<A href=#148>keyboard_timecnt_7_.Q</A> & !<A href=#149>keyboard_timecnt_9_.Q</A>
+       & !<A href=#150>keyboard_timecnt_15_.Q</A> & !<A href=#151>keyboard_timecnt_11_.Q</A>
+       & <A href=#165>keyboard_timecnt_0_.Q</A> & <A href=#166>keyboard_timecnt_1_.Q</A>
+    # keyboard_timecnt_2_.Q & keyboard_timecnt_3_.Q & keyboard_timecnt_5_.Q
+       & keyboard_timecnt_8_.Q & keyboard_timecnt_10_.Q
+       & keyboard_timecnt_12_.Q & keyboard_timecnt_13_.Q
+       & keyboard_timecnt_4_.Q & keyboard_timecnt_6_.Q & keyboard_timecnt_7_.Q
+       & keyboard_timecnt_9_.Q & keyboard_timecnt_11_.Q
+       & keyboard_timecnt_0_.Q & keyboard_timecnt_1_.Q ; (2 pterms, 16 signals)
+keyboard_timecnt_14_.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+keyboard_timecnt_14_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=150>keyboard_timecnt_15_.T</A> = <A href=#36>keyboard_timecnt_2_.Q</A> & <A href=#37>keyboard_timecnt_3_.Q</A>
+       & <A href=#38>keyboard_timecnt_5_.Q</A> & <A href=#39>keyboard_timecnt_8_.Q</A>
+       & <A href=#40>keyboard_timecnt_10_.Q</A> & <A href=#41>keyboard_timecnt_12_.Q</A>
+       & <A href=#42>keyboard_timecnt_13_.Q</A> & <A href=#43>keyboard_timecnt_14_.Q</A>
+       & <A href=#146>keyboard_timecnt_4_.Q</A> & <A href=#147>keyboard_timecnt_6_.Q</A> & <A href=#148>keyboard_timecnt_7_.Q</A>
+       & <A href=#149>keyboard_timecnt_9_.Q</A> & <A href=#151>keyboard_timecnt_11_.Q</A>
+       & <A href=#165>keyboard_timecnt_0_.Q</A> & <A href=#166>keyboard_timecnt_1_.Q</A> ; (1 pterm, 15 signals)
+keyboard_timecnt_15_.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+keyboard_timecnt_15_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=166>keyboard_timecnt_1_.D</A> = <A href=#165>keyboard_timecnt_0_.Q</A> & !<A href=#166>keyboard_timecnt_1_.Q</A>
+    # !keyboard_timecnt_0_.Q & keyboard_timecnt_1_.Q ; (2 pterms, 2 signals)
+keyboard_timecnt_1_.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+keyboard_timecnt_1_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=36>keyboard_timecnt_2_.D</A> = !<A href=#36>keyboard_timecnt_2_.Q</A> & <A href=#165>keyboard_timecnt_0_.Q</A>
+       & <A href=#166>keyboard_timecnt_1_.Q</A>
+    # keyboard_timecnt_2_.Q & !keyboard_timecnt_0_.Q
+    # keyboard_timecnt_2_.Q & !keyboard_timecnt_1_.Q ; (3 pterms, 3 signals)
+keyboard_timecnt_2_.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+keyboard_timecnt_2_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=37>keyboard_timecnt_3_.D</A> = <A href=#36>keyboard_timecnt_2_.Q</A> & !<A href=#37>keyboard_timecnt_3_.Q</A>
+       & <A href=#165>keyboard_timecnt_0_.Q</A> & <A href=#166>keyboard_timecnt_1_.Q</A>
+    # keyboard_timecnt_3_.Q & !keyboard_timecnt_0_.Q
+    # !keyboard_timecnt_2_.Q & keyboard_timecnt_3_.Q
+    # keyboard_timecnt_3_.Q & !keyboard_timecnt_1_.Q ; (4 pterms, 4 signals)
+keyboard_timecnt_3_.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+keyboard_timecnt_3_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=146>keyboard_timecnt_4_.T.X1</A> = <A href=#36>keyboard_timecnt_2_.Q</A> & <A href=#37>keyboard_timecnt_3_.Q</A>
+       & <A href=#165>keyboard_timecnt_0_.Q</A> & <A href=#166>keyboard_timecnt_1_.Q</A> ; (1 pterm, 4 signals)
+keyboard_timecnt_4_.T.X2 = <A href=#36>keyboard_timecnt_2_.Q</A> & <A href=#37>keyboard_timecnt_3_.Q</A>
+       & <A href=#38>keyboard_timecnt_5_.Q</A> & <A href=#39>keyboard_timecnt_8_.Q</A>
+       & <A href=#40>keyboard_timecnt_10_.Q</A> & <A href=#41>keyboard_timecnt_12_.Q</A>
+       & <A href=#42>keyboard_timecnt_13_.Q</A> & <A href=#43>keyboard_timecnt_14_.Q</A>
+       & !<A href=#146>keyboard_timecnt_4_.Q</A> & !<A href=#147>keyboard_timecnt_6_.Q</A>
+       & !<A href=#148>keyboard_timecnt_7_.Q</A> & !<A href=#149>keyboard_timecnt_9_.Q</A>
+       & !<A href=#150>keyboard_timecnt_15_.Q</A> & !<A href=#151>keyboard_timecnt_11_.Q</A>
+       & <A href=#165>keyboard_timecnt_0_.Q</A> & <A href=#166>keyboard_timecnt_1_.Q</A> ; (1 pterm, 16 signals)
+keyboard_timecnt_4_.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+keyboard_timecnt_4_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=38>keyboard_timecnt_5_.T</A> = <A href=#36>keyboard_timecnt_2_.Q</A> & <A href=#37>keyboard_timecnt_3_.Q</A>
+       & <A href=#38>keyboard_timecnt_5_.Q</A> & <A href=#39>keyboard_timecnt_8_.Q</A>
+       & <A href=#40>keyboard_timecnt_10_.Q</A> & <A href=#41>keyboard_timecnt_12_.Q</A>
+       & <A href=#42>keyboard_timecnt_13_.Q</A> & <A href=#43>keyboard_timecnt_14_.Q</A>
+       & !<A href=#147>keyboard_timecnt_6_.Q</A> & !<A href=#148>keyboard_timecnt_7_.Q</A>
+       & !<A href=#149>keyboard_timecnt_9_.Q</A> & !<A href=#150>keyboard_timecnt_15_.Q</A>
+       & !<A href=#151>keyboard_timecnt_11_.Q</A> & <A href=#165>keyboard_timecnt_0_.Q</A>
+       & <A href=#166>keyboard_timecnt_1_.Q</A>
+    # keyboard_timecnt_2_.Q & keyboard_timecnt_3_.Q & <A href=#146>keyboard_timecnt_4_.Q</A>
+       & keyboard_timecnt_0_.Q & keyboard_timecnt_1_.Q ; (2 pterms, 16 signals)
+keyboard_timecnt_5_.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+keyboard_timecnt_5_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=147>keyboard_timecnt_6_.T</A> = <A href=#36>keyboard_timecnt_2_.Q</A> & <A href=#37>keyboard_timecnt_3_.Q</A>
+       & <A href=#38>keyboard_timecnt_5_.Q</A> & <A href=#146>keyboard_timecnt_4_.Q</A> & <A href=#165>keyboard_timecnt_0_.Q</A>
+       & <A href=#166>keyboard_timecnt_1_.Q</A> ; (1 pterm, 6 signals)
+keyboard_timecnt_6_.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+keyboard_timecnt_6_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=148>keyboard_timecnt_7_.T</A> = <A href=#36>keyboard_timecnt_2_.Q</A> & <A href=#37>keyboard_timecnt_3_.Q</A>
+       & <A href=#38>keyboard_timecnt_5_.Q</A> & <A href=#146>keyboard_timecnt_4_.Q</A> & <A href=#147>keyboard_timecnt_6_.Q</A>
+       & <A href=#165>keyboard_timecnt_0_.Q</A> & <A href=#166>keyboard_timecnt_1_.Q</A> ; (1 pterm, 7 signals)
+keyboard_timecnt_7_.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+keyboard_timecnt_7_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=39>keyboard_timecnt_8_.T</A> = <A href=#36>keyboard_timecnt_2_.Q</A> & <A href=#37>keyboard_timecnt_3_.Q</A>
+       & <A href=#38>keyboard_timecnt_5_.Q</A> & <A href=#39>keyboard_timecnt_8_.Q</A>
+       & <A href=#40>keyboard_timecnt_10_.Q</A> & <A href=#41>keyboard_timecnt_12_.Q</A>
+       & <A href=#42>keyboard_timecnt_13_.Q</A> & <A href=#43>keyboard_timecnt_14_.Q</A>
+       & !<A href=#146>keyboard_timecnt_4_.Q</A> & !<A href=#147>keyboard_timecnt_6_.Q</A>
+       & !<A href=#148>keyboard_timecnt_7_.Q</A> & !<A href=#149>keyboard_timecnt_9_.Q</A>
+       & !<A href=#150>keyboard_timecnt_15_.Q</A> & !<A href=#151>keyboard_timecnt_11_.Q</A>
+       & <A href=#165>keyboard_timecnt_0_.Q</A> & <A href=#166>keyboard_timecnt_1_.Q</A>
+    # keyboard_timecnt_2_.Q & keyboard_timecnt_3_.Q & keyboard_timecnt_5_.Q
+       & keyboard_timecnt_4_.Q & keyboard_timecnt_6_.Q & keyboard_timecnt_7_.Q
+       & keyboard_timecnt_0_.Q & keyboard_timecnt_1_.Q ; (2 pterms, 16 signals)
+keyboard_timecnt_8_.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+keyboard_timecnt_8_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=149>keyboard_timecnt_9_.T</A> = <A href=#36>keyboard_timecnt_2_.Q</A> & <A href=#37>keyboard_timecnt_3_.Q</A>
+       & <A href=#38>keyboard_timecnt_5_.Q</A> & <A href=#39>keyboard_timecnt_8_.Q</A> & <A href=#146>keyboard_timecnt_4_.Q</A>
+       & <A href=#147>keyboard_timecnt_6_.Q</A> & <A href=#148>keyboard_timecnt_7_.Q</A> & <A href=#165>keyboard_timecnt_0_.Q</A>
+       & <A href=#166>keyboard_timecnt_1_.Q</A> ; (1 pterm, 9 signals)
+keyboard_timecnt_9_.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+keyboard_timecnt_9_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=30>led_0_.D</A> = !<A href=#161>keyboard_combvalue_0_.Q</A> & !<A href=#162>keyboard_combvalue_1_.Q</A>
+       & !<A href=#163>keyboard_combvalue_2_.Q</A> & !<A href=#164>keyboard_combvalue_3_.Q</A>
+    # !<A href=#142>keyboard_combvalue_4_.Q</A> & !<A href=#144>keyboard_combvalue_6_.Q</A>
+    # keyboard_combvalue_4_.Q & keyboard_combvalue_6_.Q
+    # <A href=#145>keyboard_combvalue_7_.Q</A>
+    # <A href=#143>keyboard_combvalue_5_.Q</A> ; (5 pterms, 8 signals)
+led_0_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+led_0_.AP = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A> & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=29>led_1_.D</A> = !<A href=#161>keyboard_combvalue_0_.Q</A> & !<A href=#162>keyboard_combvalue_1_.Q</A>
+       & !<A href=#163>keyboard_combvalue_2_.Q</A> & !<A href=#164>keyboard_combvalue_3_.Q</A>
+    # !<A href=#143>keyboard_combvalue_5_.Q</A> & !<A href=#144>keyboard_combvalue_6_.Q</A>
+    # keyboard_combvalue_5_.Q & keyboard_combvalue_6_.Q
+    # <A href=#145>keyboard_combvalue_7_.Q</A>
+    # <A href=#142>keyboard_combvalue_4_.Q</A> ; (5 pterms, 8 signals)
+led_1_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+led_1_.AP = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A> & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=27>led_2_.D</A> = !( <A href=#142>keyboard_combvalue_4_.Q</A> & !<A href=#143>keyboard_combvalue_5_.Q</A>
+       & !<A href=#144>keyboard_combvalue_6_.Q</A> & !<A href=#145>keyboard_combvalue_7_.Q</A>
+       & <A href=#162>keyboard_combvalue_1_.Q</A>
+    # !keyboard_combvalue_4_.Q & keyboard_combvalue_5_.Q
+       & !keyboard_combvalue_6_.Q & !keyboard_combvalue_7_.Q
+       & keyboard_combvalue_1_.Q
+    # !keyboard_combvalue_4_.Q & !keyboard_combvalue_5_.Q
+       & keyboard_combvalue_6_.Q & !keyboard_combvalue_7_.Q
+       & keyboard_combvalue_1_.Q
+    # !keyboard_combvalue_4_.Q & !keyboard_combvalue_5_.Q
+       & !keyboard_combvalue_6_.Q & keyboard_combvalue_7_.Q
+       & <A href=#163>keyboard_combvalue_2_.Q</A>
+    # !keyboard_combvalue_4_.Q & !keyboard_combvalue_5_.Q
+       & !keyboard_combvalue_6_.Q & keyboard_combvalue_7_.Q
+       & <A href=#161>keyboard_combvalue_0_.Q</A>
+    # keyboard_combvalue_4_.Q & !keyboard_combvalue_5_.Q
+       & !keyboard_combvalue_6_.Q & !keyboard_combvalue_7_.Q
+       & <A href=#164>keyboard_combvalue_3_.Q</A>
+    # !keyboard_combvalue_4_.Q & keyboard_combvalue_5_.Q
+       & !keyboard_combvalue_6_.Q & !keyboard_combvalue_7_.Q
+       & keyboard_combvalue_3_.Q
+    # !keyboard_combvalue_4_.Q & !keyboard_combvalue_5_.Q
+       & keyboard_combvalue_6_.Q & !keyboard_combvalue_7_.Q
+       & keyboard_combvalue_3_.Q ) ; (8 pterms, 8 signals)
+led_2_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+led_2_.AP = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A> & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=26>led_3_.D</A> = !( <A href=#142>keyboard_combvalue_4_.Q</A> & !<A href=#143>keyboard_combvalue_5_.Q</A>
+       & !<A href=#144>keyboard_combvalue_6_.Q</A> & !<A href=#145>keyboard_combvalue_7_.Q</A>
+       & <A href=#163>keyboard_combvalue_2_.Q</A>
+    # !keyboard_combvalue_4_.Q & keyboard_combvalue_5_.Q
+       & !keyboard_combvalue_6_.Q & !keyboard_combvalue_7_.Q
+       & keyboard_combvalue_2_.Q
+    # !keyboard_combvalue_4_.Q & !keyboard_combvalue_5_.Q
+       & keyboard_combvalue_6_.Q & !keyboard_combvalue_7_.Q
+       & keyboard_combvalue_2_.Q
+    # !keyboard_combvalue_4_.Q & !keyboard_combvalue_5_.Q
+       & !keyboard_combvalue_6_.Q & keyboard_combvalue_7_.Q
+       & <A href=#162>keyboard_combvalue_1_.Q</A>
+    # !keyboard_combvalue_4_.Q & !keyboard_combvalue_5_.Q
+       & !keyboard_combvalue_6_.Q & keyboard_combvalue_7_.Q
+       & keyboard_combvalue_2_.Q
+    # keyboard_combvalue_4_.Q & !keyboard_combvalue_5_.Q
+       & !keyboard_combvalue_6_.Q & !keyboard_combvalue_7_.Q
+       & <A href=#164>keyboard_combvalue_3_.Q</A>
+    # !keyboard_combvalue_4_.Q & keyboard_combvalue_5_.Q
+       & !keyboard_combvalue_6_.Q & !keyboard_combvalue_7_.Q
+       & keyboard_combvalue_3_.Q
+    # !keyboard_combvalue_4_.Q & !keyboard_combvalue_5_.Q
+       & keyboard_combvalue_6_.Q & !keyboard_combvalue_7_.Q
+       & keyboard_combvalue_3_.Q ) ; (8 pterms, 7 signals)
+led_3_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+led_3_.AP = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A> & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=28>led_4_.D</A> = !( !<A href=#142>keyboard_combvalue_4_.Q</A> & !<A href=#143>keyboard_combvalue_5_.Q</A>
+       & !<A href=#144>keyboard_combvalue_6_.Q</A> & <A href=#145>keyboard_combvalue_7_.Q</A>
+       & <A href=#164>keyboard_combvalue_3_.Q</A> ) ; (1 pterm, 5 signals)
+led_4_.C = <A href=#152>keyboard_time1Oms.Q</A> ; (1 pterm, 1 signal)
+led_4_.AP = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A> & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=136>serial_Clock16.D</A> = !<A href=#93>serial_ClockCount_Rx_0_.Q</A> & !<A href=#100>serial_ClockCount_Rx_3_.Q</A>
+       & !<A href=#101>serial_ClockCount_Rx_6_.Q</A> & !<A href=#102>serial_ClockCount_Rx_4_.Q</A>
+       & <A href=#123>serial_ClockCount_Rx_1_.Q</A> & <A href=#124>serial_ClockCount_Rx_2_.Q</A>
+       & <A href=#125>serial_ClockCount_Rx_5_.Q</A> ; (1 pterm, 7 signals)
+serial_Clock16.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+serial_Clock16.CE = !( !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+
+<A name=141>serial_Clock9600.D</A> = !<A href=#92>serial_ClockCount_0_.Q</A> & !<A href=#94>serial_ClockCount_10_.Q</A>
+       & !<A href=#95>serial_ClockCount_1_.Q</A> & !<A href=#96>serial_ClockCount_7_.Q</A>
+       & !<A href=#97>serial_ClockCount_8_.Q</A> & !<A href=#98>serial_ClockCount_2_.Q</A>
+       & !<A href=#99>serial_ClockCount_3_.Q</A> & <A href=#137>serial_ClockCount_4_.Q</A>
+       & <A href=#138>serial_ClockCount_5_.Q</A> & <A href=#139>serial_ClockCount_6_.Q</A>
+       & <A href=#140>serial_ClockCount_9_.Q</A> ; (1 pterm, 11 signals)
+serial_Clock9600.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+serial_Clock9600.CE = !( !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+
+<A name=92>serial_ClockCount_0_.D</A> = !( !<A href=#94>serial_ClockCount_10_.Q</A> & !<A href=#95>serial_ClockCount_1_.Q</A>
+       & !<A href=#96>serial_ClockCount_7_.Q</A> & !<A href=#97>serial_ClockCount_8_.Q</A>
+       & !<A href=#98>serial_ClockCount_2_.Q</A> & !<A href=#99>serial_ClockCount_3_.Q</A>
+       & <A href=#137>serial_ClockCount_4_.Q</A> & <A href=#138>serial_ClockCount_5_.Q</A>
+       & <A href=#139>serial_ClockCount_6_.Q</A> & <A href=#140>serial_ClockCount_9_.Q</A>
+    # <A href=#92>serial_ClockCount_0_.Q</A> ) ; (2 pterms, 11 signals)
+serial_ClockCount_0_.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+serial_ClockCount_0_.CE = !( !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+
+<A name=94>serial_ClockCount_10_.T</A> = <A href=#92>serial_ClockCount_0_.Q</A> & <A href=#95>serial_ClockCount_1_.Q</A>
+       & <A href=#96>serial_ClockCount_7_.Q</A> & <A href=#97>serial_ClockCount_8_.Q</A>
+       & <A href=#98>serial_ClockCount_2_.Q</A> & <A href=#99>serial_ClockCount_3_.Q</A>
+       & <A href=#137>serial_ClockCount_4_.Q</A> & <A href=#138>serial_ClockCount_5_.Q</A>
+       & <A href=#139>serial_ClockCount_6_.Q</A> & <A href=#140>serial_ClockCount_9_.Q</A> ; (1 pterm, 10 signals)
+serial_ClockCount_10_.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+serial_ClockCount_10_.CE = !( !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+
+<A name=95>serial_ClockCount_1_.D</A> = <A href=#92>serial_ClockCount_0_.Q</A> & !<A href=#95>serial_ClockCount_1_.Q</A>
+    # !serial_ClockCount_0_.Q & serial_ClockCount_1_.Q ; (2 pterms, 2 signals)
+serial_ClockCount_1_.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+serial_ClockCount_1_.CE = !( !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+
+<A name=98>serial_ClockCount_2_.D</A> = <A href=#92>serial_ClockCount_0_.Q</A> & <A href=#95>serial_ClockCount_1_.Q</A>
+       & !<A href=#98>serial_ClockCount_2_.Q</A>
+    # !serial_ClockCount_1_.Q & serial_ClockCount_2_.Q
+    # !serial_ClockCount_0_.Q & serial_ClockCount_2_.Q ; (3 pterms, 3 signals)
+serial_ClockCount_2_.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+serial_ClockCount_2_.CE = !( !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+
+<A name=99>serial_ClockCount_3_.D</A> = <A href=#92>serial_ClockCount_0_.Q</A> & <A href=#95>serial_ClockCount_1_.Q</A>
+       & <A href=#98>serial_ClockCount_2_.Q</A> & !<A href=#99>serial_ClockCount_3_.Q</A>
+    # !serial_ClockCount_2_.Q & serial_ClockCount_3_.Q
+    # !serial_ClockCount_1_.Q & serial_ClockCount_3_.Q
+    # !serial_ClockCount_0_.Q & serial_ClockCount_3_.Q ; (4 pterms, 4 signals)
+serial_ClockCount_3_.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+serial_ClockCount_3_.CE = !( !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+
+<A name=137>serial_ClockCount_4_.T</A> = !<A href=#92>serial_ClockCount_0_.Q</A> & !<A href=#94>serial_ClockCount_10_.Q</A>
+       & !<A href=#95>serial_ClockCount_1_.Q</A> & !<A href=#96>serial_ClockCount_7_.Q</A>
+       & !<A href=#97>serial_ClockCount_8_.Q</A> & !<A href=#98>serial_ClockCount_2_.Q</A>
+       & !<A href=#99>serial_ClockCount_3_.Q</A> & <A href=#137>serial_ClockCount_4_.Q</A>
+       & <A href=#138>serial_ClockCount_5_.Q</A> & <A href=#139>serial_ClockCount_6_.Q</A>
+       & <A href=#140>serial_ClockCount_9_.Q</A>
+    # serial_ClockCount_0_.Q & serial_ClockCount_1_.Q & serial_ClockCount_2_.Q
+       & serial_ClockCount_3_.Q ; (2 pterms, 11 signals)
+serial_ClockCount_4_.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+serial_ClockCount_4_.CE = !( !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+
+<A name=138>serial_ClockCount_5_.T</A> = !<A href=#92>serial_ClockCount_0_.Q</A> & !<A href=#94>serial_ClockCount_10_.Q</A>
+       & !<A href=#95>serial_ClockCount_1_.Q</A> & !<A href=#96>serial_ClockCount_7_.Q</A>
+       & !<A href=#97>serial_ClockCount_8_.Q</A> & !<A href=#98>serial_ClockCount_2_.Q</A>
+       & !<A href=#99>serial_ClockCount_3_.Q</A> & <A href=#137>serial_ClockCount_4_.Q</A>
+       & <A href=#138>serial_ClockCount_5_.Q</A> & <A href=#139>serial_ClockCount_6_.Q</A>
+       & <A href=#140>serial_ClockCount_9_.Q</A>
+    # serial_ClockCount_0_.Q & serial_ClockCount_1_.Q & serial_ClockCount_2_.Q
+       & serial_ClockCount_3_.Q & serial_ClockCount_4_.Q ; (2 pterms, 11 signals)
+serial_ClockCount_5_.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+serial_ClockCount_5_.CE = !( !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+
+<A name=139>serial_ClockCount_6_.T</A> = !<A href=#92>serial_ClockCount_0_.Q</A> & !<A href=#94>serial_ClockCount_10_.Q</A>
+       & !<A href=#95>serial_ClockCount_1_.Q</A> & !<A href=#96>serial_ClockCount_7_.Q</A>
+       & !<A href=#97>serial_ClockCount_8_.Q</A> & !<A href=#98>serial_ClockCount_2_.Q</A>
+       & !<A href=#99>serial_ClockCount_3_.Q</A> & <A href=#137>serial_ClockCount_4_.Q</A>
+       & <A href=#138>serial_ClockCount_5_.Q</A> & <A href=#139>serial_ClockCount_6_.Q</A>
+       & <A href=#140>serial_ClockCount_9_.Q</A>
+    # serial_ClockCount_0_.Q & serial_ClockCount_1_.Q & serial_ClockCount_2_.Q
+       & serial_ClockCount_3_.Q & serial_ClockCount_4_.Q
+       & serial_ClockCount_5_.Q ; (2 pterms, 11 signals)
+serial_ClockCount_6_.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+serial_ClockCount_6_.CE = !( !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+
+<A name=96>serial_ClockCount_7_.T</A> = <A href=#92>serial_ClockCount_0_.Q</A> & <A href=#95>serial_ClockCount_1_.Q</A>
+       & <A href=#98>serial_ClockCount_2_.Q</A> & <A href=#99>serial_ClockCount_3_.Q</A>
+       & <A href=#137>serial_ClockCount_4_.Q</A> & <A href=#138>serial_ClockCount_5_.Q</A>
+       & <A href=#139>serial_ClockCount_6_.Q</A> ; (1 pterm, 7 signals)
+serial_ClockCount_7_.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+serial_ClockCount_7_.CE = !( !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+
+<A name=97>serial_ClockCount_8_.T</A> = <A href=#92>serial_ClockCount_0_.Q</A> & <A href=#95>serial_ClockCount_1_.Q</A>
+       & <A href=#96>serial_ClockCount_7_.Q</A> & <A href=#98>serial_ClockCount_2_.Q</A>
+       & <A href=#99>serial_ClockCount_3_.Q</A> & <A href=#137>serial_ClockCount_4_.Q</A>
+       & <A href=#138>serial_ClockCount_5_.Q</A> & <A href=#139>serial_ClockCount_6_.Q</A> ; (1 pterm, 8 signals)
+serial_ClockCount_8_.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+serial_ClockCount_8_.CE = !( !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+
+<A name=140>serial_ClockCount_9_.T</A> = !<A href=#92>serial_ClockCount_0_.Q</A> & !<A href=#94>serial_ClockCount_10_.Q</A>
+       & !<A href=#95>serial_ClockCount_1_.Q</A> & !<A href=#96>serial_ClockCount_7_.Q</A>
+       & !<A href=#97>serial_ClockCount_8_.Q</A> & !<A href=#98>serial_ClockCount_2_.Q</A>
+       & !<A href=#99>serial_ClockCount_3_.Q</A> & <A href=#137>serial_ClockCount_4_.Q</A>
+       & <A href=#138>serial_ClockCount_5_.Q</A> & <A href=#139>serial_ClockCount_6_.Q</A>
+       & <A href=#140>serial_ClockCount_9_.Q</A>
+    # serial_ClockCount_0_.Q & serial_ClockCount_1_.Q & serial_ClockCount_7_.Q
+       & serial_ClockCount_8_.Q & serial_ClockCount_2_.Q
+       & serial_ClockCount_3_.Q & serial_ClockCount_4_.Q
+       & serial_ClockCount_5_.Q & serial_ClockCount_6_.Q ; (2 pterms, 11 signals)
+serial_ClockCount_9_.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+serial_ClockCount_9_.CE = !( !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+
+<A name=93>serial_ClockCount_Rx_0_.D</A> = !( !<A href=#100>serial_ClockCount_Rx_3_.Q</A>
+       & !<A href=#101>serial_ClockCount_Rx_6_.Q</A> & !<A href=#102>serial_ClockCount_Rx_4_.Q</A>
+       & <A href=#123>serial_ClockCount_Rx_1_.Q</A> & <A href=#124>serial_ClockCount_Rx_2_.Q</A>
+       & <A href=#125>serial_ClockCount_Rx_5_.Q</A>
+    # <A href=#93>serial_ClockCount_Rx_0_.Q</A> ) ; (2 pterms, 7 signals)
+serial_ClockCount_Rx_0_.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+serial_ClockCount_Rx_0_.CE = !( !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+
+<A name=123>serial_ClockCount_Rx_1_.D</A> = !( !<A href=#100>serial_ClockCount_Rx_3_.Q</A>
+       & !<A href=#101>serial_ClockCount_Rx_6_.Q</A> & !<A href=#102>serial_ClockCount_Rx_4_.Q</A>
+       & <A href=#123>serial_ClockCount_Rx_1_.Q</A> & <A href=#124>serial_ClockCount_Rx_2_.Q</A>
+       & <A href=#125>serial_ClockCount_Rx_5_.Q</A>
+    # !<A href=#93>serial_ClockCount_Rx_0_.Q</A> & !serial_ClockCount_Rx_1_.Q
+    # serial_ClockCount_Rx_0_.Q & serial_ClockCount_Rx_1_.Q ) ; (3 pterms, 7 signals)
+serial_ClockCount_Rx_1_.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+serial_ClockCount_Rx_1_.CE = !( !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+
+<A name=124>serial_ClockCount_Rx_2_.D</A> = !( !<A href=#100>serial_ClockCount_Rx_3_.Q</A>
+       & !<A href=#101>serial_ClockCount_Rx_6_.Q</A> & !<A href=#102>serial_ClockCount_Rx_4_.Q</A>
+       & <A href=#123>serial_ClockCount_Rx_1_.Q</A> & <A href=#124>serial_ClockCount_Rx_2_.Q</A>
+       & <A href=#125>serial_ClockCount_Rx_5_.Q</A>
+    # <A href=#93>serial_ClockCount_Rx_0_.Q</A> & serial_ClockCount_Rx_1_.Q
+       & serial_ClockCount_Rx_2_.Q
+    # !serial_ClockCount_Rx_1_.Q & !serial_ClockCount_Rx_2_.Q
+    # !serial_ClockCount_Rx_0_.Q & !serial_ClockCount_Rx_2_.Q ) ; (4 pterms, 7 signals)
+serial_ClockCount_Rx_2_.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+serial_ClockCount_Rx_2_.CE = !( !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+
+<A name=100>serial_ClockCount_Rx_3_.D</A> = <A href=#93>serial_ClockCount_Rx_0_.Q</A>
+       & !<A href=#100>serial_ClockCount_Rx_3_.Q</A> & <A href=#123>serial_ClockCount_Rx_1_.Q</A>
+       & <A href=#124>serial_ClockCount_Rx_2_.Q</A>
+    # serial_ClockCount_Rx_3_.Q & !serial_ClockCount_Rx_1_.Q
+    # !serial_ClockCount_Rx_0_.Q & serial_ClockCount_Rx_3_.Q
+    # serial_ClockCount_Rx_3_.Q & !serial_ClockCount_Rx_2_.Q ; (4 pterms, 4 signals)
+serial_ClockCount_Rx_3_.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+serial_ClockCount_Rx_3_.CE = !( !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+
+<A name=102>serial_ClockCount_Rx_4_.D.X1</A> = <A href=#102>serial_ClockCount_Rx_4_.Q</A> ; (1 pterm, 1 signal)
+serial_ClockCount_Rx_4_.D.X2 = <A href=#93>serial_ClockCount_Rx_0_.Q</A>
+       & <A href=#100>serial_ClockCount_Rx_3_.Q</A> & <A href=#123>serial_ClockCount_Rx_1_.Q</A>
+       & <A href=#124>serial_ClockCount_Rx_2_.Q</A> ; (1 pterm, 4 signals)
+serial_ClockCount_Rx_4_.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+serial_ClockCount_Rx_4_.CE = !( !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+
+<A name=125>serial_ClockCount_Rx_5_.T</A> = !<A href=#93>serial_ClockCount_Rx_0_.Q</A>
+       & !<A href=#100>serial_ClockCount_Rx_3_.Q</A> & !<A href=#101>serial_ClockCount_Rx_6_.Q</A>
+       & !<A href=#102>serial_ClockCount_Rx_4_.Q</A> & <A href=#123>serial_ClockCount_Rx_1_.Q</A>
+       & <A href=#124>serial_ClockCount_Rx_2_.Q</A> & <A href=#125>serial_ClockCount_Rx_5_.Q</A>
+    # serial_ClockCount_Rx_0_.Q & serial_ClockCount_Rx_3_.Q
+       & serial_ClockCount_Rx_4_.Q & serial_ClockCount_Rx_1_.Q
+       & serial_ClockCount_Rx_2_.Q ; (2 pterms, 7 signals)
+serial_ClockCount_Rx_5_.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+serial_ClockCount_Rx_5_.CE = !( !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+
+<A name=101>serial_ClockCount_Rx_6_.T</A> = <A href=#93>serial_ClockCount_Rx_0_.Q</A>
+       & <A href=#100>serial_ClockCount_Rx_3_.Q</A> & <A href=#102>serial_ClockCount_Rx_4_.Q</A>
+       & <A href=#123>serial_ClockCount_Rx_1_.Q</A> & <A href=#124>serial_ClockCount_Rx_2_.Q</A>
+       & <A href=#125>serial_ClockCount_Rx_5_.Q</A> ; (1 pterm, 6 signals)
+serial_ClockCount_Rx_6_.C = <A href=#13>clkh</A> ; (1 pterm, 1 signal)
+serial_ClockCount_Rx_6_.CE = !( !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+
+<A name=54>serial_Data1_0_.D</A> = <A href=#105>serial_Rx_Data_0_.Q</A> ; (1 pterm, 1 signal)
+serial_Data1_0_.C = !<A href=#104>serial_Rx_Valid.Q</A> ; (1 pterm, 1 signal)
+serial_Data1_0_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=56>serial_Data1_1_.D</A> = <A href=#106>serial_Rx_Data_1_.Q</A> ; (1 pterm, 1 signal)
+serial_Data1_1_.C = !<A href=#104>serial_Rx_Valid.Q</A> ; (1 pterm, 1 signal)
+serial_Data1_1_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=57>serial_Data1_2_.D</A> = <A href=#107>serial_Rx_Data_2_.Q</A> ; (1 pterm, 1 signal)
+serial_Data1_2_.C = !<A href=#104>serial_Rx_Valid.Q</A> ; (1 pterm, 1 signal)
+serial_Data1_2_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=58>serial_Data1_3_.D</A> = <A href=#109>serial_Rx_Data_3_.Q</A> ; (1 pterm, 1 signal)
+serial_Data1_3_.C = !<A href=#104>serial_Rx_Valid.Q</A> ; (1 pterm, 1 signal)
+serial_Data1_3_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=59>serial_Data2_0_.D</A> = <A href=#111>serial_Rx_Data_4_.Q</A> ; (1 pterm, 1 signal)
+serial_Data2_0_.C = !<A href=#104>serial_Rx_Valid.Q</A> ; (1 pterm, 1 signal)
+serial_Data2_0_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=60>serial_Data2_1_.D</A> = <A href=#112>serial_Rx_Data_5_.Q</A> ; (1 pterm, 1 signal)
+serial_Data2_1_.C = !<A href=#104>serial_Rx_Valid.Q</A> ; (1 pterm, 1 signal)
+serial_Data2_1_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=61>serial_Data2_2_.D</A> = <A href=#113>serial_Rx_Data_6_.Q</A> ; (1 pterm, 1 signal)
+serial_Data2_2_.C = !<A href=#104>serial_Rx_Valid.Q</A> ; (1 pterm, 1 signal)
+serial_Data2_2_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=62>serial_Data2_3_.D</A> = <A href=#114>serial_Rx_Data_7_.Q</A> ; (1 pterm, 1 signal)
+serial_Data2_3_.C = !<A href=#104>serial_Rx_Valid.Q</A> ; (1 pterm, 1 signal)
+serial_Data2_3_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=105>serial_Rx_Data_0_.D</A> = <A href=#21>Rx</A> & <A href=#88>serial_m_4_.Q</A> & !<A href=#89>serial_m_5_.Q</A> & !<A href=#90>serial_m_6_.Q</A>
+    # serial_m_6_.Q & <A href=#105>serial_Rx_Data_0_.Q</A>
+    # serial_m_5_.Q & serial_Rx_Data_0_.Q
+    # !serial_m_4_.Q & serial_Rx_Data_0_.Q ; (4 pterms, 5 signals)
+serial_Rx_Data_0_.C = <A href=#136>serial_Clock16.Q</A> ; (1 pterm, 1 signal)
+serial_Rx_Data_0_.CE = !( <A href=#170>serial_Rx_Data_0__0</A> ) ; (1 pterm, 1 signal)
+
+<A name=170>serial_Rx_Data_0__0</A> = <A href=#84>serial_m_0_.Q</A>
+    # <A href=#85>serial_m_1_.Q</A>
+    # <A href=#86>serial_m_2_.Q</A>
+    # !<A href=#87>serial_m_3_.Q</A>
+    # <A href=#88>serial_m_4_.Q</A> & <A href=#91>serial_m_7_.Q</A>
+    # <A href=#89>serial_m_5_.Q</A> & serial_m_7_.Q
+    # <A href=#90>serial_m_6_.Q</A> & serial_m_7_.Q
+    # !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A> & !<A href=#81>button0_d3_q_0_.Q</A>
+    # !serial_m_4_.Q & !serial_m_5_.Q & !serial_m_6_.Q & !serial_m_7_.Q ; (9 pterms, 11 signals)
+
+<A name=106>serial_Rx_Data_1_.D</A> = <A href=#21>Rx</A> & !<A href=#88>serial_m_4_.Q</A> & <A href=#89>serial_m_5_.Q</A> & !<A href=#90>serial_m_6_.Q</A>
+    # serial_m_6_.Q & <A href=#106>serial_Rx_Data_1_.Q</A>
+    # !serial_m_5_.Q & serial_Rx_Data_1_.Q
+    # serial_m_4_.Q & serial_Rx_Data_1_.Q ; (4 pterms, 5 signals)
+serial_Rx_Data_1_.C = <A href=#136>serial_Clock16.Q</A> ; (1 pterm, 1 signal)
+serial_Rx_Data_1_.CE = !( <A href=#170>serial_Rx_Data_0__0</A> ) ; (1 pterm, 1 signal)
+
+<A name=107>serial_Rx_Data_2_.D</A> = <A href=#21>Rx</A> & <A href=#88>serial_m_4_.Q</A> & <A href=#89>serial_m_5_.Q</A> & !<A href=#90>serial_m_6_.Q</A>
+    # serial_m_6_.Q & <A href=#107>serial_Rx_Data_2_.Q</A>
+    # !serial_m_5_.Q & serial_Rx_Data_2_.Q
+    # !serial_m_4_.Q & serial_Rx_Data_2_.Q ; (4 pterms, 5 signals)
+serial_Rx_Data_2_.C = <A href=#136>serial_Clock16.Q</A> ; (1 pterm, 1 signal)
+serial_Rx_Data_2_.CE = !( <A href=#170>serial_Rx_Data_0__0</A> ) ; (1 pterm, 1 signal)
+
+<A name=109>serial_Rx_Data_3_.D</A> = <A href=#21>Rx</A> & !<A href=#88>serial_m_4_.Q</A> & !<A href=#89>serial_m_5_.Q</A> & <A href=#90>serial_m_6_.Q</A>
+    # !serial_m_6_.Q & <A href=#109>serial_Rx_Data_3_.Q</A>
+    # serial_m_5_.Q & serial_Rx_Data_3_.Q
+    # serial_m_4_.Q & serial_Rx_Data_3_.Q ; (4 pterms, 5 signals)
+serial_Rx_Data_3_.C = <A href=#136>serial_Clock16.Q</A> ; (1 pterm, 1 signal)
+serial_Rx_Data_3_.CE = !( <A href=#170>serial_Rx_Data_0__0</A> ) ; (1 pterm, 1 signal)
+
+<A name=111>serial_Rx_Data_4_.D</A> = <A href=#21>Rx</A> & <A href=#88>serial_m_4_.Q</A> & !<A href=#89>serial_m_5_.Q</A> & <A href=#90>serial_m_6_.Q</A>
+    # !serial_m_6_.Q & <A href=#111>serial_Rx_Data_4_.Q</A>
+    # serial_m_5_.Q & serial_Rx_Data_4_.Q
+    # !serial_m_4_.Q & serial_Rx_Data_4_.Q ; (4 pterms, 5 signals)
+serial_Rx_Data_4_.C = <A href=#136>serial_Clock16.Q</A> ; (1 pterm, 1 signal)
+serial_Rx_Data_4_.CE = !( <A href=#170>serial_Rx_Data_0__0</A> ) ; (1 pterm, 1 signal)
+
+<A name=112>serial_Rx_Data_5_.D</A> = <A href=#21>Rx</A> & !<A href=#88>serial_m_4_.Q</A> & <A href=#89>serial_m_5_.Q</A> & <A href=#90>serial_m_6_.Q</A>
+    # !serial_m_6_.Q & <A href=#112>serial_Rx_Data_5_.Q</A>
+    # !serial_m_5_.Q & serial_Rx_Data_5_.Q
+    # serial_m_4_.Q & serial_Rx_Data_5_.Q ; (4 pterms, 5 signals)
+serial_Rx_Data_5_.C = <A href=#136>serial_Clock16.Q</A> ; (1 pterm, 1 signal)
+serial_Rx_Data_5_.CE = !( <A href=#170>serial_Rx_Data_0__0</A> ) ; (1 pterm, 1 signal)
+
+<A name=113>serial_Rx_Data_6_.D</A> = <A href=#21>Rx</A> & <A href=#88>serial_m_4_.Q</A> & <A href=#89>serial_m_5_.Q</A> & <A href=#90>serial_m_6_.Q</A>
+    # !serial_m_6_.Q & <A href=#113>serial_Rx_Data_6_.Q</A>
+    # !serial_m_5_.Q & serial_Rx_Data_6_.Q
+    # !serial_m_4_.Q & serial_Rx_Data_6_.Q ; (4 pterms, 5 signals)
+serial_Rx_Data_6_.C = <A href=#136>serial_Clock16.Q</A> ; (1 pterm, 1 signal)
+serial_Rx_Data_6_.CE = !( <A href=#170>serial_Rx_Data_0__0</A> ) ; (1 pterm, 1 signal)
+
+<A name=114>serial_Rx_Data_7_.D</A> = <A href=#21>Rx</A> & <A href=#91>serial_m_7_.Q</A>
+    # !serial_m_7_.Q & <A href=#114>serial_Rx_Data_7_.Q</A> ; (2 pterms, 3 signals)
+serial_Rx_Data_7_.C = <A href=#136>serial_Clock16.Q</A> ; (1 pterm, 1 signal)
+serial_Rx_Data_7_.CE = !( <A href=#170>serial_Rx_Data_0__0</A> ) ; (1 pterm, 1 signal)
+
+<A name=104>serial_Rx_Valid.D</A> = <A href=#88>serial_m_4_.Q</A> ; (1 pterm, 1 signal)
+serial_Rx_Valid.C = <A href=#136>serial_Clock16.Q</A> ; (1 pterm, 1 signal)
+serial_Rx_Valid.CE = <A href=#169>serial_Rx_Valid_0</A> ; (1 pterm, 1 signal)
+serial_Rx_Valid.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=169>serial_Rx_Valid_0</A> = !<A href=#85>serial_m_1_.Q</A> & !<A href=#86>serial_m_2_.Q</A> & <A href=#87>serial_m_3_.Q</A>
+       & !<A href=#88>serial_m_4_.Q</A> & <A href=#89>serial_m_5_.Q</A> & !<A href=#90>serial_m_6_.Q</A> & <A href=#91>serial_m_7_.Q</A>
+    # !<A href=#84>serial_m_0_.Q</A> & !serial_m_1_.Q & !serial_m_2_.Q & serial_m_3_.Q
+       & serial_m_4_.Q & !serial_m_5_.Q & !serial_m_6_.Q & serial_m_7_.Q
+    # <A href=#21>Rx</A> & !serial_m_0_.Q & !serial_m_1_.Q & !serial_m_2_.Q & !serial_m_3_.Q
+       & !serial_m_4_.Q & !serial_m_5_.Q & !serial_m_6_.Q & !serial_m_7_.Q ; (3 pterms, 9 signals)
+
+<A name=116>serial_Send_count_0_.D</A> = !<A href=#117>serial_Send_count_1_.Q</A> & !<A href=#118>serial_Send_count_2_.Q</A>
+       & <A href=#120>serial_Send_count_3_.Q</A>
+    # !<A href=#116>serial_Send_count_0_.Q</A> ; (2 pterms, 4 signals)
+serial_Send_count_0_.C = <A href=#141>serial_Clock9600.Q</A> ; (1 pterm, 1 signal)
+serial_Send_count_0_.AR = <A href=#127>serial_Send_en.Q</A> ; (1 pterm, 1 signal)
+
+<A name=117>serial_Send_count_1_.D</A> = <A href=#116>serial_Send_count_0_.Q</A> & !<A href=#117>serial_Send_count_1_.Q</A>
+       & <A href=#118>serial_Send_count_2_.Q</A>
+    # serial_Send_count_0_.Q & !serial_Send_count_1_.Q
+       & !<A href=#120>serial_Send_count_3_.Q</A>
+    # !serial_Send_count_0_.Q & serial_Send_count_1_.Q ; (3 pterms, 4 signals)
+serial_Send_count_1_.C = <A href=#141>serial_Clock9600.Q</A> ; (1 pterm, 1 signal)
+serial_Send_count_1_.AR = <A href=#127>serial_Send_en.Q</A> ; (1 pterm, 1 signal)
+
+<A name=118>serial_Send_count_2_.D</A> = <A href=#116>serial_Send_count_0_.Q</A> & <A href=#117>serial_Send_count_1_.Q</A>
+       & !<A href=#118>serial_Send_count_2_.Q</A>
+    # !serial_Send_count_1_.Q & serial_Send_count_2_.Q
+    # !serial_Send_count_0_.Q & serial_Send_count_2_.Q ; (3 pterms, 3 signals)
+serial_Send_count_2_.C = <A href=#141>serial_Clock9600.Q</A> ; (1 pterm, 1 signal)
+serial_Send_count_2_.AR = <A href=#127>serial_Send_en.Q</A> ; (1 pterm, 1 signal)
+
+<A name=120>serial_Send_count_3_.D</A> = <A href=#116>serial_Send_count_0_.Q</A> & <A href=#117>serial_Send_count_1_.Q</A>
+       & <A href=#118>serial_Send_count_2_.Q</A> & !<A href=#120>serial_Send_count_3_.Q</A>
+    # !serial_Send_count_2_.Q & serial_Send_count_3_.Q
+    # !serial_Send_count_1_.Q & serial_Send_count_3_.Q
+    # !serial_Send_count_0_.Q & serial_Send_count_3_.Q ; (4 pterms, 4 signals)
+serial_Send_count_3_.C = <A href=#141>serial_Clock9600.Q</A> ; (1 pterm, 1 signal)
+serial_Send_count_3_.AR = <A href=#127>serial_Send_en.Q</A> ; (1 pterm, 1 signal)
+
+<A name=128>serial_Send_data_1_.D</A> = <A href=#48>keyboard_led_int_Data0_0_.Q</A> ; (1 pterm, 1 signal)
+serial_Send_data_1_.C = !( !<A href=#63>button5_d1_q_0_.Q</A> & !<A href=#64>button5_d2_q_0_.Q</A>
+       & !<A href=#65>button5_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+serial_Send_data_1_.AR = <A href=#115>serial_send_en_3_n</A> ; (1 pterm, 1 signal)
+
+<A name=129>serial_Send_data_2_.D</A> = <A href=#50>keyboard_led_int_Data0_1_.Q</A> ; (1 pterm, 1 signal)
+serial_Send_data_2_.C = !( !<A href=#63>button5_d1_q_0_.Q</A> & !<A href=#64>button5_d2_q_0_.Q</A>
+       & !<A href=#65>button5_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+serial_Send_data_2_.AR = <A href=#115>serial_send_en_3_n</A> ; (1 pterm, 1 signal)
+
+<A name=130>serial_Send_data_3_.D</A> = <A href=#51>keyboard_led_int_Data0_2_.Q</A> ; (1 pterm, 1 signal)
+serial_Send_data_3_.C = !( !<A href=#63>button5_d1_q_0_.Q</A> & !<A href=#64>button5_d2_q_0_.Q</A>
+       & !<A href=#65>button5_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+serial_Send_data_3_.AR = <A href=#115>serial_send_en_3_n</A> ; (1 pterm, 1 signal)
+
+<A name=131>serial_Send_data_4_.D</A> = <A href=#52>keyboard_led_int_Data0_3_.Q</A> ; (1 pterm, 1 signal)
+serial_Send_data_4_.C = !( !<A href=#63>button5_d1_q_0_.Q</A> & !<A href=#64>button5_d2_q_0_.Q</A>
+       & !<A href=#65>button5_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+serial_Send_data_4_.AR = <A href=#115>serial_send_en_3_n</A> ; (1 pterm, 1 signal)
+
+<A name=132>serial_Send_data_5_.D</A> = <A href=#44>keyboard_led_int_Data1_0_.Q</A> ; (1 pterm, 1 signal)
+serial_Send_data_5_.C = !( !<A href=#63>button5_d1_q_0_.Q</A> & !<A href=#64>button5_d2_q_0_.Q</A>
+       & !<A href=#65>button5_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+serial_Send_data_5_.AR = <A href=#115>serial_send_en_3_n</A> ; (1 pterm, 1 signal)
+
+<A name=133>serial_Send_data_6_.D</A> = <A href=#45>keyboard_led_int_Data1_1_.Q</A> ; (1 pterm, 1 signal)
+serial_Send_data_6_.C = !( !<A href=#63>button5_d1_q_0_.Q</A> & !<A href=#64>button5_d2_q_0_.Q</A>
+       & !<A href=#65>button5_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+serial_Send_data_6_.AR = <A href=#115>serial_send_en_3_n</A> ; (1 pterm, 1 signal)
+
+<A name=134>serial_Send_data_7_.D</A> = <A href=#46>keyboard_led_int_Data1_2_.Q</A> ; (1 pterm, 1 signal)
+serial_Send_data_7_.C = !( !<A href=#63>button5_d1_q_0_.Q</A> & !<A href=#64>button5_d2_q_0_.Q</A>
+       & !<A href=#65>button5_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+serial_Send_data_7_.AR = <A href=#115>serial_send_en_3_n</A> ; (1 pterm, 1 signal)
+
+<A name=135>serial_Send_data_8_.D</A> = <A href=#47>keyboard_led_int_Data1_3_.Q</A> ; (1 pterm, 1 signal)
+serial_Send_data_8_.C = !( !<A href=#63>button5_d1_q_0_.Q</A> & !<A href=#64>button5_d2_q_0_.Q</A>
+       & !<A href=#65>button5_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+serial_Send_data_8_.AR = <A href=#115>serial_send_en_3_n</A> ; (1 pterm, 1 signal)
+
+<A name=127>serial_Send_en.D</A> = 0 ; (0 pterm, 0 signal)
+serial_Send_en.C = !( !<A href=#63>button5_d1_q_0_.Q</A> & !<A href=#64>button5_d2_q_0_.Q</A>
+       & !<A href=#65>button5_d3_q_0_.Q</A> ) ; (1 pterm, 3 signals)
+serial_Send_en.AP = <A href=#115>serial_send_en_3_n</A> ; (1 pterm, 1 signal)
+
+<A name=103>serial_Send_over.D</A> = !( <A href=#116>serial_Send_count_0_.Q</A> & !<A href=#117>serial_Send_count_1_.Q</A>
+       & !<A href=#118>serial_Send_count_2_.Q</A> & <A href=#120>serial_Send_count_3_.Q</A>
+    # !<A href=#103>serial_Send_over.Q</A> ) ; (2 pterms, 5 signals)
+serial_Send_over.C = <A href=#141>serial_Clock9600.Q</A> ; (1 pterm, 1 signal)
+serial_Send_over.AP = <A href=#127>serial_Send_en.Q</A> ; (1 pterm, 1 signal)
+
+<A name=84>serial_m_0_.D</A> = !( <A href=#21>Rx</A> & !<A href=#85>serial_m_1_.Q</A> & !<A href=#86>serial_m_2_.Q</A> & !<A href=#87>serial_m_3_.Q</A>
+       & !<A href=#88>serial_m_4_.Q</A> & !<A href=#89>serial_m_5_.Q</A> & !<A href=#90>serial_m_6_.Q</A> & !<A href=#91>serial_m_7_.Q</A>
+    # !serial_m_1_.Q & !serial_m_2_.Q & serial_m_3_.Q & !serial_m_4_.Q
+       & serial_m_5_.Q & !serial_m_6_.Q & serial_m_7_.Q
+    # <A href=#84>serial_m_0_.Q</A> ) ; (3 pterms, 9 signals)
+serial_m_0_.C = <A href=#136>serial_Clock16.Q</A> ; (1 pterm, 1 signal)
+serial_m_0_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A> & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=85>serial_m_1_.D</A> = <A href=#84>serial_m_0_.Q</A> & !<A href=#85>serial_m_1_.Q</A>
+    # !serial_m_0_.Q & serial_m_1_.Q ; (2 pterms, 2 signals)
+serial_m_1_.C = <A href=#136>serial_Clock16.Q</A> ; (1 pterm, 1 signal)
+serial_m_1_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A> & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=86>serial_m_2_.D</A> = <A href=#84>serial_m_0_.Q</A> & <A href=#85>serial_m_1_.Q</A> & !<A href=#86>serial_m_2_.Q</A>
+    # !serial_m_1_.Q & serial_m_2_.Q
+    # !serial_m_0_.Q & serial_m_2_.Q ; (3 pterms, 3 signals)
+serial_m_2_.C = <A href=#136>serial_Clock16.Q</A> ; (1 pterm, 1 signal)
+serial_m_2_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A> & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=87>serial_m_3_.D.X1</A> = <A href=#84>serial_m_0_.Q</A> & <A href=#85>serial_m_1_.Q</A> & <A href=#86>serial_m_2_.Q</A>
+    # !serial_m_1_.Q & !serial_m_2_.Q & <A href=#87>serial_m_3_.Q</A> & !<A href=#88>serial_m_4_.Q</A>
+       & <A href=#89>serial_m_5_.Q</A> & !<A href=#90>serial_m_6_.Q</A> & <A href=#91>serial_m_7_.Q</A> ; (2 pterms, 8 signals)
+serial_m_3_.D.X2 = <A href=#87>serial_m_3_.Q</A> ; (1 pterm, 1 signal)
+serial_m_3_.C = <A href=#136>serial_Clock16.Q</A> ; (1 pterm, 1 signal)
+serial_m_3_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A> & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=88>serial_m_4_.D.X1</A> = <A href=#84>serial_m_0_.Q</A> & <A href=#85>serial_m_1_.Q</A> & <A href=#86>serial_m_2_.Q</A>
+       & <A href=#87>serial_m_3_.Q</A> ; (1 pterm, 4 signals)
+serial_m_4_.D.X2 = <A href=#88>serial_m_4_.Q</A> ; (1 pterm, 1 signal)
+serial_m_4_.C = <A href=#136>serial_Clock16.Q</A> ; (1 pterm, 1 signal)
+serial_m_4_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A> & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=89>serial_m_5_.T</A> = !<A href=#85>serial_m_1_.Q</A> & !<A href=#86>serial_m_2_.Q</A> & <A href=#87>serial_m_3_.Q</A>
+       & !<A href=#88>serial_m_4_.Q</A> & <A href=#89>serial_m_5_.Q</A> & !<A href=#90>serial_m_6_.Q</A> & <A href=#91>serial_m_7_.Q</A>
+    # <A href=#84>serial_m_0_.Q</A> & serial_m_1_.Q & serial_m_2_.Q & serial_m_3_.Q
+       & serial_m_4_.Q ; (2 pterms, 8 signals)
+serial_m_5_.C = <A href=#136>serial_Clock16.Q</A> ; (1 pterm, 1 signal)
+serial_m_5_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A> & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=90>serial_m_6_.T</A> = <A href=#84>serial_m_0_.Q</A> & <A href=#85>serial_m_1_.Q</A> & <A href=#86>serial_m_2_.Q</A> & <A href=#87>serial_m_3_.Q</A>
+       & <A href=#88>serial_m_4_.Q</A> & <A href=#89>serial_m_5_.Q</A> ; (1 pterm, 6 signals)
+serial_m_6_.C = <A href=#136>serial_Clock16.Q</A> ; (1 pterm, 1 signal)
+serial_m_6_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A> & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=91>serial_m_7_.T</A> = !<A href=#85>serial_m_1_.Q</A> & !<A href=#86>serial_m_2_.Q</A> & <A href=#87>serial_m_3_.Q</A>
+       & !<A href=#88>serial_m_4_.Q</A> & <A href=#89>serial_m_5_.Q</A> & !<A href=#90>serial_m_6_.Q</A> & <A href=#91>serial_m_7_.Q</A>
+    # <A href=#84>serial_m_0_.Q</A> & serial_m_1_.Q & serial_m_2_.Q & serial_m_3_.Q
+       & serial_m_4_.Q & serial_m_5_.Q & serial_m_6_.Q ; (2 pterms, 8 signals)
+serial_m_7_.C = <A href=#136>serial_Clock16.Q</A> ; (1 pterm, 1 signal)
+serial_m_7_.AR = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A> & !<A href=#81>button0_d3_q_0_.Q</A> ; (1 pterm, 3 signals)
+
+<A name=115>serial_send_en_3_n</A> = !<A href=#79>button0_d1_q_0_.Q</A> & !<A href=#80>button0_d2_q_0_.Q</A>
+       & !<A href=#81>button0_d3_q_0_.Q</A>
+    # !<A href=#103>serial_Send_over.Q</A> ; (2 pterms, 4 signals)
+
+<A name=24>show_0_</A> = !( !<A href=#108>dynamicshow_mux_dataout_3_0__un1_n</A>
+       & !<A href=#110>dynamicshow_mux_dataout_3_0__un0_n</A>
+       & !<A href=#119>dynamicshow_mux_dataout_3_3__un1_n</A>
+       & !<A href=#122>dynamicshow_mux_dataout_3_3__un0_n</A> & <A href=#126>dynamicshow_out_1__n</A>
+    # !dynamicshow_mux_dataout_3_0__un1_n
+       & !dynamicshow_mux_dataout_3_0__un0_n & !<A href=#121>dynamicshow_out_2__n</A>
+       & dynamicshow_out_1__n
+    # !dynamicshow_mux_dataout_3_3__un1_n & dynamicshow_out_2__n
+       & !dynamicshow_mux_dataout_3_3__un0_n & !dynamicshow_out_1__n
+    # !dynamicshow_mux_dataout_3_3__un1_n & !dynamicshow_out_2__n
+       & !dynamicshow_mux_dataout_3_3__un0_n & dynamicshow_out_1__n
+    # !dynamicshow_out_2__n & dynamicshow_mux_dataout_3_3__un0_n
+       & !dynamicshow_out_1__n
+    # dynamicshow_mux_dataout_3_3__un1_n & !dynamicshow_out_2__n
+       & !dynamicshow_out_1__n ) ; (6 pterms, 6 signals)
+
+<A name=23>show_1_</A> = !( !<A href=#108>dynamicshow_mux_dataout_3_0__un1_n</A>
+       & !<A href=#110>dynamicshow_mux_dataout_3_0__un0_n</A> & !<A href=#121>dynamicshow_out_2__n</A>
+       & !<A href=#126>dynamicshow_out_1__n</A>
+    # !dynamicshow_mux_dataout_3_0__un1_n
+       & !dynamicshow_mux_dataout_3_0__un0_n
+       & !<A href=#119>dynamicshow_mux_dataout_3_3__un1_n</A> & dynamicshow_out_2__n
+       & !<A href=#122>dynamicshow_mux_dataout_3_3__un0_n</A>
+    # !dynamicshow_mux_dataout_3_3__un1_n & dynamicshow_out_2__n
+       & !dynamicshow_mux_dataout_3_3__un0_n & !dynamicshow_out_1__n
+    # !dynamicshow_out_2__n & dynamicshow_mux_dataout_3_3__un0_n
+       & !dynamicshow_out_1__n
+    # dynamicshow_mux_dataout_3_3__un1_n & !dynamicshow_out_2__n
+       & !dynamicshow_out_1__n ) ; (5 pterms, 6 signals)
+
+<A name=22>show_2_</A> = !( !<A href=#108>dynamicshow_mux_dataout_3_0__un1_n</A>
+       & !<A href=#110>dynamicshow_mux_dataout_3_0__un0_n</A>
+       & !<A href=#119>dynamicshow_mux_dataout_3_3__un1_n</A>
+       & !<A href=#122>dynamicshow_mux_dataout_3_3__un0_n</A> & <A href=#126>dynamicshow_out_1__n</A>
+    # !dynamicshow_mux_dataout_3_0__un1_n
+       & !dynamicshow_mux_dataout_3_0__un0_n & !<A href=#121>dynamicshow_out_2__n</A>
+       & !dynamicshow_out_1__n ) ; (2 pterms, 6 signals)
+
+<A name=20>show_3_.X1</A> = <A href=#119>dynamicshow_mux_dataout_3_3__un1_n</A>
+    # <A href=#122>dynamicshow_mux_dataout_3_3__un0_n</A>
+    # !<A href=#108>dynamicshow_mux_dataout_3_0__un1_n</A>
+       & !<A href=#110>dynamicshow_mux_dataout_3_0__un0_n</A> & !<A href=#126>dynamicshow_out_1__n</A>
+    # dynamicshow_mux_dataout_3_0__un1_n & <A href=#121>dynamicshow_out_2__n</A>
+       & dynamicshow_out_1__n
+    # dynamicshow_mux_dataout_3_0__un0_n & dynamicshow_out_2__n
+       & dynamicshow_out_1__n ; (5 pterms, 6 signals)
+show_3_.X2 = !<A href=#121>dynamicshow_out_2__n</A> & !<A href=#126>dynamicshow_out_1__n</A> ; (1 pterm, 2 signals)
+
+<A name=18>show_4_</A> = !( !<A href=#119>dynamicshow_mux_dataout_3_3__un1_n</A> & <A href=#121>dynamicshow_out_2__n</A>
+       & !<A href=#122>dynamicshow_mux_dataout_3_3__un0_n</A>
+    # <A href=#110>dynamicshow_mux_dataout_3_0__un0_n</A> & !dynamicshow_mux_dataout_3_3__un1_n
+       & !dynamicshow_mux_dataout_3_3__un0_n
+    # <A href=#108>dynamicshow_mux_dataout_3_0__un1_n</A> & !dynamicshow_mux_dataout_3_3__un1_n
+       & !dynamicshow_mux_dataout_3_3__un0_n
+    # !dynamicshow_out_2__n & !<A href=#126>dynamicshow_out_1__n</A> ) ; (4 pterms, 6 signals)
+
+<A name=16>show_5_</A> = !( !<A href=#108>dynamicshow_mux_dataout_3_0__un1_n</A>
+       & !<A href=#110>dynamicshow_mux_dataout_3_0__un0_n</A>
+       & !<A href=#119>dynamicshow_mux_dataout_3_3__un1_n</A>
+       & !<A href=#122>dynamicshow_mux_dataout_3_3__un0_n</A> & !<A href=#126>dynamicshow_out_1__n</A>
+    # dynamicshow_mux_dataout_3_0__un0_n & !dynamicshow_mux_dataout_3_3__un1_n
+       & !dynamicshow_mux_dataout_3_3__un0_n & dynamicshow_out_1__n
+    # dynamicshow_mux_dataout_3_0__un1_n & !dynamicshow_mux_dataout_3_3__un1_n
+       & !dynamicshow_mux_dataout_3_3__un0_n & dynamicshow_out_1__n
+    # !dynamicshow_mux_dataout_3_3__un1_n & !<A href=#121>dynamicshow_out_2__n</A>
+       & !dynamicshow_mux_dataout_3_3__un0_n
+    # !dynamicshow_out_2__n & !dynamicshow_out_1__n ) ; (5 pterms, 6 signals)
+
+<A name=11>show_6_.X1</A> = <A href=#119>dynamicshow_mux_dataout_3_3__un1_n</A>
+    # <A href=#122>dynamicshow_mux_dataout_3_3__un0_n</A>
+    # !<A href=#108>dynamicshow_mux_dataout_3_0__un1_n</A>
+       & !<A href=#110>dynamicshow_mux_dataout_3_0__un0_n</A> & !<A href=#126>dynamicshow_out_1__n</A> ; (3 pterms, 5 signals)
+show_6_.X2 = !<A href=#121>dynamicshow_out_2__n</A> & !<A href=#126>dynamicshow_out_1__n</A> ; (1 pterm, 2 signals)
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+
+

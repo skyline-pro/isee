@@ -1,0 +1,179 @@
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
+Fri May 13 09:16:56 2022
+
+
+Command Line:  D:\ispLEVER_Classic2_1\lse/bin/nt/synthesis -f lcd1602.synproj 
+
+Synthesis options:
+The -a option is ispMACH400ZE.
+The -t option is not used.
+The -d option is LC4256V.
+Using default performance grade 6.
+                                                          
+
+##########################################################
+
+### Lattice Family : ispMACH400ZE
+
+### Device  : LC4256V
+
+### Package : 
+
+##########################################################
+
+                                                          
+
+Optimization goal = Area
+Top-level module name = lcd1602.
+WARNING - synthesis: Ignoring Frequency option in Area Mode. Setting to default frequency of 1.0 MHz.
+WARNING - synthesis: Ignoring SDC constraints in Area Mode!
+Target frequency = 1.000000 MHz.
+Timing path count = 3
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+Use IO Insertion = TRUE
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+Output EDIF file name = lcd1602.edi.
+WARNING - synthesis: Option -force_gsr will be set to false when option -output_edif/-ngo are set
+The -comp option is FALSE.
+The -syn option is FALSE.
+Verilog design file = lab13.h
+Verilog design file = lcd1602.v
+-sdc option: SDC file input not used.
+-lpf option: Output file option is not used.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file D:/ispLEVER_Classic2_1/lse/userware/NT/SYNTHESIS_HEADERS/mach.v. VERI-1482
+Compile design.
+Compile Design Begin
+Analyzing Verilog file lab13.h. VERI-1482
+Analyzing Verilog file lcd1602.v. VERI-1482
+WARNING - synthesis: lcd1602.v(50): redeclaration of ansi port lcdD is not allowed. VERI-1372
+Analyzing Verilog file D:/ispLEVER_Classic2_1/lse/userware/NT/SYNTHESIS_HEADERS/mach.v. VERI-1482
+Top module name (Verilog): lcd1602
+INFO - synthesis: lcd1602.v(1): compiling module lcd1602. VERI-1018
+WARNING - synthesis: lcd1602.v(43): expression size 32 truncated to fit in target size 20. VERI-1209
+Loading NGL library 'D:/ispLEVER_Classic2_1/lse/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'D:/ispLEVER_Classic2_1/lse/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'xo2c640.nph' in environment: D:/ispLEVER_Classic2_1/lse.
+Package Status:                     Final          Version 1.36.
+Top-level module name = lcd1602.
+WARNING - synthesis: lcd1602.v(139): Register lcdRw_54 is stuck at Zero. VDB-5013
+INFO - synthesis: Extracted state machine for register 'state' with one-hot encoding
+State machine has 7 reachable states with original encodings of:
+
+ 00000001 
+
+ 00000010 
+
+ 00000100 
+
+ 00001000 
+
+ 00010000 
+
+ 01000000 
+
+ 10000000 
+
+original encoding -> new encoding (one-hot encoding)
+
+ 00000001 -> 0000001
+
+ 00000010 -> 0000010
+
+ 00000100 -> 0000100
+
+ 00001000 -> 0001000
+
+ 00010000 -> 0010000
+
+ 01000000 -> 0100000
+
+ 10000000 -> 1000000
+
+
+
+
+WARNING - synthesis: Bit 5 of Register state_FSM is stuck at Zero
+Applying 1.000000 MHz constraint to all clocks
+
+WARNING - synthesis: No .lpf file will be written because the -lpf option is not used or is set to zero.
+Results of NGD DRC are available in lcd1602_drc.log.
+
+################### Begin Area Report (lcd1602)######################
+Number of register bits => 229 of 880 (26 % )
+AND2 => 783
+AND3 => 6
+AND4 => 1
+AND6 => 1
+DFF => 21
+DFFC => 186
+DFFCR => 13
+DFFCS => 1
+DFFR => 7
+DFFS => 1
+GND => 1
+IBUF => 2
+INV => 19
+OBUF => 11
+OR2 => 326
+OR3 => 62
+OR4 => 2
+VCC => 1
+XOR2 => 27
+################### End Area Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 2
+  Net : ledEN_c, loads : 210
+  Net : clk_50m_c, loads : 21
+Clock Enable Nets
+Number of Clock Enables: 0
+Top 0 highest fanout Clock Enables:
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : state_7, loads : 186
+  Net : n3805, loads : 186
+  Net : state_6, loads : 183
+  Net : lcdRs_N_618, loads : 181
+  Net : lcdRs_N_619, loads : 180
+  Net : state_0, loads : 68
+  Net : reset_c, loads : 23
+  Net : n2185, loads : 14
+  Net : n3806, loads : 8
+  Net : n5720, loads : 8
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 1000.000000 -name  |             |             |
+clk1 [get_nets clk_50m_c]               |            -|            -|     0  
+                                        |             |             |
+create_clock -period 1000.000000 -name  |             |             |
+clk0 [get_nets ledEN_c]                 |            -|            -|     0  
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Peak Memory Usage: 42.797  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 1.016  secs
+--------------------------------------------------------------

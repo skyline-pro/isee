@@ -1,0 +1,1654 @@
+|--------------------------------------------------- ----------|
+|- ispLEVER Classic 2.1.00.02.49.20 Equations File            -|
+|- Copyright(C), 1992-2012, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+Equations:
+
+LEDVCC_0_ = !dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q ; (1 pterm, 2 signals)
+
+LEDVCC_1_ = dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q ; (1 pterm, 2 signals)
+
+LEDVCC_2_ = !dynamicshow_counter4_q_1_.Q & dynamicshow_counter4_q_2_.Q ; (1 pterm, 2 signals)
+
+LEDVCC_3_ = dynamicshow_counter4_q_1_.Q & dynamicshow_counter4_q_2_.Q ; (1 pterm, 2 signals)
+
+button0_d1_q_0_.D = reset ; (1 pterm, 1 signal)
+button0_d1_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button0_d2_q_0_.D = button0_d1_q_0_.Q ; (1 pterm, 1 signal)
+button0_d2_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button0_d3_q_0_.D = button0_d2_q_0_.Q ; (1 pterm, 1 signal)
+button0_d3_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button1_d1_q_0_.D = keyIn_0_ ; (1 pterm, 1 signal)
+button1_d1_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button1_d2_q_0_.D = button1_d1_q_0_.Q ; (1 pterm, 1 signal)
+button1_d2_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button1_d3_q_0_.D = button1_d2_q_0_.Q ; (1 pterm, 1 signal)
+button1_d3_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button2_d1_q_0_.D = keyIn_1_ ; (1 pterm, 1 signal)
+button2_d1_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button2_d2_q_0_.D = button2_d1_q_0_.Q ; (1 pterm, 1 signal)
+button2_d2_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button2_d3_q_0_.D = button2_d2_q_0_.Q ; (1 pterm, 1 signal)
+button2_d3_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button3_d1_q_0_.D = keyIn_2_ ; (1 pterm, 1 signal)
+button3_d1_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button3_d2_q_0_.D = button3_d1_q_0_.Q ; (1 pterm, 1 signal)
+button3_d2_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button3_d3_q_0_.D = button3_d2_q_0_.Q ; (1 pterm, 1 signal)
+button3_d3_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button4_d1_q_0_.D = keyIn_3_ ; (1 pterm, 1 signal)
+button4_d1_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button4_d2_q_0_.D = button4_d1_q_0_.Q ; (1 pterm, 1 signal)
+button4_d2_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+button4_d3_q_0_.D = button4_d2_q_0_.Q ; (1 pterm, 1 signal)
+button4_d3_q_0_.C = clkl ; (1 pterm, 1 signal)
+
+calculate_G_340.X1 = !data1_3__n & calculate_un85_1_0_n
+       & !calculate_int_Data_3_.Q & !calculate_un86_i_n & calculate_un82_i_n
+    # !data1_3__n & !calculate_int_Data_3_.Q & !calculate_un86_i_n
+       & !calculate_un84_i_n & calculate_un82_i_n
+    # !data1_3__n & calculate_un85_1_0_n & !calculate_int_Data_3_.Q
+       & !calculate_un86_i_n & calculate_un81_n
+    # !data1_3__n & !calculate_int_Data_3_.Q & !calculate_un86_i_n
+       & !calculate_un84_i_n & calculate_un81_n
+    # data1_3__n & calculate_int_Data_3_.Q
+    # calculate_int_Data_3_.Q & calculate_un86_i_n
+    # !calculate_un85_1_0_n & calculate_int_Data_3_.Q & calculate_un84_i_n
+    # calculate_int_Data_3_.Q & !calculate_un82_i_n & !calculate_un81_n ; (8 pterms, 7 signals)
+calculate_G_340.X2 = !calculate_n_429_0_n ; (1 pterm, 1 signal)
+
+calculate_G_363_0_a3_1.X1 = calculate_flag_Cal_0_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data0_1_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data0_1_.Q
+    # !calculate_int_Data1_0_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_led_int_data2_0_sqmuxa_n & !calculate_n_1010_i_n
+    # !calculate_int_Data1_0_.Q & !calculate_int_Data1_1_.Q
+       & calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_led_int_data2_0_sqmuxa_n & calculate_n_1010_i_n
+    # calculate_int_Data1_0_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+       & calculate_led_int_data2_0_sqmuxa_n & !calculate_n_1010_i_n
+    # calculate_int_Data1_0_.Q & !calculate_int_Data1_1_.Q
+       & calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+       & calculate_led_int_data2_0_sqmuxa_n & calculate_n_1010_i_n
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_led_int_data2_0_sqmuxa_n
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_n_1010_i_n
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_1_.Q
+       & calculate_int_Data0_0_.Q & calculate_n_1010_i_n
+    # !calculate_flag_Cal_1_.Q & calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q & calculate_led_int_data2_0_sqmuxa_n
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_1_.Q & calculate_int_Data1_3_.Q
+       & calculate_int_Data0_1_.Q & !calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_1_.Q & calculate_int_Data1_2_.Q
+       & calculate_int_Data1_3_.Q & calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_1_.Q & calculate_int_Data1_2_.Q
+       & calculate_int_Data0_1_.Q & !calculate_int_Data0_2_.Q
+       & !calculate_int_Data0_3_.Q
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data0_0_.Q
+       & !calculate_led_int_data2_0_sqmuxa_n & !calculate_n_1010_i_n
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q & calculate_int_Data0_0_.Q
+       & !calculate_led_int_data2_0_sqmuxa_n & calculate_n_1010_i_n
+    # calculate_flag_Cal_0_.Q & calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data0_0_.Q
+       & calculate_led_int_data2_0_sqmuxa_n & !calculate_n_1010_i_n
+    # calculate_flag_Cal_0_.Q & calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q & calculate_int_Data0_0_.Q
+       & calculate_led_int_data2_0_sqmuxa_n & calculate_n_1010_i_n
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data0_1_.Q & !calculate_led_int_data2_0_sqmuxa_n
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_1_.Q & !calculate_n_1010_i_n
+    # !calculate_flag_Cal_1_.Q & calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_1_.Q & calculate_n_1010_i_n
+    # !calculate_flag_Cal_1_.Q & calculate_int_Data1_0_.Q
+       & !calculate_int_Data0_1_.Q & calculate_led_int_data2_0_sqmuxa_n
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_1_.Q & !calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_1_.Q & calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data1_3_.Q & !calculate_int_Data0_1_.Q
+       & calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_1_.Q & calculate_int_Data0_2_.Q
+       & calculate_int_Data0_3_.Q
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_led_int_data2_0_sqmuxa_n & !calculate_n_1010_i_n
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_led_int_data2_0_sqmuxa_n & calculate_n_1010_i_n
+    # calculate_flag_Cal_0_.Q & calculate_int_Data1_0_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+       & calculate_led_int_data2_0_sqmuxa_n & !calculate_n_1010_i_n
+    # calculate_flag_Cal_0_.Q & calculate_int_Data1_0_.Q
+       & calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+       & calculate_led_int_data2_0_sqmuxa_n & calculate_n_1010_i_n
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & !calculate_int_Data0_0_.Q & calculate_int_Data0_1_.Q
+       & !calculate_led_int_data2_0_sqmuxa_n & !calculate_n_1010_i_n
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & calculate_int_Data0_0_.Q & calculate_int_Data0_1_.Q
+       & !calculate_led_int_data2_0_sqmuxa_n & calculate_n_1010_i_n
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & !calculate_int_Data0_0_.Q & calculate_int_Data0_1_.Q
+       & calculate_led_int_data2_0_sqmuxa_n & !calculate_n_1010_i_n
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & calculate_int_Data0_0_.Q & calculate_int_Data0_1_.Q
+       & calculate_led_int_data2_0_sqmuxa_n & calculate_n_1010_i_n ; (32 pterms, 12 signals)
+calculate_G_363_0_a3_1.X2 = !calculate_n_29_0_n ; (1 pterm, 1 signal)
+
+calculate_combvalue_0_.D = keyOut_0_.Q ; (1 pterm, 1 signal)
+calculate_combvalue_0_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_combvalue_0_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_combvalue_1_.D = keyOut_1_.Q ; (1 pterm, 1 signal)
+calculate_combvalue_1_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_combvalue_1_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_combvalue_2_.D = keyOut_2_.Q ; (1 pterm, 1 signal)
+calculate_combvalue_2_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_combvalue_2_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_combvalue_3_.D = keyOut_3_.Q ; (1 pterm, 1 signal)
+calculate_combvalue_3_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_combvalue_3_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_combvalue_4_.D = !( !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q ) ; (1 pterm, 3 signals)
+calculate_combvalue_4_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_combvalue_4_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_combvalue_5_.D = !( !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q ) ; (1 pterm, 3 signals)
+calculate_combvalue_5_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_combvalue_5_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_combvalue_6_.D = !( !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q ) ; (1 pterm, 3 signals)
+calculate_combvalue_6_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_combvalue_6_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_combvalue_7_.D = !( !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q ) ; (1 pterm, 3 signals)
+calculate_combvalue_7_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_combvalue_7_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_flag_Cal_0_.D = !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q
+    # !keyinbutton_i_1__n ; (2 pterms, 4 signals)
+calculate_flag_Cal_0_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_flag_Cal_0_.CE = calculate_flag_Cal_0__0 ; (1 pterm, 1 signal)
+calculate_flag_Cal_0_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_flag_Cal_0__0 = keyOut_3_.Q & !button1_d1_q_0_.Q
+       & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q & keyinbutton_i_1__n
+       & keyinbutton_i_2__n & !keyinbutton_i_3__n
+    # keyOut_0_.Q & keyOut_3_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & !keyinbutton_i_1__n & keyinbutton_i_2__n
+       & keyinbutton_i_3__n
+    # keyOut_0_.Q & keyOut_3_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & keyinbutton_i_1__n & !keyinbutton_i_2__n
+       & keyinbutton_i_3__n
+    # keyOut_3_.Q & keyOut_1_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & !keyinbutton_i_1__n & keyinbutton_i_2__n
+       & keyinbutton_i_3__n
+    # keyOut_3_.Q & keyOut_2_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & !keyinbutton_i_1__n & keyinbutton_i_2__n
+       & keyinbutton_i_3__n
+    # keyOut_3_.Q & keyOut_1_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & keyinbutton_i_1__n & !keyinbutton_i_2__n
+       & keyinbutton_i_3__n
+    # keyOut_3_.Q & keyOut_2_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & keyinbutton_i_1__n & !keyinbutton_i_2__n
+       & keyinbutton_i_3__n
+    # keyOut_0_.Q & keyOut_1_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & keyinbutton_i_1__n & keyinbutton_i_2__n
+       & !keyinbutton_i_3__n
+    # keyOut_0_.Q & keyOut_2_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & keyinbutton_i_1__n & keyinbutton_i_2__n
+       & !keyinbutton_i_3__n
+    # keyOut_3_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & calculate_flag_Data_0_.Q
+       & !calculate_flag_Data_1_.Q & !keyinbutton_i_1__n & keyinbutton_i_2__n
+       & keyinbutton_i_3__n
+    # keyOut_3_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & calculate_flag_Data_0_.Q
+       & !calculate_flag_Data_1_.Q & keyinbutton_i_1__n & !keyinbutton_i_2__n
+       & keyinbutton_i_3__n
+    # keyOut_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & calculate_flag_Data_0_.Q
+       & !calculate_flag_Data_1_.Q & keyinbutton_i_1__n & keyinbutton_i_2__n
+       & !keyinbutton_i_3__n ; (12 pterms, 12 signals)
+
+calculate_flag_Cal_1_.D = !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q
+       & !keyinbutton_i_2__n
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & keyinbutton_i_2__n ; (2 pterms, 5 signals)
+calculate_flag_Cal_1_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_flag_Cal_1_.CE = calculate_flag_Cal_0__0 ; (1 pterm, 1 signal)
+calculate_flag_Cal_1_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_flag_Data_0_.T = !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_2_.Q
+       & !calculate_n_116_n & !calculate_flag_Data_0_.Q & keyinbutton_i_0__n
+       & keyinbutton_i_1__n & !keyinbutton_i_2__n & keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_2_.Q & !calculate_n_116_n
+       & !calculate_flag_Data_0_.Q & keyinbutton_i_0__n & !keyinbutton_i_1__n
+       & keyinbutton_i_2__n & keyinbutton_i_3__n
+    # !keyOut_1_.Q & calculate_flag_Data_0_.Q & !calculate_flag_Data_1_.Q
+       & keyinbutton_i_0__n & keyinbutton_i_1__n & keyinbutton_i_2__n
+       & !keyinbutton_i_3__n
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !calculate_n_116_n
+       & !calculate_flag_Data_0_.Q & keyinbutton_i_0__n & keyinbutton_i_1__n
+       & !keyinbutton_i_2__n & keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_1_.Q & !calculate_n_116_n
+       & !calculate_flag_Data_0_.Q & keyinbutton_i_0__n & keyinbutton_i_1__n
+       & !keyinbutton_i_2__n & keyinbutton_i_3__n
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !calculate_n_116_n
+       & !calculate_flag_Data_0_.Q & keyinbutton_i_0__n & !keyinbutton_i_1__n
+       & keyinbutton_i_2__n & keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_1_.Q & !calculate_n_116_n
+       & !calculate_flag_Data_0_.Q & keyinbutton_i_0__n & !keyinbutton_i_1__n
+       & keyinbutton_i_2__n & keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !calculate_n_116_n
+       & !calculate_flag_Data_0_.Q & !keyinbutton_i_0__n & keyinbutton_i_1__n
+       & keyinbutton_i_2__n & keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_2_.Q & !calculate_n_116_n
+       & !calculate_flag_Data_0_.Q & !keyinbutton_i_0__n & keyinbutton_i_1__n
+       & keyinbutton_i_2__n & keyinbutton_i_3__n
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !calculate_n_116_n
+       & !calculate_flag_Data_0_.Q & !keyinbutton_i_0__n & keyinbutton_i_1__n
+       & keyinbutton_i_2__n & keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_1_.Q & !calculate_n_116_n
+       & !calculate_flag_Data_0_.Q & !keyinbutton_i_0__n & keyinbutton_i_1__n
+       & keyinbutton_i_2__n & keyinbutton_i_3__n
+    # keyOut_3_.Q & calculate_flag_Data_0_.Q & keyinbutton_i_0__n
+       & keyinbutton_i_1__n & keyinbutton_i_2__n & !keyinbutton_i_3__n
+    # keyOut_2_.Q & calculate_flag_Data_0_.Q & keyinbutton_i_0__n
+       & keyinbutton_i_1__n & keyinbutton_i_2__n & !keyinbutton_i_3__n
+    # calculate_n_116_n & calculate_flag_Data_0_.Q ; (14 pterms, 11 signals)
+calculate_flag_Data_0_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_flag_Data_0_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_flag_Data_1_.T = !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q
+       & calculate_flag_Data_0_.Q & !calculate_flag_Data_1_.Q
+       & keyinbutton_i_0__n & keyinbutton_i_1__n & !keyinbutton_i_2__n
+       & keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & calculate_flag_Data_0_.Q
+       & !calculate_flag_Data_1_.Q & keyinbutton_i_0__n & !keyinbutton_i_1__n
+       & keyinbutton_i_2__n & keyinbutton_i_3__n
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & calculate_flag_Data_0_.Q
+       & !calculate_flag_Data_1_.Q & keyinbutton_i_0__n & keyinbutton_i_1__n
+       & keyinbutton_i_2__n & !keyinbutton_i_3__n
+    # keyOut_3_.Q & calculate_flag_Data_1_.Q & keyinbutton_i_0__n
+       & keyinbutton_i_1__n & keyinbutton_i_2__n & !keyinbutton_i_3__n
+    # keyOut_2_.Q & calculate_flag_Data_1_.Q & keyinbutton_i_0__n
+       & keyinbutton_i_1__n & keyinbutton_i_2__n & !keyinbutton_i_3__n ; (5 pterms, 10 signals)
+calculate_flag_Data_1_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_flag_Data_1_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_int_Data0_0_.D = !keyOut_0_.Q & !keyOut_2_.Q & !keyinbutton_i_1__n
+    # keyOut_0_.Q & keyinbutton_i_1__n
+    # keyOut_2_.Q & keyinbutton_i_1__n & keyinbutton_i_3__n ; (3 pterms, 4 signals)
+calculate_int_Data0_0_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_int_Data0_0_.CE = calculate_int_Data0_0__0 ; (1 pterm, 1 signal)
+calculate_int_Data0_0_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_int_Data0_0__0 = !calculate_flag_Data_0_.Q
+       & !calculate_flag_Data_1_.Q & !calculate_n_1008_0_n
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_1_.Q & keyinbutton_i_0__n
+       & keyinbutton_i_1__n & keyinbutton_i_2__n & !keyinbutton_i_3__n ; (2 pterms, 10 signals)
+
+calculate_int_Data0_1_.D = keyOut_2_.Q & keyinbutton_i_1__n
+       & keyinbutton_i_2__n & keyinbutton_i_3__n
+    # !keyOut_2_.Q & keyinbutton_i_1__n & !keyinbutton_i_2__n
+    # keyOut_0_.Q & !keyinbutton_i_1__n ; (3 pterms, 5 signals)
+calculate_int_Data0_1_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_int_Data0_1_.CE = calculate_int_Data0_0__0 ; (1 pterm, 1 signal)
+calculate_int_Data0_1_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_int_Data0_2_.D = !keyOut_2_.Q & keyOut_1_.Q
+    # keyOut_2_.Q & !keyinbutton_i_0__n ; (2 pterms, 3 signals)
+calculate_int_Data0_2_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_int_Data0_2_.CE = calculate_int_Data0_0__0 ; (1 pterm, 1 signal)
+calculate_int_Data0_2_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_int_Data0_3_.D = !keyOut_0_.Q & !keyOut_1_.Q & !keyinbutton_i_1__n
+    # !keyOut_0_.Q & !keyOut_1_.Q & !keyinbutton_i_2__n ; (2 pterms, 4 signals)
+calculate_int_Data0_3_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_int_Data0_3_.CE = calculate_int_Data0_0__0 ; (1 pterm, 1 signal)
+calculate_int_Data0_3_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_int_Data1_0_.D = !keyOut_0_.Q & !keyOut_2_.Q & !keyinbutton_i_1__n
+    # keyOut_0_.Q & keyinbutton_i_1__n
+    # keyOut_2_.Q & keyinbutton_i_1__n & keyinbutton_i_3__n ; (3 pterms, 4 signals)
+calculate_int_Data1_0_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_int_Data1_0_.CE = calculate_int_Data1_0__0 ; (1 pterm, 1 signal)
+calculate_int_Data1_0_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_int_Data1_0__0 = !calculate_flag_Data_0_.Q
+       & calculate_flag_Data_1_.Q & !calculate_n_1008_0_n
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_1_.Q & keyinbutton_i_0__n
+       & keyinbutton_i_1__n & keyinbutton_i_2__n & !keyinbutton_i_3__n ; (2 pterms, 10 signals)
+
+calculate_int_Data1_1_.D = keyOut_2_.Q & keyinbutton_i_1__n
+       & keyinbutton_i_2__n & keyinbutton_i_3__n
+    # !keyOut_2_.Q & keyinbutton_i_1__n & !keyinbutton_i_2__n
+    # keyOut_0_.Q & !keyinbutton_i_1__n ; (3 pterms, 5 signals)
+calculate_int_Data1_1_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_int_Data1_1_.CE = calculate_int_Data1_0__0 ; (1 pterm, 1 signal)
+calculate_int_Data1_1_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_int_Data1_2_.D = !keyOut_2_.Q & keyOut_1_.Q
+    # keyOut_2_.Q & !keyinbutton_i_0__n ; (2 pterms, 3 signals)
+calculate_int_Data1_2_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_int_Data1_2_.CE = calculate_int_Data1_0__0 ; (1 pterm, 1 signal)
+calculate_int_Data1_2_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_int_Data1_3_.D = !keyOut_0_.Q & !keyOut_1_.Q & !keyinbutton_i_1__n
+    # !keyOut_0_.Q & !keyOut_1_.Q & !keyinbutton_i_2__n ; (2 pterms, 4 signals)
+calculate_int_Data1_3_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_int_Data1_3_.CE = calculate_int_Data1_0__0 ; (1 pterm, 1 signal)
+calculate_int_Data1_3_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_int_Data_0_.D.X1 = !keyOut_3_.Q & !keyOut_1_.Q
+       & !calculate_un1_led_int_data2278_n & !keyinbutton_i_0__n
+    # !keyOut_1_.Q & !calculate_un1_led_int_data2278_n & keyinbutton_i_0__n
+       & !keyinbutton_i_2__n
+    # keyOut_3_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_int_Data1_0_.Q & calculate_int_Data0_0_.Q
+       & keyinbutton_i_0__n
+    # keyOut_1_.Q & !calculate_un1_led_int_data2278_n & keyinbutton_i_0__n
+       & keyinbutton_i_2__n
+    # calculate_un1_led_int_data2278_n & !calculate_flag_Cal_1_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_n_29_0_n
+    # calculate_un1_led_int_data2278_n & !calculate_flag_Cal_1_.Q
+       & calculate_int_Data0_0_.Q & calculate_n_29_0_n
+    # calculate_un1_led_int_data2278_n & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data0_0_.Q & calculate_n_29_0_n
+    # calculate_un1_led_int_data2278_n & calculate_flag_Cal_1_.Q
+       & calculate_int_Data0_0_.Q & !calculate_n_29_0_n ; (8 pterms, 9 signals)
+calculate_int_Data_0_.D.X2 = calculate_un1_led_int_data2278_n
+       & !calculate_int_Data1_0_.Q ; (1 pterm, 2 signals)
+calculate_int_Data_0_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_int_Data_0_.CE = calculate_int_Data_0__0 ; (1 pterm, 1 signal)
+calculate_int_Data_0_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_int_Data_0__0 = !calculate_flag_Data_0_.Q & !calculate_n_1008_0_n
+    # !keyOut_0_.Q & !keyOut_3_.Q & keyOut_2_.Q & !keyOut_1_.Q
+       & keyinbutton_i_0__n & keyinbutton_i_1__n & keyinbutton_i_2__n
+       & !keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & calculate_flag_Cal_0_.Q
+       & !calculate_flag_Cal_1_.Q & keyinbutton_i_0__n & keyinbutton_i_1__n
+       & keyinbutton_i_2__n & !keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !calculate_flag_Cal_0_.Q
+       & keyinbutton_i_0__n & keyinbutton_i_1__n & keyinbutton_i_2__n
+       & calculate_n_29_0_n & !keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & calculate_flag_Cal_0_.Q
+       & !calculate_int_Data1_3_.Q & !calculate_int_Data0_3_.Q
+       & keyinbutton_i_0__n & keyinbutton_i_1__n & keyinbutton_i_2__n
+       & !keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & calculate_flag_Cal_0_.Q
+       & !calculate_int_Data1_3_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_2_.Q & keyinbutton_i_0__n & keyinbutton_i_1__n
+       & keyinbutton_i_2__n & !keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & calculate_flag_Cal_0_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_3_.Q & keyinbutton_i_0__n & keyinbutton_i_1__n
+       & keyinbutton_i_2__n & !keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & calculate_flag_Cal_0_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_1_.Q & !calculate_int_Data0_2_.Q
+       & keyinbutton_i_0__n & keyinbutton_i_1__n & keyinbutton_i_2__n
+       & !keyinbutton_i_3__n ; (8 pterms, 19 signals)
+
+calculate_int_Data_1_.D = keyOut_3_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_int_Data1_0_.Q & !calculate_int_Data0_0_.Q
+       & calculate_int_Data0_1_.Q & keyinbutton_i_0__n
+    # keyOut_3_.Q & !calculate_un1_led_int_data2278_n
+       & !calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & calculate_int_Data0_0_.Q & keyinbutton_i_0__n
+    # keyOut_3_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_int_Data1_1_.Q & calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_1_.Q & keyinbutton_i_0__n
+    # keyOut_3_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_int_Data1_0_.Q & !calculate_int_Data1_1_.Q
+       & calculate_int_Data0_1_.Q & keyinbutton_i_0__n
+    # !keyOut_2_.Q & !keyOut_1_.Q & !calculate_un1_led_int_data2278_n
+       & keyinbutton_i_0__n & !keyinbutton_i_1__n
+    # calculate_un1_led_int_data2278_n & !calculate_n_457_0_n
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_n_29_0_n
+    # calculate_un1_led_int_data2278_n & calculate_n_457_0_n
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data0_1_.Q
+       & calculate_n_29_0_n
+    # calculate_un1_led_int_data2278_n & calculate_n_457_0_n
+       & calculate_int_Data1_1_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_n_29_0_n
+    # calculate_un1_led_int_data2278_n & calculate_n_457_0_n
+       & !calculate_int_Data1_1_.Q & calculate_int_Data0_1_.Q
+       & !calculate_n_29_0_n
+    # calculate_un1_led_int_data2278_n & !calculate_n_457_0_n
+       & calculate_int_Data1_1_.Q & !calculate_int_Data0_1_.Q
+       & calculate_n_29_0_n
+    # calculate_un1_led_int_data2278_n & !calculate_n_457_0_n
+       & !calculate_int_Data1_1_.Q & calculate_int_Data0_1_.Q
+       & calculate_n_29_0_n
+    # calculate_un1_led_int_data2278_n & !calculate_n_457_0_n
+       & calculate_int_Data1_1_.Q & calculate_int_Data0_1_.Q
+       & !calculate_n_29_0_n
+    # calculate_un1_led_int_data2278_n & calculate_n_457_0_n
+       & calculate_int_Data1_1_.Q & calculate_int_Data0_1_.Q
+       & calculate_n_29_0_n
+    # !keyOut_2_.Q & !calculate_un1_led_int_data2278_n & keyinbutton_i_0__n
+       & !keyinbutton_i_2__n
+    # keyOut_2_.Q & !calculate_un1_led_int_data2278_n & !keyinbutton_i_0__n ; (15 pterms, 13 signals)
+calculate_int_Data_1_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_int_Data_1_.CE = calculate_int_Data_0__0 ; (1 pterm, 1 signal)
+calculate_int_Data_1_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_int_Data_2_.D.X1 = keyOut_1_.Q & !calculate_un1_led_int_data2278_n
+    # calculate_un1_led_int_data2278_n & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_2_.Q & calculate_G_363_0_a3_1
+    # calculate_un1_led_int_data2278_n & calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_2_.Q & !calculate_G_363_0_a3_1
+    # calculate_un1_led_int_data2278_n & calculate_int_Data1_2_.Q
+       & calculate_int_Data0_2_.Q & calculate_G_363_0_a3_1
+    # calculate_un1_led_int_data2278_n & !calculate_int_Data1_2_.Q
+       & calculate_int_Data0_2_.Q & !calculate_G_363_0_a3_1
+    # keyOut_2_.Q & !keyOut_1_.Q & !calculate_un1_led_int_data2278_n
+       & !keyinbutton_i_0__n
+    # keyOut_3_.Q & !keyOut_1_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_int_Data1_1_.Q & !calculate_int_Data0_0_.Q
+       & calculate_int_Data0_1_.Q & keyinbutton_i_0__n
+    # keyOut_3_.Q & !keyOut_1_.Q & !calculate_un1_led_int_data2278_n
+       & !calculate_int_Data1_1_.Q & calculate_int_Data1_2_.Q
+       & calculate_int_Data0_0_.Q & keyinbutton_i_0__n
+    # keyOut_3_.Q & !keyOut_1_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_int_Data1_2_.Q & calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_1_.Q & keyinbutton_i_0__n
+    # keyOut_3_.Q & !keyOut_1_.Q & !calculate_un1_led_int_data2278_n
+       & !calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & !calculate_int_Data1_2_.Q & calculate_int_Data0_1_.Q
+       & keyinbutton_i_0__n
+    # keyOut_3_.Q & !keyOut_1_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & calculate_int_Data1_2_.Q & calculate_int_Data0_1_.Q
+       & keyinbutton_i_0__n ; (11 pterms, 12 signals)
+calculate_int_Data_2_.D.X2 = keyOut_3_.Q & !keyOut_1_.Q
+       & !calculate_un1_led_int_data2278_n & calculate_int_Data1_0_.Q
+       & calculate_int_Data0_2_.Q & keyinbutton_i_0__n ; (1 pterm, 6 signals)
+calculate_int_Data_2_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_int_Data_2_.CE = calculate_int_Data_0__0 ; (1 pterm, 1 signal)
+calculate_int_Data_2_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_int_Data_3_.D.X1 = !calculate_un1_led_int_data2278_n
+       & !calculate_int_data_cnst_0_3__n
+    # calculate_un1_led_int_data2278_n & calculate_int_Data1_3_.Q
+       & calculate_int_Data0_3_.Q & calculate_n_29_0_n
+    # calculate_un1_led_int_data2278_n & !calculate_int_Data1_3_.Q
+       & calculate_int_Data0_3_.Q & !calculate_n_29_0_n
+    # calculate_un1_led_int_data2278_n & !calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_3_.Q & calculate_n_29_0_n
+    # calculate_un1_led_int_data2278_n & calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_3_.Q & !calculate_n_29_0_n ; (5 pterms, 5 signals)
+calculate_int_Data_3_.D.X2 = calculate_un1_led_int_data2278_n
+       & !calculate_n_453_0_n ; (1 pterm, 2 signals)
+calculate_int_Data_3_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_int_Data_3_.CE = calculate_int_Data_0__0 ; (1 pterm, 1 signal)
+calculate_int_Data_3_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_int_Data_4_.D = !keyOut_2_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & !calculate_int_Data1_3_.Q & calculate_int_Data0_0_.Q
+       & calculate_int_Data0_1_.Q & calculate_int_Data0_2_.Q
+       & !calculate_int_Data0_3_.Q & !keyinbutton_i_3__n
+    # !keyOut_2_.Q & calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_0_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data1_2_.Q & calculate_int_Data1_3_.Q
+       & calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_2_.Q & calculate_int_Data0_3_.Q
+       & !keyinbutton_i_3__n
+    # !keyOut_2_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_1_.Q & calculate_int_Data1_2_.Q
+       & !calculate_int_Data1_3_.Q & calculate_int_Data0_0_.Q
+       & calculate_int_Data0_1_.Q & !calculate_int_Data0_2_.Q
+       & !calculate_int_Data0_3_.Q & !keyinbutton_i_3__n
+    # !keyOut_2_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & !calculate_int_Data1_2_.Q & !calculate_int_Data1_3_.Q
+       & calculate_int_Data0_1_.Q & calculate_int_Data0_2_.Q
+       & !calculate_int_Data0_3_.Q & !keyinbutton_i_3__n
+    # !keyOut_2_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & calculate_int_Data1_3_.Q & calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_3_.Q & !keyinbutton_i_3__n
+    # !keyOut_2_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_1_.Q & !calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_1_.Q & !calculate_int_Data0_2_.Q
+       & calculate_int_Data0_3_.Q & !keyinbutton_i_3__n
+    # !keyOut_2_.Q & calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_2_.Q & !calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+       & calculate_int_Data0_2_.Q & !calculate_int_Data0_3_.Q
+       & !keyinbutton_i_3__n
+    # !keyOut_2_.Q & calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_0_.Q & calculate_int_Data1_2_.Q
+       & !calculate_int_Data1_3_.Q & !calculate_int_Data0_1_.Q
+       & calculate_int_Data0_2_.Q & !calculate_int_Data0_3_.Q
+       & !keyinbutton_i_3__n
+    # !keyOut_2_.Q & calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_1_.Q & calculate_int_Data1_2_.Q
+       & !calculate_int_Data1_3_.Q & !calculate_int_Data0_0_.Q
+       & calculate_int_Data0_2_.Q & !calculate_int_Data0_3_.Q
+       & !keyinbutton_i_3__n
+    # !keyOut_2_.Q & calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_0_.Q & !calculate_int_Data1_1_.Q
+       & calculate_int_Data1_2_.Q & !calculate_int_Data1_3_.Q
+       & calculate_int_Data0_2_.Q & !calculate_int_Data0_3_.Q
+       & !keyinbutton_i_3__n
+    # !keyOut_2_.Q & calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_1_.Q & calculate_int_Data1_2_.Q
+       & !calculate_int_Data1_3_.Q & !calculate_int_Data0_1_.Q
+       & calculate_int_Data0_2_.Q & !calculate_int_Data0_3_.Q
+       & !keyinbutton_i_3__n
+    # calculate_un1_led_int_data2278_n & !calculate_n_479_0_n
+       & !calculate_n_29_0_n
+    # calculate_un1_led_int_data2278_n & calculate_n_479_0_n
+       & calculate_n_29_0_n ; (13 pterms, 15 signals)
+calculate_int_Data_4_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_int_Data_4_.CE = calculate_int_Data_0__0 ; (1 pterm, 1 signal)
+calculate_int_Data_4_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_int_Data_5_.D = !keyOut_2_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_0_.Q & calculate_int_Data1_2_.Q
+       & !calculate_int_Data1_3_.Q & calculate_int_Data0_0_.Q
+       & calculate_int_Data0_1_.Q & calculate_int_Data0_2_.Q
+       & !calculate_int_Data0_3_.Q & !keyinbutton_i_3__n
+    # !keyOut_2_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & calculate_int_Data1_2_.Q & !calculate_int_Data1_3_.Q
+       & calculate_int_Data0_0_.Q & calculate_int_Data0_2_.Q
+       & !calculate_int_Data0_3_.Q & !keyinbutton_i_3__n
+    # !keyOut_2_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_1_.Q & calculate_int_Data1_2_.Q
+       & !calculate_int_Data1_3_.Q & calculate_int_Data0_1_.Q
+       & calculate_int_Data0_2_.Q & !calculate_int_Data0_3_.Q
+       & !keyinbutton_i_3__n
+    # !keyOut_2_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & calculate_int_Data1_3_.Q & calculate_int_Data0_2_.Q
+       & !calculate_int_Data0_3_.Q & !keyinbutton_i_3__n
+    # !keyOut_2_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_2_.Q & !calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_1_.Q & !calculate_int_Data0_2_.Q
+       & calculate_int_Data0_3_.Q & !keyinbutton_i_3__n
+    # calculate_un1_led_int_data2278_n & calculate_int_Data1_3_.Q
+       & calculate_int_Data0_3_.Q & calculate_led_int_data2_0_sqmuxa_n
+       & calculate_n_29_0_n & calculate_n_1010_i_n
+    # calculate_un1_led_int_data2278_n & calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_3_.Q & calculate_led_int_data2_0_sqmuxa_n
+       & calculate_n_29_0_n & !calculate_n_1010_i_n
+    # calculate_un1_led_int_data2278_n & !calculate_int_Data1_3_.Q
+       & calculate_int_Data0_3_.Q & !calculate_led_int_data2_0_sqmuxa_n
+       & calculate_n_29_0_n & calculate_n_1010_i_n
+    # calculate_un1_led_int_data2278_n & !calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_3_.Q & !calculate_led_int_data2_0_sqmuxa_n
+       & calculate_n_29_0_n & !calculate_n_1010_i_n
+    # calculate_un1_led_int_data2278_n & calculate_n_453_0_n
+       & calculate_int_Data0_3_.Q & calculate_n_29_0_n & calculate_n_1010_i_n
+    # calculate_un1_led_int_data2278_n & calculate_n_453_0_n
+       & calculate_int_Data1_3_.Q & calculate_led_int_data2_0_sqmuxa_n
+       & calculate_n_29_0_n
+    # calculate_un1_led_int_data2278_n & calculate_n_453_0_n
+       & !calculate_int_Data0_3_.Q & calculate_n_29_0_n
+       & !calculate_n_1010_i_n
+    # calculate_un1_led_int_data2278_n & calculate_n_453_0_n
+       & !calculate_int_Data1_3_.Q & !calculate_led_int_data2_0_sqmuxa_n
+       & calculate_n_29_0_n ; (13 pterms, 17 signals)
+calculate_int_Data_5_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_int_Data_5_.CE = calculate_int_Data_0__0 ; (1 pterm, 1 signal)
+calculate_int_Data_5_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_int_Data_6_.D = !keyOut_2_.Q & !calculate_un1_led_int_data2278_n
+       & calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & calculate_int_Data1_3_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_2_.Q & calculate_int_Data0_3_.Q
+       & !keyinbutton_i_3__n
+    # calculate_un1_led_int_data2278_n & !calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_3_.Q & !calculate_led_int_data2_0_sqmuxa_n
+       & calculate_n_29_0_n & !calculate_n_1010_i_n
+    # calculate_un1_led_int_data2278_n & calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_3_.Q & calculate_led_int_data2_0_sqmuxa_n
+       & calculate_n_29_0_n & !calculate_n_1010_i_n
+    # calculate_un1_led_int_data2278_n & !calculate_int_Data1_3_.Q
+       & calculate_int_Data0_3_.Q & !calculate_led_int_data2_0_sqmuxa_n
+       & calculate_n_29_0_n & calculate_n_1010_i_n
+    # calculate_un1_led_int_data2278_n & calculate_int_Data1_3_.Q
+       & calculate_int_Data0_3_.Q & calculate_led_int_data2_0_sqmuxa_n
+       & calculate_n_29_0_n & calculate_n_1010_i_n
+    # calculate_un1_led_int_data2278_n & calculate_n_453_0_n
+       & !calculate_int_Data0_3_.Q & calculate_n_29_0_n
+       & !calculate_n_1010_i_n
+    # calculate_un1_led_int_data2278_n & calculate_n_453_0_n
+       & !calculate_int_Data1_3_.Q & !calculate_led_int_data2_0_sqmuxa_n
+       & calculate_n_29_0_n
+    # calculate_un1_led_int_data2278_n & calculate_n_453_0_n
+       & calculate_int_Data0_3_.Q & calculate_n_29_0_n & calculate_n_1010_i_n
+    # calculate_un1_led_int_data2278_n & calculate_n_453_0_n
+       & calculate_int_Data1_3_.Q & calculate_led_int_data2_0_sqmuxa_n
+       & calculate_n_29_0_n ; (9 pterms, 15 signals)
+calculate_int_Data_6_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_int_Data_6_.CE = calculate_int_Data_0__0 ; (1 pterm, 1 signal)
+calculate_int_Data_6_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_int_data_cnst_0_3__n.X1 = !keyOut_2_.Q & !calculate_flag_Cal_0_.Q
+    # !keyOut_2_.Q & !calculate_flag_Cal_1_.Q
+    # !keyOut_2_.Q & calculate_int_Data1_1_.Q & calculate_int_Data1_3_.Q
+    # !keyOut_2_.Q & calculate_int_Data1_2_.Q & calculate_int_Data1_3_.Q
+    # !keyOut_2_.Q & calculate_int_Data0_1_.Q & calculate_int_Data0_3_.Q
+    # !keyOut_2_.Q & calculate_int_Data0_2_.Q & calculate_int_Data0_3_.Q
+    # !keyOut_2_.Q & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q
+    # !keyOut_2_.Q & !calculate_int_Data1_0_.Q & !calculate_int_Data1_3_.Q
+       & calculate_int_Data0_3_.Q
+    # !keyOut_2_.Q & !calculate_int_Data1_0_.Q & !calculate_int_Data1_1_.Q
+       & calculate_int_Data1_2_.Q & !calculate_int_Data0_1_.Q
+    # !keyOut_2_.Q & !calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & calculate_int_Data0_0_.Q & !calculate_int_Data0_2_.Q
+    # !keyOut_2_.Q & !calculate_int_Data1_0_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_2_.Q
+    # !keyOut_2_.Q & !calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data1_3_.Q & !calculate_int_Data0_3_.Q
+    # !keyOut_2_.Q & !calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_3_.Q
+    # !keyOut_2_.Q & !calculate_int_Data1_1_.Q & !calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_1_.Q & !calculate_int_Data0_3_.Q
+    # !keyOut_2_.Q & !calculate_int_Data1_3_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_2_.Q & !calculate_int_Data0_3_.Q
+    # !keyOut_2_.Q & !calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & calculate_int_Data1_2_.Q & !calculate_int_Data0_0_.Q
+       & calculate_int_Data0_1_.Q & calculate_int_Data0_2_.Q
+    # !keyOut_2_.Q & calculate_int_Data1_0_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_0_.Q & calculate_int_Data0_1_.Q
+    # !keyOut_2_.Q & calculate_int_Data1_0_.Q & !calculate_int_Data1_3_.Q
+       & calculate_int_Data0_0_.Q & calculate_int_Data0_1_.Q
+       & calculate_int_Data0_2_.Q
+    # !keyOut_2_.Q & calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & calculate_int_Data1_2_.Q & calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_3_.Q
+    # !keyOut_2_.Q & calculate_int_Data1_0_.Q & calculate_int_Data1_3_.Q
+       & calculate_int_Data0_0_.Q & calculate_int_Data0_3_.Q
+    # !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q ; (21 pterms, 17 signals)
+calculate_int_data_cnst_0_3__n.X2 = keyOut_2_.Q ; (1 pterm, 1 signal)
+
+calculate_led_int_Data2_0_.D = !( keyOut_3_.Q & !calculate_flag_Cal_0_.Q
+       & calculate_int_Data1_3_.Q & !calculate_int_Data0_3_.Q
+       & keyinbutton_i_0__n
+    # keyOut_3_.Q & !calculate_flag_Cal_0_.Q & keyinbutton_i_0__n
+       & calculate_n_730_n ) ; (2 pterms, 6 signals)
+calculate_led_int_Data2_0_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_led_int_Data2_0_.CE = calculate_led_int_Data2_0__0 ; (1 pterm, 1 signal)
+calculate_led_int_Data2_0_.AP = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_led_int_Data2_0__0 = !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q
+       & calculate_flag_Cal_0_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data1_2_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_2_.Q & keyinbutton_i_0__n & keyinbutton_i_1__n
+       & keyinbutton_i_2__n & !keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & calculate_flag_Cal_0_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_3_.Q & keyinbutton_i_0__n & keyinbutton_i_1__n
+       & keyinbutton_i_2__n & !keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & calculate_flag_Cal_0_.Q
+       & !calculate_int_Data1_3_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_2_.Q & keyinbutton_i_0__n & keyinbutton_i_1__n
+       & keyinbutton_i_2__n & !keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & calculate_flag_Cal_0_.Q
+       & !calculate_int_Data1_3_.Q & !calculate_int_Data0_3_.Q
+       & keyinbutton_i_0__n & keyinbutton_i_1__n & keyinbutton_i_2__n
+       & !keyinbutton_i_3__n
+    # !calculate_flag_Data_0_.Q & !calculate_flag_Data_1_.Q
+       & !calculate_n_1008_0_n
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !calculate_flag_Cal_0_.Q
+       & keyinbutton_i_0__n & keyinbutton_i_1__n & keyinbutton_i_2__n
+       & calculate_n_29_0_n & !keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & calculate_flag_Cal_0_.Q
+       & !calculate_flag_Cal_1_.Q & keyinbutton_i_0__n & keyinbutton_i_1__n
+       & keyinbutton_i_2__n & !keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & keyinbutton_i_0__n
+       & keyinbutton_i_1__n & keyinbutton_i_2__n & calculate_n_1010_i_n
+       & !keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_1_.Q & keyinbutton_i_0__n
+       & keyinbutton_i_1__n & keyinbutton_i_2__n & !keyinbutton_i_3__n ; (9 pterms, 21 signals)
+
+calculate_led_int_Data2_1_.D = 1 ; (1 pterm, 0 signal)
+calculate_led_int_Data2_1_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_led_int_Data2_1_.CE = calculate_led_int_Data2_0__0 ; (1 pterm, 1 signal)
+calculate_led_int_Data2_1_.AP = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_led_int_Data2_2_.D = 0 ; (0 pterm, 0 signal)
+calculate_led_int_Data2_2_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_led_int_Data2_2_.CE = calculate_led_int_Data2_0__0 ; (1 pterm, 1 signal)
+calculate_led_int_Data2_2_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_led_int_data1_2_0__n = calculate_int_Data_2_.Q
+       & calculate_int_Data_4_.Q & calculate_int_Data_5_.Q
+       & calculate_un82_i_n
+    # calculate_int_Data_1_.Q & calculate_int_Data_4_.Q
+       & calculate_int_Data_5_.Q & calculate_un82_i_n
+    # calculate_int_Data_3_.Q & calculate_int_Data_4_.Q
+       & calculate_int_Data_5_.Q & calculate_un82_i_n
+    # calculate_int_Data_2_.Q & calculate_int_Data_3_.Q & calculate_un86_i_n
+    # calculate_int_Data_1_.Q & calculate_int_Data_3_.Q & calculate_un86_i_n
+    # !calculate_un85_1_0_n & calculate_un84_i_n
+    # !calculate_int_Data_4_.Q & !calculate_int_Data_5_.Q & calculate_un81_n
+    # calculate_int_Data_4_.Q & calculate_un86_i_n
+    # !calculate_int_Data_6_.Q & calculate_un81_n ; (9 pterms, 11 signals)
+
+calculate_led_int_data2_0_sqmuxa_n.X1 = !calculate_flag_Cal_0_.Q
+       & calculate_flag_Cal_1_.Q & !calculate_int_Data1_3_.Q
+       & calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_2_.Q & calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_0_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data1_2_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & calculate_int_Data0_0_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_0_.Q & !calculate_int_Data1_2_.Q
+       & calculate_int_Data0_1_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & calculate_int_Data0_1_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_2_.Q & calculate_int_Data0_0_.Q
+       & calculate_int_Data0_1_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_0_.Q & !calculate_int_Data1_1_.Q
+       & calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_1_.Q & calculate_int_Data0_0_.Q
+       & calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_0_.Q & calculate_int_Data0_1_.Q
+       & calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_1_.Q & calculate_int_Data0_1_.Q
+       & calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data0_0_.Q & calculate_int_Data0_1_.Q
+       & calculate_int_Data0_2_.Q
+    # calculate_int_Data1_3_.Q & !calculate_int_Data0_3_.Q ; (13 pterms, 10 signals)
+calculate_led_int_data2_0_sqmuxa_n.X2 = calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_3_.Q ; (1 pterm, 2 signals)
+
+calculate_n_1008_0_n = !( !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & button1_d2_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d1_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d2_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_2_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d2_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d2_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d1_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_2_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d1_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d1_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_2_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d2_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_2_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d2_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d2_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d1_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_2_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d1_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & button3_d1_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_2_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d2_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_2_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d2_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d2_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d1_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_2_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d1_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & button2_d1_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d3_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_2_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d3_q_0_.Q
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_1_.Q & !button4_d1_q_0_.Q
+       & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q & !button3_d1_q_0_.Q
+       & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q
+       & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q & button1_d3_q_0_.Q ) ; (30 pterms, 16 signals)
+
+calculate_n_1010_i_n = !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_0_.Q & calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & calculate_int_Data1_3_.Q & !calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_0_.Q & calculate_int_Data1_2_.Q
+       & calculate_int_Data1_3_.Q & !calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_1_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & calculate_int_Data1_2_.Q & calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_0_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_1_.Q & calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_1_.Q & !calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_1_.Q & calculate_int_Data1_2_.Q
+       & calculate_int_Data1_3_.Q & !calculate_int_Data0_1_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_0_.Q & !calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_1_.Q & !calculate_int_Data0_2_.Q
+       & !calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_2_.Q
+       & !calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_0_.Q & calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & calculate_int_Data1_2_.Q & !calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_2_.Q & calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_1_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_2_.Q & !calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_1_.Q & calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_1_.Q & !calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_2_.Q & !calculate_int_Data0_2_.Q
+       & !calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_3_.Q & !calculate_int_Data0_3_.Q ; (15 pterms, 10 signals)
+
+calculate_n_116_n.X1 = !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & calculate_flag_Data_0_.Q & !calculate_flag_Data_1_.Q ; (1 pterm, 14 signals)
+calculate_n_116_n.X2 = !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q
+       & !button4_d1_q_0_.Q & !button4_d2_q_0_.Q & !button4_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & calculate_flag_Data_0_.Q & !calculate_flag_Data_1_.Q ; (1 pterm, 14 signals)
+
+calculate_n_15_0_n = !( calculate_combvalue_4_.Q & !calculate_combvalue_5_.Q
+       & !calculate_combvalue_6_.Q
+    # !calculate_combvalue_4_.Q & calculate_combvalue_5_.Q
+       & !calculate_combvalue_6_.Q
+    # !calculate_combvalue_4_.Q & !calculate_combvalue_5_.Q
+       & calculate_combvalue_6_.Q ) ; (3 pterms, 3 signals)
+
+calculate_n_29_0_n = !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q ; (1 pterm, 2 signals)
+
+calculate_n_405_n = !( calculate_int_Data_3_.Q & calculate_int_Data_4_.Q
+       & calculate_int_Data_5_.Q & calculate_un82_i_n
+    # calculate_int_Data_2_.Q & calculate_int_Data_4_.Q
+       & calculate_int_Data_5_.Q & calculate_un82_i_n
+    # calculate_int_Data_1_.Q & calculate_int_Data_4_.Q
+       & calculate_int_Data_5_.Q & calculate_un82_i_n
+    # calculate_un85_1_0_n & !calculate_int_Data_6_.Q
+    # !calculate_un82_i_n & !calculate_un81_n ) ; (5 pterms, 9 signals)
+
+calculate_n_429_0_n = !( !calculate_n_405_n & calculate_led_int_data1_2_0__n
+       & calculate_int_Data_1_.Q
+    # calculate_led_int_data1_2_0__n & calculate_int_Data_1_.Q
+       & calculate_int_Data_2_.Q
+    # calculate_int_Data_2_.Q & calculate_int_Data_4_.Q & calculate_un86_i_n
+    # calculate_int_Data_2_.Q & calculate_int_Data_3_.Q & calculate_un86_i_n
+    # !calculate_n_405_n & calculate_int_Data_2_.Q & !calculate_un86_i_n ) ; (5 pterms, 7 signals)
+
+calculate_n_453_0_n.X1 = calculate_flag_Cal_0_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_2_.Q
+    # !calculate_int_Data1_0_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data1_2_.Q & calculate_int_Data1_3_.Q
+       & calculate_int_Data0_0_.Q & !calculate_int_Data0_2_.Q
+       & !calculate_int_Data0_3_.Q
+    # calculate_int_Data1_0_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data1_3_.Q & !calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_1_.Q & !calculate_int_Data0_2_.Q
+       & calculate_int_Data0_3_.Q
+    # calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data1_3_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_2_.Q & calculate_int_Data0_3_.Q
+    # !calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & calculate_int_Data1_3_.Q & calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_2_.Q & !calculate_int_Data0_3_.Q
+    # !calculate_int_Data1_0_.Q & !calculate_int_Data1_2_.Q
+       & calculate_int_Data1_3_.Q & calculate_int_Data0_0_.Q
+       & calculate_int_Data0_1_.Q & !calculate_int_Data0_2_.Q
+       & !calculate_int_Data0_3_.Q
+    # calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & !calculate_int_Data1_2_.Q & !calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_2_.Q
+       & calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data0_0_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_1_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data0_1_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data0_1_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & !calculate_int_Data1_2_.Q & calculate_int_Data1_3_.Q
+       & calculate_int_Data0_2_.Q & !calculate_int_Data0_3_.Q
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_0_.Q
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_2_.Q & !calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_1_.Q
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data1_2_.Q & !calculate_int_Data0_1_.Q
+    # !calculate_flag_Cal_1_.Q & calculate_int_Data1_2_.Q
+       & calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_2_.Q & !calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_2_.Q & calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_1_.Q & calculate_int_Data1_2_.Q
+       & !calculate_int_Data1_3_.Q & !calculate_int_Data0_1_.Q
+       & calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+       & calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & calculate_int_Data1_2_.Q & !calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_0_.Q & calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_int_Data1_0_.Q
+       & calculate_int_Data1_2_.Q & !calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+       & calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & !calculate_int_Data1_1_.Q
+       & calculate_int_Data1_2_.Q & calculate_int_Data1_3_.Q
+       & calculate_int_Data0_1_.Q & calculate_int_Data0_2_.Q
+       & !calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q & calculate_int_Data1_2_.Q
+       & calculate_int_Data1_3_.Q & calculate_int_Data0_0_.Q
+       & calculate_int_Data0_2_.Q & !calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & calculate_int_Data1_2_.Q & calculate_int_Data1_3_.Q
+       & calculate_int_Data0_0_.Q & calculate_int_Data0_1_.Q
+       & calculate_int_Data0_2_.Q & !calculate_int_Data0_3_.Q
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data0_1_.Q & !calculate_int_Data0_2_.Q
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_2_.Q
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_2_.Q ; (28 pterms, 10 signals)
+calculate_n_453_0_n.X2 = !calculate_flag_Cal_1_.Q & calculate_int_Data1_2_.Q
+       & calculate_int_Data0_2_.Q ; (1 pterm, 3 signals)
+
+calculate_n_457_0_n = !calculate_flag_Cal_0_.Q & calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_0_.Q & calculate_int_Data0_1_.Q
+       & calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data1_3_.Q & !calculate_int_Data0_0_.Q
+       & calculate_int_Data0_1_.Q
+    # !calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & calculate_int_Data1_1_.Q & calculate_int_Data1_3_.Q
+       & calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & calculate_int_Data1_1_.Q & calculate_int_Data1_2_.Q
+       & calculate_int_Data1_3_.Q & calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_1_.Q
+    # !calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & calculate_int_Data1_1_.Q & calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_1_.Q & !calculate_int_Data0_2_.Q
+       & !calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_2_.Q & !calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_0_.Q & calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & calculate_int_Data1_1_.Q & calculate_int_Data1_2_.Q
+       & calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & calculate_int_Data1_2_.Q & calculate_int_Data1_3_.Q
+       & calculate_int_Data0_0_.Q & !calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data0_0_.Q
+       & calculate_int_Data0_1_.Q & calculate_int_Data0_2_.Q
+       & calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_0_.Q & calculate_int_Data0_1_.Q
+       & calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & calculate_int_Data1_2_.Q & calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_2_.Q & !calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_2_.Q & !calculate_int_Data0_0_.Q
+       & calculate_int_Data0_2_.Q & calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & calculate_int_Data1_3_.Q & calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_0_.Q & calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_3_.Q & !calculate_int_Data0_0_.Q
+       & calculate_int_Data0_3_.Q
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data0_0_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data0_0_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_0_.Q ; (17 pterms, 10 signals)
+
+calculate_n_479_0_n.X1 = calculate_flag_Cal_0_.Q & !calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_3_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_3_.Q
+       & !calculate_int_Data0_3_.Q
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data1_2_.Q & !calculate_int_Data0_0_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_2_.Q & !calculate_int_Data0_1_.Q
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data1_2_.Q & !calculate_int_Data0_1_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data1_2_.Q & !calculate_int_Data0_1_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data0_1_.Q & !calculate_int_Data0_2_.Q
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data0_1_.Q & !calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data1_1_.Q
+       & !calculate_int_Data0_1_.Q & !calculate_int_Data0_2_.Q
+    # !calculate_flag_Cal_1_.Q & !calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_1_.Q & !calculate_int_Data0_2_.Q
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_0_.Q
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_2_.Q & !calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_1_.Q
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data1_1_.Q & !calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_2_.Q
+    # calculate_flag_Cal_0_.Q & !calculate_int_Data1_0_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_2_.Q
+    # calculate_int_Data1_3_.Q & calculate_int_Data0_3_.Q ; (21 pterms, 10 signals)
+calculate_n_479_0_n.X2 = calculate_int_Data1_3_.Q & calculate_int_Data0_3_.Q ; (1 pterm, 2 signals)
+
+calculate_n_500_n = calculate_timecnt_6_.Q & calculate_timecnt_4_.Q
+       & calculate_timecnt_0_.Q & calculate_timecnt_1_.Q
+       & calculate_timecnt_2_.Q & calculate_timecnt_3_.Q
+       & calculate_timecnt_5_.Q ; (1 pterm, 7 signals)
+
+calculate_n_510_n = calculate_timecnt_6_.Q & calculate_timecnt_7_.Q
+       & calculate_timecnt_11_.Q & calculate_timecnt_9_.Q
+       & calculate_timecnt_4_.Q & calculate_timecnt_0_.Q
+       & calculate_timecnt_1_.Q & calculate_timecnt_2_.Q
+       & calculate_timecnt_3_.Q & calculate_timecnt_5_.Q
+       & calculate_timecnt_8_.Q & calculate_timecnt_10_.Q ; (1 pterm, 12 signals)
+
+calculate_n_730_n.X1 = calculate_int_Data1_2_.Q & !calculate_int_Data0_2_.Q
+    # calculate_int_Data1_1_.Q & calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_1_.Q
+    # calculate_int_Data1_1_.Q & !calculate_int_Data0_1_.Q
+       & !calculate_int_Data0_2_.Q
+    # calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & calculate_int_Data1_2_.Q & !calculate_int_Data0_0_.Q
+    # calculate_int_Data1_0_.Q & calculate_int_Data1_2_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_1_.Q
+    # calculate_int_Data1_0_.Q & calculate_int_Data1_1_.Q
+       & !calculate_int_Data0_0_.Q & !calculate_int_Data0_2_.Q
+    # calculate_int_Data1_0_.Q & !calculate_int_Data0_0_.Q
+       & !calculate_int_Data0_1_.Q & !calculate_int_Data0_2_.Q
+    # !calculate_int_Data1_3_.Q & calculate_int_Data0_3_.Q ; (8 pterms, 8 signals)
+calculate_n_730_n.X2 = !calculate_int_Data1_3_.Q & calculate_int_Data0_3_.Q ; (1 pterm, 2 signals)
+
+calculate_scanvalue_0_.D = !calculate_scanvalue_0_.Q ; (1 pterm, 1 signal)
+calculate_scanvalue_0_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_scanvalue_0_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_scanvalue_1_.D = calculate_scanvalue_0_.Q
+       & !calculate_scanvalue_1_.Q
+    # !calculate_scanvalue_0_.Q & calculate_scanvalue_1_.Q ; (2 pterms, 2 signals)
+calculate_scanvalue_1_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+calculate_scanvalue_1_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_time1Oms.D = !calculate_time1Oms.Q & !resetButton_i
+       & calculate_time1oms3_n
+    # calculate_time1Oms.Q & resetButton_i
+    # calculate_time1Oms.Q & !calculate_time1oms3_n ; (3 pterms, 3 signals)
+calculate_time1Oms.C = clkh ; (1 pterm, 1 signal)
+
+calculate_time1oms3_9_n = calculate_timecnt_0_.Q & calculate_timecnt_1_.Q
+       & calculate_timecnt_2_.Q & calculate_timecnt_3_.Q ; (1 pterm, 4 signals)
+
+calculate_time1oms3_n = !calculate_timecnt_6_.Q & !calculate_timecnt_7_.Q
+       & !calculate_timecnt_11_.Q & !calculate_timecnt_9_.Q
+       & !calculate_timecnt_4_.Q & !calculate_timecnt_15_.Q
+       & calculate_timecnt_0_.Q & calculate_timecnt_1_.Q
+       & calculate_timecnt_2_.Q & calculate_timecnt_3_.Q
+       & calculate_timecnt_5_.Q & calculate_timecnt_8_.Q
+       & calculate_timecnt_10_.Q & calculate_timecnt_12_.Q
+       & calculate_timecnt_13_.Q & calculate_timecnt_14_.Q ; (1 pterm, 16 signals)
+
+calculate_timecnt_0_.D = !calculate_timecnt_0_.Q ; (1 pterm, 1 signal)
+calculate_timecnt_0_.C = clkh ; (1 pterm, 1 signal)
+calculate_timecnt_0_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_timecnt_10_.D.X1 = calculate_timecnt_7_.Q & calculate_timecnt_9_.Q
+       & calculate_timecnt_8_.Q & !calculate_time1oms3_n & calculate_n_500_n ; (1 pterm, 5 signals)
+calculate_timecnt_10_.D.X2 = calculate_timecnt_10_.Q & !calculate_time1oms3_n ; (1 pterm, 2 signals)
+calculate_timecnt_10_.C = clkh ; (1 pterm, 1 signal)
+calculate_timecnt_10_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_timecnt_11_.T = calculate_timecnt_7_.Q & calculate_timecnt_9_.Q
+       & calculate_timecnt_8_.Q & calculate_timecnt_10_.Q & calculate_n_500_n ; (1 pterm, 5 signals)
+calculate_timecnt_11_.C = clkh ; (1 pterm, 1 signal)
+calculate_timecnt_11_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_timecnt_12_.D = calculate_timecnt_12_.Q & !calculate_time1oms3_n
+       & !calculate_n_510_n
+    # !calculate_timecnt_12_.Q & !calculate_time1oms3_n & calculate_n_510_n ; (2 pterms, 3 signals)
+calculate_timecnt_12_.C = clkh ; (1 pterm, 1 signal)
+calculate_timecnt_12_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_timecnt_13_.D = calculate_timecnt_12_.Q & !calculate_timecnt_13_.Q
+       & !calculate_time1oms3_n & calculate_n_510_n
+    # !calculate_timecnt_12_.Q & calculate_timecnt_13_.Q
+       & !calculate_time1oms3_n
+    # calculate_timecnt_13_.Q & !calculate_time1oms3_n & !calculate_n_510_n ; (3 pterms, 4 signals)
+calculate_timecnt_13_.C = clkh ; (1 pterm, 1 signal)
+calculate_timecnt_13_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_timecnt_14_.D = calculate_timecnt_12_.Q & calculate_timecnt_13_.Q
+       & !calculate_timecnt_14_.Q & !calculate_time1oms3_n & calculate_n_510_n
+    # !calculate_timecnt_13_.Q & calculate_timecnt_14_.Q
+       & !calculate_time1oms3_n
+    # !calculate_timecnt_12_.Q & calculate_timecnt_14_.Q
+       & !calculate_time1oms3_n
+    # calculate_timecnt_14_.Q & !calculate_time1oms3_n & !calculate_n_510_n ; (4 pterms, 5 signals)
+calculate_timecnt_14_.C = clkh ; (1 pterm, 1 signal)
+calculate_timecnt_14_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_timecnt_15_.D.X1 = calculate_timecnt_15_.Q ; (1 pterm, 1 signal)
+calculate_timecnt_15_.D.X2 = calculate_timecnt_12_.Q & calculate_timecnt_13_.Q
+       & calculate_timecnt_14_.Q & calculate_n_510_n ; (1 pterm, 4 signals)
+calculate_timecnt_15_.C = clkh ; (1 pterm, 1 signal)
+calculate_timecnt_15_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_timecnt_1_.D = calculate_timecnt_0_.Q & !calculate_timecnt_1_.Q
+    # !calculate_timecnt_0_.Q & calculate_timecnt_1_.Q ; (2 pterms, 2 signals)
+calculate_timecnt_1_.C = clkh ; (1 pterm, 1 signal)
+calculate_timecnt_1_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_timecnt_2_.D = calculate_timecnt_0_.Q & calculate_timecnt_1_.Q
+       & !calculate_timecnt_2_.Q
+    # !calculate_timecnt_1_.Q & calculate_timecnt_2_.Q
+    # !calculate_timecnt_0_.Q & calculate_timecnt_2_.Q ; (3 pterms, 3 signals)
+calculate_timecnt_2_.C = clkh ; (1 pterm, 1 signal)
+calculate_timecnt_2_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_timecnt_3_.D = calculate_timecnt_0_.Q & calculate_timecnt_1_.Q
+       & calculate_timecnt_2_.Q & !calculate_timecnt_3_.Q
+    # !calculate_timecnt_2_.Q & calculate_timecnt_3_.Q
+    # !calculate_timecnt_1_.Q & calculate_timecnt_3_.Q
+    # !calculate_timecnt_0_.Q & calculate_timecnt_3_.Q ; (4 pterms, 4 signals)
+calculate_timecnt_3_.C = clkh ; (1 pterm, 1 signal)
+calculate_timecnt_3_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_timecnt_4_.D = calculate_timecnt_4_.Q & !calculate_time1oms3_n
+       & !calculate_time1oms3_9_n
+    # !calculate_timecnt_4_.Q & !calculate_time1oms3_n
+       & calculate_time1oms3_9_n ; (2 pterms, 3 signals)
+calculate_timecnt_4_.C = clkh ; (1 pterm, 1 signal)
+calculate_timecnt_4_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_timecnt_5_.D = calculate_timecnt_4_.Q & !calculate_timecnt_5_.Q
+       & !calculate_time1oms3_n & calculate_time1oms3_9_n
+    # !calculate_timecnt_4_.Q & calculate_timecnt_5_.Q
+       & !calculate_time1oms3_n
+    # calculate_timecnt_5_.Q & !calculate_time1oms3_n
+       & !calculate_time1oms3_9_n ; (3 pterms, 4 signals)
+calculate_timecnt_5_.C = clkh ; (1 pterm, 1 signal)
+calculate_timecnt_5_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_timecnt_6_.D = !calculate_timecnt_6_.Q & calculate_timecnt_4_.Q
+       & calculate_timecnt_5_.Q & calculate_time1oms3_9_n
+    # calculate_timecnt_6_.Q & !calculate_timecnt_5_.Q
+    # calculate_timecnt_6_.Q & !calculate_timecnt_4_.Q
+    # calculate_timecnt_6_.Q & !calculate_time1oms3_9_n ; (4 pterms, 4 signals)
+calculate_timecnt_6_.C = clkh ; (1 pterm, 1 signal)
+calculate_timecnt_6_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_timecnt_7_.D = calculate_timecnt_7_.Q & !calculate_n_500_n
+    # !calculate_timecnt_7_.Q & calculate_n_500_n ; (2 pterms, 2 signals)
+calculate_timecnt_7_.C = clkh ; (1 pterm, 1 signal)
+calculate_timecnt_7_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_timecnt_8_.D = calculate_timecnt_7_.Q & !calculate_timecnt_8_.Q
+       & !calculate_time1oms3_n & calculate_n_500_n
+    # !calculate_timecnt_7_.Q & calculate_timecnt_8_.Q
+       & !calculate_time1oms3_n
+    # calculate_timecnt_8_.Q & !calculate_time1oms3_n & !calculate_n_500_n ; (3 pterms, 4 signals)
+calculate_timecnt_8_.C = clkh ; (1 pterm, 1 signal)
+calculate_timecnt_8_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_timecnt_9_.D = calculate_timecnt_7_.Q & !calculate_timecnt_9_.Q
+       & calculate_timecnt_8_.Q & calculate_n_500_n
+    # calculate_timecnt_9_.Q & !calculate_timecnt_8_.Q
+    # !calculate_timecnt_7_.Q & calculate_timecnt_9_.Q
+    # calculate_timecnt_9_.Q & !calculate_n_500_n ; (4 pterms, 4 signals)
+calculate_timecnt_9_.C = clkh ; (1 pterm, 1 signal)
+calculate_timecnt_9_.AR = resetButton_i ; (1 pterm, 1 signal)
+
+calculate_un1_led_int_data2278_n = !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q
+       & button4_d3_q_0_.Q & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q & calculate_flag_Cal_0_.Q
+       & !calculate_flag_Cal_1_.Q
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & button4_d2_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & calculate_flag_Cal_0_.Q & !calculate_flag_Cal_1_.Q
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & button4_d1_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & calculate_flag_Cal_0_.Q & !calculate_flag_Cal_1_.Q
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & button4_d3_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & button4_d2_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & button4_d1_q_0_.Q
+       & !button3_d1_q_0_.Q & !button3_d2_q_0_.Q & !button3_d3_q_0_.Q
+       & !button2_d1_q_0_.Q & !button2_d2_q_0_.Q & !button2_d3_q_0_.Q
+       & !button1_d1_q_0_.Q & !button1_d2_q_0_.Q & !button1_d3_q_0_.Q
+       & !calculate_flag_Cal_0_.Q & calculate_flag_Cal_1_.Q ; (6 pterms, 17 signals)
+
+calculate_un81_n = !( !calculate_int_Data_2_.Q & !calculate_int_Data_3_.Q
+       & !calculate_int_Data_4_.Q & !calculate_int_Data_5_.Q
+    # !calculate_int_Data_1_.Q & !calculate_int_Data_3_.Q
+       & !calculate_int_Data_4_.Q & !calculate_int_Data_5_.Q
+    # !calculate_int_Data_6_.Q ) ; (3 pterms, 6 signals)
+
+calculate_un82_i_n = !( calculate_int_Data_2_.Q & calculate_int_Data_3_.Q
+       & calculate_int_Data_4_.Q & calculate_int_Data_5_.Q
+    # calculate_int_Data_6_.Q ) ; (2 pterms, 5 signals)
+
+calculate_un84_i_n = !calculate_int_Data_3_.Q & !calculate_int_Data_4_.Q
+       & !calculate_int_Data_6_.Q
+    # !calculate_int_Data_5_.Q & !calculate_int_Data_6_.Q ; (2 pterms, 4 signals)
+
+calculate_un85_1_0_n = !( calculate_int_Data_1_.Q & calculate_int_Data_2_.Q
+       & calculate_int_Data_3_.Q & calculate_int_Data_4_.Q
+    # calculate_int_Data_5_.Q ) ; (2 pterms, 5 signals)
+
+calculate_un86_i_n = !calculate_int_Data_2_.Q & !calculate_int_Data_3_.Q
+       & !calculate_int_Data_5_.Q & !calculate_int_Data_6_.Q
+    # !calculate_int_Data_4_.Q & !calculate_int_Data_5_.Q
+       & !calculate_int_Data_6_.Q ; (2 pterms, 5 signals)
+
+data0_2__n.X1 = !calculate_n_405_n & calculate_led_int_data1_2_0__n
+       & calculate_int_Data_1_.Q & !resetButton_i & !calculate_un86_i_n
+    # calculate_n_405_n & !calculate_led_int_data1_2_0__n & !resetButton_i
+       & !calculate_un86_i_n
+    # calculate_n_405_n & !calculate_int_Data_1_.Q & !resetButton_i
+       & !calculate_un86_i_n
+    # !calculate_int_Data_1_.Q & !calculate_int_Data_2_.Q
+       & !calculate_int_Data_4_.Q & !resetButton_i & calculate_un86_i_n
+    # !calculate_led_int_data1_2_0__n & !calculate_int_Data_3_.Q
+       & !calculate_int_Data_4_.Q & !resetButton_i & calculate_un86_i_n
+    # calculate_led_int_data1_2_0__n & !calculate_int_Data_2_.Q
+       & calculate_int_Data_3_.Q & !calculate_int_Data_4_.Q & !resetButton_i
+       & calculate_un86_i_n
+    # calculate_led_int_data1_2_0__n & calculate_int_Data_1_.Q
+       & calculate_int_Data_4_.Q & !resetButton_i & calculate_un86_i_n
+    # !calculate_int_Data_1_.Q & !calculate_int_Data_3_.Q
+       & !calculate_int_Data_4_.Q & !resetButton_i & calculate_un86_i_n
+    # calculate_led_int_data1_2_0__n & calculate_int_Data_1_.Q
+       & calculate_int_Data_2_.Q & calculate_int_Data_3_.Q & !resetButton_i
+       & calculate_un86_i_n ; (9 pterms, 8 signals)
+data0_2__n.X2 = !calculate_int_Data_2_.Q & !resetButton_i ; (1 pterm, 2 signals)
+
+data1_3__n = calculate_int_Data_5_.Q & calculate_int_Data_6_.Q
+       & !resetButton_i
+    # calculate_int_Data_4_.Q & calculate_int_Data_6_.Q & !resetButton_i ; (2 pterms, 4 signals)
+
+dynamicshow_counter4_q_1_.D = !dynamicshow_counter4_q_1_.Q ; (1 pterm, 1 signal)
+dynamicshow_counter4_q_1_.C = clkl ; (1 pterm, 1 signal)
+
+dynamicshow_counter4_q_2_.D = dynamicshow_counter4_q_1_.Q
+       & !dynamicshow_counter4_q_2_.Q
+    # !dynamicshow_counter4_q_1_.Q & dynamicshow_counter4_q_2_.Q ; (2 pterms, 2 signals)
+dynamicshow_counter4_q_2_.C = clkl ; (1 pterm, 1 signal)
+
+dynamicshow_out_0__n = !dynamicshow_counter4_q_1_.Q
+       & !dynamicshow_counter4_q_2_.Q & calculate_int_Data_0_.Q
+       & !resetButton_i
+    # calculate_led_int_Data2_0_.Q & dynamicshow_counter4_q_2_.Q
+    # dynamicshow_counter4_q_1_.Q & calculate_led_int_data1_2_0__n
+       & !resetButton_i
+    # dynamicshow_counter4_q_1_.Q & dynamicshow_counter4_q_2_.Q ; (4 pterms, 6 signals)
+
+dynamicshow_out_1__n = dynamicshow_counter4_q_1_.Q & !calculate_int_Data_3_.Q
+       & !calculate_int_Data_4_.Q & !calculate_int_Data_6_.Q & !resetButton_i
+       & !calculate_un86_i_n
+    # !dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q
+       & calculate_led_int_data1_2_0__n & !calculate_int_Data_1_.Q
+       & !resetButton_i
+    # !dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q
+       & !calculate_led_int_data1_2_0__n & calculate_int_Data_1_.Q
+       & !resetButton_i
+    # dynamicshow_counter4_q_1_.Q & !calculate_int_Data_4_.Q
+       & !calculate_int_Data_5_.Q & !resetButton_i & !calculate_un86_i_n
+    # dynamicshow_counter4_q_1_.Q & !calculate_int_Data_5_.Q
+       & !calculate_int_Data_6_.Q & !resetButton_i & !calculate_un86_i_n
+    # dynamicshow_counter4_q_1_.Q & !calculate_int_Data_6_.Q & !resetButton_i
+       & !calculate_un86_i_n & !calculate_un82_i_n
+    # calculate_led_int_Data2_1_.Q & dynamicshow_counter4_q_2_.Q
+    # dynamicshow_counter4_q_1_.Q & dynamicshow_counter4_q_2_.Q ; (8 pterms, 12 signals)
+
+dynamicshow_out_2__n = dynamicshow_counter4_q_1_.Q & !calculate_int_Data_4_.Q
+       & !calculate_int_Data_5_.Q & !resetButton_i & !calculate_un84_i_n
+    # !dynamicshow_counter4_q_1_.Q & !dynamicshow_counter4_q_2_.Q & data0_2__n
+    # dynamicshow_counter4_q_1_.Q & !calculate_int_Data_6_.Q & !resetButton_i
+       & !calculate_un84_i_n
+    # calculate_led_int_Data2_2_.Q & dynamicshow_counter4_q_2_.Q
+    # dynamicshow_counter4_q_1_.Q & dynamicshow_counter4_q_2_.Q ; (5 pterms, 9 signals)
+
+dynamicshow_out_3__n = !dynamicshow_counter4_q_1_.Q
+       & !dynamicshow_counter4_q_2_.Q & calculate_G_340 & !resetButton_i
+    # calculate_led_int_Data2_1_.Q & dynamicshow_counter4_q_2_.Q
+    # data1_3__n & dynamicshow_counter4_q_1_.Q
+    # dynamicshow_counter4_q_1_.Q & dynamicshow_counter4_q_2_.Q ; (4 pterms, 6 signals)
+
+keyOut_0_.D = !calculate_scanvalue_0_.Q & !calculate_scanvalue_1_.Q ; (1 pterm, 2 signals)
+keyOut_0_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+keyOut_0_.CE = !resetButton_i ; (1 pterm, 1 signal)
+
+keyOut_1_.D = calculate_scanvalue_0_.Q & !calculate_scanvalue_1_.Q ; (1 pterm, 2 signals)
+keyOut_1_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+keyOut_1_.CE = !resetButton_i ; (1 pterm, 1 signal)
+
+keyOut_2_.D = !calculate_scanvalue_0_.Q & calculate_scanvalue_1_.Q ; (1 pterm, 2 signals)
+keyOut_2_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+keyOut_2_.CE = !resetButton_i ; (1 pterm, 1 signal)
+
+keyOut_3_.D = calculate_scanvalue_0_.Q & calculate_scanvalue_1_.Q ; (1 pterm, 2 signals)
+keyOut_3_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+keyOut_3_.CE = !resetButton_i ; (1 pterm, 1 signal)
+
+keyinbutton_i_0__n = !button1_d1_q_0_.Q & !button1_d2_q_0_.Q
+       & !button1_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyinbutton_i_1__n = !button2_d1_q_0_.Q & !button2_d2_q_0_.Q
+       & !button2_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyinbutton_i_2__n = !button3_d1_q_0_.Q & !button3_d2_q_0_.Q
+       & !button3_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+keyinbutton_i_3__n = !button4_d1_q_0_.Q & !button4_d2_q_0_.Q
+       & !button4_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+led_0_.D = !calculate_combvalue_0_.Q & !calculate_combvalue_1_.Q
+       & !calculate_combvalue_2_.Q & !calculate_combvalue_3_.Q
+    # !calculate_combvalue_4_.Q & !calculate_combvalue_6_.Q
+    # calculate_combvalue_4_.Q & calculate_combvalue_6_.Q
+    # calculate_combvalue_7_.Q
+    # calculate_combvalue_5_.Q ; (5 pterms, 8 signals)
+led_0_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+led_0_.AP = resetButton_i ; (1 pterm, 1 signal)
+
+led_1_.D = !calculate_combvalue_0_.Q & !calculate_combvalue_1_.Q
+       & !calculate_combvalue_2_.Q & !calculate_combvalue_3_.Q
+    # !calculate_combvalue_5_.Q & !calculate_combvalue_6_.Q
+    # calculate_combvalue_5_.Q & calculate_combvalue_6_.Q
+    # calculate_combvalue_7_.Q
+    # calculate_combvalue_4_.Q ; (5 pterms, 8 signals)
+led_1_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+led_1_.AP = resetButton_i ; (1 pterm, 1 signal)
+
+led_2_.D = !( !calculate_n_15_0_n & !calculate_combvalue_7_.Q
+       & calculate_combvalue_1_.Q
+    # !calculate_combvalue_4_.Q & !calculate_combvalue_5_.Q
+       & !calculate_combvalue_6_.Q & calculate_combvalue_7_.Q
+       & calculate_combvalue_2_.Q
+    # !calculate_combvalue_4_.Q & !calculate_combvalue_5_.Q
+       & !calculate_combvalue_6_.Q & calculate_combvalue_7_.Q
+       & calculate_combvalue_0_.Q
+    # !calculate_n_15_0_n & !calculate_combvalue_7_.Q
+       & calculate_combvalue_3_.Q ) ; (4 pterms, 9 signals)
+led_2_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+led_2_.AP = resetButton_i ; (1 pterm, 1 signal)
+
+led_3_.D = !( !calculate_combvalue_4_.Q & !calculate_combvalue_5_.Q
+       & !calculate_combvalue_6_.Q & calculate_combvalue_7_.Q
+       & calculate_combvalue_1_.Q
+    # !calculate_n_15_0_n & !calculate_combvalue_7_.Q
+       & calculate_combvalue_2_.Q
+    # !calculate_combvalue_4_.Q & !calculate_combvalue_5_.Q
+       & !calculate_combvalue_6_.Q & calculate_combvalue_7_.Q
+       & calculate_combvalue_2_.Q
+    # !calculate_n_15_0_n & !calculate_combvalue_7_.Q
+       & calculate_combvalue_3_.Q ) ; (4 pterms, 8 signals)
+led_3_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+led_3_.AP = resetButton_i ; (1 pterm, 1 signal)
+
+led_4_.D = !( !calculate_combvalue_4_.Q & !calculate_combvalue_5_.Q
+       & !calculate_combvalue_6_.Q & calculate_combvalue_7_.Q
+       & calculate_combvalue_3_.Q ) ; (1 pterm, 5 signals)
+led_4_.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+led_4_.AP = resetButton_i ; (1 pterm, 1 signal)
+
+pointTime.D = !keyOut_0_.Q & keyinbutton_i_2__n ; (1 pterm, 2 signals)
+pointTime.C = calculate_time1Oms.Q ; (1 pterm, 1 signal)
+pointTime.CE = pointTime_0 ; (1 pterm, 1 signal)
+pointTime.AP = resetButton_i ; (1 pterm, 1 signal)
+
+pointTime_0 = calculate_n_116_n
+    # !keyOut_0_.Q & !keyOut_2_.Q & !keyOut_1_.Q & keyinbutton_i_0__n
+       & keyinbutton_i_1__n & keyinbutton_i_2__n & !keyinbutton_i_3__n
+    # !keyOut_0_.Q & !keyOut_3_.Q & !keyOut_1_.Q & keyinbutton_i_0__n
+       & keyinbutton_i_1__n & keyinbutton_i_2__n & !keyinbutton_i_3__n
+    # !keyOut_3_.Q & !keyOut_2_.Q & !keyOut_1_.Q & calculate_flag_Data_0_.Q
+       & !calculate_flag_Data_1_.Q & keyinbutton_i_0__n & keyinbutton_i_1__n
+       & keyinbutton_i_2__n & !keyinbutton_i_3__n ; (4 pterms, 11 signals)
+
+resetButton_i = !button0_d1_q_0_.Q & !button0_d2_q_0_.Q & !button0_d3_q_0_.Q ; (1 pterm, 3 signals)
+
+show_0_ = !dynamicshow_out_1__n & !dynamicshow_out_2__n
+       & !dynamicshow_out_3__n
+    # dynamicshow_out_1__n & dynamicshow_out_0__n & dynamicshow_out_2__n
+    # dynamicshow_out_1__n & dynamicshow_out_0__n & dynamicshow_out_3__n
+    # dynamicshow_out_2__n & dynamicshow_out_3__n ; (4 pterms, 4 signals)
+
+show_1_ = dynamicshow_out_0__n & !dynamicshow_out_2__n & !dynamicshow_out_3__n
+    # dynamicshow_out_1__n & !dynamicshow_out_2__n
+    # dynamicshow_out_1__n & dynamicshow_out_0__n
+    # dynamicshow_out_2__n & dynamicshow_out_3__n ; (4 pterms, 4 signals)
+
+show_2_ = !( !dynamicshow_out_1__n & !dynamicshow_out_0__n
+       & !dynamicshow_out_2__n
+    # dynamicshow_out_1__n & !dynamicshow_out_0__n & !dynamicshow_out_3__n ) ; (2 pterms, 4 signals)
+
+show_3_.X1 = !dynamicshow_out_1__n & !dynamicshow_out_0__n
+    # dynamicshow_out_3__n
+    # dynamicshow_out_1__n & dynamicshow_out_0__n & dynamicshow_out_2__n ; (3 pterms, 4 signals)
+show_3_.X2 = !dynamicshow_out_1__n & !dynamicshow_out_2__n ; (1 pterm, 2 signals)
+
+show_4_ = dynamicshow_out_1__n & !dynamicshow_out_0__n & !dynamicshow_out_2__n
+    # dynamicshow_out_2__n & dynamicshow_out_3__n
+    # dynamicshow_out_1__n & dynamicshow_out_3__n ; (3 pterms, 4 signals)
+
+show_5_ = !dynamicshow_out_1__n & dynamicshow_out_0__n & dynamicshow_out_2__n
+    # dynamicshow_out_1__n & !dynamicshow_out_0__n & dynamicshow_out_2__n
+    # dynamicshow_out_1__n & dynamicshow_out_3__n
+    # dynamicshow_out_2__n & dynamicshow_out_3__n ; (4 pterms, 4 signals)
+
+show_6_ = !dynamicshow_out_1__n & dynamicshow_out_0__n & !dynamicshow_out_2__n
+       & !dynamicshow_out_3__n
+    # !dynamicshow_out_1__n & !dynamicshow_out_0__n & dynamicshow_out_2__n
+    # dynamicshow_out_1__n & dynamicshow_out_3__n
+    # dynamicshow_out_2__n & dynamicshow_out_3__n ; (4 pterms, 4 signals)
+

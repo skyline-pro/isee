@@ -1,0 +1,19 @@
+@N|Running in 64-bit mode
+@N:: Running Verilog Compiler in System Verilog mode
+@N:: Running Verilog Compiler in Multiple File Compilation Unit mode
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab11\dffre.v":14:7:14:11|Synthesizing module dffre
+@N: CG179 :"E:\Grade-3_2\ISP_Project\lab11\dffre.v":25:13:25:13|Removing redundant assignment
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab11\button.v":1:7:1:12|Synthesizing module button
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab11\keyboard.v":1:7:1:14|Synthesizing module keyboard
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":1:7:1:9|Synthesizing module i2c
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab11\counter_n.v":15:7:15:15|Synthesizing module counter_n
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab11\mux16to4.v":1:7:1:14|Synthesizing module mux16to4
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab11\decoderHex2Dec.v":1:7:1:20|Synthesizing module decoderHex2Dec
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab11\decoder2to4.v":1:7:1:17|Synthesizing module decoder2to4
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab11\dynamicShow.v":1:7:1:17|Synthesizing module dynamicshow
+@N: CG364 :"E:\Grade-3_2\ISP_Project\lab11\lab11.v":1:7:1:11|Synthesizing module lab11
+@N: CL201 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Trying to extract state machine for register eeprom_state
+@N: CL201 :"E:\Grade-3_2\ISP_Project\lab11\i2c.v":66:4:66:9|Trying to extract state machine for register bit_state
+@N: CL201 :"E:\Grade-3_2\ISP_Project\lab11\keyboard.v":75:4:75:9|Trying to extract state machine for register flag_Data
+@N: CL201 :"E:\Grade-3_2\ISP_Project\lab11\keyboard.v":16:4:16:9|Trying to extract state machine for register scanvalue
+

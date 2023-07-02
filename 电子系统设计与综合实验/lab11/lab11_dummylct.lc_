@@ -1,0 +1,375 @@
+[DEVICE]
+Family = lc4k;
+PartType = LC4256V;
+Package = 100TQFP;
+PartNumber = LC4256V-75T100I;
+Speed = -7.5;
+Operating_condition = IND;
+EN_Segment = Yes;
+Pin_MC_1to1 = No;
+Default_Device_Io_Types=LVCMOS18,-;
+Voltage = 3.3;
+
+[REVISION]
+RCS = "$Header $";
+Parent = lc4k256v.lci;
+Design = ;
+DATE = 05/08/2016;
+TIME = 10:44:41;
+Source_Format = Pure_Verilog_HDL;
+Type = ;
+Pre_Fit_Time = ;
+
+[IGNORE ASSIGNMENTS]
+Pin_Assignments = No;
+Pin_Keep_Block = No;
+Pin_Keep_Segment = No;
+Group_Assignments = No;
+Macrocell_Assignments = No;
+Macrocell_Keep_Block = No;
+Macrocell_Keep_Segment = No;
+Pin_Reservation = No;
+Block_Reservation = No;
+Segment_Reservation = No;
+Timing_Constraints = No;
+IO_Types = No;
+
+[CLEAR ASSIGNMENTS]
+Pin_Assignments = No;
+Pin_Keep_Block = No;
+Pin_Keep_Segment = No;
+Group_Assignments = No;
+Macrocell_Assignments = No;
+Macrocell_Keep_Block = No;
+Macrocell_Keep_Segment = No;
+Pin_Reservation = No;
+Block_Reservation = No;
+Segment_Reservation = No;
+Timing_Constraints = No;
+IO_Types = No;
+
+[BACKANNOTATE ASSIGNMENTS]
+Pin_Assignment = No;
+Pin_Block = No;
+Pin_Macrocell_Block = No;
+Routing = No;
+Io_Types = No;
+
+[GLOBAL CONSTRAINTS]
+Max_Fanin = 24;
+Max_PTerm_Split = 80;
+Max_PTerm_Collapse = 16;
+Max_Pin_Percent = 100;
+Max_Macrocell_Percent = 100;
+Max_GLB_Input_Percent = 100;
+Logic_Reduction = Yes;
+XOR_Synthesis = Yes;
+Keep_XOR = No;
+DT_Synthesis = Yes;
+Node_Collapse = Yes;
+Nodes_collapsing_mode = FMAX;
+Fmax_Logic_Level = 1;
+Use_CE = Yes;
+Use_Internal_COM_FB = Yes;
+Set_Reset_Swap = No;
+Clock_Optimize = No;
+EN_Set_Reset_Dont_Care = No;
+TOE_AS_IO = No;
+Set_Reset_Dont_Care = No;
+EN_In_Reg_Optimize = No;
+In_Reg_Optimize = Yes;
+Run_Time = 0;
+Routing_Attempts = 2;
+Balanced_Partitioning = Yes;
+Spread_Placement = Yes;
+Usercode = ;
+Usercode_Format = HEX;
+Vcc = ;
+Dual_Function_Macrocell = 1;
+Global_PTOE = Yes;
+Hard_Fast_Bypass = No;
+Fitter_Effort_Level = LOW;
+Auto_buffering_for_high_glb_fanin = Off;
+Auto_buffering_for_low_bonded_io = Off;
+User_max_glb_fanin = 36;
+Adjust_input_assignments = Off;
+
+[LOCATION ASSIGNMENTS]
+// Block A
+i2c_DataLED2_0_=node,-,-,A,6;
+button4_d1_q_0_=node,-,-,A,3;
+button0_d1_q_0_=node,-,-,A,4;
+dynamicshow_out_0__n=node,-,-,A,0;
+i2c_WrData_0_=node,-,-,A,8;
+i2c_WrData_3_=node,-,-,A,9;
+i2c_WrData_4_=node,-,-,A,10;
+i2c_WrData_7_=node,-,-,A,12;
+i2c_bit_state_2_=node,-,-,A,1;
+dynamicshow_out_3__n=node,-,-,A,5;
+SCL_0=node,-,-,A,7;
+i2c_sda_tem_0=node,-,-,A,2;
+// Block B
+i2c_DataLED_2_=node,-,-,B,5;
+i2c_DataLED_3_=node,-,-,B,6;
+i2c_DataLED2_3_=node,-,-,B,7;
+dynamicshow_counter4_q_1_=node,-,-,B,8;
+dynamicshow_out_1__n=node,-,-,B,3;
+i2c_RdData_2_=node,-,-,B,1;
+i2c_RdData_3_=node,-,-,B,2;
+i2c_RdData_7_=node,-,-,B,0;
+i2c_WrData_1_=node,-,-,B,9;
+i2c_WrData_2_=node,-,-,B,10;
+i2c_WrData_5_=node,-,-,B,11;
+i2c_WrData_6_=node,-,-,B,13;
+dynamicshow_out_2__n=node,-,-,B,4;
+// Block C
+SCL=pin,6,-,C,8;
+SDA=pin,5,-,C,6;
+// Block D
+keyIn_3_=pin,11,-,D,4;
+keyIn_2_=pin,10,-,D,6;
+keyIn_1_=pin,9,-,D,10;
+keyIn_0_=pin,8,-,D,12;
+i2c_DataLED_0_=node,-,-,D,2;
+i2c_DataLED_1_=node,-,-,D,3;
+i2c_DataLED2_1_=node,-,-,D,4;
+i2c_DataLED2_2_=node,-,-,D,5;
+i2c_RdData_0_=node,-,-,D,0;
+i2c_RdData_1_=node,-,-,D,6;
+i2c_RdData_4_=node,-,-,D,7;
+i2c_RdData_5_=node,-,-,D,1;
+i2c_RdData_6_=node,-,-,D,9;
+i2c_sda_tem=node,-,-,D,12;
+// Block E
+i2c_bit_state_0_=node,-,-,E,1;
+i2c_bit_state_3_=node,-,-,E,3;
+i2c_bit_state_5_=node,-,-,E,5;
+i2c_DataLED_0__0=node,-,-,E,11;
+i2c_RdData_0__0=node,-,-,E,7;
+// Block F
+keyOut_1_=pin,22,-,F,1;
+keyOut_0_=pin,21,-,F,0;
+keyboard_int_Data0_0_=node,-,-,F,8;
+keyboard_combvalue_1_=node,-,-,F,5;
+button0_d2_q_0_=node,-,-,F,9;
+keyboard_scanvalue_1_=node,-,-,F,12;
+i2c_Flag_RW=node,-,-,F,7;
+// Block G
+keyOut_2_=pin,28,-,G,1;
+keyOut_3_=pin,29,-,G,0;
+keyboard_led_int_Data1_0_=node,-,-,G,8;
+keyboard_led_int_Data1_1_=node,-,-,G,11;
+keyboard_led_int_Data1_2_=node,-,-,G,12;
+keyboard_led_int_Data1_3_=node,-,-,G,13;
+keyboard_int_Data0_1_=node,-,-,G,10;
+keyboard_scanvalue_0_=node,-,-,G,14;
+keyboard_flag_Data_1_=node,-,-,G,7;
+keyboard_led_int_Data1_0__0=node,-,-,G,9;
+keyboard_int_Data0_3__0=node,-,-,G,6;
+// Block H
+led_2_=pin,37,-,H,6;
+led_1_=pin,36,-,H,7;
+led_0_=pin,35,-,H,0;
+keyboard_combvalue_6_=node,-,-,H,13;
+button3_d2_q_0_=node,-,-,H,8;
+button3_d3_q_0_=node,-,-,H,10;
+button1_d3_q_0_=node,-,-,H,11;
+keyboard_int_Data1_0__0=node,-,-,H,5;
+// Block I
+led_4_=pin,42,-,I,6;
+led_3_=pin,41,-,I,2;
+keyboard_timecnt_6_=node,-,-,I,3;
+keyboard_timecnt_9_=node,-,-,I,9;
+keyboard_timecnt_11_=node,-,-,I,10;
+keyboard_time1Oms=node,-,-,I,0;
+keyboard_timecnt_0_=node,-,-,I,12;
+keyboard_timecnt_2_=node,-,-,I,4;
+keyboard_timecnt_3_=node,-,-,I,1;
+keyboard_timecnt_5_=node,-,-,I,5;
+keyboard_timecnt_13_=node,-,-,I,7;
+keyboard_timecnt_14_=node,-,-,I,8;
+// Block J
+reset=pin,47,-,J,2;
+CMD_RD=pin,48,-,J,6;
+CMD_WR=pin,49,-,J,10;
+button1_d1_q_0_=node,-,-,J,2;
+i2c_key_delay_5_=node,-,-,J,4;
+i2c_key_delay_0_=node,-,-,J,5;
+i2c_key_delay_4_=node,-,-,J,3;
+i2c_key_delay_1_=node,-,-,J,7;
+i2c_key_delay_6_=node,-,-,J,8;
+i2c_key_delay_9_=node,-,-,J,9;
+i2c_key_delay_8_=node,-,-,J,10;
+i2c_key_delay_7_=node,-,-,J,12;
+i2c_start_delay=node,-,-,J,0;
+i2c_bit_state_1_=node,-,-,J,1;
+i2c_eeprom_state_0_=node,-,-,J,6;
+// Block K
+LEDVCC_1_=pin,55,-,K,7;
+LEDVCC_0_=pin,54,-,K,0;
+show_5_=pin,56,-,K,2;
+button3_d1_q_0_=node,-,-,K,12;
+dynamicshow_counter4_q_2_=node,-,-,K,4;
+i2c_key_delay_2_=node,-,-,K,9;
+i2c_key_delay_3_=node,-,-,K,3;
+i2c_bit_state_4_=node,-,-,K,5;
+i2c_eeprom_state_1_=node,-,-,K,1;
+// Block L
+show_6_=pin,61,-,L,4;
+show_1_=pin,60,-,L,6;
+show_0_=pin,58,-,L,0;
+keyboard_timecnt_4_=node,-,-,L,1;
+keyboard_timecnt_7_=node,-,-,L,9;
+keyboard_timecnt_15_=node,-,-,L,12;
+keyboard_timecnt_1_=node,-,-,L,2;
+keyboard_timecnt_8_=node,-,-,L,3;
+keyboard_timecnt_10_=node,-,-,L,5;
+keyboard_timecnt_12_=node,-,-,L,7;
+// Block M
+show_4_=pin,66,-,M,0;
+show_3_=pin,64,-,M,4;
+show_2_=pin,65,-,M,6;
+keyboard_led_int_Data0_0_=node,-,-,M,1;
+keyboard_combvalue_4_=node,-,-,M,12;
+keyboard_led_int_Data0_3_=node,-,-,M,2;
+keyboard_int_Data1_1_=node,-,-,M,3;
+keyboard_int_Data1_2_=node,-,-,M,9;
+keyboard_int_Data1_3_=node,-,-,M,5;
+button1_d2_q_0_=node,-,-,M,7;
+// Block N
+LEDVCC_3_=pin,72,-,N,1;
+button4_d2_q_0_=node,-,-,N,9;
+button4_d3_q_0_=node,-,-,N,10;
+button2_d2_q_0_=node,-,-,N,11;
+button2_d3_q_0_=node,-,-,N,13;
+keyboard_led_int_Data0_0__0=node,-,-,N,7;
+// Block O
+LEDVCC_2_=pin,78,-,O,0;
+keyboard_led_int_Data0_1_=node,-,-,O,1;
+keyboard_led_int_Data0_2_=node,-,-,O,2;
+keyboard_int_Data0_3_=node,-,-,O,7;
+keyboard_int_Data0_2_=node,-,-,O,5;
+i2c_phase1=node,-,-,O,3;
+i2c_phase3=node,-,-,O,4;
+i2c_phase0=node,-,-,O,10;
+i2c_phase2=node,-,-,O,11;
+i2c_clk_div_2_=node,-,-,O,8;
+i2c_clk_div_3_=node,-,-,O,6;
+i2c_clk_div_0_=node,-,-,O,13;
+i2c_clk_div_1_=node,-,-,O,9;
+// Block P
+keyboard_combvalue_5_=node,-,-,P,8;
+keyboard_combvalue_7_=node,-,-,P,9;
+keyboard_int_Data1_0_=node,-,-,P,5;
+button2_d1_q_0_=node,-,-,P,6;
+keyboard_combvalue_0_=node,-,-,P,10;
+keyboard_combvalue_2_=node,-,-,P,11;
+keyboard_combvalue_3_=node,-,-,P,13;
+button0_d3_q_0_=node,-,-,P,7;
+keyboard_flag_Data_0_=node,-,-,P,4;
+// Input/Clock Pins
+clkl=pin,39,-,-,-;
+clkh=pin,88,-,-,-;
+
+[PTOE ASSIGNMENTS]
+
+[FAST BYPASS]
+Default=NONE;
+BYPASS=;
+
+[ORP BYPASS]
+default=NONE;
+
+[INPUT REGISTERS]
+Default=NONE;
+;
+
+[IO TYPES]
+keyIn_3_=LVCMOS18,pin,-,-;
+clkh=LVCMOS18,pin,-,-;
+clkl=LVCMOS18,pin,-,-;
+reset=LVCMOS18,pin,-,-;
+CMD_RD=LVCMOS18,pin,-,-;
+CMD_WR=LVCMOS18,pin,-,-;
+keyIn_2_=LVCMOS18,pin,-,-;
+keyIn_1_=LVCMOS18,pin,-,-;
+keyIn_0_=LVCMOS18,pin,-,-;
+LEDVCC_2_=LVCMOS18,pin,1,-;
+LEDVCC_1_=LVCMOS18,pin,1,-;
+LEDVCC_3_=LVCMOS18,pin,1,-;
+LEDVCC_0_=LVCMOS18,pin,1,-;
+show_5_=LVCMOS18,pin,1,-;
+show_6_=LVCMOS18,pin,1,-;
+show_4_=LVCMOS18,pin,1,-;
+show_3_=LVCMOS18,pin,1,-;
+show_2_=LVCMOS18,pin,1,-;
+show_1_=LVCMOS18,pin,1,-;
+show_0_=LVCMOS18,pin,1,-;
+led_2_=LVCMOS18,pin,0,-;
+led_1_=LVCMOS18,pin,0,-;
+led_0_=LVCMOS18,pin,0,-;
+keyOut_2_=LVCMOS18,pin,0,-;
+led_4_=LVCMOS18,pin,1,-;
+keyOut_1_=LVCMOS18,pin,0,-;
+keyOut_0_=LVCMOS18,pin,0,-;
+keyOut_3_=LVCMOS18,pin,0,-;
+SCL=LVCMOS18,pin,0,-;
+SDA=LVCMOS18,pin,0,-;
+led_3_=LVCMOS18,pin,1,-;
+
+[PLL ASSIGNMENTS]
+
+[RESOURCE RESERVATIONS]
+layer=OFF;
+
+[SLEWRATE]
+Default=FAST;
+
+[PULLUP]
+Default=UP;
+
+[FITTER RESULTS]
+I/O_pin_util = 45;
+I/O_pin = 29;
+Logic_PT_util = 48;
+Logic_PT = 624;
+Occupied_MC_util = 70;
+Occupied_MC = 181;
+Occupied_PT_util = 59;
+Occupied_PT = 788;
+GLB_input_util = 68;
+GLB_input = 397;
+
+[TIMING CONSTRAINTS]
+layer=OFF;
+
+[FITTER REPORT FORMAT]
+Fitter_Options = Yes;
+Pinout_Diagram = No;
+Pinout_Listing = Yes;
+Detailed_Block_Segment_Summary = Yes;
+Input_Signal_List = Yes;
+Output_Signal_List = Yes;
+Bidir_Signal_List = Yes;
+Node_Signal_List = Yes;
+Signal_Fanout_List = Yes;
+Block_Segment_Fanin_List = Yes;
+Postfit_Eqn = Yes;
+Page_Break = Yes;
+Detailed = No;
+
+[POWER]
+Default=HIGH;
+
+[SOURCE_CONSTRAINT_OPTION]
+
+[HARDWARE DEVICE OPTIONS]
+Zero_Hold_Time = No;
+Signature_Word = ;
+Pullup = No;
+Slew_Rate = FAST;
+
+[TIMING ANALYZER]
+Last_source=;
+Last_source_type=Fmax;
+

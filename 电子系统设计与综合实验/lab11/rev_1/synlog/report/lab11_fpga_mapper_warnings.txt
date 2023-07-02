@@ -1,0 +1,12 @@
+@W: MO171 :"e:\grade-3_2\isp_project\lab11\i2c.v":20:4:20:9|Sequential instance i2c.phase0 reduced to a combinational gate by constant propagation 
+@W: MO171 :"e:\grade-3_2\isp_project\lab11\i2c.v":20:4:20:9|Sequential instance i2c.phase1 reduced to a combinational gate by constant propagation 
+@W: MO171 :"e:\grade-3_2\isp_project\lab11\i2c.v":20:4:20:9|Sequential instance i2c.phase2 reduced to a combinational gate by constant propagation 
+@W: MO171 :"e:\grade-3_2\isp_project\lab11\i2c.v":20:4:20:9|Sequential instance i2c.phase3 reduced to a combinational gate by constant propagation 
+@W: MO171 :"e:\grade-3_2\isp_project\lab11\i2c.v":66:4:66:9|Sequential instance i2c.start_delay reduced to a combinational gate by constant propagation 
+@W:"e:\grade-3_2\isp_project\lab11\i2c.v":75:16:75:19|Optimizing internal tristate to a wire based on don't care (X) analysis
+@W: BN132 :"e:\grade-3_2\isp_project\lab11\i2c.v":52:4:52:9|Removing instance i2c.key_delay[1],  because it is equivalent to instance i2c.key_delay[0]
+@W: BN132 :"e:\grade-3_2\isp_project\lab11\i2c.v":52:4:52:9|Removing instance i2c.key_delay[9],  because it is equivalent to instance i2c.key_delay[0]
+@W: FC103 :|Internal tri state i2c.DataLED_2_2 converted to mux. Simulation mismatch can happen 
+@W: FC103 :|Internal tri state i2c.DataLED_2_1 converted to mux. Simulation mismatch can happen 
+@W: FC103 :|Internal tri state i2c.DataLED_2_0 converted to mux. Simulation mismatch can happen 
+@W: FC103 :|Internal tri state i2c.DataLED_2 converted to mux. Simulation mismatch can happen 

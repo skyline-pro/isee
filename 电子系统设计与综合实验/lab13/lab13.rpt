@@ -1,0 +1,2447 @@
+|--------------------------------------------------------------|
+|- ispLEVER Classic 2.1.00.02.49.20 Fitter Report File        -|
+|- Copyright(C), 1992-2012, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+
+
+The Basic/Detailed Report Format can be selected in the dialog box
+Tools->Fitter Report File Format...
+
+Project_Summary
+~~~~~~~~~~~~~~~
+Project Name         :  lab13
+Project Path         :  E:\Grade-3_2\ISP_Project\lab13
+Project Fitted on    :  Fri May 13 09:17:07 2022
+
+Device               :  M4256_96
+Package              :  144
+GLB Input Mux Size   :  33
+Available Blocks     :  16
+Speed                :  -7.5
+Part Number          :  LC4256V-75T144I
+Source Format        :  Pure_Verilog_HDL
+
+
+// Project 'lab13' Fit Successfully! //
+
+
+Compilation_Times
+~~~~~~~~~~~~~~~~~
+Prefit Time                     0 secs
+Load Design Time                0.05 secs
+Partition Time                  0.22 secs
+Place Time                      0.00 secs
+Route Time                      0.00 secs
+Total Fit Time                  00:00:01
+
+
+Design_Summary
+~~~~~~~~~~~~~~
+Total Input Pins                2
+Total Logic Functions           238
+  Total Output Pins             11
+  Total Bidir I/O Pins          0
+  Total Buried Nodes            227
+Total Flip-Flops                229
+  Total D Flip-Flops            225
+  Total T Flip-Flops            4
+  Total Latches                 0
+Total Product Terms             1264
+
+Total Reserved Pins             0
+Total Locked Pins               13
+Total Locked Nodes              0
+
+Total Unique Output Enables     0
+Total Unique Clocks             2
+Total Unique Clock Enables      3
+Total Unique Resets             1
+Total Unique Presets            1
+
+Fmax Logic Levels               2
+
+
+Device_Resource_Summary
+~~~~~~~~~~~~~~~~~~~~~~~
+                                 Device
+                                 Total    Used   Not Used   Utilization
+-----------------------------------------------------------------------
+Dedicated Pins
+  Clock/Input Pins                  4        1      3    -->    25
+  Input-Only Pins                  10        0     10    -->     0
+  I/O / Enable Pins                 2        0      2    -->     0
+I/O Pins                           94       12     82    -->    12
+Logic Functions                   256      238     18    -->    92
+  Input Registers                  96        0     96    -->     0
+
+GLB Inputs                        576      411    165    -->    71
+Logical Product Terms            1280     1033    247    -->    80
+Occupied GLBs                      16       16      0    -->   100
+Macrocells                        256      238     18    -->    92
+
+Control Product Terms:
+  GLB Clock/Clock Enables          16       15      1    -->    93
+  GLB Reset/Presets                16        0     16    -->     0
+  Macrocell Clocks                256      124    132    -->    48
+  Macrocell Clock Enables         256       76    180    -->    29
+  Macrocell Enables               256        0    256    -->     0
+  Macrocell Resets                256        7    249    -->     2
+  Macrocell Presets               256        1    255    -->     0
+
+Global Routing Pool               356      229    127    -->    64
+  GRP from IFB                     ..        1     ..    -->    ..
+    (from input signals)           ..        1     ..    -->    ..
+    (from output signals)          ..        0     ..    -->    ..
+    (from bidir signals)           ..        0     ..    -->    ..
+  GRP from MFB                     ..      228     ..    -->    ..
+----------------------------------------------------------------------
+
+<Note> 1 : The available PT is the product term that has not been used.
+<Note> 2 : IFB is I/O feedback.
+<Note> 3 : MFB is macrocell feedback.
+
+
+
+GLB_Resource_Summary
+~~~~~~~~~~~~~~~~~~~~
+                                                                                     # of PT
+               ---  Fanin  ---    I/O    Input  Macrocells       Macrocells   Logic  clusters
+             Unique Shared Total  Pins    Regs Used Inaccessible  available    PTs   used
+-------------------------------------------------------------------------------------------
+Maximum
+  GLB                      36      *(1)     8   --     --             16       80       16
+-------------------------------------------------------------------------------------------
+  GLB    A      8    17    25      0/6      0   15      0              1       64       15
+  GLB    B      7    21    28      0/6      0   14      2              0       72       16
+  GLB    C      7    22    29      0/6      0   15      1              0       65       16
+  GLB    D      6    18    24      0/6      0   15      0              1       73       15
+-------------------------------------------------------------------------------------------
+  GLB    E      5    17    22      0/6      0   16      0              0       35       15
+  GLB    F      7    20    27      0/6      0   15      0              1       63       16
+  GLB    G     11    16    27      0/6      0   15      0              1       61       15
+  GLB    H      6    18    24      0/6      0   15      0              1       64       15
+-------------------------------------------------------------------------------------------
+  GLB    I      8    17    25      0/6      0   16      0              0       62       16
+  GLB    J      9    17    26      1/6      0   16      0              0       65       16
+  GLB    K      7    24    31      3/6      0   16      0              0       72       16
+  GLB    L      8    18    26      5/6      0   11      3              2       72       16
+-------------------------------------------------------------------------------------------
+  GLB    M      7    21    28      2/6      0   14      2              0       65       16
+  GLB    N      4    18    22      1/6      0   15      0              1       60       15
+  GLB    O      4    20    24      0/6      0   15      0              1       72       15
+  GLB    P      4    19    23      0/6      0   15      0              1       68       15
+-------------------------------------------------------------------------------------------
+TOTALS:       108   303   411     12/96     0  238      8             10     1033      248
+
+<Note> 1 : For ispMACH 4000 devices, the number of IOs depends on the GLB.
+<Note> 2 : Four rightmost columns above reflect last status of the placement process.
+
+
+
+GLB_Control_Summary
+~~~~~~~~~~~~~~~~~~~
+           Shared Shared | Mcell  Mcell  Mcell  Mcell  Mcell 
+           Clk/CE Rst/Pr | Clock  CE     Enable Reset  Preset
+------------------------------------------------------------------------------
+Maximum
+  GLB        1      1        16     16     16     16     16  
+==============================================================================
+  GLB    A   1      0        15      0      0      0      0
+  GLB    B   1      0         0     13      0      0      1
+  GLB    C   1      0        14      0      0      0      0
+  GLB    D   1      0        15      0      0      0      0
+------------------------------------------------------------------------------
+  GLB    E   0      0         0      0      0      0      0
+  GLB    F   1      0         8      0      0      0      0
+  GLB    G   1      0        12      0      0      0      0
+  GLB    H   1      0        15      0      0      0      0
+------------------------------------------------------------------------------
+  GLB    I   1      0         0     15      0      1      0
+  GLB    J   1      0        16      0      0      0      0
+  GLB    K   1      0         0     13      0      5      0
+  GLB    L   1      0         0      9      0      0      0
+------------------------------------------------------------------------------
+  GLB    M   1      0         0     12      0      1      0
+  GLB    N   1      0        14      0      0      0      0
+  GLB    O   1      0         0     14      0      0      0
+  GLB    P   1      0        15      0      0      0      0
+------------------------------------------------------------------------------
+
+<Note> 1 : For ispMACH 4000 devices, the number of output enables depends on the GLB.
+
+
+
+Optimizer_and_Fitter_Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Pin Assignment :                       Yes
+Group Assignment :                     No
+Pin Reservation :                      No
+
+@Ignore_Project_Constraints :
+  Pin Assignments :                    No
+      Keep Block Assignment            --
+      Keep Segment Assignment          --
+  Group Assignments :                  No
+  Macrocell Assignment :               No
+      Keep Block Assignment            --
+      Keep Segment Assignment          --
+
+@Backannotate_Project_Constraints
+  Pin Assignments :                    No
+  Pin And Block Assignments :          No
+  Pin, Macrocell and Block :           No
+
+@Timing_Constraints :                  No
+
+@Global_Project_Optimization :
+  Balanced Partitioning :              No
+  Spread Placement :                   Yes
+
+  Note :
+    Pack Design :
+       Balanced Partitioning = No
+       Spread Placement      = No
+    Spread Design :
+       Balanced Partitioning = Yes
+       Spread Placement      = Yes
+
+
+@Logic_Synthesis :
+  Logic Reduction :                    Yes
+  Node Collapsing :                    FMAX
+  Fmax_Logic_Level :                   1
+  D/T Synthesis :                      Yes
+  XOR Synthesis :                      Yes
+  Max. P-Term for Collapsing :         16
+  Max. P-Term for Splitting :          80
+  Max Symbols :                        24
+
+@Utilization_options
+  Max. % of Macrocells used :          100
+@Usercode                               (HEX)
+@IO_Types                              Default = LVCMOS33 (2)
+@Output_Slew_Rate                      Default = FAST (2)
+@Power                                 Default = HIGH (2)
+@Pull                                  Default = PULLUP_UP (2)
+@Fast_Bypass                           Default = None (2)
+@ORP_Bypass                            Default = None
+@Input_Registers                       Default = None (2)
+@Register_Powerup                      Default = None
+
+Device Options:
+<Note> 1 : Reserved unused I/Os can be independently driven to Low or High, and does not
+           follow the drive level set for the Global Configure Unused I/O Option.
+<Note> 2 : For user-specified constraints on individual signals, refer to the Output,
+           Bidir and Buried Signal Lists.
+
+
+
+Pinout_Listing
+~~~~~~~~~~~~~~
+      | Pin   | Bank |GLB |Assigned|                 | Signal|
+Pin No| Type  |Number|Pad |Pin     |     I/O Type    | Type  | Signal name
+----------------------------------------------------------------------------------
+1     | GND   |   -  |    |        |                 |       |
+2     | TDI   |   -  |    |        |                 |       |
+3     |VCCIO0 |   -  |    |        |                 |       |
+4     |  I_O  |   0  |C12 |        |                 |       |
+5     |  I_O  |   0  |C10 |        |                 |       |
+6     |  I_O  |   0  |C8  |        |                 |       |
+7     |  I_O  |   0  |C6  |        |                 |       |
+8     |  I_O  |   0  |C4  |        |                 |       |
+9     |  I_O  |   0  |C2  |        |                 |       |
+10    |GNDIO0 |   -  |    |        |                 |       |
+11    |  I_O  |   0  |D14 |        |                 |       |
+12    |  I_O  |   0  |D12 |        |                 |       |
+13    |  I_O  |   0  |D10 |        |                 |       |
+14    |  I_O  |   0  |D8  |        |                 |       |
+15    |  I_O  |   0  |D6  |        |                 |       |
+16    |  I_O  |   0  |D4  |        |                 |       |
+17    | IN0   |   0  |    |        |                 |       |
+18    | NC    |   -  |    |        |                 |       |
+19    |VCCIO0 |   -  |    |        |                 |       |
+20    | IN1   |   0  |    |        |                 |       |
+21    |  I_O  |   0  |E2  |        |                 |       |
+22    |  I_O  |   0  |E4  |        |                 |       |
+23    |  I_O  |   0  |E6  |        |                 |       |
+24    |  I_O  |   0  |E8  |        |                 |       |
+25    |  I_O  |   0  |E10 |        |                 |       |
+26    |  I_O  |   0  |E12 |        |                 |       |
+27    |GNDIO0 |   -  |    |        |                 |       |
+28    |  I_O  |   0  |F2  |        |                 |       |
+29    |  I_O  |   0  |F4  |        |                 |       |
+30    |  I_O  |   0  |F6  |        |                 |       |
+31    |  I_O  |   0  |F8  |        |                 |       |
+32    |  I_O  |   0  |F10 |        |                 |       |
+33    |  I_O  |   0  |F12 |        |                 |       |
+34    |VCCIO0 |   -  |    |        |                 |       |
+35    | TCK   |   -  |    |        |                 |       |
+36    | VCC   |   -  |    |        |                 |       |
+37    | GND   |   -  |    |        |                 |       |
+38    | IN2   |   0  |    |        |                 |       |
+39    |  I_O  |   0  |G12 |        |                 |       |
+40    |  I_O  |   0  |G10 |        |                 |       |
+41    |  I_O  |   0  |G8  |        |                 |       |
+42    |  I_O  |   0  |G6  |        |                 |       |
+43    |  I_O  |   0  |G4  |        |                 |       |
+44    |  I_O  |   0  |G2  |        |                 |       |
+45    | IN3   |   0  |    |        |                 |       |
+46    |GNDIO0 |   -  |    |        |                 |       |
+47    |VCCIO0 |   -  |    |        |                 |       |
+48    |  I_O  |   0  |H12 |        |                 |       |
+49    |  I_O  |   0  |H10 |        |                 |       |
+50    |  I_O  |   0  |H8  |        |                 |       |
+51    |  I_O  |   0  |H6  |        |                 |       |
+52    |  I_O  |   0  |H4  |        |                 |       |
+53    |  I_O  |   0  |H2  |        |                 |       |
+54    |INCLK1 |   0  |    |        |                 |       |
+55    |GNDIO1 |   -  |    |        |                 |       |
+56    |INCLK2 |   1  |    |        |                 |       |
+57    | VCC   |   -  |    |        |                 |       |
+58    |  I_O  |   1  |I2  |        |                 |       |
+59    |  I_O  |   1  |I4  |        |                 |       |
+60    |  I_O  |   1  |I6  |        |                 |       |
+61    |  I_O  |   1  |I8  |        |                 |       |
+62    |  I_O  |   1  |I10 |        |                 |       |
+63    |  I_O  |   1  |I12 |        |                 |       |
+64    |VCCIO1 |   -  |    |        |                 |       |
+65    |GNDIO1 |   -  |    |        |                 |       |
+66    |  I_O  |   1  |J2  |        |                 |       |
+67    |  I_O  |   1  |J4  |        |                 |       |
+68    |  I_O  |   1  |J6  |    *   |LVCMOS33         | Input |reset
+69    |  I_O  |   1  |J8  |        |                 |       |
+70    |  I_O  |   1  |J10 |        |                 |       |
+71    |  I_O  |   1  |J12 |        |                 |       |
+72    | IN4   |   0  |    |        |                 |       |
+73    | GND   |   -  |    |        |                 |       |
+74    | TMS   |   -  |    |        |                 |       |
+75    |VCCIO1 |   -  |    |        |                 |       |
+76    |  I_O  |   1  |K12 |        |                 |       |
+77    |  I_O  |   1  |K10 |        |                 |       |
+78    |  I_O  |   1  |K8  |        |                 |       |
+79    |  I_O  |   1  |K6  |    *   |LVCMOS33         | Output|lcdD_6_
+80    |  I_O  |   1  |K4  |    *   |LVCMOS33         | Output|lcdD_7_
+81    |  I_O  |   1  |K2  |    *   |LVCMOS33         | Output|lcdD_4_
+82    |GNDIO1 |   -  |    |        |                 |       |
+83    |  I_O  |   1  |L14 |    *   |LVCMOS33         | Output|lcdD_5_
+84    |  I_O  |   1  |L12 |    *   |LVCMOS33         | Output|lcdD_2_
+85    |  I_O  |   1  |L10 |    *   |LVCMOS33         | Output|lcdD_3_
+86    |  I_O  |   1  |L8  |    *   |LVCMOS33         | Output|lcdD_0_
+87    |  I_O  |   1  |L6  |    *   |LVCMOS33         | Output|lcdD_1_
+88    |  I_O  |   1  |L4  |        |                 |       |
+89    | IN5   |   1  |    |        |                 |       |
+90    | NC    |   -  |    |        |                 |       |
+91    |VCCIO1 |   -  |    |        |                 |       |
+92    | IN6   |   1  |    |        |                 |       |
+93    |  I_O  |   1  |M2  |        |                 |       |
+94    |  I_O  |   1  |M4  |        |                 |       |
+95    |  I_O  |   1  |M6  |        |                 |       |
+96    |  I_O  |   1  |M8  |    *   |LVCMOS33         | Output|ledEN
+97    |  I_O  |   1  |M10 |        |                 |       |
+98    |  I_O  |   1  |M12 |    *   |LVCMOS33         | Output|lcdRs
+99    |GNDIO1 |   -  |    |        |                 |       |
+100   |  I_O  |   1  |N2  |    *   |LVCMOS33         | Output|lcdRw
+101   |  I_O  |   1  |N4  |        |                 |       |
+102   |  I_O  |   1  |N6  |        |                 |       |
+103   |  I_O  |   1  |N8  |        |                 |       |
+104   |  I_O  |   1  |N10 |        |                 |       |
+105   |  I_O  |   1  |N12 |        |                 |       |
+106   |VCCIO1 |   -  |    |        |                 |       |
+107   | TDO   |   -  |    |        |                 |       |
+108   | VCC   |   -  |    |        |                 |       |
+109   | GND   |   -  |    |        |                 |       |
+110   | IN7   |   1  |    |        |                 |       |
+111   |  I_O  |   1  |O12 |        |                 |       |
+112   |  I_O  |   1  |O10 |        |                 |       |
+113   |  I_O  |   1  |O8  |        |                 |       |
+114   |  I_O  |   1  |O6  |        |                 |       |
+115   |  I_O  |   1  |O4  |        |                 |       |
+116   |  I_O  |   1  |O2  |        |                 |       |
+117   | IN8   |   1  |    |        |                 |       |
+118   |GNDIO1 |   -  |    |        |                 |       |
+119   |VCCIO1 |   -  |    |        |                 |       |
+120   |  I_O  |   1  |P12 |        |                 |       |
+121   |  I_O  |   1  |P10 |        |                 |       |
+122   |  I_O  |   1  |P8  |        |                 |       |
+123   |  I_O  |   1  |P6  |        |                 |       |
+124   |  I_O  |   1  |P4  |        |                 |       |
+125   | I_O/OE|   1  |P2  |        |                 |       |
+126   |INCLK3 |   1  |    |        |                 |       |
+127   |GNDIO0 |   -  |    |        |                 |       |
+128   |INCLK0 |   0  |    |    *   |LVCMOS33         | Input |clk_50m
+129   | VCC   |   -  |    |        |                 |       |
+130   | I_O/OE|   0  |A2  |        |                 |       |
+131   |  I_O  |   0  |A4  |        |                 |       |
+132   |  I_O  |   0  |A6  |        |                 |       |
+133   |  I_O  |   0  |A8  |        |                 |       |
+134   |  I_O  |   0  |A10 |        |                 |       |
+135   |  I_O  |   0  |A12 |        |                 |       |
+136   |VCCIO0 |   -  |    |        |                 |       |
+137   |GNDIO0 |   -  |    |        |                 |       |
+138   |  I_O  |   0  |B2  |        |                 |       |
+139   |  I_O  |   0  |B4  |        |                 |       |
+140   |  I_O  |   0  |B6  |        |                 |       |
+141   |  I_O  |   0  |B8  |        |                 |       |
+142   |  I_O  |   0  |B10 |        |                 |       |
+143   |  I_O  |   0  |B12 |        |                 |       |
+144   | IN9   |   0  |    |        |                 |       |
+----------------------------------------------------------------------------------
+
+<Note> GLB Pad : This notation refers to the GLB I/O pad number in the device.
+<Note> Assigned Pin : user or dedicated input assignment (E.g. Clock pins).
+<Note> Pin Type : 
+          ClkIn : Dedicated input or clock pin 
+           CLK  : Dedicated clock pin
+           I_O  : Input/Output pin
+           INP  : Dedicated input pin
+           JTAG : JTAG Control and test pin
+           NC   : No connected
+
+
+
+Input_Signal_List
+~~~~~~~~~~~~~~~~~
+                Input
+         Pin    Fanout
+ Pin GLB Type                       Pullup Signal
+--------------------------------------------------
+ 128  -- INCLK     ----------------      Up clk_50m
+  68   J  I/O   7  -B---F--I-KLM-O-      Up reset
+--------------------------------------------------
+
+
+
+Output_Signal_List
+~~~~~~~~~~~~~~~~~~
+          I         C      P R P       O Output
+          N         L Mc   R E U C O F B Fanout
+ Pin GLB  P LL PTs  S Type E S P E E P P                     Slew Pullup Signal
+--------------------------------------------------------------------------------
+  86   L 15  1  10  3 DFF  *   S *          ----------------  Fast     Up lcdD_0_
+  87   L 12  1   7  2 DFF    * R *          ----------------  Fast     Up lcdD_1_
+  84   L 13  1   9  3 DFF    * R *          ----------------  Fast     Up lcdD_2_
+  85   L 14  1  10  2 DFF    * R *          ----------------  Fast     Up lcdD_3_
+  81   K 14  1  11  3 DFF    * R *          ----------------  Fast     Up lcdD_4_
+  83   L 14  1  10  3 DFF    * R *          ----------------  Fast     Up lcdD_5_
+  79   K 11  1   6  2 DFF    * R *          ----------------  Fast     Up lcdD_6_
+  80   K 14  1   5  2 DFF    * R *          ----------------  Fast     Up lcdD_7_
+  98   M 10  1   3  1 DFF    * R            ----------------  Fast     Up lcdRs
+ 100   N  0  -   0  1 COM                   ----------------  Fast     Up lcdRw
+  96   M  2  2   2  1 DFF      R         15 ABCD-FGHIJKLMNOP  Fast     Up ledEN
+--------------------------------------------------------------------------------
+
+<Note> CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+
+Bidir_Signal_List
+~~~~~~~~~~~~~~~~~
+          I         C      P R P       O Bidir
+          N         L Mc   R E U C O F B Fanout
+ Pin GLB  P LL PTs  S Type E S P E E P P                     Slew Pullup Signal
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+<Note> CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+
+Buried_Signal_List
+~~~~~~~~~~~~~~~~~~
+        I         C      P R P       Node
+        N         L Mc   R E U C I F Fanout
+Mc GLB  P LL PTs  S Type E S P E R P                     Signal
+----------------------------------------------------------------------------
+15   K  1  1   1  1 DFF      R       3  ----E-G---K-----  cnt_171__i0
+14   G  2  1   2  1 DFF      R       2  ----E-G---------  cnt_171__i1
+ 3   E  3  2   3  1 DFF      R       1  ----E-----------  cnt_171__i10
+ 0   E  4  2   4  1 DFF      R       1  ----E-----------  cnt_171__i11
+ 6   E  5  2   2  1 DFF      R       1  ----E-----------  cnt_171__i12
+13   G  2  2   2  1 DFF      R       2  ----E-G---------  cnt_171__i13
+12   G  3  2   3  1 DFF      R       2  ----E-G---------  cnt_171__i14
+13   F  2  2   2  1 DFF      R       2  ----EF----------  cnt_171__i15
+ 4   F  3  2   3  1 DFF      R       2  ----EF----------  cnt_171__i16
+ 2   F  4  2   4  1 DFF      R       2  ----EF----------  cnt_171__i17
+12   F  5  2   2  2 DFF      R       2  ----EF----------  cnt_171__i18
+10   F  5  2   1  1 TFF      R       1  ----E-----------  cnt_171__i19
+ 5   E  3  1   3  1 DFF      R       1  ----E-----------  cnt_171__i2
+ 2   E  4  1   4  1 DFF      R       1  ----E-----------  cnt_171__i3
+ 7   E  5  1   2  1 DFF      R       1  ----E-----------  cnt_171__i4
+10   E  5  1   1  1 TFF      R       1  ----E-----------  cnt_171__i5
+ 9   E  2  2   2  1 DFF      R       1  ----E-----------  cnt_171__i6
+ 4   E  3  2   3  1 DFF      R       1  ----E-----------  cnt_171__i7
+ 1   E  4  2   4  1 DFF      R       1  ----E-----------  cnt_171__i8
+ 8   E  2  2   2  1 DFF      R       1  ----E-----------  cnt_171__i9
+12   A  7  2   4  1 DFF      R *     1  A---------------  dataInBuf_i0_i100
+11   B  8  2   5  1 DFF      R *     1  -B--------------  dataInBuf_i0_i101
+12   B  7  2   4  1 DFF      R *     2  -B-----------N--  dataInBuf_i0_i102
+15   J  7  2   4  1 DFF      R *     1  ---------J------  dataInBuf_i0_i104
+10   H  7  2   4  1 DFF      R *     2  --C----H--------  dataInBuf_i0_i105
+14   I  7  2   4  1 DFF      R *     1  --------I-------  dataInBuf_i0_i106
+11   A  7  2   4  1 DFF      R *     1  A---------------  dataInBuf_i0_i107
+10   A  7  2   4  1 DFF      R *     1  A---------------  dataInBuf_i0_i108
+10   B  8  2   5  1 DFF      R *     1  -B--------------  dataInBuf_i0_i109
+14   N  7  2   4  1 DFF      R *     1  -------------N--  dataInBuf_i0_i110
+14   J  7  2   4  1 DFF      R *     1  ---------J------  dataInBuf_i0_i112
+13   C  7  2   4  1 DFF      R *     1  --C-------------  dataInBuf_i0_i113
+13   I  7  2   4  1 DFF      R *     1  --------I-------  dataInBuf_i0_i114
+ 9   A  7  2   4  1 DFF      R *     2  A-----------M---  dataInBuf_i0_i115
+ 8   A  7  2   4  1 DFF      R *     1  A---------------  dataInBuf_i0_i116
+ 9   B  8  2   5  1 DFF      R *     1  -B--------------  dataInBuf_i0_i117
+13   N  7  2   4  1 DFF      R *     1  -------------N--  dataInBuf_i0_i118
+13   J  7  2   4  1 DFF      R *     2  ---------J-----P  dataInBuf_i0_i120
+12   C  7  2   4  1 DFF      R *     1  --C-------------  dataInBuf_i0_i121
+12   I  7  2   4  1 DFF      R *     1  --------I-------  dataInBuf_i0_i122
+13   M  7  2   4  1 DFF      R *     1  ------------M---  dataInBuf_i0_i123
+ 7   A  7  2   4  1 DFF      R *     1  A---------------  dataInBuf_i0_i124
+ 8   B  8  2   5  1 DFF      R *     1  -B--------------  dataInBuf_i0_i125
+12   N  7  2   4  1 DFF      R *     1  -------------N--  dataInBuf_i0_i126
+14   P  7  2   4  1 DFF      R *     1  ---------------P  dataInBuf_i0_i128
+11   C  7  2   4  1 DFF      R *     1  --C-------------  dataInBuf_i0_i129
+ 0   J  8  2   5  1 DFF      R *     2  -------H-J------  dataInBuf_i0_i13
+11   I  7  2   4  1 DFF      R *     1  --------I-------  dataInBuf_i0_i130
+12   M  7  2   4  1 DFF      R *     1  ------------M---  dataInBuf_i0_i131
+ 6   A  7  2   4  1 DFF      R *     1  A---------------  dataInBuf_i0_i132
+ 7   B  8  2   5  1 DFF      R *     1  -B--------------  dataInBuf_i0_i133
+11   N  7  2   4  2 DFF      R *     1  -------------N--  dataInBuf_i0_i134
+13   P  7  2   4  1 DFF      R *     1  ---------------P  dataInBuf_i0_i136
+10   C  7  2   4  1 DFF      R *     1  --C-------------  dataInBuf_i0_i137
+10   I  7  2   4  1 DFF      R *     1  --------I-------  dataInBuf_i0_i138
+11   M  7  2   4  1 DFF      R *     1  ------------M---  dataInBuf_i0_i139
+ 5   A  7  2   4  1 DFF      R *     1  A---------------  dataInBuf_i0_i140
+ 6   B  8  2   5  1 DFF      R *     2  -BC-------------  dataInBuf_i0_i141
+10   N  7  2   4  2 DFF      R *     1  -------------N--  dataInBuf_i0_i142
+12   P  7  2   4  1 DFF      R *     2  ------G--------P  dataInBuf_i0_i144
+ 9   C  7  2   4  1 DFF      R *     1  --C-------------  dataInBuf_i0_i145
+ 9   I  7  2   4  1 DFF      R *     1  --------I-------  dataInBuf_i0_i146
+10   M  7  2   4  1 DFF      R *     1  ------------M---  dataInBuf_i0_i147
+ 4   A  7  2   4  1 DFF      R *     2  A--------------P  dataInBuf_i0_i148
+ 4   C  8  2   5  1 DFF      R *     1  --C-------------  dataInBuf_i0_i149
+ 9   N  7  2   4  2 DFF      R *     1  -------------N--  dataInBuf_i0_i150
+10   G  7  2   4  1 DFF      R *     1  ------G---------  dataInBuf_i0_i152
+ 8   C  7  2   4  1 DFF      R *     2  --CD------------  dataInBuf_i0_i153
+ 8   I  7  2   4  1 DFF      R *     2  ---D----I-------  dataInBuf_i0_i154
+ 9   M  7  2   4  1 DFF      R *     1  ------------M---  dataInBuf_i0_i155
+11   P  7  2   4  1 DFF      R *     1  ---------------P  dataInBuf_i0_i156
+ 3   C  8  2   5  1 DFF      R *     2  --C----------N--  dataInBuf_i0_i157
+ 8   N  7  2   4  2 DFF      R *     1  -------------N--  dataInBuf_i0_i158
+ 2   G  8  2   5  1 DFF      R *     1  ------G---------  dataInBuf_i0_i160
+12   D  8  2   5  1 DFF      R *     1  ---D------------  dataInBuf_i0_i161
+11   D  8  2   5  1 DFF      R *     1  ---D------------  dataInBuf_i0_i162
+ 7   M  7  2   4  1 DFF      R *     1  ------------M---  dataInBuf_i0_i163
+ 7   P  8  2   5  1 DFF      R *     1  ---------------P  dataInBuf_i0_i164
+ 4   N  8  2   5  2 DFF      R *     1  -------------N--  dataInBuf_i0_i165
+ 7   N  7  2   4  2 DFF      R *     1  -------------N--  dataInBuf_i0_i166
+ 9   G  7  2   4  1 DFF      R *     1  ------G---------  dataInBuf_i0_i168
+10   D  8  2   5  1 DFF      R *     1  ---D------------  dataInBuf_i0_i169
+ 9   D  8  2   5  1 DFF      R *     1  ---D------------  dataInBuf_i0_i170
+ 6   M  7  2   4  1 DFF      R *     2  ------------M-O-  dataInBuf_i0_i171
+ 6   P  8  2   5  1 DFF      R *     1  ---------------P  dataInBuf_i0_i172
+ 3   N  8  2   5  2 DFF      R *     1  -------------N--  dataInBuf_i0_i173
+ 6   N  7  2   4  2 DFF      R *     1  -------------N--  dataInBuf_i0_i174
+ 1   G  8  2   5  1 DFF      R *     1  ------G---------  dataInBuf_i0_i176
+14   D  7  2   4  1 DFF      R *     1  ---D------------  dataInBuf_i0_i177
+ 8   D  8  2   5  1 DFF      R *     2  ---D--G---------  dataInBuf_i0_i178
+13   O  7  2   5  2 DFF      R *     1  --------------O-  dataInBuf_i0_i179
+ 5   P  8  2   5  1 DFF      R *     1  ---------------P  dataInBuf_i0_i180
+ 1   N  8  2   5  1 DFF      R *     1  -------------N--  dataInBuf_i0_i181
+ 5   N  7  2   4  2 DFF      R *     2  ---------J---N--  dataInBuf_i0_i182
+ 8   G  7  2   4  1 DFF      R *     2  ------GH--------  dataInBuf_i0_i184
+13   D  7  2   4  1 DFF      R *     1  ---D------------  dataInBuf_i0_i185
+ 0   G  8  2   5  1 DFF      R *     1  ------G---------  dataInBuf_i0_i186
+12   O  7  2   5  2 DFF      R *     1  --------------O-  dataInBuf_i0_i187
+ 4   P  8  2   5  1 DFF      R *     1  ---------------P  dataInBuf_i0_i188
+ 0   N  8  2   5  1 DFF      R *     2  -------------NO-  dataInBuf_i0_i189
+12   J  7  2   4  1 DFF      R *     1  ---------J------  dataInBuf_i0_i190
+ 1   H  8  2   5  1 DFF      R *     1  -------H--------  dataInBuf_i0_i192
+ 7   D  8  2   5  1 DFF      R *     1  ---D------------  dataInBuf_i0_i193
+ 7   G  7  2   4  1 DFF      R *     1  ------G---------  dataInBuf_i0_i194
+11   O  7  2   5  2 DFF      R *     1  --------------O-  dataInBuf_i0_i195
+ 3   P  8  2   5  1 DFF      R *     1  ---------------P  dataInBuf_i0_i196
+ 2   O  8  2   6  2 DFF      R *     1  --------------O-  dataInBuf_i0_i197
+11   J  7  2   4  1 DFF      R *     1  ---------J------  dataInBuf_i0_i198
+ 9   H  7  2   4  1 DFF      R *     1  -------H--------  dataInBuf_i0_i200
+ 6   D  8  2   5  1 DFF      R *     2  ---D----I-------  dataInBuf_i0_i201
+ 6   G  7  2   4  1 DFF      R *     2  --C---G---------  dataInBuf_i0_i202
+10   O  7  2   5  2 DFF      R *     1  --------------O-  dataInBuf_i0_i203
+ 2   P  8  2   5  1 DFF      R *     1  ---------------P  dataInBuf_i0_i204
+ 1   O  8  2   6  2 DFF      R *     2  ---D----------O-  dataInBuf_i0_i205
+10   J  7  2   4  1 DFF      R *     1  ---------J------  dataInBuf_i0_i206
+ 0   H  8  2   5  1 DFF      R *     1  -------H--------  dataInBuf_i0_i208
+ 7   I  7  2   4  1 DFF      R *     1  --------I-------  dataInBuf_i0_i209
+ 3   H  8  2   5  1 DFF      R *     1  -------H--------  dataInBuf_i0_i21
+ 7   C  7  2   4  1 DFF      R *     1  --C-------------  dataInBuf_i0_i210
+ 9   O  7  2   5  2 DFF      R *     1  --------------O-  dataInBuf_i0_i211
+ 1   P  8  2   5  1 DFF      R *     1  ---------------P  dataInBuf_i0_i212
+ 5   D  8  2   5  1 DFF      R *     1  ---D------------  dataInBuf_i0_i213
+ 9   J  7  2   4  1 DFF      R *     1  ---------J------  dataInBuf_i0_i214
+ 8   H  7  2   4  1 DFF      R *     1  -------H--------  dataInBuf_i0_i216
+ 6   I  7  2   4  1 DFF      R *     1  --------I-------  dataInBuf_i0_i217
+ 6   C  7  2   4  1 DFF      R *     1  --C-------------  dataInBuf_i0_i218
+ 8   O  7  2   5  2 DFF      R *     2  --------I-----O-  dataInBuf_i0_i219
+ 0   P  8  2   5  1 DFF      R *     1  ---------------P  dataInBuf_i0_i220
+ 4   D  8  2   5  1 DFF      R *     1  ---D------------  dataInBuf_i0_i221
+ 8   J  7  2   4  1 DFF      R *     1  ---------J------  dataInBuf_i0_i222
+ 7   H  7  2   4  1 DFF      R *     1  -------H--------  dataInBuf_i0_i224
+ 5   I  7  2   4  1 DFF      R *     1  --------I-------  dataInBuf_i0_i225
+ 5   C  7  2   4  1 DFF      R *     2  --C------J------  dataInBuf_i0_i226
+ 4   I  7  2   4  1 DFF      R *     1  --------I-------  dataInBuf_i0_i227
+10   P  7  2   4  1 DFF      R *     1  ---------------P  dataInBuf_i0_i228
+ 3   D  8  2   5  1 DFF      R *     1  ---D------------  dataInBuf_i0_i229
+ 7   J  7  2   4  1 DFF      R *     1  ---------J------  dataInBuf_i0_i230
+ 6   H  7  2   4  1 DFF      R *     1  -------H--------  dataInBuf_i0_i232
+ 3   I  7  2   4  1 DFF      R *     2  --------I--L----  dataInBuf_i0_i233
+ 6   J  7  2   4  1 DFF      R *     1  ---------J------  dataInBuf_i0_i234
+ 2   I  7  2   4  1 DFF      R *     1  --------I-------  dataInBuf_i0_i235
+ 9   P  7  2   4  1 DFF      R *     1  ---------------P  dataInBuf_i0_i236
+ 2   D  8  2   5  1 DFF      R *     1  ---D------------  dataInBuf_i0_i237
+ 5   J  7  2   4  1 DFF      R *     1  ---------J------  dataInBuf_i0_i238
+ 5   H  7  2   4  1 DFF      R *     1  -------H--------  dataInBuf_i0_i240
+14   L  7  2   5  2 DFF      R *     1  -----------L----  dataInBuf_i0_i241
+ 4   J  7  2   4  1 DFF      R *     1  ---------J------  dataInBuf_i0_i242
+ 1   I  7  2   4  1 DFF      R *     1  --------I-------  dataInBuf_i0_i243
+ 8   P  7  2   4  1 DFF      R *     2  ----------K----P  dataInBuf_i0_i244
+ 1   D  8  2   5  1 DFF      R *     1  ---D------------  dataInBuf_i0_i245
+ 3   J  7  2   4  1 DFF      R *     1  ---------J------  dataInBuf_i0_i246
+ 4   H  7  2   4  1 DFF      R *     2  -------H---L----  dataInBuf_i0_i248
+ 0   L  7  2   5  1 DFF      R *     1  -----------L----  dataInBuf_i0_i249
+ 2   J  7  2   4  1 DFF      R *     2  ---------J-L----  dataInBuf_i0_i250
+ 0   I  7  2   4  1 DFF      R *     2  --------I--L----  dataInBuf_i0_i251
+11   K  7  2   4  2 DFF      R *     1  ----------K-----  dataInBuf_i0_i252
+ 0   D  8  2   5  1 DFF      R *     2  ---D-------L----  dataInBuf_i0_i253
+ 1   J  7  2   4  1 DFF      R *     2  ---------JK-----  dataInBuf_i0_i254
+11   F 10  -   3  1 COM              15 ABCD-FGHIJKLMNOP  dataInBuf_i0_i254_0
+ 2   H  8  2   5  1 DFF      R *     1  -------H--------  dataInBuf_i0_i29
+14   B 11  1   3  1 DFF      R *     2  AB--------------  dataInBuf_i0_i33
+15   M 11  1   3  1 DFF      R *     2  ----------K-M---  dataInBuf_i0_i34
+14   H  7  2   4  1 DFF      R *     1  -------H--------  dataInBuf_i0_i37
+ 9   F 11  1   3  2 DFF      R *     2  -----FG---------  dataInBuf_i0_i38
+14   A  7  2   4  1 DFF      R *     1  A---------------  dataInBuf_i0_i41
+10   K  8  2   5  2 DFF      R *     1  ----------K-----  dataInBuf_i0_i42
+13   H  7  2   4  1 DFF      R *     1  -------H--------  dataInBuf_i0_i45
+ 5   G  8  2   5  1 DFF      R *     1  ------G---------  dataInBuf_i0_i46
+ 5   F 11  1   3  2 DFF      R *     2  -----FG---------  dataInBuf_i0_i48
+13   A  7  2   4  1 DFF      R *     1  A---------------  dataInBuf_i0_i49
+14   K 11  1   3  2 DFF      R *     2  ---------JK-----  dataInBuf_i0_i5
+ 9   K  8  2   5  2 DFF      R *     1  ----------K-----  dataInBuf_i0_i50
+12   H  7  2   4  1 DFF      R *     1  -------H--------  dataInBuf_i0_i53
+ 4   G  8  2   5  1 DFF      R *     2  A-----G---------  dataInBuf_i0_i54
+ 3   G  8  2   5  1 DFF      R *     1  ------G---------  dataInBuf_i0_i56
+ 3   A  8  2   5  1 DFF      R *     1  A---------------  dataInBuf_i0_i57
+13   K  7  2   4  2 DFF      R *     1  ----------K-----  dataInBuf_i0_i58
+11   H  7  2   4  1 DFF      R *     2  -------H----M---  dataInBuf_i0_i61
+ 2   A  8  2   5  1 DFF      R *     1  A---------------  dataInBuf_i0_i62
+11   G  7  2   4  1 DFF      R *     2  -----FG---------  dataInBuf_i0_i64
+ 1   A  8  2   5  1 DFF      R *     2  A----F----------  dataInBuf_i0_i65
+12   K  7  2   4  2 DFF      R *     1  ----------K-----  dataInBuf_i0_i66
+14   M  7  2   4  1 DFF      R *     1  ------------M---  dataInBuf_i0_i69
+ 0   A  8  2   5  1 DFF      R *     2  AB--------------  dataInBuf_i0_i70
+ 3   F 13  1  10  3 DFF      R *     1  -----F----------  dataInBuf_i0_i72
+ 8   F 12  1   5  2 DFF      R *     1  -----F----------  dataInBuf_i0_i73
+ 5   K 12  1   5  2 DFF      R *     1  ----------K-----  dataInBuf_i0_i74
+ 5   M 12  1   5  1 DFF      R *     1  ------------M---  dataInBuf_i0_i77
+ 3   B 13  1  10  2 DFF      R *     1  -B--------------  dataInBuf_i0_i78
+ 1   F 13  1  10  2 DFF      R *     2  -----F-----L----  dataInBuf_i0_i80
+ 7   F 12  1   5  2 DFF      R *     1  -----F----------  dataInBuf_i0_i81
+ 3   K 12  1   5  2 DFF      R *     1  ----------K-----  dataInBuf_i0_i82
+14   C 11  1   3  1 DFF      R *     1  --C-------------  dataInBuf_i0_i83
+13   B 11  1   3  1 DFF      R *     1  -B--------------  dataInBuf_i0_i84
+ 3   M 13  1  10  2 DFF      R *     1  ------------M---  dataInBuf_i0_i85
+ 5   B 12  1   5  1 DFF      R *     1  -B--------------  dataInBuf_i0_i86
+11   L 12  1   6  2 DFF      R *     1  -----------L----  dataInBuf_i0_i88
+ 6   F 12  1   5  2 DFF      R *     1  -----F----------  dataInBuf_i0_i89
+ 1   K 12  1   5  1 DFF      R *     1  ----------K-----  dataInBuf_i0_i90
+ 1   C 13  1  10  2 DFF      R *     1  --C-------------  dataInBuf_i0_i91
+ 1   B 13  1  10  2 DFF      R *     2  AB--------------  dataInBuf_i0_i92
+ 1   M 13  1  10  2 DFF      R *     2  -B----------M---  dataInBuf_i0_i93
+ 0   B 12  1   5  1 DFF      R *     1  -B--------------  dataInBuf_i0_i94
+ 7   L 12  1   6  2 DFF      R *     2  ---------J-L----  dataInBuf_i0_i96
+ 0   F 12  1   5  1 DFF      R *     2  -----F-H--------  dataInBuf_i0_i97
+ 0   K 12  1   5  1 DFF      R *     2  --------I-K-----  dataInBuf_i0_i98
+ 0   C 12  1   5  1 DFF      R *     2  A-C-------------  dataInBuf_i0_i99
+ 6   O 11  1   5  2 DFF    * R *     7  -BC--F----KLM-O-  dispCount_i0_i0
+ 7   O  7  1   4  2 DFF    * R *     7  -BC--F----KLM-O-  dispCount_i0_i1
+ 5   O  8  1   5  2 DFF    * R *     7  -BC--F----KLM-O-  dispCount_i0_i2
+ 0   O  9  1   5  1 DFF    * R *     7  -BC--F----KLM-O-  dispCount_i0_i3
+ 4   O 11  1   5  2 TFF    * R *     7  -BC--F----KLM-O-  dispCount_i0_i4
+ 3   O 11  1   5  2 TFF    * R *     7  -BC--F----KLM-O-  dispCount_i0_i5
+14   F  8  -   2  1 COM              1  --------------O-  dispCount_i0_i5_0
+15   C  6  -   1  1 COM              14 ABCD--GHIJKLMNOP  lcdRs_N_618
+12   E  6  -   1  1 COM              1  ----E-----------  n5085
+15   E  9  -   1  1 COM              1  ----E-----------  n5106
+14   E 13  -   1  1 COM              1  ------G---------  n5134
+11   E 15  -   1  1 COM              1  -----F----------  n5148
+13   E 20  -   1  1 COM              1  ------------M---  n5194
+ 2   L 11  1   3  1 DFF    * R       15 ABCD-FGHIJKLMNOP  state_FSM_i1
+14   O  9  1   1  1 DFF    * R       15 ABCD-FGHIJKLMNOP  state_FSM_i2
+ 6   K  3  1   2  1 DFF    * R       2  ----------KL----  state_FSM_i3
+ 5   L  3  1   1  1 DFF    * R       2  ----------KL----  state_FSM_i4
+15   I  3  1   2  1 DFF    * R       2  ----------KL----  state_FSM_i5
+ 7   K  3  1   2  1 DFF    * R       3  --------I-KL----  state_FSM_i6
+15   B  9  1   2  1 DFF  *   S       13 ABCD-FGH-JK-MNOP  state_FSM_i7
+----------------------------------------------------------------------------
+
+<Note> CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        IR = Input register
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+
+PostFit_Equations
+~~~~~~~~~~~~~~~~~
+cnt_171__i0.D = !cnt_171__i0.Q ; (1 pterm, 1 signal)
+cnt_171__i0.C = clk_50m ; (1 pterm, 1 signal)
+
+cnt_171__i1.D = cnt_171__i1.Q & !cnt_171__i0.Q
+    # !cnt_171__i1.Q & cnt_171__i0.Q ; (2 pterms, 2 signals)
+cnt_171__i1.C = clk_50m ; (1 pterm, 1 signal)
+
+cnt_171__i10.D = !cnt_171__i10.Q & cnt_171__i9.Q & n5106
+    # cnt_171__i10.Q & !cnt_171__i9.Q
+    # cnt_171__i10.Q & !n5106 ; (3 pterms, 3 signals)
+cnt_171__i10.C = clk_50m ; (1 pterm, 1 signal)
+
+cnt_171__i11.D = !cnt_171__i11.Q & cnt_171__i10.Q & cnt_171__i9.Q & n5106
+    # cnt_171__i11.Q & !cnt_171__i9.Q
+    # cnt_171__i11.Q & !cnt_171__i10.Q
+    # cnt_171__i11.Q & !n5106 ; (4 pterms, 4 signals)
+cnt_171__i11.C = clk_50m ; (1 pterm, 1 signal)
+
+cnt_171__i12.D.X1 = cnt_171__i12.Q ; (1 pterm, 1 signal)
+cnt_171__i12.D.X2 = cnt_171__i11.Q & cnt_171__i10.Q & cnt_171__i9.Q & n5106 ; (1 pterm, 4 signals)
+cnt_171__i12.C = clk_50m ; (1 pterm, 1 signal)
+
+cnt_171__i13.D = cnt_171__i13.Q & !n5134
+    # !cnt_171__i13.Q & n5134 ; (2 pterms, 2 signals)
+cnt_171__i13.C = clk_50m ; (1 pterm, 1 signal)
+
+cnt_171__i14.D = !cnt_171__i14.Q & cnt_171__i13.Q & n5134
+    # cnt_171__i14.Q & !cnt_171__i13.Q
+    # cnt_171__i14.Q & !n5134 ; (3 pterms, 3 signals)
+cnt_171__i14.C = clk_50m ; (1 pterm, 1 signal)
+
+cnt_171__i15.D = cnt_171__i15.Q & !n5148
+    # !cnt_171__i15.Q & n5148 ; (2 pterms, 2 signals)
+cnt_171__i15.C = clk_50m ; (1 pterm, 1 signal)
+
+cnt_171__i16.D = !cnt_171__i16.Q & cnt_171__i15.Q & n5148
+    # cnt_171__i16.Q & !cnt_171__i15.Q
+    # cnt_171__i16.Q & !n5148 ; (3 pterms, 3 signals)
+cnt_171__i16.C = clk_50m ; (1 pterm, 1 signal)
+
+cnt_171__i17.D = !cnt_171__i17.Q & cnt_171__i16.Q & cnt_171__i15.Q & n5148
+    # cnt_171__i17.Q & !cnt_171__i15.Q
+    # cnt_171__i17.Q & !cnt_171__i16.Q
+    # cnt_171__i17.Q & !n5148 ; (4 pterms, 4 signals)
+cnt_171__i17.C = clk_50m ; (1 pterm, 1 signal)
+
+cnt_171__i18.D.X1 = cnt_171__i18.Q ; (1 pterm, 1 signal)
+cnt_171__i18.D.X2 = cnt_171__i17.Q & cnt_171__i16.Q & cnt_171__i15.Q & n5148 ; (1 pterm, 4 signals)
+cnt_171__i18.C = clk_50m ; (1 pterm, 1 signal)
+
+cnt_171__i19.T = cnt_171__i18.Q & cnt_171__i17.Q & cnt_171__i16.Q
+       & cnt_171__i15.Q & n5148 ; (1 pterm, 5 signals)
+cnt_171__i19.C = clk_50m ; (1 pterm, 1 signal)
+
+cnt_171__i2.D = !cnt_171__i2.Q & cnt_171__i1.Q & cnt_171__i0.Q
+    # cnt_171__i2.Q & !cnt_171__i1.Q
+    # cnt_171__i2.Q & !cnt_171__i0.Q ; (3 pterms, 3 signals)
+cnt_171__i2.C = clk_50m ; (1 pterm, 1 signal)
+
+cnt_171__i3.D = !cnt_171__i3.Q & cnt_171__i2.Q & cnt_171__i1.Q & cnt_171__i0.Q
+    # cnt_171__i3.Q & !cnt_171__i1.Q
+    # cnt_171__i3.Q & !cnt_171__i2.Q
+    # cnt_171__i3.Q & !cnt_171__i0.Q ; (4 pterms, 4 signals)
+cnt_171__i3.C = clk_50m ; (1 pterm, 1 signal)
+
+cnt_171__i4.D.X1 = cnt_171__i4.Q ; (1 pterm, 1 signal)
+cnt_171__i4.D.X2 = cnt_171__i3.Q & cnt_171__i2.Q & cnt_171__i1.Q
+       & cnt_171__i0.Q ; (1 pterm, 4 signals)
+cnt_171__i4.C = clk_50m ; (1 pterm, 1 signal)
+
+cnt_171__i5.T = cnt_171__i4.Q & cnt_171__i3.Q & cnt_171__i2.Q & cnt_171__i1.Q
+       & cnt_171__i0.Q ; (1 pterm, 5 signals)
+cnt_171__i5.C = clk_50m ; (1 pterm, 1 signal)
+
+cnt_171__i6.D = cnt_171__i6.Q & !n5085
+    # !cnt_171__i6.Q & n5085 ; (2 pterms, 2 signals)
+cnt_171__i6.C = clk_50m ; (1 pterm, 1 signal)
+
+cnt_171__i7.D = !cnt_171__i7.Q & cnt_171__i6.Q & n5085
+    # cnt_171__i7.Q & !cnt_171__i6.Q
+    # cnt_171__i7.Q & !n5085 ; (3 pterms, 3 signals)
+cnt_171__i7.C = clk_50m ; (1 pterm, 1 signal)
+
+cnt_171__i8.D = !cnt_171__i8.Q & cnt_171__i7.Q & cnt_171__i6.Q & n5085
+    # cnt_171__i8.Q & !cnt_171__i6.Q
+    # cnt_171__i8.Q & !cnt_171__i7.Q
+    # cnt_171__i8.Q & !n5085 ; (4 pterms, 4 signals)
+cnt_171__i8.C = clk_50m ; (1 pterm, 1 signal)
+
+cnt_171__i9.D = cnt_171__i9.Q & !n5106
+    # !cnt_171__i9.Q & n5106 ; (2 pterms, 2 signals)
+cnt_171__i9.C = clk_50m ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i100.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i100.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i92.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i92.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i100.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i100.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i101.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i101.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i93.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i93.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i101.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i101.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i102.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i102.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i94.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i94.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i102.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i102.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i104.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i104.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i96.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i96.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i104.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i104.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i105.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i105.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i97.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i97.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i105.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i105.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i106.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i106.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i98.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i98.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i106.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i106.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i107.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i107.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i99.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i99.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i107.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i107.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i108.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i108.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i100.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i100.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i108.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i108.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i109.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i109.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i101.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i101.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i109.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i109.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i110.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i110.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i102.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i102.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i110.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i110.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i112.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i112.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i104.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i104.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i112.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i112.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i113.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i113.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i105.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i105.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i113.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i113.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i114.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i114.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i106.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i106.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i114.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i114.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i115.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i115.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i107.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i107.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i115.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i115.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i116.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i116.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i108.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i108.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i116.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i116.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i117.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i117.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i109.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i109.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i117.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i117.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i118.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i118.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i110.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i110.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i118.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i118.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i120.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i120.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i112.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i112.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i120.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i120.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i121.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i121.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i113.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i113.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i121.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i121.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i122.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i122.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i114.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i114.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i122.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i122.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i123.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i123.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i115.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i115.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i123.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i123.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i124.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i124.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i116.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i116.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i124.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i124.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i125.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i125.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i117.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i117.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i125.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i125.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i126.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i126.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i118.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i118.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i126.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i126.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i128.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i128.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i120.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i120.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i128.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i128.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i129.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i129.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i121.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i121.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i129.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i129.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i13.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i13.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i5.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i5.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i13.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i13.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i130.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i130.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i122.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i122.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i130.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i130.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i131.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i131.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i123.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i123.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i131.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i131.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i132.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i132.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i124.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i124.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i132.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i132.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i133.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i133.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i125.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i125.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i133.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i133.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i134.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i134.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i126.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i126.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i134.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i134.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i136.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i136.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i128.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i128.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i136.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i136.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i137.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i137.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i129.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i129.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i137.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i137.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i138.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i138.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i130.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i130.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i138.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i138.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i139.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i139.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i131.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i131.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i139.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i139.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i140.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i140.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i132.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i132.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i140.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i140.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i141.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i141.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i133.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i133.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i141.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i141.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i142.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i142.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i134.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i134.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i142.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i142.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i144.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i144.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i136.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i136.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i144.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i144.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i145.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i145.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i137.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i137.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i145.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i145.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i146.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i146.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i138.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i138.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i146.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i146.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i147.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i147.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i139.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i139.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i147.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i147.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i148.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i148.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i140.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i140.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i148.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i148.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i149.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i149.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i141.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i141.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i149.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i149.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i150.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i150.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i142.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i142.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i150.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i150.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i152.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i152.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i144.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i144.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i152.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i152.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i153.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i153.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i145.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i145.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i153.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i153.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i154.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i154.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i146.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i146.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i154.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i154.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i155.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i155.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i147.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i147.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i155.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i155.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i156.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i156.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i148.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i148.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i156.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i156.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i157.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i157.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i149.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i149.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i157.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i157.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i158.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i158.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i150.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i150.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i158.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i158.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i160.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i160.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i152.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i152.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i160.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i160.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i161.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i161.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i153.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i153.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i161.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i161.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i162.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i162.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i154.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i154.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i162.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i162.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i163.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i163.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i155.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i155.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i163.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i163.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i164.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i164.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i156.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i156.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i164.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i164.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i165.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i165.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i157.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i157.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i165.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i165.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i166.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i166.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i158.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i158.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i166.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i166.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i168.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i168.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i160.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i160.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i168.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i168.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i169.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i169.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i161.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i161.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i169.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i169.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i170.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i170.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i162.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i162.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i170.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i170.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i171.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i171.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i163.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i163.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i171.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i171.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i172.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i172.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i164.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i164.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i172.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i172.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i173.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i173.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i165.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i165.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i173.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i173.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i174.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i174.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i166.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i166.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i174.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i174.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i176.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i176.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i168.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i168.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i176.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i176.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i177.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i177.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i169.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i169.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i177.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i177.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i178.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i178.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i170.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i170.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i178.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i178.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i179.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i179.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i171.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i171.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i179.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i179.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i180.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i180.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i172.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i172.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i180.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i180.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i181.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i181.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i173.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i173.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i181.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i181.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i182.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i182.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i174.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i174.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i182.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i182.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i184.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i184.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i176.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i176.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i184.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i184.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i185.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i185.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i177.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i177.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i185.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i185.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i186.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i186.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i178.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i178.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i186.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i186.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i187.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i187.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i179.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i179.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i187.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i187.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i188.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i188.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i180.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i180.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i188.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i188.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i189.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i189.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i181.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i181.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i189.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i189.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i190.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i190.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i182.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i182.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i190.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i190.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i192.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i192.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i184.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i184.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i192.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i192.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i193.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i193.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i185.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i185.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i193.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i193.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i194.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i194.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i186.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i186.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i194.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i194.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i195.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i195.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i187.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i187.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i195.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i195.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i196.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i196.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i188.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i188.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i196.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i196.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i197.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i197.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i189.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i189.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i197.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i197.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i198.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i198.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i190.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i190.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i198.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i198.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i200.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i200.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i192.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i192.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i200.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i200.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i201.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i201.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i193.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i193.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i201.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i201.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i202.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i202.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i194.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i194.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i202.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i202.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i203.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i203.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i195.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i195.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i203.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i203.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i204.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i204.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i196.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i196.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i204.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i204.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i205.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i205.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i197.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i197.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i205.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i205.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i206.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i206.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i198.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i198.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i206.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i206.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i208.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i208.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i200.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i200.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i208.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i208.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i209.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i209.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i201.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i201.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i209.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i209.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i21.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i21.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i13.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i13.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i21.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i21.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i210.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i210.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i202.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i202.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i210.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i210.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i211.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i211.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i203.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i203.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i211.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i211.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i212.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i212.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i204.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i204.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i212.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i212.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i213.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i213.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i205.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i205.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i213.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i213.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i214.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i214.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i206.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i206.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i214.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i214.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i216.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i216.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i208.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i208.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i216.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i216.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i217.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i217.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i209.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i209.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i217.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i217.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i218.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i218.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i210.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i210.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i218.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i218.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i219.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i219.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i211.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i211.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i219.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i219.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i220.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i220.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i212.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i212.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i220.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i220.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i221.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i221.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i213.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i213.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i221.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i221.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i222.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i222.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i214.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i214.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i222.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i222.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i224.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i224.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i216.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i216.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i224.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i224.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i225.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i225.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i217.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i217.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i225.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i225.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i226.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i226.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i218.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i218.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i226.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i226.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i227.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i227.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i219.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i219.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i227.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i227.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i228.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i228.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i220.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i220.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i228.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i228.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i229.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i229.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i221.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i221.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i229.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i229.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i230.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i230.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i222.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i222.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i230.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i230.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i232.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i232.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i224.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i224.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i232.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i232.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i233.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i233.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i225.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i225.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i233.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i233.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i234.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i234.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i226.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i226.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i234.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i234.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i235.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i235.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i227.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i227.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i235.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i235.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i236.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i236.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i228.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i228.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i236.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i236.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i237.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i237.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i229.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i229.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i237.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i237.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i238.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i238.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i230.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i230.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i238.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i238.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i240.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i240.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i232.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i232.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i240.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i240.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i241.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i241.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i233.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i233.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i241.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i241.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i242.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i242.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i234.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i234.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i242.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i242.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i243.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i243.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i235.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i235.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i243.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i243.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i244.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i244.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i236.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i236.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i244.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i244.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i245.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i245.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i237.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i237.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i245.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i245.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i246.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i246.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i238.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i238.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i246.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i246.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i248.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i248.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i240.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i240.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i248.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i248.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i249.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i249.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i241.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i241.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i249.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i249.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i250.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i250.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i242.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i242.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i250.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i250.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i251.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i251.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i243.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i243.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i251.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i251.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i252.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i252.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i244.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i244.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i252.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i252.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i253.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i253.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i245.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i245.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i253.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i253.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i254.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i254.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i246.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i246.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i254.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i254.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i254_0 = !reset
+    # !state_FSM_i1.Q & !state_FSM_i2.Q & !state_FSM_i7.Q
+    # state_FSM_i1.Q & dispCount_i0_i5.Q & !dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q ; (3 pterms, 10 signals)
+
+dataInBuf_i0_i29.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i29.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i21.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i21.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i29.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i29.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i33.D = state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i33.Q
+    # state_FSM_i7.Q ; (2 pterms, 9 signals)
+dataInBuf_i0_i33.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i33.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i34.D = state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i34.Q
+    # state_FSM_i7.Q ; (2 pterms, 9 signals)
+dataInBuf_i0_i34.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i34.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i37.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i37.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i29.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i29.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i37.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i37.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i38.D = state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i38.Q
+    # state_FSM_i7.Q ; (2 pterms, 9 signals)
+dataInBuf_i0_i38.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i38.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i41.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i41.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i33.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i33.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i41.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i41.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i42.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i42.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i34.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i34.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i42.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i42.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i45.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i45.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i37.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i37.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i45.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i45.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i46.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i46.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i38.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i38.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i46.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i46.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i48.D = state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i48.Q
+    # state_FSM_i7.Q ; (2 pterms, 9 signals)
+dataInBuf_i0_i48.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i48.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i49.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i49.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i41.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i41.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i49.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i49.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i5.D = state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i5.Q
+    # state_FSM_i7.Q ; (2 pterms, 9 signals)
+dataInBuf_i0_i5.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i5.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i50.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i50.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i42.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i42.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i50.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i50.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i53.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i53.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i45.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i45.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i53.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i53.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i54.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i54.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i46.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i46.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i54.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i54.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i56.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i56.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i48.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i48.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i56.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i56.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i57.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i57.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i49.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i49.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i57.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i57.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i58.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i58.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i50.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i50.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i58.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i58.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i61.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i61.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i53.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i53.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i61.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i61.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i62.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i62.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i54.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i54.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i62.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i62.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i64.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i64.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i56.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i56.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i64.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i64.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i65.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i65.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i57.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i57.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i65.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i65.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i66.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i66.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i58.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i58.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i66.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i66.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i69.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i69.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i61.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i61.Q ; (3 pterms, 5 signals)
+dataInBuf_i0_i69.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i69.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i70.D = state_FSM_i1.Q & !lcdRs_N_618 & dataInBuf_i0_i70.Q
+    # state_FSM_i1.Q & lcdRs_N_618 & dataInBuf_i0_i62.Q
+    # state_FSM_i7.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i62.Q ; (4 pterms, 6 signals)
+dataInBuf_i0_i70.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i70.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i72.D = state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i72.Q
+    # state_FSM_i7.Q
+    # state_FSM_i1.Q & dispCount_i0_i0.Q & dataInBuf_i0_i64.Q
+    # state_FSM_i1.Q & dispCount_i0_i1.Q & dataInBuf_i0_i64.Q
+    # state_FSM_i1.Q & dispCount_i0_i2.Q & dataInBuf_i0_i64.Q
+    # state_FSM_i1.Q & dispCount_i0_i3.Q & dataInBuf_i0_i64.Q
+    # state_FSM_i1.Q & !dispCount_i0_i4.Q & dataInBuf_i0_i64.Q
+    # state_FSM_i1.Q & dispCount_i0_i5.Q & dataInBuf_i0_i64.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i64.Q ; (9 pterms, 11 signals)
+dataInBuf_i0_i72.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i72.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i73.D.X1 = !state_FSM_i1.Q & state_FSM_i2.Q & dataInBuf_i0_i65.Q
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !dispCount_i0_i5.Q
+       & dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q & !dataInBuf_i0_i73.Q
+       & dataInBuf_i0_i65.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i73.Q & !dataInBuf_i0_i65.Q ; (3 pterms, 10 signals)
+dataInBuf_i0_i73.D.X2 = state_FSM_i1.Q & dataInBuf_i0_i65.Q ; (1 pterm, 2 signals)
+dataInBuf_i0_i73.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i73.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i74.D.X1 = !state_FSM_i1.Q & state_FSM_i2.Q & dataInBuf_i0_i66.Q
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !dispCount_i0_i5.Q
+       & dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q & !dataInBuf_i0_i74.Q
+       & dataInBuf_i0_i66.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i74.Q & !dataInBuf_i0_i66.Q ; (3 pterms, 10 signals)
+dataInBuf_i0_i74.D.X2 = state_FSM_i1.Q & dataInBuf_i0_i66.Q ; (1 pterm, 2 signals)
+dataInBuf_i0_i74.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i74.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i77.D.X1 = !state_FSM_i1.Q & state_FSM_i2.Q & dataInBuf_i0_i69.Q
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !dispCount_i0_i5.Q
+       & dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q & !dataInBuf_i0_i77.Q
+       & dataInBuf_i0_i69.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i77.Q & !dataInBuf_i0_i69.Q ; (3 pterms, 10 signals)
+dataInBuf_i0_i77.D.X2 = state_FSM_i1.Q & dataInBuf_i0_i69.Q ; (1 pterm, 2 signals)
+dataInBuf_i0_i77.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i77.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i78.D = state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i78.Q
+    # state_FSM_i7.Q
+    # state_FSM_i1.Q & dispCount_i0_i0.Q & dataInBuf_i0_i70.Q
+    # state_FSM_i1.Q & dispCount_i0_i1.Q & dataInBuf_i0_i70.Q
+    # state_FSM_i1.Q & dispCount_i0_i2.Q & dataInBuf_i0_i70.Q
+    # state_FSM_i1.Q & dispCount_i0_i3.Q & dataInBuf_i0_i70.Q
+    # state_FSM_i1.Q & !dispCount_i0_i4.Q & dataInBuf_i0_i70.Q
+    # state_FSM_i1.Q & dispCount_i0_i5.Q & dataInBuf_i0_i70.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i70.Q ; (9 pterms, 11 signals)
+dataInBuf_i0_i78.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i78.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i80.D = state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i80.Q
+    # state_FSM_i7.Q
+    # state_FSM_i1.Q & dispCount_i0_i0.Q & dataInBuf_i0_i72.Q
+    # state_FSM_i1.Q & dispCount_i0_i1.Q & dataInBuf_i0_i72.Q
+    # state_FSM_i1.Q & dispCount_i0_i2.Q & dataInBuf_i0_i72.Q
+    # state_FSM_i1.Q & dispCount_i0_i3.Q & dataInBuf_i0_i72.Q
+    # state_FSM_i1.Q & !dispCount_i0_i4.Q & dataInBuf_i0_i72.Q
+    # state_FSM_i1.Q & dispCount_i0_i5.Q & dataInBuf_i0_i72.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i72.Q ; (9 pterms, 11 signals)
+dataInBuf_i0_i80.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i80.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i81.D.X1 = !state_FSM_i1.Q & state_FSM_i2.Q & dataInBuf_i0_i73.Q
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !dispCount_i0_i5.Q
+       & dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q & !dataInBuf_i0_i81.Q
+       & dataInBuf_i0_i73.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i81.Q & !dataInBuf_i0_i73.Q ; (3 pterms, 10 signals)
+dataInBuf_i0_i81.D.X2 = state_FSM_i1.Q & dataInBuf_i0_i73.Q ; (1 pterm, 2 signals)
+dataInBuf_i0_i81.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i81.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i82.D.X1 = !state_FSM_i1.Q & state_FSM_i2.Q & dataInBuf_i0_i74.Q
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !dispCount_i0_i5.Q
+       & dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q & !dataInBuf_i0_i82.Q
+       & dataInBuf_i0_i74.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i82.Q & !dataInBuf_i0_i74.Q ; (3 pterms, 10 signals)
+dataInBuf_i0_i82.D.X2 = state_FSM_i1.Q & dataInBuf_i0_i74.Q ; (1 pterm, 2 signals)
+dataInBuf_i0_i82.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i82.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i83.D = state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i83.Q
+    # state_FSM_i7.Q ; (2 pterms, 9 signals)
+dataInBuf_i0_i83.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i83.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i84.D = state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i84.Q
+    # state_FSM_i7.Q ; (2 pterms, 9 signals)
+dataInBuf_i0_i84.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i84.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i85.D = state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i85.Q
+    # state_FSM_i7.Q
+    # state_FSM_i1.Q & dispCount_i0_i0.Q & dataInBuf_i0_i77.Q
+    # state_FSM_i1.Q & dispCount_i0_i1.Q & dataInBuf_i0_i77.Q
+    # state_FSM_i1.Q & dispCount_i0_i2.Q & dataInBuf_i0_i77.Q
+    # state_FSM_i1.Q & dispCount_i0_i3.Q & dataInBuf_i0_i77.Q
+    # state_FSM_i1.Q & !dispCount_i0_i4.Q & dataInBuf_i0_i77.Q
+    # state_FSM_i1.Q & dispCount_i0_i5.Q & dataInBuf_i0_i77.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i77.Q ; (9 pterms, 11 signals)
+dataInBuf_i0_i85.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i85.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i86.D.X1 = !state_FSM_i1.Q & state_FSM_i2.Q & dataInBuf_i0_i78.Q
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !dispCount_i0_i5.Q
+       & dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q & !dataInBuf_i0_i86.Q
+       & dataInBuf_i0_i78.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i86.Q & !dataInBuf_i0_i78.Q ; (3 pterms, 10 signals)
+dataInBuf_i0_i86.D.X2 = state_FSM_i1.Q & dataInBuf_i0_i78.Q ; (1 pterm, 2 signals)
+dataInBuf_i0_i86.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i86.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i88.D.X1 = !state_FSM_i1.Q & state_FSM_i2.Q & dataInBuf_i0_i80.Q
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !dispCount_i0_i5.Q
+       & dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q & !dataInBuf_i0_i88.Q
+       & dataInBuf_i0_i80.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i88.Q & !dataInBuf_i0_i80.Q ; (3 pterms, 10 signals)
+dataInBuf_i0_i88.D.X2 = state_FSM_i1.Q & dataInBuf_i0_i80.Q ; (1 pterm, 2 signals)
+dataInBuf_i0_i88.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i88.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i89.D.X1 = !state_FSM_i1.Q & state_FSM_i2.Q & dataInBuf_i0_i81.Q
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !dispCount_i0_i5.Q
+       & dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q & !dataInBuf_i0_i89.Q
+       & dataInBuf_i0_i81.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i89.Q & !dataInBuf_i0_i81.Q ; (3 pterms, 10 signals)
+dataInBuf_i0_i89.D.X2 = state_FSM_i1.Q & dataInBuf_i0_i81.Q ; (1 pterm, 2 signals)
+dataInBuf_i0_i89.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i89.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i90.D.X1 = !state_FSM_i1.Q & state_FSM_i2.Q & dataInBuf_i0_i82.Q
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !dispCount_i0_i5.Q
+       & dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q & !dataInBuf_i0_i90.Q
+       & dataInBuf_i0_i82.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i90.Q & !dataInBuf_i0_i82.Q ; (3 pterms, 10 signals)
+dataInBuf_i0_i90.D.X2 = state_FSM_i1.Q & dataInBuf_i0_i82.Q ; (1 pterm, 2 signals)
+dataInBuf_i0_i90.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i90.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i91.D = state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i91.Q
+    # state_FSM_i7.Q
+    # state_FSM_i1.Q & dispCount_i0_i0.Q & dataInBuf_i0_i83.Q
+    # state_FSM_i1.Q & dispCount_i0_i1.Q & dataInBuf_i0_i83.Q
+    # state_FSM_i1.Q & dispCount_i0_i2.Q & dataInBuf_i0_i83.Q
+    # state_FSM_i1.Q & dispCount_i0_i3.Q & dataInBuf_i0_i83.Q
+    # state_FSM_i1.Q & !dispCount_i0_i4.Q & dataInBuf_i0_i83.Q
+    # state_FSM_i1.Q & dispCount_i0_i5.Q & dataInBuf_i0_i83.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i83.Q ; (9 pterms, 11 signals)
+dataInBuf_i0_i91.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i91.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i92.D = state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i92.Q
+    # state_FSM_i7.Q
+    # state_FSM_i1.Q & dispCount_i0_i0.Q & dataInBuf_i0_i84.Q
+    # state_FSM_i1.Q & dispCount_i0_i1.Q & dataInBuf_i0_i84.Q
+    # state_FSM_i1.Q & dispCount_i0_i2.Q & dataInBuf_i0_i84.Q
+    # state_FSM_i1.Q & dispCount_i0_i3.Q & dataInBuf_i0_i84.Q
+    # state_FSM_i1.Q & !dispCount_i0_i4.Q & dataInBuf_i0_i84.Q
+    # state_FSM_i1.Q & dispCount_i0_i5.Q & dataInBuf_i0_i84.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i84.Q ; (9 pterms, 11 signals)
+dataInBuf_i0_i92.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i92.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i93.D = state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i93.Q
+    # state_FSM_i7.Q
+    # state_FSM_i1.Q & dispCount_i0_i0.Q & dataInBuf_i0_i85.Q
+    # state_FSM_i1.Q & dispCount_i0_i1.Q & dataInBuf_i0_i85.Q
+    # state_FSM_i1.Q & dispCount_i0_i2.Q & dataInBuf_i0_i85.Q
+    # state_FSM_i1.Q & dispCount_i0_i3.Q & dataInBuf_i0_i85.Q
+    # state_FSM_i1.Q & !dispCount_i0_i4.Q & dataInBuf_i0_i85.Q
+    # state_FSM_i1.Q & dispCount_i0_i5.Q & dataInBuf_i0_i85.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i85.Q ; (9 pterms, 11 signals)
+dataInBuf_i0_i93.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i93.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i94.D.X1 = !state_FSM_i1.Q & state_FSM_i2.Q & dataInBuf_i0_i86.Q
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !dispCount_i0_i5.Q
+       & dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q & !dataInBuf_i0_i94.Q
+       & dataInBuf_i0_i86.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i94.Q & !dataInBuf_i0_i86.Q ; (3 pterms, 10 signals)
+dataInBuf_i0_i94.D.X2 = state_FSM_i1.Q & dataInBuf_i0_i86.Q ; (1 pterm, 2 signals)
+dataInBuf_i0_i94.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i94.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i96.D.X1 = !state_FSM_i1.Q & state_FSM_i2.Q & dataInBuf_i0_i88.Q
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !dispCount_i0_i5.Q
+       & dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q & !dataInBuf_i0_i96.Q
+       & dataInBuf_i0_i88.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i96.Q & !dataInBuf_i0_i88.Q ; (3 pterms, 10 signals)
+dataInBuf_i0_i96.D.X2 = state_FSM_i1.Q & dataInBuf_i0_i88.Q ; (1 pterm, 2 signals)
+dataInBuf_i0_i96.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i96.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i97.D.X1 = !state_FSM_i1.Q & state_FSM_i2.Q & dataInBuf_i0_i89.Q
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !dispCount_i0_i5.Q
+       & dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q & !dataInBuf_i0_i97.Q
+       & dataInBuf_i0_i89.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i97.Q & !dataInBuf_i0_i89.Q ; (3 pterms, 10 signals)
+dataInBuf_i0_i97.D.X2 = state_FSM_i1.Q & dataInBuf_i0_i89.Q ; (1 pterm, 2 signals)
+dataInBuf_i0_i97.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i97.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i98.D.X1 = !state_FSM_i1.Q & state_FSM_i2.Q & dataInBuf_i0_i90.Q
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !dispCount_i0_i5.Q
+       & dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q & !dataInBuf_i0_i98.Q
+       & dataInBuf_i0_i90.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i98.Q & !dataInBuf_i0_i90.Q ; (3 pterms, 10 signals)
+dataInBuf_i0_i98.D.X2 = state_FSM_i1.Q & dataInBuf_i0_i90.Q ; (1 pterm, 2 signals)
+dataInBuf_i0_i98.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i98.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dataInBuf_i0_i99.D.X1 = !state_FSM_i1.Q & state_FSM_i2.Q & dataInBuf_i0_i91.Q
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !dispCount_i0_i5.Q
+       & dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q & !dataInBuf_i0_i99.Q
+       & dataInBuf_i0_i91.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i99.Q & !dataInBuf_i0_i91.Q ; (3 pterms, 10 signals)
+dataInBuf_i0_i99.D.X2 = state_FSM_i1.Q & dataInBuf_i0_i91.Q ; (1 pterm, 2 signals)
+dataInBuf_i0_i99.C = ledEN.Q ; (1 pterm, 1 signal)
+dataInBuf_i0_i99.CE = !( dataInBuf_i0_i254_0 ) ; (1 pterm, 1 signal)
+
+dispCount_i0_i0.D = !( !state_FSM_i2.Q & dispCount_i0_i5.Q
+       & !dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q
+    # !state_FSM_i2.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+    # !state_FSM_i1.Q & !state_FSM_i2.Q
+    # dispCount_i0_i0.Q ) ; (4 pterms, 8 signals)
+dispCount_i0_i0.C = ledEN.Q ; (1 pterm, 1 signal)
+dispCount_i0_i0.CE = !( dispCount_i0_i5_0 ) ; (1 pterm, 1 signal)
+dispCount_i0_i0.AR = !reset ; (1 pterm, 1 signal)
+
+dispCount_i0_i1.D = !( !state_FSM_i1.Q & !state_FSM_i2.Q
+    # !dispCount_i0_i1.Q & !dispCount_i0_i0.Q
+    # dispCount_i0_i1.Q & dispCount_i0_i0.Q ) ; (3 pterms, 4 signals)
+dispCount_i0_i1.C = ledEN.Q ; (1 pterm, 1 signal)
+dispCount_i0_i1.CE = !( dispCount_i0_i5_0 ) ; (1 pterm, 1 signal)
+dispCount_i0_i1.AR = !reset ; (1 pterm, 1 signal)
+
+dispCount_i0_i2.D = !( dispCount_i0_i2.Q & dispCount_i0_i1.Q
+       & dispCount_i0_i0.Q
+    # !state_FSM_i1.Q & !state_FSM_i2.Q
+    # !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+    # !dispCount_i0_i2.Q & !dispCount_i0_i0.Q ) ; (4 pterms, 5 signals)
+dispCount_i0_i2.C = ledEN.Q ; (1 pterm, 1 signal)
+dispCount_i0_i2.CE = !( dispCount_i0_i5_0 ) ; (1 pterm, 1 signal)
+dispCount_i0_i2.AR = !reset ; (1 pterm, 1 signal)
+
+dispCount_i0_i3.D.X1 = state_FSM_i1.Q & dispCount_i0_i3.Q
+    # state_FSM_i2.Q & dispCount_i0_i3.Q
+    # !state_FSM_i1.Q & !state_FSM_i2.Q & dispCount_i0_i2.Q
+       & dispCount_i0_i1.Q & dispCount_i0_i0.Q ; (3 pterms, 6 signals)
+dispCount_i0_i3.D.X2 = dispCount_i0_i2.Q & dispCount_i0_i1.Q
+       & dispCount_i0_i0.Q ; (1 pterm, 3 signals)
+dispCount_i0_i3.C = ledEN.Q ; (1 pterm, 1 signal)
+dispCount_i0_i3.CE = !( dispCount_i0_i5_0 ) ; (1 pterm, 1 signal)
+dispCount_i0_i3.AR = !reset ; (1 pterm, 1 signal)
+
+dispCount_i0_i4.T = !state_FSM_i2.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q
+    # state_FSM_i2.Q & dispCount_i0_i3.Q & dispCount_i0_i2.Q
+       & dispCount_i0_i1.Q & dispCount_i0_i0.Q
+    # state_FSM_i1.Q & dispCount_i0_i3.Q & dispCount_i0_i2.Q
+       & dispCount_i0_i1.Q & dispCount_i0_i0.Q
+    # !state_FSM_i1.Q & !state_FSM_i2.Q & dispCount_i0_i4.Q ; (4 pterms, 8 signals)
+dispCount_i0_i4.C = ledEN.Q ; (1 pterm, 1 signal)
+dispCount_i0_i4.CE = !( dispCount_i0_i5_0 ) ; (1 pterm, 1 signal)
+dispCount_i0_i4.AR = !reset ; (1 pterm, 1 signal)
+
+dispCount_i0_i5.T = !state_FSM_i2.Q & dispCount_i0_i5.Q & !dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q
+    # state_FSM_i2.Q & dispCount_i0_i4.Q & dispCount_i0_i3.Q
+       & dispCount_i0_i2.Q & dispCount_i0_i1.Q & dispCount_i0_i0.Q
+    # state_FSM_i1.Q & dispCount_i0_i4.Q & dispCount_i0_i3.Q
+       & dispCount_i0_i2.Q & dispCount_i0_i1.Q & dispCount_i0_i0.Q
+    # !state_FSM_i1.Q & !state_FSM_i2.Q & dispCount_i0_i5.Q ; (4 pterms, 8 signals)
+dispCount_i0_i5.C = ledEN.Q ; (1 pterm, 1 signal)
+dispCount_i0_i5.CE = !( dispCount_i0_i5_0 ) ; (1 pterm, 1 signal)
+dispCount_i0_i5.AR = !reset ; (1 pterm, 1 signal)
+
+dispCount_i0_i5_0 = !state_FSM_i1.Q & !state_FSM_i2.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q ; (2 pterms, 8 signals)
+
+lcdD_0_.D = !state_FSM_i2.Q & !state_FSM_i3.Q & !state_FSM_i4.Q
+       & !state_FSM_i5.Q & !state_FSM_i6.Q & dispCount_i0_i5.Q
+       & !dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q
+    # !state_FSM_i1.Q & !state_FSM_i2.Q & !state_FSM_i3.Q & !state_FSM_i4.Q
+       & !state_FSM_i5.Q & !state_FSM_i6.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & !dispCount_i0_i4.Q
+       & dataInBuf_i0_i248.Q
+    # state_FSM_i1.Q & dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & dataInBuf_i0_i248.Q
+    # state_FSM_i1.Q & dispCount_i0_i0.Q & dataInBuf_i0_i248.Q
+    # state_FSM_i1.Q & dispCount_i0_i1.Q & dataInBuf_i0_i248.Q
+    # state_FSM_i1.Q & dispCount_i0_i2.Q & dataInBuf_i0_i248.Q
+    # state_FSM_i1.Q & dispCount_i0_i3.Q & dataInBuf_i0_i248.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i248.Q ; (9 pterms, 13 signals)
+lcdD_0_.C = ledEN.Q ; (1 pterm, 1 signal)
+lcdD_0_.CE = !( state_FSM_i1.Q & dispCount_i0_i5.Q & !dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q ) ; (1 pterm, 7 signals)
+lcdD_0_.AP = !reset ; (1 pterm, 1 signal)
+
+lcdD_1_.D.X1 = !state_FSM_i1.Q & !state_FSM_i2.Q & !state_FSM_i3.Q
+       & dataInBuf_i0_i249.Q
+    # !state_FSM_i1.Q & !state_FSM_i2.Q & state_FSM_i3.Q
+       & !dataInBuf_i0_i249.Q
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !dispCount_i0_i5.Q
+       & dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q & dataInBuf_i0_i249.Q
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !state_FSM_i3.Q & dispCount_i0_i5.Q
+       & !dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q & dataInBuf_i0_i249.Q
+    # state_FSM_i1.Q & !state_FSM_i2.Q & state_FSM_i3.Q & dispCount_i0_i5.Q
+       & !dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q & !dataInBuf_i0_i249.Q ; (5 pterms, 10 signals)
+lcdD_1_.D.X2 = dataInBuf_i0_i249.Q ; (1 pterm, 1 signal)
+lcdD_1_.C = ledEN.Q ; (1 pterm, 1 signal)
+lcdD_1_.CE = !( state_FSM_i1.Q & dispCount_i0_i5.Q & !dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q ) ; (1 pterm, 7 signals)
+lcdD_1_.AR = !reset ; (1 pterm, 1 signal)
+
+lcdD_2_.D.X1 = !state_FSM_i1.Q & !state_FSM_i2.Q & state_FSM_i4.Q
+       & !dataInBuf_i0_i250.Q
+    # !state_FSM_i1.Q & !state_FSM_i2.Q & state_FSM_i3.Q
+       & !dataInBuf_i0_i250.Q
+    # !state_FSM_i1.Q & !state_FSM_i2.Q & !state_FSM_i3.Q & !state_FSM_i4.Q
+       & dataInBuf_i0_i250.Q
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !dispCount_i0_i5.Q
+       & dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q & dataInBuf_i0_i250.Q
+    # state_FSM_i1.Q & !state_FSM_i2.Q & state_FSM_i3.Q & dispCount_i0_i5.Q
+       & !dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q & !dataInBuf_i0_i250.Q
+    # state_FSM_i1.Q & !state_FSM_i2.Q & state_FSM_i4.Q & dispCount_i0_i5.Q
+       & !dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q & !dataInBuf_i0_i250.Q
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !state_FSM_i3.Q & !state_FSM_i4.Q
+       & dispCount_i0_i5.Q & !dispCount_i0_i4.Q & !dispCount_i0_i3.Q
+       & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q
+       & dataInBuf_i0_i250.Q ; (7 pterms, 11 signals)
+lcdD_2_.D.X2 = dataInBuf_i0_i250.Q ; (1 pterm, 1 signal)
+lcdD_2_.C = ledEN.Q ; (1 pterm, 1 signal)
+lcdD_2_.CE = !( state_FSM_i1.Q & dispCount_i0_i5.Q & !dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q ) ; (1 pterm, 7 signals)
+lcdD_2_.AR = !reset ; (1 pterm, 1 signal)
+
+lcdD_3_.D.X1 = !state_FSM_i1.Q & !state_FSM_i2.Q & !state_FSM_i3.Q
+       & state_FSM_i4.Q
+    # !state_FSM_i1.Q & !state_FSM_i2.Q & !state_FSM_i3.Q & state_FSM_i5.Q
+    # !state_FSM_i2.Q & !state_FSM_i3.Q & state_FSM_i4.Q & dispCount_i0_i5.Q
+       & !dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q & !dataInBuf_i0_i251.Q
+    # !state_FSM_i2.Q & !state_FSM_i3.Q & state_FSM_i5.Q & dispCount_i0_i5.Q
+       & !dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q & !dataInBuf_i0_i251.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i251.Q
+    # state_FSM_i1.Q & state_FSM_i3.Q & dispCount_i0_i5.Q & !dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q & dataInBuf_i0_i251.Q
+    # state_FSM_i1.Q & !state_FSM_i4.Q & !state_FSM_i5.Q & dispCount_i0_i5.Q
+       & !dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q & dataInBuf_i0_i251.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i251.Q ; (8 pterms, 12 signals)
+lcdD_3_.D.X2 = state_FSM_i1.Q & !state_FSM_i2.Q & dataInBuf_i0_i251.Q ; (1 pterm, 3 signals)
+lcdD_3_.C = ledEN.Q ; (1 pterm, 1 signal)
+lcdD_3_.CE = !( state_FSM_i1.Q & dispCount_i0_i5.Q & !dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q ) ; (1 pterm, 7 signals)
+lcdD_3_.AR = !reset ; (1 pterm, 1 signal)
+
+lcdD_4_.D = !state_FSM_i2.Q & !state_FSM_i3.Q & !state_FSM_i4.Q
+       & state_FSM_i5.Q & dispCount_i0_i5.Q & !dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q
+    # !state_FSM_i1.Q & !state_FSM_i2.Q & !state_FSM_i3.Q & !state_FSM_i4.Q
+       & state_FSM_i5.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & !dispCount_i0_i4.Q
+       & dataInBuf_i0_i252.Q
+    # state_FSM_i1.Q & dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & dataInBuf_i0_i252.Q
+    # state_FSM_i1.Q & dispCount_i0_i0.Q & dataInBuf_i0_i252.Q
+    # state_FSM_i1.Q & dispCount_i0_i1.Q & dataInBuf_i0_i252.Q
+    # state_FSM_i1.Q & dispCount_i0_i2.Q & dataInBuf_i0_i252.Q
+    # state_FSM_i1.Q & dispCount_i0_i3.Q & dataInBuf_i0_i252.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i252.Q ; (9 pterms, 12 signals)
+lcdD_4_.C = ledEN.Q ; (1 pterm, 1 signal)
+lcdD_4_.CE = !( state_FSM_i1.Q & dispCount_i0_i5.Q & !dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q ) ; (1 pterm, 7 signals)
+lcdD_4_.AR = !reset ; (1 pterm, 1 signal)
+
+lcdD_5_.D = !state_FSM_i2.Q & !state_FSM_i3.Q & !state_FSM_i4.Q
+       & state_FSM_i5.Q & dispCount_i0_i5.Q & !dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q
+    # !state_FSM_i1.Q & !state_FSM_i2.Q & !state_FSM_i3.Q & !state_FSM_i4.Q
+       & state_FSM_i5.Q
+    # state_FSM_i1.Q & !dispCount_i0_i5.Q & !dispCount_i0_i4.Q
+       & dataInBuf_i0_i253.Q
+    # state_FSM_i1.Q & dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & dataInBuf_i0_i253.Q
+    # state_FSM_i1.Q & dispCount_i0_i0.Q & dataInBuf_i0_i253.Q
+    # state_FSM_i1.Q & dispCount_i0_i1.Q & dataInBuf_i0_i253.Q
+    # state_FSM_i1.Q & dispCount_i0_i2.Q & dataInBuf_i0_i253.Q
+    # state_FSM_i1.Q & dispCount_i0_i3.Q & dataInBuf_i0_i253.Q
+    # state_FSM_i2.Q & dataInBuf_i0_i253.Q ; (9 pterms, 12 signals)
+lcdD_5_.C = ledEN.Q ; (1 pterm, 1 signal)
+lcdD_5_.CE = !( state_FSM_i1.Q & dispCount_i0_i5.Q & !dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q ) ; (1 pterm, 7 signals)
+lcdD_5_.AR = !reset ; (1 pterm, 1 signal)
+
+lcdD_6_.D.X1 = !state_FSM_i1.Q & state_FSM_i2.Q & dataInBuf_i0_i254.Q
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !dispCount_i0_i5.Q
+       & dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q & !dataInBuf_i0_i254.Q
+    # state_FSM_i1.Q & !state_FSM_i2.Q & dispCount_i0_i5.Q
+       & !dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q & dataInBuf_i0_i254.Q ; (3 pterms, 9 signals)
+lcdD_6_.D.X2 = state_FSM_i1.Q & dataInBuf_i0_i254.Q ; (1 pterm, 2 signals)
+lcdD_6_.C = ledEN.Q ; (1 pterm, 1 signal)
+lcdD_6_.CE = !( state_FSM_i1.Q & dispCount_i0_i5.Q & !dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q ) ; (1 pterm, 7 signals)
+lcdD_6_.AR = !reset ; (1 pterm, 1 signal)
+
+lcdD_7_.D = !state_FSM_i2.Q & !state_FSM_i3.Q & !state_FSM_i4.Q
+       & !state_FSM_i5.Q & state_FSM_i6.Q & dispCount_i0_i5.Q
+       & !dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q
+    # state_FSM_i1.Q & !state_FSM_i2.Q & !dispCount_i0_i5.Q
+       & dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q
+    # !state_FSM_i1.Q & !state_FSM_i2.Q & !state_FSM_i3.Q & !state_FSM_i4.Q
+       & !state_FSM_i5.Q & state_FSM_i6.Q ; (3 pterms, 12 signals)
+lcdD_7_.C = ledEN.Q ; (1 pterm, 1 signal)
+lcdD_7_.CE = !( state_FSM_i1.Q & dispCount_i0_i5.Q & !dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q ) ; (1 pterm, 7 signals)
+lcdD_7_.AR = !reset ; (1 pterm, 1 signal)
+
+lcdRs.D = !( !state_FSM_i2.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q
+    # !state_FSM_i1.Q & !state_FSM_i2.Q ) ; (2 pterms, 8 signals)
+lcdRs.C = ledEN.Q ; (1 pterm, 1 signal)
+lcdRs.AR = !reset ; (1 pterm, 1 signal)
+
+lcdRs_N_618 = !( !dispCount_i0_i5.Q & dispCount_i0_i4.Q & !dispCount_i0_i3.Q
+       & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q ) ; (1 pterm, 6 signals)
+
+lcdRw = 0 ; (0 pterm, 0 signal)
+
+ledEN.D = ledEN.Q & !n5194
+    # !ledEN.Q & n5194 ; (2 pterms, 2 signals)
+ledEN.C = clk_50m ; (1 pterm, 1 signal)
+
+n5085 = cnt_171__i5.Q & cnt_171__i4.Q & cnt_171__i3.Q & cnt_171__i2.Q
+       & cnt_171__i1.Q & cnt_171__i0.Q ; (1 pterm, 6 signals)
+
+n5106 = cnt_171__i8.Q & cnt_171__i7.Q & cnt_171__i6.Q & cnt_171__i5.Q
+       & cnt_171__i4.Q & cnt_171__i3.Q & cnt_171__i2.Q & cnt_171__i1.Q
+       & cnt_171__i0.Q ; (1 pterm, 9 signals)
+
+n5134 = cnt_171__i12.Q & cnt_171__i11.Q & cnt_171__i10.Q & cnt_171__i9.Q
+       & cnt_171__i8.Q & cnt_171__i7.Q & cnt_171__i6.Q & cnt_171__i5.Q
+       & cnt_171__i4.Q & cnt_171__i3.Q & cnt_171__i2.Q & cnt_171__i1.Q
+       & cnt_171__i0.Q ; (1 pterm, 13 signals)
+
+n5148 = cnt_171__i14.Q & cnt_171__i13.Q & cnt_171__i12.Q & cnt_171__i11.Q
+       & cnt_171__i10.Q & cnt_171__i9.Q & cnt_171__i8.Q & cnt_171__i7.Q
+       & cnt_171__i6.Q & cnt_171__i5.Q & cnt_171__i4.Q & cnt_171__i3.Q
+       & cnt_171__i2.Q & cnt_171__i1.Q & cnt_171__i0.Q ; (1 pterm, 15 signals)
+
+n5194 = cnt_171__i19.Q & cnt_171__i18.Q & cnt_171__i17.Q & cnt_171__i16.Q
+       & cnt_171__i15.Q & cnt_171__i14.Q & cnt_171__i13.Q & cnt_171__i12.Q
+       & cnt_171__i11.Q & cnt_171__i10.Q & cnt_171__i9.Q & cnt_171__i8.Q
+       & cnt_171__i7.Q & cnt_171__i6.Q & cnt_171__i5.Q & cnt_171__i4.Q
+       & cnt_171__i3.Q & cnt_171__i2.Q & cnt_171__i1.Q & cnt_171__i0.Q ; (1 pterm, 20 signals)
+
+state_FSM_i1.D = !( !state_FSM_i2.Q & !state_FSM_i3.Q & dispCount_i0_i5.Q
+       & !dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q
+    # !state_FSM_i2.Q & !state_FSM_i3.Q & !dispCount_i0_i5.Q
+       & dispCount_i0_i4.Q & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q
+       & !dispCount_i0_i1.Q & !dispCount_i0_i0.Q
+    # !state_FSM_i1.Q & !state_FSM_i2.Q & !state_FSM_i3.Q ) ; (3 pterms, 9 signals)
+state_FSM_i1.C = ledEN.Q ; (1 pterm, 1 signal)
+state_FSM_i1.AR = !reset ; (1 pterm, 1 signal)
+
+state_FSM_i2.D = state_FSM_i1.Q & !dispCount_i0_i5.Q & dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q ; (1 pterm, 7 signals)
+state_FSM_i2.C = ledEN.Q ; (1 pterm, 1 signal)
+state_FSM_i2.AR = !reset ; (1 pterm, 1 signal)
+
+state_FSM_i3.D = state_FSM_i4.Q ; (1 pterm, 1 signal)
+state_FSM_i3.C = ledEN.Q ; (1 pterm, 1 signal)
+state_FSM_i3.AR = !reset ; (1 pterm, 1 signal)
+
+state_FSM_i4.D = state_FSM_i5.Q ; (1 pterm, 1 signal)
+state_FSM_i4.C = ledEN.Q ; (1 pterm, 1 signal)
+state_FSM_i4.AR = !reset ; (1 pterm, 1 signal)
+
+state_FSM_i5.D = state_FSM_i6.Q ; (1 pterm, 1 signal)
+state_FSM_i5.C = ledEN.Q ; (1 pterm, 1 signal)
+state_FSM_i5.AR = !reset ; (1 pterm, 1 signal)
+
+state_FSM_i6.D = state_FSM_i7.Q ; (1 pterm, 1 signal)
+state_FSM_i6.C = ledEN.Q ; (1 pterm, 1 signal)
+state_FSM_i6.AR = !reset ; (1 pterm, 1 signal)
+
+state_FSM_i7.D = state_FSM_i1.Q & dispCount_i0_i5.Q & !dispCount_i0_i4.Q
+       & !dispCount_i0_i3.Q & !dispCount_i0_i2.Q & !dispCount_i0_i1.Q
+       & !dispCount_i0_i0.Q ; (1 pterm, 7 signals)
+state_FSM_i7.C = ledEN.Q ; (1 pterm, 1 signal)
+state_FSM_i7.AP = !reset ; (1 pterm, 1 signal)
+
+
+
+
